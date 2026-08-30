@@ -1,0 +1,32 @@
+<svg viewBox="0 0 680 360" width="680" height="360" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <title>引用断开后对象被 GC 回收</title>
+  <desc>main 方法栈帧中的 dog 引用为 null，堆中 Pet 对象没有任何引用指向，最终被 GC 回收</desc>
+  <rect x="0" y="0" width="680" height="360" fill="#FFFFFF"/>
+  <rect x="20" y="20" width="640" height="320" rx="16" fill="#F1EFE8" stroke="#B4B2A9" stroke-width="0.5"/>
+  <text x="40" y="48" font-size="16" font-weight="500" fill="#2C2C2A">JVM（Java 8 之后，包含 Java 8）</text>
+
+  <rect x="50" y="70" width="240" height="250" rx="12" fill="#E6F1FB" stroke="#85B7EB" stroke-width="0.5"/>
+  <text x="70" y="96" font-size="14" font-weight="500" fill="#0C447C">虚拟机栈 VM Stack</text>
+  <rect x="70" y="130" width="200" height="100" rx="8" fill="#FFFFFF" stroke="#378ADD" stroke-width="0.5"/>
+  <text x="90" y="160" font-size="13" font-weight="500" fill="#0C447C">main 方法栈帧</text>
+  <text x="90" y="195" font-size="12" fill="#2C2C2A">Pet dog</text>
+  <ellipse cx="180" cy="195" rx="36" ry="16" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.5"/>
+  <text x="180" y="199" font-size="12" text-anchor="middle" fill="#72243E">null</text>
+
+  <rect x="340" y="70" width="300" height="250" rx="12" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.5"/>
+  <text x="360" y="96" font-size="14" font-weight="500" fill="#854F0B">堆 Heap</text>
+  <ellipse cx="490" cy="195" rx="110" ry="80" fill="#FFFFFF" stroke="#BA7517" stroke-width="0.5" stroke-dasharray="4 2"/>
+  <text x="490" y="170" font-size="14" font-weight="500" text-anchor="middle" fill="#4A1B0C">Pet 对象</text>
+  <text x="490" y="195" font-size="13" text-anchor="middle" fill="#5F5E5A">String name = "小黑"</text>
+  <text x="490" y="215" font-size="13" text-anchor="middle" fill="#5F5E5A">String birth = "2012-10-11"</text>
+  <text x="490" y="235" font-size="13" text-anchor="middle" fill="#5F5E5A">char sex = '雄'</text>
+
+  <rect x="490" y="90" width="140" height="55" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="0.5"/>
+  <text x="510" y="115" font-size="12" fill="#A32D2D">没有任何引用指向该对象</text>
+  <text x="510" y="133" font-size="12" fill="#A32D2D">最终会被 GC 回收</text>
+  <path d="M490 118 L450 150" fill="none" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
+
+  <rect x="545" y="270" width="85" height="40" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
+  <text x="555" y="290" font-size="11" fill="#085041">元空间</text>
+  <text x="555" y="305" font-size="11" fill="#085041">Metaspace</text>
+</svg>
