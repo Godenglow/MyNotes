@@ -210,11 +210,11 @@ new BigDecimal("1.0").equals(new BigDecimal("1.00"));  // false！scale 不同
 
 ### 速记
 
-| 场景                 | 做法                     |
-| -------------------- | ------------------------ |
-| float / double 比较  | `Math.abs(a - b) < epsilon` |
-| 金钱、精确小数        | `BigDecimal`             |
-| 想用 `==` 比浮点     | 默认不写                  |
+| 场景                | 做法                          |
+| ----------------- | --------------------------- |
+| float / double 比较 | `Math.abs(a - b) < epsilon` |
+| 金钱、精确小数           | `BigDecimal`                |
+| 想用 `==` 比浮点       | 默认不写                        |
 
 ---
 
