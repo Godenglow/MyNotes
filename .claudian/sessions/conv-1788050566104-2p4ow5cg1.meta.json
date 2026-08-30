@@ -4,20 +4,20 @@
   "title": "Organize relationship graph",
   "titleGenerationStatus": "success",
   "createdAt": 1788050566104,
-  "updatedAt": 1788059714848,
-  "lastResponseAt": 1788059714848,
+  "updatedAt": 1788059886933,
+  "lastResponseAt": 1788059886933,
   "sessionId": "6e88a2c7-982e-466d-994b-845351ca309b",
   "providerState": {
     "providerSessionId": "6e88a2c7-982e-466d-994b-845351ca309b"
   },
   "usage": {
     "model": "sonnet[1m]",
-    "inputTokens": 394,
+    "inputTokens": 293,
     "cacheCreationInputTokens": 0,
-    "cacheReadInputTokens": 171136,
+    "cacheReadInputTokens": 179072,
     "contextWindow": 1000000,
-    "contextTokens": 171530,
-    "percentage": 17,
+    "contextTokens": 179365,
+    "percentage": 18,
     "contextWindowIsAuthoritative": true
   }
 }
