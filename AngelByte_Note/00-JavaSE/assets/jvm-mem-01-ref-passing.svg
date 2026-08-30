@@ -18,15 +18,15 @@
   <text x="90" y="170" font-size="12" fill="#5F5E5A">局部变量 1</text>
   <text x="90" y="188" font-size="12" fill="#5F5E5A">局部变量 2</text>
   <text x="90" y="206" font-size="12" fill="#5F5E5A">局部变量 3</text>
-  <text x="90" y="228" font-size="12" fill="#2C2C2A">Student zhangsan</text>
-  <ellipse cx="195" cy="228" rx="32" ry="14" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.5"/>
-  <text x="195" y="232" font-size="11" text-anchor="middle" fill="#72243E">0x10</text>
+  <ellipse cx="185" cy="228" rx="26" ry="14" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.5"/>
+  <text x="185" y="232" font-size="11" text-anchor="middle" fill="#72243E">0x10</text>
+  <text x="75" y="232" font-size="12" fill="#2C2C2A">Student zhangsan</text>
 
   <rect x="70" y="280" width="200" height="100" rx="8" fill="#FFFFFF" stroke="#378ADD" stroke-width="0.5"/>
   <text x="90" y="305" font-size="13" font-weight="500" fill="#0C447C">main 方法栈帧</text>
-  <text x="90" y="335" font-size="12" fill="#2C2C2A">Student zhangsan</text>
-  <ellipse cx="195" cy="335" rx="32" ry="14" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.5"/>
-  <text x="195" y="339" font-size="11" text-anchor="middle" fill="#72243E">0x10</text>
+  <ellipse cx="185" cy="335" rx="26" ry="14" fill="#FBEAF0" stroke="#D4537E" stroke-width="0.5"/>
+  <text x="185" y="339" font-size="11" text-anchor="middle" fill="#72243E">0x10</text>
+  <text x="75" y="339" font-size="12" fill="#2C2C2A">Student zhangsan</text>
 
   <rect x="340" y="70" width="300" height="330" rx="12" fill="#FAEEDA" stroke="#EF9F27" stroke-width="0.5"/>
   <text x="360" y="96" font-size="14" font-weight="500" fill="#854F0B">堆 Heap</text>
@@ -34,8 +34,8 @@
   <text x="490" y="220" font-size="14" font-weight="500" text-anchor="middle" fill="#4A1B0C">Student 类型对象</text>
   <text x="490" y="245" font-size="13" text-anchor="middle" fill="#5F5E5A">String name = "张三"</text>
 
-  <path d="M227 228 L380 190" fill="none" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
-  <path d="M227 335 L380 280" fill="none" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M211 228 L380 190" fill="none" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M211 335 L380 280" fill="none" stroke="#D85A30" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <text x="360" y="390" font-size="12" fill="#854F0B">两个 zhangsan 都保存 0x10，指向同一个对象</text>
 </svg>
