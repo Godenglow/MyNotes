@@ -5,5 +5,11 @@
   "copilot",
   "obsidian-excalidraw-plugin",
   "obsidian-git",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "calendar",
+  "dataview",
+  "obsidian-markmind",
+  "obsidian-outliner",
+  "obsidian-style-settings",
+  "templater-obsidian"
 ]
