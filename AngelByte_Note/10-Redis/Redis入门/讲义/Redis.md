@@ -1425,7 +1425,7 @@ RedisTemplate的两种序列化实践方案：
 
 在基础篇的最后，咱们对Hash结构操作一下，收一个小尾巴，这个代码咱们就不再解释啦
 
-马上就开始新的篇章~~~进入到我们的[[AngelByte_Note/10-Redis/Radis实战/讲义/Redis实战篇|Redis实战篇]]
+马上就开始新的篇章~~~进入到我们的[[AngelByte_Note/10-Redis/Redis实战/讲义/Redis实战篇|Redis实战篇]]
 
 ```java
 @SpringBootTest
