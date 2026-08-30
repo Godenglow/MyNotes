@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782995643089-oo46r5tir",
+  "providerId": "claude",
+  "title": "Clarify ambiguous user request",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782995643089,
+  "updatedAt": 1787186542211,
+  "lastResponseAt": 1787186500518,
+  "sessionId": "d4f0a90a-6a7f-47b8-be55-ddda60912fe7",
+  "providerState": {
+    "providerSessionId": "d4f0a90a-6a7f-47b8-be55-ddda60912fe7"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 31,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 116608,
+    "contextWindow": 200000,
+    "contextTokens": 116639,
+    "percentage": 58,
+    "contextWindowIsAuthoritative": true
+  }
+}

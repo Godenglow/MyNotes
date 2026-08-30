@@ -1,0 +1,23 @@
+{
+  "id": "conv-1787186546428-8erzdlb9w",
+  "providerId": "claude",
+  "title": "Clarify unclear user request",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787186546428,
+  "updatedAt": 1787187047937,
+  "lastResponseAt": 1787186552634,
+  "sessionId": "ef0a5cfd-9514-4e91-9ee8-515ada4d1e33",
+  "providerState": {
+    "providerSessionId": "ef0a5cfd-9514-4e91-9ee8-515ada4d1e33"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 31803,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 200000,
+    "contextTokens": 31803,
+    "percentage": 16,
+    "contextWindowIsAuthoritative": true
+  }
+}

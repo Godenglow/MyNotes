@@ -1,0 +1,23 @@
+{
+  "id": "conv-1787196104538-izsm3umhc",
+  "providerId": "claude",
+  "title": "Explain circular queue implementation",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787196104538,
+  "updatedAt": 1788050531118,
+  "lastResponseAt": 1787196140616,
+  "sessionId": "343e0d5f-eb51-41dd-a544-45b0876cdcee",
+  "providerState": {
+    "providerSessionId": "343e0d5f-eb51-41dd-a544-45b0876cdcee"
+  },
+  "usage": {
+    "model": "sonnet[1m]",
+    "inputTokens": 49143,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 0,
+    "contextWindow": 1000000,
+    "contextTokens": 49143,
+    "percentage": 5,
+    "contextWindowIsAuthoritative": false
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "id": "conv-1782391308492-d9fhdmrt6",
+  "providerId": "claude",
+  "title": "单词",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782391308493,
+  "updatedAt": 1782649951618,
+  "lastResponseAt": 1782392401616,
+  "sessionId": "98b2bff3-dec2-4211-a7cc-de7c9688856f",
+  "providerState": {
+    "providerSessionId": "98b2bff3-dec2-4211-a7cc-de7c9688856f"
+  },
+  "currentNote": "WWG_Note/英语/单词/bbdc_741625022_20260625203736.pdf",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 28,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 103808,
+    "contextWindow": 200000,
+    "contextTokens": 103836,
+    "percentage": 52,
+    "contextWindowIsAuthoritative": true
+  }
+}

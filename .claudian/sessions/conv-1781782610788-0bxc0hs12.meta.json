@@ -1,0 +1,24 @@
+{
+  "id": "conv-1781782610788-0bxc0hs12",
+  "providerId": "claude",
+  "title": "Fix Markdown heading rendering issue",
+  "titleGenerationStatus": "success",
+  "createdAt": 1781782610788,
+  "updatedAt": 1782391235518,
+  "lastResponseAt": 1781782838840,
+  "sessionId": "64b4e3ed-44a0-4c3e-82e4-06d089525e69",
+  "providerState": {
+    "providerSessionId": "64b4e3ed-44a0-4c3e-82e4-06d089525e69"
+  },
+  "currentNote": "Note/数学/高数/笔记/Math12.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 1984,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 22784,
+    "contextWindow": 200000,
+    "contextTokens": 24768,
+    "percentage": 12,
+    "contextWindowIsAuthoritative": true
+  }
+}

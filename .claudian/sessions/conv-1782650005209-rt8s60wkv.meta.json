@@ -1,0 +1,23 @@
+{
+  "id": "conv-1782650005209-rt8s60wkv",
+  "providerId": "claude",
+  "title": "Compact conversation context",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782650005209,
+  "updatedAt": 1787186321472,
+  "lastResponseAt": 1787186321472,
+  "sessionId": "8be2c0a8-84a9-465f-b3b2-a2d39cfe953a",
+  "providerState": {
+    "providerSessionId": "8be2c0a8-84a9-465f-b3b2-a2d39cfe953a"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 160849,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 209348,
+    "contextWindow": 200000,
+    "contextTokens": 370197,
+    "percentage": 100,
+    "contextWindowIsAuthoritative": true
+  }
+}

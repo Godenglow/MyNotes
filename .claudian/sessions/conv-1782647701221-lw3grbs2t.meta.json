@@ -1,0 +1,24 @@
+{
+  "id": "conv-1782647701221-lw3grbs2t",
+  "providerId": "claude",
+  "title": "Compact remote workflow",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782647701221,
+  "updatedAt": 1787186525417,
+  "lastResponseAt": 1787186491439,
+  "sessionId": "4732f001-1de7-4307-89bc-5fa875a54c1a",
+  "providerState": {
+    "providerSessionId": "4732f001-1de7-4307-89bc-5fa875a54c1a"
+  },
+  "currentNote": "WWG_Note/数学/高数/笔记/高数笔记.md",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 621,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 167552,
+    "contextWindow": 200000,
+    "contextTokens": 168173,
+    "percentage": 84,
+    "contextWindowIsAuthoritative": true
+  }
+}

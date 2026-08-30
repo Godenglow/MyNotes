@@ -1,0 +1,23 @@
+{
+  "id": "conv-1787186563701-tbdik31zh",
+  "providerId": "claude",
+  "title": "Clarify request with user",
+  "titleGenerationStatus": "success",
+  "createdAt": 1787186563702,
+  "updatedAt": 1787195923305,
+  "lastResponseAt": 1787186593977,
+  "sessionId": "c382ca32-726c-49d9-b09d-565e39a85e49",
+  "providerState": {
+    "providerSessionId": "c382ca32-726c-49d9-b09d-565e39a85e49"
+  },
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 845,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 28772,
+    "contextWindow": 200000,
+    "contextTokens": 29617,
+    "percentage": 15,
+    "contextWindowIsAuthoritative": true
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "id": "conv-1782456164909-v5ucgcvc5",
+  "providerId": "claude",
+  "title": "Summarize section knowledge",
+  "titleGenerationStatus": "success",
+  "createdAt": 1782456164909,
+  "updatedAt": 1782476647908,
+  "lastResponseAt": 1782457256643,
+  "sessionId": "37ffedb3-06e5-478d-8d0d-43ba708933db",
+  "providerState": {
+    "providerSessionId": "37ffedb3-06e5-478d-8d0d-43ba708933db",
+    "subagentData": {
+      "call_00_sKvwarENbd7gqTtoIL5D4400": {
+        "id": "call_00_sKvwarENbd7gqTtoIL5D4400",
+        "description": "Find indefinite integral notes",
+        "prompt": "Search the Obsidian vault at D:\\BaiduNetdiskDownload\\Obsidian-Notes for notes related to 不定积分 (indefinite integrals) and 第一类换元法 (first substitution method / u-substitution). Look in:\n\n1. The directory structure around the PDF path: WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/\n2. Any general notes about 高数4-1 or 高数4-2\n3. Any notes mentioning 不定积分入门 or 第一类换元法\n\nSearch broadly - check:\n- WWG_Note/数学/  and subdirectories\n- Any files matching *不定积分* or *换元* or *4-1* or *4-2*\n\nReturn the full content and paths of any relevant text notes you find.",
+        "status": "completed",
+        "toolCalls": [
+          {
+            "id": "call_00_n20RaN2yo0GzCoMTSGvl9557",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*不定积分*",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_113906-第四章 不定积分《计算与应用》解析版.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_114028-第四章 不定积分《选填题》解析版.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\必刷习题集\\第四讲 不定积分（答案解析）.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf"
+          },
+          {
+            "id": "call_01_oeGQ2mYbgc0goyTe7c3V2478",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*换元*",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.21 高数4-2 第二类换元法+有理函数积分等-板书.pdf"
+          },
+          {
+            "id": "call_02_Vi83ysuFWgZJFbVYmlY29644",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*4-1*",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf"
+          },
+          {
+            "id": "call_03_gtqyGKOMcVTPjnZ8nmUv1098",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*4-2*",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.21 高数4-2 第二类换元法+有理函数积分等-板书.pdf"
+          },
+          {
+            "id": "call_04_FSeneHXnljK7cEaomCHx8417",
+            "name": "Glob",
+            "input": {
+              "pattern": "**/*高数*",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\高数\\27张宇基础30讲（高数）.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数一\\【A4】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数二\\【A4】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数一\\【横版】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数一\\【A4】严选题数一高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数三\\【横版】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数二\\【A4】严选题数二高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数三\\【A4】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数一\\【横版】严选题数一高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数二\\【横版】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数二\\【横版】严选题数二高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数三\\【A4】严选题数三高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数三\\【横版】严选题数三高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\大头圆\\27大头圆历年真题切片集-高数\\27考研数学-历年真题切片集-高数上册-副册大头圆.pdf\nWWG_Note\\数学\\资料\\less\\09.王谱\\27王谱《高数基础》\\高数基础讲义.pdf\nWWG_Note\\数学\\资料\\less\\大头圆\\27大头圆历年真题切片集-高数\\27考研数学-历年真题切片集-高数下册-副册大头圆.pdf\nWWG_Note\\数学\\资料\\less\\大头圆\\27大头圆历年真题切片集-高数\\27考研数学-历年真题切片集-高数下册-主册大头圆.pdf\nWWG_Note\\数学\\资料\\less\\大头圆\\27大头圆历年真题切片集-高数\\27考研数学-历年真题切片集-高数上册-主册大头圆.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\必刷习题集\\（答案解析）高数第一章 函数极限连续.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\导图\\高数第1-3章知识导图.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\导图\\高数第4-5章知识导图.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\讲义\\【横版】27考研Kira高数基础讲义做题本.pdf\nWWG_Note\\数学\\资料\\less\\没咋了\\27没咋了《基础通关600题》\\基础600题高数分册（紧凑版）.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\讲义\\【竖版】27考研Kira高数基础讲义做题本.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.18 高数1-1(下) 反三角函数、各种类型函数 高数2-1 数列极限 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.23 高数1-4 无穷小与无穷大+求极限基本功!  板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.16 高数1-1-1,2 函数概念性质 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.27 高数1-5,6,7 七种未定式（下) 幂指型 连续与间断 闭区间连续函数性质  板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.20 高数1-2-2,3 极限存在准则 高数1-3 函数极限 板书(1).pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.25 高数1-5 七种未定式（上）含泰勒、洛必达  板书.pdf\nWWG_Note\\数学\\资料\\less\\没咋了\\27没咋了《基础通关600题》\\基础600题高数分册（答案册）.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.7 高数2-2 导数计算(隐 参数 分段 高阶) 板书.pdf\nWWG_Note\\数学\\资料\\less\\没咋了\\27没咋了《基础通关600题》\\基础600题高数分册（做题本）.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.9 高数2-3 微分 3-1 微分中值定理及其证明-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.11 高数3-1,2 中值证明题、泰勒、洛必达-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.14 高数3-3 函数单调性极值、凹凸性拐点、渐近线-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.21 高数4-2 第二类换元法+有理函数积分等-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.23 高数4-3 分部积分法板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.28 高数5-2 变限积分、定积分运算性质板书(1).pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.30 高数5-3 反常积分板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.1 高数5-4 定积分应用 高数8-1 一阶微分方程1 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.25 高数5-1 定积分概念性质板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.4 高数8-1 一阶线性+伯努利+二阶可降阶微分方程 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.20 高数7-2 二重积分计算方法技巧 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.13 高数6-2 多元复合求导法则(链式)+隐函数偏导法-板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.7 高数8-2 二阶常系数线性方程组+欧拉方程 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.15 高数6-2,3 全微分、多元无条件极值 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.18 高数6-3 条件极值 高数7-1,2 二重积分基本计算 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\11.11 高数6-1,2 二元函数极限+偏导数概念计算 板书.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥《高等数学基础篇》\\27考研数学武忠祥《高数基础篇》.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐660做题本\\高数\\数一\\【A4留白】李永乐660高数篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥《严选题》\\27考研数学武忠祥《高数基础篇-严选题》.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐660做题本\\高数\\数一\\【横版】李永乐660高数篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐660做题本\\高数\\数二\\【A4留白】李永乐660高数篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐660做题本\\高数\\数二\\【横版】李永乐660高数篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\汤家凤\\27汤家凤《高数辅导讲义-基础篇》\\27汤家凤《高数辅导讲义-基础篇》.pdf\nWWG_Note\\数学\\资料\\less\\张宇\\27张宇《基础30讲》\\27张宇基础30讲高数.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐《660题》\\27李永乐《660题》数一\\《基础过关660》-高数篇.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\无穷级数专项（仅数一三）\\11.22 高数9-1 级数概念+正项级数判别法（仅数一三） 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\无穷级数专项（仅数一三）\\11.25-27 高数9-1,2 交错级数+幂级数收敛域求和展开（仅数一三） 板书.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐《660题》\\27李永乐《660题》数二\\《基础过关660》-高数篇 .pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\必刷习题集\\【一高数Kira】27考研高数基础必刷习题集.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\讲义\\【一高数Kira】27考研高数基础讲义.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\概率论与数理统计（仅数一三）\\讲义\\【一高数Kira】27考研概率统计基础讲义&习题.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\9.30 高数2-1,2 导数概念与计算(反函数、复合函数) 板书.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\线性代数\\讲义\\【一高数Kira】27考研线代基础讲义&习题.pdf\nWWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\线性代数\\习题答案\\附送26版线代1000题基础篇\\26版1000题基础篇(讲解-一高数搜索1000题).pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐660做题本\\高数\\数一\\【答案】基础过关660高数篇.pdf\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐660做题本\\高数\\数二\\【答案】基础过关660高数篇.pdf"
+          },
+          {
+            "id": "call_05_VSpwIYVQmwYWUTsHuB6w0945",
+            "name": "Bash",
+            "input": {
+              "command": "ls \"D:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/\" 2>/dev/null || echo \"Directory not found\"",
+              "description": "List contents of the Kira高等数学 directory"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "导图\n必刷习题集\n讲义\n课堂板书"
+          },
+          {
+            "id": "call_00_WPjxio7sbZLoVB0vZbup1208",
+            "name": "Glob",
+            "input": {
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes",
+              "pattern": "**/*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "AngelByte_Note\\RMQ\\Operation008-Confirm01-B-BackupEx.md\nAngelByte_Note\\RMQ\\Operation008-Confirm02-Duration.md\nAngelByte_Note\\RMQ\\Operation008-Confirm03-Consumer.md\nAngelByte_Note\\RMQ\\Operation009-Prefetch.md\nAngelByte_Note\\RMQ\\Operation011-DeadLetter.md\nAngelByte_Note\\RMQ\\Operation010-MessageTimeout.md\nAngelByte_Note\\RMQ\\Operation012-DelayPlugin.md\nAngelByte_Note\\RMQ\\Operation013-Tx-Producer.md\nAngelByte_Note\\RMQ\\Operation014-LazyQueue.md\nAngelByte_Note\\RMQ\\Operation016-Cluster.md\nAngelByte_Note\\RMQ\\Operation017-Quorum.md\nAngelByte_Note\\RMQ\\Operation018-Stream.md\nAngelByte_Note\\RMQ\\Operation019-Federation.md\nAngelByte_Note\\RMQ\\Operation020-Shovel.md\nObsidian408-Note\\README.md\nObsidian408-Note\\所使用的插件.md\nObsidian408-Note\\0 408真题\\2011年复盘.md\nObsidian408-Note\\0 408真题\\2012年复盘.md\nObsidian408-Note\\0 408真题\\2022年复盘.md\nObsidian408-Note\\1 数据结构\\代码题总结.md\nObsidian408-Note\\1 数据结构\\大题知识点总结.md\nObsidian408-Note\\1 数据结构\\第1章 绪论.md\nObsidian408-Note\\1 数据结构\\第2章 线性表.md\nObsidian408-Note\\1 数据结构\\第3章 栈和队列.md\nObsidian408-Note\\1 数据结构\\第4章 串.md\nObsidian408-Note\\1 数据结构\\第5章 树与二叉树.md\nObsidian408-Note\\1 数据结构\\第6章 图.md\nObsidian408-Note\\1 数据结构\\第7章 查找.md\nObsidian408-Note\\1 数据结构\\第8章 排序.md\nObsidian408-Note\\1 数据结构\\补充内容\\Prim算法和Dijkstra算法的区别.md\nObsidian408-Note\\2 计算机组成原理\\第1章 计算机系统概述.md\nObsidian408-Note\\2 计算机组成原理\\第3章 存储系统.md\nObsidian408-Note\\2 计算机组成原理\\第4章 指令系统.md\nObsidian408-Note\\2 计算机组成原理\\第5章 中央处理器.md\nObsidian408-Note\\2 计算机组成原理\\第6章 总线.md\nObsidian408-Note\\2 计算机组成原理\\第7章 输入输出系统.md\nObsidian408-Note\\2 计算机组成原理\\计算机组成原理.md\nObsidian408-Note\\3 操作系统\\操作系统.md\nObsidian408-Note\\3 操作系统\\第1章 计算机系统概述.md\nObsidian408-Note\\3 操作系统\\第2章 进程与线程.md\nObsidian408-Note\\3 操作系统\\第3章 内存管理.md\nObsidian408-Note\\3 操作系统\\第4章 文件管理系统.md\nObsidian408-Note\\3 操作系统\\第5章 输入输出管理.md\nObsidian408-Note\\4 计算机网络\\第1章 计算机网络.md\nObsidian408-Note\\4 计算机网络\\第2章 物理层.md\nObsidian408-Note\\4 计算机网络\\第3章 数据链路层.md\nObsidian408-Note\\4 计算机网络\\第4章 网络层.md\nObsidian408-Note\\4 计算机网络\\第5章 传输层.md\nObsidian408-Note\\4 计算机网络\\第6章 应用层.md\nObsidian408-Note\\4 计算机网络\\计算机网络.md\nObsidian408-Note\\template\\其他技巧.md\nObsidian408-Note\\template\\字体大小.md\nObsidian408-Note\\template\\循环创建结点.md\nObsidian408-Note\\template\\快速创建结点.md\nObsidian408-Note\\template\\条件判断.md\nObsidian408-Note\\template\\树.md\nObsidian408-Note\\template\\特殊字符.md\nObsidian408-Note\\template\\线宽.md\nObsidian408-Note\\template\\结点类型.md\nObsidian408-Note\\template\\表格.md\nObsidian408-Note\\2 计算机组成原理\\第2章 数据的表示和运算.md\nAngelByte_Note\\Seata\\Seata.md\nAngelByte_Note\\RMQ\\Operation001-Install.md\nAngelByte_Note\\RMQ\\Operation002-HelloWorld.md\nAngelByte_Note\\RMQ\\Operation003-WorkQueue.md\nAngelByte_Note\\RMQ\\Operation005-Routing.md\nAngelByte_Note\\RMQ\\Operation006-Topics.md\nAngelByte_Note\\RMQ\\Operation007-SpringBoot.md\nAngelByte_Note\\RMQ\\Operation004-PubSub.md\nAngelByte_Note\\RMQ\\Operation008-Confirm01-A-Producer.md\nAngelByte_Note\\Radis\\Redis入门\\讲义\\00.课程介绍.md\nAngelByte_Note\\Radis\\Redis入门\\讲义\\01.快速入门.md\nAngelByte_Note\\Radis\\Radis实战\\讲义\\Redis实战篇.md\nAngelByte_Note\\Radis\\Redis入门\\代码\\Redis注释版\\Redis.md\nAngelByte_Note\\Radis\\Redis入门\\代码\\redis-demo\\.feisuan\\rules\\project_rule.md\nAngelByte_Note\\Radis\\Redis入门\\讲义\\Redis.md\nAngelByte_Note\\Docker\\Docker.md\nWWG_Note\\数学\\高数\\笔记\\Math12.md\nWWG_Note\\README.md\nAngelByte_Note\\RMQ\\Operation015-PriorityQueue.md\nWWG_Note\\英语\\单词\\bbdc_单词记忆法_词根联想.md"
+          },
+          {
+            "id": "call_01_JUwq1Yx99o68NfTESNRK9170",
+            "name": "Glob",
+            "input": {
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学",
+              "pattern": "**/*"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\高数\\27张宇基础30讲（高数）.pdf\nWWG_Note\\数学\\高数\\笔记\\Math12.md\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\2023年考研数学（二）真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\2020年考研数学（二）真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\2022年考研数学（二）真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1987年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\2021年考研数学（二）真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1988年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1989年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\2024年考研数学（二）真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1991年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\赠送：数学答题卡（23新大纲）.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1990年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1992年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1993年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1995年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1997年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1996年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1994年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1999年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\1998年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2000年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2002年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2005年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2001年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2004年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2008年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2009年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2007年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2006年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2010年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\2025年考研数学（二）真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2013年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2012年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2011年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2014年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2015年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2018年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2016年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2019年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2017年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2023年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2024年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2003年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\1988数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\1987数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\1989-2004数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2025年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2022年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2006数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\02. 数二答案速查（核对结果）\\2021年数二真题答案速查.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2005数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2008数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2009数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2007数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2015数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2014数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2017数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2018数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2011数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2013数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2010数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2019数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2012数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2020数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2021数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2016数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2024 数二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2023数二解析（一二三合集）.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2022数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\03. 数二真题详解（步骤解析）\\2025数学二解析.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\【合集】1987-2009考研数学二真题.pdf\nWWG_Note\\数学\\资料\\考研数学二真题【1987-2025】\\01. 数二真题（1987-2025年）电子版\\【合集】2010-2019考研数学二真题.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27考研武忠祥每日一题讲义\\27考研每日一题12.1-12.31.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27考研武忠祥每日一题讲义\\27考研每日一题11.1-11.30.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27考研武忠祥每日一题讲义\\27考研每日一题1.1-1.31.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27考研武忠祥每日一题讲义\\27考研每日一题2.1-2.28@武忠祥老师.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥《严选题》\\2027年考研数学武忠祥《高等数学基础篇》严选题（答案解析）第1-4章.pdf\nWWG_Note\\数学\\资料\\less\\周洋鑫\\27周洋鑫《计算能力通关刷题册》\\5分每页，顺丰包邮.jpg\nWWG_Note\\数学\\资料\\less\\周洋鑫\\27周洋鑫《计算能力通关刷题册》\\27周洋鑫《计算能力通关刷题册》答案解析.pdf\nWWG_Note\\数学\\资料\\less\\周洋鑫\\27周洋鑫《考点全刷810题》\\5分每页，顺丰包邮.jpg\nWWG_Note\\数学\\资料\\less\\周洋鑫\\27周洋鑫《计算能力通关刷题册》\\27周洋鑫《计算能力通关刷题册》题目.pdf\nWWG_Note\\数学\\资料\\less\\周洋鑫\\27周洋鑫《零基础提前学》\\2027周洋鑫零基础提前学（最新版）.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数一\\【A4】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数二\\【A4】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数一\\【横版】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数一\\【A4】严选题数一高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数三\\【横版】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数二\\【A4】严选题数二高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数三\\【A4】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数一\\【横版】严选题数一高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥基础高数篇例题做题本\\数二\\【横版】武忠祥高数基础篇做题本.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数二\\【横版】严选题数二高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_113906-第四章 不定积分《计算与应用》解析版.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\27武忠祥严选题高数基础篇做题本\\数三\\【A4】严选题数三高数基础篇.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_114651-第六章 定积分的应用《计算与应用》解析版.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_114028-第四章 不定积分《选填题》解析版.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_114812-第七章 微分方程《选填题》解析版.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\250110_175626-8.第八章 多元函数微分学《选填题》解析版.pdf\nWWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\250603_145649-7.第七章 微分方程《计算与应用》解析版.pdf\n(Results are truncated. Consider using a more specific path or pattern.)"
+          },
+          {
+            "id": "call_02_oJOjKLuifM3gJgMpgRJ18100",
+            "name": "Grep",
+            "input": {
+              "pattern": "不定积分",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note",
+              "glob": "*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_03_bwvs21pDWx3w0EIlVevS9363",
+            "name": "Grep",
+            "input": {
+              "pattern": "第一类换元",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note",
+              "glob": "*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_04_3k6ZOHKO0mUcdeSkqH146508",
+            "name": "Grep",
+            "input": {
+              "pattern": "高数4-1|高数4-2",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note",
+              "glob": "*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_00_YOCe0h8LtzC7Ax2fiwlo6400",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\高数\\笔记\\Math12.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t# 第一章 函数极限与连续\n2\t## 极限的定义\n3\t### x->x0\n4\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774768762135-1fdc4f48-47de-4744-a155-f52acc26a11b.png)\n5\t\n6\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774768776976-e299a3d4-e2a0-4a89-8b5e-4ff93430a24f.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774768800706-503b83ae-369a-4351-b15b-8f741ab2d69c.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774768808573-e53235f4-e998-4f35-898d-1d9e9e05d6b5.png)\n7\t\n8\t### x->无穷\n9\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774768815067-bf14a38f-fdb6-407c-937b-4952d6a1fc66.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774768851936-028a7157-ee98-441d-853a-a2d09593941b.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769001597-0a251dae-2236-4f37-8aad-844d6afe4edc.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769011979-121a9cd3-ad10-4ef8-acbb-2433f14b2725.png)\n10\t\n11\t\n12\t\n13\t## 极限的定义\n14\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769150933-b2b0b5ba-4fb1-4c57-aeff-8369fd184c45.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769156315-3e8ea013-3166-42b2-b0c5-a1425d11b596.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769168447-6e2fd569-8ca6-43cf-b091-4522d09772bc.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769177329-1003db85-4285-436e-af0b-ae780580b9dd.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769185278-91443fa2-6ec4-4c82-8a17-e6990a5ff23f.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769189550-b750d0e4-2f5f-489a-819c-beb86b1a59e1.png)\n15\t\n16\t\n17\t\n18\t## 求极限\n19\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769195628-9e26e06b-a6dc-4a7f-a213-b68d85d800c8.png)\n20\t\n21\t### 替换\n22\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769357295-cc57a90e-9eb4-4a3b-ae84-0bc8151dbccd.png)\n23\t\n24\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769362986-b7a4d1f5-0265-45d3-a909-7c26243077aa.png)\n25\t\n26\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769377202-47981b77-2c2a-48f6-a91e-a07360888152.png)\n27\t\n28\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769384176-3c31a5f9-6104-450d-a7a1-0bdb5ec6c4ba.png)\n29\t\n30\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769393841-5395eabd-c685-40a2-93bf-7f10fb9625dd.png)\n31\t\n32\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769406458-f6d5dea3-c947-404f-bb7c-8f2a4520eb47.png)\n33\t\n34\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769415749-6ac03caa-3037-46fc-af6b-22488cd40e15.png)\n35\t\n36\t### 提前求\n37\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769449457-5f09efbd-7713-4222-8558-4609d4b92885.png)\n38\t\n39\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769516430-7419d663-bed2-4bce-96e9-02d75c365ecf.png)\n40\t\n41\t\n42\t\n43\t\n44\t\n45\t![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769524621-4eb22975-ee93-457b-8e09-e9a629b4f748.png)![](https://cdn.nlark.com/yuque/0/2026/png/58040780/1774769554252-03c2d4cf-9691-4a63-ae1b-66c522a046d4.png)\n46\t\n47\t\n48\t\n49\t\n50\t\n51\t# 第二章 数列极限\n52\t\n53\t\n54\t# 第三章 一元微分学\n55\t\n56\t\n57\t# 第四章 一元积分学\n58\t\n59\t\n60\t\n61\t\n62\t"
+          },
+          {
+            "id": "call_01_lxk4wHQdavzMmYfZWPOU0684",
+            "name": "Grep",
+            "input": {
+              "pattern": "不定积分|第一类换元|换元法|u-substitution",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes",
+              "glob": "*.md",
+              "output_mode": "files_with_matches"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_02_F8MkF8QKV7ZBiOW7lnwJ5017",
+            "name": "Grep",
+            "input": {
+              "pattern": "不定积分|换元|积分",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note",
+              "output_mode": "files_with_matches"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 2 files\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐《660题》\\27李永乐《660题》数二\\《基础过关660》-高数篇 .pdf\nWWG_Note\\数学\\高数\\笔记\\Math12.md"
+          },
+          {
+            "id": "call_03_CGe9ejpLudtsK9VJcdf67772",
+            "name": "Bash",
+            "input": {
+              "command": "ls \"D:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/高数/笔记/\" 2>/dev/null",
+              "description": "List all files in the 高数笔记 directory"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Math12.md"
+          },
+          {
+            "id": "call_00_SiII1AaN9em0cpuOA0ov0420",
+            "name": "Grep",
+            "input": {
+              "pattern": "不定积分|第一类换元|换元法",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 1 file\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐《660题》\\27李永乐《660题》数二\\《基础过关660》-高数篇 .pdf"
+          },
+          {
+            "id": "call_01_n3oI2SOZ3KHA10xiljSa1253",
+            "name": "Glob",
+            "input": {
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学",
+              "pattern": "**/*.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "WWG_Note\\数学\\高数\\笔记\\Math12.md"
+          },
+          {
+            "id": "call_02_8hFP46uGzhdCk6fLWKgj2290",
+            "name": "Glob",
+            "input": {
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学",
+              "pattern": "**/*.txt"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_03_RdU6e8q5gyNRvK1hzUVY0901",
+            "name": "Glob",
+            "input": {
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学",
+              "pattern": "**/*.html"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_00_mA5hyNKoGiSHQGvE6IYE3203",
+            "name": "Grep",
+            "input": {
+              "pattern": "不定积分|第一类换元|换元法",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes",
+              "glob": "*.md",
+              "output_mode": "files_with_matches"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No files found"
+          },
+          {
+            "id": "call_01_kEACZhnen38EdiXAEhvs5210",
+            "name": "Grep",
+            "input": {
+              "pattern": "不定积分|换元",
+              "path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes",
+              "output_mode": "files_with_matches"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "Found 3 files\n.claudian\\sessions\\conv-1780127851677-fdvfx7gq2.meta.json\n.obsidian\\workspace.json\nWWG_Note\\数学\\资料\\less\\李永乐\\27李永乐《660题》\\27李永乐《660题》数二\\《基础过关660》-高数篇 .pdf"
+          },
+          {
+            "id": "call_02_boZBglRQyhHPsAHy0m9I8714",
+            "name": "Bash",
+            "input": {
+              "command": "ls -laR \"D:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/\" 2>/dev/null | head -50",
+              "description": "List all files in the Kira 板书 directory"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "D:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/:\ntotal 130920\ndrwxr-xr-x 1 29074 197618       0 Jun 18 21:03 .\ndrwxr-xr-x 1 29074 197618       0 Jun 18 20:49 ..\n-rw-r--r-- 1 29074 197618 5412391 Jun 18 20:51 10.11 高数3-1,2 中值证明题、泰勒、洛必达-板书.pdf\n-rw-r--r-- 1 29074 197618 6511798 Jun 18 20:51 10.14 高数3-3 函数单调性极值、凹凸性拐点、渐近线-板书.pdf\n-rw-r--r-- 1 29074 197618 2962768 Jun 18 20:51 10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf\n-rw-r--r-- 1 29074 197618 4203827 Jun 18 20:51 10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf\n-rw-r--r-- 1 29074 197618 5698041 Jun 18 20:51 10.21 高数4-2 第二类换元法+有理函数积分等-板书.pdf\n-rw-r--r-- 1 29074 197618 1551378 Jun 18 20:51 10.23 高数4-3 分部积分法板书.pdf\n-rw-r--r-- 1 29074 197618 5481035 Jun 18 20:51 10.25 高数5-1 定积分概念性质板书.pdf\n-rw-r--r-- 1 29074 197618 5223126 Jun 18 20:51 10.28 高数5-2 变限积分、定积分运算性质板书(1).pdf\n-rw-r--r-- 1 29074 197618 3386680 Jun 18 20:51 10.30 高数5-3 反常积分板书.pdf\n-rw-r--r-- 1 29074 197618 3180561 Jun 18 20:50 10.7 高数2-2 导数计算(隐 参数 分段 高阶) 板书.pdf\n-rw-r--r-- 1 29074 197618 5506622 Jun 18 20:50 10.9 高数2-3 微分 3-1 微分中值定理及其证明-板书.pdf\n-rw-r--r-- 1 29074 197618 3831274 Jun 18 20:51 11.1 高数5-4 定积分应用 高数8-1 一阶微分方程1 板书.pdf\n-rw-r--r-- 1 29074 197618 7672822 Jun 18 20:51 11.11 高数6-1,2 二元函数极限+偏导数概念计算 板书.pdf\n-rw-r--r-- 1 29074 197618 3111713 Jun 18 20:51 11.13 高数6-2 多元复合求导法则(链式)+隐函数偏导法-板书.pdf\n-rw-r--r-- 1 29074 197618 6209739 Jun 18 20:51 11.15 高数6-2,3 全微分、多元无条件极值 板书.pdf\n-rw-r--r-- 1 29074 197618 6042529 Jun 18 20:51 11.18 高数6-3 条件极值 高数7-1,2 二重积分基本计算 板书.pdf\n-rw-r--r-- 1 29074 197618 1553942 Jun 18 20:51 11.20 高数7-2 二重积分计算方法技巧 板书.pdf\n-rw-r--r-- 1 29074 197618 2958744 Jun 18 20:51 11.4 高数8-1 一阶线性+伯努利+二阶可降阶微分方程 板书.pdf\n-rw-r--r-- 1 29074 197618 5201988 Jun 18 20:51 11.7 高数8-2 二阶常系数线性方程组+欧拉方程 板书.pdf\n-rw-r--r-- 1 29074 197618 6575594 Jun 18 20:50 9.16 高数1-1-1,2 函数概念性质 板书.pdf\n-rw-r--r-- 1 29074 197618 6032779 Jun 18 20:50 9.18 高数1-1(下) 反三角函数、各种类型函数 高数2-1 数列极限 板书.pdf\n-rw-r--r-- 1 29074 197618 6017991 Jun 18 20:50 9.20 高数1-2-2,3 极限存在准则 高数1-3 函数极限 板书(1).pdf\n-rw-r--r-- 1 29074 197618 7932489 Jun 18 20:50 9.23 高数1-4 无穷小与无穷大+求极限基本功!  板书.pdf\n-rw-r--r-- 1 29074 197618 4395654 Jun 18 20:50 9.25 高数1-5 七种未定式（上）含泰勒、洛必达  板书.pdf\n-rw-r--r-- 1 29074 197618 7573336 Jun 18 20:50 9.27 高数1-5,6,7 七种未定式（下) 幂指型 连续与间断 闭区间连续函数性质  板书.pdf\n-rw-r--r-- 1 29074 197618 9751844 Jun 18 21:03 9.30 高数2-1,2 导数概念与计算(反函数、复合函数) 板书.pdf\ndrwxr-xr-x 1 29074 197618       0 Jun 18 20:59 几何物理应用专项(仅数一二)\ndrwxr-xr-x 1 29074 197618       0 Jun 18 20:59 差分方程与经济学应用(仅数三)\ndrwxr-xr-x 1 29074 197618       0 Jun 18 21:05 数一专项\ndrwxr-xr-x 1 29074 197618       0 Jun 18 20:59 无穷级数专项（仅数一三）\n\nD:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/几何物理应用专项(仅数一二):\ntotal 2148\ndrwxr-xr-x 1 29074 197618       0 Jun 18 20:59 .\ndrwxr-xr-x 1 29074 197618       0 Jun 18 21:03 ..\n-rw-r--r-- 1 29074 197618 2185181 Jun 18 20:59 11.22 数一二专项-几何物理应用 板书.pdf\n\nD:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/差分方程与经济学应用(仅数三):\ntotal 3048\ndrwxr-xr-x 1 29074 197618       0 Jun 18 20:59 .\ndrwxr-xr-x 1 29074 197618       0 Jun 18 21:03 ..\n-rw-r--r-- 1 29074 197618 3105382 Jun 18 20:59 11.29 数三专项-差分方程、经济学应用 板书.pdf\n\nD:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/数一专项:\ntotal 32164\ndrwxr-xr-x 1 29074 197618        0 Jun 18 21:05 ."
+          },
+          {
+            "id": "call_00_s5BH83dlGCxyzi1VnFjm5955",
+            "name": "Bash",
+            "input": {
+              "command": "cd \"D:/BaiduNetdiskDownload/Obsidian-Notes\" && python3 -c \"\nimport subprocess\n# Try pdftotext on the most relevant files\nfiles = [\n    'WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf',\n    'WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf'\n]\nfor f in files:\n    print(f'=== Trying: {f} ===')\n    result = subprocess.run(['pdftotext', '-raw', f, '-'], capture_output=True, text=True, timeout=10)\n    print(result.stdout[:2000] if result.stdout else 'No text extracted')\n    print(result.stderr[:500] if result.stderr else '')\n    print()\n\" 2>&1 || echo \"pdftotext not available, trying alternative method\"",
+              "description": "Try to extract text from the key PDFs using pdftotext",
+              "timeout": 30000
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "pdftotext not available, trying alternative method"
+          },
+          {
+            "id": "call_01_r37ACVZnnCQiw9GZMBSE0703",
+            "name": "Bash",
+            "input": {
+              "command": "cd \"D:/BaiduNetdiskDownload/Obsidian-Notes\" && python3 -c \"\nimport subprocess\n# Try to extract text using python's PyMuPDF (fitz) if available\nimport importlib.util\nspec = importlib.util.find_spec('fitz')\nif spec:\n    import fitz\n    files = [\n        'WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf',\n        'WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf'\n    ]\n    for f in files:\n        print(f'=== {f} ===')\n        doc = fitz.open(f)\n        for i, page in enumerate(doc):\n            txt = page.get_text()\n            if txt.strip():\n                print(f'--- Page {i+1} ---')\n                print(txt[:1500])\n        doc.close()\nelse:\n    print('PyMuPDF (fitz) not available')\n    # Try pdfminer\n    spec2 = importlib.util.find_spec('pdfminer')\n    if spec2:\n        print('pdfminer available - but skipping for now')\n    else:\n        print('No PDF text extraction library available')\n\" 2>&1",
+              "description": "Try to extract text from PDFs using PyMuPDF or pdfminer",
+              "timeout": 30000
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "Exit code 49"
+          },
+          {
+            "id": "call_00_beG2o9JTYaqA32UwVdPa8913",
+            "name": "Bash",
+            "input": {
+              "command": "cd \"D:/BaiduNetdiskDownload/Obsidian-Notes\" && python3 -c \"\nimport subprocess\n# Check what python PDF tools are available\nresult = subprocess.run(['python3', '-m', 'pip', 'list', '--format=columns'], capture_output=True, text=True, timeout=15)\nlines = result.stdout.split('\\n')\npdf_related = [l for l in lines if any(x in l.lower() for x in ['pdf', 'fitz', 'mupy', 'pdfminer', 'pypdf', 'pdfplumber', 'camelot'])]\nprint('Available PDF-related packages:')\nprint('\\n'.join(pdf_related) if pdf_related else 'None found')\nprint()\nprint('Will try pypdf...')\n\" 2>&1",
+              "description": "Check available Python PDF libraries",
+              "timeout": 30000
+            },
+            "status": "error",
+            "isExpanded": false,
+            "result": "Exit code 49"
+          },
+          {
+            "id": "call_00_TUqO4ZFrniw8n9FtYLYL0704",
+            "name": "Bash",
+            "input": {
+              "command": "python3 -c \"import pypdf; print('pypdf available')\" 2>&1 || python3 -c \"import PyPDF2; print('PyPDF2 available')\" 2>&1 || python3 -c \"import pdfminer; print('pdfminer available')\" 2>&1 || python3 -c \"import pdfplumber; print('pdfplumber available')\" 2>&1 || echo \"No PDF library available\"",
+              "description": "Check for any Python PDF library",
+              "timeout": 10000
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "No PDF library available"
+          },
+          {
+            "id": "call_00_4ir5EbX4lELh2nmfGt2p6679",
+            "name": "Bash",
+            "input": {
+              "command": "find \"D:/BaiduNetdiskDownload/Obsidian-Notes\" -type f \\( -name \"*.md\" -o -name \"*.txt\" -o -name \"*.html\" \\) -exec grep -l \"不定积分\\|换元法\\|第一类换元\" {} \\; 2>/dev/null",
+              "description": "Search for all text files mentioning 不定积分 or 换元法",
+              "timeout": 30000
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "(Bash completed with no output)"
+          },
+          {
+            "id": "call_00_BLbiyinJ8PWvG3J6DJ4J9792",
+            "name": "Bash",
+            "input": {
+              "command": "find \"D:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note\" -type f \\( -name \"*.md\" -o -name \"*.txt\" -o -name \"*.html\" \\) 2>/dev/null",
+              "description": "Find all text-based files under WWG_Note",
+              "timeout": 30000
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "D:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/README.md\nD:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/政治/真题/01.考研政治真题/【03】2003-2022考研政治答案（PDF）/21真题及答案现在为精简版，后续会更新完整版.txt\nD:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/数学/高数/笔记/Math12.md\nD:/BaiduNetdiskDownload/Obsidian-Notes/WWG_Note/英语/单词/bbdc_单词记忆法_词根联想.md"
+          },
+          {
+            "id": "call_01_VRPUUTEinhKE4IeZcNRT4244",
+            "name": "Read",
+            "input": {
+              "file_path": "D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\README.md"
+            },
+            "status": "completed",
+            "isExpanded": false,
+            "result": "1\t# Study408 — 考研复习笔记\n2\t\n3\t> 基于 Obsidian 的考研复习知识库，涵盖 408 计算机专业基础综合、数学（二）、英语（二）、政治四大科目。\n4\t\n5\t## 目录结构\n6\t\n7\t```\n8\t├── 408/                    # 计算机专业基础综合\n9\t│   ├── 数据结构/\n10\t│   │   ├── 笔记/\n11\t│   │   └── 错题本/\n12\t│   ├── 计算机组成原理/\n13\t│   │   ├── 笔记/\n14\t│   │   └── 错题本/\n15\t│   ├── 操作系统/\n16\t│   │   ├── 笔记/\n17\t│   │   └── 错题本/\n18\t│   ├── 计算机网络/\n19\t│   │   ├── 笔记/\n20\t│   │   └── 错题本/\n21\t│   └── 资料/               # 王道系列教材、真题、思维导图等\n22\t├── 数学/\n23\t│   ├── 高数/\n24\t│   │   ├── 笔记/\n25\t│   │   └── 错题本/\n26\t│   ├── 线代/\n27\t│   │   ├── 笔记/\n28\t│   │   └── 错题本/\n29\t│   └── 资料/               # 真题（1987-2025）、Kira 讲义等\n30\t├── 英语/\n31\t│   ├── 单词/\n32\t│   ├── 笔记/\n33\t│   ├── 错题本/\n34\t│   └── 资料/               # 真题（英语二）、唐静/柴荣讲义\n35\t└── 政治/\n36\t    ├── 笔记/\n37\t    ├── 错题本/\n38\t    ├── 真题/\n39\t    └── 资料/\n40\t```\n41\t\n42\t## 使用方式\n43\t\n44\t本仓库为 **Obsidian** 笔记库，推荐使用 [Obsidian](https://obsidian.md/) 打开以获得最佳体验：\n45\t\n46\t```bash\n47\tgit clone https://github.com/Godenglow/Study408.git\n48\t```\n49\t\n50\t然后在 Obsidian 中选择 \"Open folder as vault\"，打开克隆后的目录即可。\n51\t\n52\t## 科目说明\n53\t\n54\t| 科目 | 考试内容 | 资料特点 |\n55\t|------|---------|----------|\n56\t| **408 计算机专业基础综合** | 数据结构、计算机组成原理、操作系统、计算机网络 | 王道系列教材 + 思维导图 + 真题 |\n57\t| **数学（二）** | 高等数学、线性代数 | 1987-2025 真题全覆盖 |\n58\t| **英语（二）** | 词汇、阅读、翻译、写作 | 分模块笔记 + 名师讲义 |\n59\t| **政治** | 马原、毛中特、史纲、思修、时政 | 真题 + 专题笔记 |\n60\t\n61\t## 笔记规范\n62\t\n63\t- 每门科目按「笔记」和「错题本」分类\n64\t- 笔记记录知识点、公式、思维导图\n65\t- 错题本收录典型错题，标注错因与正确思路\n66\t- 所有笔记采用 Markdown 格式，支持 Obsidian 双向链接\n67\t\n68\t## 关于作者\n69\t\n70\t26 考研备考中，持续更新。\n71\t\n72\t---\n73\t\n74\t⭐ 如果对你有帮助，欢迎 Star！\n75\t"
+          }
+        ],
+        "isExpanded": false,
+        "result": "Now I have a complete picture. Let me provide a comprehensive summary of the findings.\n\n---\n\n## Search Results: 不定积分 (Indefinite Integrals) and 第一类换元法 (First Substitution Method)\n\n### Text-Based Notes Found\n\n**There are NO markdown/text notes in this vault that contain substantive content about 不定积分 or 第一类换元法.** Specifically:\n\n1. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\高数\\笔记\\Math12.md`** -- This is the only markdown note under `WWG_Note/数学/`. It contains only placeholder headings for \"第一章 函数极限与连续\", \"第二章 数列极限\", \"第三章 一元微分学\", and \"第四章 一元积分学\", with inline image links (from Yuque/语雀) for the content. The chapter 4 heading is present but **empty** -- no actual text about integration or substitution methods has been written yet.\n\n2. No `.txt` or `.html` files under `WWG_Note/数学/` contain any content related to 不定积分 or 换元法.\n\n### Relevant PDF Files Found (image/scanned, no extractable text)\n\nAll substantive content exists **only as PDF files** (most likely scanned handwritten board notes or rendered PDFs). The most relevant files are:\n\n#### Primary -- directly matching your query:\n\n1. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf`**\n   - Size: ~4.2 MB\n   - Covers: 高数4-1 不定积分入门 + 高数4-2 第一类换元法\n   - This is the most directly relevant file.\n\n2. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.16 高数3-3 函数作图 4-1 原函数与不定积分-板书.pdf`**\n   - Size: ~2.96 MB\n   - Covers: 高数3-3 函数作图 + 高数4-1 原函数与不定积分 (primitives and indefinite integrals)\n\n3. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\课堂板书\\10.21 高数4-2 第二类换元法+有理函数积分等-板书.pdf`**\n   - Size: ~5.7 MB\n   - Covers: 高数4-2 第二类换元法 (second substitution method) + 有理函数积分 (rational function integration)\n\n#### Supporting materials:\n\n4. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\必刷习题集\\第四讲 不定积分（答案解析）.pdf`**\n   - Answer key for indefinite integral exercises in the Kira curriculum.\n\n5. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_113906-第四章 不定积分《计算与应用》解析版.pdf`**\n   - Wu Zhongxiang's problem set answers for Chapter 4 (indefinite integrals) -- calculation and application problems.\n\n6. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\less\\武忠祥\\2027武忠祥考研数学基础过关基础练习册\\基础高数习题册答案解析\\241011_114028-第四章 不定积分《选填题》解析版.pdf`**\n   - Wu Zhongxiang's problem set answers for Chapter 4 -- multiple choice and fill-in-the-blank problems.\n\n7. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\导图\\高数第4-5章知识导图.pdf`**\n   - Knowledge mind map for chapters 4-5 (likely includes 不定积分 concepts).\n\n8. **`D:\\BaiduNetdiskDownload\\Obsidian-Notes\\WWG_Note\\数学\\资料\\Kira\\27Kira基础讲义+习题+板书\\高等数学\\讲义\\【一高数Kira】27考研高数基础讲义.pdf`** and its companion **做课本** (workbook) versions -- the main lecture notes for the entire Kira high-math series, which includes the fourth lecture on 不定积分.\n\n### Conclusion\n\nThe vault is structured as a collection of PDF reference materials (讲义/板书/习题) plus a very skeletal markdown note structure. The owner (studying for the 27考研/graduate entrance exam) has not yet transcribed the 不定积分 or 第一类换元法 content into markdown notes -- the relevant `Math12.md` only has a placeholder `# 第四章 一元积分学` heading with no content filled in. All the actual educational content resides in the PDF files listed above, which are likely handwritten board notes (板书) or typeset PDFs from Kira, Wu Zhongxiang, and other tutoring materials.\n\nTo read those PDFs, you would need to open them directly (they render as images/scanned pages rather than extractable text). No text extraction libraries are available in this environment to read their content programmatically."
+      }
+    }
+  },
+  "currentNote": "WWG_Note/数学/资料/Kira/27Kira基础讲义+习题+板书/高等数学/课堂板书/10.18 高数4-1,2 不定积分入门+第一类换元法-板书.pdf",
+  "usage": {
+    "model": "haiku",
+    "inputTokens": 140,
+    "cacheCreationInputTokens": 0,
+    "cacheReadInputTokens": 34944,
+    "contextWindow": 200000,
+    "contextTokens": 35084,
+    "percentage": 18
+  }
+}
