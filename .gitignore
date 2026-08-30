@@ -10,3 +10,6 @@
 .DS_Store
 desktop.ini
 Thumbs.db
+
+# Claude 会话记录(隐私)
+.claudian/

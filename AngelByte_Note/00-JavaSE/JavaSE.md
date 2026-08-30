@@ -2056,6 +2056,8 @@ Java Virtual Machine Stacks（Java虚拟机栈）：Java虚拟机栈用于存储
 
 GoF 设计模式 ：《Design Patterns: Elements of Reusable Object-Oriented Software》（即后述《设计模式》一书），由 Erich Gamma、Richard Helm、Ralph Johnson 和 John Vlissides 合著（Addison-Wesley，1995）。这几位作者常被称为四人组（Gang of Four）。
 
+![[装饰器设计模式类图]]
+
 - 架构设计模式（Architectural Pattern）：主要用于软件系统的整体架构设计，包括多层架构、MVC架构、微服务架构、REST架构和大数据架构等。
 
 企业级设计模式（Enterprise Pattern）：主要用于企业级应用程序设计，包括基于服务的架构（SOA）、企业集成模式（EIP）、业务流程建模（BPM）和企业规则引擎（BRE）等。
@@ -2453,6 +2455,8 @@ UML 不是专门为 java 语言准备的。只要是面向对象的编程语言�
 - 部署图（Deployment Diagram）：描述软件或系统在不同物理设备上部署的情况，包括计算机、网络、中间件、应用程序等。
 
 - 常见的 UML 建模工具有： StarUML ， Rational Rose 等。
+
+![[类与类之间的关系]]
 
 - 1. 泛化关系（ is a ）
 
@@ -3037,6 +3041,8 @@ Java提供了异常处理机制，即在程序中对可能出现的异常情况�
 - 运行时异常一般是由程序员的错误引起的，并且不需要强制进行异常处理
 
 注意：编译时异常并不是在编译阶段发生的异常，所有的异常发生都是在运行阶段的，因为每个异常发生都是会new异常对象的，new异常对象只能在运行阶段完成。那为什么叫做编译时异常呢？这是因为这种异常必须在编译阶段提前预处理，如果不处理编译器报错，因此而得名编译时异常。
+
+![[异常的继承结构]]
 
 ### 自定义异常
 
@@ -4035,6 +4041,10 @@ UUID具有足够的唯一性， 重复 的概率相当低。UUID使用的是128�
 
 - Collection 继承结构
 
+![[Collection的继承结构]]
+
+![[Collection的继承结构(默写)]]
+
 - SequencedCollection 和 SequencedSet 接口都是 Java21 新增的接口。
 
 - 右图中蓝色的是实现类。其它的都是接口。
@@ -4472,6 +4482,8 @@ boolean offerFirst(E e); 从队头入队
 ### 14Map 继承结构
 
 - Map 继承结构
+
+![[Map继承结构]]
 
 - Map 集合以 key 和 value 的键值对形式存储。 key 和 value 存储的都是引用。
 
@@ -5373,6 +5385,8 @@ ByteArrayInputStream和ByteArrayOutputStream都是内存操作流，不需要打
 - 阻塞状态（ BLOCKED ）
 
 - 死亡状态（TERMINATED）
+
+![[线程的生命周期]]
 
 `Thread.sleep()`是Java中的一个静态方法，可以让当前线程暂停指定的时间。该方法会将当前线程暂停指定的毫秒数，让其他可用的线程获得执行机会，但是当前线程的锁并不会被释放。因此，在sleep期间，其他线程如果请求获得了该线程占有的锁，那么这些线程也无法执行。
 

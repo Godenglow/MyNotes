@@ -1,0 +1,46 @@
+
+四大头领：
+	InputStream
+	OutputStream
+	Reader
+	Writer
+
+File相关的：
+	FileInputStream
+	FileOutputStream
+	FileReader
+	FileWriter
+
+缓冲流相关的：
+	BufferedInputStream
+	BufferedOutputStream
+	BufferedReader
+	BufferedWriter
+
+转换流相关的：
+	InputStreamReader
+	OutputStreamWriter
+
+打印流相关的：
+	PrintStream
+	PrintWriter
+
+对象相关的：
+	ObjectInputStream
+	ObjectOutputStream
+
+数据相关的：
+	DataInputStream
+	DataOutputStream
+
+字节数组相关的：
+	ByteArrayInputStream
+	ByteArrayOutputStream
+
+压缩和解压缩相关的：
+	GZIPInputStream
+	GZIPOutputStream
+
+线程相关的：
+	PipedInputStream
+	PipedOutputStream
