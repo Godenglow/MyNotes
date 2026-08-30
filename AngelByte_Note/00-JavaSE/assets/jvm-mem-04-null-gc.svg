@@ -21,10 +21,10 @@
   <text x="490" y="215" font-size="13" text-anchor="middle" fill="#5F5E5A">String birth = "2012-10-11"</text>
   <text x="490" y="235" font-size="13" text-anchor="middle" fill="#5F5E5A">char sex = '雄'</text>
 
-  <rect x="490" y="90" width="140" height="55" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="0.5"/>
-  <text x="510" y="115" font-size="12" fill="#A32D2D">没有任何引用指向该对象</text>
-  <text x="510" y="133" font-size="12" fill="#A32D2D">最终会被 GC 回收</text>
-  <path d="M490 118 L450 150" fill="none" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
+  <rect x="468" y="90" width="162" height="55" rx="8" fill="#FCEBEB" stroke="#E24B4A" stroke-width="0.5"/>
+  <text x="480" y="115" font-size="12" fill="#A32D2D">没有任何引用指向该对象</text>
+  <text x="480" y="133" font-size="12" fill="#A32D2D">最终会被 GC 回收</text>
+  <path d="M468 118 L440 150" fill="none" stroke="#E24B4A" stroke-width="1" stroke-dasharray="3 2"/>
 
   <rect x="545" y="270" width="85" height="40" rx="8" fill="#E1F5EE" stroke="#5DCAA5" stroke-width="0.5"/>
   <text x="555" y="290" font-size="11" fill="#085041">元空间</text>
