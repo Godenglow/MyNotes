@@ -1,0 +1,33 @@
+<svg viewBox="0 0 680 190" width="680" height="190" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'Segoe UI', 'Microsoft YaHei', sans-serif">
+  <title>对象初始化执行顺序</title>
+  <desc>new 对象时依次执行：属性赋默认值、构造代码块、构造方法体、初始化完毕</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#185FA5"/>
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="680" height="190" fill="#FFFFFF"/>
+  <text x="40" y="42" font-size="15" font-weight="500" fill="#2C2C2A">对象初始化执行顺序</text>
+
+  <rect x="42" y="70" width="130" height="56" rx="8" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
+  <text x="107" y="90" font-size="13" font-weight="500" text-anchor="middle" fill="#0C447C">① 开辟空间</text>
+  <text x="107" y="110" font-size="12" text-anchor="middle" fill="#185FA5">属性赋默认值</text>
+
+  <rect x="198" y="70" width="130" height="56" rx="8" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
+  <text x="263" y="90" font-size="13" font-weight="500" text-anchor="middle" fill="#0C447C">② 构造代码块</text>
+  <text x="263" y="110" font-size="12" text-anchor="middle" fill="#185FA5">{} 内代码执行</text>
+
+  <rect x="354" y="70" width="130" height="56" rx="8" fill="#E6F1FB" stroke="#378ADD" stroke-width="0.5"/>
+  <text x="419" y="90" font-size="13" font-weight="500" text-anchor="middle" fill="#0C447C">③ 构造方法体</text>
+  <text x="419" y="110" font-size="12" text-anchor="middle" fill="#185FA5">赋值你给的值</text>
+
+  <rect x="510" y="70" width="130" height="56" rx="8" fill="#E1F5EE" stroke="#1D9E75" stroke-width="0.5"/>
+  <text x="575" y="90" font-size="13" font-weight="500" text-anchor="middle" fill="#085041">④ 初始化完毕</text>
+  <text x="575" y="110" font-size="12" text-anchor="middle" fill="#0F6E56">对象可以使用</text>
+
+  <path d="M172 98 L194 98" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M328 98 L350 98" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <path d="M484 98 L506 98" fill="none" stroke="#185FA5" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <text x="40" y="155" font-size="12" fill="#5F5E5A">每次 new 对象都会完整走一遍，构造代码块一定在构造方法体之前执行</text>
+</svg>
