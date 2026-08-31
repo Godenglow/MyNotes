@@ -658,6 +658,244 @@ public class Student {
 
 ---
 
+## 十三、构造方法
+
+> **一句话**：`new` 对象时自动调用、专门用来初始化对象的特殊方法。
+
+### 作用
+
+对象创建分两个阶段，**不能颠倒、不可分割**：
+
+1. **创建阶段**：`new` 在堆里开辟空间，给属性赋**默认值**
+2. **初始化阶段**：执行构造方法，把属性改成**你想要的值**
+
+```java
+Student s = new Student("张三", 20);
+// ① new 在堆中创建对象
+// ② 调用 Student("张三", 20) 初始化对象
+```
+
+### 定义三要素
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    // 构造方法：没有返回值，方法名必须和类名一样
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+| 要点 | 说明 |
+|------|------|
+| 没有返回值 | 连 `void` 都不能写 |
+| 方法名 = 类名 | 大小写必须完全一致 |
+| 可重载 | 参数列表不同即可 |
+
+### 调用方式
+
+构造方法不是用 `.方法名()` 调用，而是跟在 `new` 后面：
+
+```java
+Student s = new Student("张三", 20);
+```
+
+### 无参构造的坑（重点）
+
+**如果一个构造方法都没写，Java 会自动送你一个无参构造；一旦你写了任意构造方法，系统就不再送了。**
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Student s1 = new Student("张三", 20);   // ✅
+Student s2 = new Student();              // ❌ 编译报错！无参构造已消失
+```
+
+**建议**：不管需不需要，都显式把无参构造写出来。
+
+```java
+public Student() {}   // 手动加上，避免后续踩坑
+```
+
+### 重载示例
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    public Student() {}                              // 无参
+    public Student(String name) { this.name = name; } // 一个参数
+    public Student(String name, int age) {            // 两个参数
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+### 构造代码块
+
+类里用 `{}` 包起来的代码，**每次创建对象时都会执行**，而且在构造方法之前执行。
+
+```java
+public class Student {
+    String name;
+
+    // 构造代码块
+    {
+        System.out.println("构造代码块执行");
+    }
+
+    public Student(String name) {
+        System.out.println("构造方法执行");
+        this.name = name;
+    }
+}
+
+new Student("张三");
+// 输出：
+// 构造代码块执行
+// 构造方法执行
+```
+
+### 对象初始化全过程
+
+![[java-obj-init-order.svg]]
+
+1. `new` 在堆中开辟空间，属性赋默认值
+2. 执行**构造代码块**
+3. 执行**构造方法体**
+4. 构造方法结束，对象初始化完成
+
+### 速记
+
+> 构造方法 = 没有返回值 + 方法名同类名 + new 时自动调用
+> 建议无参构造显式写，否则写了有参构造后默认无参会消失
+
+---
+
+## 十四、this 关键字
+
+> **一句话**：`this` 是指向当前对象的引用。
+
+### this 是什么
+
+`this` 本质上是一个**引用变量**，保存着**当前正在调用方法的那个对象**的内存地址。
+
+```java
+public class Student {
+    String name;
+
+    public void show() {
+        System.out.println(this);     // 打印当前对象的地址
+        System.out.println(this.name);
+    }
+}
+```
+
+### this 能干嘛
+
+通过 `this.` 可以访问实例变量、调用实例方法：
+
+```java
+public class Student {
+    String name;
+
+    public void setName(String name) {
+        this.name = name;            // this.name = 当前对象的 name
+    }
+
+    public void sayHello() {
+        this.study();                // 调用当前对象的 study 方法
+    }
+
+    public void study() {
+        System.out.println(name + " 在学习");
+    }
+}
+```
+
+### this. 什么时候可以省略
+
+大部分情况下，`this.` 可以省略：
+
+```java
+public void study() {
+    System.out.println(this.name);   // ✅ 完整写法
+    System.out.println(name);        // ✅ 省略写法，效果一样
+}
+```
+
+**不能省略**的情况：**局部变量和实例变量同名**。
+
+```java
+public void setName(String name) {
+    name = name;      // ❌ 两个都是参数 name，没意义
+    this.name = name; // ✅ 左边是当前对象的 name，右边是参数 name
+}
+```
+
+### this 不能出现在静态方法中
+
+```java
+public class Student {
+    String name;
+
+    public static void test() {
+        // System.out.println(this.name);   // ❌ 编译报错
+    }
+}
+```
+
+**原因**：静态方法属于类，不属于某个对象；调用时可能根本不存在对象，`this` 就没有指向。
+
+### this(实参) 调用其他构造方法
+
+`this(实参)` 只能出现在**构造方法的第一行**，用来调用本类中另一个构造方法，避免重复写代码。
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    // 无参构造调用有参构造
+    public Student() {
+        this("张三", 20);   // ✅ 必须是第一行
+    }
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+**注意**：
+- `this(...)` 和 `super(...)` 都必须放在构造方法**第一行**
+- 所以一个构造方法里**不能同时出现** `this(...)` 和 `super(...)`
+
+### this 存储在哪
+
+编译后，`this` 被放在**实例方法栈帧局部变量表的 0 号槽位**。每个实例方法被调用时，JVM 都会悄悄把当前对象的引用塞进去。
+
+### 速记
+
+> `this` = 指向当前对象的引用；同名时必须写，静态方法里不能用，`this(实参)` 调别的构造方法且必须放第一行
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -676,8 +914,6 @@ byte / short / char  →  int  →  long  →  float  →  double
     （一运算就变 int）        （自动拓宽，无需强转）
 ```
 
-### 报错速查
-
 ### 内存区域速查
 
 | 区域 | 存储内容 | 生命周期 |
@@ -695,6 +931,8 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 空指针 | 引用为 null 却去访问对象 |
 | 参数传递 | 复制一份值再传 |
 | this | 指向当前对象的引用 |
+| 构造方法 | 没有返回值、方法名同类名、new 时自动调用 |
+| 构造代码块 | 类中 `{}` 包起来的代码，每次 new 对象时执行，且在构造方法之前 |
 
 ### 报错速查
 
@@ -710,3 +948,4 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `byte c = a1 + a2;` | ❌ | 小类型运算结果仍是 int |
 | `double d = c + i + f;` | ✅ | 向最大类型自动提升 |
 | `z == 2.3`（浮点） | ⚠️ | 逻辑上错，应用 epsilon |
+| `new Student()`（只有有参构造时） | ❌ | 显式定义构造方法后默认无参构造消失 |
