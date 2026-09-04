@@ -1,0 +1,29 @@
+/* ====================================================================
+   Full-width chart images
+   - 让 SVG 图表填满笔记内容列宽（默认 Obsidian 缩略显示太小）
+   - 适用于所有 .svg 内嵌图，也覆盖常规 PNG/JPG 保持一致
+   - 在 Obsidian → Settings → Appearance → CSS snippets 中启用
+   ==================================================================== */
+
+.markdown-rendered img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.internal-embed img,
+.internal-embed[src$=".svg"] img,
+.internal-embed[data-src$=".svg"] img,
+.markdown-rendered img[src$=".svg"] {
+  width: 100% !important;
+  max-width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
+
+.internal-embed[src$=".svg"],
+.internal-embed[data-src$=".svg"] {
+  width: 100%;
+  max-width: 100%;
+}
