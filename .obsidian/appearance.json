@@ -1,8 +1,5 @@
 {
   "theme": "moonstone",
   "cssTheme": "",
-  "accentColor": "",
-  "enabledCssSnippets": [
-    "full-width-images"
-  ]
+  "accentColor": ""
 }
