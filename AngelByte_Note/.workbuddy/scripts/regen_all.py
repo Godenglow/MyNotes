@@ -63,7 +63,7 @@ def merge_rmq():
 ok = fail = 0
 # 根目录 9 个 + Seata + Q&A
 for n in ROOT_NOTES:
-    ok += run(os.path.join(BK_MAIN, n + ".md"), os.path.join(VAULT, n + ".html"))
+    ok += run(os.path.join(BK_MAIN, n + ".md"), os.path.join(VAULT, n, n + ".html"))
 for src, out, *extra in [
     (os.path.join(BK_MAIN, "12-Seata", "Seata.md"), os.path.join(VAULT, "12-Seata", "Seata.html"), []),
     (os.path.join(BK_MAIN, "00-JavaSE", "JavaSE Q&A.md"),
@@ -89,4 +89,5 @@ if merge_rmq():
         fail += 1
 
 print(f"\n完成: 成功 {ok} / 失败 {fail}")
+print("提醒: 根目录 9 个笔记重生成后需再跑 localize_images.py 恢复图片本地化")
 sys.exit(1 if fail else 0)

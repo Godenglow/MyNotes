@@ -5,7 +5,7 @@ from urllib.parse import unquote
 
 os.chdir(r"D:\MyNotes\AngelByte_Note")
 
-f = "01-HTML+CSS.html"
+f = r"01-HTML+CSS\01-HTML+CSS.html"
 s = open(f, encoding="utf-8").read()
 real_rel_tag = len(re.findall(r'<a [^>]*rel="noopener noreferrer"[^>]*>', s))   # rel 必须在标签属性位
 pollution = s.count('> rel="noopener noreferrer">')                              # 标签外的可见污染文本
@@ -14,7 +14,7 @@ escaped_pure = len(re.findall(r"&lt;a href=\"https://news\.cctv\.com/\" target=\
 print(f"1) 01-HTML+CSS: 属性位 rel = {real_rel_tag} (预期1) | 标签外污染 = {pollution} (预期0) | 示例被误改 = {escaped_touched} (预期0)")
 ok1 = real_rel_tag == 1 and pollution == 0 and escaped_touched == 0
 
-f = "02-Java Web.html"
+f = r"02-Java Web\02-Java Web.html"
 s = open(f, encoding="utf-8").read()
 print(f"2) 02-Java Web: img-missing 占位 = {s.count(chr(34).join(['class=', 'img-missing']))} 个 (预期3)")
 

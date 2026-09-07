@@ -61,26 +61,27 @@ def localize(html_path, assets_dir):
         s,
     )
 
-    # 2) 收集其余外链
-    tasks = {}   # clean_url -> (attr原文, 本地文件名)
+    # 2) 收集其余外链：同一 URL 的多种 attr 形态（不同 #fragment）归一组
+    tasks = {}   # clean_url -> {"attrs": set(原文), "base": 文件名}
     for m in re.finditer(r'<img[^>]+src="(https?://[^"]+)"', s):
         attr = m.group(1)
         clean = H.unescape(attr).split("#")[0]
         if "i.imgur.com" in clean:
             continue
-        if clean not in tasks:
-            base = os.path.basename(urllib.parse.urlparse(clean).path) or "img"
-            tasks[clean] = [attr, base]
+        t = tasks.setdefault(clean, {"attrs": set(), "base": None})
+        t["attrs"].add(attr)
+        if t["base"] is None:
+            t["base"] = os.path.basename(urllib.parse.urlparse(clean).path) or "img"
 
-    # 3) 并发下载
+    # 3) 并发下载（本地已有则跳过，幂等）
     results = {}
     def work(item):
-        clean, (attr, base) = item
-        dest = os.path.join(assets_dir, base)
+        clean, t = item
+        dest = os.path.join(assets_dir, t["base"])
         if os.path.exists(dest) and os.path.getsize(dest) > 0:
-            return clean, True, base
+            return clean, True, t["base"]
         ok, _ = fetch(clean, dest)
-        return clean, ok, base
+        return clean, ok, t["base"]
 
     with cf.ThreadPoolExecutor(max_workers=12) as ex:
         for clean, ok, base in ex.map(work, tasks.items()):
@@ -88,28 +89,29 @@ def localize(html_path, assets_dir):
     n_ok = sum(1 for ok, _ in results.values() if ok)
     fails = [clean for clean, (ok, _) in results.items() if not ok]
 
-    # 4) src 改写（含扩展名嗅探修正）
-    fixed = []
+    # 4) src 改写：必须替换完整 attr 原文（含 #fragment 与 &amp;），否则尾巴残留成坏 src
     for clean, (ok, base) in results.items():
-        attr_forms = {clean, H.escape(clean)}
+        if not ok:
+            continue
         p = os.path.join(assets_dir, base)
-        if ok:
-            with open(p, "rb") as f:
-                head = f.read(12)
+        with open(p, "rb") as f:
+            head = f.read(12)
+        if not any(base.lower().endswith(e) for e in (".jpg", ".jpeg", ".png", ".gif", ".webp")):
             for mk, ext in EXT_BY_MAGIC.items():
-                if head.startswith(mk) and not base.lower().endswith(ext):
+                if head.startswith(mk):
                     new = base + ext
                     os.rename(p, os.path.join(assets_dir, new))
                     base = new
                     break
-            for a in attr_forms:
-                s = s.replace(a, "assets/" + base)
-            fixed.append(base)
-        else:
-            fixed.append("FAIL:" + clean)
+        for a in tasks[clean]["attrs"]:
+            s = s.replace(a, "assets/" + base)
+            s = s.replace(H.escape(a), "assets/" + base)
+
+    # 5) 兜底清洗：assets/ src 上残留的 #fragment/?query 尾巴全部剥掉
+    s = re.sub(r'(src="assets/[^"#?]+)[?#][^"]*"', r"\1\"", s)
 
     open(html_path, "w", encoding="utf-8").write(s)
-    return n_imgur, len(tasks), n_ok, fails, fixed
+    return n_imgur, len(tasks), n_ok, fails
 
 print("== 移动根目录 HTML 进文件夹 ==", flush=True)
 jobs = []
@@ -128,7 +130,7 @@ jobs[-1] = (os.path.join(VAULT, "12-Seata", "Seata.html"), os.path.join(VAULT, "
 print("== 下载并改写 ==", flush=True)
 report, all_fails = [], []
 for html_path, assets_dir, label in jobs:
-    n_imgur, n_total, n_ok, fails, _ = localize(html_path, assets_dir)
+    n_imgur, n_total, n_ok, fails = localize(html_path, assets_dir)
     line = f"{label:20s} 外链 {n_total:4d} | 成功 {n_ok:4d} | 失败 {len(fails):2d} | imgur占位 {n_imgur}"
     print(line, flush=True)
     report.append(line)

@@ -38,3 +38,9 @@
 - 参数：路径必须 `D:/...` 风格；`--mermaid auto|inline|copy|cdn`；`--embed-dir` 可多次。
 - 三个必须保持的修复：同名图加序号防覆盖 / title 走 clean_title+escape / 首个 h1 是主标题时跳过。
 - 无 h1 的 md（如 Seata）→ 单章不渲染标题条，属预期导航退化。
+
+## 库结构（2026-09-07 图片本地化后）
+
+- 根目录 9 个课程笔记各自独立文件夹：`<名>/<名>.html + assets/`（如 01-HTML+CSS/）。
+- 全库图片已本地化（1017 张下载，0 外链）；imgur 58 处为死链占位（上游已删）。
+- 完整管线：regen_all.py → localize_images.py → verify_fixes.py（顺序执行，均幂等）。
