@@ -50,5 +50,5 @@
 - 根目录 9 个课程笔记各自独立文件夹：`<名>/<名>.html + assets/`（如 01-HTML+CSS/）。
 - 全库图片已本地化（1017 张下载，0 外链）；imgur 58 处为死链占位（上游已删）。
 - 10-Redis 已精简：Redis.html（课程介绍+基础篇+实战篇 三合一）+ assets/(225张) + 2 pptx；
-  代码项目与注释版图已归档 backup/redis_archive/。01.快速入门.html 因被基础篇覆盖已删。
+  代码项目与注释版图已归档 .workbuddy/notes_backup_20260907_095204/redis_archive/。01.快速入门.html 因被基础篇覆盖已删。
 - 完整管线：regen_all.py → localize_images.py → verify_fixes.py（顺序执行，均幂等）。

@@ -92,4 +92,7 @@ if merge_rmq():
 
 print(f"\n完成: 成功 {ok} / 失败 {fail}")
 print("提醒: 根目录 9 个笔记重生成后需再跑 localize_images.py 恢复图片本地化")
+r2 = subprocess.run([PY, os.path.join(os.path.dirname(os.path.abspath(__file__)), "redis_cleanup.py")],
+                    capture_output=True, text=True)
+print("Redis 清理:", (r2.stdout or r2.stderr).strip().splitlines()[-1] if (r2.stdout or r2.stderr) else "?")
 sys.exit(1 if fail else 0)
