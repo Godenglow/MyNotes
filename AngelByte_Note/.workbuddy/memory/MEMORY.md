@@ -27,3 +27,10 @@
 - 已完成：00-JavaSE（JavaSE.html，源 md 已删）。候选：01-HTML+CSS、02-Java Web、03-JDBC、04-MySQL、
   05-MVC、06-Mybatis、07-Spring6、08-SpringMVC、Git.md、09-Docker、10-Redis、11-RMQ、12-Seata。
 - venv（C:/Users/29074/.workbuddy/binaries/python/envs/default）已装 markdown + pygments，勿全局装。
+
+## skill md-to-dark-html v2 要点（2026-09-07）
+
+- skill 自带 `assets/mermaid.min.js`（2.9MB, mermaid 10.9.1），**默认内联**进 HTML → 离线可渲染，不再依赖 CDN。
+- 参数：路径必须 `D:/...` 风格；`--mermaid auto|inline|copy|cdn`；`--embed-dir` 可多次。
+- 三个必须保持的修复：同名图加序号防覆盖 / title 走 clean_title+escape / 首个 h1 是主标题时跳过。
+- 无 h1 的 md（如 Seata）→ 单章不渲染标题条，属预期导航退化。
