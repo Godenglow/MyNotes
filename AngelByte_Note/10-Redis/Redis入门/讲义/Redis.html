@@ -178,7 +178,7 @@ td code{white-space:nowrap}
 <header class="hero">
   <h1 class="title">基础篇Redis</h1>
   <div class="sub">小伙伴们理想的课程一定是能够通过讲解的方式，得到如下这些启发，我们的课程会从基础到精通，从redis小白，到redis大牛，还在等什么，这套课程一定就是你最适合你的课程~</div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">25</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">50</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">48</div><div class="d">本地 5 / 远程 29 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">26K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">25</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">50</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">48</div><div class="d">本地 19 / 远程 29 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">26K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
 <div class="ch-head"><span class="ch-num">01</span><h1>基础篇Redis</h1></div>
@@ -881,7 +881,7 @@ OK
 <li>LRANGE key star end：返回一段角标范围内的所有元素</li>
 <li>BLPOP和BRPOP：与LPOP和RPOP类似，只不过在没有元素时等待指定时间，而不是直接返回nil</li>
 </ul>
-<p><img alt="1652943604992" src="assets/1652943604992.png" /></p>
+<p><img alt="1652943604992" src="Redis.assets/1652943604992.png" /></p>
 <ul>
 <li>LPUSH和RPUSH</li>
 </ul>
@@ -1184,7 +1184,7 @@ OK
 <li>支持基于Redis的JDKCollection实现</li>
 </ul>
 <p>SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中：</p>
-<p><img alt="1652976773295" src="assets/1652976773295.png" /></p>
+<p><img alt="1652976773295" src="Redis.assets/1652976773295.png" /></p>
 <h3 id="61">6.1.快速入门</h3>
 <p>SpringBoot已经提供了对SpringDataRedis的支持，使用非常简单：</p>
 <h4 id="611pom">6.1.1.导入pom坐标</h4>
@@ -1333,10 +1333,10 @@ OK
 <p>整体可读性有了很大提升，并且能将Java对象自动的序列化为JSON字符串，并且查询时能自动把JSON反序列化为Java对象。不过，其中记录了序列化时对应的class名称，目的是为了查询时实现自动反序列化。这会带来额外的内存开销。</p>
 <h3 id="63-stringredistemplate">6.3 StringRedisTemplate</h3>
 <p>尽管JSON的序列化方式可以满足我们的需求，但依然存在一些问题，如图：</p>
-<p><img alt="1653054602930" src="assets/1653054602930.png" /></p>
+<p><img alt="1653054602930" src="Redis.assets/1653054602930.png" /></p>
 <p>为了在反序列化时知道对象的类型，JSON序列化器会将类的class类型写入json结果中，存入Redis，会带来额外的内存开销。</p>
 <p>为了减少内存的消耗，我们可以采用手动序列化的方式，换句话说，就是不借助默认的序列化器，而是我们自己来控制序列化的动作，同时，我们只采用String的序列化器，这样，在存储value时，我们就不需要在内存中就不用多存储数据，从而节约我们的内存空间</p>
-<p><img alt="1653054744832" src="assets/1653054744832.png" /></p>
+<p><img alt="1653054744832" src="Redis.assets/1653054744832.png" /></p>
 <p>这种用法比较普遍，因此SpringDataRedis就提供了RedisTemplate的子类：StringRedisTemplate，它的key和value的序列化方式默认就是String方式。</p>
 <p><img alt="" src="https://i.imgur.com/zXH6Qn6.png" /></p>
 <p>省去了我们自定义RedisTemplate的序列化方式的步骤，而是直接使用：</p>
@@ -1377,7 +1377,7 @@ OK
 </code></pre></div>
 
 <p>此时我们再来看一看存储的数据，小伙伴们就会发现那个class数据已经不在了，节约了我们的空间~</p>
-<p><img alt="1653054945211" src="assets/1653054945211.png" /></p>
+<p><img alt="1653054945211" src="Redis.assets/1653054945211.png" /></p>
 <p>最后小总结：</p>
 <p>RedisTemplate的两种序列化实践方案：</p>
 <ul>

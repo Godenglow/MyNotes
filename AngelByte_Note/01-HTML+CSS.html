@@ -1,0 +1,2332 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>01-HTML+CSS</title>
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #282C34; color: #ABB2BF }
+.codehilite .c { color: #7F848E } /* Comment */
+.codehilite .err { color: #ABB2BF } /* Error */
+.codehilite .esc { color: #ABB2BF } /* Escape */
+.codehilite .g { color: #ABB2BF } /* Generic */
+.codehilite .k { color: #C678DD } /* Keyword */
+.codehilite .l { color: #ABB2BF } /* Literal */
+.codehilite .n { color: #E06C75 } /* Name */
+.codehilite .o { color: #56B6C2 } /* Operator */
+.codehilite .x { color: #ABB2BF } /* Other */
+.codehilite .p { color: #ABB2BF } /* Punctuation */
+.codehilite .ch { color: #7F848E } /* Comment.Hashbang */
+.codehilite .cm { color: #7F848E } /* Comment.Multiline */
+.codehilite .cp { color: #7F848E } /* Comment.Preproc */
+.codehilite .cpf { color: #7F848E } /* Comment.PreprocFile */
+.codehilite .c1 { color: #7F848E } /* Comment.Single */
+.codehilite .cs { color: #7F848E } /* Comment.Special */
+.codehilite .gd { color: #E06C75 } /* Generic.Deleted */
+.codehilite .ge { color: #ABB2BF; font-style: italic } /* Generic.Emph */
+.codehilite .ges { color: #ABB2BF } /* Generic.EmphStrong */
+.codehilite .gr { color: #E06C75 } /* Generic.Error */
+.codehilite .gh { color: #ABB2BF; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #98C379 } /* Generic.Inserted */
+.codehilite .go { color: #E06C75 } /* Generic.Output */
+.codehilite .gp { color: #ABB2BF } /* Generic.Prompt */
+.codehilite .gs { color: #ABB2BF; font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #ABB2BF; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #E06C75 } /* Generic.Traceback */
+.codehilite .kc { color: #E5C07B } /* Keyword.Constant */
+.codehilite .kd { color: #C678DD } /* Keyword.Declaration */
+.codehilite .kn { color: #C678DD } /* Keyword.Namespace */
+.codehilite .kp { color: #C678DD } /* Keyword.Pseudo */
+.codehilite .kr { color: #C678DD } /* Keyword.Reserved */
+.codehilite .kt { color: #E5C07B } /* Keyword.Type */
+.codehilite .ld { color: #ABB2BF } /* Literal.Date */
+.codehilite .m { color: #D19A66 } /* Literal.Number */
+.codehilite .s { color: #98C379 } /* Literal.String */
+.codehilite .na { color: #E06C75 } /* Name.Attribute */
+.codehilite .nb { color: #E5C07B } /* Name.Builtin */
+.codehilite .nc { color: #E5C07B } /* Name.Class */
+.codehilite .no { color: #E06C75 } /* Name.Constant */
+.codehilite .nd { color: #61AFEF } /* Name.Decorator */
+.codehilite .ni { color: #E06C75 } /* Name.Entity */
+.codehilite .ne { color: #E06C75 } /* Name.Exception */
+.codehilite .nf { color: #61AFEF; font-weight: bold } /* Name.Function */
+.codehilite .nl { color: #E06C75 } /* Name.Label */
+.codehilite .nn { color: #E06C75 } /* Name.Namespace */
+.codehilite .nx { color: #E06C75 } /* Name.Other */
+.codehilite .py { color: #E06C75 } /* Name.Property */
+.codehilite .nt { color: #E06C75 } /* Name.Tag */
+.codehilite .nv { color: #E06C75 } /* Name.Variable */
+.codehilite .ow { color: #56B6C2 } /* Operator.Word */
+.codehilite .pm { color: #ABB2BF } /* Punctuation.Marker */
+.codehilite .w { color: #ABB2BF } /* Text.Whitespace */
+.codehilite .mb { color: #D19A66 } /* Literal.Number.Bin */
+.codehilite .mf { color: #D19A66 } /* Literal.Number.Float */
+.codehilite .mh { color: #D19A66 } /* Literal.Number.Hex */
+.codehilite .mi { color: #D19A66 } /* Literal.Number.Integer */
+.codehilite .mo { color: #D19A66 } /* Literal.Number.Oct */
+.codehilite .sa { color: #98C379 } /* Literal.String.Affix */
+.codehilite .sb { color: #98C379 } /* Literal.String.Backtick */
+.codehilite .sc { color: #98C379 } /* Literal.String.Char */
+.codehilite .dl { color: #98C379 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #98C379 } /* Literal.String.Doc */
+.codehilite .s2 { color: #98C379 } /* Literal.String.Double */
+.codehilite .se { color: #98C379 } /* Literal.String.Escape */
+.codehilite .sh { color: #98C379 } /* Literal.String.Heredoc */
+.codehilite .si { color: #98C379 } /* Literal.String.Interpol */
+.codehilite .sx { color: #98C379 } /* Literal.String.Other */
+.codehilite .sr { color: #98C379 } /* Literal.String.Regex */
+.codehilite .s1 { color: #98C379 } /* Literal.String.Single */
+.codehilite .ss { color: #98C379 } /* Literal.String.Symbol */
+.codehilite .bp { color: #E5C07B } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #56B6C2; font-weight: bold } /* Name.Function.Magic */
+.codehilite .vc { color: #E06C75 } /* Name.Variable.Class */
+.codehilite .vg { color: #E06C75 } /* Name.Variable.Global */
+.codehilite .vi { color: #E06C75 } /* Name.Variable.Instance */
+.codehilite .vm { color: #E06C75 } /* Name.Variable.Magic */
+.codehilite .il { color: #D19A66 } /* Literal.Number.Integer.Long */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;inset:0 auto 0 0;width:272px;background:#010409;border-right:1px solid #262d38;overflow-y:auto;padding:22px 14px 40px;z-index:50}
+.sidebar .brand{display:flex;align-items:center;gap:9px;padding:2px 8px 16px;border-bottom:1px solid #21262d;margin-bottom:14px}
+.sidebar .brand .logo{width:32px;height:32px;border-radius:8px;background:#21262d;display:flex;align-items:center;justify-content:center;font-size:17px}
+.sidebar .brand b{font-size:15px}
+.sidebar .brand .cnt{color:#8b949e;font-size:11px}
+.toc-item{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:7px;color:#8b949e;font-size:12.5px;line-height:1.4}
+.toc-item:hover{background:#161b22;color:#e6edf3;text-decoration:none}
+.toc-item.active{background:#161b22;color:#58a6ff}
+.toc-idx{font-size:10.5px;font-variant-numeric:tabular-nums;color:#6e7681;min-width:18px}
+.toc-item.active .toc-idx{color:#58a6ff}
+.main{margin-left:272px;padding:34px 46px 140px;max-width:1060px}
+.hero{border-bottom:1px solid #262d38;padding-bottom:22px;margin-bottom:10px}
+.hero .crumb{color:#8b949e;font-size:12px;margin-bottom:10px}
+.hero h1.title{font-size:30px;font-weight:750;letter-spacing:-.5px}
+.hero .sub{color:#8b949e;font-size:13.5px;margin-top:8px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin:22px 0 6px}
+.card{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:12px 14px}
+.card .k{color:#8b949e;font-size:11px}
+.card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
+.card .d{color:#8b949e;font-size:11px;margin-top:3px}
+.chapter{margin:46px 0 10px}
+.ch-head{display:flex;align-items:center;gap:13px;padding:14px 18px;background:linear-gradient(90deg,#161b22,#0d1117);border:1px solid #262d38;border-radius:10px;margin-bottom:18px;position:sticky;top:0;z-index:10}
+.ch-num{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:9px;background:#21262d;color:#58a6ff;font-size:14px;font-weight:750;font-variant-numeric:tabular-nums}
+.ch-head h1{font-size:21px;font-weight:700}
+.chapter h2{font-size:18px;font-weight:680;margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid #262d38}
+.chapter h3{font-size:15.5px;font-weight:660;margin:22px 0 9px;color:#79c0ff}
+.chapter h4{font-size:14px;margin:16px 0 7px;color:#8b949e}
+.chapter p{margin:10px 0;font-size:14px}
+.chapter ul,.chapter ol{margin:9px 0 9px 22px}
+.chapter li{margin:5.5px 0;font-size:14px}
+.chapter li::marker{color:#6e7681}
+strong{color:#f0f6fc}
+.chapter blockquote{border-left:3px solid #58a6ff;background:#161b22;border-radius:0 8px 8px 0;padding:10px 16px;margin:13px 0;color:#b6c2cf;font-size:13.5px}
+.chapter blockquote p{margin:5px 0}
+code{background:#21262d;padding:1.5px 6px;border-radius:4px;font-size:12.5px;color:#bc8cff;font-family:"Cascadia Code",Consolas,"JetBrains Mono",monospace}
+.toc-search{width:100%;margin:0 0 12px;padding:7px 10px;background:#161b22;border:1px solid #262d38;border-radius:7px;color:#e6edf3;font-size:12px;font-family:inherit;outline:none}
+.toc-search:focus{border-color:#58a6ff}
+.copy-btn{position:absolute;top:7px;right:7px;padding:2px 8px;font-size:11px;border-radius:5px;background:#21262d;border:1px solid #30363d;color:#8b949e;cursor:pointer;opacity:0;transition:opacity .15s}
+.codehilite:hover .copy-btn{opacity:1}
+.copy-btn:hover{color:#58a6ff;border-color:#58a6ff}
+.codehilite{position:relative;background:#161b22;border:1px solid #262d38;border-radius:9px;padding:13px 15px;margin:13px 0;overflow-x:auto}
+.codehilite pre{margin:0;background:transparent!important}
+.codehilite code{background:transparent;padding:0;font-size:12.8px;line-height:1.62;color:#c9d1d9}
+.tbl-wrap{overflow-x:auto;margin:13px 0;border:1px solid #262d38;border-radius:9px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid #21262d;vertical-align:top}
+th{color:#8b949e;font-weight:600;font-size:12px;background:#161b22}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#10161f}
+td code{white-space:nowrap}
+.diagram-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;overflow:hidden}
+.diagram-title{display:flex;align-items:center;gap:8px;padding:10px 15px;border-bottom:1px solid #262d38;font-size:13px;font-weight:650;color:#79c0ff}
+.dt-src{margin-left:auto;color:#6e7681;font-size:11px;font-weight:400}
+.diagram-card .mermaid{display:flex;justify-content:center;padding:16px 12px;background:#0d1117;overflow-x:auto}
+.diagram-card pre.mermaid{font-family:Consolas,monospace;font-size:12px;color:#8b949e;white-space:pre-wrap}
+.diagram-card svg{max-width:100%;height:auto}
+.img-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;padding:14px;display:flex;justify-content:center}
+.img-card img{max-width:100%;height:auto;border-radius:6px}
+.wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
+.top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
+.top-btn.show{opacity:1;pointer-events:auto}
+.top-btn:hover{color:#58a6ff;border-color:#58a6ff}
+.foot{margin-top:60px;padding-top:18px;border-top:1px solid #262d38;color:#6e7681;font-size:11.5px;line-height:1.8}
+.menu-btn{display:none;position:fixed;left:14px;top:14px;z-index:70;width:38px;height:38px;border-radius:8px;background:#21262d;border:1px solid #30363d;color:#e6edf3;font-size:17px;cursor:pointer}
+@media (max-width:960px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s;width:280px}
+  .sidebar.open{transform:translateX(0);box-shadow:0 0 40px rgba(0,0,0,.6)}
+  .main{margin-left:0;padding:64px 18px 120px}
+  .menu-btn{display:flex;align-items:center;justify-content:center}
+  .ch-head{position:static}
+}
+</style>
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰</button>
+<nav class="sidebar" id="sidebar">
+  <div class="brand"><span class="logo">📒</span><div><b>01-HTML+CSS</b><div class="cnt">目录 · 点击跳转</div></div></div>
+  <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>标签展示标题，使用展示超链接，使用展示图片，展示视频。
+HTML代码直接在浏览器中运行，HTML标签由浏览器解析 。
+
+
+下面展示的是一段html代码经过浏览器解析，呈现的效果如右图所示： 
+
+
+什么是CSS？
+
+CSS: Cascading Style Sheet，层叠样式表，用于控制页面的样式（表现）。
+
+下面展示的是一段 html代码 及 CSS样式 经过浏览器解析，呈现的效果如右图所示：
+
+HTML快速入门
+操作步骤
+
+新建文本文件，后缀名改为 .html，命名为：01. html快速入门.html
+
+创建一个名为HTML的文件夹，然后找到课程资料中的 1.png 文件放到该目录下的img目录中。此时HTML文件夹中内容如下：
+
+
+写HTML的基本骨架，定义标题
+
+选中文件，鼠标右击，选择使用记事本打开文件，并且编写网页的标题。
+首先html有固定的基本结构
+&lt;html&gt;
+     &lt;head&gt;
+          &lt;title&gt;HTML 快速入门&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+
+     &lt;/body&gt;
+&lt;/html&gt;
+
+
+其中&lt;html&gt;是根标签，&lt;head&gt;和&lt;body&gt;是子标签。
+
+&lt;head&gt; : 定义网页的头部，用来存放给浏览器看的信息，如：CSS样式、网页的标题。 
+&lt;body&gt; : 定义网页的主体部分，存放给用户看的信息，也是网页的主体内容，如：文字、图片、视频、音频、表格等。
+1. 在中编写HTML的核心内容
+
+&lt;html&gt;
+     &lt;head&gt;
+        &lt;title&gt;HTML 快速入门&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+        &lt;h1&gt;Hello HTML&lt;/h1&gt;
+        &lt;img src="img/1.png"&gt;
+     &lt;/body&gt;
+&lt;/html&gt;
+
+
+其中 &lt;h1&gt; 标签是一个一级标题的标签。 &lt;img&gt; 标签是一个图片标签，用来展示图片，而其中的 src 属性是用来指定要展示的图片。
+
+然后选中文件，鼠标右击，选择使用浏览器打开文件
+
+浏览器呈现效果如下:
+
+2.2 总结
+1). HTML页面的基础结构标签
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;title&gt;中定义标题显示在浏览器的标题位置，&lt;body&gt;中定义的内容会呈现在浏览器的内容区域
+2). HTML中的标签特点
+
+HTML标签不区分大小写，建议小写
+HTML标签的属性值，采用单引号、双引号都可以，一般写双引号
+HTML语法相对比较松散 (建议大家编写HTML标签的时候尽量严谨一些)
+
+前端开发工具
+我们通过快速入门案例，发现由记事本文件开发html是非常不方便的，所以接下来我们需要学习一款前端专业的开发工具VS Code。
+Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一款代码编辑器。VS Code 对前端代码有非常强大的支持，同时也其他编程语言（例如：C++、Java、Python、PHP、Go等）。VS Code 提供了非常强大的插件库，大大提高了开发效率。
+
+官网：https://code.visualstudio.com
+安装：VsCode安装文档
+注意：
+需要注意的是，我们作为一名开发者，不应该将软件软装在包含中文名的路径中 。
+由于安装了IDEA快捷键的插件，VSCode快键键与IDEA是一致的。
+
+
+
+常见标签&amp;样式
+那我们在讲解HTML的常见基础标签 及 CSS的基本样式时，我们就以 新浪新闻页面 为例，来进行讲解，这样大家不仅能够知道 常见标签及样式的作用，还能够知道具体的应用场景。
+央视新闻的具体页面效果如下：
+
+原始页面网址：https://news.cctv.com/2024/05/15/ARTIflTnFvNMx9nUVc4PA7T2240515.shtml
+而大家可以看到，上述新闻网页，其实分为两个部分，一个是新闻的标题部分，另一个是新闻的正文部分。那接下来，我们就先来完成央视新闻标题部分的制作。
+央视新闻-标题
+
+前面我们提到，我们在浏览器中看到的网页程序呈现出来的效果，实际上是浏览器解析并渲染了前端代码而呈现出来的。 而我们所编写的HTML页面，在浏览器中渲染的时候，是从上往下逐行解析展示的。 所以，我们在编写html页面的时候，要根据页面的布局，从上往下编写。
+标题排版
+
+在制作网页的时候，我们可以充分的利用AI辅助工具通义灵码，来帮我们实现对应的功能，我们只需要在编辑器中给定对应的注释（提示词），通义灵码就可以帮我们实现对应的功能效果，然后我们再基于生成的代码进行调试即可。
+接下来，我们就可以通过VsCode打开HTML文件夹，然后在其中创建一个html页面，命名为：02. 央视新闻-标题排版.html。
+然后在这个文件中来制作新浪新闻网页，标题部分的排版内容为：
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+  &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+  &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+  &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
+  2024年05月15日 20:07
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+那在上述我们用到的两个标签，一个是标题标签 &lt;h1&gt;&lt;/h1&gt;，另一个是超链接标题 &lt;a&gt;&lt;/a&gt;。这两个标签的具体用法如下：
+标题标签 h 系列：
+ 11111111111111</span></a>
+<a class="toc-item" href="#ch-02"><span class="toc-idx">02</span><span>【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章</span></a>
+<a class="toc-item" href="#ch-03"><span class="toc-idx">03</span><span>中国新闻网</span></a>
+</nav>
+<main class="main">
+<header class="hero">
+  <h1 class="title">01-HTML+CSS</h1>
+  <div class="sub"></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">3</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">12</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">23</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">44</div><div class="d">本地 2 / 远程 42 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">9</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">63K</div><div class="d">字符</div></div></div>
+</header>
+<section class="chapter" id="ch-01">
+<div class="ch-head"><span class="ch-num">01</span><h1>标签展示标题，使用展示超链接，使用展示图片，展示视频。
+HTML代码直接在浏览器中运行，HTML标签由浏览器解析 。
+
+
+下面展示的是一段html代码经过浏览器解析，呈现的效果如右图所示： 
+
+
+什么是CSS？
+
+CSS: Cascading Style Sheet，层叠样式表，用于控制页面的样式（表现）。
+
+下面展示的是一段 html代码 及 CSS样式 经过浏览器解析，呈现的效果如右图所示：
+
+HTML快速入门
+操作步骤
+
+新建文本文件，后缀名改为 .html，命名为：01. html快速入门.html
+
+创建一个名为HTML的文件夹，然后找到课程资料中的 1.png 文件放到该目录下的img目录中。此时HTML文件夹中内容如下：
+
+
+写HTML的基本骨架，定义标题
+
+选中文件，鼠标右击，选择使用记事本打开文件，并且编写网页的标题。
+首先html有固定的基本结构
+&lt;html&gt;
+     &lt;head&gt;
+          &lt;title&gt;HTML 快速入门&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+
+     &lt;/body&gt;
+&lt;/html&gt;
+
+
+其中&lt;html&gt;是根标签，&lt;head&gt;和&lt;body&gt;是子标签。
+
+&lt;head&gt; : 定义网页的头部，用来存放给浏览器看的信息，如：CSS样式、网页的标题。 
+&lt;body&gt; : 定义网页的主体部分，存放给用户看的信息，也是网页的主体内容，如：文字、图片、视频、音频、表格等。
+1. 在中编写HTML的核心内容
+
+&lt;html&gt;
+     &lt;head&gt;
+        &lt;title&gt;HTML 快速入门&lt;/title&gt;
+     &lt;/head&gt;
+     &lt;body&gt;
+        &lt;h1&gt;Hello HTML&lt;/h1&gt;
+        &lt;img src="img/1.png"&gt;
+     &lt;/body&gt;
+&lt;/html&gt;
+
+
+其中 &lt;h1&gt; 标签是一个一级标题的标签。 &lt;img&gt; 标签是一个图片标签，用来展示图片，而其中的 src 属性是用来指定要展示的图片。
+
+然后选中文件，鼠标右击，选择使用浏览器打开文件
+
+浏览器呈现效果如下:
+
+2.2 总结
+1). HTML页面的基础结构标签
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt; &lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;title&gt;中定义标题显示在浏览器的标题位置，&lt;body&gt;中定义的内容会呈现在浏览器的内容区域
+2). HTML中的标签特点
+
+HTML标签不区分大小写，建议小写
+HTML标签的属性值，采用单引号、双引号都可以，一般写双引号
+HTML语法相对比较松散 (建议大家编写HTML标签的时候尽量严谨一些)
+
+前端开发工具
+我们通过快速入门案例，发现由记事本文件开发html是非常不方便的，所以接下来我们需要学习一款前端专业的开发工具VS Code。
+Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一款代码编辑器。VS Code 对前端代码有非常强大的支持，同时也其他编程语言（例如：C++、Java、Python、PHP、Go等）。VS Code 提供了非常强大的插件库，大大提高了开发效率。
+
+官网：https://code.visualstudio.com
+安装：VsCode安装文档
+注意：
+需要注意的是，我们作为一名开发者，不应该将软件软装在包含中文名的路径中 。
+由于安装了IDEA快捷键的插件，VSCode快键键与IDEA是一致的。
+
+
+
+常见标签&amp;样式
+那我们在讲解HTML的常见基础标签 及 CSS的基本样式时，我们就以 新浪新闻页面 为例，来进行讲解，这样大家不仅能够知道 常见标签及样式的作用，还能够知道具体的应用场景。
+央视新闻的具体页面效果如下：
+
+原始页面网址：https://news.cctv.com/2024/05/15/ARTIflTnFvNMx9nUVc4PA7T2240515.shtml
+而大家可以看到，上述新闻网页，其实分为两个部分，一个是新闻的标题部分，另一个是新闻的正文部分。那接下来，我们就先来完成央视新闻标题部分的制作。
+央视新闻-标题
+
+前面我们提到，我们在浏览器中看到的网页程序呈现出来的效果，实际上是浏览器解析并渲染了前端代码而呈现出来的。 而我们所编写的HTML页面，在浏览器中渲染的时候，是从上往下逐行解析展示的。 所以，我们在编写html页面的时候，要根据页面的布局，从上往下编写。
+标题排版
+
+在制作网页的时候，我们可以充分的利用AI辅助工具通义灵码，来帮我们实现对应的功能，我们只需要在编辑器中给定对应的注释（提示词），通义灵码就可以帮我们实现对应的功能效果，然后我们再基于生成的代码进行调试即可。
+接下来，我们就可以通过VsCode打开HTML文件夹，然后在其中创建一个html页面，命名为：02. 央视新闻-标题排版.html。
+然后在这个文件中来制作新浪新闻网页，标题部分的排版内容为：
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+  &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+  &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+  &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
+  2024年05月15日 20:07
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+那在上述我们用到的两个标签，一个是标题标签 &lt;h1&gt;&lt;/h1&gt;，另一个是超链接标题 &lt;a&gt;&lt;/a&gt;。这两个标签的具体用法如下：
+标题标签 h 系列：
+ 11111111111111</h1></div>
+</font></p>
+<p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h2></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h2></font></p>
+<p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h3></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h3></font></p>
+<p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h4></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h4></font></p>
+<p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h5></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h5></font></p>
+<p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h6></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h6></font></p>
+<p><strong><font style="background-color:rgb(255,245,235);">效果：</font></strong><font style="background-color:rgb(255,245,235);">h1为一级标题，字体也是最大的 ； h6为六级标题，字体是最小的。</font></p>
+<p><strong><font style="color:rgb(216,57,49);background-color:rgb(255,245,235);">注意：</font></strong><font style="color:rgb(216,57,49);background-color:rgb(255,245,235);">HTML标签是预定义好的，不能随意定义，也就以为着，标题标签就只有这六个，没有 <h7></font></p>
+<p><font style="background-color:rgb(255,245,235);">超链接 a 标签：</font></p>
+<p><font style="background-color:rgb(255,245,235);">标签：</font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><a href="....." target="....."></font><font style="background-color:rgb(255,245,235);">央视网</font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></a></font></p>
+<p><font style="background-color:rgb(255,245,235);">属性：</font></p>
+<ul>
+<li><font style="background-color:rgb(255,245,235);">href: 指定资源访问的url</font></li>
+<li><font style="background-color:rgb(255,245,235);">target: 指定在何处打开资源链接</font><ul>
+<li><font style="background-color:rgb(255,245,235);">_self: 默认值，在当前页面打开</font></li>
+<li><font style="background-color:rgb(255,245,235);">_blank: 在空白页面打开</font></li>
+</ul>
+</li>
+</ul>
+<h4 id="_6">标题样式</h4>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457048-33292a8f-d872-4f75-ae10-0fb308445136.png" /></p>
+<p>我们可以看到，目前我们制作的新闻标题部分，新闻发布时间 <code>2024年05月15日 20:07</code> 的字体颜色是<strong>黑色</strong>，而在原始的央视新闻页面中，字体的颜色呈现<strong><font style="color:rgb(143,149,158);">灰色</font></strong><font style="color:rgb(143,149,158);">，具体的呈现效果如下：</font></p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457027-edcde086-69de-40b0-997e-08ab0314f396.png" /></p>
+<p>那接下来，我们要来控制字体的颜色，而这部分其实是属于网页的样式，所以这里呢，就要<strong>通过CSS样式控制</strong>。</p>
+<p>这些基础的功能我们就可以直接通过AI工具帮我们实现，参考如下<strong><font style="color:rgb(100,37,208);">提示词(prompt)：</font></strong></p>
+<p><font style="background-color:rgb(255,245,235);">你是一名前端开发工程师，请通过css为网页中的新闻发布时间设置字体颜色为灰色。 网页内容如下：</font></p>
+<p><font style="background-color:rgb(255,245,235);">&lt;!DOCTYPE html&gt;</font></p>
+<p><font style="background-color:rgb(255,245,235);"><html lang="en"></font></p>
+<p><font style="background-color:rgb(255,245,235);"><head></font></p>
+<p><font style="background-color:rgb(255,245,235);"> <meta charset="UTF-8"></font></p>
+<p><font style="background-color:rgb(255,245,235);"> <meta name="viewport" content="width=device-width, initial-scale=1.0"></font></p>
+<p><font style="background-color:rgb(255,245,235);"> <title>【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章</title></font></p>
+<p><font style="background-color:rgb(255,245,235);"></head></font></p>
+<p><font style="background-color:rgb(255,245,235);"><body></font></p>
+<p><font style="background-color:rgb(255,245,235);">   <!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --></font></p>
+<p><font style="background-color:rgb(255,245,235);">   
+</section>
+<section class="chapter" id="ch-02">
+<div class="ch-head"><span class="ch-num">02</span><h1>【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章</h1></div>
+</font></p>
+<p><font style="background-color:rgb(255,245,235);">   <!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --></font></p>
+<p><font style="background-color:rgb(255,245,235);">   <a href="https://news.cctv.com/" target="_blank">央视网</a></font></p>
+<p><font style="background-color:rgb(255,245,235);">   2024年05月15日 20:07</font></p>
+<p><font style="background-color:rgb(255,245,235);"></body></font></p>
+<p><font style="background-color:rgb(255,245,235);"></html></font></p>
+<p>AI给出的最终代码实现如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+  &lt;style&gt;
+    .publish-date {
+      color: gray;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+  &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+  &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+  &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
+  &lt;span class="publish-date"&gt;2024年05月15日 20:07&lt;/span&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>我们可以看到，通过上面这样一段代码，就可以控制字体的颜色，而其实上面这一段代码就是AI生成的CSS样式。最终效果如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457696-6f7ccb01-f1c6-4637-9a8d-1d215b47fe5e.png" /></p>
+<h5 id="css">CSS引入方式</h5>
+<p>那在HTML的文件中，我们如何来编写CSS样式呢，此时就涉及到CSS的三种引入方式。</p>
+<p>具体有3种引入方式，语法如下表格所示：</p>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><font style="color:rgb(0, 0, 0);">名称</font></th>
+<th><font style="color:rgb(0, 0, 0);">语法描述</font></th>
+<th style="text-align: left;"><font style="color:rgb(0, 0, 0);">示例</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">行内样式</font></td>
+<td><font style="color:rgb(0, 0, 0);">在标签内使用style属性，属性值是css属性键值对。</font></td>
+<td style="text-align: left;"><font style="color:rgb(0, 0, 0);">
+</section>
+<section class="chapter" id="ch-03">
+<div class="ch-head"><span class="ch-num">03</span><h1>中国新闻网</h1></div>
+</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">内部样式</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义<style>标签，在标签内部定义css样式。</font></td>
+<td style="text-align: left;"><font style="color:rgb(0, 0, 0);"><style> h1 {...} </style></font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">外部样式</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义<link>标签，通过href属性引入外部css文件</font></td>
+<td style="text-align: left;"><font style="color:rgb(0, 0, 0);"><link rel="stylesheet" href="css/news.css"></font></td>
+</tr>
+</tbody>
+</table></div>
+<p>对于上述3种引入方式，企业开发的使用情况如下：</p>
+<ul>
+<li><strong>行内样式：</strong>会出现大量的代码冗余，不方便后期的维护，所以不常用（常配合JS使用）。</li>
+<li><strong>内部样式</strong><strong>：</strong>通过定义css选择器，让样式作用于当前页面的指定的标签上。（可以写在页面任何位置，但通常约定写在head标签中）</li>
+<li><strong>外部样式：</strong>html和css实现了完全的分离，企业开发常用方式。</li>
+</ul>
+<h5 id="_7">颜色表示方式</h5>
+<p>在前端程序开发中，颜色的表示方式常见的有如下三种：</p>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><font style="color:rgb(0, 0, 0);">表示方式</font></th>
+<th style="text-align: center;"><font style="color:rgb(0, 0, 0);">属性值</font></th>
+<th><font style="color:rgb(0, 0, 0);">说明</font></th>
+<th><font style="color:rgb(0, 0, 0);">取值</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">关键字</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">颜色英文单词</font></td>
+<td><font style="color:rgb(0, 0, 0);">red、green、blue</font></td>
+<td><font style="color:rgb(0, 0, 0);">red、green、blue...</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">rgb表示法</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">rgb(r, g, b)</font></td>
+<td><font style="color:rgb(0, 0, 0);">红绿蓝三原色，每项取值范围：0-255</font></td>
+<td><font style="color:rgb(0, 0, 0);">rgb(0,0,0)、rgb(255,255,255)、rgb(255,0,0)</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">rgba表示法</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">rgba(r, g, b, a)</font></td>
+<td><font style="color:rgb(0, 0, 0);">红绿蓝三原色，a表示透明度，取值：0-1</font></td>
+<td><font style="color:rgb(0, 0, 0);">rgb(0,0,0,0.3)、rgb(255,255,255,0.5)</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">十六进制表示法</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">#rrggbb</font></td>
+<td><font style="color:rgb(0, 0, 0);">#开头，将数字转换成十六进制表示</font></td>
+<td><font style="color:rgb(0, 0, 0);">#000000、#ff0000、#cccccc，简写：#000、#ccc</font></td>
+</tr>
+</tbody>
+</table></div>
+<h5 id="_8">设置字体颜色</h5>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+  &lt;!-- 2. 内部样式 --&gt;
+  &lt;style&gt;
+    .publish-date {
+      color: #b2b2b2;
+    }
+  &lt;/style&gt;
+  &lt;!-- 3. 外部样式 --&gt;
+  &lt;!-- &lt;link rel="stylesheet" href="css/news.css"&gt; --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+  &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+  &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+  &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
+
+  &lt;!-- 1. 行内样式 --&gt;
+  &lt;!-- &lt;span style="color: #b2b2b2;"&gt;2024年05月15日 20:07&lt;/span&gt; --&gt;
+
+  &lt;span class="publish-date"&gt;2024年05月15日 20:07&lt;/span&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p><font style="color:rgb(216,57,49);">备注: 要想拾取某一个网页中的颜色，</font><font style="color:rgb(216,57,49);">我们可以借助于截图软件的拾色器插件来完成</font><font style="color:rgb(216,57,49);">。【截图软件在资料中已经提供】</font></p>
+<h5 id="css_1">CSS选择器</h5>
+<p>顾名思义：选择器是选取需设置样式的元素（标签），但是我们根据业务场景不同，选择的标签的需求也是多种多样的，所以选择器有很多种。</p>
+<p><strong>选择器通用语法如下</strong>：</p>
+<div class="codehilite"><pre><span></span><code>选择器名   {
+    css样式名：css样式值;
+    css样式名：css样式值;
+}
+</code></pre></div>
+
+<p>而我们是做<span class="wl" title="Obsidian 内链：02-Java Web|后台开发">🔗 后台开发</span>的，所以对于css选择器，我们只学习常见的这几种：</p>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><font style="color:#1f2329;">选择器</font></th>
+<th style="text-align: center;"><font style="color:#1f2329;">写法</font></th>
+<th><font style="color:#1f2329;">示例</font></th>
+<th><font style="color:#1f2329;">示例说明</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(27, 30, 29);">元素选择器</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">元素名称 {...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">h1 {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择页面上所有的<h1>标签</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(27, 30, 29);">类选择器</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">.class属性值 {...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">.cls {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择页面上所有class属性为cls的标签</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(27, 30, 29);">id选择器</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">#id属性值 {...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">#hid {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择页面上id属性为hid的标签</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(27, 30, 29);">分组选择器</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">选择器1,选择器2{...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">h1,h2 {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择页面上所有的<h1>和<h2>标签</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(27, 30, 29);">属性选择器</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">元素名称[属性] {...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">input[type] {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择页面上有type属性的<input>标签</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">元素名称[属性名="值"] {...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">input[type="text"] {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择页面上type属性为text的<input>标签</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(27, 30, 29);">后代选择器</font></td>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);">元素1元素2{...}</font></td>
+<td><font style="color:rgb(0, 0, 0);">form input {...}</font></td>
+<td><font style="color:rgb(27, 30, 29);">选择<form>标签内的所有<input>标签</font></td>
+</tr>
+</tbody>
+</table></div>
+<p>那接下来，我们需要将页面上所有的超链接中，默认的下划线效果去除掉。具体的代码实现如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+  &lt;!-- 2. 内部样式 --&gt;
+  &lt;style&gt;
+    .publish-date {
+      color: #b2b2b2;
+    }
+
+    /* 设置超链接取消下划线效果 */
+    a {
+      text-decoration: none;
+    }
+  &lt;/style&gt;
+  &lt;!-- 3. 外部样式 --&gt;
+  &lt;!-- &lt;link rel="stylesheet" href="css/news.css"&gt; --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+  &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+  &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+  &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
+
+  &lt;!-- 1. 行内样式 --&gt;
+  &lt;!-- &lt;span style="color: #b2b2b2;"&gt;2024年05月15日 20:07&lt;/span&gt; --&gt;
+
+  &lt;span class="publish-date"&gt;2024年05月15日 20:07&lt;/span&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>那到目前为止，标题部分的基本排版和样式，我们就已经制作完成了，具体页面效果：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457761-06dd6cd3-4a24-4807-9fe2-9ca0f3e71a50.png" /></p>
+<h3 id="-_1">央视新闻-正文</h3>
+<p>在原始的央视新闻页面中，我们可以看到有视频，有文字，有图片，内容还是非常丰富的。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457805-d8489f57-f4d4-49c1-89b3-ca60b37f9306.png" /></p>
+<h4 id="_9">正文排版</h4>
+<h5 id="_10">基本实现</h5>
+<p>浏览器在解析渲染页面的时候，是从上往下解析渲染的，那接下来，我们就可以从上往下来布局这个页面，那这个过程中，我们就可以直接基于AI来辅助我们实现。</p>
+<p>正文排版之后，页面的代码如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+  &lt;!-- 2. 内部样式 --&gt;
+  &lt;style&gt;
+    .publish-date {
+      color: #b2b2b2;
+    }
+
+    /* 设置超链接取消下划线效果 */
+    a {
+      text-decoration: none;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+    &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+    &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+    &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+    &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
+
+    &lt;span class="publish-date"&gt;2024年05月15日 20:07&lt;/span&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;!-- 定义一个视频, video/news.mp4 --&gt;
+    &lt;video src="video/news.mp4" controls  width="80%"&gt;&lt;/video&gt;
+    &lt;p&gt;
+      央视网消息（新闻联播）：作为共抓长江大保护的标志性工程，长江十年禁渔今年进入第四年。总书记指出，长江禁渔是为全局计、为子孙谋的重要决策。牢记总书记嘱托，沿江省市持续推进长江水生生物多样性恢复，努力保障退捕渔民就业生活。这段时间，记者深入长江两岸，记录下禁渔工作取得的重要阶段性成效和广大干部群众坚定不移推进长江十年禁渔的扎实行动。
+    &lt;/p&gt;
+    &lt;p&gt;
+      行走在长江沿线，科研人员发现很多可喜现象。
+    &lt;/p&gt;
+    &lt;!-- 定义一张图片, img/1.gif --&gt;
+    &lt;img src="img/1.gif" alt=""  width="100%"&gt;
+    &lt;p&gt;
+      在长江南源，一处小头裸裂尻鱼新的栖息地被发现，鱼的数量大约超3万尾，为水生态保护提供了珍贵数据。
+    &lt;/p&gt;
+    &lt;p&gt;
+      在长江中游，追踪显示，人工增殖放流的中华鲟成功入海率已经从45%左右提升至60%以上；鄱阳湖鱼类小型化、低龄化趋势得到遏制，栖息地生存环境得以改善。
+    &lt;/p&gt;
+    &lt;p&gt;
+      在长江下游，今年3月起，南京秦淮河入江口首次出现野生中华绒螯蟹大规模洄游现象，种群数量明显增加。
+    &lt;/p&gt;
+    &lt;img src="img/2.jpg" width="100%"&gt;
+    &lt;p&gt;
+      水生生物资源恢复向好，见证了长江十年禁渔三年多来的阶段性成果。
+    &lt;/p&gt;
+    &lt;p&gt;
+      实施长江十年禁渔，是以同志为核心的党中央从中华民族长远利益出发作出的重要决策。党的十八大以来，总书记多次深入长江沿线考察调研，详细了解长江十年禁渔的实施情况，他指出，要坚定推进长江十年禁渔，巩固好已经取得的成果。
+    &lt;/p&gt;
+    &lt;img src="img/3.jpg" width="100%"&gt;
+    &lt;p&gt;
+      按照部署，自2021年1月1日起，在长江干流、大型通江湖泊、重要支流和长江口部分海域实行为期十年的禁渔，常年禁止天然渔业资源的生产性捕捞。禁渔三年多来，相关评估显示，长江干流和鄱阳湖、洞庭湖水生生物完整性指数由禁渔前最差的“无鱼”提升了两个等级。2022年，长江江豚数量达到1249头，实现历史性止跌回升。长江干流水质连续4年全线保持Ⅱ类。
+    &lt;/p&gt;
+    &lt;p&gt;
+      实施长江十年禁渔，解决好渔民上岸后的生产生活问题，禁渔才有稳定扎实的社会基础。
+    &lt;/p&gt;
+    &lt;img src="img/4.jpg" width="100%"&gt;
+    &lt;p&gt;
+      安徽退捕转产的3万多名渔民，在政府的引导下接受就业培训。在当涂县，免费学习养殖技术，养殖生态螃蟹成了退捕渔民的新选择。
+    &lt;/p&gt;
+    &lt;p&gt;
+      在拥有洞庭湖超六成水域的湖南岳阳，政府帮扶上岸渔民建起养殖场，发展风干鱼产业，还带领他们学习直播带货，拓宽销路。
+    &lt;/p&gt;
+    &lt;p&gt;
+      在渔民退捕上岸的鄱阳湖棠荫岛，当地在继续保护好生态的前提下，正探索规划利用独特的自然资源发展旅游产业。禁渔三年多来，有关部门对23.1万退捕渔民逐一建档立卡，多渠道提升就业、社保水平。
+    &lt;/p&gt;
+    &lt;img src="img/5.jpg" width="100%"&gt;
+    &lt;p&gt;
+      长江十年禁渔实施以来，沿江省市合力攻坚、久久为功，长江大保护不断向纵深推进，持续巩固禁渔成果。下一步，沿江省市还将加强水生生物重要栖息地修复，建立退捕渔民动态精准帮扶服务，完善跨区域、跨部门执法合作机制，确保一江清水绵延后世、惠泽人民。
+    &lt;/p&gt;
+    &lt;img src="img/6.jpg"&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p><strong><font style="color:rgb(216,57,49);">注意：在使用类似于通义零码这类的AI辅助工具时，如果存在一些敏感数据，比如：政治、宗教、信仰等。</font></strong></p>
+<h5 id="_11">常见标签</h5>
+<p>那在上述的正文排版中，用到了如下标签，接下来详解介绍一下：</p>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong><font style="color:#1f2329;">标签</font></strong></th>
+<th style="text-align: center;"><strong><font style="color:#1f2329;">作用</font></strong></th>
+<th><strong><font style="color:#1f2329;">属性/说明</font></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:#1f2329;"><video></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">视频标签</font></td>
+<td><font style="color:#1f2329;">src：指定视频的url（绝对路径/相对路径）</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td><font style="color:#1f2329;">controls：是否显示播放控件</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td><font style="color:#1f2329;">width：宽度（像素/相对于父元素百分比）；备注: 一般width 和 height 我们只会指定一个，另外一个会自动的等比例缩放。</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td><font style="color:#1f2329;">height：高度（像素/相对于父元素百分比）；备注: 一般width 和 height 我们只会指定一个，另外一个会自动的等比例缩放。</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:#1f2329;"><img></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">图片标签</font></td>
+<td><font style="color:#1f2329;">src, width，height</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:#1f2329;"><p></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">段落标签</font></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);"><br></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">换行标签</font></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);"><b> / <strong></font></td>
+<td style="text-align: center;"><strong><font style="color:#1f2329;">加粗</font></strong></td>
+<td><font style="color:#1f2329;"><strong> 具有强调语义</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);"><u> / <ins></font></td>
+<td style="text-align: center;"><u><font style="color:#1f2329;">下划线</font></u></td>
+<td><font style="color:#1f2329;"><ins> 具有强调语义</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);"><i> / <em></font></td>
+<td style="text-align: center;"><em><font style="color:#1f2329;">倾斜</font></em></td>
+<td><font style="color:#1f2329;"><em> 具有强调语义</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(0, 0, 0);"><s> / <del></font></td>
+<td style="text-align: center;">~~<font style="color:#1f2329;">删除线</font>~~</td>
+<td><font style="color:#1f2329;"><del> 具有强调语义</font></td>
+</tr>
+</tbody>
+</table></div>
+<p>在HTML页面中，我们在代码中录入空格、&lt;、&gt; 这些符号的时候，是没有对应的效果的，因为浏览器并不能准确的识别，此时，我们就需要通过字符实体来表示空格，&lt;, &gt; 。常见符号的字符实体如下：</p>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><font style="color:#1f2329;">字符实体</font></th>
+<th style="text-align: center;"><font style="color:#1f2329;">属性/说明</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(101, 112, 110);">&nbsp;</font></td>
+<td style="text-align: center;"><font style="color:rgb(101, 112, 110);">空格</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(101, 112, 110);">&lt;</font></td>
+<td style="text-align: center;"><font style="color:rgb(101, 112, 110);">&lt;</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(101, 112, 110);">&gt;</font></td>
+<td style="text-align: center;"><font style="color:rgb(101, 112, 110);">&gt;</font></td>
+</tr>
+</tbody>
+</table></div>
+<h5 id="_12">路径表示</h5>
+<p>在引入图片、视频、音频、css等内容时，我们需要指定文件的路径，而在前端开发中，路径的书写形式分为两类：</p>
+<ul>
+<li>绝对路径:<ul>
+<li>绝对磁盘路径: <code>&lt;img src="C:\Users\Administrator\Desktop\HTML\img\logo.png"&gt;</code></li>
+<li>绝对网络路径: <code>&lt;img src="``https://i2.sinaimg.cn/dy/deco/2012/0613/yocc20120613img01/news_logo.png``"&gt;</code></li>
+</ul>
+</li>
+<li>相对路径:</li>
+</ul>
+<p>./ : 当前目录 , ./ 可以省略的</p>
+<p>../: 上一级目录</p>
+<h4 id="_13">正文样式</h4>
+<p>正文的基本排版有了之后，接下来，我们要处理的是正文部分的样式。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457935-491082f2-641e-4595-a0b9-52a5ef4e405b.png" /></p>
+<p>具体的css样式如下:</p>
+<div class="codehilite"><pre><span></span><code>/* 设置段落首行缩进 */
+    p {
+      text-indent: 2em; /* 首行缩进2em */
+      line-height: 2; /* 行高2倍 */
+    }
+</code></pre></div>
+
+<h3 id="-_2">央视新闻-布局</h3>
+<h4 id="_14">功能实现</h4>
+<p>完成了标签及正文部分的排版制作，以及样式处理之后，那最后一步，我们就要来完成页面整体布局的设置了。 从原始的央视新闻页面中，我们可以看到，新闻页面是出于整个版面的正中心的，那这种呢，在布局中也称为 <strong>版心居中</strong>。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891458024-e3c56f85-5b68-404c-86f5-c1b0ca197487.png" /></p>
+<p>这个功能，我们依然可以通过AI，轻而易举的实现。具体的提示词如下：</p>
+<p><font style="background-color:rgb(255,245,235);">通过css使如下新闻网页的整体内容，占用整个页面宽度的70%，并且横向居中展示。具体的网页内容如下：.....</font></p>
+<p>最终网页代码如下所示：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
+  &lt;style&gt;
+    .publish-date {
+      color: #b2b2b2;
+    }
+
+    /* 设置超链接取消下划线效果 */
+    a {
+      text-decoration: none;
+    }
+
+    /* 设置段落首行缩进 */
+    p {
+      text-indent: 2em; /* 首行缩进2em */
+      line-height: 2; /* 行高2倍 */
+    }
+
+    /* 新增样式 */
+    .news-content {
+      width: 70%; /* 宽度占70% */
+      margin: 0 auto; /* 横向居中 */
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 包裹新闻内容的容器 --&gt;
+    &lt;div class="news-content"&gt;
+      &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
+      &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
+
+      &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
+      &lt;a href="https://news.cctv.com/" target="_blank" &gt;央视网&lt;/a&gt;
+
+      &lt;span class="publish-date"&gt;2024年05月15日 20:07&lt;/span&gt;
+      &lt;br&gt;
+      &lt;br&gt;
+
+      &lt;!-- 定义一个视频, video/news.mp4 --&gt;
+      &lt;video src="video/news.mp4" controls width="100%"&gt;&lt;/video&gt;
+      &lt;p&gt;
+        &lt;strong&gt;央视网消息&lt;/strong&gt;（新闻联播）：作为共抓长江大保护的标志性工程，长江十年禁渔今年进入第四年。总书记指出，长江禁渔是为全局计、为子孙谋的重要决策。牢记总书记嘱托，沿江省市持续推进长江水生生物多样性恢复，努力保障退捕渔民就业生活。这段时间，记者深入长江两岸，记录下禁渔工作取得的重要阶段性成效和广大干部群众坚定不移推进长江十年禁渔的扎实行动。
+      &lt;/p&gt;
+      &lt;p&gt;
+        行走在长江沿线，科研人员发现很多可喜现象。
+      &lt;/p&gt;
+      &lt;!-- 定义一张图片, img/1.gif --&gt;
+      &lt;img src="img/1.gif" alt=""  width="100%"&gt;
+      &lt;p&gt;
+        在长江南源，一处小头裸裂尻鱼新的栖息地被发现，鱼的数量大约超3万尾，为水生态保护提供了珍贵数据。
+      &lt;/p&gt;
+      &lt;p&gt;
+        在长江中游，追踪显示，人工增殖放流的中华鲟成功入海率已经从45%左右提升至60%以上；鄱阳湖鱼类小型化、低龄化趋势得到遏制，栖息地生存环境得以改善。
+      &lt;/p&gt;
+      &lt;p&gt;
+        在长江下游，今年3月起，南京秦淮河入江口首次出现野生中华绒螯蟹大规模洄游现象，种群数量明显增加。
+      &lt;/p&gt;
+      &lt;img src="img/2.jpg"  width="100%"&gt;
+      &lt;p&gt;
+        水生生物资源恢复向好，见证了长江十年禁渔三年多来的阶段性成果。
+      &lt;/p&gt;
+      &lt;p&gt;
+        实施长江十年禁渔，是以同志为核心的党中央从中华民族长远利益出发作出的重要决策。党的十八大以来，总书记多次深入长江沿线考察调研，详细了解长江十年禁渔的实施情况，他指出，要坚定推进长江十年禁渔，巩固好已经取得的成果。
+      &lt;/p&gt;
+      &lt;img src="img/3.jpg"  width="100%"&gt;
+      &lt;p&gt;
+        按照部署，自2021年1月1日起，在长江干流、大型通江湖泊、重要支流和长江口部分海域实行为期十年的禁渔，常年禁止天然渔业资源的生产性捕捞。禁渔三年多来，相关评估显示，长江干流和鄱阳湖、洞庭湖水生生物完整性指数由禁渔前最差的“无鱼”提升了两个等级。2022年，长江江豚数量达到1249头，实现历史性止跌回升。长江干流水质连续4年全线保持Ⅱ类。
+      &lt;/p&gt;
+      &lt;p&gt;
+        实施长江十年禁渔，解决好渔民上岸后的生产生活问题，禁渔才有稳定扎实的社会基础。
+      &lt;/p&gt;
+      &lt;img src="img/4.jpg"  width="100%"&gt;
+      &lt;p&gt;
+        安徽退捕转产的3万多名渔民，在政府的引导下接受就业培训。在当涂县，免费学习养殖技术，养殖生态螃蟹成了退捕渔民的新选择。
+      &lt;/p&gt;
+      &lt;p&gt;
+        在拥有洞庭湖超六成水域的湖南岳阳，政府帮扶上岸渔民建起养殖场，发展风干鱼产业，还带领他们学习直播带货，拓宽销路。
+      &lt;/p&gt;
+      &lt;p&gt;
+        在渔民退捕上岸的鄱阳湖棠荫岛，当地在继续保护好生态的前提下，正探索规划利用独特的自然资源发展旅游产业。禁渔三年多来，有关部门对23.1万退捕渔民逐一建档立卡，多渠道提升就业、社保水平。
+      &lt;/p&gt;
+      &lt;img src="img/5.jpg"  width="100%"&gt;
+      &lt;p&gt;
+        长江十年禁渔实施以来，沿江省市合力攻坚、久久为功，长江大保护不断向纵深推进，持续巩固禁渔成果。下一步，沿江省市还将加强水生生物重要栖息地修复，建立退捕渔民动态精准帮扶服务，完善跨区域、跨部门执法合作机制，确保一江清水绵延后世、惠泽人民。
+      &lt;/p&gt;
+      &lt;img src="img/6.jpg" &gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>上述代码，最终经过浏览器的解析渲染之后，效果如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891458462-7f2b3e41-6464-4962-a4b3-1c5d07e09efb.png" /></p>
+<h4 id="_15">盒子模型</h4>
+<h5 id="_16">介绍</h5>
+<ul>
+<li>盒子：页面中所有的元素（标签），都可以看做是一个 盒子，由盒子将页面中的元素包含在一个矩形区域内，通过盒子的视角更方便的进行页面布局。</li>
+<li>盒子模型组成：内容区域（content）、内边距区域（padding）、边框区域（border）、外边距区域（margin）。</li>
+</ul>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891458475-6d46eab7-727e-423a-990d-efabfbf85325.png" /></p>
+<p>CSS盒子模型，其实和日常生活中的包装盒是非常类似的，就比如：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891458863-0d339498-ed44-4219-b032-80970a4f491c.png" /></p>
+<p>盒子的大小，其实就包括三个部分： border、padding、content，而margin外边距是不包括在盒子之内的。</p>
+<h5 id="_17">布局标签</h5>
+<ul>
+<li>布局标签：实际开发网页中，会大量频繁的使用 div 和 span 这两个没有语义的布局标签。</li>
+<li>标签：<code>&lt;font style="color:rgb(46,161,33);"&gt;&lt;div&gt;&lt;/font&gt;``&lt;font style="color:rgb(46,161,33);"&gt;&lt;span&gt;&lt;/font&gt;</code></li>
+<li>特点：</li>
+<li><code>&lt;font style="color:rgb(46,161,33);"&gt;&lt;div&gt;&lt;/font&gt;</code>标签：<ul>
+<li>一行只显示一个（独占一行）</li>
+<li>宽度默认是父元素的宽度，高度默认由内容撑开</li>
+<li>可以设置宽高（width、height）</li>
+</ul>
+</li>
+<li><code>&lt;font style="color:rgb(46,161,33);"&gt;&lt;span&gt;&lt;/font&gt;</code>标签：<ul>
+<li>一行可以显示多个</li>
+<li>宽度和高度默认由内容撑开</li>
+<li>不可以设置宽高（width、height）</li>
+</ul>
+</li>
+<li>测试：</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>&lt;body&gt;
+    &lt;div&gt;
+        A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A 
+    &lt;/div&gt;
+    &lt;div&gt;
+        A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A 
+    &lt;/div&gt;
+
+    &lt;span&gt;
+        A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A 
+    &lt;/span&gt;
+    &lt;span&gt;
+        A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A 
+    &lt;/span&gt;
+&lt;/body&gt;
+</code></pre></div>
+
+<p>浏览器打开后的效果:</p>
+<p>1). div会独占一行，默认宽度为父元素 body 的宽度。可以设置宽高（width、height）</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891458931-923981e4-bfa2-431e-92e7-674e245be704.png" /></p>
+<p>2). span一行会显示多个，用来组合行内元素，默认宽度为内容撑开的宽度。不可以设置宽高（width、height）</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891458958-ce1a2b48-56b4-4daa-b774-de2facfb81d1.png" /></p>
+<h5 id="_18">代码实现</h5>
+<p>代码如下: </p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;盒子模型&lt;/title&gt;
+    &lt;style&gt;
+        div {
+            width: 200px;  /* 宽度 */
+            height: 200px;  /* 高度 */
+            box-sizing: border-box; /* 指定width height为盒子的高宽 */
+            background-color: aquamarine; /* 背景色 */
+
+            padding: 20px 20px 20px 20px; /* 内边距, 上 右 下 左 , 边距都一行, 可以简写: padding: 20px;*/ 
+            border: 10px solid red; /* 边框, 宽度 线条类型 颜色 */
+            margin: 30px 30px 30px 30px; /* 外边距, 上 右 下 左 , 边距都一行, 可以简写: margin: 30px; */
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;div&gt;
+        A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A A 
+    &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>代码编写好了, 可以通过浏览器打开该页面, 通过开发者工具,我们就可以看到盒子的大小 , 以及盒子各个组成部分(内容、内边距、边框、外边距)：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891459309-c910937a-3998-47e4-9944-4163141fe676.png" /></p>
+<p>我们也可以，通过浏览器的开发者工具，清晰的看到这个盒子，以及每一个部分的大小：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891459382-8aa14150-4eb8-40e8-ad6e-cf92ceb06460.png" /></p>
+<p><strong>备注：</strong></p>
+<ul>
+<li>上述的padding、margin属性值，可以是4个值、也可以是两个值、也可以是一个值，具体的含义如下：</li>
+<li><code>padding: 20px 20px 20px 20px;</code> -------&gt; 表示上、右、下、左都是20px；</li>
+<li><code>padding: 20px 10px;</code> ----------------------&gt; 表示上下是20px，左右是10px；</li>
+<li><code>padding: 20px;</code> -----------------------------&gt; 表示上、右、下、左都是20px；</li>
+</ul>
+<h3 id="_19">案例</h3>
+<h4 id="_20">需求</h4>
+<p>通过一个央视新闻页面的制作，大家已经熟悉了HTML中的常见标签及CSS中基础样式的写法及作用。 那接下来呢，我们就要通过一个案例，来加深大家对于这些标签和样式的掌握和使用，那么在完成这个案例的过程中呢，我们依然可以直接基于AI来辅助我们快速实现。</p>
+<p>**需求：参照Tlias智能学习辅助系统，完成员工管理页面的制作。 **</p>
+<p>产品经理制作的页面原型如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891459474-fa535864-8d75-4698-8f17-819431086685.png" /></p>
+<h4 id="_21">代码实现</h4>
+<h5 id="_22">顶部导航栏</h5>
+<h6 id="_23">基本实现</h6>
+<p>原型效果：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891459543-c4d24f6a-4c1f-48e9-afe0-4a5d2639ebb3.png" /></p>
+<p><font style="background-color:rgb(255,245,235);">提示词（prompt）：</font></p>
+<p><font style="background-color:rgb(255,245,235);">你是一名前端开发工程师，帮我生成一个HTML页面，页面整体有4个部分组成，先来实现第一个部分：</font></p>
+<p><font style="background-color:rgb(255,245,235);">1. 顶栏</font></p>
+<p><font style="background-color:rgb(255,245,235);">内容：包含左侧的标题“Tlias智能学习辅助系统”，字体需加大加粗，以突出显示；右侧则放置“退出登录”文字链接。</font></p>
+<p><font style="background-color:rgb(255,245,235);">布局：确保标题与退出登录文本位于同一行内，分别左对齐与右对齐 。</font></p>
+<p>页码代码如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tlias智能学习辅助系统&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        margin: 0;
+      }
+
+      /* 顶栏样式 */
+      .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f1f1f1;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      /* 加大加粗标题 */
+      .header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: bold;
+      }
+
+      /* 文本链接样式 */
+      .header a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+      }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 顶栏 --&gt;
+    &lt;div class="header"&gt;
+        &lt;h1&gt;Tlias智能学习辅助系统&lt;/h1&gt;
+        &lt;a href="#"&gt;退出登录&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 其他部分可以在这里添加 --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>页面展示效果如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891459686-b4857bba-6610-4473-b67f-09d28bc831d3.png" /></p>
+<h6 id="flex">flex布局</h6>
+<p>那在上述的案例代码中，其实我们用到了一种布局模式，叫 <strong>flex布局</strong>。</p>
+<ul>
+<li>flex是flexible Box的缩写，意为"弹性布局"。采用flex布局的元素，称为Flex容器（container），它的所有子元素自动成为容器成员，称为Flex项目（item）。</li>
+<li><font style="color:rgb(216,57,49);">通过给父容器添加flex属性,来控制子元素的位置和排列方式。</font></li>
+</ul>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891459922-9aea19d7-f3ef-4aca-ad9f-99b871cfcc6e.png" /></p>
+<p>测试代码如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;Document&lt;/title&gt;
+  &lt;style&gt;
+    #container {
+      display: flex;
+      /* justify-content: space-between; */ /* 先两边贴边，再平分剩余空间 */
+      /* justify-content: flex-start;*/ /* 从头开始排列  */
+      /* justify-content: flex-end; */ /* 从尾开始排列 */
+      /* justify-content: center; */ /* 居中排列 */
+      /* justify-content: space-around; */ /* 两边留白，中间平分，平分剩余空间 */
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #aeea6a;
+      width: 400px;
+      height: 300px;
+    }
+
+    #container div {
+      background-color: #e866ef;
+      width: 100px;
+      height: 50px; 
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div id="container"&gt;
+    &lt;div&gt;Flex Item&lt;/div&gt;
+    &lt;div&gt;Flex Item&lt;/div&gt;
+    &lt;div&gt;Flex Item&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<ul>
+<li>flex布局相关的CSS样式：</li>
+</ul>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><strong><font style="color:#1f2329;">属性</font></strong></th>
+<th style="text-align: center;"><strong><font style="color:#1f2329;">说明</font></strong></th>
+<th style="text-align: center;"><strong><font style="color:#1f2329;">取值</font></strong></th>
+<th><strong><font style="color:#1f2329;">含义</font></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">display</font></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">模式</font></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">flex</font></td>
+<td><font style="color:rgb(40, 45, 44);">使用flex布局</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">flex-direction</font></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">设置主轴</font></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">row</font></td>
+<td><font style="color:rgb(40, 45, 44);">主轴方向为x轴，水平向右。（默认）</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">column</font></td>
+<td><font style="color:rgb(40, 45, 44);">主轴方向为y轴，垂直向下。</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">justify-content</font></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">子元素在主轴上的对齐方式</font></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">flex-start</font></td>
+<td><font style="color:rgb(40, 45, 44);">从头开始排列</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">flex-end</font></td>
+<td><font style="color:rgb(40, 45, 44);">从尾部开始排列</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">center</font></td>
+<td><font style="color:rgb(40, 45, 44);">在主轴居中对齐</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">space-around</font></td>
+<td><font style="color:rgb(40, 45, 44);">平分剩余空间</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"><font style="color:rgb(40, 45, 44);">space-between</font></td>
+<td><font style="color:rgb(40, 45, 44);">先两边贴边，再平分剩余空间</font></td>
+</tr>
+</tbody>
+</table></div>
+<p>如果主轴设置为row，其实就是横向布局。 主轴设置为column，其实就是纵向布局。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460010-c801615b-0d7a-46d2-aa05-259ee417a579.png" /></p>
+<h5 id="_24">搜索表单</h5>
+<p>那接下来，我们要完成的是第二个部分，也就是搜索栏的制作。 页面原型展示如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460123-0577c4fd-eb62-492d-8095-0f5b630a2948.png" /></p>
+<p>那这里呢，需要用到HTML中的表单。 那接下来，我们先来介绍一下表单标签，然后再来实现搜索表单栏的制作。</p>
+<h6 id="_25">表单标签</h6>
+<p>那表单呢,在我们日常的上网的过程中,基本上每天都会遇到。比如，我们经常在访问网站时，出现的登录页面、注册页面、个人信息提交页面，其实都是一个一个的表单 。 当我们在这些表单中录入数据之后，一点击 "提交"，就会将表单中我们填写的数据采集到，并提交， 那其实这个数据呢，一般会提交到服务端，最终保存在数据库中 （后面的课程中会讲到）。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460067-720e47fd-7b12-4602-ade9-5f79f7779e29.png" /></p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460127-287ba6ce-e3f4-403f-915e-22ff5b68d0a7.png" /></p>
+<p>那其实，上述的整个窗口是一个表单，而表单是一项一项的，这个我们称为表单项 或 表单元素。</p>
+<ul>
+<li>表单场景: 表单就是在网页中负责数据采集功能的，如：注册、登录的表单。 </li>
+<li>表单标签: <code>&lt;form&gt;</code></li>
+<li>表单属性:<ul>
+<li><code>action</code>: 规定表单提交时，向何处发送表单数据，表单提交的URL。</li>
+<li><code>method</code>: 规定用于发送表单数据的方式，常见为： GET、POST。<ul>
+<li><code>GET</code>：表单数据是拼接在url后面的， 如： xxxxxxxxxxx?username=Tom&amp;age=12，url中能携带的表单数据大小是有限制的。</li>
+<li><code>POST</code>： 表单数据是在请求体（消息体）中携带的，大小没有限制。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>表单项标签: 不同类型的input元素、下拉列表、文本域等。<ul>
+<li><code>input</code>: 定义表单项，通过type属性控制输入形式</li>
+<li><code>select</code>: 定义下拉列表</li>
+<li><code>textarea</code>: 定义文本域</li>
+</ul>
+</li>
+</ul>
+<p><strong>演示：</strong></p>
+<p>1). GET方式提交的表单</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML-表单&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 
+    form表单属性: 
+        action: 表单提交的url, 往何处提交数据 . 如果不指定, 默认提交到当前页面
+        method: 表单的提交方式 .
+            get: 在url后面拼接表单数据, 比如: ?username=Tom&amp;age=12 , url长度有限制 . 默认值
+            post: 在消息体(请求体)中传递的, 参数大小无限制的.
+    --&gt;   
+
+    &lt;form action="" method="get"&gt;
+        用户名: &lt;input type="text" name="username"&gt;
+        年龄: &lt;input type="text" name="age"&gt;
+
+        &lt;input type="submit" value="提交"&gt;
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>表单编写完毕之后，通过浏览器打开此表单，然后再表单项中录入值之后，点击提交，我们会看到表单的数据在url后面提交到服务端，格式为：?username=Tom&amp;age=12。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460492-90f29547-d450-49c5-ae3f-a5410a91e113.png" /></p>
+<p>2). POST方式提交表单</p>
+<p>将上述的表单提交方式由get，改为post</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML-表单&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 
+    form表单属性: 
+        action: 表单提交的url, 往何处提交数据 . 如果不指定, 默认提交到当前页面
+        method: 表单的提交方式 .
+            get: 在url后面拼接表单数据, 比如: ?username=Tom&amp;age=12 , url长度有限制 . 默认值
+            post: 在消息体(请求体)中传递的, 参数大小无限制的.
+    --&gt;   
+
+    &lt;form action="" method="post"&gt;
+        用户名: &lt;input type="text" name="username"&gt;
+        年龄: &lt;input type="text" name="age"&gt;
+
+        &lt;input type="submit" value="提交"&gt;
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>表单编写完毕之后，通过浏览器打开此表单，然后再表单项中录入值之后，点击提交，我们会看到表单的数据在url后面提交到服务端，格式为：?username=Tom&amp;age=12。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460637-8b67fb64-2cc0-4063-90bc-5eda8f305d77.png" /></p>
+<p><strong><font style="color:rgb(216,57,49);">注意事项：</font></strong></p>
+<p>表单中的所有表单项，要想能够正常的采集数据，在提交的时候能提交到服务端，表单项必须指定name属性。 否则，无法提交该表单项。</p>
+<div class="codehilite"><pre><span></span><code>用户名: &lt;input type="text" name="username"&gt;
+</code></pre></div>
+
+<h6 id="_26">表单项标签</h6>
+<p>在一个表单中，可以存在很多的表单项，而虽然表单项的形式各式各样，但是表单项的标签其实就只有三个，分别是：</p>
+<ul>
+<li><code>&lt;input&gt;</code>: 表单项 , 通过type属性控制输入形式。</li>
+</ul>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th><strong><font style="color:rgb(0, 0, 0);">type取值</font></strong></th>
+<th><strong><font style="color:rgb(0, 0, 0);">描述</font></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">text</font></td>
+<td><font style="color:rgb(0, 0, 0);">默认值，定义单行的输入字段</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">password</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义密码字段</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">radio</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义单选按钮</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">checkbox</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义复选框</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">file</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义文件上传按钮</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">date/time/datetime-local</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义日期/时间/日期时间</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">number</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义数字输入框</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">email</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义邮件输入框</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">hidden</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义隐藏域</font></td>
+</tr>
+<tr>
+<td><font style="color:rgb(0, 0, 0);">submit / reset / button</font></td>
+<td><font style="color:rgb(0, 0, 0);">定义提交按钮 / 重置按钮 / 可点击按钮</font></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li><code>&lt;select&gt;</code>: 定义下拉列表, <code>&lt;option&gt;</code> 定义列表项</li>
+<li><code>&lt;textarea&gt;</code>: 文本域</li>
+</ul>
+<p><strong>演示：</strong></p>
+<p>创建一个新的表单项的html文件，具体内容如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;HTML-表单项标签&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;!-- value: 表单项提交的值 --&gt;
+&lt;form action="/save" method="post"&gt;
+     姓名: &lt;input type="text" name="name"&gt; &lt;br&gt;&lt;br&gt;
+
+     密码: &lt;input type="password" name="password"&gt; &lt;br&gt;&lt;br&gt; 
+
+     性别: &lt;input type="radio" name="gender" value="1"&gt; 男
+          &lt;label&gt;&lt;input type="radio" name="gender" value="2"&gt; 女 &lt;/label&gt; &lt;br&gt;&lt;br&gt;
+
+     爱好: &lt;label&gt;&lt;input type="checkbox" name="hobby" value="java"&gt; java &lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" name="hobby" value="game"&gt; game &lt;/label&gt;
+          &lt;label&gt;&lt;input type="checkbox" name="hobby" value="sing"&gt; sing &lt;/label&gt; &lt;br&gt;&lt;br&gt;
+
+     图像: &lt;input type="file" name="image"&gt;  &lt;br&gt;&lt;br&gt;
+
+     生日: &lt;input type="date" name="birthday"&gt; &lt;br&gt;&lt;br&gt;
+
+     时间: &lt;input type="time" name="time"&gt; &lt;br&gt;&lt;br&gt;
+
+     日期时间: &lt;input type="datetime-local" name="datetime"&gt; &lt;br&gt;&lt;br&gt;
+
+     学历: &lt;select name="degree"&gt;
+               &lt;option value=""&gt;----------- 请选择 -----------&lt;/option&gt;
+               &lt;option value="1"&gt;大专&lt;/option&gt;
+               &lt;option value="2"&gt;本科&lt;/option&gt;
+               &lt;option value="3"&gt;硕士&lt;/option&gt;
+               &lt;option value="4"&gt;博士&lt;/option&gt;
+          &lt;/select&gt;  &lt;br&gt;&lt;br&gt;
+
+     描述: &lt;textarea name="description" cols="30" rows="10"&gt;&lt;/textarea&gt;  &lt;br&gt;&lt;br&gt;
+
+     &lt;input type="hidden" name="id" value="1"&gt;
+
+     &lt;!-- 表单常见按钮 --&gt;
+     &lt;input type="button" value="按钮"&gt;
+     &lt;input type="reset" value="重置"&gt; 
+     &lt;input type="submit" value="提交"&gt;   
+     &lt;br&gt;
+&lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>通过浏览器打开上述的表单项html文件，最终展示出的表单信息如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460628-005d3620-b398-4038-85c6-dfaf065959f6.png" /></p>
+<p>而对于<code>&lt;input type="hidden"&gt;</code>，是一个隐藏域，在表单中并不会显示出来，但是在提交表单的时候，是会提交到服务端的。 接下来，我们就点击提交按钮，来提交当前表单，看看提交的数据：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460673-2ef4785d-c977-46fa-87ce-71324b6de55e.png" /></p>
+<h6 id="_27">搜索表单实现</h6>
+<p>那基本的表单标签和表单项标签，讲解完毕后，接下来呢，我们就来完成搜索表单的实现，同样，我们可以借助于AI帮我们完成对应的页面布局。</p>
+<p><font style="background-color:rgb(255,245,235);">提示词（prompt）：</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">再继续帮我生成第二个部分: 2. 搜索表单区域</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">组成：包括三个输入控件和两个操作按钮。输入控件具体为：姓名（文本输入框）、性别（下拉选择，选项包括 男/女， 默认为空）、职位（下拉选择，选项包括班主任、讲师、学工主管、教研主管、咨询师， 默认为空）。</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">按钮：“查询”与“清空”按钮，用于提交表单或重置表单项 。</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">布局：所有表单项及按钮需水平排列于一行 ，确保美观大气 。</font></p>
+<p>代码实现如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tlias智能学习辅助系统&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        margin: 0;
+      }
+
+      /* 顶栏样式 */
+      .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f1f1f1;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      /* 加大加粗标题 */
+      .header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: bold;
+      }
+
+      /* 文本链接样式 */
+      .header a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+      }
+
+      /* 搜索表单区域 */
+      .search-form {
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          background-color: #f9f9f9;
+      }
+
+      /* 表单控件样式 */
+      .search-form input[type="text"], .search-form select {
+          margin-right: 10px;
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 200px;
+      }
+
+      /* 按钮样式 */
+      .search-form button {
+          padding: 5px 15px;
+          margin-left: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      /* 清空按钮样式 */
+      .search-form button.clear {
+          background-color: #6c757d;
+      }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 顶栏 --&gt;
+    &lt;div class="header"&gt;
+        &lt;h1&gt;Tlias智能学习辅助系统&lt;/h1&gt;
+        &lt;a href="#"&gt;退出登录&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 搜索表单区域 --&gt;
+    &lt;form class="search-form"&gt;
+      &lt;input type="text" name="name" placeholder="姓名" /&gt;
+      &lt;select name="gender"&gt;
+          &lt;option value=""&gt;性别&lt;/option&gt;
+          &lt;option value="1"&gt;男&lt;/option&gt;
+          &lt;option value="2"&gt;女&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select name="job"&gt;
+          &lt;option value=""&gt;职位&lt;/option&gt;
+          &lt;option value="1"&gt;班主任&lt;/option&gt;
+          &lt;option value="2"&gt;讲师&lt;/option&gt;
+          &lt;option value="3"&gt;学工主管&lt;/option&gt;
+          &lt;option value="4"&gt;教研主管&lt;/option&gt;
+          &lt;option value="5"&gt;咨询师&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type="submit"&gt;查询&lt;/button&gt;
+      &lt;button type="reset" class="clear"&gt;清空&lt;/button&gt;
+    &lt;/form&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>浏览器呈现效果为：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460664-29d599da-95ad-4d82-a910-c5635bdd6d62.png" /></p>
+<h5 id="_28">表格数据展示</h5>
+<h6 id="_29">基本实现</h6>
+<p>页面效果如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891460974-2d49c919-768a-47b5-862b-0c20c74abe35.png" /></p>
+<p><font style="background-color:rgb(255,245,235);">提示词（prompt）：</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">再继续帮我生成第三个部分: 3. 表格展示区</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">表格结构：展示列包括姓名、性别（显示男/女）、头像（小图标展示）、职位（显示班主任/讲师/学工主管/教研主管/咨询师）、入职日期、最后操作时间、操作（里包含两个按钮 编辑 与 删除）。</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">数据模拟：基于《笑傲江湖》小说人物生成4条虚拟数据，每条数据应包含上述所有列的信息，以体现实际应用场景 。</font></p>
+<p><font style="color:rgb(143,149,158);background-color:rgb(255,245,235);">样式：可适当调整表格样式，确保美观大气。</font></p>
+<p>代码实现为：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tlias智能学习辅助系统&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        margin: 0;
+      }
+
+      /* 顶栏样式 */
+      .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f1f1f1;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      /* 加大加粗标题 */
+      .header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: bold;
+      }
+
+      /* 文本链接样式 */
+      .header a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+      }
+
+      /* 搜索表单区域 */
+      .search-form {
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          background-color: #f9f9f9;
+      }
+
+      /* 表单控件样式 */
+      .search-form input[type="text"], .search-form select {
+          margin-right: 10px;
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 200px;
+      }
+
+      /* 按钮样式 */
+      .search-form button {
+          padding: 5px 15px;
+          margin-left: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      /* 清空按钮样式 */
+      .search-form button.clear {
+        background-color: #6c757d;
+      }
+
+      .table {
+         min-width: 100%; 
+         border-collapse: collapse;
+         margin: 0 20px;
+      }
+
+      /* 设置表格单元格边框 */
+      .table td, .table th { 
+        border: 1px solid #ddd; 
+        padding: 8px; 
+        text-align: center;
+      }
+
+      .avatar { 
+        width: 50px; 
+        height: 50px; 
+        object-fit: cover; 
+        border-radius: 50%; 
+      }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 顶栏 --&gt;
+    &lt;div class="header"&gt;
+        &lt;h1&gt;Tlias智能学习辅助系统&lt;/h1&gt;
+        &lt;a href="#"&gt;退出登录&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 搜索表单区域 --&gt;
+    &lt;form class="search-form" action="#" method="post"&gt;
+      &lt;input type="text" name="name" placeholder="姓名" /&gt;
+      &lt;select name="gender"&gt;
+          &lt;option value=""&gt;性别&lt;/option&gt;
+          &lt;option value="1"&gt;男&lt;/option&gt;
+          &lt;option value="2"&gt;女&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select name="job"&gt;
+          &lt;option value=""&gt;职位&lt;/option&gt;
+          &lt;option value="1"&gt;班主任&lt;/option&gt;
+          &lt;option value="2"&gt;讲师&lt;/option&gt;
+          &lt;option value="3"&gt;学工主管&lt;/option&gt;
+          &lt;option value="4"&gt;教研主管&lt;/option&gt;
+          &lt;option value="5"&gt;咨询师&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type="submit"&gt;查询&lt;/button&gt;
+      &lt;button type="reset" class="clear"&gt;清空&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;table class="table table-striped table-bordered"&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;th&gt;姓名&lt;/th&gt;
+              &lt;th&gt;性别&lt;/th&gt;
+              &lt;th&gt;头像&lt;/th&gt;
+              &lt;th&gt;职位&lt;/th&gt;
+              &lt;th&gt;入职日期&lt;/th&gt;
+              &lt;th&gt;最后操作时间&lt;/th&gt;
+              &lt;th&gt;操作&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+          &lt;tr&gt;
+              &lt;td&gt;令狐冲&lt;/td&gt;
+              &lt;td&gt;男&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="令狐冲" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;讲师&lt;/td&gt;
+              &lt;td&gt;2021-03-15&lt;/td&gt;
+              &lt;td&gt;2023-07-30T12:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;任盈盈&lt;/td&gt;
+              &lt;td&gt;女&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="任盈盈" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;学工主管&lt;/td&gt;
+              &lt;td&gt;2020-04-10&lt;/td&gt;
+              &lt;td&gt;2023-07-29T15:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;岳不群&lt;/td&gt;
+              &lt;td&gt;男&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="岳不群" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;教研主管&lt;/td&gt;
+              &lt;td&gt;2019-01-01&lt;/td&gt;
+              &lt;td&gt;2023-07-30T10:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;宁中则&lt;/td&gt;
+              &lt;td&gt;女&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="宁中则" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;班主任&lt;/td&gt;
+              &lt;td&gt;2018-06-01&lt;/td&gt;
+              &lt;td&gt;2023-07-29T09:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>页面展示的效果为：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891461284-6278b28e-ac06-45bb-943d-a8b41040267c.png" /></p>
+<h6 id="_30">表格标签</h6>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th style="text-align: center;"><font style="color:#1f2329;">标签</font></th>
+<th style="text-align: center;"><font style="color:#1f2329;">描述</font></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(192, 0, 0);"><div class="tbl-wrap"><table></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">定义表格整体</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(192, 0, 0);"><thead></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">用于定义表格头部(可选)</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(192, 0, 0);"><tbody></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">定义表格中的主体部分(可选)</font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(192, 0, 0);"><tr></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">表格的行，可以包裹多个 <td></font></td>
+</tr>
+<tr>
+<td style="text-align: center;"><font style="color:rgb(192, 0, 0);"><td></font></td>
+<td style="text-align: center;"><font style="color:#1f2329;">表格单元格(普通)，可以包裹内容；如果是表头单元格，可以替换为 <th></font></td>
+</tr>
+</tbody>
+</table></div>
+<h5 id="_31">底部版权区域</h5>
+<p>页面原型展示如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891461133-299d742c-71ca-48d3-9051-2cb7703346d3.png" /></p>
+<p><font style="background-color:rgb(255,245,235);">提示词（prompt）:</font></p>
+<p><font style="background-color:rgb(255,245,235);">再继续帮我生成第二个部分: 4. 页脚版权区域</font></p>
+<p><font style="background-color:rgb(255,245,235);">内容：第一行显示公司全称“江苏传智播客教育科技股份有限公司”；第二行展示版权信息，“版权所有 Copyright 2006-2024 All Rights Reserved”。</font></p>
+<p><font style="background-color:rgb(255,245,235);">设计：该区域应具有灰色背景，字体颜色为白色，居中对齐，以营造专业且统一的视觉效果 。</font></p>
+<p>页面代码如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tlias智能学习辅助系统&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        margin: 0;
+      }
+
+      /* 顶栏样式 */
+      .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: #f1f1f1;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      /* 加大加粗标题 */
+      .header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: bold;
+      }
+
+      /* 文本链接样式 */
+      .header a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+      }
+
+      /* 搜索表单区域 */
+      .search-form {
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          background-color: #f9f9f9;
+      }
+
+      /* 表单控件样式 */
+      .search-form input[type="text"], .search-form select {
+          margin-right: 10px;
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 200px;
+      }
+
+      /* 按钮样式 */
+      .search-form button {
+          padding: 5px 15px;
+          margin-left: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      /* 清空按钮样式 */
+      .search-form button.clear {
+        background-color: #6c757d;
+      }
+
+      .table {
+         min-width: 100%; 
+         border-collapse: collapse;
+         margin: 0 20px;
+      }
+
+      /* 设置表格单元格边框 */
+      .table td, .table th { 
+        border: 1px solid #ddd; 
+        padding: 8px; 
+        text-align: center;
+      }
+
+      .avatar { 
+        width: 50px; 
+        height: 50px; 
+        object-fit: cover; 
+        border-radius: 50%; 
+      }
+
+      /* 页脚版权区域 */
+    .footer {
+        background-color: #8f8c8c;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+        margin-top: 30px;
+    }
+
+    .footer .company-name {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    .footer .copyright {
+        font-size: 0.9em;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- 顶栏 --&gt;
+    &lt;div class="header"&gt;
+        &lt;h1&gt;Tlias智能学习辅助系统&lt;/h1&gt;
+        &lt;a href="#"&gt;退出登录&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 搜索表单区域 --&gt;
+    &lt;form class="search-form" action="#" method="post"&gt;
+      &lt;input type="text" name="name" placeholder="姓名" /&gt;
+      &lt;select name="gender"&gt;
+          &lt;option value=""&gt;性别&lt;/option&gt;
+          &lt;option value="1"&gt;男&lt;/option&gt;
+          &lt;option value="2"&gt;女&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select name="job"&gt;
+          &lt;option value=""&gt;职位&lt;/option&gt;
+          &lt;option value="1"&gt;班主任&lt;/option&gt;
+          &lt;option value="2"&gt;讲师&lt;/option&gt;
+          &lt;option value="3"&gt;学工主管&lt;/option&gt;
+          &lt;option value="4"&gt;教研主管&lt;/option&gt;
+          &lt;option value="5"&gt;咨询师&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type="submit"&gt;查询&lt;/button&gt;
+      &lt;button type="reset" class="clear"&gt;清空&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;table class="table table-striped table-bordered"&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;th&gt;姓名&lt;/th&gt;
+              &lt;th&gt;性别&lt;/th&gt;
+              &lt;th&gt;头像&lt;/th&gt;
+              &lt;th&gt;职位&lt;/th&gt;
+              &lt;th&gt;入职日期&lt;/th&gt;
+              &lt;th&gt;最后操作时间&lt;/th&gt;
+              &lt;th&gt;操作&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+          &lt;tr&gt;
+              &lt;td&gt;令狐冲&lt;/td&gt;
+              &lt;td&gt;男&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="令狐冲" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;讲师&lt;/td&gt;
+              &lt;td&gt;2021-03-15&lt;/td&gt;
+              &lt;td&gt;2023-07-30T12:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;任盈盈&lt;/td&gt;
+              &lt;td&gt;女&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="任盈盈" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;学工主管&lt;/td&gt;
+              &lt;td&gt;2020-04-10&lt;/td&gt;
+              &lt;td&gt;2023-07-29T15:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;岳不群&lt;/td&gt;
+              &lt;td&gt;男&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="岳不群" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;教研主管&lt;/td&gt;
+              &lt;td&gt;2019-01-01&lt;/td&gt;
+              &lt;td&gt;2023-07-30T10:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;宁中则&lt;/td&gt;
+              &lt;td&gt;女&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://via.placeholder.com/50" alt="宁中则" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;班主任&lt;/td&gt;
+              &lt;td&gt;2018-06-01&lt;/td&gt;
+              &lt;td&gt;2023-07-29T09:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/tbody&gt;
+  &lt;/table&gt;
+
+  &lt;!-- 页脚版权区域 --&gt;
+  &lt;footer class="footer"&gt;
+    &lt;p class="company-name"&gt;江苏传智播客教育科技股份有限公司&lt;/p&gt;
+    &lt;p class="copyright"&gt;版权所有 Copyright 2006-2024 All Rights Reserved&lt;/p&gt;
+  &lt;/footer&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>页面展示如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891461238-34b92a69-2f5c-40bb-9a7c-fe9b29a8dc1d.png" /></p>
+<h5 id="_32">版心居中</h5>
+<p>这个案例类似于央视新闻页面，页面中的内容，都需要居中显示，所以这里呢，我们就可以使用盒子模型来进行布局。具体代码如下：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Tlias智能学习辅助系统&lt;/title&gt;
+    &lt;style&gt;
+      body {
+        margin: 0;
+      }
+
+      /* 顶栏样式 */
+      .header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color:  #c2c0c0;
+          padding: 10px 20px;
+          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      }
+
+      /* 加大加粗标题 */
+      .header h1 {
+          margin: 0;
+          font-size: 24px;
+          font-weight: bold;
+      }
+
+      /* 文本链接样式 */
+      .header a {
+          text-decoration: none;
+          color: #333;
+          font-size: 16px;
+      }
+
+      /* 搜索表单区域 */
+      .search-form {
+          display: flex;
+          align-items: center;
+          padding: 20px;
+          background-color: #f9f9f9;
+      }
+
+      /* 表单控件样式 */
+      .search-form input[type="text"], .search-form select {
+          margin-right: 10px;
+          padding: 5px 10px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          width: 200px;
+      }
+
+      /* 按钮样式 */
+      .search-form button {
+          padding: 5px 15px;
+          margin-left: 10px;
+          background-color: #007bff;
+          color: white;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+      }
+
+      /* 清空按钮样式 */
+      .search-form button.clear {
+        background-color: #6c757d;
+      }
+
+      .table {
+         min-width: 100%; 
+         border-collapse: collapse;
+      }
+
+      /* 设置表格单元格边框 */
+      .table td, .table th { 
+        border: 1px solid #ddd; 
+        padding: 8px; 
+        text-align: center;
+      }
+
+      .avatar { 
+        width: 30px; 
+        height: 30px; 
+        object-fit: cover; 
+        border-radius: 50%; 
+      }
+
+      /* 页脚版权区域 */
+    .footer {
+        background-color: #c2c0c0;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 30px;
+    }
+
+    .footer .company-name {
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    .footer .copyright {
+        font-size: 0.9em;
+    }
+
+    #container {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+  &lt;div id="container"&gt;
+    &lt;!-- 顶栏 --&gt;
+    &lt;div class="header"&gt;
+      &lt;h1&gt;Tlias智能学习辅助系统&lt;/h1&gt;
+      &lt;a href="#"&gt;退出登录&lt;/a&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 搜索表单区域 --&gt;
+    &lt;form class="search-form" action="#" method="post"&gt;
+      &lt;input type="text" name="name" placeholder="姓名" /&gt;
+      &lt;select name="gender"&gt;
+          &lt;option value=""&gt;性别&lt;/option&gt;
+          &lt;option value="male"&gt;男&lt;/option&gt;
+          &lt;option value="female"&gt;女&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;select name="position"&gt;
+          &lt;option value=""&gt;职位&lt;/option&gt;
+          &lt;option value="班主任"&gt;班主任&lt;/option&gt;
+          &lt;option value="讲师"&gt;讲师&lt;/option&gt;
+          &lt;option value="学工主管"&gt;学工主管&lt;/option&gt;
+          &lt;option value="教研主管"&gt;教研主管&lt;/option&gt;
+          &lt;option value="咨询师"&gt;咨询师&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;button type="submit"&gt;查询&lt;/button&gt;
+      &lt;button type="reset" class="clear"&gt;清空&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;table class="table table-striped table-bordered"&gt;
+      &lt;thead&gt;
+          &lt;tr&gt;
+              &lt;th&gt;姓名&lt;/th&gt;
+              &lt;th&gt;性别&lt;/th&gt;
+              &lt;th&gt;头像&lt;/th&gt;
+              &lt;th&gt;职位&lt;/th&gt;
+              &lt;th&gt;入职日期&lt;/th&gt;
+              &lt;th&gt;最后操作时间&lt;/th&gt;
+              &lt;th&gt;操作&lt;/th&gt;
+          &lt;/tr&gt;
+      &lt;/thead&gt;
+      &lt;tbody&gt;
+          &lt;tr&gt;
+              &lt;td&gt;令狐冲&lt;/td&gt;
+              &lt;td&gt;男&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/1.jpg" alt="令狐冲" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;讲师&lt;/td&gt;
+              &lt;td&gt;2021-03-15&lt;/td&gt;
+              &lt;td&gt;2023-07-30T12:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;任盈盈&lt;/td&gt;
+              &lt;td&gt;女&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/1.jpg" alt="任盈盈" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;学工主管&lt;/td&gt;
+              &lt;td&gt;2020-04-10&lt;/td&gt;
+              &lt;td&gt;2023-07-29T15:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;岳不群&lt;/td&gt;
+              &lt;td&gt;男&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/1.jpg" alt="岳不群" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;教研主管&lt;/td&gt;
+              &lt;td&gt;2019-01-01&lt;/td&gt;
+              &lt;td&gt;2023-07-30T10:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+              &lt;td&gt;宁中则&lt;/td&gt;
+              &lt;td&gt;女&lt;/td&gt;
+              &lt;td&gt;&lt;img src="https://web-framework.oss-cn-hangzhou.aliyuncs.com/2023/1.jpg" alt="宁中则" class="avatar"&gt;&lt;/td&gt;
+              &lt;td&gt;班主任&lt;/td&gt;
+              &lt;td&gt;2018-06-01&lt;/td&gt;
+              &lt;td&gt;2023-07-29T09:00:00Z&lt;/td&gt;
+              &lt;td class="btn-group"&gt;
+                  &lt;button&gt;编辑&lt;/button&gt;
+                  &lt;button&gt;删除&lt;/button&gt;
+              &lt;/td&gt;
+          &lt;/tr&gt;
+      &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;!-- 页脚版权区域 --&gt;
+    &lt;footer class="footer"&gt;
+      &lt;p class="company-name"&gt;江苏传智播客教育科技股份有限公司&lt;/p&gt;
+      &lt;p class="copyright"&gt;版权所有 Copyright 2006-2024 All Rights Reserved&lt;/p&gt;
+    &lt;/footer&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+
+<p>页面效果如下:</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891461344-eddcfe09-3dd4-44cb-bf63-56c278581a71.png" /></p>
+</section>
+<div class="foot">由 Markdown 转换生成 · 2026-09-07 · Mermaid 图表需联网加载渲染器，失败时显示源码</div>
+</main>
+<button class="top-btn" id="topBtn" title="回到顶部">↑</button>
+
+<script>
+const items=[...document.querySelectorAll('.toc-item')];
+const secs=[...document.querySelectorAll('.chapter')];
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  items.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}});},
+  {rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>spy.observe(s));
+const btn=document.getElementById('topBtn');
+addEventListener('scroll',()=>btn.classList.toggle('show',scrollY>600));
+btn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const sb=document.getElementById('sidebar');
+document.getElementById('menuBtn').onclick=()=>sb.classList.toggle('open');
+document.addEventListener('click',e=>{
+  if(sb.classList.contains('open')&&!sb.contains(e.target)&&e.target.id!=='menuBtn')sb.classList.remove('open');});
+const ts=document.getElementById('tocSearch');
+if(ts)ts.oninput=()=>{const q=ts.value.trim().toLowerCase();
+  items.forEach(a=>{a.style.display=(!q||a.textContent.toLowerCase().includes(q))?'flex':'none';});};
+document.querySelectorAll('.codehilite').forEach(el=>{
+  const b=document.createElement('button');b.className='copy-btn';b.textContent='复制';
+  b.onclick=()=>{const c=el.querySelector('code')||el.querySelector('pre');
+    navigator.clipboard.writeText(c.innerText).then(()=>{
+      b.textContent='已复制';setTimeout(()=>b.textContent='复制',1400);});};
+  el.appendChild(b);});
+if(typeof mermaid!=='undefined'){mermaid.initialize({startOnLoad:true,theme:'dark',
+  themeVariables:{background:'#0d1117',primaryColor:'#21262d',primaryTextColor:'#e6edf3',
+  primaryBorderColor:'#58a6ff',lineColor:'#8b949e',fontFamily:'-apple-system,Microsoft YaHei,sans-serif'}});}
+</script>
+</body>
+</html>

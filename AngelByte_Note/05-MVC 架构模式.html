@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>05-MVC 架构模式</title>
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #282C34; color: #ABB2BF }
+.codehilite .c { color: #7F848E } /* Comment */
+.codehilite .err { color: #ABB2BF } /* Error */
+.codehilite .esc { color: #ABB2BF } /* Escape */
+.codehilite .g { color: #ABB2BF } /* Generic */
+.codehilite .k { color: #C678DD } /* Keyword */
+.codehilite .l { color: #ABB2BF } /* Literal */
+.codehilite .n { color: #E06C75 } /* Name */
+.codehilite .o { color: #56B6C2 } /* Operator */
+.codehilite .x { color: #ABB2BF } /* Other */
+.codehilite .p { color: #ABB2BF } /* Punctuation */
+.codehilite .ch { color: #7F848E } /* Comment.Hashbang */
+.codehilite .cm { color: #7F848E } /* Comment.Multiline */
+.codehilite .cp { color: #7F848E } /* Comment.Preproc */
+.codehilite .cpf { color: #7F848E } /* Comment.PreprocFile */
+.codehilite .c1 { color: #7F848E } /* Comment.Single */
+.codehilite .cs { color: #7F848E } /* Comment.Special */
+.codehilite .gd { color: #E06C75 } /* Generic.Deleted */
+.codehilite .ge { color: #ABB2BF; font-style: italic } /* Generic.Emph */
+.codehilite .ges { color: #ABB2BF } /* Generic.EmphStrong */
+.codehilite .gr { color: #E06C75 } /* Generic.Error */
+.codehilite .gh { color: #ABB2BF; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #98C379 } /* Generic.Inserted */
+.codehilite .go { color: #E06C75 } /* Generic.Output */
+.codehilite .gp { color: #ABB2BF } /* Generic.Prompt */
+.codehilite .gs { color: #ABB2BF; font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #ABB2BF; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #E06C75 } /* Generic.Traceback */
+.codehilite .kc { color: #E5C07B } /* Keyword.Constant */
+.codehilite .kd { color: #C678DD } /* Keyword.Declaration */
+.codehilite .kn { color: #C678DD } /* Keyword.Namespace */
+.codehilite .kp { color: #C678DD } /* Keyword.Pseudo */
+.codehilite .kr { color: #C678DD } /* Keyword.Reserved */
+.codehilite .kt { color: #E5C07B } /* Keyword.Type */
+.codehilite .ld { color: #ABB2BF } /* Literal.Date */
+.codehilite .m { color: #D19A66 } /* Literal.Number */
+.codehilite .s { color: #98C379 } /* Literal.String */
+.codehilite .na { color: #E06C75 } /* Name.Attribute */
+.codehilite .nb { color: #E5C07B } /* Name.Builtin */
+.codehilite .nc { color: #E5C07B } /* Name.Class */
+.codehilite .no { color: #E06C75 } /* Name.Constant */
+.codehilite .nd { color: #61AFEF } /* Name.Decorator */
+.codehilite .ni { color: #E06C75 } /* Name.Entity */
+.codehilite .ne { color: #E06C75 } /* Name.Exception */
+.codehilite .nf { color: #61AFEF; font-weight: bold } /* Name.Function */
+.codehilite .nl { color: #E06C75 } /* Name.Label */
+.codehilite .nn { color: #E06C75 } /* Name.Namespace */
+.codehilite .nx { color: #E06C75 } /* Name.Other */
+.codehilite .py { color: #E06C75 } /* Name.Property */
+.codehilite .nt { color: #E06C75 } /* Name.Tag */
+.codehilite .nv { color: #E06C75 } /* Name.Variable */
+.codehilite .ow { color: #56B6C2 } /* Operator.Word */
+.codehilite .pm { color: #ABB2BF } /* Punctuation.Marker */
+.codehilite .w { color: #ABB2BF } /* Text.Whitespace */
+.codehilite .mb { color: #D19A66 } /* Literal.Number.Bin */
+.codehilite .mf { color: #D19A66 } /* Literal.Number.Float */
+.codehilite .mh { color: #D19A66 } /* Literal.Number.Hex */
+.codehilite .mi { color: #D19A66 } /* Literal.Number.Integer */
+.codehilite .mo { color: #D19A66 } /* Literal.Number.Oct */
+.codehilite .sa { color: #98C379 } /* Literal.String.Affix */
+.codehilite .sb { color: #98C379 } /* Literal.String.Backtick */
+.codehilite .sc { color: #98C379 } /* Literal.String.Char */
+.codehilite .dl { color: #98C379 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #98C379 } /* Literal.String.Doc */
+.codehilite .s2 { color: #98C379 } /* Literal.String.Double */
+.codehilite .se { color: #98C379 } /* Literal.String.Escape */
+.codehilite .sh { color: #98C379 } /* Literal.String.Heredoc */
+.codehilite .si { color: #98C379 } /* Literal.String.Interpol */
+.codehilite .sx { color: #98C379 } /* Literal.String.Other */
+.codehilite .sr { color: #98C379 } /* Literal.String.Regex */
+.codehilite .s1 { color: #98C379 } /* Literal.String.Single */
+.codehilite .ss { color: #98C379 } /* Literal.String.Symbol */
+.codehilite .bp { color: #E5C07B } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #56B6C2; font-weight: bold } /* Name.Function.Magic */
+.codehilite .vc { color: #E06C75 } /* Name.Variable.Class */
+.codehilite .vg { color: #E06C75 } /* Name.Variable.Global */
+.codehilite .vi { color: #E06C75 } /* Name.Variable.Instance */
+.codehilite .vm { color: #E06C75 } /* Name.Variable.Magic */
+.codehilite .il { color: #D19A66 } /* Literal.Number.Integer.Long */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;inset:0 auto 0 0;width:272px;background:#010409;border-right:1px solid #262d38;overflow-y:auto;padding:22px 14px 40px;z-index:50}
+.sidebar .brand{display:flex;align-items:center;gap:9px;padding:2px 8px 16px;border-bottom:1px solid #21262d;margin-bottom:14px}
+.sidebar .brand .logo{width:32px;height:32px;border-radius:8px;background:#21262d;display:flex;align-items:center;justify-content:center;font-size:17px}
+.sidebar .brand b{font-size:15px}
+.sidebar .brand .cnt{color:#8b949e;font-size:11px}
+.toc-item{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:7px;color:#8b949e;font-size:12.5px;line-height:1.4}
+.toc-item:hover{background:#161b22;color:#e6edf3;text-decoration:none}
+.toc-item.active{background:#161b22;color:#58a6ff}
+.toc-idx{font-size:10.5px;font-variant-numeric:tabular-nums;color:#6e7681;min-width:18px}
+.toc-item.active .toc-idx{color:#58a6ff}
+.main{margin-left:272px;padding:34px 46px 140px;max-width:1060px}
+.hero{border-bottom:1px solid #262d38;padding-bottom:22px;margin-bottom:10px}
+.hero .crumb{color:#8b949e;font-size:12px;margin-bottom:10px}
+.hero h1.title{font-size:30px;font-weight:750;letter-spacing:-.5px}
+.hero .sub{color:#8b949e;font-size:13.5px;margin-top:8px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin:22px 0 6px}
+.card{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:12px 14px}
+.card .k{color:#8b949e;font-size:11px}
+.card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
+.card .d{color:#8b949e;font-size:11px;margin-top:3px}
+.chapter{margin:46px 0 10px}
+.ch-head{display:flex;align-items:center;gap:13px;padding:14px 18px;background:linear-gradient(90deg,#161b22,#0d1117);border:1px solid #262d38;border-radius:10px;margin-bottom:18px;position:sticky;top:0;z-index:10}
+.ch-num{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:9px;background:#21262d;color:#58a6ff;font-size:14px;font-weight:750;font-variant-numeric:tabular-nums}
+.ch-head h1{font-size:21px;font-weight:700}
+.chapter h2{font-size:18px;font-weight:680;margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid #262d38}
+.chapter h3{font-size:15.5px;font-weight:660;margin:22px 0 9px;color:#79c0ff}
+.chapter h4{font-size:14px;margin:16px 0 7px;color:#8b949e}
+.chapter p{margin:10px 0;font-size:14px}
+.chapter ul,.chapter ol{margin:9px 0 9px 22px}
+.chapter li{margin:5.5px 0;font-size:14px}
+.chapter li::marker{color:#6e7681}
+strong{color:#f0f6fc}
+.chapter blockquote{border-left:3px solid #58a6ff;background:#161b22;border-radius:0 8px 8px 0;padding:10px 16px;margin:13px 0;color:#b6c2cf;font-size:13.5px}
+.chapter blockquote p{margin:5px 0}
+code{background:#21262d;padding:1.5px 6px;border-radius:4px;font-size:12.5px;color:#bc8cff;font-family:"Cascadia Code",Consolas,"JetBrains Mono",monospace}
+.toc-search{width:100%;margin:0 0 12px;padding:7px 10px;background:#161b22;border:1px solid #262d38;border-radius:7px;color:#e6edf3;font-size:12px;font-family:inherit;outline:none}
+.toc-search:focus{border-color:#58a6ff}
+.copy-btn{position:absolute;top:7px;right:7px;padding:2px 8px;font-size:11px;border-radius:5px;background:#21262d;border:1px solid #30363d;color:#8b949e;cursor:pointer;opacity:0;transition:opacity .15s}
+.codehilite:hover .copy-btn{opacity:1}
+.copy-btn:hover{color:#58a6ff;border-color:#58a6ff}
+.codehilite{position:relative;background:#161b22;border:1px solid #262d38;border-radius:9px;padding:13px 15px;margin:13px 0;overflow-x:auto}
+.codehilite pre{margin:0;background:transparent!important}
+.codehilite code{background:transparent;padding:0;font-size:12.8px;line-height:1.62;color:#c9d1d9}
+.tbl-wrap{overflow-x:auto;margin:13px 0;border:1px solid #262d38;border-radius:9px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid #21262d;vertical-align:top}
+th{color:#8b949e;font-weight:600;font-size:12px;background:#161b22}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#10161f}
+td code{white-space:nowrap}
+.diagram-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;overflow:hidden}
+.diagram-title{display:flex;align-items:center;gap:8px;padding:10px 15px;border-bottom:1px solid #262d38;font-size:13px;font-weight:650;color:#79c0ff}
+.dt-src{margin-left:auto;color:#6e7681;font-size:11px;font-weight:400}
+.diagram-card .mermaid{display:flex;justify-content:center;padding:16px 12px;background:#0d1117;overflow-x:auto}
+.diagram-card pre.mermaid{font-family:Consolas,monospace;font-size:12px;color:#8b949e;white-space:pre-wrap}
+.diagram-card svg{max-width:100%;height:auto}
+.img-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;padding:14px;display:flex;justify-content:center}
+.img-card img{max-width:100%;height:auto;border-radius:6px}
+.wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
+.top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
+.top-btn.show{opacity:1;pointer-events:auto}
+.top-btn:hover{color:#58a6ff;border-color:#58a6ff}
+.foot{margin-top:60px;padding-top:18px;border-top:1px solid #262d38;color:#6e7681;font-size:11.5px;line-height:1.8}
+.menu-btn{display:none;position:fixed;left:14px;top:14px;z-index:70;width:38px;height:38px;border-radius:8px;background:#21262d;border:1px solid #30363d;color:#e6edf3;font-size:17px;cursor:pointer}
+@media (max-width:960px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s;width:280px}
+  .sidebar.open{transform:translateX(0);box-shadow:0 0 40px rgba(0,0,0,.6)}
+  .main{margin-left:0;padding:64px 18px 120px}
+  .menu-btn{display:flex;align-items:center;justify-content:center}
+  .ch-head{position:static}
+}
+</style>
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰</button>
+<nav class="sidebar" id="sidebar">
+  <div class="brand"><span class="logo">📒</span><div><b>05-MVC 架构模式</b><div class="cnt">目录 · 点击跳转</div></div></div>
+  <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>05-MVC 架构模式</span></a>
+</nav>
+<main class="main">
+<header class="hero">
+  <h1 class="title">05-MVC 架构模式</h1>
+  <div class="sub"></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">12</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">13</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">6</div><div class="d">远程 6 · 远程图离线时不显示</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">20K</div><div class="d">字符</div></div></div>
+</header>
+<section class="chapter" id="ch-01">
+<h2 id="_1">🌊 视频对应资料</h2>
+<blockquote>
+<p>视频地址：动力节点最新<span class="wl" title="Obsidian 内链：02-Java Web|JavaWeb">🔗 JavaWeb</span>视频教程,javaweb零基础入门到精通IDEA版<a href="https://www.bilibili.com/video/BV1Z3411C7NZ?p=1&amp;vd_source=93ab990b9131a1b90943874a5448830a">https://www.bilibili.com/video/BV1Z3411C7NZ?p=1&amp;vd_source=93ab990b9131a1b90943874a5448830a</a><br />
+资料链接：<a href="https://pan.baidu.com/s/1y-Dm0dGjQQOvARFBmGiG1w?pwd=1234">https://pan.baidu.com/s/1y-Dm0dGjQQOvARFBmGiG1w?pwd=1234 </a><br />
+提取码：1234
+</p>
+</blockquote>
+<h2 id="mvc">🌊 不使用MVC架构模式程序存在的缺陷</h2>
+<ul>
+<li>在不使用MVC架构模式的前提下，完成银行账户转账。</li>
+<li>分析以下AccountTransferServlet他都负责了什么？ <ul>
+<li>1&gt; 负责了数据接收</li>
+<li>2&gt; 负责了核心的业务处理</li>
+<li>3&gt; 负责了<span class="wl" title="Obsidian 内链：04-MySQL|数据库">🔗 数据库</span>表中数据的CRUD操作（Create【增】 Retrieve【查】 Update【改】 Delete【删】）</li>
+<li>4&gt; 负责了页面的数据展示</li>
+</ul>
+</li>
+<li>分析这个程序存在哪些问题？ <ul>
+<li>缺点1&gt; 代码的复用性太差。（代码的重用性太差） <ul>
+<li>导致缺点1的原因？</li>
+<li>因为没有进行“职能分工”，没有独立组件的概念，所以没有办法进行代码复用。代码和代码之间的耦合度太高，扩展力太差。</li>
+</ul>
+</li>
+<li>缺点2&gt; 耦合度高，导致了代码很难扩展。</li>
+<li>缺点3&gt; 操作数据库的代码和业务逻辑混杂在一起，很容易出错。编写代码的时候很容易出错，无法专注业务逻辑的编写。</li>
+</ul>
+</li>
+</ul>
+<h2 id="mvc_1">🌊 MVC架构模式理论基础</h2>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1762852044483-f7d5038b-b4fe-4cb7-a479-8dcd0bb8340f.png" /></p>
+<h2 id="javaee-dao">🌊 JavaEE设计模式-DAO模式</h2>
+<ul>
+<li>AccountDao是负责Account数据的增删改查的。</li>
+<li>什么是DAO？ <ul>
+<li>Data Access Object（数据访问对象）</li>
+</ul>
+</li>
+<li>DAO实际上是一种设计模式，属于JavaEE的设计模式之一。（不是23种设计模式。）</li>
+<li>DAO只负责数据库表的CRUD，没有任何业务逻辑在里面。</li>
+<li>没有任何业务逻辑，只负责表中数据增删改查的对象，有一个特殊的称谓：DAO对象。</li>
+<li>为什么叫做AccountDao呢？ <ul>
+<li>这是因为这个DAO是专门处理t_act这张表的。</li>
+<li>如果处理t_user表的话，可以叫做：UserDao</li>
+<li>如果处理t_student表的话，可以叫做：StudentDao</li>
+</ul>
+</li>
+<li>一般情况下：一张表会对应一个DAO对象(pojo / bean / domain)。</li>
+<li>DAO中的方法名很固定了，一般都是： <ul>
+<li>insert</li>
+<li>deleteByXxx</li>
+<li>update</li>
+<li>selectByXxx</li>
+<li>selectAll</li>
+</ul>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountDao</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 插入账户信息</span>
+<span class="cm">     * @param act  账户信息</span>
+<span class="cm">     * @return 1表示插入成功</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">Account</span><span class="w"> </span><span class="n">act</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"insert into t_act(actno, balance) values(?,?)"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getActno</span><span class="p">());</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setDouble</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 根据主键删除账户</span>
+<span class="cm">     * @param id 主键</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">deleteById</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">){</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"delete from t_act where id = ?"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setLong</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 更新账户</span>
+<span class="cm">     * @param act</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">Account</span><span class="w"> </span><span class="n">act</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"update t_act set balance = ? , actno = ? where id = ?"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setDouble</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getActno</span><span class="p">());</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setLong</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 根据账号查询账户</span>
+<span class="cm">     * @param actno</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Account</span><span class="w"> </span><span class="nf">selectByActno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="p">){</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Account</span><span class="w"> </span><span class="n">act</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"select id,balance from t_act where actno = ?"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">actno</span><span class="p">);</span>
+<span class="w">            </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getLong</span><span class="p">(</span><span class="s">"id"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDouble</span><span class="p">(</span><span class="s">"balance"</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// 将结果集封装成java对象</span>
+<span class="w">                </span><span class="n">act</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Account</span><span class="p">();</span>
+<span class="w">                </span><span class="n">act</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="w">                </span><span class="n">act</span><span class="p">.</span><span class="na">setActno</span><span class="p">(</span><span class="n">actno</span><span class="p">);</span>
+<span class="w">                </span><span class="n">act</span><span class="p">.</span><span class="na">setBalance</span><span class="p">(</span><span class="n">balance</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="n">rs</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">act</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 获取所有的账户</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectAll</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"select id,actno,balance from t_act"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// 取出数据</span>
+<span class="w">                </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getLong</span><span class="p">(</span><span class="s">"id"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"actno"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDouble</span><span class="p">(</span><span class="s">"balance"</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// 封装对象</span>
+<span class="w">                </span><span class="cm">/*Account account = new Account();</span>
+<span class="cm">                account.setId(id);</span>
+<span class="cm">                account.setActno(actno);</span>
+<span class="cm">                account.setBalance(balance);*/</span>
+<span class="w">                </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Account</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">actno</span><span class="p">,</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// 加到List集合</span>
+<span class="w">                </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">account</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="n">rs</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">list</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="pojo-bean-domain">🌊 pojo &amp; bean &amp; domain</h2>
+<ul>
+<li>账户实体类：封装账户信息的。</li>
+<li>一般是一张表对应一个。</li>
+<li>这种普通简单的对象被成为pojo对象。</li>
+<li>有的人也会把这种专门封装数据的对象，称为bean对象。(javabean：咖啡豆)</li>
+<li>有的人也会把这种专门封装数据的对象，称为领域模型对象。domain对象。</li>
+<li>不同的程序员有不同的习惯。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Account</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// 这种普通简单的对象被成为pojo对象。</span>
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 主键</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="c1">// 一般这种属性不建议设计为基本数据类型，建议使用包装类。防止null带来的问题。</span>
+<span class="w">    </span><span class="c1">//private long id;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 账号</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="p">;</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 余额</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="c1">//private double balance;</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">"Account{"</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                </span><span class="s">"id="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                </span><span class="s">", actno='"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">actno</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">'\''</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                </span><span class="s">", balance="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">+</span>
+<span class="w">                </span><span class="sc">'}'</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="nf">getId</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setId</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getActno</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">actno</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setActno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">actno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">actno</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="nf">getBalance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setBalance</span><span class="p">(</span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Account</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="p">,</span><span class="w"> </span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">actno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">actno</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">balance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Account</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="_2">🌊 业务层抽取以及业务类实现</h2>
+<ul>
+<li>service翻译为：业务。</li>
+<li>AccountService：专门处理Account业务的一个类。</li>
+<li>在该类中应该编写纯业务代码。（只专注业务。不写别的。不和其他代码混合在一块。）</li>
+<li>只希望专注业务，能够将业务完美实现，少量bug。</li>
+<li>业务类一般起名：XxxService、XxxBiz.....</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountService</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// 为什么定义到这里？因为在每一个业务方法中都可以需要连接数据库。</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AccountDao</span><span class="w"> </span><span class="n">accountDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AccountDao</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// 这里的方法起名，一定要体现出，你要处理的是什么业务。</span>
+<span class="w">    </span><span class="c1">// 我们要提供一个能够实现转账的业务方法（一个业务对应一个方法。）</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 完成转账的业务逻辑</span>
+<span class="cm">     * @param fromActno 转出账号</span>
+<span class="cm">     * @param toActno 转入账号</span>
+<span class="cm">     * @param money 转账金额</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fromActno</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">toActno</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">money</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">MoneyNotEnoughException</span><span class="p">,</span><span class="w"> </span><span class="n">AppException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 查询余额是否充足</span>
+<span class="w">        </span><span class="n">Account</span><span class="w"> </span><span class="n">fromAct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">selectByActno</span><span class="p">(</span><span class="n">fromActno</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fromAct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">money</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MoneyNotEnoughException</span><span class="p">(</span><span class="s">"对不起，余额不足"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="c1">// 程序到这里说明余额充足</span>
+<span class="w">        </span><span class="n">Account</span><span class="w"> </span><span class="n">toAct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">selectByActno</span><span class="p">(</span><span class="n">toActno</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// 修改余额（只是修改了内存中java对象的余额）</span>
+<span class="w">        </span><span class="n">fromAct</span><span class="p">.</span><span class="na">setBalance</span><span class="p">(</span><span class="n">fromAct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">money</span><span class="p">);</span>
+<span class="w">        </span><span class="n">toAct</span><span class="p">.</span><span class="na">setBalance</span><span class="p">(</span><span class="n">toAct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">money</span><span class="p">);</span>
+<span class="w">        </span><span class="c1">// 更新数据库中的余额</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">fromAct</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// 模拟异常</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">s</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">toAct</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AppException</span><span class="p">(</span><span class="s">"账户转账异常！！！"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="_3">🌊 控制层</h2>
+<ul>
+<li>账户小程序</li>
+<li>AccountServlet是一个司令官。他负责调度其他组件来完成任务。</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nd">@WebServlet</span><span class="p">(</span><span class="s">"/transfer"</span><span class="p">)</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountServlet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// AccountServlet作为Controller</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AccountService</span><span class="w"> </span><span class="n">accountService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AccountService</span><span class="p">();</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span><span class="w"> </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// 接收数据</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">fromActno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">"fromActno"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">toActno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">"toActno"</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">money</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Double</span><span class="p">.</span><span class="na">parseDouble</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">"money"</span><span class="p">));</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 调用业务方法处理业务（调度Model处理业务）</span>
+<span class="w">            </span><span class="n">accountService</span><span class="p">.</span><span class="na">transfer</span><span class="p">(</span><span class="n">fromActno</span><span class="p">,</span><span class="w"> </span><span class="n">toActno</span><span class="p">,</span><span class="w"> </span><span class="n">money</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// 执行到这里了，说明成功了。</span>
+<span class="w">            </span><span class="c1">// 展示处理结果（调度View做页面展示）</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">getContextPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"/success.jsp"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">MoneyNotEnoughException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 执行到这里了，说明失败了。（余额不足）</span>
+<span class="w">            </span><span class="c1">// 展示处理结果（调度View做页面展示）</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">getContextPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"/moneynotenough.jsp"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">){</span>
+<span class="w">            </span><span class="c1">// 执行到这里了，说明失败了。</span>
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">sendRedirect</span><span class="p">(</span><span class="n">request</span><span class="p">.</span><span class="na">getContextPath</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">"/error.jsp"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="mvc_2">🌊 MVC架构模式与三层架构的关系</h2>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1762852044437-a2bcb1f6-018c-41e8-8e6e-a06005c54713.png" /><br />
+<img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1762852045692-2d2d9118-3d92-4917-9ede-8ba367a1ecab.png" /></p>
+<h2 id="threadlocal">🌊 手撕ThreadLocal源码</h2>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1762852044673-2bb92390-6d1b-4a3f-9b9f-13e309ee287f.png" /></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Connection</span><span class="w"> </span><span class="p">{</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DBUtil</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// 静态变量特点：类加载时执行，并且只执行一次。</span>
+<span class="w">    </span><span class="c1">// 全局的大Map集合</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">MyThreadLocal</span><span class="o">&lt;</span><span class="n">Connection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MyThreadLocal</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 每一次都调用这个方法来获取Connection对象</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="nf">getConnection</span><span class="p">(){</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">local</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">connection</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// 第一次调用：getConnection()方法的时候，connection一定是空的。</span>
+<span class="w">            </span><span class="c1">// 空的就new一次。</span>
+<span class="w">            </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Connection</span><span class="p">();</span>
+<span class="w">            </span><span class="c1">// 将new的Connection对象绑定到大Map集合中。</span>
+<span class="w">            </span><span class="n">local</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">connection</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">connection</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.threadlocal</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.HashMap</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Map</span><span class="p">;</span>
+
+<span class="cm">/**</span>
+<span class="cm"> * 自定义一个ThreadLocal类</span>
+<span class="cm"> */</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MyThreadLocal</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 所有需要和当前线程绑定的数据要放到这个容器当中</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Map</span><span class="o">&lt;</span><span class="n">Thread</span><span class="p">,</span><span class="w"> </span><span class="n">T</span><span class="o">&gt;</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">HashMap</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 向ThreadLocal中绑定数据</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">set</span><span class="p">(</span><span class="n">T</span><span class="w"> </span><span class="n">obj</span><span class="p">){</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">(),</span><span class="w"> </span><span class="n">obj</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 从ThreadLocal中获取数据</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">T</span><span class="w"> </span><span class="nf">get</span><span class="p">(){</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">map</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 移除ThreadLocal当中的数据</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">remove</span><span class="p">(){</span>
+<span class="w">        </span><span class="n">map</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.threadlocal</span><span class="p">;</span>
+<span class="c1">// 张三发送请求，对应一个线程t1</span>
+<span class="c1">// 李四发送请求，对应一个线程t2</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">Thread</span><span class="w"> </span><span class="n">thread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">thread</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// 调用service</span>
+<span class="w">        </span><span class="n">UserService</span><span class="w"> </span><span class="n">userService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserService</span><span class="p">();</span>
+<span class="w">        </span><span class="n">userService</span><span class="p">.</span><span class="na">save</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.threadlocal</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">UserDao</span><span class="w"> </span><span class="n">userDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserDao</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">save</span><span class="p">(){</span>
+<span class="w">        </span><span class="n">Thread</span><span class="w"> </span><span class="n">thread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">thread</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">connection</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">userDao</span><span class="p">.</span><span class="na">insert</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.threadlocal</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserDao</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">insert</span><span class="p">(){</span>
+<span class="w">        </span><span class="n">Thread</span><span class="w"> </span><span class="n">thread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Thread</span><span class="p">.</span><span class="na">currentThread</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">thread</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">connection</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"User DAO insert"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="threadlocal_1">🌊 ThreadLocal的使用</h2>
+<blockquote>
+<p>JDK有ThreadLocal类的实现
+</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DBUtil</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">ResourceBundle</span><span class="w"> </span><span class="n">bundle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ResourceBundle</span><span class="p">.</span><span class="na">getBundle</span><span class="p">(</span><span class="s">"resources/jdbc"</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">driver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"driver"</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"url"</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"user"</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">bundle</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"password"</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 不让创建对象，因为工具类中的方法都是静态的。不需要创建对象。</span>
+<span class="w">    </span><span class="c1">// 为了防止创建对象，故将构造方法私有化。</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">DBUtil</span><span class="p">(){}</span>
+
+<span class="w">    </span><span class="c1">// DBUtil类加载时注册驱动</span>
+<span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="n">driver</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">ClassNotFoundException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// 这个对象实际上在服务器中只有一个。</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">ThreadLocal</span><span class="o">&lt;</span><span class="n">Connection</span><span class="o">&gt;</span><span class="w"> </span><span class="n">local</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ThreadLocal</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 这里没有使用数据库连接池，直接创建连接对象。</span>
+<span class="cm">     * @return 连接对象</span>
+<span class="cm">     * @throws SQLException</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="nf">getConnection</span><span class="p">()</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">SQLException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">local</span><span class="p">.</span><span class="na">get</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conn</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="n">user</span><span class="p">,</span><span class="w"> </span><span class="n">password</span><span class="p">);</span>
+<span class="w">            </span><span class="n">local</span><span class="p">.</span><span class="na">set</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">conn</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 关闭资源</span>
+<span class="cm">     * @param conn 连接对象</span>
+<span class="cm">     * @param stmt 数据库操作对象</span>
+<span class="cm">     * @param rs 结果集对象</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">close</span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="p">,</span><span class="w"> </span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="p">,</span><span class="w"> </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="p">){</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">stmt</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">stmt</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">conn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">                </span><span class="c1">// 思考一下：为什么conn关闭之后，这里要从大Map中移除呢？</span>
+<span class="w">                </span><span class="c1">// 根本原因是：Tomcat服务器是支持线程池的。也就是说一个人用过了t1线程，t1线程还有可能被其他用户使用。</span>
+<span class="w">                </span><span class="n">local</span><span class="p">.</span><span class="na">remove</span><span class="p">();</span>
+<span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountService</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="c1">// 为什么定义到这里？因为在每一个业务方法中都可以需要连接数据库。</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AccountDao</span><span class="w"> </span><span class="n">accountDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AccountDao</span><span class="p">();</span>
+
+<span class="w">    </span><span class="c1">// 这里的方法起名，一定要体现出，你要处理的是什么业务。</span>
+<span class="w">    </span><span class="c1">// 我们要提供一个能够实现转账的业务方法（一个业务对应一个方法。）</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 完成转账的业务逻辑</span>
+<span class="cm">     * @param fromActno 转出账号</span>
+<span class="cm">     * @param toActno 转入账号</span>
+<span class="cm">     * @param money 转账金额</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">transfer</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">fromActno</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">toActno</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">money</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">MoneyNotEnoughException</span><span class="p">,</span><span class="w"> </span><span class="n">AppException</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// service层控制事务</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">connection</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">()){</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">connection</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// 开启事务(需要使用Connection对象)</span>
+<span class="w">            </span><span class="n">connection</span><span class="p">.</span><span class="na">setAutoCommit</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// 查询余额是否充足</span>
+<span class="w">            </span><span class="n">Account</span><span class="w"> </span><span class="n">fromAct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">selectByActno</span><span class="p">(</span><span class="n">fromActno</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">fromAct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">money</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MoneyNotEnoughException</span><span class="p">(</span><span class="s">"对不起，余额不足"</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">            </span><span class="c1">// 程序到这里说明余额充足</span>
+<span class="w">            </span><span class="n">Account</span><span class="w"> </span><span class="n">toAct</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">selectByActno</span><span class="p">(</span><span class="n">toActno</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// 修改余额（只是修改了内存中java对象的余额）</span>
+<span class="w">            </span><span class="n">fromAct</span><span class="p">.</span><span class="na">setBalance</span><span class="p">(</span><span class="n">fromAct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">money</span><span class="p">);</span>
+<span class="w">            </span><span class="n">toAct</span><span class="p">.</span><span class="na">setBalance</span><span class="p">(</span><span class="n">toAct</span><span class="p">.</span><span class="na">getBalance</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">money</span><span class="p">);</span>
+<span class="w">            </span><span class="c1">// 更新数据库中的余额</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">fromAct</span><span class="p">);</span>
+
+<span class="w">            </span><span class="c1">// 模拟异常</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">            </span><span class="n">s</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">accountDao</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">toAct</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AppException</span><span class="p">(</span><span class="s">"账户转账异常！！！"</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="c1">// 提交事务</span>
+<span class="w">            </span><span class="n">connection</span><span class="p">.</span><span class="na">commit</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AppException</span><span class="p">(</span><span class="s">"账户转账异常！！！"</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AccountDao</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 插入账户信息</span>
+<span class="cm">     * @param act  账户信息</span>
+<span class="cm">     * @return 1表示插入成功</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">insert</span><span class="p">(</span><span class="n">Account</span><span class="w"> </span><span class="n">act</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"insert into t_act(actno, balance) values(?,?)"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getActno</span><span class="p">());</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setDouble</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 根据主键删除账户</span>
+<span class="cm">     * @param id 主键</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">deleteById</span><span class="p">(</span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="p">){</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"delete from t_act where id = ?"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setLong</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">id</span><span class="p">);</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 更新账户</span>
+<span class="cm">     * @param act</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">Account</span><span class="w"> </span><span class="n">act</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"update t_act set balance = ? , actno = ? where id = ?"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setDouble</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getBalance</span><span class="p">());</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getActno</span><span class="p">());</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setLong</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">act</span><span class="p">.</span><span class="na">getId</span><span class="p">());</span>
+<span class="w">            </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="kc">null</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">count</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 根据账号查询账户</span>
+<span class="cm">     * @param actno</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">Account</span><span class="w"> </span><span class="nf">selectByActno</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="p">){</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">Account</span><span class="w"> </span><span class="n">act</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"select id,balance from t_act where actno = ?"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">ps</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">actno</span><span class="p">);</span>
+<span class="w">            </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getLong</span><span class="p">(</span><span class="s">"id"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDouble</span><span class="p">(</span><span class="s">"balance"</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// 将结果集封装成java对象</span>
+<span class="w">                </span><span class="n">act</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Account</span><span class="p">();</span>
+<span class="w">                </span><span class="n">act</span><span class="p">.</span><span class="na">setId</span><span class="p">(</span><span class="n">id</span><span class="p">);</span>
+<span class="w">                </span><span class="n">act</span><span class="p">.</span><span class="na">setActno</span><span class="p">(</span><span class="n">actno</span><span class="p">);</span>
+<span class="w">                </span><span class="n">act</span><span class="p">.</span><span class="na">setBalance</span><span class="p">(</span><span class="n">balance</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="n">rs</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">act</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="cm">/**</span>
+<span class="cm">     * 获取所有的账户</span>
+<span class="cm">     * @return</span>
+<span class="cm">     */</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">selectAll</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Account</span><span class="o">&gt;</span><span class="w"> </span><span class="n">list</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">getConnection</span><span class="p">();</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"select id,actno,balance from t_act"</span><span class="p">;</span>
+<span class="w">            </span><span class="n">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<span class="w">            </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ps</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">();</span>
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="c1">// 取出数据</span>
+<span class="w">                </span><span class="n">Long</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getLong</span><span class="p">(</span><span class="s">"id"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">String</span><span class="w"> </span><span class="n">actno</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">"actno"</span><span class="p">);</span>
+<span class="w">                </span><span class="n">Double</span><span class="w"> </span><span class="n">balance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDouble</span><span class="p">(</span><span class="s">"balance"</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// 封装对象</span>
+<span class="w">                </span><span class="cm">/*Account account = new Account();</span>
+<span class="cm">                account.setId(id);</span>
+<span class="cm">                account.setActno(actno);</span>
+<span class="cm">                account.setBalance(balance);*/</span>
+<span class="w">                </span><span class="n">Account</span><span class="w"> </span><span class="n">account</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Account</span><span class="p">(</span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">actno</span><span class="p">,</span><span class="w"> </span><span class="n">balance</span><span class="p">);</span>
+<span class="w">                </span><span class="c1">// 加到List集合</span>
+<span class="w">                </span><span class="n">list</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">account</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">finally</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">DBUtil</span><span class="p">.</span><span class="na">close</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="n">ps</span><span class="p">,</span><span class="w"> </span><span class="n">rs</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">list</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+
+<h2 id="_4">🌊 不同功能的类放在不同的包下</h2>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1762852044579-804b21e0-2515-4e2c-97f3-153213a3b3f5.png" /></p>
+<blockquote>
+<p>ssm里面一般都把dao包起名为mapper，把web包起名为controller
+</p>
+</blockquote>
+<h2 id="_5">🌊 层与层之间应该使用接口进行衔接以及当前项目存在的两大问题</h2>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1762852045203-eba87152-10f0-4875-86ee-3d84cab872f2.png" /></p>
+</section>
+<div class="foot">由 Markdown 转换生成 · 2026-09-07 · Mermaid 图表需联网加载渲染器，失败时显示源码</div>
+</main>
+<button class="top-btn" id="topBtn" title="回到顶部">↑</button>
+
+<script>
+const items=[...document.querySelectorAll('.toc-item')];
+const secs=[...document.querySelectorAll('.chapter')];
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  items.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}});},
+  {rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>spy.observe(s));
+const btn=document.getElementById('topBtn');
+addEventListener('scroll',()=>btn.classList.toggle('show',scrollY>600));
+btn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const sb=document.getElementById('sidebar');
+document.getElementById('menuBtn').onclick=()=>sb.classList.toggle('open');
+document.addEventListener('click',e=>{
+  if(sb.classList.contains('open')&&!sb.contains(e.target)&&e.target.id!=='menuBtn')sb.classList.remove('open');});
+const ts=document.getElementById('tocSearch');
+if(ts)ts.oninput=()=>{const q=ts.value.trim().toLowerCase();
+  items.forEach(a=>{a.style.display=(!q||a.textContent.toLowerCase().includes(q))?'flex':'none';});};
+document.querySelectorAll('.codehilite').forEach(el=>{
+  const b=document.createElement('button');b.className='copy-btn';b.textContent='复制';
+  b.onclick=()=>{const c=el.querySelector('code')||el.querySelector('pre');
+    navigator.clipboard.writeText(c.innerText).then(()=>{
+      b.textContent='已复制';setTimeout(()=>b.textContent='复制',1400);});};
+  el.appendChild(b);});
+if(typeof mermaid!=='undefined'){mermaid.initialize({startOnLoad:true,theme:'dark',
+  themeVariables:{background:'#0d1117',primaryColor:'#21262d',primaryTextColor:'#e6edf3',
+  primaryBorderColor:'#58a6ff',lineColor:'#8b949e',fontFamily:'-apple-system,Microsoft YaHei,sans-serif'}});}
+</script>
+</body>
+</html>
