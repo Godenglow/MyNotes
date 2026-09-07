@@ -159,6 +159,7 @@ td code{white-space:nowrap}
 .lightbox{position:fixed;inset:0;background:rgba(1,4,9,.93);display:none;z-index:100;cursor:zoom-out}
 .lightbox.open{display:flex;align-items:center;justify-content:center}
 .lightbox img{max-width:96vw;max-height:96vh;width:auto;height:auto;border-radius:4px}
+.img-missing{background:#161b22;border:1px dashed #30363d;border-radius:8px;padding:18px;color:#8b949e;font-size:13px;text-align:center;margin:14px 0;word-break:break-all}
 .wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
 .top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
 .top-btn.show{opacity:1;pointer-events:auto}
@@ -194,7 +195,7 @@ td code{white-space:nowrap}
 <header class="hero">
   <h1 class="title">关于直播</h1>
   <div class="sub">1. 什么时间直播？</div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">10</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">38</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">128</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">3</div><div class="d">本地 3 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">96K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">10</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">38</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">128</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">96K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
 <div class="ch-head"><span class="ch-num">01</span><h1>需要提前准备了哪些技术，接下来的课才能听懂？</h1></div>
@@ -555,7 +556,8 @@ td code{white-space:nowrap}
 </li>
 </ul>
 <h2 id="web_1">对于一个动态的web应用来说，一个请求和响应的过程有多少个角色参与，角色和角色之间有多少个协议</h2>
-<p><img alt="" src="D:\course\01-Servlet\文档\BS结构系统的通信原理2.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：D:/course/01-Servlet/文档/BS结构系统的通信原理2.png</div>
+
 <ul>
 <li>有哪些角色（在整个BS结构的系统当中，有哪些人参与进去了）<ul>
 <li>浏览器软件的开发团队（浏览器软件太多了：谷歌浏览器、火狐浏览器、IE浏览器....）</li>
@@ -577,7 +579,8 @@ td code{white-space:nowrap}
 </ul>
 </li>
 </ul>
-<p><img alt="" src="D:\course\01-Servlet\文档\BS结构系统的角色和协议.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：D:/course/01-Servlet/文档/BS结构系统的角色和协议.png</div>
+
 <ul>
 <li>Servlet规范是一个什么规范？<ul>
 <li>遵循Servlet规范的webapp，这个webapp就可以放在不同的WEB服务器中运行。（因为这个webapp是遵循Servlet规范的。）</li>
@@ -837,9 +840,13 @@ td code{white-space:nowrap}
 <li>我们自己new的Servlet对象是不受WEB容器管理的。</li>
 <li>WEB容器创建的Servlet对象，这些Servlet对象都会被放到一个集合当中（HashMap），只有放到这个HashMap集合中的Servlet才能够被WEB容器管理，自己new的Servlet对象不会被WEB容器管理。（自己new的Servlet对象不在容器当中）</li>
 <li>web容器底层应该有一个HashMap这样的集合，在这个集合当中存储了Servlet对象和请求路径之间的关系</li>
-<li><img alt="" src="D:\course\01-Servlet\文档\WEB容器中的Map集合.png" /></li>
+<li></li>
 </ul>
 </li>
+</ul>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：D:/course/01-Servlet/文档/WEB容器中的Map集合.png</div>
+
+<ul>
 <li>研究：服务器在启动的Servlet对象有没有被创建出来（默认情况下）？<ul>
 <li>在Servlet中提供一个无参数的构造方法，启动服务器的时候看看构造方法是否执行。</li>
 <li>经过测试得出结论：默认情况下，服务器在启动的时候Servlet对象并不会被实例化。</li>

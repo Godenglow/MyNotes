@@ -159,6 +159,7 @@ td code{white-space:nowrap}
 .lightbox{position:fixed;inset:0;background:rgba(1,4,9,.93);display:none;z-index:100;cursor:zoom-out}
 .lightbox.open{display:flex;align-items:center;justify-content:center}
 .lightbox img{max-width:96vw;max-height:96vh;width:auto;height:auto;border-radius:4px}
+.img-missing{background:#161b22;border:1px dashed #30363d;border-radius:8px;padding:18px;color:#8b949e;font-size:13px;text-align:center;margin:14px 0;word-break:break-all}
 .wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
 .top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
 .top-btn.show{opacity:1;pointer-events:auto}
@@ -187,7 +188,7 @@ td code{white-space:nowrap}
 <header class="hero">
   <h1 class="title">Redis快速入门</h1>
   <div class="sub"></div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">3</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">34</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">31</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">41</div><div class="d">本地 40 / 远程 1 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">18K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">3</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">34</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">31</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">1</div><div class="d">远程 1 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">18K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
 <div class="ch-head"><span class="ch-num">01</span><h1>1.初识Redis</h1></div>
@@ -202,23 +203,29 @@ td code{white-space:nowrap}
 </li>
 </ul>
 <p>其中<strong>键值型</strong>，是指Redis中存储的数据都是以key、value对的形式存储，而value的形式多种多样，可以是字符串、数值、甚至json：</p>
-<p><img alt="image-20220502190959608" src="assets/6U1Rhxo.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/6U1Rhxo.png</div>
+
 <p>而NoSql则是相对于传统<span class="wl" title="Obsidian 内链：04-MySQL|关系型数据库">🔗 关系型数据库</span>而言，有很大差异的一种数据库。</p>
 <h2 id="11nosql">1.1.认识NoSQL</h2>
 <p><strong>NoSql</strong>可以翻译做Not Only Sql（不仅仅是SQL），或者是No Sql（非Sql的）数据库。是相对于传统关系型数据库而言，有很大差异的一种特殊的数据库，因此也称之为<strong>非关系型数据库</strong>。</p>
 <h3 id="111">1.1.1.结构化与非结构化</h3>
 <p>传统关系型数据库是结构化数据，每一张表都有严格的约束信息：字段名、字段数据类型、字段约束等等信息，插入的数据必须遵守这些约束：</p>
-<p><img alt="" src="assets/4tUgFo6.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/4tUgFo6.png</div>
+
 <p>而NoSql则对数据库格式没有严格约束，往往形式松散，自由。</p>
 <p>可以是键值型：</p>
-<p><img alt="" src="assets/GdqOSsj.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/GdqOSsj.png</div>
+
 <p>也可以是文档型：</p>
-<p><img alt="" src="assets/zBBQfcc.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/zBBQfcc.png</div>
+
 <p>甚至可以是图格式：</p>
-<p><img alt="" src="assets/zBnKxWf.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/zBnKxWf.png</div>
+
 <h3 id="112">1.1.2.关联和非关联</h3>
 <p>传统数据库的表与表之间往往存在关联，例如外键：</p>
-<p><img alt="" src="assets/tXYSl5x.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/tXYSl5x.png</div>
+
 <p>而非关系型数据库不存在关联关系，要维护关系要么靠代码中的业务逻辑，要么靠数据之间的耦合：</p>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
 <span class="w">  </span><span class="err">id</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -244,14 +251,17 @@ td code{white-space:nowrap}
 <h3 id="113">1.1.3.查询方式</h3>
 <p>传统关系型数据库会基于Sql语句做查询，语法有统一标准；</p>
 <p>而不同的非关系数据库查询语法差异极大，五花八门各种各样。</p>
-<p><img alt="" src="assets/AzaHOTF.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/AzaHOTF.png</div>
+
 <h3 id="114">1.1.4.事务</h3>
 <p>传统关系型数据库能满足事务ACID的原则。</p>
-<p><img alt="" src="assets/J1MqOJM.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/J1MqOJM.png</div>
+
 <p>而非关系型数据库往往不支持事务，或者不能严格保证ACID的特性，只能实现基本的一致性。</p>
 <h3 id="115">1.1.5.总结</h3>
 <p>除了上述四点以外，在存储方式、扩展性、查询性能上关系型与非关系型也都有着显著差异，总结如下：</p>
-<p><img alt="" src="assets/kZP40dQ.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/kZP40dQ.png</div>
+
 <ul>
 <li>存储方式</li>
 <li>关系型数据库基于磁盘进行存储，会有大量的磁盘IO，对性能有一定影响</li>
@@ -288,15 +298,18 @@ td code{white-space:nowrap}
 
 <h3 id="132">1.3.2.上传安装包并解压</h3>
 <p>然后将课前资料提供的Redis安装包上传到虚拟机的任意目录：</p>
-<p><img alt="" src="assets/SyjanS5.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/SyjanS5.png</div>
+
 <p>例如，我放到了/usr/local/src 目录：</p>
-<p><img alt="" src="assets/01DTNCf.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/01DTNCf.png</div>
+
 <p>解压缩：</p>
 <div class="codehilite"><pre><span></span><code>tar<span class="w"> </span>-xzf<span class="w"> </span>redis-6.2.6.tar.gz
 </code></pre></div>
 
 <p>解压后：</p>
-<p><img alt="image-20211211080339076" src="assets/8V6zvCD.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/8V6zvCD.png</div>
+
 <p>进入redis目录：</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>redis-6.2.6
 </code></pre></div>
@@ -327,11 +340,13 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>如图：</p>
-<p><img alt="" src="assets/v7xWsqC.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/v7xWsqC.png</div>
+
 <p>这种启动属于<code>前台启动</code>，会阻塞整个会话窗口，窗口关闭或者按下<code>CTRL + C</code>则Redis停止。不推荐使用。</p>
 <h3 id="135">1.3.5.指定配置启动</h3>
 <p>如果要让Redis以<code>后台</code>方式启动，则必须修改Redis配置文件，就在我们之前解压的redis安装包下（<code>/usr/local/src/redis-6.2.6</code>），名字叫redis.conf：</p>
-<p><img alt="image-20211211082225509" src="assets/image-20211211082225509.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/image-20211211082225509.png</div>
+
 <p>我们先将这个配置文件备份一份：</p>
 <div class="codehilite"><pre><span></span><code>cp redis.conf redis.conf.bck
 </code></pre></div>
@@ -433,29 +448,38 @@ systemctl<span class="w"> </span>status<span class="w"> </span>redis
 <li><code>ping</code>：与redis服务端做心跳测试，服务端正常会返回<code>pong</code></li>
 </ul>
 <p>不指定commond时，会进入<code>redis-cli</code>的交互控制台：</p>
-<p><img alt="" src="assets/OYYWPNo.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/OYYWPNo.png</div>
+
 <h3 id="142">1.4.2.图形化桌面客户端</h3>
 <p>GitHub上的大神编写了Redis的图形化桌面客户端，地址：https://github.com/uglide/RedisDesktopManager</p>
 <p>不过该仓库提供的是RedisDesktopManager的源码，并未提供windows安装包。</p>
 <p>在下面这个仓库可以找到安装包：https://github.com/lework/RedisDesktopManager-Windows/releases</p>
 <h3 id="143">1.4.3.安装</h3>
 <p>在课前资料中可以找到Redis的图形化桌面客户端：</p>
-<p><img alt="" src="assets/BZ4Agbi.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/BZ4Agbi.png</div>
+
 <p>解压缩后，运行安装程序即可安装：</p>
-<p><img alt="" src="assets/hguGHbX.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/hguGHbX.png</div>
+
 <p>安装完成后，在安装目录下找到rdm.exe文件：</p>
-<p><img alt="" src="assets/hwK5LQ8.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/hwK5LQ8.png</div>
+
 <p>双击即可运行：</p>
-<p><img alt="" src="assets/6hUqslY.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/6hUqslY.png</div>
+
 <h3 id="144">1.4.4.建立连接</h3>
 <p>点击左上角的<code>连接到Redis服务器</code>按钮：</p>
-<p><img alt="" src="assets/9qTGyoN.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/9qTGyoN.png</div>
+
 <p>在弹出的窗口中填写Redis服务信息：</p>
-<p><img alt="" src="assets/DshNnKC.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/DshNnKC.png</div>
+
 <p>点击确定后，在左侧菜单会出现这个链接：</p>
-<p><img alt="" src="assets/A2cOm7Q.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/A2cOm7Q.png</div>
+
 <p>点击即可建立连接了。</p>
-<p><img alt="" src="assets/ja8Fd9s.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/ja8Fd9s.png</div>
+
 <p>Redis默认有16个仓库，编号从0至15.  通过配置文件可以设置仓库数量，但是不超过16，并且不能自定义仓库名称。</p>
 <p>如果是基于redis-cli连接Redis服务，可以通过select命令来选择数据库：</p>
 <div class="codehilite"><pre><span></span><code><span class="c1"># 选择 0号库</span>
@@ -468,11 +492,14 @@ systemctl<span class="w"> </span>status<span class="w"> </span>redis
 <div class="ch-head"><span class="ch-num">02</span><h1>2.Redis常见命令</h1></div>
 
 <p>Redis是典型的key-value数据库，key一般是字符串，而value包含很多不同的数据类型：</p>
-<p><img alt="" src="assets/8tli2o9.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/8tli2o9.png</div>
+
 <p>Redis为了方便我们学习，将操作不同数据类型的命令也做了分组，在官网（ <a href="https://redis.io/commands">https://redis.io/commands </a>）可以查看到不同的命令：</p>
-<p><img alt="" src="assets/5Lcr3BE.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/5Lcr3BE.png</div>
+
 <p>不同类型的命令称为一个group，我们也可以通过help命令来查看各种不同group的命令：</p>
-<p><img alt="" src="assets/suevOIR.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/suevOIR.png</div>
+
 <p>接下来，我们就学习常见的五种基本数据类型的相关命令。</p>
 <h2 id="21redis">2.1.Redis通用命令</h2>
 <p>通用指令是部分数据类型的，都可以使用的指令，常见的有：</p>
@@ -502,7 +529,8 @@ group:<span class="w"> </span>generic
 <li>float：浮点类型，可以做自增、自减操作</li>
 </ul>
 <p>不管是哪种格式，底层都是字节数组形式存储，只不过是编码方式不同。字符串类型的最大空间不能超过512m.</p>
-<p><img alt="" src="assets/VZqpv73.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/VZqpv73.png</div>
+
 <h3 id="221string">2.2.1.String的常见命令</h3>
 <p>String的常见命令有：</p>
 <ul>
@@ -554,13 +582,16 @@ group:<span class="w"> </span>generic
 </tbody>
 </table></div>
 <p>并且，在Redis的桌面客户端中，还会以相同前缀作为层级结构，让数据看起来层次分明，关系清晰：</p>
-<p><img alt="" src="assets/InWMfeD.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/InWMfeD.png</div>
+
 <h2 id="23hash">2.3.Hash类型</h2>
 <p>Hash类型，也叫散列，其value是一个无序字典，类似于Java中的HashMap结构。</p>
 <p>String结构是将对象序列化为JSON字符串后存储，当需要修改对象某个字段时很不方便：</p>
-<p><img alt="" src="assets/x2zDBjf.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/x2zDBjf.png</div>
+
 <p>Hash结构可以将对象中的每个字段独立存储，可以针对单个字段做CRUD：</p>
-<p><img alt="" src="assets/VF2EPt0.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/VF2EPt0.png</div>
+
 <p>Hash的常见命令有：</p>
 <ul>
 <li>
@@ -627,10 +658,12 @@ group:<span class="w"> </span>generic
 <li>SINTER key1 key2 ... ：求key1与key2的交集</li>
 </ul>
 <p>例如两个集合：s1和s2:</p>
-<p><img alt="" src="assets/ha8x86R.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/ha8x86R.png</div>
+
 <p>求交集：SINTER s1 s2</p>
 <p>求s1与s2的不同：SDIFF s1 s2</p>
-<p><img alt="" src="assets/L9vTv2X.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/L9vTv2X.png</div>
+
 <p>练习：</p>
 <ol>
 <li>将下列数据用Redis的Set集合来存储：</li>
@@ -701,9 +734,11 @@ group:<span class="w"> </span>generic
 <div class="ch-head"><span class="ch-num">03</span><h1>3.Redis的Java客户端</h1></div>
 
 <p>在Redis官网中提供了各种语言的客户端，地址：https://redis.io/docs/clients/</p>
-<p><img alt="" src="assets/9f68ivq.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/9f68ivq.png</div>
+
 <p>其中Java客户端也包含很多：</p>
-<p><img alt="image-20220609102817435" src="assets/image-20220609102817435-165735883948534.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/image-20220609102817435-165735883948534.png</div>
+
 <p>标记为*的就是推荐使用的java客户端，包括：</p>
 <ul>
 <li>Jedis和Lettuce：这两个主要是提供了Redis命令对应的API，方便我们操作Redis，而SpringDataRedis又对这两种做了抽象和封装，因此我们后期会直接以SpringDataRedis来学习。</li>
@@ -816,7 +851,8 @@ group:<span class="w"> </span>generic
 <li>支持基于Redis的JDKCollection实现</li>
 </ul>
 <p>SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中：</p>
-<p><img alt="" src="assets/UFlNIV0.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/UFlNIV0.png</div>
+
 <h3 id="321">3.2.1.快速入门</h3>
 <p>SpringBoot已经提供了对SpringDataRedis的支持，使用非常简单。</p>
 <p>首先，新建一个maven项目，然后按照下面步骤执行：</p>
@@ -931,9 +967,11 @@ group:<span class="w"> </span>generic
 
 <h3 id="322">3.2.2.自定义序列化</h3>
 <p>RedisTemplate可以接收任意Object作为值写入Redis：</p>
-<p><img alt="" src="assets/OEMcbuu.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/OEMcbuu.png</div>
+
 <p>只不过写入前会把Object序列化为字节形式，默认是采用JDK序列化，得到的结果是这样的：</p>
-<p><img alt="" src="assets/5FjtWk5.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/5FjtWk5.png</div>
+
 <p>缺点：</p>
 <ul>
 <li>可读性差</li>
@@ -965,14 +1003,17 @@ group:<span class="w"> </span>generic
 </code></pre></div>
 
 <p>这里采用了JSON序列化来代替默认的JDK序列化方式。最终结果如图：</p>
-<p><img alt="" src="assets/XOAq3cN.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/XOAq3cN.png</div>
+
 <p>整体可读性有了很大提升，并且能将Java对象自动的序列化为JSON字符串，并且查询时能自动把JSON反序列化为Java对象。不过，其中记录了序列化时对应的class名称，目的是为了查询时实现自动反序列化。这会带来额外的内存开销。</p>
 <h3 id="323stringredistemplate">3.2.3.StringRedisTemplate</h3>
 <p>为了节省内存空间，我们可以不使用JSON序列化器来处理value，而是统一使用String序列化器，要求只能存储String类型的key和value。当需要存储Java对象时，手动完成对象的序列化和反序列化。</p>
-<p><img alt="" src="assets/Ip9TKSY.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/Ip9TKSY.png</div>
+
 <p>因为存入和读取时的序列化及反序列化都是我们自己实现的，SpringDataRedis就不会将class信息写入Redis了。</p>
 <p>这种用法比较普遍，因此SpringDataRedis就提供了RedisTemplate的子类：StringRedisTemplate，它的key和value的序列化方式默认就是String方式。</p>
-<p><img alt="" src="assets/zXH6Qn6.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/zXH6Qn6.png</div>
+
 <p>省去了我们自定义RedisTemplate的序列化方式的步骤，而是直接使用：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Autowired</span>
 <span class="kd">private</span><span class="w"> </span><span class="n">StringRedisTemplate</span><span class="w"> </span><span class="n">stringRedisTemplate</span><span class="p">;</span>

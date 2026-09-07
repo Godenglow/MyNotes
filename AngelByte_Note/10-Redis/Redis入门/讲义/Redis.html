@@ -159,6 +159,7 @@ td code{white-space:nowrap}
 .lightbox{position:fixed;inset:0;background:rgba(1,4,9,.93);display:none;z-index:100;cursor:zoom-out}
 .lightbox.open{display:flex;align-items:center;justify-content:center}
 .lightbox img{max-width:96vw;max-height:96vh;width:auto;height:auto;border-radius:4px}
+.img-missing{background:#161b22;border:1px dashed #30363d;border-radius:8px;padding:18px;color:#8b949e;font-size:13px;text-align:center;margin:14px 0;word-break:break-all}
 .wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
 .top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
 .top-btn.show{opacity:1;pointer-events:auto}
@@ -185,14 +186,15 @@ td code{white-space:nowrap}
 <header class="hero">
   <h1 class="title">基础篇Redis</h1>
   <div class="sub"></div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">25</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">50</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">48</div><div class="d">本地 19 / 远程 29 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">26K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">25</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">50</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">29</div><div class="d">远程 29 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">26K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
 <p>基础篇Redis</p>
 <h2 id="_1">开篇导读</h2>
 <p><strong>理想课程</strong></p>
 <p>小伙伴们理想的课程一定是能够通过讲解的方式，得到如下这些启发，我们的课程会从基础到精通，从redis小白，到redis大牛，还在等什么，这套课程一定就是你最适合你的课程~</p>
-<p><img alt="1652882458107" src="assets/1652882458107.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652882458107.png</div>
+
 <h2 id="1redis">1.Redis简单介绍</h2>
 <p>Redis是一种键值型的NoSql数据库，这里有两个关键字：</p>
 <ul>
@@ -200,7 +202,8 @@ td code{white-space:nowrap}
 <li>NoSql</li>
 </ul>
 <p>其中<strong>键值型</strong>，是指Redis中存储的数据都是以key.value对的形式存储，而value的形式多种多样，可以是字符串.数值.甚至json：</p>
-<p><img alt="1652882668159" src="assets/1652882668159.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652882668159.png</div>
+
 <p>而NoSql则是相对于传统关系型数据库而言，有很大差异的一种数据库。</p>
 <p>对于存储的数据，没有类似Mysql那么严格的约束，比如唯一性，是否可以为null等等，所以我们把这种松散结构的数据库，称之为NoSQL数据库。</p>
 <h2 id="2">2.课程目录</h2>
@@ -347,7 +350,8 @@ td code{white-space:nowrap}
 <p>这种启动属于<code>前台启动</code>，会阻塞整个会话窗口，窗口关闭或者按下<code>CTRL + C</code>则Redis停止。不推荐使用。</p>
 <h4 id="335">3.3.5.指定配置启动</h4>
 <p>如果要让Redis以<code>后台</code>方式启动，则必须修改Redis配置文件，就在我们之前解压的redis安装包下（<code>/usr/local/src/redis-6.2.6</code>），名字叫redis.conf：</p>
-<p><img alt="image-20211211082225509" src="assets/image-20211211082225509.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/image-20211211082225509.png</div>
+
 <p>我们先将这个配置文件备份一份：</p>
 <div class="codehilite"><pre><span></span><code>cp redis.conf redis.conf.bck
 </code></pre></div>
@@ -481,12 +485,15 @@ systemctl<span class="w"> </span>status<span class="w"> </span>redis
 <h2 id="4redis">4.Redis常见命令</h2>
 <h3 id="41-redis">4.1 Redis数据结构介绍</h3>
 <p>Redis是一个key-value的数据库，key一般是String类型，不过value的类型多种多样：</p>
-<p><img alt="1652887393157" src="assets/1652887393157.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652887393157.png</div>
+
 <p><strong>贴心小建议：命令不要死记，学会查询就好啦</strong></p>
 <p>Redis为了方便我们学习，将操作不同数据类型的命令也做了分组，在官网（ https://redis.io/commands ）可以查看到不同的命令：</p>
-<p><img alt="1652887648826" src="assets/1652887648826.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652887648826.png</div>
+
 <p>当然我们也可以通过Help命令来帮助我们去查看命令</p>
-<p><img alt="1652887748279" src="assets/1652887748279.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652887748279.png</div>
+
 <h3 id="42-redis">4.2 Redis 通用命令</h3>
 <p>通用指令是部分数据类型的，都可以使用的指令，常见的有：</p>
 <ul>
@@ -497,7 +504,8 @@ systemctl<span class="w"> </span>status<span class="w"> </span>redis
 <li>TTL：查看一个KEY的剩余有效期</li>
 </ul>
 <p>通过help [command] 可以查看一个命令的具体用法，例如：</p>
-<p><img alt="1652887865189" src="assets/1652887865189.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652887865189.png</div>
+
 <p>课堂代码如下</p>
 <ul>
 <li>KEYS</li>
@@ -603,7 +611,8 @@ OK
 <li>int：整数类型，可以做自增.自减操作</li>
 <li>float：浮点类型，可以做自增.自减操作</li>
 </ul>
-<p><img alt="1652890121291" src="assets/1652890121291.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652890121291.png</div>
+
 <p>String的常见命令有：</p>
 <ul>
 <li>SET：添加或者修改已经存在的一个String类型的键值对</li>
@@ -721,7 +730,8 @@ OK
 <p>例如，需要存储用户.商品信息到redis，有一个用户id是1，有一个商品id恰好也是1，此时如果使用id作为key，那就会冲突了，该怎么办？</p>
 <p>我们可以通过给key添加前缀加以区分，不过这个前缀不是随便加的，有一定的规范：</p>
 <p>Redis的key允许有多个单词形成层级结构，多个单词之间用':'隔开，格式如下：</p>
-<p><img alt="1652941631682" src="assets/1652941631682.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652941631682.png</div>
+
 <p>这个格式并非固定，也可以根据自己的需求来删除或添加词条。</p>
 <p>例如我们的项目名称叫 heima，有user和product两种不同类型的数据，我们可以这样定义key：</p>
 <ul>
@@ -752,13 +762,16 @@ OK
 </tbody>
 </table></div>
 <p>一旦我们向redis采用这样的方式存储，那么在可视化界面中，redis会以层级结构来进行存储，形成类似于这样的结构，更加方便Redis获取数据</p>
-<p><img alt="1652941883537" src="assets/1652941883537.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652941883537.png</div>
+
 <h3 id="45-redis-hash">4.5 Redis命令-Hash命令</h3>
 <p>Hash类型，也叫散列，其value是一个无序字典，类似于Java中的HashMap结构。</p>
 <p>String结构是将对象序列化为JSON字符串后存储，当需要修改对象某个字段时很不方便：</p>
-<p><img alt="1652941995945" src="assets/1652941995945.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652941995945.png</div>
+
 <p>Hash结构可以将对象中的每个字段独立存储，可以针对单个字段做CRUD：</p>
-<p><img alt="1652942027719" src="assets/1652942027719.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/1652942027719.png</div>
+
 <p><strong>Hash类型的常见命令</strong></p>
 <ul>
 <li>
@@ -887,7 +900,8 @@ OK
 <li>LRANGE key star end：返回一段角标范围内的所有元素</li>
 <li>BLPOP和BRPOP：与LPOP和RPOP类似，只不过在没有元素时等待指定时间，而不是直接返回nil</li>
 </ul>
-<p><img alt="1652943604992" src=".\Redis.assets\1652943604992.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：./Redis.assets/1652943604992.png</div>
+
 <ul>
 <li>LPUSH和RPUSH</li>
 </ul>
@@ -1040,7 +1054,8 @@ OK
 <p>在Redis官网中提供了各种语言的客户端，地址：https://redis.io/docs/clients/</p>
 <p><img alt="" src="https://i.imgur.com/9f68ivq.png" /></p>
 <p>其中Java客户端也包含很多：</p>
-<p><img alt="image-20220609102817435" src="assets/image-20220609102817435.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：assets/image-20220609102817435.png</div>
+
 <p>标记为❤的就是推荐使用的java客户端，包括：</p>
 <ul>
 <li>Jedis和Lettuce：这两个主要是提供了Redis命令对应的API，方便我们操作Redis，而SpringDataRedis又对这两种做了抽象和封装，因此我们后期会直接以SpringDataRedis来学习。</li>
@@ -1050,7 +1065,8 @@ OK
 <p><strong>入门案例详细步骤</strong></p>
 <p>案例分析：</p>
 <p>0）创建工程：</p>
-<p><img alt="1652959239813" src="\Redis.assets\1652959239813.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：Redis.assets/1652959239813.png</div>
+
 <p>1）引入依赖：</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--jedis--&gt;</span>
 <span class="nt">&lt;dependency&gt;</span>
@@ -1190,7 +1206,8 @@ OK
 <li>支持基于Redis的JDKCollection实现</li>
 </ul>
 <p>SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中：</p>
-<p><img alt="1652976773295" src=".\Redis.assets\1652976773295.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：./Redis.assets/1652976773295.png</div>
+
 <h3 id="61">6.1.快速入门</h3>
 <p>SpringBoot已经提供了对SpringDataRedis的支持，使用非常简单：</p>
 <h4 id="611pom">6.1.1.导入pom坐标</h4>
@@ -1339,10 +1356,12 @@ OK
 <p>整体可读性有了很大提升，并且能将Java对象自动的序列化为JSON字符串，并且查询时能自动把JSON反序列化为Java对象。不过，其中记录了序列化时对应的class名称，目的是为了查询时实现自动反序列化。这会带来额外的内存开销。</p>
 <h3 id="63-stringredistemplate">6.3 StringRedisTemplate</h3>
 <p>尽管JSON的序列化方式可以满足我们的需求，但依然存在一些问题，如图：</p>
-<p><img alt="1653054602930" src=".\Redis.assets\1653054602930.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：./Redis.assets/1653054602930.png</div>
+
 <p>为了在反序列化时知道对象的类型，JSON序列化器会将类的class类型写入json结果中，存入Redis，会带来额外的内存开销。</p>
 <p>为了减少内存的消耗，我们可以采用手动序列化的方式，换句话说，就是不借助默认的序列化器，而是我们自己来控制序列化的动作，同时，我们只采用String的序列化器，这样，在存储value时，我们就不需要在内存中就不用多存储数据，从而节约我们的内存空间</p>
-<p><img alt="1653054744832" src=".\Redis.assets\1653054744832.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：./Redis.assets/1653054744832.png</div>
+
 <p>这种用法比较普遍，因此SpringDataRedis就提供了RedisTemplate的子类：StringRedisTemplate，它的key和value的序列化方式默认就是String方式。</p>
 <p><img alt="" src="https://i.imgur.com/zXH6Qn6.png" /></p>
 <p>省去了我们自定义RedisTemplate的序列化方式的步骤，而是直接使用：</p>
@@ -1383,7 +1402,8 @@ OK
 </code></pre></div>
 
 <p>此时我们再来看一看存储的数据，小伙伴们就会发现那个class数据已经不在了，节约了我们的空间~</p>
-<p><img alt="1653054945211" src=".\Redis.assets\1653054945211.png" /></p>
+<div class="img-missing">🖼 原图缺失（源笔记引用的本地文件已不存在）：./Redis.assets/1653054945211.png</div>
+
 <p>最后小总结：</p>
 <p>RedisTemplate的两种序列化实践方案：</p>
 <ul>
