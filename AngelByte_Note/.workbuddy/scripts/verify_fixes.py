@@ -7,10 +7,12 @@ os.chdir(r"D:\MyNotes\AngelByte_Note")
 
 f = "01-HTML+CSS.html"
 s = open(f, encoding="utf-8").read()
-real_rel = s.count('rel="noopener noreferrer"')
-escaped_touched = len(re.findall(r"&lt;a [^&]*rel=", s))
-escaped_pure = len(re.findall(r"&lt;a href=\"https://news\.cctv\.com/\" target=\"_blank\"&gt;", s))
-print(f"1) 01-HTML+CSS: 真实链接带 rel = {real_rel} (预期1) | 教学示例被误改 = {escaped_touched} (预期0) | 示例原样 = {escaped_pure} (预期6)")
+real_rel_tag = len(re.findall(r'<a [^>]*rel="noopener noreferrer"[^>]*>', s))   # rel 必须在标签属性位
+pollution = s.count('> rel="noopener noreferrer">')                              # 标签外的可见污染文本
+escaped_touched = len(re.findall(r"&lt;a [^&]*rel=", s))                          # 教学示例被误改
+escaped_pure = len(re.findall(r"&lt;a href=\"https://news\.cctv\.com/\" target=\"_blank\"", s))
+print(f"1) 01-HTML+CSS: 属性位 rel = {real_rel_tag} (预期1) | 标签外污染 = {pollution} (预期0) | 示例被误改 = {escaped_touched} (预期0)")
+ok1 = real_rel_tag == 1 and pollution == 0 and escaped_touched == 0
 
 f = "02-Java Web.html"
 s = open(f, encoding="utf-8").read()
