@@ -1,0 +1,1496 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>JavaSE 基础问答笔记</title>
+<style>pre { line-height: 125%; }
+td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+span.linenos { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
+td.linenos .special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+span.linenos.special { color: #000000; background-color: #ffffc0; padding-left: 5px; padding-right: 5px; }
+.codehilite .hll { background-color: #ffffcc }
+.codehilite { background: #282C34; color: #ABB2BF }
+.codehilite .c { color: #7F848E } /* Comment */
+.codehilite .err { color: #ABB2BF } /* Error */
+.codehilite .esc { color: #ABB2BF } /* Escape */
+.codehilite .g { color: #ABB2BF } /* Generic */
+.codehilite .k { color: #C678DD } /* Keyword */
+.codehilite .l { color: #ABB2BF } /* Literal */
+.codehilite .n { color: #E06C75 } /* Name */
+.codehilite .o { color: #56B6C2 } /* Operator */
+.codehilite .x { color: #ABB2BF } /* Other */
+.codehilite .p { color: #ABB2BF } /* Punctuation */
+.codehilite .ch { color: #7F848E } /* Comment.Hashbang */
+.codehilite .cm { color: #7F848E } /* Comment.Multiline */
+.codehilite .cp { color: #7F848E } /* Comment.Preproc */
+.codehilite .cpf { color: #7F848E } /* Comment.PreprocFile */
+.codehilite .c1 { color: #7F848E } /* Comment.Single */
+.codehilite .cs { color: #7F848E } /* Comment.Special */
+.codehilite .gd { color: #E06C75 } /* Generic.Deleted */
+.codehilite .ge { color: #ABB2BF; font-style: italic } /* Generic.Emph */
+.codehilite .ges { color: #ABB2BF } /* Generic.EmphStrong */
+.codehilite .gr { color: #E06C75 } /* Generic.Error */
+.codehilite .gh { color: #ABB2BF; font-weight: bold } /* Generic.Heading */
+.codehilite .gi { color: #98C379 } /* Generic.Inserted */
+.codehilite .go { color: #E06C75 } /* Generic.Output */
+.codehilite .gp { color: #ABB2BF } /* Generic.Prompt */
+.codehilite .gs { color: #ABB2BF; font-weight: bold } /* Generic.Strong */
+.codehilite .gu { color: #ABB2BF; font-weight: bold } /* Generic.Subheading */
+.codehilite .gt { color: #E06C75 } /* Generic.Traceback */
+.codehilite .kc { color: #E5C07B } /* Keyword.Constant */
+.codehilite .kd { color: #C678DD } /* Keyword.Declaration */
+.codehilite .kn { color: #C678DD } /* Keyword.Namespace */
+.codehilite .kp { color: #C678DD } /* Keyword.Pseudo */
+.codehilite .kr { color: #C678DD } /* Keyword.Reserved */
+.codehilite .kt { color: #E5C07B } /* Keyword.Type */
+.codehilite .ld { color: #ABB2BF } /* Literal.Date */
+.codehilite .m { color: #D19A66 } /* Literal.Number */
+.codehilite .s { color: #98C379 } /* Literal.String */
+.codehilite .na { color: #E06C75 } /* Name.Attribute */
+.codehilite .nb { color: #E5C07B } /* Name.Builtin */
+.codehilite .nc { color: #E5C07B } /* Name.Class */
+.codehilite .no { color: #E06C75 } /* Name.Constant */
+.codehilite .nd { color: #61AFEF } /* Name.Decorator */
+.codehilite .ni { color: #E06C75 } /* Name.Entity */
+.codehilite .ne { color: #E06C75 } /* Name.Exception */
+.codehilite .nf { color: #61AFEF; font-weight: bold } /* Name.Function */
+.codehilite .nl { color: #E06C75 } /* Name.Label */
+.codehilite .nn { color: #E06C75 } /* Name.Namespace */
+.codehilite .nx { color: #E06C75 } /* Name.Other */
+.codehilite .py { color: #E06C75 } /* Name.Property */
+.codehilite .nt { color: #E06C75 } /* Name.Tag */
+.codehilite .nv { color: #E06C75 } /* Name.Variable */
+.codehilite .ow { color: #56B6C2 } /* Operator.Word */
+.codehilite .pm { color: #ABB2BF } /* Punctuation.Marker */
+.codehilite .w { color: #ABB2BF } /* Text.Whitespace */
+.codehilite .mb { color: #D19A66 } /* Literal.Number.Bin */
+.codehilite .mf { color: #D19A66 } /* Literal.Number.Float */
+.codehilite .mh { color: #D19A66 } /* Literal.Number.Hex */
+.codehilite .mi { color: #D19A66 } /* Literal.Number.Integer */
+.codehilite .mo { color: #D19A66 } /* Literal.Number.Oct */
+.codehilite .sa { color: #98C379 } /* Literal.String.Affix */
+.codehilite .sb { color: #98C379 } /* Literal.String.Backtick */
+.codehilite .sc { color: #98C379 } /* Literal.String.Char */
+.codehilite .dl { color: #98C379 } /* Literal.String.Delimiter */
+.codehilite .sd { color: #98C379 } /* Literal.String.Doc */
+.codehilite .s2 { color: #98C379 } /* Literal.String.Double */
+.codehilite .se { color: #98C379 } /* Literal.String.Escape */
+.codehilite .sh { color: #98C379 } /* Literal.String.Heredoc */
+.codehilite .si { color: #98C379 } /* Literal.String.Interpol */
+.codehilite .sx { color: #98C379 } /* Literal.String.Other */
+.codehilite .sr { color: #98C379 } /* Literal.String.Regex */
+.codehilite .s1 { color: #98C379 } /* Literal.String.Single */
+.codehilite .ss { color: #98C379 } /* Literal.String.Symbol */
+.codehilite .bp { color: #E5C07B } /* Name.Builtin.Pseudo */
+.codehilite .fm { color: #56B6C2; font-weight: bold } /* Name.Function.Magic */
+.codehilite .vc { color: #E06C75 } /* Name.Variable.Class */
+.codehilite .vg { color: #E06C75 } /* Name.Variable.Global */
+.codehilite .vi { color: #E06C75 } /* Name.Variable.Instance */
+.codehilite .vm { color: #E06C75 } /* Name.Variable.Magic */
+.codehilite .il { color: #D19A66 } /* Literal.Number.Integer.Long */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75}
+a{color:#58a6ff;text-decoration:none}
+a:hover{text-decoration:underline}
+.sidebar{position:fixed;inset:0 auto 0 0;width:272px;background:#010409;border-right:1px solid #262d38;overflow-y:auto;padding:22px 14px 40px;z-index:50}
+.sidebar .brand{display:flex;align-items:center;gap:9px;padding:2px 8px 16px;border-bottom:1px solid #21262d;margin-bottom:14px}
+.sidebar .brand .logo{width:32px;height:32px;border-radius:8px;background:#21262d;display:flex;align-items:center;justify-content:center;font-size:17px}
+.sidebar .brand b{font-size:15px}
+.sidebar .brand .cnt{color:#8b949e;font-size:11px}
+.toc-item{display:flex;align-items:center;gap:9px;padding:7px 9px;border-radius:7px;color:#8b949e;font-size:12.5px;line-height:1.4}
+.toc-item:hover{background:#161b22;color:#e6edf3;text-decoration:none}
+.toc-item.active{background:#161b22;color:#58a6ff}
+.toc-idx{font-size:10.5px;font-variant-numeric:tabular-nums;color:#6e7681;min-width:18px}
+.toc-item.active .toc-idx{color:#58a6ff}
+.main{margin-left:272px;padding:34px 46px 140px;max-width:1060px}
+.hero{border-bottom:1px solid #262d38;padding-bottom:22px;margin-bottom:10px}
+.hero .crumb{color:#8b949e;font-size:12px;margin-bottom:10px}
+.hero h1.title{font-size:30px;font-weight:750;letter-spacing:-.5px}
+.hero .sub{color:#8b949e;font-size:13.5px;margin-top:8px;max-width:720px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin:22px 0 6px}
+.card{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:12px 14px}
+.card .k{color:#8b949e;font-size:11px}
+.card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
+.card .d{color:#8b949e;font-size:11px;margin-top:3px}
+.chapter{margin:46px 0 10px}
+.ch-head{display:flex;align-items:center;gap:13px;padding:14px 18px;background:linear-gradient(90deg,#161b22,#0d1117);border:1px solid #262d38;border-radius:10px;margin-bottom:18px;position:sticky;top:0;z-index:10}
+.ch-num{display:inline-flex;align-items:center;justify-content:center;min-width:38px;height:38px;border-radius:9px;background:#21262d;color:#58a6ff;font-size:14px;font-weight:750;font-variant-numeric:tabular-nums}
+.ch-head h1{font-size:21px;font-weight:700}
+.chapter h2{font-size:18px;font-weight:680;margin:30px 0 12px;padding-bottom:8px;border-bottom:1px solid #262d38}
+.chapter h3{font-size:15.5px;font-weight:660;margin:22px 0 9px;color:#79c0ff}
+.chapter h4{font-size:14px;margin:16px 0 7px;color:#8b949e}
+.chapter p{margin:10px 0;font-size:14px}
+.chapter ul,.chapter ol{margin:9px 0 9px 22px}
+.chapter li{margin:5.5px 0;font-size:14px}
+.chapter li::marker{color:#6e7681}
+strong{color:#f0f6fc}
+.chapter blockquote{border-left:3px solid #58a6ff;background:#161b22;border-radius:0 8px 8px 0;padding:10px 16px;margin:13px 0;color:#b6c2cf;font-size:13.5px}
+.chapter blockquote p{margin:5px 0}
+code{background:#21262d;padding:1.5px 6px;border-radius:4px;font-size:12.5px;color:#bc8cff;font-family:"Cascadia Code",Consolas,"JetBrains Mono",monospace}
+.toc-search{width:100%;margin:0 0 12px;padding:7px 10px;background:#161b22;border:1px solid #262d38;border-radius:7px;color:#e6edf3;font-size:12px;font-family:inherit;outline:none}
+.toc-search:focus{border-color:#58a6ff}
+.copy-btn{position:absolute;top:7px;right:7px;padding:2px 8px;font-size:11px;border-radius:5px;background:#21262d;border:1px solid #30363d;color:#8b949e;cursor:pointer;opacity:0;transition:opacity .15s}
+.codehilite:hover .copy-btn{opacity:1}
+.copy-btn:hover{color:#58a6ff;border-color:#58a6ff}
+.codehilite{position:relative;background:#161b22;border:1px solid #262d38;border-radius:9px;padding:13px 15px;margin:13px 0;overflow-x:auto}
+.codehilite pre{margin:0;background:transparent!important}
+.codehilite code{background:transparent;padding:0;font-size:12.8px;line-height:1.62;color:#c9d1d9}
+.tbl-wrap{overflow-x:auto;margin:13px 0;border:1px solid #262d38;border-radius:9px}
+table{width:100%;border-collapse:collapse;font-size:13px}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid #21262d;vertical-align:top}
+th{color:#8b949e;font-weight:600;font-size:12px;background:#161b22}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#10161f}
+td code{white-space:nowrap}
+.diagram-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;overflow:hidden}
+.diagram-title{display:flex;align-items:center;gap:8px;padding:10px 15px;border-bottom:1px solid #262d38;font-size:13px;font-weight:650;color:#79c0ff}
+.dt-src{margin-left:auto;color:#6e7681;font-size:11px;font-weight:400}
+.diagram-card .mermaid{display:flex;justify-content:center;padding:16px 12px;background:#0d1117;overflow-x:auto}
+.diagram-card pre.mermaid{font-family:Consolas,monospace;font-size:12px;color:#8b949e;white-space:pre-wrap}
+.diagram-card svg{max-width:100%;height:auto}
+.img-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;padding:14px;display:flex;justify-content:center}
+.img-card img{max-width:100%;height:auto;border-radius:6px}
+.wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
+.top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
+.top-btn.show{opacity:1;pointer-events:auto}
+.top-btn:hover{color:#58a6ff;border-color:#58a6ff}
+.foot{margin-top:60px;padding-top:18px;border-top:1px solid #262d38;color:#6e7681;font-size:11.5px;line-height:1.8}
+.menu-btn{display:none;position:fixed;left:14px;top:14px;z-index:70;width:38px;height:38px;border-radius:8px;background:#21262d;border:1px solid #30363d;color:#e6edf3;font-size:17px;cursor:pointer}
+@media (max-width:960px){
+  .sidebar{transform:translateX(-100%);transition:transform .25s;width:280px}
+  .sidebar.open{transform:translateX(0);box-shadow:0 0 40px rgba(0,0,0,.6)}
+  .main{margin-left:0;padding:64px 18px 120px}
+  .menu-btn{display:flex;align-items:center;justify-content:center}
+  .ch-head{position:static}
+}
+</style>
+</head>
+<body>
+<button class="menu-btn" id="menuBtn">☰</button>
+<nav class="sidebar" id="sidebar">
+  <div class="brand"><span class="logo">📒</span><div><b>JavaSE 基础问答笔记</b><div class="cnt">目录 · 点击跳转</div></div></div>
+  <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>JavaSE 基础问答笔记</span></a>
+</nav>
+<main class="main">
+<header class="hero">
+  <h1 class="title">JavaSE 基础问答笔记</h1>
+  <div class="sub">1. [[#一、八种基本数据类型总览|八种基本数据类型总览]]</div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">93</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">37</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">5</div><div class="d"> · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">20</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">17K</div><div class="d">字符</div></div></div>
+</header>
+<section class="chapter" id="ch-01">
+<p>JavaSE 基础问答笔记</p>
+<blockquote>
+<p>来源：动力节点 JavaSE 教程 · 课堂答疑整理
+整理日期：2026-08-31
+适用：Obsidian 阅读
+范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>配套：<span class="wl" title="Obsidian 内链：JavaSE">🔗 JavaSE</span></p>
+</blockquote>
+<h2 id="_1">一、八种基本数据类型总览</h2>
+<blockquote>
+<p><strong>一句话</strong>：8 种 primitive 类型，整数默认用 int，小数默认用 double。</p>
+</blockquote>
+<h3 id="_2">总览表</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>字节</th>
+<th>取值范围</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>byte</td>
+<td>1</td>
+<td>-128 ~ 127</td>
+<td>0</td>
+</tr>
+<tr>
+<td>short</td>
+<td>2</td>
+<td>-32768 ~ 32767</td>
+<td>0</td>
+</tr>
+<tr>
+<td>int</td>
+<td>4</td>
+<td>-2147483648 ~ 2147483647</td>
+<td>0</td>
+</tr>
+<tr>
+<td>long</td>
+<td>8</td>
+<td>-2⁶³ ~ 2⁶³-1</td>
+<td>0L</td>
+</tr>
+<tr>
+<td>float</td>
+<td>4</td>
+<td>约 ±3.4E38（6~7 位有效数字）</td>
+<td>0.0F</td>
+</tr>
+<tr>
+<td>double</td>
+<td>8</td>
+<td>约 ±1.8E308（15~16 位有效数字）</td>
+<td>0.0</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>1</td>
+<td>true / false</td>
+<td>false</td>
+</tr>
+<tr>
+<td>char</td>
+<td>2</td>
+<td>0 ~ 65535（无符号）</td>
+<td>'\u0000'</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_3">要点</h3>
+<ul>
+<li>整数范围公式：n 位有符号 → <code>-2ⁿ⁻¹ ~ 2ⁿ⁻¹-1</code></li>
+<li>日常整数用 <code>int</code>，小数用 <code>double</code></li>
+<li>boolean 在 Java 里<strong>不能</strong>和 0/1 互换（与 C 不同）</li>
+<li>char 是无符号 16 位，和 short 字节数相同但范围不同</li>
+</ul>
+<h3 id="_4">速记</h3>
+<blockquote>
+<p>整数 4 兄弟：byte &lt; short &lt; int &lt; long
+小数 2 兄弟：float &lt; double
+外加 boolean（真假）与 char（字符）</p>
+</blockquote>
+<hr />
+<h2 id="_5">二、局部变量与成员变量的默认值</h2>
+<blockquote>
+<p><strong>一句话</strong>：局部变量没有默认值，成员变量有默认值。</p>
+</blockquote>
+<h3 id="_6">规则</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>变量位置</th>
+<th>是否有默认值</th>
+<th>未赋值就用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>局部变量（方法内、代码块内）</td>
+<td>❌ 没有</td>
+<td><strong>编译报错</strong></td>
+</tr>
+<tr>
+<td>成员变量（类的属性）</td>
+<td>✅ 有</td>
+<td>按类型默认值</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_7">示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">                </span><span class="c1">// 成员变量</span>
+
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">method</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">            </span><span class="c1">// 局部变量</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w">  </span><span class="c1">// ✅ 输出 0（自动默认值）</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">b</span><span class="p">);</span><span class="w">  </span><span class="c1">// ❌ 编译错误：可能尚未初始化变量 b</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="_8">原因</h3>
+<ul>
+<li>成员变量随对象在<strong>堆</strong>中创建，JVM 会整体清零初始化</li>
+<li>局部变量在<strong>栈</strong>上，JVM 为性能不做清理</li>
+<li>「使用前必须赋值」是<strong>编译器</strong>的强制安全检查，不是运行时检查</li>
+</ul>
+<h3 id="_9">速记</h3>
+<blockquote>
+<p>方法里的变量，先赋值再用；不确定的话一律显式写 <code>int b = 0;</code></p>
+</blockquote>
+<hr />
+<h2 id="long-z-2147483648">三、为什么 long z = 2147483648 会报错</h2>
+<blockquote>
+<p><strong>一句话</strong>：报错在「字面量合法性」阶段，不在赋值转换阶段。</p>
+</blockquote>
+<h3 id="_10">规则</h3>
+<p><strong>整数类型字面量默认当做 int 类型处理。</strong></p>
+<p>处理顺序：</p>
+<ol>
+<li>编译器看到 <code>2147483648</code>，<strong>还没有任何赋值动作</strong></li>
+<li>按规则把它当 int 处理</li>
+<li>检查：int 最大值是 2147483647，<code>2147483648</code> 超范围</li>
+<li>还没轮到赋值给 <code>z</code>，编译就失败了</li>
+</ol>
+<h3 id="_11">对比</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>结果</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long a = 10;</code></td>
+<td>✅</td>
+<td>合法的 int 字面量，int → long 自动拓宽</td>
+</tr>
+<tr>
+<td><code>long b = 2147483648;</code></td>
+<td>❌</td>
+<td>字面量本身超 int 范围</td>
+</tr>
+<tr>
+<td><code>long c = 2147483648L;</code></td>
+<td>✅</td>
+<td><code>L</code> 让字面量直接成为 long 类型</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_12">要点</h3>
+<ul>
+<li><code>L</code> 的作用是告诉编译器「别按 int 处理，直接按 long 处理」</li>
+<li>习惯用<strong>大写 <code>L</code></strong>，小写 <code>l</code> 容易被看成数字 <code>1</code></li>
+</ul>
+<h3 id="_13">速记</h3>
+<blockquote>
+<p>超过 int 范围的整数，字面量必须带 <code>L</code></p>
+</blockquote>
+<hr />
+<h2 id="float-f-30">四、为什么 float f = 3.0 会报错</h2>
+<blockquote>
+<p><strong>一句话</strong>：浮点字面量默认是 double，double → float 是大转小，不允许自动收窄。</p>
+</blockquote>
+<h3 id="_14">规则</h3>
+<p><strong>浮点类型字面量默认当做 double 类型处理。</strong></p>
+<h3 id="long">与 long 案例的区别（重点）</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>字面量默认类型</th>
+<th>报错原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long z = 2147483648;</code></td>
+<td>int</td>
+<td>字面量<strong>超 int 范围</strong>，int 自己装不下</td>
+</tr>
+<tr>
+<td><code>float f = 3.0;</code></td>
+<td>double</td>
+<td><code>3.0</code> 作为 double 合法，但 <strong>double → float 大转小</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>两个报错「病因」不同，但解法一致：<strong>加后缀让字面量出生就正确</strong>。</p>
+<h3 id="_15">示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0F</span><span class="p">;</span><span class="w">    </span><span class="c1">// ✅ 字面量直接是 float 类型</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span><span class="w">    </span><span class="c1">// ✅ 或干脆用 double，什么都不用加</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5656856894</span><span class="p">;</span><span class="w">   </span><span class="c1">// 输出 1.5656856894（原样）</span>
+<span class="kt">float</span><span class="w">  </span><span class="n">f2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.5656856894F</span><span class="p">;</span><span class="w">  </span><span class="c1">// 输出 1.5656857（被舍入）</span>
+</code></pre></div>
+
+<h3 id="_16">精度对比</h3>
+<ul>
+<li>float：4 字节，约 <strong>6~7 位</strong>有效数字</li>
+<li>double：8 字节，约 <strong>15~16 位</strong>有效数字</li>
+</ul>
+<p>超出精度的位数会被舍入 → 实际开发<strong>小数优先用 double</strong>。</p>
+<h3 id="_17">速记</h3>
+<blockquote>
+<p>整数默认 int（超范围加 <code>L</code>），小数默认 double（转 float 加 <code>F</code>）</p>
+</blockquote>
+<hr />
+<h2 id="_18">五、浮点数为什么不能用 == 比较</h2>
+<blockquote>
+<p><strong>一句话</strong>：浮点是近似值，用 <code>==</code> 比较会翻车，改用误差范围（epsilon）。</p>
+</blockquote>
+<h3 id="_19">规则</h3>
+<p>float / double 按 IEEE 754 标准存储，<strong>本质都是近似值</strong>，大部分十进制小数无法用二进制精确表示。</p>
+<h3 id="_20">示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">6.9</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.0</span><span class="p">;</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w">      </span><span class="c1">// 数学上应为 2.3，实际是 2.3000000000000003</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">2.3</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">        </span><span class="c1">// ❌ false，逐位比较被误差击穿</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="_21">正确写法</h3>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">Math</span><span class="p">.</span><span class="na">abs</span><span class="p">(</span><span class="n">z</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">2.3</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">0.000001</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// ✅ 差值在容差内就算相等</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"相等"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>注意：只写 <code>z - 2.3 &lt; 0.000001</code> 没取绝对值，<strong>比目标小很多的值也会通过</strong>——差值恒为负、必然 &lt; 0.000001，如 <code>1.0/3.0</code> ≈ 0.333 也会被判「相等」，必须加 <code>Math.abs()</code>。</p>
+<h3 id="_22">其他常见坑</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">double</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.2</span><span class="p">;</span>
+<span class="n">sum</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.3</span><span class="p">;</span><span class="w">                     </span><span class="c1">// false，实际 0.30000000000000004</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">               </span><span class="c1">// 2.0，不是 2.5（整数除法先算完再转）</span>
+<span class="kt">double</span><span class="w"> </span><span class="n">d2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.0</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">            </span><span class="c1">// 2.5 ✅</span>
+
+<span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">"1.0"</span><span class="p">).</span><span class="na">equals</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">BigDecimal</span><span class="p">(</span><span class="s">"1.00"</span><span class="p">));</span><span class="w">  </span><span class="c1">// false！scale 不同</span>
+<span class="c1">// BigDecimal 比较用 compareTo() == 0</span>
+</code></pre></div>
+
+<h3 id="_23">速记</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>做法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>float / double 比较</td>
+<td><code>Math.abs(a - b) &lt; epsilon</code></td>
+</tr>
+<tr>
+<td>金钱、精确小数</td>
+<td><code>BigDecimal</code></td>
+</tr>
+<tr>
+<td>想用 <code>==</code> 比浮点</td>
+<td>默认不写</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="char">六、char 字符型要点</h2>
+<blockquote>
+<p><strong>一句话</strong>：Java 的 char 是 2 字节 Unicode 字符，本质是 0~65535 的无符号整数。</p>
+</blockquote>
+<h3 id="_24">规则</h3>
+<ul>
+<li>占用 <strong>2 字节</strong>，范围 <strong>0 ~ 65535</strong>（无符号）</li>
+<li>与 short 字节数相同，但 short 是 -32768 ~ 32767（有符号）</li>
+<li>用<strong>单引号</strong>，且<strong>只能一个字符</strong></li>
+<li>可以保存一个汉字（中文也占一个 Unicode 字符）</li>
+<li>默认值是空字符 <code>'\u0000'</code></li>
+</ul>
+<h3 id="_25">示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">c1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span><span class="w">        </span><span class="c1">// ✅</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"A"</span><span class="p">;</span><span class="w">        </span><span class="c1">// ❌ 双引号是 String</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">'</span><span class="n">AB</span><span class="err">'</span><span class="p">;</span><span class="w">       </span><span class="c1">// ❌ char 只能存一个字符</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'中'</span><span class="p">;</span><span class="w">       </span><span class="c1">// ✅ 可以存汉字</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c5</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">''</span><span class="p">;</span><span class="w">         </span><span class="c1">// ❌ 单引号内必须有一个字符</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c6</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'\u0000'</span><span class="p">;</span><span class="w">   </span><span class="c1">// ✅ 空字符，也是默认值</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'A'</span><span class="p">;</span><span class="w">          </span><span class="c1">// ✅ char → int 自动提升，i = 65</span>
+<span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20013</span><span class="p">;</span><span class="w">       </span><span class="c1">// ✅ 20013 是 '中' 的 Unicode 码点</span>
+</code></pre></div>
+
+<h3 id="vs">空字符 vs 空格字符</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>写法</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>空字符</td>
+<td><code>'\u0000'</code></td>
+<td>无内容，占位置不可见</td>
+</tr>
+<tr>
+<td>空格字符</td>
+<td><code>' '</code></td>
+<td>真实空白，显示为空格</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_26">速记</h3>
+<blockquote>
+<p>char = 2 字节 Unicode，单引号包一个字符，默认 <code>\u0000</code></p>
+</blockquote>
+<hr />
+<h2 id="_27">七、转义字符有什么用</h2>
+<blockquote>
+<p><strong>一句话</strong>：<code>\n</code>、<code>\\</code>、<code>\"</code> 是高频三件套，写字符串、路径、正则时天天见。</p>
+</blockquote>
+<h3 id="_28">常用对照表</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>转义</th>
+<th>含义</th>
+<th>典型场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>\n</code></td>
+<td>换行</td>
+<td>多行输出、日志拼接</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>制表符</td>
+<td>表格式对齐输出</td>
+</tr>
+<tr>
+<td><code>\"</code></td>
+<td>双引号</td>
+<td>字符串里嵌套引号</td>
+</tr>
+<tr>
+<td><code>\'</code></td>
+<td>单引号</td>
+<td>char / 字符串里的单引号</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>反斜杠</td>
+<td>Windows 路径、正则表达式</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_29">示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"第一行\n第二行"</span><span class="p">);</span>
+<span class="c1">// 第一行</span>
+<span class="c1">// 第二行</span>
+
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"姓名\t年龄\nAlice\t20"</span><span class="p">);</span>
+<span class="c1">// 姓名  年龄</span>
+<span class="c1">// Alice 20</span>
+
+<span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"他说：\"你好\""</span><span class="p">;</span><span class="w">              </span><span class="c1">// 输出：他说："你好"</span>
+<span class="n">String</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"C:\\Users\\29074\\Desktop"</span><span class="p">;</span><span class="w"> </span><span class="c1">// 实际是一个 \</span>
+</code></pre></div>
+
+<h3 id="_30">要点</h3>
+<ul>
+<li><code>"</code> 是字符串边界，字符串内写 <code>"</code> 必须用 <code>\"</code> 转义</li>
+<li>Windows 路径本来用 <code>\</code>，但 <code>\</code> 又是转义符，所以写一个真反斜杠要写 <code>\\</code></li>
+</ul>
+<h3 id="_31">速记</h3>
+<blockquote>
+<p>字符串里想写「特殊符号」，前面加 <code>\</code></p>
+</blockquote>
+<hr />
+<h2 id="byte-short-char">八、byte / short / char 运算为什么会报错</h2>
+<blockquote>
+<p><strong>一句话</strong>：字面量默认是 int，且小类型一参与运算就变 int，双重保险 → 结果必然是 int。</p>
+</blockquote>
+<h3 id="_32">两条核心规则</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>规则</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>整数字面量默认是 int</strong>，<code>1</code>、<code>99</code>、<code>100</code> 全是 int</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>byte / short / char 参与算术运算时，一律先提升成 int</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p>Java 里<strong>没有 byte 字面量、没有 short 字面量</strong>，也没有对应后缀，压根不存在。</p>
+<h3 id="_33">示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">short</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">99</span><span class="p">;</span><span class="w">          </span><span class="c1">// ❌ 结果是 int</span>
+
+<span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">           </span><span class="c1">// ❌ 结果是 int</span>
+
+<span class="kt">byte</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="kt">byte</span><span class="w"> </span><span class="n">a2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<span class="kt">byte</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a2</span><span class="p">;</span><span class="w">    </span><span class="c1">// ❌ 没有字面量参与，照样报错！</span>
+
+<span class="c1">// 正确写法</span>
+<span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">short</span><span class="p">)(</span><span class="n">s</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">99</span><span class="p">);</span>
+<span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)(</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<span class="n">b</span><span class="o">++</span><span class="p">;</span><span class="w">                 </span><span class="c1">// ✅ 自增运算符底层帮你强转</span>
+<span class="n">b</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w">              </span><span class="c1">// ✅ 复合赋值运算符自动强转</span>
+</code></pre></div>
+
+<h3 id="_34">混合类型运算</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">'a'</span><span class="p">;</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span>
+<span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">.3F</span><span class="p">;</span>
+
+<span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">f</span><span class="p">;</span><span class="w">   </span><span class="c1">// ✅</span>
+<span class="c1">// 提升链：char → int → float → double</span>
+<span class="c1">// 等价：double d = (double)((float)((int)c + i) + f);</span>
+
+<span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+<span class="kt">short</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span>
+
+<span class="kt">short</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">;</span><span class="w">              </span><span class="c1">// ❌ byte + short 结果仍是 int</span>
+<span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">short</span><span class="p">)(</span><span class="n">b</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">s</span><span class="p">);</span><span class="w">           </span><span class="c1">// ✅ 强转后再赋值</span>
+</code></pre></div>
+
+<h3 id="_35">常量赋值的例外</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">short</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">   </span><span class="c1">// ✅ 常量直接赋值，值在范围内 → 自动窄化</span>
+<span class="kt">byte</span><span class="w">  </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">   </span><span class="c1">// ✅ 同上</span>
+</code></pre></div>
+
+<h3 id="_36">为什么这样设计</h3>
+<p>byte / short 运算极易溢出（<code>100 + 100 = 200</code> 已超 byte 最大值 127）。
+JVM 规定小整数运算统一在 int 层面进行，避免中间结果溢出 —— 代价是必须手动强转。</p>
+<h3 id="_37">速记</h3>
+<blockquote>
+<p>常量直接赋值 → 范围内自动过
+变量参与运算 → 结果至少是 int，塞回小类型必须强转</p>
+</blockquote>
+<hr />
+<h2 id="scanner-nextxxx">九、Scanner 的 nextXxx 怎么选</h2>
+<blockquote>
+<p><strong>一句话</strong>：要什么类型就叫什么方法名，但 <code>nextInt()</code> 后接 <code>nextLine()</code> 要清换行符。</p>
+</blockquote>
+<h3 id="_38">方法对照表</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>返回类型</th>
+<th>读取内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>next()</code></td>
+<td>String</td>
+<td>一个「单词」，以空格 / Tab / 换行为分隔</td>
+</tr>
+<tr>
+<td><code>nextLine()</code></td>
+<td>String</td>
+<td>一整行，包含空格，直到换行符</td>
+</tr>
+<tr>
+<td><code>nextInt()</code></td>
+<td>int</td>
+<td>一个整数</td>
+</tr>
+<tr>
+<td><code>nextLong()</code></td>
+<td>long</td>
+<td>一个长整数</td>
+</tr>
+<tr>
+<td><code>nextDouble()</code></td>
+<td>double</td>
+<td>一个小数</td>
+</tr>
+<tr>
+<td><code>nextFloat()</code></td>
+<td>float</td>
+<td>一个单精度小数</td>
+</tr>
+<tr>
+<td><code>nextByte()</code></td>
+<td>byte</td>
+<td>一个 byte</td>
+</tr>
+<tr>
+<td><code>nextShort()</code></td>
+<td>short</td>
+<td>一个 short</td>
+</tr>
+<tr>
+<td><code>nextBoolean()</code></td>
+<td>boolean</td>
+<td>true / false</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="nextchar">没有 nextChar()</h3>
+<div class="codehilite"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">next</span><span class="p">().</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">   </span><span class="c1">// 先读字符串，再取第一个字符</span>
+</code></pre></div>
+
+<h3 id="nextint">大坑：nextInt() 吞不掉换行符</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">     </span><span class="c1">// 输入 18 后按回车</span>
+<span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">    </span><span class="c1">// ❌ 读到空字符串，不是下一行输入</span>
+</code></pre></div>
+
+<p><strong>原因</strong>：<code>nextInt()</code> 只读数字，没读走末尾的换行符；<code>nextLine()</code> 一看到换行符就认为「一行读完了」。</p>
+<p><strong>解决</strong>：中间插一个 <code>nextLine()</code> 吃掉残留换行符。</p>
+<h3 id="_39">完整示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Demo</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"请输入年龄："</span><span class="p">);</span>
+<span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w">              </span><span class="c1">// 清理换行符</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">"请输入姓名："</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 今年 "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 岁"</span><span class="p">);</span>
+<span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="_40">速记</h3>
+<blockquote>
+<p><code>nextInt()</code> 后要接 <code>nextLine()</code>，中间补一句 <code>nextLine()</code> 清空换行</p>
+</blockquote>
+<hr />
+<h2 id="_41">十、&amp;&amp; 与 &amp; 有什么区别</h2>
+<blockquote>
+<p><strong>一句话</strong>：<code>&amp;&amp;</code> 短路更高效，但 <code>&amp;</code> 在「右边必须执行」和位运算场景下不可替代。</p>
+</blockquote>
+<h3 id="_42">对照表</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>运算符</th>
+<th>是否短路</th>
+<th>行为</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&amp;&amp;</code></td>
+<td>✅ 是</td>
+<td>左边 false → 右边<strong>不执行</strong></td>
+</tr>
+<tr>
+<td><code>&amp;</code></td>
+<td>❌ 否</td>
+<td>不管左边，右边<strong>一定执行</strong></td>
+</tr>
+<tr>
+<td><code>\|\|</code></td>
+<td>✅ 是</td>
+<td>左边 true → 右边<strong>不执行</strong></td>
+</tr>
+<tr>
+<td><code>\|</code></td>
+<td>❌ 否</td>
+<td>不管左边，右边<strong>一定执行</strong></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>—</td>
+<td>异或（两边不同才为 true）</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_43">什么时候必须用 &amp;</h3>
+<p><strong>右边有副作用、必须执行时</strong>（如参数校验希望把所有错误都报出来）：</p>
+<div class="codehilite"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">checkA</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">checkB</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// A 失败 → B 不执行</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">checkA</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;</span><span class="w">  </span><span class="n">checkB</span><span class="p">(</span><span class="n">x</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">}</span><span class="w">   </span><span class="c1">// A 失败 → B 仍然执行</span>
+</code></pre></div>
+
+<h3 id="_44">位运算只能用 &amp; | ^</h3>
+<p><code>&amp;&amp;</code> 没有位运算功能：</p>
+<div class="codehilite"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w">   </span><span class="c1">// 二进制 101</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w">   </span><span class="c1">// 二进制 011</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// 001 → 1  按位与</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// 111 → 7  按位或</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">^</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">// 110 → 6  按位异或</span>
+</code></pre></div>
+
+<h3 id="_45">选择建议</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用哪个</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>普通逻辑判断，只求结果</td>
+<td><code>&amp;&amp;</code> / <code>\|\|</code>（效率高）</td>
+</tr>
+<tr>
+<td>右边有必须执行的副作用</td>
+<td><code>&amp;</code> / <code>\|</code></td>
+</tr>
+<tr>
+<td>二进制位运算</td>
+<td>只能 <code>&amp;</code> / <code>\|</code> / <code>^</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_46">速记</h3>
+<blockquote>
+<p>效率不是唯一标准，需求决定用哪个 —— 别无脑把 <code>&amp;</code> 全换成 <code>&amp;&amp;</code></p>
+</blockquote>
+<hr />
+<h2 id="package-import">十一、package 与 import 怎么用</h2>
+<blockquote>
+<p><strong>一句话</strong>：<code>package</code> 是给类贴「地址标签」，<code>import</code> 是根据地址去「找人」。</p>
+</blockquote>
+<h3 id="package">package：类的文件夹地址</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.javase.chapter02</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">PackageTest</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>规则</strong></p>
+<ul>
+<li><code>package</code> 必须是 Java 文件的<strong>第一行</strong></li>
+<li>一个文件只能有一个 package</li>
+<li>包名<strong>全小写</strong>：<code>公司域名倒序 + 项目名 + 模块名 + 功能名</code></li>
+<li>动力节点域名 <code>powernode.com</code> → 倒序 <code>com.powernode</code></li>
+<li>例：<code>com.powernode.oa.empgt.service</code></li>
+</ul>
+<p><strong>目录结构</strong></p>
+<div class="codehilite"><pre><span></span><code>项目/
+└── com/
+    └── powernode/
+        ├── javase/
+        │   └── chapter02/
+        │       └── PackageTest.java
+        └── oa/
+            └── empgt/
+                └── service/
+                    └── EmployeeService.java
+</code></pre></div>
+
+<p>物理路径必须与 package 声明<strong>一一对应</strong>，编译器靠这个路径找类。</p>
+<h3 id="package_1">带 package 的编译与运行</h3>
+<div class="codehilite"><pre><span></span><code>javac<span class="w"> </span>-d<span class="w"> </span>.<span class="w"> </span>PackageTest.java<span class="w">                              </span><span class="c1"># -d 指定 class 文件输出目录</span>
+java<span class="w"> </span>com.powernode.javase.chapter02.PackageTest<span class="w">          </span><span class="c1"># 运行要写完整类名</span>
+</code></pre></div>
+
+<blockquote>
+<p><strong>完整类名 = 包名 + 类名</strong></p>
+</blockquote>
+<h3 id="import">import：引入其他包的类</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example.service</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.example.dao.UserDao</span><span class="p">;</span><span class="w">   </span><span class="c1">// 引入另一个包里的类</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">UserDao</span><span class="w"> </span><span class="n">userDao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">UserDao</span><span class="p">();</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>规则</strong></p>
+<ul>
+<li>import 写在 <strong>package 之后、class 之前</strong></li>
+<li>可以写多个 import</li>
+<li><code>java.lang</code> 包下的类<strong>默认自动导入</strong>，不用写（<code>String</code>、<code>System</code> 等）</li>
+<li>模糊导入 <code>import java.util.*;</code> 只导当前这一层，<strong>不递归子包</strong></li>
+</ul>
+<h3 id="_47">静态导入（少见，知道即可）</h3>
+<div class="codehilite"><pre><span></span><code><span class="kn">import static</span><span class="w"> </span><span class="nn">java.lang.System.*</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Test</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"hello"</span><span class="p">);</span><span class="w">   </span><span class="c1">// 不用写 System.out</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>可读性差，日常不建议使用。</p>
+<h3 id="_48">速记</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>关键字</th>
+<th>作用</th>
+<th>位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>package</code></td>
+<td>声明这个类属于哪个包</td>
+<td>文件第一行</td>
+</tr>
+<tr>
+<td><code>import</code></td>
+<td>引入其他包里的类</td>
+<td>package 之后、class 之前</td>
+</tr>
+</tbody>
+</table></div>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>情况</th>
+<th>是否需要 import</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>同包下的类</td>
+<td>❌ 不需要</td>
+</tr>
+<tr>
+<td>不同包下的类</td>
+<td>✅ 需要</td>
+</tr>
+<tr>
+<td><code>java.lang</code> 下的类</td>
+<td>❌ 不需要</td>
+</tr>
+</tbody>
+</table></div>
+<hr />
+<h2 id="jvm">十二、对象的创建与 JVM 内存分析</h2>
+<blockquote>
+<p><strong>一句话</strong>：引用在栈里，对象在堆里，类的元数据在元空间；方法结束栈帧销毁，对象靠 GC 回收。</p>
+</blockquote>
+<h3 id="6">6 条核心结论</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>#</th>
+<th>结论</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><code>new</code> 在<strong>堆</strong>中分配空间</td>
+<td>这块空间 + 里面的实例变量 = Java 对象</td>
+</tr>
+<tr>
+<td>②</td>
+<td>对象有内存地址，保存地址的变量叫<strong>引用</strong></td>
+<td>引用不是对象，只是「门牌号」</td>
+</tr>
+<tr>
+<td>③</td>
+<td>GC 主要针对<strong>堆内存</strong></td>
+<td>清理没有任何引用指向的对象</td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>空指针异常</strong></td>
+<td>引用为 <code>null</code> 却去访问对象的属性 / 方法</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>方法传参 = <strong>复制一份值</strong></td>
+<td>基本类型复制数据，引用类型复制地址</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td><code>this</code> 代表<strong>当前对象</strong></td>
+<td>在实例方法中，通常可省略；存于栈帧局部变量表 0 号槽位</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="1">图示 1：方法调用时引用被复制传参</h3>
+<div class="img-card"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjgwIDQ0MCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSI0NDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdTZWdvZSBVSScsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIj4KICA8dGl0bGU+5pa55rOV6LCD55So5pe25byV55So6KKr5aSN5Yi25Lyg5Y+CPC90aXRsZT4KICA8ZGVzYz5tYWluIOWSjCBzdHVkeSDkuKTkuKrmoIjluKfkuK3nmoQgemhhbmdzYW4g5byV55So6YO95oyH5ZCR5aCG5Lit5ZCM5LiA5LiqIFN0dWRlbnQg5a+56LGhPC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjgiIG1hcmtlckhlaWdodD0iOCIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPgogICAgICA8cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIFoiIGZpbGw9IiNEODVBMzAiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjQ0MCIgZmlsbD0iI0ZGRkZGRiIvPgogIDxyZWN0IHg9IjIwIiB5PSIyMCIgd2lkdGg9IjY0MCIgaGVpZ2h0PSI0MDAiIHJ4PSIxNiIgZmlsbD0iI0YxRUZFOCIgc3Ryb2tlPSIjQjRCMkE5IiBzdHJva2Utd2lkdGg9IjAuNSIvPgogIDx0ZXh0IHg9IjQwIiB5PSI0OCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzJDMkMyQSI+SlZNPC90ZXh0PgoKICA8cmVjdCB4PSI1MCIgeT0iNzAiIHdpZHRoPSIyNDAiIGhlaWdodD0iMzMwIiByeD0iMTIiIGZpbGw9IiNFNkYxRkIiIHN0cm9rZT0iIzg1QjdFQiIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSI3MCIgeT0iOTYiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiMwQzQ0N0MiPuiZmuaLn+acuuagiCBWTSBTdGFjazwvdGV4dD4KCiAgPHJlY3QgeD0iNzAiIHk9IjEyMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxMzAiIHJ4PSI4IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMzNzhBREQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iOTAiIHk9IjE0NSIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzBDNDQ3QyI+c3R1ZHkg5pa55rOV5qCI5binPC90ZXh0PgogIDx0ZXh0IHg9IjkwIiB5PSIxNzAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1RjVFNUEiPuWxgOmDqOWPmOmHjyAxPC90ZXh0PgogIDx0ZXh0IHg9IjkwIiB5PSIxODgiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1RjVFNUEiPuWxgOmDqOWPmOmHjyAyPC90ZXh0PgogIDx0ZXh0IHg9IjkwIiB5PSIyMDYiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM1RjVFNUEiPuWxgOmDqOWPmOmHjyAzPC90ZXh0PgogIDxlbGxpcHNlIGN4PSIxODUiIGN5PSIyMjgiIHJ4PSIyNiIgcnk9IjE0IiBmaWxsPSIjRkJFQUYwIiBzdHJva2U9IiNENDUzN0UiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMTg1IiB5PSIyMzIiIGZvbnQtc2l6ZT0iMTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3MjI0M0UiPjB4MTA8L3RleHQ+CiAgPHRleHQgeD0iNzUiIHk9IjIzMiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJDMkMyQSI+U3R1ZGVudCB6aGFuZ3NhbjwvdGV4dD4KCiAgPHJlY3QgeD0iNzAiIHk9IjI4MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxMDAiIHJ4PSI4IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMzNzhBREQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iOTAiIHk9IjMwNSIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzBDNDQ3QyI+bWFpbiDmlrnms5XmoIjluKc8L3RleHQ+CiAgPGVsbGlwc2UgY3g9IjE4NSIgY3k9IjMzNSIgcng9IjI2IiByeT0iMTQiIGZpbGw9IiNGQkVBRjAiIHN0cm9rZT0iI0Q0NTM3RSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSIxODUiIHk9IjMzOSIgZm9udC1zaXplPSIxMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzcyMjQzRSI+MHgxMDwvdGV4dD4KICA8dGV4dCB4PSI3NSIgeT0iMzM5IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMkMyQzJBIj5TdHVkZW50IHpoYW5nc2FuPC90ZXh0PgoKICA8cmVjdCB4PSIzNDAiIHk9IjcwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjMzMCIgcng9IjEyIiBmaWxsPSIjRkFFRURBIiBzdHJva2U9IiNFRjlGMjciIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMzYwIiB5PSI5NiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzg1NEYwQiI+5aCGIEhlYXA8L3RleHQ+CiAgPGVsbGlwc2UgY3g9IjQ5MCIgY3k9IjIzNSIgcng9IjExMCIgcnk9IjgwIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiNCQTc1MTciIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNDkwIiB5PSIyMjAiIGZvbnQtc2l6ZT0iMTQiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM0QTFCMEMiPlN0dWRlbnQg57G75Z6L5a+56LGhPC90ZXh0PgogIDx0ZXh0IHg9IjQ5MCIgeT0iMjQ1IiBmb250LXNpemU9IjEzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNUY1RTVBIj5TdHJpbmcgbmFtZSA9ICLlvKDkuIkiPC90ZXh0PgoKICA8cGF0aCBkPSJNMjExIDIyOCBMMzgwIDE5MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDg1QTMwIiBzdHJva2Utd2lkdGg9IjEuNSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KICA8cGF0aCBkPSJNMjExIDMzNSBMMzgwIDI4MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjRDg1QTMwIiBzdHJva2Utd2lkdGg9IjEuNSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KCiAgPHRleHQgeD0iMzYwIiB5PSIzOTAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM4NTRGMEIiPuS4pOS4qiB6aGFuZ3NhbiDpg73kv53lrZggMHgxMO+8jOaMh+WQkeWQjOS4gOS4quWvueixoTwvdGV4dD4KPC9zdmc+Cg==" alt="jvm-mem-01-ref-passing.svg"></div>
+
+<h3 id="2">图示 2：方法结束，栈帧销毁但对象还在</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">add</span><span class="p">(</span><span class="n">User</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">   </span><span class="c1">// u 是 main 中 u 的副本，地址都是 0x12</span>
+<span class="w">    </span><span class="n">u</span><span class="p">.</span><span class="na">age</span><span class="o">++</span><span class="p">;</span><span class="w">                       </span><span class="c1">// 改的是堆里同一个对象，main 看得到</span>
+<span class="p">}</span>
+<span class="c1">// add 结束 → add 栈帧销毁 → 但堆里的 User 对象仍在（main 的 u 还指着它）</span>
+</code></pre></div>
+
+<div class="img-card"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjgwIDM2MCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdTZWdvZSBVSScsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIj4KICA8dGl0bGU+YWRkIOaWueazlee7k+adn+WQjuagiOW4p+iiq+mUgOavgTwvdGl0bGU+CiAgPGRlc2M+bWFpbiDkuK3nmoQgdSDku43mjIflkJHloIbkuK3nmoQgVXNlciDlr7nosaHvvIxhZGQg5qCI5bin6Jm954S26KKr6ZSA5q+B5L2G5a+56LGh5LuN5a2Y5rS7PC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0iYXJyb3cyIiB2aWV3Qm94PSIwIDAgMTAgMTAiIHJlZlg9IjkiIHJlZlk9IjUiIG1hcmtlcldpZHRoPSI4IiBtYXJrZXJIZWlnaHQ9IjgiIG9yaWVudD0iYXV0by1zdGFydC1yZXZlcnNlIj4KICAgICAgPHBhdGggZD0iTTAgMCBMMTAgNSBMMCAxMCBaIiBmaWxsPSIjRDg1QTMwIi8+CiAgICA8L21hcmtlcj4KICA8L2RlZnM+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzNjAiIGZpbGw9IiNGRkZGRkYiLz4KICA8cmVjdCB4PSIyMCIgeT0iMjAiIHdpZHRoPSI2NDAiIGhlaWdodD0iMzIwIiByeD0iMTYiIGZpbGw9IiNGMUVGRTgiIHN0cm9rZT0iI0I0QjJBOSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSI0MCIgeT0iNDgiIGZvbnQtc2l6ZT0iMTYiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiMyQzJDMkEiPkpWTTwvdGV4dD4KCiAgPHJlY3QgeD0iNTAiIHk9IjcwIiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI1MCIgcng9IjEyIiBmaWxsPSIjRTZGMUZCIiBzdHJva2U9IiM4NUI3RUIiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNzAiIHk9Ijk2IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjMEM0NDdDIj7omZrmi5/mnLrmoIggVk0gU3RhY2s8L3RleHQ+CgogIDxyZWN0IHg9IjcwIiB5PSI5MCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxMTAiIHJ4PSI4IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiNFMjRCNEEiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWRhc2hhcnJheT0iNCAyIi8+CiAgPGxpbmUgeDE9IjgwIiB5MT0iMTAwIiB4Mj0iMjYwIiB5Mj0iMTkwIiBzdHJva2U9IiNFMjRCNEEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPGxpbmUgeDE9IjI2MCIgeTE9IjEwMCIgeDI9IjgwIiB5Mj0iMTkwIiBzdHJva2U9IiNFMjRCNEEiIHN0cm9rZS13aWR0aD0iMS41Ii8+CiAgPHRleHQgeD0iMTcwIiB5PSIxMjUiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiNBMzJEMkQiPmFkZCDmlrnms5XmoIjluKfvvIjlt7LplIDmr4HvvIk8L3RleHQ+CiAgPHRleHQgeD0iOTAiIHk9IjE1NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJDMkMyQSI+VXNlciB1PC90ZXh0PgogIDxlbGxpcHNlIGN4PSIxNzAiIGN5PSIxNTUiIHJ4PSIzMiIgcnk9IjE0IiBmaWxsPSIjRkJFQUYwIiBzdHJva2U9IiNENDUzN0UiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMTcwIiB5PSIxNTkiIGZvbnQtc2l6ZT0iMTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3MjI0M0UiPjB4MTI8L3RleHQ+CgogIDxyZWN0IHg9IjcwIiB5PSIyMjAiIHdpZHRoPSIyMDAiIGhlaWdodD0iODAiIHJ4PSI4IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMzNzhBREQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iOTAiIHk9IjI0NSIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzBDNDQ3QyI+bWFpbiDmlrnms5XmoIjluKc8L3RleHQ+CiAgPHRleHQgeD0iOTAiIHk9IjI3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJDMkMyQSI+VXNlciB1PC90ZXh0PgogIDxlbGxpcHNlIGN4PSIxNzAiIGN5PSIyNzUiIHJ4PSIzMiIgcnk9IjE0IiBmaWxsPSIjRkJFQUYwIiBzdHJva2U9IiNENDUzN0UiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMTcwIiB5PSIyNzkiIGZvbnQtc2l6ZT0iMTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3MjI0M0UiPjB4MTI8L3RleHQ+CgogIDxyZWN0IHg9IjM0MCIgeT0iNzAiIHdpZHRoPSIzMDAiIGhlaWdodD0iMjUwIiByeD0iMTIiIGZpbGw9IiNGQUVFREEiIHN0cm9rZT0iI0VGOUYyNyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSIzNjAiIHk9Ijk2IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjODU0RjBCIj7loIYgSGVhcDwvdGV4dD4KICA8ZWxsaXBzZSBjeD0iNDkwIiBjeT0iMTk1IiByeD0iMTEwIiByeT0iNzAiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0JBNzUxNyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSI0OTAiIHk9IjE4NSIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBMUIwQyI+VXNlciDnsbvlnovlr7nosaE8L3RleHQ+CiAgPHRleHQgeD0iNDkwIiB5PSIyMTAiIGZvbnQtc2l6ZT0iMTMiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1RjVFNUEiPmludCBhZ2UgPSAxMTwvdGV4dD4KCiAgPHBhdGggZD0iTTIwMiAxNTUgTDM4MCAxNzAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q4NUEzMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cyKSIvPgogIDxwYXRoIGQ9Ik0yMDIgMjc1IEwzODAgMjIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEODVBMzAiIHN0cm9rZS13aWR0aD0iMS41IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93MikiLz4KCiAgPHRleHQgeD0iMzYwIiB5PSIzMDAiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiM4NTRGMEIiPuagiOW4p+mUgOavge+8jOS9huWvueixoeS+neeEtuWtmOa0u++8iG1haW4g55qEIHUg6L+Y5oyH552A5a6D77yJPC90ZXh0Pgo8L3N2Zz4K" alt="jvm-mem-02-frame-destroyed.svg"></div>
+
+<p><strong>注意</strong>：在 <code>add</code> 内部写 <code>u = null</code>，<strong>不会影响</strong> main 的 <code>u</code> —— 改的只是副本。</p>
+<h3 id="3java-8">图示 3：Java 8 之后的三块内存区域</h3>
+<div class="img-card"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjgwIDQzMCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSI0MzAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdTZWdvZSBVSScsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIj4KICA8dGl0bGU+SmF2YSA4IOS5i+WQjiBKVk0g5YaF5a2Y57uT5p6EPC90aXRsZT4KICA8ZGVzYz7omZrmi5/mnLrmoIjjgIHloIbjgIHlhYPnqbrpl7QgTWV0YXNwYWNlIOeahOWIhuW4g++8jOS7peWPiuWxgOmDqOWPmOmHj+WSjOWunuS+i+WPmOmHj+eahOWtmOWCqOS9jee9rjwvZGVzYz4KICA8ZGVmcz4KICAgIDxtYXJrZXIgaWQ9ImFycm93MyIgdmlld0JveD0iMCAwIDEwIDEwIiByZWZYPSI5IiByZWZZPSI1IiBtYXJrZXJXaWR0aD0iOCIgbWFya2VySGVpZ2h0PSI4IiBvcmllbnQ9ImF1dG8tc3RhcnQtcmV2ZXJzZSI+CiAgICAgIDxwYXRoIGQ9Ik0wIDAgTDEwIDUgTDAgMTAgWiIgZmlsbD0iI0Q4NUEzMCIvPgogICAgPC9tYXJrZXI+CiAgPC9kZWZzPgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI2ODAiIGhlaWdodD0iNDMwIiBmaWxsPSIjRkZGRkZGIi8+CiAgPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjM5MCIgcng9IjE2IiBmaWxsPSIjRjFFRkU4IiBzdHJva2U9IiNCNEIyQTkiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNDAiIHk9IjQ4IiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjMkMyQzJBIj5KVk3vvIhKYXZhIDgg5LmL5ZCO77yM5YyF5ZCrIEphdmEgOO+8iTwvdGV4dD4KCiAgPHJlY3QgeD0iNDAiIHk9IjcwIiB3aWR0aD0iMTgwIiBoZWlnaHQ9IjMzMCIgcng9IjEyIiBmaWxsPSIjRTZGMUZCIiBzdHJva2U9IiM4NUI3RUIiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNjAiIHk9Ijk2IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjMEM0NDdDIj7omZrmi5/mnLrmoIggVk0gU3RhY2s8L3RleHQ+CiAgPHJlY3QgeD0iNTUiIHk9IjEyMCIgd2lkdGg9IjE1MCIgaGVpZ2h0PSIyNjAiIHJ4PSI4IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMzNzhBREQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNzAiIHk9IjE0NSIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzBDNDQ3QyI+bWFpbiDmlrnms5XmoIjluKc8L3RleHQ+CiAgPHRleHQgeD0iNzAiIHk9IjE3NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJDMkMyQSI+aW50IGkgPSAxMDwvdGV4dD4KICA8dGV4dCB4PSI1NSIgeT0iMjA1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjMkMyQzJBIj5TdHVkZW50IHMxPC90ZXh0PgogIDxlbGxpcHNlIGN4PSIxNTUiIGN5PSIyMDUiIHJ4PSIzMiIgcnk9IjE0IiBmaWxsPSIjRkJFQUYwIiBzdHJva2U9IiNENDUzN0UiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMTU1IiB5PSIyMDkiIGZvbnQtc2l6ZT0iMTEiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM3MjI0M0UiPjB4MjM8L3RleHQ+CiAgPHRleHQgeD0iNTUiIHk9IjIzNSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJDMkMyQSI+U3R1ZGVudCBzMjwvdGV4dD4KICA8ZWxsaXBzZSBjeD0iMTU1IiBjeT0iMjM1IiByeD0iMzIiIHJ5PSIxNCIgZmlsbD0iI0ZCRUFGMCIgc3Ryb2tlPSIjRDQ1MzdFIiBzdHJva2Utd2lkdGg9IjAuNSIvPgogIDx0ZXh0IHg9IjE1NSIgeT0iMjM5IiBmb250LXNpemU9IjExIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNzIyNDNFIj4weDVlNjwvdGV4dD4KICA8dGV4dCB4PSI1NSIgeT0iMzUwIiBmb250LXNpemU9IjExIiBmaWxsPSIjMEM0NDdDIj7lsYDpg6jlj5jph4/lrZjlgqjlnKjov5nph4w8L3RleHQ+CgogIDxyZWN0IHg9IjI1MCIgeT0iNzAiIHdpZHRoPSIyNDAiIGhlaWdodD0iMzMwIiByeD0iMTIiIGZpbGw9IiNGQUVFREEiIHN0cm9rZT0iI0VGOUYyNyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSIyNzAiIHk9Ijk2IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjODU0RjBCIj7loIYgSGVhcDwvdGV4dD4KCiAgPGVsbGlwc2UgY3g9IjM3MCIgY3k9IjE1NSIgcng9IjgwIiByeT0iNDUiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0JBNzUxNyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSIzNzAiIHk9IjE0NSIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBMUIwQyI+U3R1ZGVudFRlc3QwMS5jbGFzczwvdGV4dD4KICA8dGV4dCB4PSIzNzAiIHk9IjE2NSIgZm9udC1zaXplPSIxMSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzVGNUU1QSI+U3RyaW5nLmNsYXNzPC90ZXh0PgoKICA8ZWxsaXBzZSBjeD0iMzcwIiBjeT0iMzAwIiByeD0iMTAwIiByeT0iNzAiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZT0iI0JBNzUxNyIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSIzNzAiIHk9IjI4MCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBMUIwQyI+U3R1ZGVudCDlr7nosaE8L3RleHQ+CiAgPHRleHQgeD0iMzcwIiB5PSIzMDIiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiM1RjVFNUEiPlN0cmluZyBuYW1lID0gInpoYW5nc2FuIjwvdGV4dD4KICA8dGV4dCB4PSIzNzAiIHk9IjMyMCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzVGNUU1QSI+aW50IGFnZTwvdGV4dD4KICA8dGV4dCB4PSIzNzAiIHk9IjMzOCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzVGNUU1QSI+Ym9vbGVhbiBnZW5kZXI8L3RleHQ+CiAgPHRleHQgeD0iMjUwIiB5PSIzNTAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiM4NTRGMEIiPuWunuS+i+WPmOmHj+WtmOWCqOWcqOi/memHjDwvdGV4dD4KCiAgPHJlY3QgeD0iNTIwIiB5PSI3MCIgd2lkdGg9IjEyMCIgaGVpZ2h0PSIzMzAiIHJ4PSIxMiIgZmlsbD0iI0UxRjVFRSIgc3Ryb2tlPSIjNURDQUE1IiBzdHJva2Utd2lkdGg9IjAuNSIvPgogIDx0ZXh0IHg9IjUzMCIgeT0iOTYiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI1MDAiIGZpbGw9IiMwODUwNDEiPuWFg+epuumXtDwvdGV4dD4KICA8dGV4dCB4PSI1MzAiIHk9IjExNSIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzBGNkU1NiI+TWV0YXNwYWNlPC90ZXh0PgogIDx0ZXh0IHg9IjUzNSIgeT0iMTQ1IiBmb250LXNpemU9IjExIiBmaWxsPSIjMkMyQzJBIj5TdHVkZW50VGVzdDAxPC90ZXh0PgogIDx0ZXh0IHg9IjUzNSIgeT0iMTU5IiBmb250LXNpemU9IjExIiBmaWxsPSIjMkMyQzJBIj4uY2xhc3M8L3RleHQ+CiAgPHRleHQgeD0iNTM1IiB5PSIxODQiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMyQzJDMkEiPlN0dWRlbnQuY2xhc3M8L3RleHQ+CiAgPHRleHQgeD0iNTM1IiB5PSIyMDQiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMyQzJDMkEiPlN0cmluZy5jbGFzczwvdGV4dD4KICA8dGV4dCB4PSI1MzUiIHk9IjIyNCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzJDMkMyQSI+U3lzdGVtLmNsYXNzPC90ZXh0PgogIDx0ZXh0IHg9IjUzNSIgeT0iMjU1IiBmb250LXNpemU9IjExIiBmaWxsPSIjNUY1RTVBIj7igKbigKY8L3RleHQ+CiAgPHRleHQgeD0iNTM1IiB5PSIzNTAiIGZvbnQtc2l6ZT0iMTEiIGZpbGw9IiMwODUwNDEiPuS9v+eUqOeahOacrOWcsOWGheWtmDwvdGV4dD4KCiAgPHBhdGggZD0iTTE4NyAyMDUgTDI3MCAzMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0Q4NUEzMCIgc3Ryb2tlLXdpZHRoPSIxLjUiIG1hcmtlci1lbmQ9InVybCgjYXJyb3czKSIvPgogIDxwYXRoIGQ9Ik0xODcgMjM1IEwyNzAgMzIwIiBmaWxsPSJub25lIiBzdHJva2U9IiNEODVBMzAiIHN0cm9rZS13aWR0aD0iMS41IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93MykiLz4KPC9zdmc+Cg==" alt="jvm-mem-03-java8-memory.svg"></div>
+
+<blockquote>
+<p>类对象（<code>.class</code> 的运行时表示）也在堆中，类的<strong>元数据</strong>在元空间 Metaspace（使用本地内存）。</p>
+</blockquote>
+<h3 id="4-gc">图示 4：引用断开 → 对象变垃圾 → GC 回收</h3>
+<div class="codehilite"><pre><span></span><code><span class="n">Pet</span><span class="w"> </span><span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Pet</span><span class="p">(</span><span class="s">"小黑"</span><span class="p">,</span><span class="w"> </span><span class="s">"2012-10-11"</span><span class="p">,</span><span class="w"> </span><span class="sc">'雄'</span><span class="p">);</span>
+<span class="n">dog</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span><span class="w">               </span><span class="c1">// 引用断开</span>
+<span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">dog</span><span class="p">.</span><span class="na">name</span><span class="p">);</span><span class="w">   </span><span class="c1">// ❌ NullPointerException</span>
+</code></pre></div>
+
+<div class="img-card"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjgwIDM2MCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIzNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdTZWdvZSBVSScsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIj4KICA8dGl0bGU+5byV55So5pat5byA5ZCO5a+56LGh6KKrIEdDIOWbnuaUtjwvdGl0bGU+CiAgPGRlc2M+bWFpbiDmlrnms5XmoIjluKfkuK3nmoQgZG9nIOW8leeUqOS4uiBudWxs77yM5aCG5LitIFBldCDlr7nosaHmsqHmnInku7vkvZXlvJXnlKjmjIflkJHvvIzmnIDnu4jooqsgR0Mg5Zue5pS2PC9kZXNjPgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSI2ODAiIGhlaWdodD0iMzYwIiBmaWxsPSIjRkZGRkZGIi8+CiAgPHJlY3QgeD0iMjAiIHk9IjIwIiB3aWR0aD0iNjQwIiBoZWlnaHQ9IjMyMCIgcng9IjE2IiBmaWxsPSIjRjFFRkU4IiBzdHJva2U9IiNCNEIyQTkiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNDAiIHk9IjQ4IiBmb250LXNpemU9IjE2IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjMkMyQzJBIj5KVk3vvIhKYXZhIDgg5LmL5ZCO77yM5YyF5ZCrIEphdmEgOO+8iTwvdGV4dD4KCiAgPHJlY3QgeD0iNTAiIHk9IjcwIiB3aWR0aD0iMjQwIiBoZWlnaHQ9IjI1MCIgcng9IjEyIiBmaWxsPSIjRTZGMUZCIiBzdHJva2U9IiM4NUI3RUIiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNzAiIHk9Ijk2IiBmb250LXNpemU9IjE0IiBmb250LXdlaWdodD0iNTAwIiBmaWxsPSIjMEM0NDdDIj7omZrmi5/mnLrmoIggVk0gU3RhY2s8L3RleHQ+CiAgPHJlY3QgeD0iNzAiIHk9IjEzMCIgd2lkdGg9IjIwMCIgaGVpZ2h0PSIxMDAiIHJ4PSI4IiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiMzNzhBREQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iOTAiIHk9IjE2MCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzBDNDQ3QyI+bWFpbiDmlrnms5XmoIjluKc8L3RleHQ+CiAgPHRleHQgeD0iOTAiIHk9IjE5NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzJDMkMyQSI+UGV0IGRvZzwvdGV4dD4KICA8ZWxsaXBzZSBjeD0iMTgwIiBjeT0iMTk1IiByeD0iMzYiIHJ5PSIxNiIgZmlsbD0iI0ZCRUFGMCIgc3Ryb2tlPSIjRDQ1MzdFIiBzdHJva2Utd2lkdGg9IjAuNSIvPgogIDx0ZXh0IHg9IjE4MCIgeT0iMTk5IiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNzIyNDNFIj5udWxsPC90ZXh0PgoKICA8cmVjdCB4PSIzNDAiIHk9IjcwIiB3aWR0aD0iMzAwIiBoZWlnaHQ9IjI1MCIgcng9IjEyIiBmaWxsPSIjRkFFRURBIiBzdHJva2U9IiNFRjlGMjciIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMzYwIiB5PSI5NiIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzg1NEYwQiI+5aCGIEhlYXA8L3RleHQ+CiAgPGVsbGlwc2UgY3g9IjQ5MCIgY3k9IjE5NSIgcng9IjExMCIgcnk9IjgwIiBmaWxsPSIjRkZGRkZGIiBzdHJva2U9IiNCQTc1MTciIHN0cm9rZS13aWR0aD0iMC41IiBzdHJva2UtZGFzaGFycmF5PSI0IDIiLz4KICA8dGV4dCB4PSI0OTAiIHk9IjE3MCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzRBMUIwQyI+UGV0IOWvueixoTwvdGV4dD4KICA8dGV4dCB4PSI0OTAiIHk9IjE5NSIgZm9udC1zaXplPSIxMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzVGNUU1QSI+U3RyaW5nIG5hbWUgPSAi5bCP6buRIjwvdGV4dD4KICA8dGV4dCB4PSI0OTAiIHk9IjIxNSIgZm9udC1zaXplPSIxMyIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzVGNUU1QSI+U3RyaW5nIGJpcnRoID0gIjIwMTItMTAtMTEiPC90ZXh0PgogIDx0ZXh0IHg9IjQ5MCIgeT0iMjM1IiBmb250LXNpemU9IjEzIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjNUY1RTVBIj5jaGFyIHNleCA9ICfpm4QnPC90ZXh0PgoKICA8cmVjdCB4PSI0NjgiIHk9IjkwIiB3aWR0aD0iMTYyIiBoZWlnaHQ9IjU1IiByeD0iOCIgZmlsbD0iI0ZDRUJFQiIgc3Ryb2tlPSIjRTI0QjRBIiBzdHJva2Utd2lkdGg9IjAuNSIvPgogIDx0ZXh0IHg9IjQ4MCIgeT0iMTE1IiBmb250LXNpemU9IjEyIiBmaWxsPSIjQTMyRDJEIj7msqHmnInku7vkvZXlvJXnlKjmjIflkJHor6Xlr7nosaE8L3RleHQ+CiAgPHRleHQgeD0iNDgwIiB5PSIxMzMiIGZvbnQtc2l6ZT0iMTIiIGZpbGw9IiNBMzJEMkQiPuacgOe7iOS8muiiqyBHQyDlm57mlLY8L3RleHQ+CiAgPHBhdGggZD0iTTQ2OCAxMTggTDQ0MCAxNTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI0UyNEI0QSIgc3Ryb2tlLXdpZHRoPSIxIiBzdHJva2UtZGFzaGFycmF5PSIzIDIiLz4KCiAgPHJlY3QgeD0iNTQ1IiB5PSIyNzAiIHdpZHRoPSI4NSIgaGVpZ2h0PSI0MCIgcng9IjgiIGZpbGw9IiNFMUY1RUUiIHN0cm9rZT0iIzVEQ0FBNSIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSI1NTUiIHk9IjI5MCIgZm9udC1zaXplPSIxMSIgZmlsbD0iIzA4NTA0MSI+5YWD56m66Ze0PC90ZXh0PgogIDx0ZXh0IHg9IjU1NSIgeT0iMzA1IiBmb250LXNpemU9IjExIiBmaWxsPSIjMDg1MDQxIj5NZXRhc3BhY2U8L3RleHQ+Cjwvc3ZnPgo=" alt="jvm-mem-04-null-gc.svg"></div>
+
+<h3 id="_49">参数传递的本质</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>参数类型</th>
+<th>传递的内容</th>
+<th>方法内修改的影响</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>基本类型</td>
+<td>数据值的副本</td>
+<td>不影响原变量</td>
+</tr>
+<tr>
+<td>引用类型</td>
+<td>地址的副本</td>
+<td>改<strong>对象内容</strong>会影响；改<strong>引用本身</strong>（如 <code>u = null</code>）不影响</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="this">this 关键字</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">      </span><span class="c1">// this.name = 当前对象的 name</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<ul>
+<li><code>this</code> 是引用，指向<strong>当前正在调用该方法的对象</strong></li>
+<li>编译后存放在<strong>实例方法栈帧局部变量表的 0 号槽位</strong></li>
+<li>大部分情况下 <code>this.</code> 可以省略，仅当<strong>局部变量与成员变量同名</strong>时必须写</li>
+</ul>
+<h3 id="_50">速记</h3>
+<blockquote>
+<p>对象在堆，引用在栈，类信息在元空间
+方法结束栈帧销毁，对象没人指就 GC
+传参一律传副本，改内容生效、改引用不生效</p>
+</blockquote>
+<hr />
+<h2 id="_51">十三、构造方法</h2>
+<blockquote>
+<p><strong>一句话</strong>：<code>new</code> 对象时自动调用、专门用来初始化对象的特殊方法。</p>
+</blockquote>
+<h3 id="_52">作用</h3>
+<p>对象创建分两个阶段，<strong>不能颠倒、不可分割</strong>：</p>
+<ol>
+<li><strong>创建阶段</strong>：<code>new</code> 在堆里开辟空间，给属性赋<strong>默认值</strong></li>
+<li><strong>初始化阶段</strong>：执行构造方法，把属性改成<strong>你想要的值</strong></li>
+</ol>
+<div class="codehilite"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"张三"</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+<span class="c1">// ① new 在堆中创建对象</span>
+<span class="c1">// ② 调用 Student("张三", 20) 初始化对象</span>
+</code></pre></div>
+
+<h3 id="_53">定义三要素</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 构造方法：没有返回值，方法名必须和类名一样</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>要点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>没有返回值</td>
+<td>连 <code>void</code> 都不能写</td>
+</tr>
+<tr>
+<td>方法名 = 类名</td>
+<td>大小写必须完全一致</td>
+</tr>
+<tr>
+<td>可重载</td>
+<td>参数列表不同即可</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_54">调用方式</h3>
+<p>构造方法不是用 <code>.方法名()</code> 调用，而是跟在 <code>new</code> 后面：</p>
+<div class="codehilite"><pre><span></span><code><span class="n">Student</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"张三"</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span>
+</code></pre></div>
+
+<h3 id="_55">无参构造的坑（重点）</h3>
+<p><strong>如果一个构造方法都没写，Java 会自动送你一个无参构造；一旦你写了任意构造方法，系统就不再送了。</strong></p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">Student</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"张三"</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✅</span>
+<span class="n">Student</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">();</span><span class="w">              </span><span class="c1">// ❌ 编译报错！无参构造已消失</span>
+</code></pre></div>
+
+<p><strong>建议</strong>：不管需不需要，都显式把无参构造写出来。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">   </span><span class="c1">// 手动加上，避免后续踩坑</span>
+</code></pre></div>
+
+<h3 id="_56">重载示例</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">()</span><span class="w"> </span><span class="p">{}</span><span class="w">                              </span><span class="c1">// 无参</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="c1">// 一个参数</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">            </span><span class="c1">// 两个参数</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="_57">构造代码块</h3>
+<p>类里用 <code>{}</code> 包起来的代码，<strong>每次创建对象时都会执行</strong>，而且在构造方法之前执行。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 构造代码块</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"构造代码块执行"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"构造方法执行"</span><span class="p">);</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">"张三"</span><span class="p">);</span>
+<span class="c1">// 输出：</span>
+<span class="c1">// 构造代码块执行</span>
+<span class="c1">// 构造方法执行</span>
+</code></pre></div>
+
+<h3 id="_58">对象初始化全过程</h3>
+<div class="img-card"><img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNjgwIDE5MCIgd2lkdGg9IjY4MCIgaGVpZ2h0PSIxOTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZm9udC1mYW1pbHk9Ii1hcHBsZS1zeXN0ZW0sICdTZWdvZSBVSScsICdNaWNyb3NvZnQgWWFIZWknLCBzYW5zLXNlcmlmIj4KICA8dGl0bGU+5a+56LGh5Yid5aeL5YyW5omn6KGM6aG65bqPPC90aXRsZT4KICA8ZGVzYz5uZXcg5a+56LGh5pe25L6d5qyh5omn6KGM77ya5bGe5oCn6LWL6buY6K6k5YC844CB5p6E6YCg5Luj56CB5Z2X44CB5p6E6YCg5pa55rOV5L2T44CB5Yid5aeL5YyW5a6M5q+VPC9kZXNjPgogIDxkZWZzPgogICAgPG1hcmtlciBpZD0iYXJyb3ciIHZpZXdCb3g9IjAgMCAxMCAxMCIgcmVmWD0iOSIgcmVmWT0iNSIgbWFya2VyV2lkdGg9IjgiIG1hcmtlckhlaWdodD0iOCIgb3JpZW50PSJhdXRvLXN0YXJ0LXJldmVyc2UiPgogICAgICA8cGF0aCBkPSJNMCAwIEwxMCA1IEwwIDEwIFoiIGZpbGw9IiMxODVGQTUiLz4KICAgIDwvbWFya2VyPgogIDwvZGVmcz4KICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNjgwIiBoZWlnaHQ9IjE5MCIgZmlsbD0iI0ZGRkZGRiIvPgogIDx0ZXh0IHg9IjQwIiB5PSI0MiIgZm9udC1zaXplPSIxNSIgZm9udC13ZWlnaHQ9IjUwMCIgZmlsbD0iIzJDMkMyQSI+5a+56LGh5Yid5aeL5YyW5omn6KGM6aG65bqPPC90ZXh0PgoKICA8cmVjdCB4PSI0MiIgeT0iNzAiIHdpZHRoPSIxMzAiIGhlaWdodD0iNTYiIHJ4PSI4IiBmaWxsPSIjRTZGMUZCIiBzdHJva2U9IiMzNzhBREQiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iMTA3IiB5PSI5MCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzBDNDQ3QyI+4pGgIOW8gOi+n+epuumXtDwvdGV4dD4KICA8dGV4dCB4PSIxMDciIHk9IjExMCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzE4NUZBNSI+5bGe5oCn6LWL6buY6K6k5YC8PC90ZXh0PgoKICA8cmVjdCB4PSIxOTgiIHk9IjcwIiB3aWR0aD0iMTMwIiBoZWlnaHQ9IjU2IiByeD0iOCIgZmlsbD0iI0U2RjFGQiIgc3Ryb2tlPSIjMzc4QUREIiBzdHJva2Utd2lkdGg9IjAuNSIvPgogIDx0ZXh0IHg9IjI2MyIgeT0iOTAiIGZvbnQtc2l6ZT0iMTMiIGZvbnQtd2VpZ2h0PSI1MDAiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMwQzQ0N0MiPuKRoSDmnoTpgKDku6PnoIHlnZc8L3RleHQ+CiAgPHRleHQgeD0iMjYzIiB5PSIxMTAiIGZvbnQtc2l6ZT0iMTIiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZpbGw9IiMxODVGQTUiPnt9IOWGheS7o+eggeaJp+ihjDwvdGV4dD4KCiAgPHJlY3QgeD0iMzU0IiB5PSI3MCIgd2lkdGg9IjEzMCIgaGVpZ2h0PSI1NiIgcng9IjgiIGZpbGw9IiNFNkYxRkIiIHN0cm9rZT0iIzM3OEFERCIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KICA8dGV4dCB4PSI0MTkiIHk9IjkwIiBmb250LXNpemU9IjEzIiBmb250LXdlaWdodD0iNTAwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMEM0NDdDIj7ikaIg5p6E6YCg5pa55rOV5L2TPC90ZXh0PgogIDx0ZXh0IHg9IjQxOSIgeT0iMTEwIiBmb250LXNpemU9IjEyIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmaWxsPSIjMTg1RkE1Ij7otYvlgLzkvaDnu5nnmoTlgLw8L3RleHQ+CgogIDxyZWN0IHg9IjUxMCIgeT0iNzAiIHdpZHRoPSIxMzAiIGhlaWdodD0iNTYiIHJ4PSI4IiBmaWxsPSIjRTFGNUVFIiBzdHJva2U9IiMxRDlFNzUiIHN0cm9rZS13aWR0aD0iMC41Ii8+CiAgPHRleHQgeD0iNTc1IiB5PSI5MCIgZm9udC1zaXplPSIxMyIgZm9udC13ZWlnaHQ9IjUwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzA4NTA0MSI+4pGjIOWIneWni+WMluWujOavlTwvdGV4dD4KICA8dGV4dCB4PSI1NzUiIHk9IjExMCIgZm9udC1zaXplPSIxMiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZmlsbD0iIzBGNkU1NiI+5a+56LGh5Y+v5Lul5L2/55SoPC90ZXh0PgoKICA8cGF0aCBkPSJNMTcyIDk4IEwxOTQgOTgiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzE4NUZBNSIgc3Ryb2tlLXdpZHRoPSIxLjUiIG1hcmtlci1lbmQ9InVybCgjYXJyb3cpIi8+CiAgPHBhdGggZD0iTTMyOCA5OCBMMzUwIDk4IiBmaWxsPSJub25lIiBzdHJva2U9IiMxODVGQTUiIHN0cm9rZS13aWR0aD0iMS41IiBtYXJrZXItZW5kPSJ1cmwoI2Fycm93KSIvPgogIDxwYXRoIGQ9Ik00ODQgOTggTDUwNiA5OCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMTg1RkE1IiBzdHJva2Utd2lkdGg9IjEuNSIgbWFya2VyLWVuZD0idXJsKCNhcnJvdykiLz4KCiAgPHRleHQgeD0iNDAiIHk9IjE1NSIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzVGNUU1QSI+5q+P5qyhIG5ldyDlr7nosaHpg73kvJrlrozmlbTotbDkuIDpgY3vvIzmnoTpgKDku6PnoIHlnZfkuIDlrprlnKjmnoTpgKDmlrnms5XkvZPkuYvliY3miafooYw8L3RleHQ+Cjwvc3ZnPgo=" alt="java-obj-init-order.svg"></div>
+
+<ol>
+<li><code>new</code> 在堆中开辟空间，属性赋默认值</li>
+<li>执行<strong>构造代码块</strong></li>
+<li>执行<strong>构造方法体</strong></li>
+<li>构造方法结束，对象初始化完成</li>
+</ol>
+<h3 id="_59">速记</h3>
+<blockquote>
+<p>构造方法 = 没有返回值 + 方法名同类名 + new 时自动调用
+建议无参构造显式写，否则写了有参构造后默认无参会消失</p>
+</blockquote>
+<hr />
+<h2 id="this_1">十四、this 关键字</h2>
+<blockquote>
+<p><strong>一句话</strong>：<code>this</code> 是指向当前对象的引用。</p>
+</blockquote>
+<h3 id="this_2">this 是什么</h3>
+<p><code>this</code> 本质上是一个<strong>引用变量</strong>，保存着<strong>当前正在调用方法的那个对象</strong>的内存地址。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">show</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">);</span><span class="w">     </span><span class="c1">// 打印当前对象的地址</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="this_3">this 能干嘛</h3>
+<p>通过 <code>this.</code> 可以访问实例变量、调用实例方法：</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">            </span><span class="c1">// this.name = 当前对象的 name</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">sayHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">study</span><span class="p">();</span><span class="w">                </span><span class="c1">// 调用当前对象的 study 方法</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">study</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">" 在学习"</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="this_4">this. 什么时候可以省略</h3>
+<p>大部分情况下，<code>this.</code> 可以省略：</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">study</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✅ 完整写法</span>
+<span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">name</span><span class="p">);</span><span class="w">        </span><span class="c1">// ✅ 省略写法，效果一样</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>不能省略</strong>的情况：<strong>局部变量和实例变量同名</strong>。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setName</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">      </span><span class="c1">// ❌ 两个都是参数 name，没意义</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w"> </span><span class="c1">// ✅ 左边是当前对象的 name，右边是参数 name</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="this_5">this 不能出现在静态方法中</h3>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">test</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// System.out.println(this.name);   // ❌ 编译报错</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>原因</strong>：静态方法属于类，不属于某个对象；调用时可能根本不存在对象，<code>this</code> 就没有指向。</p>
+<h3 id="this_6">this(实参) 调用其他构造方法</h3>
+<p><code>this(实参)</code> 只能出现在<strong>构造方法的第一行</strong>，用来调用本类中另一个构造方法，避免重复写代码。</p>
+<div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// 无参构造调用有参构造</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">(</span><span class="s">"张三"</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">);</span><span class="w">   </span><span class="c1">// ✅ 必须是第一行</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p><strong>注意</strong>：
+- <code>this(...)</code> 和 <code>super(...)</code> 都必须放在构造方法<strong>第一行</strong>
+- 所以一个构造方法里<strong>不能同时出现</strong> <code>this(...)</code> 和 <code>super(...)</code></p>
+<h3 id="this_7">this 存储在哪</h3>
+<p>编译后，<code>this</code> 被放在<strong>实例方法栈帧局部变量表的 0 号槽位</strong>。每个实例方法被调用时，JVM 都会悄悄把当前对象的引用塞进去。</p>
+<h3 id="_60">速记</h3>
+<blockquote>
+<p><code>this</code> = 指向当前对象的引用；同名时必须写，静态方法里不能用，<code>this(实参)</code> 调别的构造方法且必须放第一行</p>
+</blockquote>
+<hr />
+<h2 id="_61">附录：速查总表</h2>
+<h3 id="_62">字面量后缀规则</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>写法</th>
+<th>默认类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>100</code></td>
+<td>int</td>
+<td>整数字面量默认 int</td>
+</tr>
+<tr>
+<td><code>100L</code></td>
+<td>long</td>
+<td>超 int 范围必须加 <code>L</code></td>
+</tr>
+<tr>
+<td><code>3.0</code></td>
+<td>double</td>
+<td>浮点字面量默认 double</td>
+</tr>
+<tr>
+<td><code>3.0F</code></td>
+<td>float</td>
+<td>赋给 float 必须加 <code>F</code></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_63">类型提升链</h3>
+<div class="codehilite"><pre><span></span><code>byte / short / char  →  int  →  long  →  float  →  double
+    （一运算就变 int）        （自动拓宽，无需强转）
+</code></pre></div>
+
+<h3 id="_64">内存区域速查</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>区域</th>
+<th>存储内容</th>
+<th>生命周期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>虚拟机栈</td>
+<td>局部变量、方法栈帧</td>
+<td>方法结束即销毁栈帧</td>
+</tr>
+<tr>
+<td>堆 Heap</td>
+<td>对象、实例变量、类对象</td>
+<td>由 GC 回收</td>
+</tr>
+<tr>
+<td>元空间 Metaspace</td>
+<td>类的元数据（.class 信息）</td>
+<td>使用本地内存</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_65">常见概念速查</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>概念</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对象</td>
+<td>堆里的数据块</td>
+</tr>
+<tr>
+<td>引用</td>
+<td>保存对象地址的变量</td>
+</tr>
+<tr>
+<td>空指针</td>
+<td>引用为 null 却去访问对象</td>
+</tr>
+<tr>
+<td>参数传递</td>
+<td>复制一份值再传</td>
+</tr>
+<tr>
+<td>this</td>
+<td>指向当前对象的引用</td>
+</tr>
+<tr>
+<td>构造方法</td>
+<td>没有返回值、方法名同类名、new 时自动调用</td>
+</tr>
+<tr>
+<td>构造代码块</td>
+<td>类中 <code>{}</code> 包起来的代码，每次 new 对象时执行，且在构造方法之前</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="_66">报错速查</h3>
+<div class="tbl-wrap"><table>
+<thead>
+<tr>
+<th>代码</th>
+<th>是否报错</th>
+<th>原因</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>long a = 10;</code></td>
+<td>✅</td>
+<td>int → long 自动拓宽</td>
+</tr>
+<tr>
+<td><code>long b = 2147483648;</code></td>
+<td>❌</td>
+<td>字面量超 int 范围</td>
+</tr>
+<tr>
+<td><code>float c = 3.0;</code></td>
+<td>❌</td>
+<td>double → float 大转小</td>
+</tr>
+<tr>
+<td><code>short s = 100;</code></td>
+<td>✅</td>
+<td>常量在范围内自动窄化</td>
+</tr>
+<tr>
+<td><code>s = s - 99;</code></td>
+<td>❌</td>
+<td>结果是 int</td>
+</tr>
+<tr>
+<td><code>b = b + 1;</code></td>
+<td>❌</td>
+<td>结果是 int</td>
+</tr>
+<tr>
+<td><code>b += 1;</code></td>
+<td>✅</td>
+<td>复合赋值自动强转</td>
+</tr>
+<tr>
+<td><code>byte c = a1 + a2;</code></td>
+<td>❌</td>
+<td>小类型运算结果仍是 int</td>
+</tr>
+<tr>
+<td><code>double d = c + i + f;</code></td>
+<td>✅</td>
+<td>向最大类型自动提升</td>
+</tr>
+<tr>
+<td><code>z == 2.3</code>（浮点）</td>
+<td>⚠️</td>
+<td>逻辑上错，应用 epsilon</td>
+</tr>
+<tr>
+<td><code>new Student()</code>（只有有参构造时）</td>
+<td>❌</td>
+<td>显式定义构造方法后默认无参构造消失</td>
+</tr>
+</tbody>
+</table></div>
+</section>
+<div class="foot">由 Markdown 转换生成 · 2026-09-07 · Mermaid 图表需联网加载渲染器，失败时显示源码</div>
+</main>
+<button class="top-btn" id="topBtn" title="回到顶部">↑</button>
+
+<script>
+const items=[...document.querySelectorAll('.toc-item')];
+const secs=[...document.querySelectorAll('.chapter')];
+const spy=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){
+  items.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));}});},
+  {rootMargin:'-20% 0px -70% 0px'});
+secs.forEach(s=>spy.observe(s));
+const btn=document.getElementById('topBtn');
+addEventListener('scroll',()=>btn.classList.toggle('show',scrollY>600));
+btn.onclick=()=>scrollTo({top:0,behavior:'smooth'});
+const sb=document.getElementById('sidebar');
+document.getElementById('menuBtn').onclick=()=>sb.classList.toggle('open');
+document.addEventListener('click',e=>{
+  if(sb.classList.contains('open')&&!sb.contains(e.target)&&e.target.id!=='menuBtn')sb.classList.remove('open');});
+const ts=document.getElementById('tocSearch');
+if(ts)ts.oninput=()=>{const q=ts.value.trim().toLowerCase();
+  items.forEach(a=>{a.style.display=(!q||a.textContent.toLowerCase().includes(q))?'flex':'none';});};
+document.querySelectorAll('.codehilite').forEach(el=>{
+  const b=document.createElement('button');b.className='copy-btn';b.textContent='复制';
+  b.onclick=()=>{const c=el.querySelector('code')||el.querySelector('pre');
+    navigator.clipboard.writeText(c.innerText).then(()=>{
+      b.textContent='已复制';setTimeout(()=>b.textContent='复制',1400);});};
+  el.appendChild(b);});
+if(typeof mermaid!=='undefined'){mermaid.initialize({startOnLoad:true,theme:'dark',
+  themeVariables:{background:'#0d1117',primaryColor:'#21262d',primaryTextColor:'#e6edf3',
+  primaryBorderColor:'#58a6ff',lineColor:'#8b949e',fontFamily:'-apple-system,Microsoft YaHei,sans-serif'}});}
+</script>
+</body>
+</html>
