@@ -172,168 +172,85 @@ td code{white-space:nowrap}
 <nav class="sidebar" id="sidebar">
   <div class="brand"><span class="logo">📒</span><div><b>01-HTML+CSS</b><div class="cnt">目录 · 点击跳转</div></div></div>
   <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
-  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>标签展示标题，使用展示超链接，使用展示图片，展示视频。
-HTML代码直接在浏览器中运行，HTML标签由浏览器解析 。
-
-
-下面展示的是一段html代码经过浏览器解析，呈现的效果如右图所示： 
-
-
-什么是CSS？
-
-CSS: Cascading Style Sheet，层叠样式表，用于控制页面的样式（表现）。
-
-下面展示的是一段 html代码 及 CSS样式 经过浏览器解析，呈现的效果如右图所示：
-
-HTML快速入门
-操作步骤
-
-新建文本文件，后缀名改为 .html，命名为：01. html快速入门.html
-
-创建一个名为HTML的文件夹，然后找到课程资料中的 1.png 文件放到该目录下的img目录中。此时HTML文件夹中内容如下：
-
-
-写HTML的基本骨架，定义标题
-
-选中文件，鼠标右击，选择使用记事本打开文件，并且编写网页的标题。
-首先html有固定的基本结构
-&lt;html&gt;
-     &lt;head&gt;
-          &lt;title&gt;HTML 快速入门&lt;/title&gt;
-     &lt;/head&gt;
-     &lt;body&gt;
-
-     &lt;/body&gt;
-&lt;/html&gt;
-
-
-其中&lt;html&gt;是根标签，&lt;head&gt;和&lt;body&gt;是子标签。
-
-&lt;head&gt; : 定义网页的头部，用来存放给浏览器看的信息，如：CSS样式、网页的标题。 
-&lt;body&gt; : 定义网页的主体部分，存放给用户看的信息，也是网页的主体内容，如：文字、图片、视频、音频、表格等。
-1. 在中编写HTML的核心内容
-
-&lt;html&gt;
-     &lt;head&gt;
-        &lt;title&gt;HTML 快速入门&lt;/title&gt;
-     &lt;/head&gt;
-     &lt;body&gt;
-        &lt;h1&gt;Hello HTML&lt;/h1&gt;
-        &lt;img src="img/1.png"&gt;
-     &lt;/body&gt;
-&lt;/html&gt;
-
-
-其中 &lt;h1&gt; 标签是一个一级标题的标签。 &lt;img&gt; 标签是一个图片标签，用来展示图片，而其中的 src 属性是用来指定要展示的图片。
-
-然后选中文件，鼠标右击，选择使用浏览器打开文件
-
-浏览器呈现效果如下:
-
-2.2 总结
-1). HTML页面的基础结构标签
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;title&gt; &lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-
-    &lt;/body&gt;
-&lt;/html&gt;
-
-
-&lt;title&gt;中定义标题显示在浏览器的标题位置，&lt;body&gt;中定义的内容会呈现在浏览器的内容区域
-2). HTML中的标签特点
-
-HTML标签不区分大小写，建议小写
-HTML标签的属性值，采用单引号、双引号都可以，一般写双引号
-HTML语法相对比较松散 (建议大家编写HTML标签的时候尽量严谨一些)
-
-前端开发工具
-我们通过快速入门案例，发现由记事本文件开发html是非常不方便的，所以接下来我们需要学习一款前端专业的开发工具VS Code。
-Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一款代码编辑器。VS Code 对前端代码有非常强大的支持，同时也其他编程语言（例如：C++、Java、Python、PHP、Go等）。VS Code 提供了非常强大的插件库，大大提高了开发效率。
-
-官网：https://code.visualstudio.com
-安装：VsCode安装文档
-注意：
-需要注意的是，我们作为一名开发者，不应该将软件软装在包含中文名的路径中 。
-由于安装了IDEA快捷键的插件，VSCode快键键与IDEA是一致的。
-
-
-
-常见标签&amp;样式
-那我们在讲解HTML的常见基础标签 及 CSS的基本样式时，我们就以 新浪新闻页面 为例，来进行讲解，这样大家不仅能够知道 常见标签及样式的作用，还能够知道具体的应用场景。
-央视新闻的具体页面效果如下：
-
-原始页面网址：https://news.cctv.com/2024/05/15/ARTIflTnFvNMx9nUVc4PA7T2240515.shtml
-而大家可以看到，上述新闻网页，其实分为两个部分，一个是新闻的标题部分，另一个是新闻的正文部分。那接下来，我们就先来完成央视新闻标题部分的制作。
-央视新闻-标题
-
-前面我们提到，我们在浏览器中看到的网页程序呈现出来的效果，实际上是浏览器解析并渲染了前端代码而呈现出来的。 而我们所编写的HTML页面，在浏览器中渲染的时候，是从上往下逐行解析展示的。 所以，我们在编写html页面的时候，要根据页面的布局，从上往下编写。
-标题排版
-
-在制作网页的时候，我们可以充分的利用AI辅助工具通义灵码，来帮我们实现对应的功能，我们只需要在编辑器中给定对应的注释（提示词），通义灵码就可以帮我们实现对应的功能效果，然后我们再基于生成的代码进行调试即可。
-接下来，我们就可以通过VsCode打开HTML文件夹，然后在其中创建一个html页面，命名为：02. 央视新闻-标题排版.html。
-然后在这个文件中来制作新浪新闻网页，标题部分的排版内容为：
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-  &lt;meta charset="UTF-8"&gt;
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-  &lt;title&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-  &lt;!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --&gt;
-  &lt;h1 id="title"&gt;【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章&lt;/h1&gt;
-
-  &lt;!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --&gt;
-  &lt;a href="https://news.cctv.com/" target="_blank"&gt;央视网&lt;/a&gt;
-  2024年05月15日 20:07
-
-&lt;/body&gt;
-&lt;/html&gt;
-
-
-那在上述我们用到的两个标签，一个是标题标签 &lt;h1&gt;&lt;/h1&gt;，另一个是超链接标题 &lt;a&gt;&lt;/a&gt;。这两个标签的具体用法如下：
-标题标签 h 系列：
- 11111111111111</span></a>
-<a class="toc-item" href="#ch-02"><span class="toc-idx">02</span><span>【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章</span></a>
-<a class="toc-item" href="#ch-03"><span class="toc-idx">03</span><span>中国新闻网</span></a>
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>01-HTML+CSS</span></a>
 </nav>
 <main class="main">
 <header class="hero">
   <h1 class="title">01-HTML+CSS</h1>
   <div class="sub"></div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">3</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">12</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">23</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">44</div><div class="d">本地 2 / 远程 42 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">9</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">63K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">12</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">23</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">44</div><div class="d">本地 2 / 远程 42 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">9</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">63K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
-<div class="ch-head"><span class="ch-num">01</span><h1>标签展示标题，使用展示超链接，使用展示图片，展示视频。
-HTML代码直接在浏览器中运行，HTML标签由浏览器解析 。
-
-
-下面展示的是一段html代码经过浏览器解析，呈现的效果如右图所示： 
-
-
-什么是CSS？
-
-CSS: Cascading Style Sheet，层叠样式表，用于控制页面的样式（表现）。
-
-下面展示的是一段 html代码 及 CSS样式 经过浏览器解析，呈现的效果如右图所示：
-
-HTML快速入门
-操作步骤
-
-新建文本文件，后缀名改为 .html，命名为：01. html快速入门.html
-
-创建一个名为HTML的文件夹，然后找到课程资料中的 1.png 文件放到该目录下的img目录中。此时HTML文件夹中内容如下：
-
-
-写HTML的基本骨架，定义标题
-
-选中文件，鼠标右击，选择使用记事本打开文件，并且编写网页的标题。
-首先html有固定的基本结构
-&lt;html&gt;
+<p><font style="background-color:rgb(217,245,214);">大家学习中如果碰到任何的困难(BUG、学习规划、学习资料等)，都可以加入</font><a href="https://heuqqdmbyk.feishu.cn/wiki/OFI5wHhUpiCGTkk2L86cXY2hngF"><strong><font style="background-color:rgb(217,245,214);">黑马智学伴侣(有问题点我)</font></strong></a><font style="background-color:rgb(217,245,214);">寻求帮助，有学习交流群，老师、同学在线答疑。还有独享的企业级项目，避免与人撞车。</font></p>
+<p>Hello，各位同学，接下来呢，我们就正式的进入到Web前端开发知识的学习，那么在学习Web前端的开发内容之前，先来认识一下Web前端。</p>
+<h2 id="web">初识Web前端</h2>
+<h3 id="_1">介绍</h3>
+<p>我们介绍Web网站工作流程的时候提到，前端开发，主要的职责就是将数据以好看的样式呈现出来。说白了，就是开发网页程序，如下图所示：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891454270-031754ab-2b39-41bb-8b9c-8e96f50ccf3e.png" /></p>
+<p><strong>主要明确以下三个问题：</strong></p>
+<p>1). 网页由哪些部分组成 ?</p>
+<ul>
+<li>文字、图片、音频、视频、超链接、表格等等。</li>
+</ul>
+<p>2). 我们看到的网页，背后的本质是什么 ?</p>
+<ul>
+<li>前端程序员写的前端代码 (备注：在前后端分离的开发模式中)</li>
+</ul>
+<p>3). 前端的代码是如何转换成用户眼中的网页的 ?</p>
+<ul>
+<li>通过浏览器转化（解析和渲染）成用户看到的网页</li>
+<li>浏览器中对代码进行解析和渲染的部分，称为 <strong>浏览器内核</strong></li>
+</ul>
+<p>而市面上的浏览器非常多，比如：IE、火狐Firefox、苹果safari、欧朋、谷歌Chrome、QQ浏览器、360浏览器等等。 而且我们电脑上安装的浏览器可能都不止一个，有很多。 </p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891454208-52c132fa-c04d-4e57-9f2b-92a6bdee0338.png" /></p>
+<p>但是呢，需要大家注意的是，不同的浏览器，内核不同，对于相同的前端代码解析的效果也会存在差异。 那这就会造成一个问题，同一段前端程序，不同浏览器展示出来的效果是不一样的，这个用户体验就很差了。而我们想达到的效果则是，即使用户使用的是不同的浏览器，解析同一段前端代码，最终展示出来的效果都是相同的。</p>
+<p>要想达成这样一个目标，我们就需要定义一个统一的标准，然后让各大浏览器厂商都参照这个标准来实现即可。 而这套标准呢，其实早都已经定义好了，那就是我们接下来，要介绍的<strong><font style="color:rgb(216,57,49);">web标准</font></strong>。</p>
+<h3 id="web_1">Web标准</h3>
+<p><strong>Web标准</strong>也称为<strong>网页标准</strong>，由一系列的标准组成，大部分由W3C（ World Wide Web Consortium，万维网联盟）负责制定。由三个组成部分：</p>
+<ul>
+<li>HTML：负责网页的<font style="color:rgb(216,57,49);">结构</font>（页面元素和内容）。</li>
+<li>CSS：负责网页的<font style="color:rgb(216,57,49);">表现</font>（页面元素的外观、位置等页面样式，如：颜色、大小等）。</li>
+<li>JavaScript：负责网页的<font style="color:rgb(216,57,49);">行为</font>（交互效果）。</li>
+</ul>
+<p>那在我们的前端课程中，除了会讲解HTML、CSS、JS这些技术以外，还会讲解现在前端开发中的高级技术Vue、ElementPlus、Axios。</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891454714-dbe2afc1-b73c-444f-abb9-52a01a48d259.png" /></p>
+<p>而Web前端开发的内容呢，我们在设计的时候，也进行了分层的设计，分为了两个部分：</p>
+<ul>
+<li>Web前端基础：HTML、CSS、JS、Vue3、Ajax、Axios，前端基础部分为两天时间。</li>
+<li>Web前端进阶：Vue工程化、ElementPlus、Tlias智能学习辅助系统案例，前端进阶部分为三天时间。</li>
+</ul>
+<p>那今天我们就先来讲解Web前端基础的第一部分： HTML &amp; CSS。</p>
+<p><font style="background-color:rgb(255,245,235);">什么是HTML？</font></p>
+<p><strong><font style="background-color:rgb(255,245,235);">HTML</font></strong><font style="background-color:rgb(255,245,235);">: </font><strong><font style="background-color:rgb(255,245,235);">H</font></strong><font style="background-color:rgb(255,245,235);">yper</font><strong><font style="background-color:rgb(255,245,235);">T</font></strong><font style="background-color:rgb(255,245,235);">ext </font><strong><font style="background-color:rgb(255,245,235);">M</font></strong><font style="background-color:rgb(255,245,235);">arkup </font><strong><font style="background-color:rgb(255,245,235);">L</font></strong><font style="background-color:rgb(255,245,235);">anguage，超文本标记语言。</font></p>
+<ul>
+<li><font style="background-color:rgb(255,245,235);">超文本：超越了文本的限制，比普通文本更强大。除了文字信息，还可以定义图片、音频、视频等内容。</font></li>
+<li><font style="background-color:rgb(255,245,235);">标记语言：由标签 "&lt;标签名&gt;" 构成的语言</font><ul>
+<li><font style="background-color:rgb(255,245,235);">HTML标签都是预定义好的 。例如：使用 <h1> 标签展示标题，使用<a>展示超链接，使用<img>展示图片，<video>展示视频。</font></li>
+<li><font style="background-color:rgb(255,245,235);">HTML代码直接在浏览器中运行，HTML标签由浏览器解析 。</font></li>
+</ul>
+</li>
+<li>下面展示的是一段html代码经过浏览器解析，呈现的效果如右图所示： </li>
+</ul>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891454637-830576f4-1cf0-4fcd-b1b8-2abd6cc05968.png" /></p>
+<p><font style="background-color:rgb(255,245,235);">什么是CSS？</font></p>
+<ul>
+<li><strong><font style="background-color:rgb(255,245,235);">CSS:</font></strong><font style="background-color:rgb(255,245,235);"> Cascading Style Sheet，层叠样式表，用于控制页面的样式（表现）。</font></li>
+</ul>
+<p>下面展示的是一段 html代码 及 CSS样式 经过浏览器解析，呈现的效果如右图所示：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891454288-aab8a685-5774-4f04-a58b-775c5b4dfc73.png" /></p>
+<h2 id="html">HTML快速入门</h2>
+<h3 id="_2">操作步骤</h3>
+<ol>
+<li><strong>新建文本文件，后缀名改为 .html，命名为：01. html快速入门.html</strong></li>
+</ol>
+<p>创建一个名为HTML的文件夹，然后找到课程资料中的 1.png 文件放到该目录下的img目录中。此时HTML文件夹中内容如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891454966-fc9f877d-b4e7-458e-8310-505716c218f0.png" /></p>
+<ol>
+<li><strong>写HTML的基本骨架，定义标题</strong></li>
+</ol>
+<p>选中文件，鼠标右击，选择使用记事本打开文件，并且编写网页的标题。</p>
+<p>首先html有固定的基本结构</p>
+<div class="codehilite"><pre><span></span><code>&lt;html&gt;
      &lt;head&gt;
           &lt;title&gt;HTML 快速入门&lt;/title&gt;
      &lt;/head&gt;
@@ -341,15 +258,15 @@ HTML快速入门
 
      &lt;/body&gt;
 &lt;/html&gt;
+</code></pre></div>
 
-
-其中&lt;html&gt;是根标签，&lt;head&gt;和&lt;body&gt;是子标签。
-
-&lt;head&gt; : 定义网页的头部，用来存放给浏览器看的信息，如：CSS样式、网页的标题。 
-&lt;body&gt; : 定义网页的主体部分，存放给用户看的信息，也是网页的主体内容，如：文字、图片、视频、音频、表格等。
-1. 在中编写HTML的核心内容
-
-&lt;html&gt;
+<p>其中<code>&lt;html&gt;</code>是根标签，<code>&lt;head&gt;</code>和<code>&lt;body&gt;</code>是子标签。</p>
+<ul>
+<li><code>&lt;head&gt;</code> : 定义网页的头部，用来存放给浏览器看的信息，如：CSS样式、网页的标题。 </li>
+<li><code>&lt;body&gt;</code> : 定义网页的主体部分，存放给用户看的信息，也是网页的主体内容，如：文字、图片、视频、音频、表格等。
+1. <strong>在<body>中编写HTML的核心内容</strong></li>
+</ul>
+<div class="codehilite"><pre><span></span><code>&lt;html&gt;
      &lt;head&gt;
         &lt;title&gt;HTML 快速入门&lt;/title&gt;
      &lt;/head&gt;
@@ -358,17 +275,17 @@ HTML快速入门
         &lt;img src="img/1.png"&gt;
      &lt;/body&gt;
 &lt;/html&gt;
+</code></pre></div>
 
-
-其中 &lt;h1&gt; 标签是一个一级标题的标签。 &lt;img&gt; 标签是一个图片标签，用来展示图片，而其中的 src 属性是用来指定要展示的图片。
-
-然后选中文件，鼠标右击，选择使用浏览器打开文件
-
-浏览器呈现效果如下:
-
-2.2 总结
-1). HTML页面的基础结构标签
-&lt;html&gt;
+<p>其中 <code>&lt;h1&gt;</code> 标签是一个一级标题的标签。 <code>&lt;img&gt;</code> 标签是一个图片标签，用来展示图片，而其中的 src 属性是用来指定要展示的图片。</p>
+<ol>
+<li><strong>然后选中文件，鼠标右击，选择使用浏览器打开文件</strong></li>
+</ol>
+<p>浏览器呈现效果如下:</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891455207-ec5ef42c-b153-427f-b331-28bd1eb4e7a5.png" /></p>
+<h3 id="22">2.2 总结</h3>
+<p><strong>1). HTML页面的基础结构标签</strong></p>
+<div class="codehilite"><pre><span></span><code>&lt;html&gt;
     &lt;head&gt;
         &lt;title&gt; &lt;/title&gt;
     &lt;/head&gt;
@@ -376,42 +293,42 @@ HTML快速入门
 
     &lt;/body&gt;
 &lt;/html&gt;
+</code></pre></div>
 
-
-&lt;title&gt;中定义标题显示在浏览器的标题位置，&lt;body&gt;中定义的内容会呈现在浏览器的内容区域
-2). HTML中的标签特点
-
-HTML标签不区分大小写，建议小写
-HTML标签的属性值，采用单引号、双引号都可以，一般写双引号
-HTML语法相对比较松散 (建议大家编写HTML标签的时候尽量严谨一些)
-
-前端开发工具
-我们通过快速入门案例，发现由记事本文件开发html是非常不方便的，所以接下来我们需要学习一款前端专业的开发工具VS Code。
-Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一款代码编辑器。VS Code 对前端代码有非常强大的支持，同时也其他编程语言（例如：C++、Java、Python、PHP、Go等）。VS Code 提供了非常强大的插件库，大大提高了开发效率。
-
-官网：https://code.visualstudio.com
-安装：VsCode安装文档
-注意：
-需要注意的是，我们作为一名开发者，不应该将软件软装在包含中文名的路径中 。
-由于安装了IDEA快捷键的插件，VSCode快键键与IDEA是一致的。
-
-
-
-常见标签&amp;样式
-那我们在讲解HTML的常见基础标签 及 CSS的基本样式时，我们就以 新浪新闻页面 为例，来进行讲解，这样大家不仅能够知道 常见标签及样式的作用，还能够知道具体的应用场景。
-央视新闻的具体页面效果如下：
-
-原始页面网址：https://news.cctv.com/2024/05/15/ARTIflTnFvNMx9nUVc4PA7T2240515.shtml
-而大家可以看到，上述新闻网页，其实分为两个部分，一个是新闻的标题部分，另一个是新闻的正文部分。那接下来，我们就先来完成央视新闻标题部分的制作。
-央视新闻-标题
-
-前面我们提到，我们在浏览器中看到的网页程序呈现出来的效果，实际上是浏览器解析并渲染了前端代码而呈现出来的。 而我们所编写的HTML页面，在浏览器中渲染的时候，是从上往下逐行解析展示的。 所以，我们在编写html页面的时候，要根据页面的布局，从上往下编写。
-标题排版
-
-在制作网页的时候，我们可以充分的利用AI辅助工具通义灵码，来帮我们实现对应的功能，我们只需要在编辑器中给定对应的注释（提示词），通义灵码就可以帮我们实现对应的功能效果，然后我们再基于生成的代码进行调试即可。
-接下来，我们就可以通过VsCode打开HTML文件夹，然后在其中创建一个html页面，命名为：02. 央视新闻-标题排版.html。
-然后在这个文件中来制作新浪新闻网页，标题部分的排版内容为：
-&lt;!DOCTYPE html&gt;
+<p><code>&lt;title&gt;</code>中定义标题显示在浏览器的标题位置，<code>&lt;body&gt;</code>中定义的内容会呈现在浏览器的内容区域</p>
+<p><strong>2). HTML中的标签特点</strong></p>
+<ul>
+<li>HTML标签不区分大小写，建议小写</li>
+<li>HTML标签的属性值，采用单引号、双引号都可以，一般写双引号</li>
+<li>HTML语法相对比较松散 (建议大家编写HTML标签的时候尽量严谨一些)</li>
+</ul>
+<h2 id="_3">前端开发工具</h2>
+<p>我们通过快速入门案例，发现由记事本文件开发html是非常不方便的，所以接下来我们需要学习一款前端专业的开发工具VS Code。</p>
+<p>Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一款代码编辑器。VS Code 对前端代码有非常强大的支持，同时也其他编程语言（例如：C++、Java、Python、PHP、Go等）。VS Code 提供了非常强大的插件库，大大提高了开发效率。</p>
+<ul>
+<li><strong>官网：</strong><a href="https://code.visualstudio.com/"><font style="color:rgb(46,161,33);">https://code.visualstudio.com</font></a></li>
+<li><strong>安装：</strong><a href="https://heuqqdmbyk.feishu.cn/wiki/P8Cbw64UAi3h92kqnUpcfF4cnNg"><strong>VsCode安装文档</strong></a></li>
+<li><strong>注意：</strong><ul>
+<li><font style="color:rgb(216,57,49);">需要注意的是，我们作为一名开发者，不应该将软件</font><font style="color:rgb(216,57,49);">软装</font><font style="color:rgb(216,57,49);">在包含中文名的路径中 。</font></li>
+<li><font style="color:rgb(216,57,49);">由于安装了IDEA快捷键的插件，VSCode快键键与IDEA是一致的。</font></li>
+</ul>
+</li>
+</ul>
+<h2 id="_4">常见标签&amp;样式</h2>
+<p>那我们在讲解HTML的常见基础标签 及 CSS的基本样式时，我们就以 新浪新闻页面 为例，来进行讲解，这样大家不仅能够知道 常见标签及样式的作用，还能够知道具体的应用场景。</p>
+<p>央视新闻的具体页面效果如下：</p>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457027-ffa0abab-047c-4250-8ebc-3222b30cb060.png" /></p>
+<p>原始页面网址：https://news.cctv.com/2024/05/15/ARTIflTnFvNMx9nUVc4PA7T2240515.shtml</p>
+<p>而大家可以看到，上述新闻网页，其实分为两个部分，一个是新闻的标题部分，另一个是新闻的正文部分。那接下来，我们就先来完成央视新闻标题部分的制作。</p>
+<h3 id="-">央视新闻-标题</h3>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457068-d1973e91-44db-4607-9754-2972dcede9bb.png" /></p>
+<p>前面我们提到，我们在浏览器中看到的网页程序呈现出来的效果，实际上是浏览器解析并渲染了前端代码而呈现出来的。 而我们所编写的HTML页面，在浏览器中渲染的时候，是从上往下逐行解析展示的。 所以，我们在编写html页面的时候，要根据页面的布局，从上往下编写。</p>
+<h4 id="_5">标题排版</h4>
+<p><img alt="" src="https://cdn.nlark.com/yuque/0/2025/png/58040780/1752891457061-d7d74a8f-2a07-4da4-96a5-9454c1cacc39.png" /></p>
+<p>在制作网页的时候，我们可以充分的利用AI辅助工具<strong>通义灵码</strong>，来帮我们实现对应的功能，我们只需要在编辑器中给定对应的注释（提示词），通义灵码就可以帮我们实现对应的功能效果，然后我们再基于生成的代码进行调试即可。</p>
+<p>接下来，我们就可以通过VsCode打开HTML文件夹，然后在其中创建一个html页面，命名为：<code>02. 央视新闻-标题排版.html</code>。</p>
+<p>然后在这个文件中来制作新浪新闻网页，标题部分的排版内容为：</p>
+<div class="codehilite"><pre><span></span><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -429,12 +346,11 @@ Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一�
 
 &lt;/body&gt;
 &lt;/html&gt;
+</code></pre></div>
 
-
-那在上述我们用到的两个标签，一个是标题标签 &lt;h1&gt;&lt;/h1&gt;，另一个是超链接标题 &lt;a&gt;&lt;/a&gt;。这两个标签的具体用法如下：
-标题标签 h 系列：
- 11111111111111</h1></div>
-</font></p>
+<p>那在上述我们用到的两个标签，一个是标题标签 <code>&lt;h1&gt;&lt;/h1&gt;</code>，另一个是超链接标题 <code>&lt;a&gt;&lt;/a&gt;</code>。这两个标签的具体用法如下：</p>
+<p><font style="background-color:rgb(255,245,235);">标题标签 h 系列：</font></p>
+<p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h1></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h1></font></p>
 <p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h2></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h2></font></p>
 <p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h3></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h3></font></p>
 <p><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"><h4></font><font style="background-color:rgb(255,245,235);"> 11111111111111 </font><font style="color:rgb(46,161,33);background-color:rgb(255,245,235);"></h4></font></p>
@@ -469,11 +385,7 @@ Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一�
 <p><font style="background-color:rgb(255,245,235);"></head></font></p>
 <p><font style="background-color:rgb(255,245,235);"><body></font></p>
 <p><font style="background-color:rgb(255,245,235);">   <!-- 定义网页标题, 标题内容： 【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章 --></font></p>
-<p><font style="background-color:rgb(255,245,235);">   
-</section>
-<section class="chapter" id="ch-02">
-<div class="ch-head"><span class="ch-num">02</span><h1>【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章</h1></div>
-</font></p>
+<p><font style="background-color:rgb(255,245,235);">   <h1 id="title">【新思想引领新征程】推进长江十年禁渔 谱写长江大保护新篇章</h1></font></p>
 <p><font style="background-color:rgb(255,245,235);">   <!-- 定义一个超链接, 链接地址：https://news.cctv.com/, 链接内容：央视网 --></font></p>
 <p><font style="background-color:rgb(255,245,235);">   <a href="https://news.cctv.com/" target="_blank">央视网</a></font></p>
 <p><font style="background-color:rgb(255,245,235);">   2024年05月15日 20:07</font></p>
@@ -522,11 +434,7 @@ Visual Studio Code（简称 VS Code ）是 Microsoft 于2015年4月发布的一�
 <tr>
 <td style="text-align: center;"><font style="color:rgb(0, 0, 0);">行内样式</font></td>
 <td><font style="color:rgb(0, 0, 0);">在标签内使用style属性，属性值是css属性键值对。</font></td>
-<td style="text-align: left;"><font style="color:rgb(0, 0, 0);">
-</section>
-<section class="chapter" id="ch-03">
-<div class="ch-head"><span class="ch-num">03</span><h1>中国新闻网</h1></div>
-</font></td>
+<td style="text-align: left;"><font style="color:rgb(0, 0, 0);"><h1 style="xxx:xxx;">中国新闻网</h1></font></td>
 </tr>
 <tr>
 <td style="text-align: center;"><font style="color:rgb(0, 0, 0);">内部样式</font></td>
