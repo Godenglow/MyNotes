@@ -180,15 +180,30 @@ td code{white-space:nowrap}
 <nav class="sidebar" id="sidebar">
   <div class="brand"><span class="logo">📒</span><div><b>JavaSE 基础问答笔记</b><div class="cnt">目录 · 点击跳转</div></div></div>
   <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
-  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>JavaSE 基础问答笔记</span></a>
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>一、八种基本数据类型总览</span></a>
+<a class="toc-item" href="#ch-02"><span class="toc-idx">02</span><span>二、局部变量与成员变量的默认值</span></a>
+<a class="toc-item" href="#ch-03"><span class="toc-idx">03</span><span>三、为什么 long z = 2147483648 会报错</span></a>
+<a class="toc-item" href="#ch-04"><span class="toc-idx">04</span><span>四、为什么 float f = 3.0 会报错</span></a>
+<a class="toc-item" href="#ch-05"><span class="toc-idx">05</span><span>五、浮点数为什么不能用 == 比较</span></a>
+<a class="toc-item" href="#ch-06"><span class="toc-idx">06</span><span>六、char 字符型要点</span></a>
+<a class="toc-item" href="#ch-07"><span class="toc-idx">07</span><span>七、转义字符有什么用</span></a>
+<a class="toc-item" href="#ch-08"><span class="toc-idx">08</span><span>八、byte / short / char 运算为什么会报错</span></a>
+<a class="toc-item" href="#ch-09"><span class="toc-idx">09</span><span>九、Scanner 的 nextXxx 怎么选</span></a>
+<a class="toc-item" href="#ch-10"><span class="toc-idx">10</span><span>十、&amp;&amp; 与 &amp; 有什么区别</span></a>
+<a class="toc-item" href="#ch-11"><span class="toc-idx">11</span><span>十一、package 与 import 怎么用</span></a>
+<a class="toc-item" href="#ch-12"><span class="toc-idx">12</span><span>十二、对象的创建与 JVM 内存分析</span></a>
+<a class="toc-item" href="#ch-13"><span class="toc-idx">13</span><span>十三、构造方法</span></a>
+<a class="toc-item" href="#ch-14"><span class="toc-idx">14</span><span>十四、this 关键字</span></a>
+<a class="toc-item" href="#ch-15"><span class="toc-idx">15</span><span>附录：速查总表</span></a>
 </nav>
 <main class="main">
 <header class="hero">
   <h1 class="title">JavaSE 基础问答笔记</h1>
   <div class="sub">## 目录</div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">93</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">37</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">5</div><div class="d">本地 5 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">20</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">17K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">15</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">93</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">37</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">5</div><div class="d">本地 5 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">20</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">17K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
+<div class="ch-head"><span class="ch-num">01</span><h1>一、八种基本数据类型总览</h1></div>
 <p>JavaSE 基础问答笔记</p>
 <blockquote>
 <p>来源：动力节点 JavaSE 教程 · 课堂答疑整理
@@ -200,7 +215,7 @@ td code{white-space:nowrap}
 <blockquote>
 <p>配套：<span class="wl" title="Obsidian 内链：JavaSE">🔗 JavaSE</span></p>
 </blockquote>
-<h2 id="_1">一、八种基本数据类型总览</h2>
+
 <blockquote>
 <p><strong>一句话</strong>：8 种 primitive 类型，整数默认用 int，小数默认用 double。</p>
 </blockquote>
@@ -279,7 +294,11 @@ td code{white-space:nowrap}
 外加 boolean（真假）与 char（字符）</p>
 </blockquote>
 <hr />
-<h2 id="_5">二、局部变量与成员变量的默认值</h2>
+
+</section>
+<section class="chapter" id="ch-02">
+<div class="ch-head"><span class="ch-num">02</span><h1>二、局部变量与成员变量的默认值</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：局部变量没有默认值，成员变量有默认值。</p>
 </blockquote>
@@ -328,7 +347,11 @@ td code{white-space:nowrap}
 <p>方法里的变量，先赋值再用；不确定的话一律显式写 <code>int b = 0;</code></p>
 </blockquote>
 <hr />
-<h2 id="long-z-2147483648">三、为什么 long z = 2147483648 会报错</h2>
+
+</section>
+<section class="chapter" id="ch-03">
+<div class="ch-head"><span class="ch-num">03</span><h1>三、为什么 long z = 2147483648 会报错</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：报错在「字面量合法性」阶段，不在赋值转换阶段。</p>
 </blockquote>
@@ -378,7 +401,11 @@ td code{white-space:nowrap}
 <p>超过 int 范围的整数，字面量必须带 <code>L</code></p>
 </blockquote>
 <hr />
-<h2 id="float-f-30">四、为什么 float f = 3.0 会报错</h2>
+
+</section>
+<section class="chapter" id="ch-04">
+<div class="ch-head"><span class="ch-num">04</span><h1>四、为什么 float f = 3.0 会报错</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：浮点字面量默认是 double，double → float 是大转小，不允许自动收窄。</p>
 </blockquote>
@@ -425,7 +452,11 @@ td code{white-space:nowrap}
 <p>整数默认 int（超范围加 <code>L</code>），小数默认 double（转 float 加 <code>F</code>）</p>
 </blockquote>
 <hr />
-<h2 id="_18">五、浮点数为什么不能用 == 比较</h2>
+
+</section>
+<section class="chapter" id="ch-05">
+<div class="ch-head"><span class="ch-num">05</span><h1>五、浮点数为什么不能用 == 比较</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：浮点是近似值，用 <code>==</code> 比较会翻车，改用误差范围（epsilon）。</p>
 </blockquote>
@@ -482,7 +513,11 @@ td code{white-space:nowrap}
 </tbody>
 </table></div>
 <hr />
-<h2 id="char">六、char 字符型要点</h2>
+
+</section>
+<section class="chapter" id="ch-06">
+<div class="ch-head"><span class="ch-num">06</span><h1>六、char 字符型要点</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：Java 的 char 是 2 字节 Unicode 字符，本质是 0~65535 的无符号整数。</p>
 </blockquote>
@@ -533,7 +568,11 @@ td code{white-space:nowrap}
 <p>char = 2 字节 Unicode，单引号包一个字符，默认 <code>\u0000</code></p>
 </blockquote>
 <hr />
-<h2 id="_27">七、转义字符有什么用</h2>
+
+</section>
+<section class="chapter" id="ch-07">
+<div class="ch-head"><span class="ch-num">07</span><h1>七、转义字符有什么用</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：<code>\n</code>、<code>\\</code>、<code>\"</code> 是高频三件套，写字符串、路径、正则时天天见。</p>
 </blockquote>
@@ -597,7 +636,11 @@ td code{white-space:nowrap}
 <p>字符串里想写「特殊符号」，前面加 <code>\</code></p>
 </blockquote>
 <hr />
-<h2 id="byte-short-char">八、byte / short / char 运算为什么会报错</h2>
+
+</section>
+<section class="chapter" id="ch-08">
+<div class="ch-head"><span class="ch-num">08</span><h1>八、byte / short / char 运算为什么会报错</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：字面量默认是 int，且小类型一参与运算就变 int，双重保险 → 结果必然是 int。</p>
 </blockquote>
@@ -669,7 +712,11 @@ JVM 规定小整数运算统一在 int 层面进行，避免中间结果溢出 �
 变量参与运算 → 结果至少是 int，塞回小类型必须强转</p>
 </blockquote>
 <hr />
-<h2 id="scanner-nextxxx">九、Scanner 的 nextXxx 怎么选</h2>
+
+</section>
+<section class="chapter" id="ch-09">
+<div class="ch-head"><span class="ch-num">09</span><h1>九、Scanner 的 nextXxx 怎么选</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：要什么类型就叫什么方法名，但 <code>nextInt()</code> 后接 <code>nextLine()</code> 要清换行符。</p>
 </blockquote>
@@ -766,7 +813,11 @@ JVM 规定小整数运算统一在 int 层面进行，避免中间结果溢出 �
 <p><code>nextInt()</code> 后要接 <code>nextLine()</code>，中间补一句 <code>nextLine()</code> 清空换行</p>
 </blockquote>
 <hr />
-<h2 id="_41">十、&amp;&amp; 与 &amp; 有什么区别</h2>
+
+</section>
+<section class="chapter" id="ch-10">
+<div class="ch-head"><span class="ch-num">10</span><h1>十、&amp;&amp; 与 &amp; 有什么区别</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：<code>&amp;&amp;</code> 短路更高效，但 <code>&amp;</code> 在「右边必须执行」和位运算场景下不可替代。</p>
 </blockquote>
@@ -851,7 +902,11 @@ JVM 规定小整数运算统一在 int 层面进行，避免中间结果溢出 �
 <p>效率不是唯一标准，需求决定用哪个 —— 别无脑把 <code>&amp;</code> 全换成 <code>&amp;&amp;</code></p>
 </blockquote>
 <hr />
-<h2 id="package-import">十一、package 与 import 怎么用</h2>
+
+</section>
+<section class="chapter" id="ch-11">
+<div class="ch-head"><span class="ch-num">11</span><h1>十一、package 与 import 怎么用</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：<code>package</code> 是给类贴「地址标签」，<code>import</code> 是根据地址去「找人」。</p>
 </blockquote>
@@ -966,7 +1021,11 @@ java<span class="w"> </span>com.powernode.javase.chapter02.PackageTest<span clas
 </tbody>
 </table></div>
 <hr />
-<h2 id="jvm">十二、对象的创建与 JVM 内存分析</h2>
+
+</section>
+<section class="chapter" id="ch-12">
+<div class="ch-head"><span class="ch-num">12</span><h1>十二、对象的创建与 JVM 内存分析</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：引用在栈里，对象在堆里，类的元数据在元空间；方法结束栈帧销毁，对象靠 GC 回收。</p>
 </blockquote>
@@ -1082,7 +1141,11 @@ java<span class="w"> </span>com.powernode.javase.chapter02.PackageTest<span clas
 传参一律传副本，改内容生效、改引用不生效</p>
 </blockquote>
 <hr />
-<h2 id="_51">十三、构造方法</h2>
+
+</section>
+<section class="chapter" id="ch-13">
+<div class="ch-head"><span class="ch-num">13</span><h1>十三、构造方法</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：<code>new</code> 对象时自动调用、专门用来初始化对象的特殊方法。</p>
 </blockquote>
@@ -1208,7 +1271,11 @@ java<span class="w"> </span>com.powernode.javase.chapter02.PackageTest<span clas
 建议无参构造显式写，否则写了有参构造后默认无参会消失</p>
 </blockquote>
 <hr />
-<h2 id="this_1">十四、this 关键字</h2>
+
+</section>
+<section class="chapter" id="ch-14">
+<div class="ch-head"><span class="ch-num">14</span><h1>十四、this 关键字</h1></div>
+
 <blockquote>
 <p><strong>一句话</strong>：<code>this</code> 是指向当前对象的引用。</p>
 </blockquote>
@@ -1297,7 +1364,11 @@ java<span class="w"> </span>com.powernode.javase.chapter02.PackageTest<span clas
 <p><code>this</code> = 指向当前对象的引用；同名时必须写，静态方法里不能用，<code>this(实参)</code> 调别的构造方法且必须放第一行</p>
 </blockquote>
 <hr />
-<h2 id="_61">附录：速查总表</h2>
+
+</section>
+<section class="chapter" id="ch-15">
+<div class="ch-head"><span class="ch-num">15</span><h1>附录：速查总表</h1></div>
+
 <h3 id="_62">字面量后缀规则</h3>
 <div class="tbl-wrap"><table>
 <thead>

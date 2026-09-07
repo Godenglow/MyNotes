@@ -236,12 +236,12 @@ td code{white-space:nowrap}
 <li>Controller：负责调度。它是一个调度中心，它来决定什么时候调用Model来处理业务，什么时候调用View视图来展示数据。</li>
 </ul>
 <p>MVC架构模式如下所示：</p>
-<p><img alt="" src="assets/1710142469881-5dee11e1-80e8-4cbc-8f0c-726d4e42bbfa.png.webp" /></p>
+<p><img alt="" src="assets/1710142469881-5dee11e1-80e8-4cbc-8f0c-726d4e42bbfa.png" /></p>
 <p>MVC架构模式的描述：前端浏览器发送请求给web服务器，web服务器中的Controller接收到用户的请求，Controller负责将前端提交的数据进行封装，然后Controller调用Model来处理业务，当Model处理完业务后会返回处理之后的数据给Controller，Controller再调用View来完成数据的展示，最终将结果响应给浏览器，浏览器进行渲染展示页面。</p>
 <p>面试题：什么是三层模型，并说一说MVC架构模式与三层模型的区别？</p>
 <p>三层模型：</p>
-<p><img alt="" src="assets/1711327157487-31faac36-0200-4dd9-afba-65842f7b7e30.png.webp" /></p>
-<p><img alt="" src="assets/1711327251994-1048ab41-5ecb-4f5d-b3ff-9bf9fd6feb0b.png.webp" /></p>
+<p><img alt="" src="assets/1711327157487-31faac36-0200-4dd9-afba-65842f7b7e30.png" /></p>
+<p><img alt="" src="assets/1711327251994-1048ab41-5ecb-4f5d-b3ff-9bf9fd6feb0b.png" /></p>
 <p>MVC 和三层模型都采用了分层结构来设计应用程序，都是降低耦合度，提高扩展力，提高组件复用性。区别在于：他们的关注点不同，三层模型更加关注业务逻辑组件的划分。</p>
 <p>MVC架构模式关注的是整个应用程序的层次关系和分离思想。现代的开发方式大部分都是MVC架构模式结合三层模型一起用。</p>
 <h2 id="springmvc_1">什么是SpringMVC</h2>
@@ -261,7 +261,7 @@ td code{white-space:nowrap}
 <p>所以学习SpringMVC框架之前要先学习Spring框架中的IoC和AOP等内容。</p>
 <p>另外，使用SpringMVC框架的时候同样也可以使用IoC和AOP。</p>
 <p>以下就是Spring官方给出的Spring架构图，其中Web中的servlet指的就是Spring MVC：</p>
-<p><img alt="" src="assets/1710215881989-618986f1-11c4-459a-8eaa-b58c4ee28d19.png.webp" /></p>
+<p><img alt="" src="assets/1710215881989-618986f1-11c4-459a-8eaa-b58c4ee28d19.png" /></p>
 <h3 id="springmvc_3">SpringMVC帮我们做了什么</h3>
 <p>SpringMVC框架帮我们做了什么，与纯粹的Servlet开发有什么区别？</p>
 <ol>
@@ -307,14 +307,14 @@ td code{white-space:nowrap}
 <h2 id="springmvc_5">第一个SpringMVC程序</h2>
 <h3 id="maven">创建Maven模块</h3>
 <p>第一步：创建Empty Project，起名：springmvc。</p>
-<p><img alt="" src="assets/1710230195763-9f5da726-de76-4ba3-9297-c912390a4df3.png.webp" /></p>
+<p><img alt="" src="assets/1710230195763-9f5da726-de76-4ba3-9297-c912390a4df3.png" /></p>
 <p>第二步：设置springmvc工程的JDK版本：Java21。</p>
-<p><img alt="" src="assets/1710230237463-c2927a70-4e12-4ca5-9b5c-a554eb2524e2.png.webp" /></p>
+<p><img alt="" src="assets/1710230237463-c2927a70-4e12-4ca5-9b5c-a554eb2524e2.png" /></p>
 <p>第三步：设置maven。</p>
-<p><img alt="" src="assets/1710230325830-67db9b0f-5f01-4804-86a4-5d7c0e72026b.png.webp" /></p>
+<p><img alt="" src="assets/1710230325830-67db9b0f-5f01-4804-86a4-5d7c0e72026b.png" /></p>
 <p>第四步：创建Maven模块</p>
-<p><img alt="" src="assets/1710230477117-f9659e1e-196e-4b8b-aa00-2a2a4b9e1a9b.png.webp" /></p>
-<p><img alt="" src="assets/1710234129822-b45b7ab8-0275-4828-b0f1-04bacdd4ee33.png.webp" /></p>
+<p><img alt="" src="assets/1710230477117-f9659e1e-196e-4b8b-aa00-2a2a4b9e1a9b.png" /></p>
+<p><img alt="" src="assets/1710234129822-b45b7ab8-0275-4828-b0f1-04bacdd4ee33.png" /></p>
 <p>第五步：将pom.xml文件中的打包方式修改为war</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;groupId&gt;</span>com.powernode.springmvc<span class="nt">&lt;/groupId&gt;</span>
 <span class="nt">&lt;artifactId&gt;</span>springmvc-001<span class="nt">&lt;/artifactId&gt;</span>
@@ -355,14 +355,14 @@ td code{white-space:nowrap}
 
 <h3 id="web">添加web支持</h3>
 <p>第一步：在main目录下创建一个webapp目录</p>
-<p><img alt="" src="assets/1710236651417-5d2d8216-0848-41b8-9dcd-82daf9928e60.png.webp" /></p>
+<p><img alt="" src="assets/1710236651417-5d2d8216-0848-41b8-9dcd-82daf9928e60.png" /></p>
 <p>第二步：添加web.xml配置文件</p>
-<p><img alt="" src="assets/1710236821253-9144e1b5-8e6a-441a-8aa7-8464a2f30bf4.png.webp" /></p>
+<p><img alt="" src="assets/1710236821253-9144e1b5-8e6a-441a-8aa7-8464a2f30bf4.png" /></p>
 <p>注意 web.xml 文件的位置：E:\Spring MVC\code\springmvc\springmvc-001*<em><font style="color:#ff7b72;font-weight:600;">src\main\webapp\WEB-INF\web.xml</font></em>*</p>
 <p>注意版本选择：6.0</p>
-<p><img alt="" src="assets/1710236908015-b84441b8-72e4-41d4-bf50-aea212651f99.png.webp" /></p>
+<p><img alt="" src="assets/1710236908015-b84441b8-72e4-41d4-bf50-aea212651f99.png" /></p>
 <p>添加web支持后的目录结构：</p>
-<p><img alt="" src="assets/1710236989434-41f9727a-6944-40ee-899c-3aa58fa1904f.png.webp" /></p>
+<p><img alt="" src="assets/1710236989434-41f9727a-6944-40ee-899c-3aa58fa1904f.png" /></p>
 <h3 id="webxml">配置web.xml文件</h3>
 <p>Spring MVC是一个web框架，在javaweb中谁来负责接收请求，处理请求，以及响应呢？当然是Servlet。在SpringMVC框架中已经为我们写好了一个Servlet，它的名字叫做：DispatcherServlet，我们称其为前端控制器。既然是Servlet，那么它就需要在web.xml文件中进行配置：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -452,7 +452,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>在WEB-INF目录下新建springmvc-servlet.xml文件，并且提供以上配置信息。</p>
-<p><img alt="" src="assets/1710309679329-4454ce41-d80a-42dc-abb7-683bd9397856.png.webp" /></p>
+<p><img alt="" src="assets/1710309679329-4454ce41-d80a-42dc-abb7-683bd9397856.png" /></p>
 <p>以上配置主要两项：</p>
 <ul>
 <li>第一项：组件扫描。spring扫描这个包中的类，将这个包中的类实例化并纳入IoC容器的管理。</li>
@@ -509,15 +509,15 @@ td code{white-space:nowrap}
 
 <h3 id="_4">测试</h3>
 <p>第一步：配置Tomcat服务器</p>
-<p><img alt="" src="assets/1710311594124-3fb7be8b-9029-4b30-990c-78d2233fb404.png.webp" /></p>
+<p><img alt="" src="assets/1710311594124-3fb7be8b-9029-4b30-990c-78d2233fb404.png" /></p>
 <p>第二步：部署web模块到Tomcat服务器</p>
-<p><img alt="" src="assets/1710311627612-75b1508f-10fe-4510-840f-1b856fee1932.png.webp" /></p>
+<p><img alt="" src="assets/1710311627612-75b1508f-10fe-4510-840f-1b856fee1932.png" /></p>
 <p>第三步：启动Tomcat服务器。如果在控制台输出的信息有中文乱码，请修改tomcat服务器配置文件：apache-tomcat-10.1.19\conf\logging.properties</p>
-<p><img alt="" src="assets/1710319742230-840a1af7-4ba7-4ee2-bc9c-0f1a056b222a.png.webp" /></p>
+<p><img alt="" src="assets/1710319742230-840a1af7-4ba7-4ee2-bc9c-0f1a056b222a.png" /></p>
 <p>第四步：打开浏览器，在浏览器地址栏上输入地址：http://localhost:8080/springmvc/haha</p>
-<p><img alt="" src="assets/1710312173540-4e975a51-c0df-47a3-8bdd-f2fbdb8ad831.png.webp" /></p>
+<p><img alt="" src="assets/1710312173540-4e975a51-c0df-47a3-8bdd-f2fbdb8ad831.png" /></p>
 <p>后端控制台输出：</p>
-<p><img alt="" src="assets/1710312475793-dfb94231-5efe-4a72-840f-63d72143d47f.png.webp" /></p>
+<p><img alt="" src="assets/1710312475793-dfb94231-5efe-4a72-840f-63d72143d47f.png" /></p>
 <h3 id="_5">执行流程总结</h3>
 <ol>
 <li>浏览器发送请求：http://localhost:8080/springmvc/haha</li>
@@ -581,9 +581,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动Tomcat，打开浏览器，输入请求路径：http://localhost:8080/springmvc/haha</p>
-<p><img alt="" src="assets/1710313350020-eaecbfaf-c1ba-44d1-9422-3371248f69a2.png.webp" /></p>
+<p><img alt="" src="assets/1710313350020-eaecbfaf-c1ba-44d1-9422-3371248f69a2.png" /></p>
 <p>点击超链接：other请求</p>
-<p><img alt="" src="assets/1710313367394-acfcdb9e-576c-4cc2-8d08-2858854a947e.png.webp" /></p>
+<p><img alt="" src="assets/1710313367394-acfcdb9e-576c-4cc2-8d08-2858854a947e.png" /></p>
 <h2 id="springmvc_6">第二个SpringMVC程序</h2>
 <h3 id="maven_1">创建Maven模块</h3>
 <ol>
@@ -597,10 +597,10 @@ td code{white-space:nowrap}
 <li>打包方式war</li>
 </ol>
 <h3 id="web_1">添加web支持</h3>
-<p><img alt="" src="assets/1710315550290-18c819de-15fb-4653-a242-8ac1c8d1255d.png.webp" /></p>
+<p><img alt="" src="assets/1710315550290-18c819de-15fb-4653-a242-8ac1c8d1255d.png" /></p>
 <p>webapp目录没有小蓝点怎么办？添加web支持</p>
-<p><img alt="" src="assets/1710315591600-e1e8f89d-9731-40ee-b601-04c8b2923258.png.webp" /></p>
-<p><img alt="" src="assets/1710315690201-7d425088-0775-4e64-97a3-e33c09374add.png.webp" /></p>
+<p><img alt="" src="assets/1710315591600-e1e8f89d-9731-40ee-b601-04c8b2923258.png" /></p>
+<p><img alt="" src="assets/1710315690201-7d425088-0775-4e64-97a3-e33c09374add.png" /></p>
 <h3 id="webxml_1">配置web.xml文件</h3>
 <p>重点：SpringMVC配置文件的名字和路径是可以手动设置的，如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -654,10 +654,10 @@ td code{white-space:nowrap}
 <p>表示请求路径如果是：<a href="http://localhost:8080/springmvc/">http://localhost:8080/springmvc/</a> ，则进入 /WEB-INF/templates/index.html 页面。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">这就是项目的首页效果！！！！！</font></strong></p>
 <h3 id="resourcesspringmvcxml"><font style="color:#000000;">在resources目录下配置springmvc.xml文件</font></h3>
-<p><img alt="" src="assets/1710316235461-25d719f5-5b8f-4600-922a-8568d9cd63dc.png.webp" /></p>
+<p><img alt="" src="assets/1710316235461-25d719f5-5b8f-4600-922a-8568d9cd63dc.png" /></p>
 <p>配置内容和之前一样，一个是视图解析器，一个是组件扫描。</p>
 <h3 id="_6">提供视图</h3>
-<p><img alt="" src="assets/1710316353838-aac1cd57-12e3-47e4-8b73-2ea2a07a0954.png.webp" /></p>
+<p><img alt="" src="assets/1710316353838-aac1cd57-12e3-47e4-8b73-2ea2a07a0954.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -672,7 +672,7 @@ td code{white-space:nowrap}
 
 <h3 id="_7">测试</h3>
 <p>部署到web服务器，启动web服务器，打开浏览器，在地址栏上输入：<a href="http://localhost:8080/springmvc/">http://localhost:8080/springmvc/</a></p>
-<p><img alt="" src="assets/1710317491301-4104920d-3537-40d1-b950-2ad1f3398a2d.png.webp" /></p>
+<p><img alt="" src="assets/1710317491301-4104920d-3537-40d1-b950-2ad1f3398a2d.png" /></p>
 
 </section>
 <section class="chapter" id="ch-02">
@@ -681,7 +681,7 @@ td code{white-space:nowrap}
 <h2 id="requestmapping_1">RequestMapping的作用</h2>
 <p><code>@RequestMapping</code> 注解是 Spring MVC 框架中的一个控制器映射注解，用于将请求映射到相应的处理方法上。具体来说，它可以将指定 URL 的请求绑定到一个特定的方法或类上，从而实现对请求的处理和响应。</p>
 <h2 id="requestmapping_2">RequestMapping的出现位置</h2>
-<p><img alt="" src="assets/1710318777635-df02afe3-e065-4a05-877e-3a6f8a6eea4e.png.webp" /></p>
+<p><img alt="" src="assets/1710318777635-df02afe3-e065-4a05-877e-3a6f8a6eea4e.png" /></p>
 <p>通过RequestMapping的源码可以看到RequestMapping注解只能出现在类上或者方法上。</p>
 <h2 id="_8">类上与方法上结合使用</h2>
 <p>我们先来看，在同一个web应用中，是否可以有两个完全一样的RequestMapping。测试一下：假设两个RequestMapping，其中一个是展示用户详细信息，另一个是展示商品详细信息。提供两个Controller，一个是UserController，另一个是ProductController。如下：</p>
@@ -758,7 +758,7 @@ td code{white-space:nowrap}
 
 <p>再次启动web服务器，会发现没有再报错了。</p>
 <p>为这两个请求分别提供对应的视图页面：</p>
-<p><img alt="" src="assets/1710321603074-a058da54-46c1-45c2-9a16-08759212e879.png.webp" /></p>
+<p><img alt="" src="assets/1710321603074-a058da54-46c1-45c2-9a16-08759212e879.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
   <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -799,10 +799,10 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动Tomcat服务器，并测试：http://localhost:8080/springmvc/</p>
-<p><img alt="" src="assets/1710321765401-8615ea50-6537-4a23-9c28-e91cf8d3a957.png.webp" /></p>
+<p><img alt="" src="assets/1710321765401-8615ea50-6537-4a23-9c28-e91cf8d3a957.png" /></p>
 <p>点击用户详情，点击商品详情，都可以正常显示：</p>
-<p><img alt="" src="assets/1710323998528-e38bedfd-8915-4dd5-a5ff-47c7f65df143.png.webp" /></p>
-<p><img alt="" src="assets/1710324010676-719ba465-0cc1-49bf-a9e6-3d1375dfdc65.png.webp" /></p>
+<p><img alt="" src="assets/1710323998528-e38bedfd-8915-4dd5-a5ff-47c7f65df143.png" /></p>
+<p><img alt="" src="assets/1710324010676-719ba465-0cc1-49bf-a9e6-3d1375dfdc65.png" /></p>
 <h3 id="_10">第二种方案</h3>
 <p>在类上和方法上都使用RequestMapping注解来进行路径的映射。假设在类上映射的路径是"/a"，在方法上映射的路径是"/b"，那么整体表示映射的路径就是："/a/b"</p>
 <p>在第一种方案中，假设UserController类中有很多方法，每个方法的 RequestMapping注解中都需要以"/user"开始，显然比较啰嗦，干脆将"/user"提升到类级别上，例如：</p>
@@ -854,7 +854,7 @@ td code{white-space:nowrap}
 <h2 id="requestmappingvalue">RequestMapping注解的value属性</h2>
 <h3 id="value">value属性的使用</h3>
 <p>value属性是该注解最核心的属性，value属性填写的是请求路径，也就是说通过该请求路径与对应的控制器的方法绑定在一起。另外通过源码可以看到value属性是一个字符串数组：</p>
-<p><img alt="" src="assets/1710329488513-948e1e58-9984-458f-9c01-75601de3c0c8.png.webp" /></p>
+<p><img alt="" src="assets/1710329488513-948e1e58-9984-458f-9c01-75601de3c0c8.png" /></p>
 <p>既然是数组，就表示可以提供多个路径，也就是说，在SpringMVC中，多个不同的请求路径可以映射同一个控制器的同一个方法：</p>
 <p>编写新的控制器：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
@@ -912,9 +912,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器，测试，点击以下的两个超链接，发送请求，都可以正常访问到同一个控制器上的同一个方法：</p>
-<p><img alt="" src="assets/1710380856084-a7199701-367e-49d4-856c-843902882df4.png.webp" /></p>
-<p><img alt="" src="assets/1710380869186-247c7c9d-4fa7-4896-91ac-16c227cf0751.png.webp" /></p>
-<p><img alt="" src="assets/1710380880908-39caa3a2-020d-4f4b-821d-9a14ab6cfb03.png.webp" /></p>
+<p><img alt="" src="assets/1710380856084-a7199701-367e-49d4-856c-843902882df4.png" /></p>
+<p><img alt="" src="assets/1710380869186-247c7c9d-4fa7-4896-91ac-16c227cf0751.png" /></p>
+<p><img alt="" src="assets/1710380880908-39caa3a2-020d-4f4b-821d-9a14ab6cfb03.png" /></p>
 <blockquote>
 <p>关于 @RequestMapping 注解的value属性 </p>
 <p>value属性本身是一个 String[] 字符串数组，说明多个请求路径可以映射同一个处理器方法。</p>
@@ -960,16 +960,16 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果如下：</p>
-<p><img alt="" src="assets/1710408304774-c8fdaa73-4aad-43b2-a0b5-27600e45078b.png.webp" /></p>
-<p><img alt="" src="assets/1710408334347-3ecdd6de-4281-4dda-a31e-bb267496bf76.png.webp" /></p>
+<p><img alt="" src="assets/1710408304774-c8fdaa73-4aad-43b2-a0b5-27600e45078b.png" /></p>
+<p><img alt="" src="assets/1710408334347-3ecdd6de-4281-4dda-a31e-bb267496bf76.png" /></p>
 <p>通过修改浏览器地址栏上的路径，可以反复测试通配符 ? 的语法：</p>
-<p><img alt="" src="assets/1710408441950-b058d7cc-5d1a-42c0-9188-57d294e36c05.png.webp" /></p>
-<p><img alt="" src="assets/1710408497513-91234ca4-74ae-4681-87b6-066bf68cb60d.png.webp" /></p>
-<p><img alt="" src="assets/1710408554224-46bdf1bb-0fb9-4214-b30c-9b9a73973ff7.png.webp" /></p>
-<p><img alt="" src="assets/1710408520959-fdf3be9b-341c-4f9f-9d48-0b1b76e1b5b3.png.webp" /></p>
-<p><img alt="" src="assets/1710408535497-902d0a9a-8fbf-4b9d-b171-a6fa5b425900.png.webp" /></p>
-<p><img alt="" src="assets/1710408461985-6de127ca-d27f-40af-be89-71f2d1e298f1.png.webp" /></p>
-<p><img alt="" src="assets/1710408477041-0b7f3fc7-8ab2-4b1b-acb0-54fa009c5df1.png.webp" /></p>
+<p><img alt="" src="assets/1710408441950-b058d7cc-5d1a-42c0-9188-57d294e36c05.png" /></p>
+<p><img alt="" src="assets/1710408497513-91234ca4-74ae-4681-87b6-066bf68cb60d.png" /></p>
+<p><img alt="" src="assets/1710408554224-46bdf1bb-0fb9-4214-b30c-9b9a73973ff7.png" /></p>
+<p><img alt="" src="assets/1710408520959-fdf3be9b-341c-4f9f-9d48-0b1b76e1b5b3.png" /></p>
+<p><img alt="" src="assets/1710408535497-902d0a9a-8fbf-4b9d-b171-a6fa5b425900.png" /></p>
+<p><img alt="" src="assets/1710408461985-6de127ca-d27f-40af-be89-71f2d1e298f1.png" /></p>
+<p><img alt="" src="assets/1710408477041-0b7f3fc7-8ab2-4b1b-acb0-54fa009c5df1.png" /></p>
 <p>将 ? 通配符修改为 * 通配符：</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">//@RequestMapping("/x?z/testValueAnt")</span>
 <span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/x*z/testValueAnt"</span><span class="p">)</span>
@@ -979,9 +979,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>打开浏览器直接在地址栏上输入路径进行测试：</p>
-<p><img alt="" src="assets/1710409236128-4faa78a0-8da7-46b5-a466-58259918354a.png.webp" /></p>
-<p><img alt="" src="assets/1710409281578-57812acc-e94c-441f-91cf-35ed19c0912d.png.webp" /></p>
-<p><img alt="" src="assets/1710409267167-adb48ec7-861c-40f2-8a92-c1a4368de9fe.png.webp" /></p>
+<p><img alt="" src="assets/1710409236128-4faa78a0-8da7-46b5-a466-58259918354a.png" /></p>
+<p><img alt="" src="assets/1710409281578-57812acc-e94c-441f-91cf-35ed19c0912d.png" /></p>
+<p><img alt="" src="assets/1710409267167-adb48ec7-861c-40f2-8a92-c1a4368de9fe.png" /></p>
 <p>将 * 通配符修改为 ** 通配符：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/x**z/testValueAnt"</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">testValueAnt</span><span class="p">(){</span>
@@ -989,7 +989,7 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1710409419674-7475d2c4-989a-4547-9f8c-a2964b2d7eb7.png.webp" /></p>
+<p><img alt="" src="assets/1710409419674-7475d2c4-989a-4547-9f8c-a2964b2d7eb7.png" /></p>
 <p>注意：/x<strong>z/ 实际上并没有使用通配符 </strong>，本质上还是使用的 *，因为通配符 ** 在使用的时候，左右两边都不能有任何字符，必须是 /。</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/**/testValueAnt"</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">testValueAnt</span><span class="p">(){</span>
@@ -998,7 +998,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器发现报错了：</p>
-<p><img alt="" src="assets/1710410631877-81bfcc14-3ead-4f2c-99cf-69e0e39c9b3e.png.webp" /></p>
+<p><img alt="" src="assets/1710410631877-81bfcc14-3ead-4f2c-99cf-69e0e39c9b3e.png" /></p>
 <p>以上写法在Spring5的时候是支持的，但是在Spring6中进行了严格的规定，** 通配符只能出现在路径的末尾，例如：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/testValueAnt/**"</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">testValueAnt</span><span class="p">(){</span>
@@ -1007,8 +1007,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710410734275-31609763-9ca9-46ec-b8d4-539612055ffe.png.webp" /></p>
-<p><img alt="" src="assets/1710410746239-dcb5b607-28e9-4996-88b6-4e94b411cc6f.png.webp" /></p>
+<p><img alt="" src="assets/1710410734275-31609763-9ca9-46ec-b8d4-539612055ffe.png" /></p>
+<p><img alt="" src="assets/1710410746239-dcb5b607-28e9-4996-88b6-4e94b411cc6f.png" /></p>
 <h3 id="value_1">value中的占位符（重点）</h3>
 <p>到目前为止，我们的请求路径是这样的格式：uri?name1=value1&amp;name2=value2&amp;name3=value3</p>
 <p>其实除了这种方式，还有另外一种格式的请求路径，格式为：uri/value1/value2/value3，我们将这样的请求路径叫做 RESTful 风格的请求路径。</p>
@@ -1049,8 +1049,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710414703219-b27d6ea5-cbee-4e42-a11d-cb743563507e.png.webp" /></p>
-<p><img alt="" src="assets/1710414717194-86932dc5-5c6c-46b5-acb0-ab04778051ad.png.webp" /></p>
+<p><img alt="" src="assets/1710414703219-b27d6ea5-cbee-4e42-a11d-cb743563507e.png" /></p>
+<p><img alt="" src="assets/1710414717194-86932dc5-5c6c-46b5-acb0-ab04778051ad.png" /></p>
 <h2 id="requestmappingmethod">RequestMapping注解的method属性</h2>
 <h3 id="method">method属性的作用</h3>
 <p>在Servlet当中，如果后端要求前端必须发送一个post请求，后端可以通过重写doPost方法来实现。后端要求前端必须发送一个get请求，后端可以通过重写doGet方法来实现。当重写的方法是doPost时，前端就必须发送post请求，当重写doGet方法时，前端就必须发送get请求。如果前端发送请求的方式和后端的处理方式不一致时，会出现405错误。</p>
@@ -1058,9 +1058,9 @@ td code{white-space:nowrap}
 <p>假设后端程序要处理的请求是一个登录请求，为了保证登录时的用户名和密码不被显示到浏览器的地址栏上，后端程序有义务要求前端必须发送一个post请求，如果前端发送get请求，则应该拒绝。</p>
 <p>那么在SpringMVC框架中应该如何实现这种机制呢？可以使用RequestMapping注解的method属性来实现。</p>
 <p>通过RequestMapping源码可以看到，method属性也是一个数组：</p>
-<p><img alt="" src="assets/1710383145104-28befda6-4f03-4cc0-888d-f0c68e802489.png.webp" /></p>
+<p><img alt="" src="assets/1710383145104-28befda6-4f03-4cc0-888d-f0c68e802489.png" /></p>
 <p>数组中的每个元素是 RequestMethod，而RequestMethod是一个枚举类型的数据：</p>
-<p><img alt="" src="assets/1710383181561-c7807a8e-1e03-48bd-93ab-044900f7b52c.png.webp" /></p>
+<p><img alt="" src="assets/1710383181561-c7807a8e-1e03-48bd-93ab-044900f7b52c.png" /></p>
 <p>因此如果要求前端发送POST请求，该注解应该这样用：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"/login"</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestMethod</span><span class="p">.</span><span class="na">POST</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">login</span><span class="p">(){</span>
@@ -1099,8 +1099,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器，测试：</p>
-<p><img alt="" src="assets/1710383700474-55cf63ab-7f36-4ab7-b5f7-41046000472d.png.webp" /></p>
-<p><img alt="" src="assets/1710383716323-ad5bf478-30e9-48ed-8238-ebacaf395625.png.webp" /></p>
+<p><img alt="" src="assets/1710383700474-55cf63ab-7f36-4ab7-b5f7-41046000472d.png" /></p>
+<p><img alt="" src="assets/1710383716323-ad5bf478-30e9-48ed-8238-ebacaf395625.png" /></p>
 <p>通过测试，前端发送的请求方式post，后端处理请求的方式也是post，就不会有问题。</p>
 <p>当然，如果后端要求前端必须发送post请求，而前端发送了get请求，则会出现405错误，将index.html中form表单提交方式修改为get：</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--测试RequestMapping的method属性--&gt;</span>
@@ -1112,7 +1112,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>再次测试：</p>
-<p><img alt="" src="assets/1710383866495-ea6560e6-b458-4385-95cb-c9a9b24b08cd.png.webp" /></p>
+<p><img alt="" src="assets/1710383866495-ea6560e6-b458-4385-95cb-c9a9b24b08cd.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">因此，可以看出，对于RequestMapping注解来说，多一个属性，就相当于多了一个映射的条件，如果value和method属性都有，则表示只有前端发送的请求路径 + 请求方式都满足时才能与控制器上的方法建立映射关系，只要有一个不满足，则无法建立映射关系。例如：@RequestMapping(value="/login", method = RequestMethod.POST) 表示当前端发送的请求路径是 /login，并且发送请求的方式是POST的时候才会建立映射关系。如果前端发送的是get请求，或者前端发送的请求路径不是 /login，则都是无法建立映射的。</font></strong></p>
 <h3 id="mapping"><font style="color:#000000;">衍生Mapping</font></h3>
 <p>对于以上的程序来说，SpringMVC提供了另一个注解，使用这个注解更加的方便，它就是：PostMapping，使用该注解时，不需要指定method属性，因为它默认采用的就是POST处理方式：修改<font style="color:#000000;background-color:#ffffff;">RequestMappingTestController代码如下</font></p>
@@ -1124,9 +1124,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>当前端发送get请求时，测试一下：</p>
-<p><img alt="" src="assets/1710384745231-3f0f3e3d-e151-4ac8-bde2-e48798aadde0.png.webp" /></p>
+<p><img alt="" src="assets/1710384745231-3f0f3e3d-e151-4ac8-bde2-e48798aadde0.png" /></p>
 <p>当前端发送post请求时，测试一下：</p>
-<p><img alt="" src="assets/1710384819897-64de621f-fb7d-495e-98d3-5e7b192c458d.png.webp" /></p>
+<p><img alt="" src="assets/1710384819897-64de621f-fb7d-495e-98d3-5e7b192c458d.png" /></p>
 <p>在SpringMVC中不仅提供了 <strong><font style="color:#ff7b72;font-weight:600;">PostMaping</font></strong>注解，像这样的注解还有四个，包括：</p>
 <ul>
 <li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">GetMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送get请求</font></li>
@@ -1175,7 +1175,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710387909246-423bd4a6-9e73-40ca-ab7e-fac29f98f61f.png.webp" /></p>
+<p><img alt="" src="assets/1710387909246-423bd4a6-9e73-40ca-ab7e-fac29f98f61f.png" /></p>
 <p>通过测试得知，即使form中method设置为put方式，但仍然采用get方式发送请求。</p>
 <p><font style="color:#000000;background-color:#ffffff;">再次修改RequestMappingTestController：</font></p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/login"</span><span class="p">,</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RequestMethod</span><span class="p">.</span><span class="na">GET</span><span class="p">)</span>
@@ -1186,7 +1186,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>再次测试：</p>
-<p><img alt="" src="assets/1710388055974-40f19d04-9b29-459e-9821-f330066e1e2c.png.webp" /></p>
+<p><img alt="" src="assets/1710388055974-40f19d04-9b29-459e-9821-f330066e1e2c.png" /></p>
 <h3 id="getpost"><font style="color:#000000;background-color:#ffffff;">GET和POST的区别</font></h3>
 <p><font style="color:#000000;background-color:#ffffff;">在之前发布的JavaWEB视频中对HTTP请求协议的GET和POST进行了详细讲解，这里就不再赘述，大致回顾一下。</font></p>
 <p><font style="color:#000000;background-color:#ffffff;">HTTP请求协议之GET请求：</font></p>
@@ -1268,7 +1268,7 @@ td code{white-space:nowrap}
 <li>method属性也是一个数组，只要满足数组中任意一个请求方式，就能映射成功。</li>
 <li><strong><font style="color:#ff7b72;font-weight:600;">params属性也是一个数组，不过要求请求参数必须和params数组中要求的所有参数完全一致后，才能映射成功。</font></strong></li>
 </ul>
-<p><img alt="" src="assets/1710398311030-55ee91e0-b4d0-4b43-9d65-36a552eb6d3a.png.webp" /></p>
+<p><img alt="" src="assets/1710398311030-55ee91e0-b4d0-4b43-9d65-36a552eb6d3a.png" /></p>
 <h3 id="params4">params属性的4种用法</h3>
 <p>@RequestMapping(value="/login", params={<strong><font style="color:#ff7b72;font-weight:600;">"username"</font></strong>, "password"}) 表示：请求参数中必须包含 username 和 password，才能与当前标注的方法进行映射。</p>
 <p>@RequestMapping(value="/login", params={<strong><font style="color:#ff7b72;font-weight:600;">"!username"</font></strong>, "password"}) 表示：请求参数中不能包含username参数，但必须包含password参数，才能与当前标注的方法进行映射。</p>
@@ -1307,15 +1307,15 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器，测试：</p>
-<p><img alt="" src="assets/1710400506148-f404474f-771b-4fb7-97a8-5a322012fb33.png.webp" /></p>
-<p><img alt="" src="assets/1710400526780-f4691915-7952-4d91-bb5b-704cf40ab6fd.png.webp" /></p>
+<p><img alt="" src="assets/1710400506148-f404474f-771b-4fb7-97a8-5a322012fb33.png" /></p>
+<p><img alt="" src="assets/1710400526780-f4691915-7952-4d91-bb5b-704cf40ab6fd.png" /></p>
 <p>假如发送请求时，没有传递username参数会怎样？</p>
 <div class="codehilite"><pre><span></span><code><span class="err">&lt;a th:href="@{/testParams(password='123')}"&gt;测试params属性&lt;/a&gt;&lt;br&gt;</span>
 </code></pre></div>
 
 <p>启动服务器，测试：</p>
-<p><img alt="" src="assets/1710400622164-d051b747-dbc7-4044-bbfb-2d3e40602b65.png.webp" /></p>
-<p><img alt="" src="assets/1710400640376-f181e4a5-79a3-4a55-a1d9-1d55582102e0.png.webp" /></p>
+<p><img alt="" src="assets/1710400622164-d051b747-dbc7-4044-bbfb-2d3e40602b65.png" /></p>
+<p><img alt="" src="assets/1710400640376-f181e4a5-79a3-4a55-a1d9-1d55582102e0.png" /></p>
 <p>提示无效的请求参数，服务器无法或不会处理当前请求。</p>
 <p>params属性剩下的三种情况，自行测试！！！！</p>
 <h2 id="requestmappingheaders">RequestMapping注解的headers属性</h2>
@@ -1323,7 +1323,7 @@ td code{white-space:nowrap}
 <p>headers和params原理相同，用法也相同。</p>
 <p>当前端提交的请求头信息和后端要求的请求头信息一致时，才能映射成功。</p>
 <p>请求头信息怎么查看？在chrome浏览器中，F12打开控制台，找到Network，可以查看具体的请求协议和响应协议。在请求协议中可以看到请求头信息，例如：</p>
-<p><img alt="" src="assets/1710402265257-e2b13b8d-52e7-4088-842a-4246be3e866a.png.webp" /></p>
+<p><img alt="" src="assets/1710402265257-e2b13b8d-52e7-4088-842a-4246be3e866a.png" /></p>
 <p>请求头信息和请求参数信息一样，都是键值对形式，例如上图中：</p>
 <ul>
 <li>Referer: http://localhost:8080/springmvc/     键是Referer，值是http://localhost:8080/springmvc/</li>
@@ -1362,8 +1362,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器，测试结果：</p>
-<p><img alt="" src="assets/1710403104850-63f4c9fb-28ac-483a-b4c4-cdcea6b49e97.png.webp" /></p>
-<p><img alt="" src="assets/1710403163821-dd5ae672-3b0a-4ae3-b978-48c8bef4f63a.png.webp" /></p>
+<p><img alt="" src="assets/1710403104850-63f4c9fb-28ac-483a-b4c4-cdcea6b49e97.png" /></p>
+<p><img alt="" src="assets/1710403163821-dd5ae672-3b0a-4ae3-b978-48c8bef4f63a.png" /></p>
 <p>将后端控制器中的headers属性值进行修改：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/testHeaders"</span><span class="p">,</span><span class="w"> </span><span class="n">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"Referer=http://localhost:8888/springmvc/"</span><span class="p">})</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">testHeaders</span><span class="p">(){</span>
@@ -1372,7 +1372,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>再次测试：</p>
-<p><img alt="" src="assets/1710403270750-77c19967-a2a8-423d-9fea-c9632e48cf8c.png.webp" /></p>
+<p><img alt="" src="assets/1710403270750-77c19967-a2a8-423d-9fea-c9632e48cf8c.png" /></p>
 <p>其他情况自行测试！！！！</p>
 
 </section>
@@ -1434,7 +1434,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <h3 id="web_3">添加web支持</h3>
-<p><img alt="" src="assets/1710418588238-98865609-699f-4cb6-8ce4-d85a48da0469.png.webp" /></p>
+<p><img alt="" src="assets/1710418588238-98865609-699f-4cb6-8ce4-d85a48da0469.png" /></p>
 <h3 id="webxml_2">编写web.xml文件</h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;web-app</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"https://jakarta.ee/xml/ns/jakartaee"</span>
@@ -1524,7 +1524,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <h3 id="registerhtml">编写register.html文件</h3>
-<p><img alt="" src="assets/1710418693211-64c3f53c-31a0-4ccd-9f2e-0023ef97afb4.png.webp" /></p>
+<p><img alt="" src="assets/1710418693211-64c3f53c-31a0-4ccd-9f2e-0023ef97afb4.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
@@ -1539,7 +1539,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <h3 id="_16">部署测试</h3>
-<p><img alt="" src="assets/1710418729572-558f5f1f-b30c-48f6-be0b-be0e58ce8af9.png.webp" /></p>
+<p><img alt="" src="assets/1710418729572-558f5f1f-b30c-48f6-be0b-be0e58ce8af9.png" /></p>
 <h2 id="servlet-api">使用原生的Servlet API进行获取</h2>
 <p>原生的Servlet API指的是：HttpServletRequest</p>
 <p>在SpringMVC当中，一个Controller类中的方法参数上如果有HttpServletRequest，SpringMVC会自动将<code>**当前请求对象**</code>传递给这个参数，因此我们可以通过这个参数来获取请求提交的数据。测试一下。</p>
@@ -1573,9 +1573,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>先测试这个页面是否可以正常打开，是否可以正常提交数据：</p>
-<p><img alt="" src="assets/1710419419412-530f021a-4b19-43de-bac8-800866cfe619.png.webp" /></p>
+<p><img alt="" src="assets/1710419419412-530f021a-4b19-43de-bac8-800866cfe619.png" /></p>
 <p>点击注册：F12的方式查看是否提交了数据：</p>
-<p><img alt="" src="assets/1710419495559-af90ea42-1002-4cab-8e38-c455b3b0a16d.png.webp" /></p>
+<p><img alt="" src="assets/1710419495559-af90ea42-1002-4cab-8e38-c455b3b0a16d.png" /></p>
 <p>通过测试得知：可以正常提交数据。</p>
 <p>接下来在控制器添加一个方法来处理这个注册的请求：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@PostMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/register"</span><span class="p">)</span>
@@ -1605,8 +1605,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试：</p>
-<p><img alt="" src="assets/1710419827530-70740ef1-28a3-4766-9825-6d0cb5ebbf4a.png.webp" /></p>
-<p><img alt="" src="assets/1710419792573-b4d36148-dff4-45f6-ab97-e6de4e74a362.png.webp" /></p>
+<p><img alt="" src="assets/1710419827530-70740ef1-28a3-4766-9825-6d0cb5ebbf4a.png" /></p>
+<p><img alt="" src="assets/1710419792573-b4d36148-dff4-45f6-ab97-e6de4e74a362.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">这样通过Servlet原生的API获取到提交的数据。但是这种方式不建议使用，因为方法的参数依赖Servlet原生API，Controller的测试将不能单独测试，必须依赖WEB服务器才能测试。另外，换句话说，如果在SpringMVC中使用了原生的Servlet，你为什么还要用SpringMVC框架呢！！！！！</font></strong></p>
 <h2 id="requestparam"><font style="color:#000000;">使用RequestParam注解标注</font></h2>
 <h3 id="requestparam_1">RequestParam注解的基本使用</h3>
@@ -1633,50 +1633,50 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>注意：对于@RequestParam注解来说，属性有value和name，这两个属性的作用相同，都是用来指定提交数据的name。</p>
-<p><img alt="" src="assets/1710428008416-73b3a547-46ab-47bb-922c-b3d090e0cfc9.png.webp" /></p>
+<p><img alt="" src="assets/1710428008416-73b3a547-46ab-47bb-922c-b3d090e0cfc9.png" /></p>
 <p>例如：发送请求时提交的数据是：name1=value1&amp;name2=value2，则这个注解应该这样写：@RequestParam(value="name1")、@RequestParam(value="name2")</p>
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710427890838-fe12392a-6fdf-4c94-8660-1bbee1f84a74.png.webp" /></p>
-<p><img alt="" src="assets/1710427902078-fb8c772f-deae-49bc-93ec-0022ab4c8cd8.png.webp" /></p>
-<p><img alt="" src="assets/1710427916293-aa47a26a-2d15-4b1b-ac6a-ada398655150.png.webp" /></p>
+<p><img alt="" src="assets/1710427890838-fe12392a-6fdf-4c94-8660-1bbee1f84a74.png" /></p>
+<p><img alt="" src="assets/1710427902078-fb8c772f-deae-49bc-93ec-0022ab4c8cd8.png" /></p>
+<p><img alt="" src="assets/1710427916293-aa47a26a-2d15-4b1b-ac6a-ada398655150.png" /></p>
 <p>一定要注意： @RequestParam(value="name2") 中value一定不要写错，写错就会出现以下问题：</p>
-<p><img alt="" src="assets/1710428081389-9ac88bba-c37c-4fb8-9b9d-f7a9091b97ab.png.webp" /></p>
+<p><img alt="" src="assets/1710428081389-9ac88bba-c37c-4fb8-9b9d-f7a9091b97ab.png" /></p>
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710428139767-d3888c35-e2f8-407f-accb-f744a7098148.png.webp" /></p>
+<p><img alt="" src="assets/1710428139767-d3888c35-e2f8-407f-accb-f744a7098148.png" /></p>
 <h3 id="requestparamrequired">RequestParam注解的required属性</h3>
-<p><img alt="" src="assets/1710465027479-caeb1d78-c92d-4fca-b9fa-80e6bcf06c7a.png.webp" /></p>
+<p><img alt="" src="assets/1710465027479-caeb1d78-c92d-4fca-b9fa-80e6bcf06c7a.png" /></p>
 <p>required属性用来设置该方法参数是否为必须的。</p>
 <p>默认情况下，这个参数为 <code>true</code>，表示方法参数是必需的。如果请求中缺少对应的参数，则会抛出异常。</p>
 <p>可以将其设置为<code>false</code>，false表示不是必须的，如果请求中缺少对应的参数，则方法的参数为null。</p>
 <p>添加了一个 age 形参，没有指定 required 属性时，默认是true，表示必需的，但前端表单中没有年龄age，我们来看报错信息：</p>
-<p><img alt="" src="assets/1710468194109-56b8df42-2110-4b2b-9e73-064884f2e04b.png.webp" /></p>
+<p><img alt="" src="assets/1710468194109-56b8df42-2110-4b2b-9e73-064884f2e04b.png" /></p>
 <p>错误信息告诉我们：参数age是必需的。没有提供这个请求参数，HTTP状态码 400</p>
 <p>如果将 required 属性设置为 false。则该参数则不是必须的，如果请求参数仍然未提供时，我们来看结果：</p>
-<p><img alt="" src="assets/1710468402437-7395c6e2-6ab4-4bdc-a66e-cb82811be4e4.png.webp" /></p>
-<p><img alt="" src="assets/1710468358266-82e27b39-b24a-4aca-902e-9a69c5630ca7.png.webp" /></p>
-<p><img alt="" src="assets/1710468442095-a0aa03e0-390e-440c-b9db-61139b8098cb.png.webp" /></p>
+<p><img alt="" src="assets/1710468402437-7395c6e2-6ab4-4bdc-a66e-cb82811be4e4.png" /></p>
+<p><img alt="" src="assets/1710468358266-82e27b39-b24a-4aca-902e-9a69c5630ca7.png" /></p>
+<p><img alt="" src="assets/1710468442095-a0aa03e0-390e-440c-b9db-61139b8098cb.png" /></p>
 <p>通过测试得知，如果一个参数被设置为<code>不是必需的</code>，当没有提交对应的请求参数时，形参默认值null。</p>
 <p>当然，如果请求参数中提供了age，则age为真实提交的数据：</p>
-<p><img alt="" src="assets/1710469986610-0f8a53d3-5e70-4127-a102-909bd6b75a46.png.webp" /></p>
-<p><img alt="" src="assets/1710470042986-374bf055-aa7e-40d1-ae62-666d4b477ff9.png.webp" /></p>
-<p><img alt="" src="assets/1710470056000-452b7435-23c0-4c3f-a1d0-e4b4b933a802.png.webp" /></p>
-<p><img alt="" src="assets/1710470068447-179bdbdc-7281-4db9-96ae-8c120f826898.png.webp" /></p>
+<p><img alt="" src="assets/1710469986610-0f8a53d3-5e70-4127-a102-909bd6b75a46.png" /></p>
+<p><img alt="" src="assets/1710470042986-374bf055-aa7e-40d1-ae62-666d4b477ff9.png" /></p>
+<p><img alt="" src="assets/1710470056000-452b7435-23c0-4c3f-a1d0-e4b4b933a802.png" /></p>
+<p><img alt="" src="assets/1710470068447-179bdbdc-7281-4db9-96ae-8c120f826898.png" /></p>
 <h3 id="requestparamdefaultvalue">RequestParam注解的defaultValue属性</h3>
 <p>defaultValue属性用来设置形参的默认值，当<code>没有提供对应的请求参数</code>或者<code>请求参数的值是空字符串""</code>的时候，方法的形参会采用默认值。</p>
-<p><img alt="" src="assets/1710470373422-d7c95422-71b8-4662-a99b-913343b8c59e.png.webp" /></p>
+<p><img alt="" src="assets/1710470373422-d7c95422-71b8-4662-a99b-913343b8c59e.png" /></p>
 <p>当前端页面没有提交email的时候：</p>
-<p><img alt="" src="assets/1710470456573-54784174-401f-4fde-a7c3-9e3f88414d88.png.webp" /></p>
-<p><img alt="" src="assets/1710470470975-d91804e7-a1ad-465f-a9dc-ed57e560d146.png.webp" /></p>
-<p><img alt="" src="assets/1710470482292-3a68329a-02e6-4a41-b3ae-f3ac1cb9635d.png.webp" /></p>
+<p><img alt="" src="assets/1710470456573-54784174-401f-4fde-a7c3-9e3f88414d88.png" /></p>
+<p><img alt="" src="assets/1710470470975-d91804e7-a1ad-465f-a9dc-ed57e560d146.png" /></p>
+<p><img alt="" src="assets/1710470482292-3a68329a-02e6-4a41-b3ae-f3ac1cb9635d.png" /></p>
 <p>当前端页面提交的email是空字符串的时候：</p>
 <p><img alt="" src="assets/1710470529370-873dcc0f-40eb-4348-ac4b-82abf1d921f9.png" /></p>
-<p><img alt="" src="assets/1710470563357-648e4929-5b70-4e25-a364-3905c89da147.png.webp" /></p>
-<p><img alt="" src="assets/1710470573342-6a3b4497-74a9-44e0-a15b-add971551d64.png.webp" /></p>
-<p><img alt="" src="assets/1710470582878-a1d3fc60-f4fc-4f6c-95db-0cd924fa7f75.png.webp" /></p>
+<p><img alt="" src="assets/1710470563357-648e4929-5b70-4e25-a364-3905c89da147.png" /></p>
+<p><img alt="" src="assets/1710470573342-6a3b4497-74a9-44e0-a15b-add971551d64.png" /></p>
+<p><img alt="" src="assets/1710470582878-a1d3fc60-f4fc-4f6c-95db-0cd924fa7f75.png" /></p>
 <p>当前端提交的email不是空字符串的时候：</p>
-<p><img alt="" src="assets/1710470628085-cb06b835-2098-4047-973f-5f572b6a09c0.png.webp" /></p>
-<p><img alt="" src="assets/1710470635669-d5c193c2-f62a-44a9-881f-066e96cc4059.png.webp" /></p>
-<p><img alt="" src="assets/1710470647079-313b64ca-4a54-4581-8dc6-11f039e70477.png.webp" /></p>
+<p><img alt="" src="assets/1710470628085-cb06b835-2098-4047-973f-5f572b6a09c0.png" /></p>
+<p><img alt="" src="assets/1710470635669-d5c193c2-f62a-44a9-881f-066e96cc4059.png" /></p>
+<p><img alt="" src="assets/1710470647079-313b64ca-4a54-4581-8dc6-11f039e70477.png" /></p>
 <h2 id="_17">依靠控制器方法上的形参名来接收</h2>
 <p>@RequestParam 这个注解是可以省略的，如果方法形参的名字和提交数据时的name相同，则 @RequestParam 可以省略。</p>
 <p>但有一个前提：如果你采用的是Spring6+版本，你需要在pom.xml文件中指定编译参数'-parameter'，配置如下：</p>
@@ -1708,11 +1708,11 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710420392728-d9818422-a468-492b-ad80-ec87e4e8c39e.png.webp" /></p>
-<p><img alt="" src="assets/1710428543288-58b926eb-7646-465d-8ed1-3346d5c79214.png.webp" /></p>
+<p><img alt="" src="assets/1710420392728-d9818422-a468-492b-ad80-ec87e4e8c39e.png" /></p>
+<p><img alt="" src="assets/1710428543288-58b926eb-7646-465d-8ed1-3346d5c79214.png" /></p>
 <p>如果形参名和提交的数据的name不一致时：</p>
-<p><img alt="" src="assets/1710428636791-b1c4eb79-ce31-4ecf-9ee5-4db8e6ffb0d6.png.webp" /></p>
-<p><img alt="" src="assets/1710428682813-4c2440c7-0500-4d02-a66a-7a3852ebd981.png.webp" /></p>
+<p><img alt="" src="assets/1710428636791-b1c4eb79-ce31-4ecf-9ee5-4db8e6ffb0d6.png" /></p>
+<p><img alt="" src="assets/1710428682813-4c2440c7-0500-4d02-a66a-7a3852ebd981.png" /></p>
 <p>另外，还有一点，对于提交的hobby数据，也可以采用String来接收，不一定使用数组方式：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@PostMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/register"</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">hobby</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">intro</span><span class="p">){</span>
@@ -1722,7 +1722,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710428821480-9f9f3a69-3697-4965-b127-e304fb9aa524.png.webp" /></p>
+<p><img alt="" src="assets/1710428821480-9f9f3a69-3697-4965-b127-e304fb9aa524.png" /></p>
 <p>根据输出结果可以看到多个hobby是采用“,”进行连接的。</p>
 <h2 id="pojojavabean">使用POJO类/JavaBean接收请求参数</h2>
 <p>以上方式大家可以看到，当提交的数据非常多时，方法的形参个数会非常多，这不是很好的设计。在SpringMVC中也可以使用POJO类/JavaBean来接收请求参数。不过有一个非常重要的要求：<code>POJO类的属性名</code>必须和<code>请求参数的参数名</code>保持一致。提供以下的JavaBean：</p>
@@ -1828,8 +1828,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>执行结果：</p>
-<p><img alt="" src="assets/1710471338770-502eefb8-15b7-4632-9d07-37b1fa60a539.png.webp" /></p>
-<p><img alt="" src="assets/1710471328104-0ef741e8-70d3-4294-a559-165ffee8a821.png.webp" /></p>
+<p><img alt="" src="assets/1710471338770-502eefb8-15b7-4632-9d07-37b1fa60a539.png" /></p>
+<p><img alt="" src="assets/1710471328104-0ef741e8-70d3-4294-a559-165ffee8a821.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">底层的实现原理：反射机制。先获取请求参数的名字，因为请求参数的名字就是JavaBean的属性名，通过这种方式给对应的属性赋值</font></strong>。</p>
 <p>我们来测试一下：当JavaBean的属性名和请求参数的参数名不一致时，会出现什么问题？（注意：<strong><font style="color:#ff7b72;font-weight:600;">getter和setter的方法名不修改，只修改属性名</font></strong>）</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.pojo</span><span class="p">;</span>
@@ -1926,14 +1926,14 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710471749061-322c5c24-45e5-40b4-95f0-3732508150b7.png.webp" /></p>
-<p><img alt="" src="assets/1710471758221-ea101ba1-8586-472c-9adc-e44729d1bac4.png.webp" /></p>
+<p><img alt="" src="assets/1710471749061-322c5c24-45e5-40b4-95f0-3732508150b7.png" /></p>
+<p><img alt="" src="assets/1710471758221-ea101ba1-8586-472c-9adc-e44729d1bac4.png" /></p>
 <p>通过测试，我们得知：<code>请求参数名</code>可以和<code>JavaBean的属性名</code>不一致。</p>
 <p>我们继续将其中一个属性的setter和getter方法名修改一下：</p>
-<p><img alt="" src="assets/1710471908862-89d1b430-cff1-43e2-9678-49017f49d663.png.webp" /></p>
+<p><img alt="" src="assets/1710471908862-89d1b430-cff1-43e2-9678-49017f49d663.png" /></p>
 <p>再次测试：</p>
-<p><img alt="" src="assets/1710471941379-7da74eee-7b34-4dae-8589-98c0cf0a4d04.png.webp" /></p>
-<p><img alt="" src="assets/1710471949916-1049b6e4-df85-44f0-ba78-d2fe556f4fb9.png.webp" /></p>
+<p><img alt="" src="assets/1710471941379-7da74eee-7b34-4dae-8589-98c0cf0a4d04.png" /></p>
+<p><img alt="" src="assets/1710471949916-1049b6e4-df85-44f0-ba78-d2fe556f4fb9.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">通过测试可以看到：username属性没有赋上值。可见请求参数是否可以赋值到JavaBean对应的属性上，不是取决于属性名，而是setter方法名</font></strong>。</p>
 <h2 id="requestheader"><font style="color:#000000;background-color:#ffffff;">RequestHeader注解</font></h2>
 <p>该注解的作用是：将<code>请求头信息</code>映射到<code>方法的形参上</code>。</p>
@@ -1951,7 +1951,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>执行结果：</p>
-<p><img alt="" src="assets/1710472685320-fa79ddc4-04e0-4f8e-b97e-56f3f28ee60f.png.webp" /></p>
+<p><img alt="" src="assets/1710472685320-fa79ddc4-04e0-4f8e-b97e-56f3f28ee60f.png" /></p>
 <h2 id="cookievalue"><font style="color:#000000;background-color:#ffffff;">CookieValue注解</font></h2>
 <p>该注解的作用：将<code>请求提交的Cookie数据</code>映射到<code>方法形参</code>上</p>
 <p>同样是有三个属性：value、required、defaultValue</p>
@@ -1980,16 +1980,16 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710473271244-7a95563a-fff4-458e-914f-25b314c78bd1.png.webp" /></p>
+<p><img alt="" src="assets/1710473271244-7a95563a-fff4-458e-914f-25b314c78bd1.png" /></p>
 <h2 id="_18">请求的中文乱码问题</h2>
 <h3 id="get">get请求乱码</h3>
 <p>get请求数据在URI后面提交，这个乱码问题怎么解决呢？解决办法是找到 CATALINA_HOME/config/server.xml文件，找到其中配置端口号的标签<Connector>，在该标签中添加  URIEncoding="UTF-8"。但是对于高版本的Tomcat服务器来说，是不需要设置的，例如Tomcat10，Tomcat9，有如下的默认配置，在默认情况下URIEncoding使用的就是UTF-8的编码方式。</p>
-<p><img alt="" src="assets/1710480361252-0f3431f2-906f-41ea-b4b9-ac9dba2d926a.png.webp" /></p>
+<p><img alt="" src="assets/1710480361252-0f3431f2-906f-41ea-b4b9-ac9dba2d926a.png" /></p>
 <p>但对于低版本的Tomcat服务器，例如：Tomcat8。URIEncoding的默认配置是ISO-8859-1，因此在Tomcat8中需要手动配置server.xml文件：</p>
-<p><img alt="" src="assets/1710480799719-41567287-3dcb-441b-853f-15114b8c2216.png.webp" /></p>
+<p><img alt="" src="assets/1710480799719-41567287-3dcb-441b-853f-15114b8c2216.png" /></p>
 <p>配置如下：</p>
-<p><img alt="" src="assets/1710480903724-206fb06c-4cff-4ed0-a24b-83ceefb65d79.png.webp" /></p>
-<p><img alt="" src="assets/1710480932430-381979d9-289d-4c8a-abc7-653e824c8753.png.webp" /></p>
+<p><img alt="" src="assets/1710480903724-206fb06c-4cff-4ed0-a24b-83ceefb65d79.png" /></p>
+<p><img alt="" src="assets/1710480932430-381979d9-289d-4c8a-abc7-653e824c8753.png" /></p>
 <p>接下来，我们测试一下，在默认情况下，Tomcat10是否已经解决了get请求乱码问题：</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">th:action</span><span class="o">=</span><span class="s">"@{/register}"</span> <span class="na">method</span><span class="o">=</span><span class="s">"get"</span><span class="p">&gt;</span>
   用户名：<span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">"text"</span> <span class="na">name</span><span class="o">=</span><span class="s">"username"</span><span class="p">&gt;&lt;</span><span class="nt">br</span><span class="p">&gt;</span>
@@ -2017,8 +2017,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710481129146-18d9e4e2-8385-423a-adc5-3d379323cbb7.png.webp" /></p>
-<p><img alt="" src="assets/1710481146376-640c0e7f-6872-453a-b3ea-b34b899bf16d.png.webp" /></p>
+<p><img alt="" src="assets/1710481129146-18d9e4e2-8385-423a-adc5-3d379323cbb7.png" /></p>
+<p><img alt="" src="assets/1710481146376-640c0e7f-6872-453a-b3ea-b34b899bf16d.png" /></p>
 <h3 id="post">post请求乱码</h3>
 <p>post请求是解决请求体的中文乱码问题。解决办法大家都知道：</p>
 <div class="codehilite"><pre><span></span><code><span class="n">request</span><span class="p">.</span><span class="na">setCharacterEncoding</span><span class="p">(</span><span class="s">"UTF-8"</span><span class="p">);</span>
@@ -2026,7 +2026,7 @@ td code{white-space:nowrap}
 
 <p>同样，对于高版本的<strong><font style="color:#ff7b72;font-weight:600;">Tomcat10</font></strong>服务器来说，针对请求体中的字符编码也是配置好的，默认也是采用了UTF-8，中文乱码问题也解决了，在这个文件中配置的：apache-tomcat-10.1.19\conf\web.xml</p>
 <p>配置内容如下：</p>
-<p><img alt="" src="assets/1710731491577-383b3f5b-046a-47c4-8da9-86b52ab1f535.png.webp" /></p>
+<p><img alt="" src="assets/1710731491577-383b3f5b-046a-47c4-8da9-86b52ab1f535.png" /></p>
 <p>通过以上配置可以看到，Tomcat10对请求和响应都设置了默认的字符编码方式为UTF-8</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">一定要注意：Tomcat9以及之前的版本，以上的配置是没有的。</font></strong></p>
 <hr />
@@ -2057,13 +2057,13 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710481669556-b01327ea-202b-42b7-8f65-5d0d5fabe764.png.webp" /></p>
-<p><img alt="" src="assets/1710731963626-7c6e6d8c-a222-4588-b17d-5dafe2923abb.png.webp" /></p>
+<p><img alt="" src="assets/1710481669556-b01327ea-202b-42b7-8f65-5d0d5fabe764.png" /></p>
+<p><img alt="" src="assets/1710731963626-7c6e6d8c-a222-4588-b17d-5dafe2923abb.png" /></p>
 <p>通过测试可以看到在Tomcat10当中，默认SpringMVC，发送POST请求，是不会出现乱码问题的。</p>
 <p>有可能很多同学使用的不是Tomcat10，如果不是Tomcat10，则会出现乱码问题，我们来模拟一下乱码的产生，将apache-tomcat-10.1.19\conf\web.xml文件中的UTF-8配置修改为ISO-8859-1：</p>
-<p><img alt="" src="assets/1710732413713-0f034192-e4d4-4c33-aeb3-169726468251.png.webp" /></p>
+<p><img alt="" src="assets/1710732413713-0f034192-e4d4-4c33-aeb3-169726468251.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">一定要重启Tomcat10</font></strong>，新的配置才能生效，来测试一下是否存在乱码：</p>
-<p><img alt="" src="assets/1710732483068-b356942a-9183-4734-812d-041a151df48d.png.webp" /></p>
+<p><img alt="" src="assets/1710732483068-b356942a-9183-4734-812d-041a151df48d.png" /></p>
 <p>那么，在SpringMVC中如何解决请求体的中文乱码问题呢？当然，还是使用<code>request.setCharacterEncoding("UTF-8")</code></p>
 <p>使用它有一个前提条件，要想解决请求体乱码问题，以上代码必须在 <code>request.getParameter("username")</code>执行之前执行才有效。</p>
 <p>也就是说以上代码如果放在Controller的相关方法中执行是无效的，因为Controller的方法在执行之前 DispatcherServlet已经调用了 <code>request.getParameter("username")</code>方法。因此在Controller方法中使用<code>request.setCharacterEncoding("UTF-8");</code>无效我们来测试一下：</p>
@@ -2094,8 +2094,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710481669556-b01327ea-202b-42b7-8f65-5d0d5fabe764.png.webp" /></p>
-<p><img alt="" src="assets/1710732483068-b356942a-9183-4734-812d-041a151df48d.png.webp" /></p>
+<p><img alt="" src="assets/1710481669556-b01327ea-202b-42b7-8f65-5d0d5fabe764.png" /></p>
+<p><img alt="" src="assets/1710732483068-b356942a-9183-4734-812d-041a151df48d.png" /></p>
 <p>通过测试可以看到：在Controller当中调用<code>request.setCharacterEncoding("UTF-8")</code>是无法解决POST乱码问题的。</p>
 <p>那怎么办呢？怎么样才能在DispatcherServlet之前执行<code>request.setCharacterEncoding("UTF-8")</code>呢？没错，我相信大家想到了：过滤器Filter。过滤器Filter可以在Servlet执行之前执行。有同学又说了：监听器不行吗？不行。因为我们需要对每一次请求解决乱码，而监听器只在服务器启动阶段执行一次。因此这里解决每一次请求的乱码问题，应该使用过滤器Filter。并且，告诉大家一个好消息，SpringMVC已经将这个字符编码的过滤器提前写好了，我们直接配置好即可：<code>CharacterEncodingFilter</code>，我们一起看一下它的源码：</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">/*</span>
@@ -2350,7 +2350,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>我们再来测试，重启Tomcat10，看看乱码是否能够解决？</p>
-<p><img alt="" src="assets/1710733643651-29370350-6188-4ada-a8b0-99c6264f3b7a.png.webp" /></p>
+<p><img alt="" src="assets/1710733643651-29370350-6188-4ada-a8b0-99c6264f3b7a.png" /></p>
 <p>注意：针对于我们当前的Tomcat10的配置来说，它有默认的字符集ISO-8859-1，因此以下在web.xml文件中的配置是不能缺少的：</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;init-param&gt;</span>
 <span class="w">    </span><span class="nt">&lt;param-name&gt;</span>forceRequestEncoding<span class="nt">&lt;/param-name&gt;</span>
@@ -2455,7 +2455,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710747192867-9c718af0-41ad-4be9-8d48-c2ecdbd90789.png.webp" /></p>
+<p><img alt="" src="assets/1710747192867-9c718af0-41ad-4be9-8d48-c2ecdbd90789.png" /></p>
 <p>这种方式当然可以，用SpringMVC框架，不建议使用原生Servlet API。</p>
 <h3 id="model">使用Model接口</h3>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/testModel"</span><span class="p">)</span>
@@ -2486,16 +2486,16 @@ td code{white-space:nowrap}
 
 <h4 id="modelmapmodelmap">Model、Map、ModelMap的关系</h4>
 <p>可以在以上Model、Map、ModelMap的测试程序中将其输出，看看输出什么：</p>
-<p><img alt="" src="assets/1710748328132-7ec71a48-8879-4758-824a-a9d669f1594a.png.webp" /></p>
+<p><img alt="" src="assets/1710748328132-7ec71a48-8879-4758-824a-a9d669f1594a.png" /></p>
 <p>看不出来什么区别，从输出结果上可以看到都是一样的。</p>
 <p>可以将其运行时类名输出：</p>
-<p><img alt="" src="assets/1710748490407-0ab2044c-0261-498d-b55d-ce563afda27d.png.webp" /></p>
+<p><img alt="" src="assets/1710748490407-0ab2044c-0261-498d-b55d-ce563afda27d.png" /></p>
 <p>通过输出结果可以看出，无论是Model、Map还是ModelMap，底层实例化的对象都是：BindingAwareModelMap。</p>
 <p>可以查看BindingAwareModelMap的继承结构：</p>
-<p><img alt="" src="assets/1710748694354-caf9941e-9ce9-4215-bfe7-2d2a759ef206.png.webp" /></p>
+<p><img alt="" src="assets/1710748694354-caf9941e-9ce9-4215-bfe7-2d2a759ef206.png" /></p>
 <p>通过继承结构可以看出：BindingAwareModelMap继承了ModelMap，而ModelMap又实现了Map接口。</p>
 <p>另外，请看以下源码：</p>
-<p><img alt="" src="assets/1710748884799-5bad9d0f-9926-4ef0-a29e-7f9e5d6bd383.png.webp" /></p>
+<p><img alt="" src="assets/1710748884799-5bad9d0f-9926-4ef0-a29e-7f9e5d6bd383.png" /></p>
 <p>可以看出ModelMap又实现了Model接口。因此表面上是采用了不同方式，底层本质上是相同的。</p>
 <p>SpringMVC之所以提供了这些方式，目的就是方便程序员的使用，提供了多样化的方式，可见它的重要性。</p>
 <h3 id="modelandview">使用ModelAndView类</h3>
@@ -2524,16 +2524,16 @@ td code{white-space:nowrap}
 <p>以上我们通过了五种方式完成了request域数据共享，包括：原生Servlet API，Model、Map、ModelMap、ModelAndView</p>
 <p>其中后四种：Model、Map、ModelMap、ModelAndView。这四种方式在底层DispatcherServlet调用我们的Controller之后，返回的对象都是ModelAndView，这个可以通过源码进行分析。</p>
 <p>在以上四种方式中，拿Model举例，添加断点进行调试：</p>
-<p><img alt="" src="assets/1710750710855-53e8ffdd-b563-453e-afb4-70648684e619.png.webp" /></p>
+<p><img alt="" src="assets/1710750710855-53e8ffdd-b563-453e-afb4-70648684e619.png" /></p>
 <p>启动服务器，发送请求，走到断点：</p>
-<p><img alt="" src="assets/1710750795816-555dfc56-ccf2-43b4-b516-a737336d1e4f.png.webp" /></p>
+<p><img alt="" src="assets/1710750795816-555dfc56-ccf2-43b4-b516-a737336d1e4f.png" /></p>
 <p>查看VM Stack信息：</p>
-<p><img alt="" src="assets/1710750881676-99c9c130-a6d5-4751-8e71-6de12d3ba642.png.webp" /></p>
+<p><img alt="" src="assets/1710750881676-99c9c130-a6d5-4751-8e71-6de12d3ba642.png" /></p>
 <p>查看DispatcherServlet的1089行，源码如下：</p>
-<p><img alt="" src="assets/1710750933440-8254f738-2716-4f56-8610-4814e6fdecbf.png.webp" /></p>
+<p><img alt="" src="assets/1710750933440-8254f738-2716-4f56-8610-4814e6fdecbf.png" /></p>
 <p>可以看到这里，无论你使用哪种方式，最终都要返回一个ModelAndView对象。</p>
 <p>提醒：大家可以通过以下断点调试方式，采用一级一级返回，最终可以看到都会返回ModelAndView对象。</p>
-<p><img alt="" src="assets/1710751055879-078ad592-a894-45fe-8d4d-1a74d9c8db79.png.webp" /></p>
+<p><img alt="" src="assets/1710751055879-078ad592-a894-45fe-8d4d-1a74d9c8db79.png" /></p>
 <h2 id="session_1">session域对象</h2>
 <p>在SpringMVC中使用session域共享数据，实现方式有多种，其中比较常见的两种方式：</p>
 <ol>
@@ -2710,7 +2710,7 @@ td code{white-space:nowrap}
 </ol>
 </li>
 </ol>
-<p><img alt="" src="assets/1710824946253-84de4b12-1985-4976-ae39-dd62e77b43b8.png.webp" /></p>
+<p><img alt="" src="assets/1710824946253-84de4b12-1985-4976-ae39-dd62e77b43b8.png" /></p>
 <ol start="2">
 <li>ViewResolver接口（视图解析器）：<ol>
 <li>职责：负责将<code>逻辑视图名</code>转换为<code>物理视图名</code>，最终创建View接口的实现类，即视图实现类对象。</li>
@@ -2718,7 +2718,7 @@ td code{white-space:nowrap}
 </ol>
 </li>
 </ol>
-<p><img alt="" src="assets/1710824983130-13d175e9-be25-4e76-bccf-d50f63cee853.png.webp" /></p>
+<p><img alt="" src="assets/1710824983130-13d175e9-be25-4e76-bccf-d50f63cee853.png" /></p>
 <ol start="3">
 <li>View接口（视图）:<ol>
 <li>职责：负责将模型数据Model渲染为视图格式（HTML代码），并最终将生成的视图（HTML代码）输出到客户端。（它负责将模板语言转换成HTML代码）</li>
@@ -2726,7 +2726,7 @@ td code{white-space:nowrap}
 </ol>
 </li>
 </ol>
-<p><img alt="" src="assets/1710825045618-8ca7d10a-9f8f-4210-a871-8b7d34885311.png.webp" /></p>
+<p><img alt="" src="assets/1710825045618-8ca7d10a-9f8f-4210-a871-8b7d34885311.png" /></p>
 <ol start="4">
 <li>ViewResolverRegistry（视图解析器注册器）：<ol>
 <li>负责在web容器（Tomcat）启动的时候，完成视图解析器的注册。如果有多个视图解析器，会将视图解析器对象按照order的配置放入List集合。</li>
@@ -2870,16 +2870,16 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>添加断点：在DispatcherServlet的doDispatch方法的下图位置添加断点</p>
-<p><img alt="" src="assets/1710835859057-703d8177-8e9c-4a42-9f8d-e36d0bfb1e42.png.webp" /></p>
+<p><img alt="" src="assets/1710835859057-703d8177-8e9c-4a42-9f8d-e36d0bfb1e42.png" /></p>
 <p>启动Tomcat，在浏览器地址栏上发送请求：http://localhost:8080/springmvc/index</p>
-<p><img alt="" src="assets/1710835931836-b1a27108-f01b-49ad-a5f7-308ad0cf7f8b.png.webp" /></p>
+<p><img alt="" src="assets/1710835931836-b1a27108-f01b-49ad-a5f7-308ad0cf7f8b.png" /></p>
 <p>程序走到以上位置，这行代码是调用对应的Controller，并且Controller最终会返回ModelAndView对象：mv</p>
 <p>按照我们之前所讲，返回mv之后，接下来就是视图处理与渲染，接着往下走，走到下图这一行：</p>
-<p><img alt="" src="assets/1710836061330-46ee32ce-5549-4758-85f3-0dd8c0b20079.png.webp" /></p>
+<p><img alt="" src="assets/1710836061330-46ee32ce-5549-4758-85f3-0dd8c0b20079.png" /></p>
 <p>这个方法的作用是处理分发结果，就是在这个方法当中进行了视图的处理与渲染，进入该方法：</p>
-<p><img alt="" src="assets/1710836134539-34cc0424-ea05-4045-810d-56b063b59fb4.png.webp" /></p>
+<p><img alt="" src="assets/1710836134539-34cc0424-ea05-4045-810d-56b063b59fb4.png" /></p>
 <p>进去之后走到上图位置：这个方法就是用来渲染页面的方法，再进入该方法：</p>
-<p><img alt="" src="assets/1710836196992-3d3ef841-db8b-4642-aa9a-fa2ffef5ef0e.png.webp" /></p>
+<p><img alt="" src="assets/1710836196992-3d3ef841-db8b-4642-aa9a-fa2ffef5ef0e.png" /></p>
 <p>走到上图位置就可以看到底层创建的是ThymeleafView对象。</p>
 <h2 id="jsp">JSP视图（了解）</h2>
 <p>我们再来跟一下源码，看看JSP视图底层创建的是不是InternalResourceView对象。</p>
@@ -2931,7 +2931,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动web容器，添加断点跟踪：</p>
-<p><img alt="" src="assets/1710836651520-2ea9a9ba-0a71-4f3e-977c-4bce0ddfdcf8.png.webp" /></p>
+<p><img alt="" src="assets/1710836651520-2ea9a9ba-0a71-4f3e-977c-4bce0ddfdcf8.png" /></p>
 <p>通过测试得知：对于JSP视图来说，底层创建的视图对象是InternalResourceView。</p>
 <h2 id="_23">转发与重定向</h2>
 <h3 id="_24">回顾转发和重定向区别</h3>
@@ -2998,11 +2998,11 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器，浏览器地址栏上输入：http://localhost:8080/springmvc/a</p>
-<p><img alt="" src="assets/1710839187256-3c823090-ff26-4d46-8dca-d7727e800da9.png.webp" /></p>
+<p><img alt="" src="assets/1710839187256-3c823090-ff26-4d46-8dca-d7727e800da9.png" /></p>
 <p>通过测试，可以顺利的完成转发，转发是一次请求，可以看到地址栏上的地址没有发生改变。</p>
 <p>我们来跟踪一下源码，看看以上程序执行过程中，创建了几个视图对象，分别是什么？</p>
-<p><img alt="" src="assets/1710846891647-16906724-4f82-4a5f-9bae-655b3ce869e3.png.webp" /></p>
-<p><img alt="" src="assets/1710846943388-ff000327-18e6-4920-96d7-f96e59c62202.png.webp" /></p>
+<p><img alt="" src="assets/1710846891647-16906724-4f82-4a5f-9bae-655b3ce869e3.png" /></p>
+<p><img alt="" src="assets/1710846943388-ff000327-18e6-4920-96d7-f96e59c62202.png" /></p>
 <p>通过源码的跟踪得知：整个请求处理过程中，一共创建了两个视图对象</p>
 <ul>
 <li>InternalResourceView</li>
@@ -3048,11 +3048,11 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器，浏览器地址栏上输入：http://localhost:8080/springmvc/a</p>
-<p><img alt="" src="assets/1710857817456-baf96179-4ce2-4897-8873-aa1232ed8462.png.webp" /></p>
+<p><img alt="" src="assets/1710857817456-baf96179-4ce2-4897-8873-aa1232ed8462.png" /></p>
 <p>可见，重定向是两次请求，地址栏上的地址发生了改变。</p>
 <p>可以看一下源码，在重定向的时候，Spring MVC创建哪个视图对象？</p>
-<p><img alt="" src="assets/1710857964522-8ccd525e-e458-41e2-abc8-6336a46bc17c.png.webp" /></p>
-<p><img alt="" src="assets/1710858016866-c2e30ccf-0b94-494d-9b89-0853fb2fa7af.png.webp" /></p>
+<p><img alt="" src="assets/1710857964522-8ccd525e-e458-41e2-abc8-6336a46bc17c.png" /></p>
+<p><img alt="" src="assets/1710858016866-c2e30ccf-0b94-494d-9b89-0853fb2fa7af.png" /></p>
 <p>通过断点调试可以看出，当重定向的时候，SpringMVC会创建一个重定向视图对象：<strong><font style="color:#ff7b72;font-weight:600;">RedirectView</font></strong>。这个视图对象也是SpringMVC框架内置的。</p>
 <p>另外可以看出重定向之后的第二次请求创建的视图对象就是ThymeleafView了。</p>
 <p>注意：从springmvc应用重定向到springmvc2应用（跨域），语法是：</p>
@@ -3127,8 +3127,8 @@ td code{white-space:nowrap}
 <p>以上配置url-pattern使用的也是"/"，和DispatcherServlet一样。表示的含义是：<strong><font style="color:#ff7b72;font-weight:600;">同一个请求路径，先走DispatcherServlet，如果找不到则走默认的Servlet。</font></strong></p>
 <p>默认的 Servlet 类中的代码已经由 Tomcat 服务器提供了实现，一般不需要开发者自己编写。在上面的示例中，我们指定了 <code>org.apache.catalina.servlets.DefaultServlet</code>，则 Tomcat 服务器会自动将请求转发给该类处理。在处理时，该类会根据请求的 URL 去查询 Web 应用的静态资源（如 HTML、CSS、JavaScript 和图片等），并将其返回给用户。</p>
 <p>告诉大家一个好消息，以上在web.xml文件中的配置我们也可以省略了，因为在Tomcat服务器中已经为我们提前配置好了，在CATALINA_HOME/conf/web.xml文件中，如下：</p>
-<p><img alt="" src="assets/1710919316908-f4fb4a3a-7f7f-48f4-b135-9c8476a1c49b.png.webp" /></p>
-<p><img alt="" src="assets/1710919337577-14f47775-113c-4316-8a15-84278d9cb6f7.png.webp" /></p>
+<p><img alt="" src="assets/1710919316908-f4fb4a3a-7f7f-48f4-b135-9c8476a1c49b.png" /></p>
+<p><img alt="" src="assets/1710919337577-14f47775-113c-4316-8a15-84278d9cb6f7.png" /></p>
 <p>因此我们只需要在springmvc.xml文件中启用这个默认的Servlet即可：<code>&lt;mvc:default-servlet-handler&gt;</code></p>
 <h3 id="mvcresources">使用 mvc:resources 标签配置静态资源</h3>
 <p>访问静态资源，也可以在springmvc.xml文件中添加如下的配置：</p>
@@ -3307,8 +3307,8 @@ td code{white-space:nowrap}
 
 <p>启动服务器，测试：http://localhost:8080/springmvc</p>
 <p><img alt="" src="assets/1710945843656-59d204d5-daa9-4e89-a977-686bc2642a33.png" /></p>
-<p><img alt="" src="assets/1710945859052-7f4aab9c-2e94-4926-b8ec-9cd01483e51e.png.webp" /></p>
-<p><img alt="" src="assets/1710945874351-0ef0c930-f425-449c-9649-60de8b88958e.png.webp" /></p>
+<p><img alt="" src="assets/1710945859052-7f4aab9c-2e94-4926-b8ec-9cd01483e51e.png" /></p>
+<p><img alt="" src="assets/1710945874351-0ef0c930-f425-449c-9649-60de8b88958e.png" /></p>
 <h4 id="get-apiuser">查询所有(GET /api/user)</h4>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;!--</span><span class="n">查询所有</span><span class="o">--&gt;</span>
 <span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">th</span><span class="p">:</span><span class="n">href</span><span class="o">=</span><span class="s">"@{/api/user}"</span><span class="o">&gt;</span><span class="n">查询所有</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;&lt;</span><span class="n">br</span><span class="o">&gt;</span>
@@ -3322,9 +3322,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710946048811-bacdfc38-344d-4468-9a85-fbc0ef8ecb28.png.webp" /></p>
-<p><img alt="" src="assets/1710946060913-d1555b77-229d-4993-8363-ba8afaa78e6a.png.webp" /></p>
-<p><img alt="" src="assets/1710946074461-7b8a5427-3e95-495b-80c4-99b7024458a4.png.webp" /></p>
+<p><img alt="" src="assets/1710946048811-bacdfc38-344d-4468-9a85-fbc0ef8ecb28.png" /></p>
+<p><img alt="" src="assets/1710946060913-d1555b77-229d-4993-8363-ba8afaa78e6a.png" /></p>
+<p><img alt="" src="assets/1710946074461-7b8a5427-3e95-495b-80c4-99b7024458a4.png" /></p>
 <h3 id="restfulpost-apiuser">RESTFul方式演示增加(POST /api/user)</h3>
 <p>RESTFul规范中规定，如果要进行保存操作，需要发送POST请求。</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;!--</span><span class="n">保存用户</span><span class="o">--&gt;</span>
@@ -3341,9 +3341,9 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710946440909-1140c31e-f921-42fe-bbab-5a9c4409f388.png.webp" /></p>
-<p><img alt="" src="assets/1710946457841-33c623d2-75a6-4486-bfb0-472e9f3ae72e.png.webp" /></p>
-<p><img alt="" src="assets/1710946468943-5ecc05c9-cc83-47b7-966b-8fe0df99a3f5.png.webp" /></p>
+<p><img alt="" src="assets/1710946440909-1140c31e-f921-42fe-bbab-5a9c4409f388.png" /></p>
+<p><img alt="" src="assets/1710946457841-33c623d2-75a6-4486-bfb0-472e9f3ae72e.png" /></p>
+<p><img alt="" src="assets/1710946468943-5ecc05c9-cc83-47b7-966b-8fe0df99a3f5.png" /></p>
 <h3 id="restful_5">RESTFul方式演示修改</h3>
 <p>RESTFul规范中规定，如果要进行保存操作，需要发送PUT请求。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">如何发送PUT请求？</font></strong></p>
@@ -3383,14 +3383,14 @@ td code{white-space:nowrap}
 <h3 id="hiddenhttpmethodfilter"><font style="color:#080808;background-color:#ffffff;">HiddenHttpMethodFilter</font></h3>
 <p>HiddenHttpMethodFilter是Spring MVC框架提供的，专门用于RESTFul编程风格。</p>
 <p>实现原理可以通过源码查看：</p>
-<p><img alt="" src="assets/1710981996209-5c66441b-0aa9-41a7-b71d-26b2ffb0f4f5.png.webp" /></p>
-<p><img alt="" src="assets/1710982160559-ffe20024-a10a-4aa2-b39e-44bebd0d3945.png.webp" /></p>
-<p><img alt="" src="assets/1710982194265-720a0b49-aa95-475f-900b-7234280f5c9c.png.webp" /></p>
+<p><img alt="" src="assets/1710981996209-5c66441b-0aa9-41a7-b71d-26b2ffb0f4f5.png" /></p>
+<p><img alt="" src="assets/1710982160559-ffe20024-a10a-4aa2-b39e-44bebd0d3945.png" /></p>
+<p><img alt="" src="assets/1710982194265-720a0b49-aa95-475f-900b-7234280f5c9c.png" /></p>
 <p>通过源码可以看到，if语句中，首先判断是否为POST请求，如果是POST请求，调用<code>request.getParameter(this.methodParam)</code>。可以看到<code>this.methodParam</code>是<code>_method</code>，这样就要求我们在提交请求方式的时候必须采用这个格式：<code>_method=put</code>。获取到请求方式之后，调用了toUpperCase转换成大写了。因此前端页面中小写的put或者大写的PUT都是可以的。if语句中嵌套的if语句说的是，只有请求方式是 PUT,DELETE,PATCH的时候会创建HttpMethodRequestWrapper对象。而HttpMethodRequestWrapper对象的构造方法是这样的：</p>
-<p><img alt="" src="assets/1710984179119-96331e0b-ae39-45b0-bba1-b8db3ec7107f.png.webp" /></p>
+<p><img alt="" src="assets/1710984179119-96331e0b-ae39-45b0-bba1-b8db3ec7107f.png" /></p>
 <p>这样method就从POST变成了：PUT/DELETE/PATCH。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">重点注意事项：CharacterEncodingFilter和</font></strong><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">HiddenHttpMethodFilter的顺序</font></strong></p>
-<p><img alt="" src="assets/1710984264334-7df83331-ddbb-4ead-a58c-cb4dc6c19ef6.png.webp" /></p>
+<p><img alt="" src="assets/1710984264334-7df83331-ddbb-4ead-a58c-cb4dc6c19ef6.png" /></p>
 <p>大家是否还记得，字符编码过滤器执行之前不能调用 request.getParameter方法，如果提前调用了，乱码问题就无法解决了。因为request.setCharacterEncoding()方法的执行必须在所有request.getParameter()方法之前执行。因此这两个过滤器就有先后顺序的要求，在web.xml文件中，应该先配置CharacterEncodingFilter，然后再配置HiddenHttpMethodFilter。</p>
 <h2 id="restful_6">使用RESTFul实现用户管理系统</h2>
 <h3 id="_28">静态页面准备</h3>
@@ -3530,7 +3530,7 @@ td code{white-space:nowrap}
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1710920283042-90741c89-a7c5-4270-a485-4fcbf8dfc64d.png.webp" /></p>
+<p><img alt="" src="assets/1710920283042-90741c89-a7c5-4270-a485-4fcbf8dfc64d.png" /></p>
 <h4 id="user_listhtml">user_list.html</h4>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -3583,7 +3583,7 @@ td code{white-space:nowrap}
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1710920323233-1a150538-a36d-4a27-8dcb-1ca341b97966.png.webp" /></p>
+<p><img alt="" src="assets/1710920323233-1a150538-a36d-4a27-8dcb-1ca341b97966.png" /></p>
 <h4 id="user_addhtml">user_add.html</h4>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -3614,7 +3614,7 @@ td code{white-space:nowrap}
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1710920360777-8a6a18b4-c642-466f-9291-25544643afab.png.webp" /></p>
+<p><img alt="" src="assets/1710920360777-8a6a18b4-c642-466f-9291-25544643afab.png" /></p>
 <h4 id="user_edithtml">user_edit.html</h4>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span><span class="p">&gt;</span>
@@ -3645,10 +3645,10 @@ td code{white-space:nowrap}
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1710920389489-92688713-932b-40e2-8d8d-a626c6187c5d.png.webp" /></p>
+<p><img alt="" src="assets/1710920389489-92688713-932b-40e2-8d8d-a626c6187c5d.png" /></p>
 <h3 id="springmvc_8">SpringMVC环境搭建</h3>
 <h4 id="moduleusermgt">创建module：usermgt</h4>
-<p><img alt="" src="assets/1710920713139-04e3d84e-1488-42cc-b936-8de84605d590.png.webp" /></p>
+<p><img alt="" src="assets/1710920713139-04e3d84e-1488-42cc-b936-8de84605d590.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
 <span class="w">  </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
@@ -3697,8 +3697,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <h4 id="web_4">添加web支持</h4>
-<p><img alt="" src="assets/1710920903870-9f597c85-e33b-4d65-aebe-5bfb4a6228f2.png.webp" /></p>
-<p><img alt="" src="assets/1710920974114-73d0c44a-3f95-44d6-9abc-cb4db7ff8ab4.png.webp" /></p>
+<p><img alt="" src="assets/1710920903870-9f597c85-e33b-4d65-aebe-5bfb4a6228f2.png" /></p>
+<p><img alt="" src="assets/1710920974114-73d0c44a-3f95-44d6-9abc-cb4db7ff8ab4.png" /></p>
 <h4 id="webxml_3">配置web.xml文件</h4>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;web-app</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"https://jakarta.ee/xml/ns/jakartaee"</span>
@@ -3762,7 +3762,7 @@ td code{white-space:nowrap}
 <li>再配置 HiddenHttpMethodFilter</li>
 </ul>
 <h4 id="springmvcxml_1">配置springmvc.xml文件</h4>
-<p><img alt="" src="assets/1710921461366-720312de-7289-4ea8-98d1-67689d0d17d0.png.webp" /></p>
+<p><img alt="" src="assets/1710921461366-720312de-7289-4ea8-98d1-67689d0d17d0.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;beans</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
 <span class="w">       </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span><span class="w"> </span><span class="na">xmlns:mvc=</span><span class="s">"http://www.springframework.org/schema/mvc"</span>
@@ -3800,21 +3800,21 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>在WEB-INF目录下新建：thymeleaf目录</p>
-<p><img alt="" src="assets/1710921862253-344bdb43-894d-4a6d-8bac-8d55b7698ee2.png.webp" /></p>
+<p><img alt="" src="assets/1710921862253-344bdb43-894d-4a6d-8bac-8d55b7698ee2.png" /></p>
 <h3 id="_29">显示首页</h3>
 <p>在应用的根下新建目录：static，将user.css文件拷贝进去。</p>
-<p><img alt="" src="assets/1710922471241-f7ec47fc-9106-4d52-bd88-24b1005e99c6.png.webp" /></p>
+<p><img alt="" src="assets/1710922471241-f7ec47fc-9106-4d52-bd88-24b1005e99c6.png" /></p>
 <p>将user_index.html拷贝到WEB-INF/thymeleaf目录下：</p>
-<p><img alt="" src="assets/1710922711285-f6d7e3ea-ee9f-4b95-a454-0f1b41204a46.png.webp" /></p>
+<p><img alt="" src="assets/1710922711285-f6d7e3ea-ee9f-4b95-a454-0f1b41204a46.png" /></p>
 <p>代码有两处需要修改：</p>
-<p><img alt="" src="assets/1710922744668-a8863a20-0635-4c69-b461-a182949678d6.png.webp" /></p>
+<p><img alt="" src="assets/1710922744668-a8863a20-0635-4c69-b461-a182949678d6.png" /></p>
 <p>重要：在springmvc.xml文件中配置视图控制器映射：</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--视图控制器映射--&gt;</span>
 <span class="nt">&lt;mvc:view-controller</span><span class="w"> </span><span class="na">path=</span><span class="s">"/"</span><span class="w"> </span><span class="na">view-name=</span><span class="s">"user_index"</span><span class="nt">/&gt;</span>
 </code></pre></div>
 
 <p>部署，启动服务器，测试：</p>
-<p><img alt="" src="assets/1710922946129-cfb0cded-a7de-4b37-9f89-38b01b642655.png.webp" /></p>
+<p><img alt="" src="assets/1710922946129-cfb0cded-a7de-4b37-9f89-38b01b642655.png" /></p>
 <h3 id="_30">实现用户列表</h3>
 <p>修改user_index.html中的超链接：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -3836,7 +3836,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>编写bean：User</p>
-<p><img alt="" src="assets/1710923401402-6141a9cd-a92c-48c8-82a0-4822245a5f5c.png.webp" /></p>
+<p><img alt="" src="assets/1710923401402-6141a9cd-a92c-48c8-82a0-4822245a5f5c.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.usermgt.bean</span><span class="p">;</span>
 
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">User</span><span class="w"> </span><span class="p">{</span>
@@ -4005,7 +4005,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1710924345455-7ed4d09c-4bf9-4a0f-9c75-a79ac2f19393.png.webp" /></p>
+<p><img alt="" src="assets/1710924345455-7ed4d09c-4bf9-4a0f-9c75-a79ac2f19393.png" /></p>
 <h3 id="_31">实现新增功能</h3>
 <h4 id="_32">跳转到新增页面</h4>
 <p>在用户列表页面，修改<code>新增用户</code>的超链接：</p>
@@ -4045,7 +4045,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710924719699-451900a1-ead4-463f-8536-8db72ac56b0b.png.webp" /></p>
+<p><img alt="" src="assets/1710924719699-451900a1-ead4-463f-8536-8db72ac56b0b.png" /></p>
 <h4 id="_33">实现新增功能</h4>
 <p>前端页面发送POST请求，提交表单，user_add.html代码如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
@@ -4107,8 +4107,8 @@ td code{white-space:nowrap}
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：单独写了一个方法生成id，内部使用了Stream API，不会这块内容的可以看老杜最新发布的2024版JavaSE。</font></strong></p>
 <hr />
 <p><font style="color:#000000;">启动服务器测试：</font></p>
-<p><img alt="" src="assets/1710925396950-eb9be9ac-0640-4bef-94c0-3ca586769901.png.webp" /></p>
-<p><img alt="" src="assets/1710925419604-76e61dc5-7490-43e2-8814-9b576f2a2e12.png.webp" /></p>
+<p><img alt="" src="assets/1710925396950-eb9be9ac-0640-4bef-94c0-3ca586769901.png" /></p>
+<p><img alt="" src="assets/1710925419604-76e61dc5-7490-43e2-8814-9b576f2a2e12.png" /></p>
 <h3 id="_34">跳转到修改页面</h3>
 <p>修改user_list.html中<code>修改</code>超链接：</p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">a</span> <span class="na">th:href</span><span class="o">=</span><span class="s">"@{'/user/' + ${user.id}}"</span><span class="p">&gt;</span>修改<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -4211,8 +4211,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710926528699-cec23c03-5c13-4dfb-a3cd-8c6dfcb5457a.png.webp" /></p>
-<p><img alt="" src="assets/1710926619799-63c5955e-1933-42b5-b11a-c38c3d3d1213.png.webp" /></p>
+<p><img alt="" src="assets/1710926528699-cec23c03-5c13-4dfb-a3cd-8c6dfcb5457a.png" /></p>
+<p><img alt="" src="assets/1710926619799-63c5955e-1933-42b5-b11a-c38c3d3d1213.png" /></p>
 <h3 id="_36">实现删除功能</h3>
 <p>删除应该发送DELETE请求，要模拟DELETE请求，就需要使用表单方式提交。因此我们点击<code>删除</code>超链接时需要采用表单方式提交。</p>
 <p>在user_list.html页面添加form表单，并且点击超链接时应该提交表单，代码如下：</p>
@@ -4304,8 +4304,8 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>启动服务器测试：</p>
-<p><img alt="" src="assets/1710929370776-f026da63-52ce-46e7-9928-e3f7be33b089.png.webp" /></p>
-<p><img alt="" src="assets/1710929387267-a665ee90-8917-4386-9cba-599b5871d164.png.webp" /></p>
+<p><img alt="" src="assets/1710929370776-f026da63-52ce-46e7-9928-e3f7be33b089.png" /></p>
+<p><img alt="" src="assets/1710929387267-a665ee90-8917-4386-9cba-599b5871d164.png" /></p>
 
 </section>
 <section class="chapter" id="ch-07">
@@ -4313,7 +4313,7 @@ td code{white-space:nowrap}
 
 <h2 id="httpmessageconverter_1">HttpMessageConverter</h2>
 <p>HttpMessageConverter是Spring MVC中非常重要的一个接口。翻译为：HTTP消息转换器。该接口下提供了很多实现类，不同的实现类有不同的转换方式。</p>
-<p><img alt="" src="assets/1711000445139-8bc9f74d-6ec3-4942-8063-5a130eac64eb.png.webp" /></p>
+<p><img alt="" src="assets/1711000445139-8bc9f74d-6ec3-4942-8063-5a130eac64eb.png" /></p>
 <h3 id="http">什么是HTTP消息</h3>
 <p>HTTP消息其实就是HTTP协议。HTTP协议包括请求协议和响应协议。</p>
 <p>以下是一份HTTP POST请求协议：</p>
@@ -4357,15 +4357,15 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 
 <h3 id="_37">转换器转换的是什么</h3>
 <p>转换的是<code>HTTP协议</code>与<code>Java程序中的对象</code>之间的互相转换。请看下图：</p>
-<p><img alt="" src="assets/1711002146899-deaef9c8-a3b7-425e-97b1-6ada5477c674.png.webp" /></p>
+<p><img alt="" src="assets/1711002146899-deaef9c8-a3b7-425e-97b1-6ada5477c674.png" /></p>
 <p>上图是我们之前经常写的代码。请求体中的数据是如何转换成user对象的，底层实际上使用了<code>HttpMessageConverter</code>接口的其中一个实现类<code>FormHttpMessageConverter</code>。</p>
 <p>通过上图可以看出<code>FormHttpMessageConverter</code>是负责将<code>请求协议</code>转换为<code>Java对象</code>的。</p>
 <p>再看下图：</p>
-<p><img alt="" src="assets/1711003362257-f736f7c8-4d55-4e3f-b8f8-cfbab97c21f4.png.webp" /></p>
+<p><img alt="" src="assets/1711003362257-f736f7c8-4d55-4e3f-b8f8-cfbab97c21f4.png" /></p>
 <p>上图的代码也是之前我们经常写的，Controller返回值看做逻辑视图名称，视图解析器将其转换成物理视图名称，生成视图对象，<code>StringHttpMessageConverter</code>负责将视图对象中的HTML字符串写入到HTTP协议的响应体中。最终完成响应。</p>
 <p>通过上图可以看出<code>StringHttpMessageConverter</code>是负责将<code>Java对象</code>转换为<code>响应协议</code>的。</p>
 <p>通过以上内容的学习，大家应该能够了解到<code>HttpMessageConverter</code>接口是用来做什么的了：</p>
-<p><img alt="" src="assets/1711003929875-072161b4-af27-4855-9980-5d8ba186730b.png.webp" /></p>
+<p><img alt="" src="assets/1711003929875-072161b4-af27-4855-9980-5d8ba186730b.png" /></p>
 <p>如上图所示：HttpMessageConverter接口的可以将请求协议转换成Java对象，也可以把Java对象转换为响应协议。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">HttpMessageConverter是接口，SpringMVC帮我们提供了非常多而丰富的实现类。每个实现类都有自己不同的转换风格。</font></strong></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">对于我们程序员来说，Spring MVC已经帮助我们写好了，我们只需要在不同的业务场景下，选择合适的HTTP消息转换器即可。</font></strong></p>
@@ -4380,7 +4380,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <h2 id="spring-mvcajax">Spring MVC中的AJAX请求</h2>
 <p>SpringMVC+Vue3+Thymeleaf+Axios发送一个简单的AJAX请求。</p>
 <p>引入Vue和Axios的js文件：</p>
-<p><img alt="" src="assets/1711010958303-5c6378c5-1d6e-4736-a2af-02ea04aa2f4c.png.webp" /></p>
+<p><img alt="" src="assets/1711010958303-5c6378c5-1d6e-4736-a2af-02ea04aa2f4c.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;beans</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
 <span class="w">  </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
@@ -4505,8 +4505,8 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>启动服务器测试：<a href="http://localhost:8080/springmvc/">http://localhost:8080/springmvc/</a></p>
-<p><img alt="" src="assets/1711011917028-242026ab-86de-409b-8a91-13f3cbb1b142.png.webp" /></p>
-<p><img alt="" src="assets/1711011931023-727ffe37-387a-4b75-b594-9fec8b7d7944.png.webp" /></p>
+<p><img alt="" src="assets/1711011917028-242026ab-86de-409b-8a91-13f3cbb1b142.png" /></p>
+<p><img alt="" src="assets/1711011931023-727ffe37-387a-4b75-b594-9fec8b7d7944.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：如果采用这种方式响应，则和 springmvc.xml 文件中配置的视图解析器没有关系，不走视图解析器了。</font></strong></p>
 <hr />
 <p>难道我们以后AJAX请求都要使用原生Servlet API吗？</p>
@@ -4560,7 +4560,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>测试：</p>
-<p><img alt="" src="assets/1711013196948-31c55e31-5868-40e9-b75c-f84810ef3056.png.webp" /></p>
+<p><img alt="" src="assets/1711013196948-31c55e31-5868-40e9-b75c-f84810ef3056.png" /></p>
 <p>这是完全可以的，此时底层使用的消息转换器还是：<strong><font style="color:#ff7b72;font-weight:600;">StringHttpMessageConverter</font></strong></p>
 <p>那如果在程序中是一个POJO对象，怎么将POJO对象以JSON格式的字符串响应给浏览器呢？两种方式：</p>
 <ul>
@@ -4636,7 +4636,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>测试：</p>
-<p><img alt="" src="assets/1711014082618-8a46beab-d498-4d67-abad-662e07d5871f.png.webp" /></p>
+<p><img alt="" src="assets/1711014082618-8a46beab-d498-4d67-abad-662e07d5871f.png" /></p>
 <p>以上代码底层启用的就是 MappingJackson2HttpMessageConverter 消息转换器。</p>
 <p>他的功能很强大，可以将POJO对象转换成JSON格式的字符串，响应给前端。</p>
 <p>其实这个消息转换器<code>MappingJackson2HttpMessageConverter</code>本质上只是比<code>StringHttpMessageConverter</code>多了一个json字符串的转换，其他的还是一样。</p>
@@ -4662,7 +4662,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>测试：</p>
-<p><img alt="" src="assets/1711014419291-3b5e131c-f81f-4054-9a03-295323dee8d4.png.webp" /></p>
+<p><img alt="" src="assets/1711014419291-3b5e131c-f81f-4054-9a03-295323dee8d4.png" /></p>
 <h2 id="requestbody">@RequestBody</h2>
 <h3 id="formhttpmessageconverter">FormHttpMessageConverter</h3>
 <p>这个注解的作用是直接将请求体传递给Java程序，在Java程序中可以直接使用一个String类型的变量接收这个请求体的内容。</p>
@@ -4760,8 +4760,8 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1711024282143-bde87ec5-476e-470e-a9fa-94a0f2858938.png.webp" /></p>
-<p><img alt="" src="assets/1711024299450-33c514e9-a7b1-4010-8d9c-8bd7824a9dd6.png.webp" /></p>
+<p><img alt="" src="assets/1711024282143-bde87ec5-476e-470e-a9fa-94a0f2858938.png" /></p>
+<p><img alt="" src="assets/1711024299450-33c514e9-a7b1-4010-8d9c-8bd7824a9dd6.png" /></p>
 <h2 id="requestentity">RequestEntity</h2>
 <p>RequestEntity不是一个注解，是一个普通的类。这个类的实例封装了整个请求协议：包括请求行、请求头、请求体所有信息。</p>
 <p>出现在控制器方法的参数上：</p>
@@ -4829,7 +4829,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>测试结果：</p>
-<p><img alt="" src="assets/1711032010156-cb98e4a9-5238-4dd6-ac1a-81dd6198a47d.png.webp" /></p>
+<p><img alt="" src="assets/1711032010156-cb98e4a9-5238-4dd6-ac1a-81dd6198a47d.png" /></p>
 <p>在实际的开发中，如果你需要获取更详细的请求协议中的信息。可以使用<code>RequestEntity</code></p>
 <h2 id="responseentity">ResponseEntity</h2>
 <p>ResponseEntity不是注解，是一个类。用该类的实例可以封装响应协议，包括：状态行、响应头、响应体。也就是说：如果你想定制属于自己的响应协议，可以使用该类。</p>
@@ -4850,9 +4850,9 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>测试：当用户不存在时</p>
-<p><img alt="" src="assets/1711032765280-343794d6-b262-460b-8c03-e14bd8946850.png.webp" /></p>
+<p><img alt="" src="assets/1711032765280-343794d6-b262-460b-8c03-e14bd8946850.png" /></p>
 <p>测试：当用户存在时</p>
-<p><img alt="" src="assets/1711032830325-866fe36b-cc47-4493-b9bb-8ebd34c7a86c.png.webp" /></p>
+<p><img alt="" src="assets/1711032830325-866fe36b-cc47-4493-b9bb-8ebd34c7a86c.png" /></p>
 
 </section>
 <section class="chapter" id="ch-08">
@@ -4970,9 +4970,9 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>最终测试结果：</p>
-<p><img alt="" src="assets/1711331360045-38714fe4-a729-4068-b0a8-f805117da5bf.png.webp" /></p>
-<p><img alt="" src="assets/1711331351567-6b421e6f-b5b6-4bf4-95b8-69404a864530.png.webp" /></p>
-<p><img alt="" src="assets/1711331379294-e15e0870-18fd-4512-a098-032eed43f03a.png.webp" /></p>
+<p><img alt="" src="assets/1711331360045-38714fe4-a729-4068-b0a8-f805117da5bf.png" /></p>
+<p><img alt="" src="assets/1711331351567-6b421e6f-b5b6-4bf4-95b8-69404a864530.png" /></p>
+<p><img alt="" src="assets/1711331379294-e15e0870-18fd-4512-a098-032eed43f03a.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">建议：上传文件时，文件起名采用UUID。以防文件覆盖。</font></strong></p>
 <h2 id="_40"><font style="color:#000000;">文件下载</font></h2>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--文件下载--&gt;</span>
@@ -4997,8 +4997,8 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>效果：</p>
-<p><img alt="" src="assets/1711332732449-ed2ddda1-7b8e-405a-af51-e5e2f8452558.png.webp" /></p>
-<p><img alt="" src="assets/1711332745775-3de01f16-df6d-41bd-bc4d-905bedf34687.png.webp" /></p>
+<p><img alt="" src="assets/1711332732449-ed2ddda1-7b8e-405a-af51-e5e2f8452558.png" /></p>
+<p><img alt="" src="assets/1711332745775-3de01f16-df6d-41bd-bc4d-905bedf34687.png" /></p>
 
 </section>
 <section class="chapter" id="ch-09">
@@ -5008,7 +5008,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <p>Spring MVC在<code>处理器方法</code>执行过程中出现了异常，可以采用<code>异常处理器</code>进行应对。</p>
 <p>一句话概括异常处理器作用：处理器方法执行过程中出现了异常，跳转到对应的视图，在视图上展示友好信息。</p>
 <p>SpringMVC为异常处理提供了一个接口：HandlerExceptionResolver</p>
-<p><img alt="" src="assets/1711683439894-1af197f8-20d1-401b-8704-11d51b131670.png.webp" /></p>
+<p><img alt="" src="assets/1711683439894-1af197f8-20d1-401b-8704-11d51b131670.png" /></p>
 <p>核心方法是：resolveException。</p>
 <p>该方法用来编写具体的异常处理方案。返回值ModelAndView，表示异常处理完之后跳转到哪个视图。</p>
 <p>HandlerExceptionResolver 接口有两个常用的默认实现：</p>
@@ -5019,9 +5019,9 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <h2 id="_43">默认的异常处理器</h2>
 <p>DefaultHandlerExceptionResolver 是默认的异常处理器。</p>
 <p>核心方法：</p>
-<p><img alt="" src="assets/1711683759071-a2b84ecf-92c8-46e2-a040-8b5c113446f2.png.webp" /></p>
+<p><img alt="" src="assets/1711683759071-a2b84ecf-92c8-46e2-a040-8b5c113446f2.png" /></p>
 <p>当请求方式和处理方式不同时，DefaultHandlerExceptionResolver的默认处理态度是：</p>
-<p><img alt="" src="assets/1711683899955-8f7b2a54-716a-4b36-8550-e4630f695bca.png.webp" /></p>
+<p><img alt="" src="assets/1711683899955-8f7b2a54-716a-4b36-8550-e4630f695bca.png" /></p>
 <h2 id="_44">自定义的异常处理器</h2>
 <p>自定义异常处理器需要使用：SimpleMappingExceptionResolver</p>
 <p>自定义异常处理机制有两种语法：</p>
@@ -5056,7 +5056,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <span class="nt">&lt;/html&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1711684183329-eb0e9b03-4d1d-442e-9d6b-22384e3bd776.png.webp" /></p>
+<p><img alt="" src="assets/1711684183329-eb0e9b03-4d1d-442e-9d6b-22384e3bd776.png" /></p>
 <h3 id="_46">注解方式</h3>
 <div class="codehilite"><pre><span></span><code><span class="nd">@ControllerAdvice</span>
 <span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ExceptionController</span><span class="w"> </span><span class="p">{</span>
@@ -5090,7 +5090,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <li>拦截器则更加侧重于对控制器进行前置或后置处理，在请求到达控制器之前或之后进行特定的操作，例如打印日志、权限验证等。</li>
 </ul>
 <p><strong><font style="color:#ff7b72;font-weight:600;">Filter、Servlet、Interceptor、Controller的执行顺序：</font></strong></p>
-<p><img alt="" src="assets/1711639953694-56fde7e8-af9f-4abc-b680-48ccf30b9df9.png.webp" /></p>
+<p><img alt="" src="assets/1711639953694-56fde7e8-af9f-4abc-b680-48ccf30b9df9.png" /></p>
 <ul>
 <li>过滤器是Servlet规范中的</li>
 <li>拦截器是SpringMVC中的</li>
@@ -5124,11 +5124,11 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <ul>
 <li>前提1：包扫描</li>
 </ul>
-<p><img alt="" src="assets/1711677116557-070845c1-bae7-4769-98c9-b064faffc4c6.png.webp" /></p>
+<p><img alt="" src="assets/1711677116557-070845c1-bae7-4769-98c9-b064faffc4c6.png" /></p>
 <ul>
 <li>前提2：使用 @Component 注解进行标注</li>
 </ul>
-<p><img alt="" src="assets/1711677132812-77ff787c-8f94-41d6-abd8-721037ff0160.png.webp" /></p>
+<p><img alt="" src="assets/1711677132812-77ff787c-8f94-41d6-abd8-721037ff0160.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：对于这种基本配置来说，拦截器是拦截所有请求的。</font></strong></p>
 <h3 id="_52">拦截器部分源码分析</h3>
 <h4 id="_53"><font style="color:#000000;">方法执行顺序的源码分析</font></h4>
@@ -5221,7 +5221,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>如果<code>interceptor2</code>的preHandle返回false，执行顺序：</p>
-<p><img alt="" src="assets/1711680589053-dbc8883c-eabe-476c-a8f3-da24b4f8de70.png.webp" /></p>
+<p><img alt="" src="assets/1711680589053-dbc8883c-eabe-476c-a8f3-da24b4f8de70.png" /></p>
 <p>规则：只要有一个拦截器<code>preHandle</code>返回false，任何<code>postHandle</code>都不执行。但返回false的拦截器的前面的拦截器按照逆序执行<code>afterCompletion</code>。</p>
 <h3 id="_58">源码分析</h3>
 <p>DispatcherServlet和 HandlerExecutionChain的部分源码：</p>
@@ -5383,7 +5383,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <h2 id="_60">从图片角度看执行流程</h2>
-<p><img alt="" src="assets/1711943505835-476f954e-ba6c-4a78-b16b-683524e25520.png.webp" /></p>
+<p><img alt="" src="assets/1711943505835-476f954e-ba6c-4a78-b16b-683524e25520.png" /></p>
 <h2 id="web_5">WEB服务器启动时都做了什么</h2>
 <p>先搞明白核心类的继承关系：</p>
 <p><font style="color:#ff7b72;font-weight:600;">DispatcherServlet</font> extends <font style="color:#ff7b72;font-weight:600;">FrameworkServlet</font> extends <font style="color:#ff7b72;font-weight:600;">HttpServletBean</font> extends <font style="color:#ff7b72;font-weight:600;">HttpServlet</font> extends <font style="color:#ff7b72;font-weight:600;">GenericServlet</font> implements <font style="color:#ff7b72;font-weight:600;">Servlet</font></p>
@@ -5392,14 +5392,14 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <li>初始化Spring上下文，也就是创建所有的bean，让IoC容器将其管理起来。</li>
 <li>初始化SpringMVC相关的对象：处理器映射器，处理器适配器等。。。</li>
 </ol>
-<p><img alt="" src="assets/1711945073073-1466293a-37a5-4e04-a628-00225ec9ad8f.png.webp" /></p>
-<p><img alt="" src="assets/1711945189838-6546c84c-23c9-479d-b2df-893851fdb912.png.webp" /></p>
-<p><img alt="" src="assets/1711945264590-8b563ba5-bf2a-4e27-8695-9a0ee2577f2a.png.webp" /></p>
-<p><img alt="" src="assets/1711945298853-016466d1-3882-461f-8ac5-296983a67d24.png.webp" /></p>
-<p><img alt="" src="assets/1711945338150-b4f14a20-cc75-4915-9651-51acbffcd872.png.webp" /></p>
-<p><img alt="" src="assets/1711945352375-01882059-ab91-4668-a595-eb83ca01344c.png.webp" /></p>
-<p><img alt="" src="assets/1711945371377-87ac618e-495f-4fe9-92c4-50a1f2c199d8.png.webp" /></p>
-<p><img alt="" src="assets/1711945408231-6e96abeb-ceff-480e-9f2c-72bfa2a5d419.png.webp" /></p>
+<p><img alt="" src="assets/1711945073073-1466293a-37a5-4e04-a628-00225ec9ad8f.png" /></p>
+<p><img alt="" src="assets/1711945189838-6546c84c-23c9-479d-b2df-893851fdb912.png" /></p>
+<p><img alt="" src="assets/1711945264590-8b563ba5-bf2a-4e27-8695-9a0ee2577f2a.png" /></p>
+<p><img alt="" src="assets/1711945298853-016466d1-3882-461f-8ac5-296983a67d24.png" /></p>
+<p><img alt="" src="assets/1711945338150-b4f14a20-cc75-4915-9651-51acbffcd872.png" /></p>
+<p><img alt="" src="assets/1711945352375-01882059-ab91-4668-a595-eb83ca01344c.png" /></p>
+<p><img alt="" src="assets/1711945371377-87ac618e-495f-4fe9-92c4-50a1f2c199d8.png" /></p>
+<p><img alt="" src="assets/1711945408231-6e96abeb-ceff-480e-9f2c-72bfa2a5d419.png" /></p>
 
 </section>
 <section class="chapter" id="ch-12">
@@ -5415,7 +5415,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </ul>
 <h2 id="_62">基本结构搭建</h2>
 <h3 id="maven_2">创建Maven模块</h3>
-<p><img alt="" src="assets/1712020799342-9ee1720f-5a83-4a2f-b5da-7fccca5b7fca.png.webp" /></p>
+<p><img alt="" src="assets/1712020799342-9ee1720f-5a83-4a2f-b5da-7fccca5b7fca.png" /></p>
 <h3 id="servlet_2">引入Servlet依赖</h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;project</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://maven.apache.org/POM/4.0.0"</span>
@@ -5448,9 +5448,9 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <h3 id="tomcat">配置Tomcat服务器</h3>
-<p><img alt="" src="assets/1712020903992-0aae56a0-5652-464c-9b43-bb784f75daf2.png.webp" /></p>
+<p><img alt="" src="assets/1712020903992-0aae56a0-5652-464c-9b43-bb784f75daf2.png" /></p>
 <h3 id="web_6">添加web支持</h3>
-<p><img alt="" src="assets/1712020961226-61820425-2590-4efe-bad2-6220d08a36ea.png.webp" /></p>
+<p><img alt="" src="assets/1712020961226-61820425-2590-4efe-bad2-6220d08a36ea.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;web-app</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"https://jakarta.ee/xml/ns/jakartaee"</span>
 <span class="w">         </span><span class="na">xmlns:xsi=</span><span class="s">"http://www.w3.org/2001/XMLSchema-instance"</span>
@@ -5461,7 +5461,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 
 <h3 id="_63">创建基本类和接口</h3>
 <p>根据Spring MVC执行流程，目前先创建出以下的类和接口，后期如果需要其他的再添加：</p>
-<p><img alt="" src="assets/1712024526752-2594cbc4-c663-43cf-af59-55c43be03292.png.webp" /></p>
+<p><img alt="" src="assets/1712024526752-2594cbc4-c663-43cf-af59-55c43be03292.png" /></p>
 
 </section>
 <section class="chapter" id="ch-13">

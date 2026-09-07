@@ -208,6 +208,7 @@ td code{white-space:nowrap}
 </header>
 <section class="chapter" id="ch-01">
 <div class="ch-head"><span class="ch-num">01</span><h1>一、Spring启示录</h1></div>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 <p>阅读以下代码：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.oa.controller</span><span class="p">;</span>
@@ -303,12 +304,12 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="11-ocp">1.1 OCP开闭原则</h2>
 <p>这样一来就违背了开闭原则OCP。开闭原则是这样说的：在软件开发过程中应当对扩展开放，对修改关闭。也就是说，如果在进行功能扩展的时候，添加额外的类是没问题的，但因为功能扩展而修改之前运行正常的程序，这是忌讳的，不被允许的。因为一旦修改之前运行正常的程序，就会导致项目整体要进行全方位的重新测试。这是相当麻烦的过程。导致以上问题的主要原因是：代码和代码之间的耦合度太高。如下图所示：</p>
 <p><img alt="" src="assets/1663658802926-4c783887-3bd3-4a35-b32a-b2cd57d0061c.png" /></p>
 <p>可以很明显的看出，<strong><font style="color:#ff7b72;font-weight:600;">上层</font></strong>是依赖<strong><font style="color:#ff7b72;font-weight:600;">下层</font></strong>的。UserController依赖UserServiceImpl，而UserServiceImpl依赖UserDaoImplForMySQL，这样就会导致<strong><font style="color:#ff7b72;font-weight:600;">下面只要改动</font></strong>，<strong><font style="color:#ff7b72;font-weight:600;">上面必然会受牵连（跟着也会改）</font></strong>，所谓牵一发而动全身。这样也就同时违背了另一个开发原则：依赖倒置原则。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="12-dip">1.2 依赖倒置原则DIP</h2>
 <p>依赖倒置原则(Dependence Inversion Principle)，简称DIP，主要倡导面向抽象编程，面向接口编程，不要面向具体编程，让<strong><font style="color:#ff7b72;font-weight:600;">上层</font></strong>不再依赖<strong><font style="color:#ff7b72;font-weight:600;">下层</font></strong>，下面改动了，上面的代码不会受到牵连。这样可以大大降低程序的耦合度，耦合度低了，扩展力就强了，同时代码复用性也会增强。（<strong><font style="color:#ff7b72;font-weight:600;">软件七大开发原则都是在为解耦合服务</font></strong>）</p>
 <p>你可能会说，上面的代码已经面向接口编程了呀：</p>
@@ -326,7 +327,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="assets/1663664672011-b1f5c534-5c8b-412b-adb3-f7c60a3ab359.png" /></p>
 <p>Spring可以new出来UserDaoImplForMySQL对象，也可以new出来UserDaoImplForOracle对象，并且还可以让new出来的dao对象和service对象产生关系（产生关系其实本质上就是给属性赋值）。</p>
 <p>很显然，这种方式是将对象的创建权/管理权交出去了，不再使用硬编码的方式了。同时也把对象关系的管理权交出去了，也不再使用硬编码的方式了。像这种把对象的创建权交出去，把对象关系的管理权交出去，被称为控制反转。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="13-ioc">1.3 控制反转IoC</h2>
 <p>控制反转（Inversion of Control，缩写为IoC），是面向对象编程中的一种设计思想，可以用来降低代码之间的耦合度，符合依赖倒置原则。</p>
 <p>控制反转的核心是：<strong><font style="color:#ff7b72;font-weight:600;">将对象的创建权交出去，将对象和对象之间关系的管理权交出去，由第三方容器来负责创建与维护</font></strong>。</p>
@@ -338,7 +339,7 @@ td code{white-space:nowrap}
 </ul>
 <p>而Spring框架就是一个实现了IoC思想的框架。</p>
 <p>IoC可以认为是一种<strong><font style="color:#ff7b72;font-weight:600;">全新的设计模式</font></strong>，但是理论和时间成熟相对较晚，并没有包含在GoF中。（GoF指的是23种设计模式）</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-02">
@@ -356,7 +357,7 @@ td code{white-space:nowrap}
 </p>
 </blockquote>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="22-spring8">2.2 Spring8大模块</h2>
 <p>注意：Spring5版本之后是8个模块。在Spring5中新增了WebFlux模块。</p>
 <p><img alt="" src="assets/1663726169861-b5acb757-17e0-4d3d-a811-400eb7edd1b3.png" /></p>
@@ -394,7 +395,7 @@ td code{white-space:nowrap}
 <li>Spring Web模块</li>
 </ol>
 <p>Web 上下文模块建立在应用程序上下文模块之上，为基于 Web 的应用程序提供了上下文，提供了Spring和其它Web框架的集成，比如Struts、WebWork。还提供了一些面向服务支持，例如：实现文件上传的multipart请求。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="23-spring">2.3 Spring特点</h2>
 <ol>
 <li>轻量<ol>
@@ -420,7 +421,7 @@ td code{white-space:nowrap}
 </li>
 </ol>
 <p>所有Spring的这些特征使你能够编写更干净、更可管理、并且更易于测试的代码。它们也为Spring中的各种模块提供了基础支持。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="24">2.4 本教程软件版本</h2>
 <ul>
 <li>IDEA工具：2022.1.4</li>
@@ -429,7 +430,7 @@ td code{white-space:nowrap}
 <li>Spring：6.0.0-M2</li>
 <li>JUnit：4.13.2</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-03">
@@ -478,7 +479,7 @@ td code{white-space:nowrap}
 <p>docs：spring框架的API帮助文档</p>
 <p>libs：spring框架的jar文件（<strong><font style="color:#ff7b72;font-weight:600;">用spring框架就是用这些jar包</font></strong>）</p>
 <p>schema：spring框架的XML配置文件相关的约束文件</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="32-springjar">3.2 Spring的jar文件</h2>
 <p>打开libs目录，会看到很多jar包：</p>
 <p><img alt="" src="assets/1663809473261-c5c10c35-7407-44d4-81da-8f0baa236179.png" /></p>
@@ -607,7 +608,7 @@ td code{white-space:nowrap}
 <span class="nt">&lt;/dependencies&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="33-spring">3.3 第一个Spring程序</h2>
 <p><strong>前期准备</strong>：</p>
 <ul>
@@ -768,7 +769,7 @@ td code{white-space:nowrap}
 
 <p><strong>第七步：运行测试程序</strong></p>
 <p><img alt="" src="assets/1663818370960-22cf8670-7e79-48d2-b4fe-008ead1a6607.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="34-spring">3.4 第一个Spring程序详细剖析</h2>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;bean</span><span class="w"> </span><span class="na">id=</span><span class="s">"userBean"</span><span class="w"> </span><span class="na">class=</span><span class="s">"com.powernode.spring6.bean.User"</span><span class="nt">/&gt;</span>
 </code></pre></div>
@@ -991,7 +992,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>BeanFactory是Spring容器的超级接口。ApplicationContext是BeanFactory的子接口。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="35-spring6log4j2">3.5 Spring6启用Log4j2日志框架</h2>
 <p>从Spring5之后，Spring框架支持集成的日志框架是Log4j2.如何启用日志框架：</p>
 <p>第一步：引入Log4j2的依赖</p>
@@ -1039,7 +1040,7 @@ td code{white-space:nowrap}
 <span class="n">logger</span><span class="p">.</span><span class="na">info</span><span class="p">(</span><span class="s">"我是一条日志消息"</span><span class="p">);</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-04">
@@ -1059,7 +1060,7 @@ td code{white-space:nowrap}
 </ul>
 </li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="42">4.2 依赖注入</h2>
 <p>依赖注入实现了控制反转的思想。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">Spring通过依赖注入的方式来完成Bean管理的。</font></strong></p>
@@ -1075,7 +1076,7 @@ td code{white-space:nowrap}
 <li>第二种：构造注入</li>
 </ul>
 <p>新建模块：spring6-002-dependency-injection</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="421-set">4.2.1 set注入</h3>
 <p>set注入，基于set方法实现的，底层会通过反射机制调用属性对应的set方法然后给属性赋值。这种方式要求属性必须对外提供set方法。</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -1270,7 +1271,7 @@ td code{white-space:nowrap}
 
 <p><strong><font style="color:#ff7b72;font-weight:600;">总结：set注入的核心实现原理：通过反射机制调用set方法来给属性赋值，让两个对象之间产生关系。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="422">4.2.2 构造注入</h3>
 <p>核心原理：通过调用构造方法来给属性赋值。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.dao</span><span class="p">;</span>
@@ -1421,7 +1422,7 @@ td code{white-space:nowrap}
 <li>也可以不指定下标和参数名，可以类型自动推断。</li>
 </ul>
 <p>Spring在装配方面做的还是比较健壮的。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="43-set">4.3 set注入专题</h2>
 <h3 id="431-bean">4.3.1 注入外部Bean</h3>
 <p>在之前4.2.1中使用的案例就是注入外部Bean的方式。</p>
@@ -1467,7 +1468,7 @@ td code{white-space:nowrap}
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1664443574869-143a6d21-9b3f-4eaa-bd9c-6d9b0e9908b5.png" /></p>
 <p>这种方式作为了解。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="433">4.3.3 注入简单类型</h3>
 <p>我们之前在进行注入的时候，对象的属性是另一个对象。</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="p">{</span>
@@ -1855,7 +1856,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">spring6之后，当注入的是URL，那么这个url字符串是会进行有效性检测的。如果是一个存在的url，那就没问题。如果不存在则报错。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="434">4.3.4 级联属性赋值（了解）</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.beans</span><span class="p">;</span>
 
@@ -1968,7 +1969,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">在spring配置文件中，clazz属性必须提供getter方法。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="435">4.3.5 注入数组</h3>
 <p><strong>当数组中的元素是简单类型</strong>：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.beans</span><span class="p">;</span>
@@ -2129,7 +2130,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">如果数组中是非简单类型，使用ref标签。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="436-list">4.3.6 注入List集合</h3>
 <p>List集合：有序可重复</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.beans</span><span class="p">;</span>
@@ -2190,7 +2191,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="assets/1665199057422-a5f94a7c-711e-4846-9d69-2caf05d11e88.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：注入List集合的时候使用list标签，如果List集合中是简单类型使用value标签，反之使用ref标签。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="437-set">4.3.7 注入Set集合</h3>
 <p>Set集合：无序不可重复</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.beans</span><span class="p">;</span>
@@ -2253,7 +2254,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">set集合中元素是简单类型的使用value标签，反之使用ref标签。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="438-map">4.3.8 注入Map集合</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.beans</span><span class="p">;</span>
 
@@ -2317,7 +2318,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">如果value是简单类型，使用 value 属性，反之使用 value-ref 属性。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="439-properties">4.3.9 注入Properties</h3>
 <p>java.util.Properties继承java.util.Hashtable，所以Properties也是一个Map集合。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.beans</span><span class="p">;</span>
@@ -2380,7 +2381,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">使用<props>标签嵌套<prop>标签完成。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="4310-null">4.3.10 注入null和空字符串</h3>
 <p>注入空字符串使用：<value/> 或者 value=""</p>
 <p>注入null使用：<null/> 或者 不为该属性赋值</p>
@@ -2471,7 +2472,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665202218759-f35ed2da-e136-4ef0-92e5-8ae4ea029620.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="4311">4.3.11 注入的值中含有特殊符号</h3>
 <p>XML中有5个特殊字符，分别是：&lt;、&gt;、'、"、&amp;</p>
 <p>以上5个特殊符号在XML中会被特殊对待，会被当做XML语法的一部分进行解析，如果这些特殊符号直接出现在注入的字符串当中，会报错。</p>
@@ -2576,7 +2577,7 @@ td code{white-space:nowrap}
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：使用CDATA时，不能使用value属性，只能使用value标签。</font></strong></p>
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665210754241-75f884a4-a77b-4918-b398-9f7be2a58873.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="44-p">4.4 p命名空间注入</h2>
 <p>目的：简化配置。</p>
 <p>使用p命名空间注入的前提条件包括两个：</p>
@@ -2638,7 +2639,7 @@ td code{white-space:nowrap}
 <p>把setter方法去掉：</p>
 <p><img alt="" src="assets/1665215713205-fcebda06-c4bb-486b-a2d7-6a238088625b.png" /></p>
 <p>所以p命名空间实际上是对set注入的简化。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="45-c">4.5 c命名空间注入</h2>
 <p>c命名空间是简化构造方法注入的。</p>
 <p>使用c命名空间的两个前提条件：</p>
@@ -2702,7 +2703,7 @@ td code{white-space:nowrap}
 <p>所以，c命名空间是依靠构造方法的。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：不管是p命名空间还是c命名空间，注入的时候都可以注入简单类型以及非简单类型。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="46-util">4.6 util命名空间</h2>
 <p>使用util命名空间可以让<strong><font style="color:#ff7b72;font-weight:600;">配置复用</font></strong>。</p>
 <p>使用util命名空间的前提是：在spring配置文件头部添加配置信息。如下：</p>
@@ -2797,7 +2798,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665218430727-c81e399e-294e-4bb5-b98b-2c8875b0884f.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="47-xml">4.7 基于XML的自动装配</h2>
 <p>Spring还可以完成自动化的注入，自动化注入又被称为自动装配。它可以根据<strong><font style="color:#ff7b72;font-weight:600;">名字</font></strong>进行自动装配，也可以根据<strong><font style="color:#ff7b72;font-weight:600;">类型</font></strong>进行自动装配。</p>
 <h3 id="471">4.7.1 根据名称自动装配</h3>
@@ -2920,7 +2921,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="assets/1665536194436-6efd0c08-72da-437e-b3ad-143cdb00834d.png" /></p>
 <p>这说明，如果根据名称装配(byName)，底层会调用set方法进行注入。</p>
 <p>例如：setAge() 对应的名字是age，setPassword()对应的名字是password，setEmail()对应的名字是email。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="472">4.7.2 根据类型自动装配</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.dao</span><span class="p">;</span>
 
@@ -3003,7 +3004,7 @@ td code{white-space:nowrap}
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665537341888-57af14a1-eeb4-4070-8713-b4368003251d.png" /></p>
 <p>测试结果说明了，当byType进行自动装配的时候，配置文件中某种类型的Bean必须是唯一的，不能出现多个。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="48-spring">4.8 Spring引入外部属性配置文件</h2>
 <p>我们都知道编写数据源的时候是需要连接数据库的信息的，例如：driver url username password等信息。这些信息可以单独写到一个属性配置文件中吗，这样用户修改起来会更加的方便。当然可以。</p>
 <p>第一步：写一个数据源类，提供相关属性。</p>
@@ -3106,7 +3107,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665540422630-223562fd-e97b-40fe-96e7-df2c8744e2c2.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-05">
@@ -3177,7 +3178,7 @@ td code{white-space:nowrap}
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665220250081-036fe814-8328-4b58-adf4-b3a37eb0cb4d.png" /></p>
 <p>通过测试得知，默认情况下，Bean对象的创建是在初始化Spring上下文的时候就完成的。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="52-prototype">5.2 prototype</h2>
 <p>如果想让Spring的Bean对象以多例的形式存在，可以在bean标签中指定scope属性的值为：<strong><font style="color:#ff7b72;font-weight:600;">prototype</font></strong>，这样Spring会在每一次执行getBean()方法的时候创建Bean对象，调用几次则创建几次。</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -3240,7 +3241,7 @@ td code{white-space:nowrap}
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665221074412-9b48c6e3-44f0-492c-a712-37b4baa24341.png" /></p>
 <p>通过测试得知，没有指定scope属性时，默认是singleton单例的。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="53-scope">5.3 其它scope</h2>
 <p><strong>scope属性的值不止两个，它一共包括8个选项：</strong></p>
 <ul>
@@ -3301,7 +3302,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665297614749-ae92b97d-85fd-4792-af87-e72d35784187.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-06">
@@ -3350,7 +3351,7 @@ td code{white-space:nowrap}
 </li>
 <li>工厂模式是解决对象创建问题的，所以工厂模式属于创建型设计模式。这里为什么学习工厂模式呢？这是因为Spring框架底层使用了大量的工厂模式。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="61">6.1 工厂模式的三种形态</h2>
 <p>工厂模式通常有三种形态：</p>
 <ul>
@@ -3507,7 +3508,7 @@ td code{white-space:nowrap}
 </ul>
 <p><strong><font style="color:#ff7b72;font-weight:600;">Spring中的BeanFactory就使用了简单工厂模式。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="63">6.3 工厂方法模式</h2>
 <p>工厂方法模式既保留了简单工厂模式的优点，同时又解决了简单工厂模式的缺点。</p>
 <p>工厂方法模式的角色包括：</p>
@@ -3713,7 +3714,7 @@ td code{white-space:nowrap}
 <ul>
 <li>每次增加一个产品时，都需要增加一个具体类和对象实现工厂，使得系统中类的个数成倍增加，在一定程度上增加了系统的复杂度，同时也增加了系统具体类的依赖。这并不是什么好事。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="64">6.4 抽象工厂模式（了解）</h2>
 <p>抽象工厂模式相对于工厂方法模式来说，就是工厂方法模式是针对一个产品系列的，而抽象工厂模式是针对多个产品系列的，即工厂方法模式是一个产品系列一个工厂类，而抽象工厂模式是多个产品系列一个工厂类。</p>
 <p>抽象工厂模式特点：抽象工厂模式是所有形态的工厂模式中最为抽象和最具一般性的一种形态。抽象工厂模式是指当有多个抽象角色时，使用的一种工厂模式。抽象工厂模式可以向客户端提供一个接口，使客户端在不必指定产品的具体的情况下，创建多个产品族中的产品对象。它有多个抽象产品类，每个抽象产品类可以派生出多个具体产品类，一个抽象工厂类，可以派生出多个具体工厂类，每个具体工厂类可以创建多个具体产品类的实例。每一个模式都是针对一定问题的解决方案，工厂方法模式针对的是一个产品等级结构；而抽象工厂模式针对的是多个产品等级结果。</p>
@@ -3958,7 +3959,7 @@ td code{white-space:nowrap}
 <li>优点：当一个产品族中的多个对象被设计成一起工作时，它能保证客户端始终只使用同一个产品族中的对象。</li>
 <li>缺点：产品族扩展非常困难，要增加一个系列的某一产品，既要在AbstractFactory里加代码，又要在具体的里面加代码。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-07">
@@ -4024,7 +4025,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665373293580-f86edf28-3303-44bd-a9a1-855dcd575e0d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="72">7.2 通过简单工厂模式实例化</h2>
 <p>第一步：定义一个Bean</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.bean</span><span class="p">;</span>
@@ -4070,7 +4071,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665373835672-90312dd8-81e3-4d0a-8b2d-06f90a3e9203.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="73-factory-bean">7.3 通过factory-bean实例化</h2>
 <p>这种方式本质上是：通过工厂方法模式进行实例化。</p>
 <p>第一步：定义一个Bean</p>
@@ -4118,7 +4119,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665374686365-c2f211e2-8594-4994-8b37-09259057ad8d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="74-factorybean">7.4 通过FactoryBean接口实例化</h2>
 <p>以上的第三种方式中，factory-bean是我们自定义的，factory-method也是我们自己定义的。</p>
 <p>在Spring中，当你编写的类直接实现FactoryBean接口之后，factory-bean不需要指定了，factory-method也不需要指定了。</p>
@@ -4188,7 +4189,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="assets/1665382305162-81e16b33-be0f-4256-ae49-89a59c946823.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">FactoryBean在Spring中是一个接口。被称为“工厂Bean”。“工厂Bean”是一种特殊的Bean。所有的“工厂Bean”都是用来协助Spring框架来创建其他Bean对象的。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="75-beanfactoryfactorybean">7.5 BeanFactory和FactoryBean的区别</h2>
 <h3 id="751-beanfactory">7.5.1 BeanFactory</h3>
 <p>Spring IoC容器的顶级对象，BeanFactory被翻译为“Bean工厂”，在Spring的IoC容器中，“Bean工厂”负责创建Bean对象。</p>
@@ -4301,7 +4302,7 @@ td code{white-space:nowrap}
 
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665384407377-3fb70ee0-09d6-4d44-904a-10af88cb1a2a.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-08">
@@ -4319,7 +4320,7 @@ td code{white-space:nowrap}
 <p>我们需要充分的了解在这个生命线上，都有哪些特殊的时间节点。</p>
 <p>只有我们知道了特殊的时间节点都在哪，到时我们才可以确定代码写到哪。</p>
 <p>我们可能需要在某个特殊的时间点上执行一段特定的代码，这段代码就可以放到这个节点上。当生命线走到这里的时候，自然会被调用。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="83-bean5">8.3 Bean的生命周期之5步</h2>
 <p>Bean生命周期的管理，可以参考Spring的源码：<strong><font style="color:#ff7b72;font-weight:600;">AbstractAutowireCapableBeanFactory类的doCreateBean()方法</font></strong><strong>。</strong></p>
 <p>Bean生命周期可以粗略的划分为五大步：</p>
@@ -4414,7 +4415,7 @@ td code{white-space:nowrap}
 <li>第二：ClassPathXmlApplicationContext类才有close()方法。</li>
 <li>第三：配置文件中的init-method指定初始化方法。destroy-method指定销毁方法。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="84-bean7">8.4 Bean生命周期之7步</h2>
 <p>在以上的5步中，第3步是初始化Bean，如果你还想在初始化前和初始化后添加代码，可以加入“Bean后处理器”。</p>
 <p>编写一个类实现BeanPostProcessor类，并且重写before和after方法：</p>
@@ -4454,7 +4455,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="assets/1665393219244-4763ce2a-1cec-4b67-b3b4-54c2d28bc46a.png" /></p>
 <p>如果加上Bean后处理器的话，Bean的生命周期就是7步了：</p>
 <p><img alt="" src="assets/1665393936765-0ea5dcdd-859a-4ac5-9407-f06022c498b9.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="85-bean10">8.5 Bean生命周期之10步</h2>
 <p>如果根据源码跟踪，可以划分更细粒度的步骤，10步：</p>
 <p><img alt="" src="assets/1665394697870-15de433a-8d50-4b31-9b75-b2ca7090c1c6.png" /></p>
@@ -4566,7 +4567,7 @@ td code{white-space:nowrap}
 <li><strong><font style="color:#ff7b72;font-weight:600;">DisposableBean的方法早于destroy-method的执行。</font></strong></li>
 </ul>
 <p><font style="color:#000000;">对于SpringBean的生命周期，掌握之前的7步即可。够用。</font></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="86-bean">8.6 Bean的作用域不同，管理方式不同</h2>
 <p>Spring 根据Bean的作用域来选择管理方式。</p>
 <ul>
@@ -4596,7 +4597,7 @@ td code{white-space:nowrap}
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665395807399-a3b71b4d-d871-4230-8fe4-b939ed03b301.png" /></p>
 <p>通过测试一目了然。只执行了前8步，第9和10都没有执行。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="87-newspring">8.7 自己new的对象如何让Spring管理</h2>
 <p>有些时候可能会遇到这样的需求，某个java对象是我们自己new的，然后我们希望这个对象被Spring容器管理，怎么实现？</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.bean</span><span class="p">;</span>
@@ -4644,7 +4645,7 @@ td code{white-space:nowrap}
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1666262245551-b00bbba7-4107-4d44-8441-fbcd6f799293.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-09">
@@ -4682,7 +4683,7 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="92-singletonset">9.2 singleton下的set注入产生的循环依赖</h2>
 <p>我们来编写程序，测试一下在singleton+setter的模式下产生的循环依赖，Spring是否能够解决？</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.bean</span><span class="p">;</span>
@@ -4802,7 +4803,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="assets/1665453201014-160bb88e-08d4-4d37-a1d9-44d4911a32df.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">通过测试得知：在singleton + set注入的情况下，循环依赖是没有问题的。Spring可以解决这个问题。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="93-prototypeset">9.3 prototype下的set注入产生的循环依赖</h2>
 <p>我们再来测试一下：prototype+set注入的方式下，循环依赖会不会出现问题？</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -4837,7 +4838,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>大家可以测试一下，以上两个Bean，如果其中一个是singleton，另一个是prototype，是没有问题的。</p>
 <p>为什么两个Bean都是prototype时会出错呢？</p>
 <p><img alt="" src="assets/1665454469042-69668f45-5d71-494f-8537-18142d354abd.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="94-singleton">9.4 singleton下的构造注入产生的循环依赖</h2>
 <p>我们再来测试一下singleton + 构造注入的方式下，spring是否能够解决这种循环依赖。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.bean2</span><span class="p">;</span>
@@ -4950,7 +4951,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>为什么呢？</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">主要原因是因为通过构造方法注入导致的</font></strong><strong><font style="color:#ff7b72;font-weight:600;">：因为构造方法注入会导致</font></strong><strong><font style="color:#722ED1;">实例化对象的过程</font></strong><strong><font style="color:#ff7b72;font-weight:600;">和</font></strong><strong><font style="color:#722ED1;">对象属性赋值的过程</font></strong><strong><font style="color:#ff7b72;font-weight:600;">没有分离开，必须在一起完成导致的。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="95-spring">9.5 Spring解决循环依赖的机理</h2>
 <p>Spring为什么可以解决set + singleton模式下循环依赖？</p>
 <p>根本的原因在于：这种方式可以做到将“实例化Bean”和“给Bean属性赋值”这两个动作分开去完成。</p>
@@ -4972,7 +4973,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>从源码中可以看到，spring会先从一级缓存中获取Bean，如果获取不到，则从二级缓存中获取Bean，如果二级缓存还是获取不到，则从三级缓存中获取之前曝光的ObjectFactory对象，通过ObjectFactory对象获取Bean实例，这样就解决了循环依赖的问题。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">总结：</font></strong></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">Spring只能解决setter方法注入的单例bean之间的循环依赖。ClassA依赖ClassB，ClassB又依赖ClassA，形成依赖闭环。Spring在创建ClassA对象后，不需要等给属性赋值，直接将其曝光到bean缓存当中。在解析ClassA的属性时，又发现依赖于ClassB，再次去获取ClassB，当解析ClassB的属性时，又发现需要ClassA的属性，但此时的ClassA已经被提前曝光加入了正在创建的bean的缓存中，则无需创建新的的ClassA的实例，直接从缓存中获取即可。从而解决循环依赖问题。</font></strong></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-10">
@@ -5036,7 +5037,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>传什么参数（"admin", "admin123"）</li>
 <li>返回什么值（success）</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="102-method">10.2 获取Method</h2>
 <p>要使用反射机制调用一个方法，首先你要获取到这个方法。</p>
 <p>在反射机制中Method实例代表的是一个方法。那么怎么获取Method实例呢？</p>
@@ -5103,7 +5104,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </code></pre></div>
 
 <p>因为这个方法形式参数的个数是0个。所以只需要提供方法名就行了。你学会了吗？</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="103-method">10.3 调用Method</h2>
 <p>要让一个方法调用的话，就关联到四要素了：</p>
 <ul>
@@ -5209,7 +5210,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665471647046-386be2b3-e848-4a3d-82ea-7faf1c802a04.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="104">10.4 假设你知道属性名</h2>
 <p>假设有这样一个类：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.reflect</span><span class="p">;</span>
@@ -5295,7 +5296,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665472287604-1994754e-51c1-4bd4-8a50-2fc0b0995ea6.png" /></p>
 <p>给User的name属性赋值zhangsan，这个大家可以尝试自己完成哦！！！</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-11">
@@ -5345,7 +5346,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="nt">&lt;/project&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="bean_4">第二步：准备好我们要管理的Bean</h2>
 <p>准备好我们要管理的Bean（<strong><font style="color:#ff7b72;font-weight:600;">这些Bean在将来开发完框架之后是要删除的</font></strong>）</p>
 <p>注意包名，不要用org.myspringframework包，因为这些Bean不是框架内置的。是将来使用我们框架的程序员提供的。</p>
@@ -5451,7 +5452,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="myspringxml">第三步：准备myspring.xml配置文件</h2>
 <p>将来在框架开发完毕之后，这个文件也是要删除的。因为这个配置文件的提供者应该是使用这个框架的程序员。</p>
 <p>文件名随意，我们这里叫做：myspring.xml</p>
@@ -5475,7 +5476,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </code></pre></div>
 
 <p>使用value给简单属性赋值。使用ref给非简单属性赋值。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="applicationcontext">第四步：编写ApplicationContext接口</h2>
 <p>ApplicationContext接口中提供一个getBean()方法，通过该方法可以获取Bean对象。</p>
 <p>注意包名：这个接口就是myspring框架中的一员了。</p>
@@ -5497,7 +5498,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="classpathxmlapplicationcontext">第五步：编写ClassPathXmlApplicationContext</h2>
 <p>ClassPathXmlApplicationContext是ApplicationContext接口的实现类。该类从类路径当中加载myspring.xml配置文件。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">org.myspringframework.core</span><span class="p">;</span>
@@ -5516,7 +5517,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="mapbean">第六步：确定采用Map集合存储Bean</h2>
 <p>确定采用Map集合存储Bean实例。Map集合的key存储beanId，value存储Bean实例。Map<String,Object></p>
 <p>在ClassPathXmlApplicationContext类中添加Map<String,Object>属性。</p>
@@ -5554,7 +5555,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="bean_5">第七步：解析配置文件实例化所有Bean</h2>
 <p>在ClassPathXmlApplicationContext的构造方法中解析配置文件，获取所有bean的类名，通过反射机制调用无参数构造方法创建Bean。并且将Bean对象存放到Map集合中。</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">/**</span>
@@ -5591,7 +5592,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="bean_6">第八步：测试能否获取到Bean</h2>
 <p>编写测试程序。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.myspring.test</span><span class="p">;</span>
@@ -5622,7 +5623,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1665478707450-7e52f70c-97b2-4e6d-b96f-cc5bea8b51a4.png" /></p>
 <p>通过测试Bean已经实例化成功了，属性的值是null，这是我们能够想到的，毕竟我们调用的是无参数构造方法，所以属性都是默认值。</p>
 <p>下一步就是我们应该如何给Bean的属性赋值呢？</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="bean_7">第九步：给Bean的属性赋值</h2>
 <p>通过反射机制调用set方法，给Bean的属性赋值。</p>
 <p>继续在ClassPathXmlApplicationContext构造方法中编写代码。</p>
@@ -5764,7 +5765,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>重点处理：当property标签中是value怎么办？是ref怎么办？</p>
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665481050714-a41f73d9-67bb-40b9-9137-601a0775450d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="_2">第十步：打包发布</h2>
 <p>将多余的类以及配置文件删除，使用maven打包发布。</p>
 <p><img alt="" src="assets/1665481384984-b9b107a7-6566-473a-95df-fc7fcb613f18.png" /></p>
@@ -5886,7 +5887,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果</p>
 <p><img alt="" src="assets/1665482096446-2015f7a8-3e86-4d74-a26b-a3d417c250fa.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-12">
@@ -6011,7 +6012,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665543007882-24036142-350b-4209-bb20-46a61e35716d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="122-bean">12.2 声明Bean的注解</h2>
 <p>负责声明Bean的注解，常见的包括四个：</p>
 <ul>
@@ -6108,7 +6109,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </ul>
 <p>他们都是只有一个value属性。value属性用来指定bean的id，也就是bean的名字。</p>
 <p><img alt="" src="assets/1665545099269-ebd7e446-bc2f-4442-89b8-3f513e546a8b.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="123-spring">12.3 Spring注解的使用</h2>
 <p>如何使用以上的注解呢？</p>
 <ul>
@@ -6308,7 +6309,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665546777022-4eb8c5e3-22ed-4baf-8722-a5fa98df253d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="124-bean">12.4 选择性实例化Bean</h2>
 <p>假设在某个包下有很多Bean，有的Bean上标注了Component，有的标注了Controller，有的标注了Service，有的标注了Repository，现在由于某种特殊业务的需要，只允许其中所有的Controller参与Bean管理，其他的都不实例化。这应该怎么办呢？</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.bean3</span><span class="p">;</span>
@@ -6397,7 +6398,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665556372417-14f2208c-4151-4bcd-9f22-80db5e3ed837.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="125">12.5 负责注入的注解</h2>
 <p>@Component @Controller @Service @Repository 这四个注解是用来声明Bean的，声明后这些Bean将被实例化。接下来我们看一下，如何给Bean的属性赋值。给Bean属性赋值需要用到这些注解：</p>
 <ul>
@@ -6520,7 +6521,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665557643220-1010bea9-5578-4388-8868-4beb11dfbe95.png" /></p>
 <p>通过测试得知：@Value注解可以出现在属性上、setter方法上、以及构造方法的形参上。可见Spring给我们提供了多样化的注入。太灵活了。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1252-autowiredqualifier">12.5.2 @Autowired与@Qualifier</h3>
 <p>@Autowired注解可以用来注入<strong><font style="color:#ff7b72;font-weight:600;">非简单类型</font></strong>。被翻译为：自动连线的，或者自动装配。</p>
 <p>单独使用@Autowired注解，<strong><font style="color:#ff7b72;font-weight:600;">默认根据类型装配</font></strong>。【默认是byType】</p>
@@ -6804,7 +6805,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>当带参数的构造方法只有一个，@Autowired注解可以省略。</li>
 <li>@Autowired注解默认根据类型注入。如果要根据名称注入的话，需要配合@Qualifier注解一起使用。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1253-resource">12.5.3 @Resource</h3>
 <p>@Resource注解也可以完成非简单类型注入。那它和@Autowired注解有什么区别？</p>
 <ul>
@@ -6976,7 +6977,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665623611980-a66591e7-bd29-4327-a43c-6c6492c8612f.png" /></p>
 <p>一句话总结@Resource注解：默认byName注入，没有指定name时把属性名当做name，根据name找不到时，才会byType注入。byType注入时，某种类型的Bean只能有一个。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="126">12.6 全注解式开发</h2>
 <p>所谓的全注解开发就是不再使用spring配置文件了。写一个配置类来代替配置文件。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.config</span><span class="p">;</span>
@@ -7002,7 +7003,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665624710824-61ee0ae9-ae96-49bf-b189-4a1f358e084a.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-13">
@@ -7258,7 +7259,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </code></pre></div>
 
 <p>到这里环境就准备好了。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="132">13.2 新增</h2>
 <p>编写测试程序：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.test</span><span class="p">;</span>
@@ -7294,7 +7295,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>第一个参数：要执行的SQL语句。（SQL语句中可能会有占位符 ? ）</li>
 <li>第二个参数：可变长参数，参数的个数可以是0个，也可以是多个。一般是SQL语句中有几个问号，则对应几个参数。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="133">13.3 修改</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testUpdate</span><span class="p">(){</span>
@@ -7310,7 +7311,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665642952562-a030937f-b3f5-4018-b92e-02d25ab390d7.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="134">13.4 删除</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testDelete</span><span class="p">(){</span>
@@ -7326,7 +7327,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665643115536-fb7949b8-9bcd-4d45-8032-40c3658911fd.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="135">13.5 查询一个对象</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testSelectOne</span><span class="p">(){</span>
@@ -7348,7 +7349,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>第二个参数：Bean属性值和数据库记录行的映射对象。在构造方法中指定映射的对象类型。</li>
 <li>第三个参数：可变长参数，给sql语句的占位符问号传值。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="136">13.6 查询多个对象</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testSelectAll</span><span class="p">(){</span>
@@ -7364,7 +7365,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665644613140-cc029b6f-7dbe-40fa-896c-ba8674da014c.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="137">13.7 查询一个值</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testSelectOneValue</span><span class="p">(){</span>
@@ -7380,7 +7381,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665644735494-3aff4263-8172-4e33-b5e4-564dda88a704.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="138">13.8 批量添加</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testAddBatch</span><span class="p">(){</span>
@@ -7405,7 +7406,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665645369060-9a473341-e4d2-4c26-bdd4-7d83fd93cc82.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="139">13.9 批量修改</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testUpdateBatch</span><span class="p">(){</span>
@@ -7429,7 +7430,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665645613528-7edf2796-3f40-4c6d-bedc-9022fb16d7da.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="1310">13.10 批量删除</h2>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
 <span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">testDeleteBatch</span><span class="p">(){</span>
@@ -7452,7 +7453,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665645815657-de657db3-cb20-4758-a40e-2c049175d89e.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="1311">13.11 使用回调函数</h2>
 <p>使用回调函数，可以参与的更加细节：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Test</span>
@@ -7483,7 +7484,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665646365875-6ff081a4-74a0-469d-a3ed-b579235743ee.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="1312">13.12 使用德鲁伊连接池</h2>
 <p>之前数据源是用我们自己写的。也可以使用别人写好的。例如比较牛的德鲁伊连接池。</p>
 <p>第一步：引入德鲁伊连接池的依赖。（毕竟是别人写的）</p>
@@ -7515,7 +7516,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>测试结果：</p>
 <p><img alt="" src="assets/1665647176481-660d65ae-f65a-4448-a34d-81ec96ee3b08.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-14">
@@ -7541,7 +7542,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>静态代理</li>
 <li>动态代理</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="142">14.2 静态代理</h2>
 <p>现在有这样一个接口和实现类：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.mall.service</span><span class="p">;</span>
@@ -7793,7 +7794,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1665711099963-e31eb7f2-4355-43c6-985a-2ed9223a7aee.png" /></p>
 <p>以上就是代理模式中的静态代理，其中OrderService接口是代理类和目标类的共同接口。OrderServiceImpl是目标类。OrderServiceProxy是代理类。</p>
 <p>大家思考一下：如果系统中业务接口很多，一个接口对应一个代理类，显然也是不合理的，会导致类爆炸。怎么解决这个问题？动态代理可以解决。因为在动态代理中可以在内存中动态的为我们生成代理类的字节码。代理类不需要我们写了。类爆炸解决了，而且代码只需要写一次，代码也会得到复用。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="143">14.3 动态代理</h2>
 <p>在程序运行阶段，在内存中动态生成代理类，被称为动态代理，目的是为了减少代理类的数量。解决代码复用的问题。</p>
 <p>在内存当中动态生成类的技术常见的包括：</p>
@@ -7802,7 +7803,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>CGLIB动态代理技术：CGLIB(Code Generation Library)是一个开源项目。是一个强大的，高性能，高质量的Code生成类库，它可以在运行期扩展Java类与实现Java接口。它既可以代理接口，又可以代理类，<strong><font style="color:#ff7b72;font-weight:600;">底层是通过继承的方式实现的</font></strong>。性能比JDK动态代理要好。<strong><font style="color:#ff7b72;font-weight:600;">（底层有一个小而快的字节码处理框架ASM。）</font></strong></li>
 <li>Javassist动态代理技术：Javassist是一个开源的分析、编辑和创建Java字节码的类库。是由东京工业大学的数学和计算机科学系的 Shigeru Chiba （千叶 滋）所创建的。它已加入了开放源代码JBoss 应用服务器项目，通过使用Javassist对字节码操作为JBoss实现动态"AOP"框架。</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1431-jdk">14.3.1 JDK动态代理</h3>
 <p>我们还是使用静态代理中的例子：一个接口和一个实现类。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.mall.service</span><span class="p">;</span>
@@ -8103,7 +8104,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665716690080-a1fac908-d6d8-4605-b24d-2fd9fd19a7e6.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1432-cglib">14.3.2 CGLIB动态代理</h3>
 <p>CGLIB既可以代理接口，又可以代理类。底层采用继承的方式实现。所以被代理的目标类不能使用final修饰。</p>
 <p>使用CGLIB，需要引入它的依赖：</p>
@@ -8262,7 +8263,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </ul>
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665719690752-0b38d1ec-f4fd-4a8e-878c-3496da353fe2.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-15">
@@ -8273,7 +8274,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>AOP是对OOP的补充延伸。</p>
 <p>AOP底层使用的就是动态代理来实现的。</p>
 <p>Spring的AOP使用的动态代理是：JDK动态代理 + CGLIB动态代理技术。Spring在这两种动态代理中灵活切换，如果是代理接口，会默认使用JDK动态代理，如果要代理某个类，这个类没有实现接口，就会切换使用CGLIB。当然，你也可以强制通过一些配置让Spring只使用CGLIB。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="151-aop">15.1 AOP介绍</h2>
 <p>一般一个系统当中都会有一些系统服务，例如：日志、事务管理、安全等。这些系统服务被称为：<strong><font style="color:#ff7b72;font-weight:600;">交叉业务</font></strong></p>
 <p>这些<strong><font style="color:#ff7b72;font-weight:600;">交叉业务</font></strong>几乎是通用的，不管你是做银行账户转账，还是删除用户数据。日志、事务管理、安全，这些都是需要做的。</p>
@@ -8293,7 +8294,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li><strong><font style="color:#ff7b72;font-weight:600;">第三：使开发者更关注业务逻辑。</font></strong></li>
 </ul>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="152-aop">15.2 AOP的七大术语</h2>
 <div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">UserService</span><span class="p">{</span>
 <span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">do1</span><span class="p">(){</span>
@@ -8361,7 +8362,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </ul>
 <p>通过下图，大家可以很好的理解AOP的相关术语：</p>
 <p><img alt="" src="assets/1665735638342-44194599-66e2-4c02-a843-8a8b3ba5b0c8.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="153">15.3 切点表达式</h2>
 <p>切点表达式用来定义通知（Advice）往哪些方法上切入。</p>
 <p>切入点表达式语法格式：</p>
@@ -8418,7 +8419,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <div class="codehilite"><pre><span></span><code><span class="n">execution</span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="o">*</span><span class="p">(..))</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="154-springaop">15.4 使用Spring的AOP</h2>
 <p>Spring对AOP的实现包括以下3种方式：</p>
 <ul>
@@ -8429,7 +8430,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>实际开发中，都是Spring+AspectJ来实现AOP。所以我们重点学习第一种和第二种方式。</p>
 <p>什么是AspectJ？（Eclipse组织的一个支持AOP的框架。AspectJ框架是独立于Spring框架之外的一个框架，Spring框架用了AspectJ） </p>
 <p>AspectJ项目起源于帕洛阿尔托（Palo Alto）研究中心（缩写为PARC）。该中心由Xerox集团资助，Gregor Kiczales领导，从1997年开始致力于AspectJ的开发，1998年第一次发布给外部用户，2001年发布1.0 release。为了推动AspectJ技术和社团的发展，PARC在2003年3月正式将AspectJ项目移交给了Eclipse组织，因为AspectJ的发展和受关注程度大大超出了PARC的预期，他们已经无力继续维持它的发展。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1541">15.4.1 准备工作</h3>
 <p>使用Spring+AspectJ的AOP需要引入的依赖如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--spring context依赖--&gt;</span>
@@ -8465,7 +8466,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="nt">&lt;/beans&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1542-aspectjaop">15.4.2 基于AspectJ的AOP注解式开发</h3>
 <h4 id="_3">实现步骤</h4>
 <p>第一步：定义目标类以及目标方法</p>
@@ -8586,7 +8587,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>运行结果：</p>
 <p><img alt="" src="assets/1665843923087-e1116f09-2470-46cb-b21a-1526f62cab50.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_4">通知类型</h4>
 <p>通知类型包括：</p>
 <ul>
@@ -8695,7 +8696,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1665892847715-75045cd0-63b1-47f9-a77e-05911dc72339.png" /></p>
 <p>通过测试得知，当发生异常之后，最终通知也会执行，因为最终通知@After会出现在finally语句块中。</p>
 <p>出现异常之后，<strong><font style="color:#ff7b72;font-weight:600;">后置通知</font></strong>和<strong><font style="color:#ff7b72;font-weight:600;">环绕通知的结束部分</font></strong>不会执行。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_5">切面的先后顺序</h4>
 <p>我们知道，业务流程当中不一定只有一个切面，可能有的切面控制事务，有的记录日志，有的进行安全控制，如果多个切面的话，顺序如何控制：<strong><font style="color:#ff7b72;font-weight:600;">可以使用@Order注解来标识切面类，为@Order注解的value指定一个整数型的数字，数字越小，优先级越高</font></strong>。</p>
 <p>再定义一个切面类，如下：</p>
@@ -8789,7 +8790,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1665893738167-b3c55a19-6129-4615-813f-9b8dc0f17f40.png" /></p>
 <p>通过修改@Order注解的整数值来切换顺序，执行测试程序：</p>
 <p><img alt="" src="assets/1665893833282-2cbc59cc-15a5-44c4-bb20-cbdac65a750d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_6">优化使用切点表达式</h4>
 <p>观看以下代码中的切点表达式：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.service</span><span class="p">;</span>
@@ -8893,7 +8894,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>注意这个@Pointcut注解标注的方法随意，只是起到一个能够让@Pointcut注解编写的位置。</p>
 <p>执行测试程序：</p>
 <p><img alt="" src="assets/1665893833282-2cbc59cc-15a5-44c4-bb20-cbdac65a750d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="aop_1">全注解式开发AOP</h4>
 <p>就是编写一个类，在这个类上面使用大量注解来代替spring的配置文件，spring配置文件消失了，如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.service</span><span class="p">;</span>
@@ -8920,7 +8921,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果如下：</p>
 <p><img alt="" src="assets/1665893833282-2cbc59cc-15a5-44c4-bb20-cbdac65a750d.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="1543-xmlaop">15.4.3 基于XML配置方式的AOP（了解）</h3>
 <p>第一步：编写目标类</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.service</span><span class="p">;</span>
@@ -8999,7 +9000,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665902800121-49540c48-d6c2-4909-874d-e1a485e67ea5.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="155-aop">15.5 AOP的实际案例：事务处理</h2>
 <p>项目中的事务控制是在所难免的。在一个业务流程当中，可能需要多条DML语句共同完成，为了保证数据的安全，这多条DML语句要么同时成功，要么同时失败。这就需要添加事务控制的代码。例如以下伪代码：</p>
 <div class="codehilite"><pre><span></span><code><span class="kd">class</span> <span class="nc">业务类1</span><span class="p">{</span>
@@ -9230,7 +9231,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665899075177-6660d491-06d4-4296-b69a-b54716179c9d.png" /></p>
 <p>通过测试可以看到，所有的业务方法都添加了事务控制的代码。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="156-aop">15.6 AOP的实际案例：安全日志</h2>
 <p>需求是这样的：项目开发结束了，已经上线了。运行正常。客户提出了新的需求：凡事在系统中进行修改操作的，删除操作的，新增操作的，都要把这个人记录下来。因为这几个操作是属于危险行为。例如有业务类和业务方法：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.biz</span><span class="p">;</span>
@@ -9325,7 +9326,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p>执行结果：</p>
 <p><img alt="" src="assets/1665901327786-9bfab382-61a3-4d1e-abe5-728b242eb3a2.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-16">
@@ -9354,7 +9355,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </ul>
 </li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="162">16.2 引入事务场景</h2>
 <p>以银行账户转账为例学习事务。两个账户act-001和act-002。act-001账户向act-002账户转账10000，必须同时成功，或者同时失败。（一个减成功，一个加成功， 这两条update语句必须同时成功，或同时失败。）</p>
 <p>连接数据库的技术采用Spring框架的JdbcTemplate。</p>
@@ -9431,7 +9432,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="nt">&lt;/project&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_7">第一步：准备数据库表</h3>
 <p>表结构：</p>
 <p><img alt="" src="assets/1666496097440-75d21db2-588b-4f6a-bd40-149c3de6f27d.png" /></p>
@@ -9443,7 +9444,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>com.powernode.bank.service.impl</p>
 <p>com.powernode.bank.dao</p>
 <p>com.powernode.bank.dao.impl</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="pojo">第三步：准备POJO类</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.bank.pojo</span><span class="p">;</span>
 
@@ -9491,7 +9492,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_9">第四步：编写持久层</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.bank.dao</span><span class="p">;</span>
 
@@ -9559,7 +9560,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_10">第五步：编写业务层</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.bank.service</span><span class="p">;</span>
 
@@ -9621,7 +9622,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="p">}</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="spring_5">第六步：编写Spring配置文件</h3>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
 <span class="nt">&lt;beans</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">"http://www.springframework.org/schema/beans"</span>
@@ -9646,7 +9647,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <span class="nt">&lt;/beans&gt;</span>
 </code></pre></div>
 
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_11">第七步：编写表示层（测试程序）</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.spring6.test</span><span class="p">;</span>
 
@@ -9681,7 +9682,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1666497683531-b14430f2-b90e-4555-8552-1de9747c9fcc.png" /></p>
 <p>数据变化：</p>
 <p><img alt="" src="assets/1666497727323-b2ca34c9-99c6-4b23-8d3b-8dbe3009d3e9.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_12">模拟异常</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.bank.service.impl</span><span class="p">;</span>
 
@@ -9734,7 +9735,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1666497824308-bdd8f11f-8f99-4195-81c4-c37721627f4c.png" /></p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">丢了1万。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="163-spring">16.3 Spring对事务的支持</h2>
 <h3 id="spring_6">Spring实现事务的两种方式</h3>
 <ul>
@@ -9757,7 +9758,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>JtaTransactionManager：支持分布式事务管理。</li>
 </ul>
 <p>如果要在Spring6中使用JdbcTemplate，就要使用DataSourceTransactionManager来管理事务。（Spring内置写好了，可以直接用。）</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_13">声明式事务之注解实现方式</h3>
 <ul>
 <li>第一步：在spring配置文件中配置事务管理器。</li>
@@ -9844,7 +9845,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>虽然出现异常了，再次查看数据库表中数据：</p>
 <p><img alt="" src="assets/1666505321919-85dd9adb-bceb-49ef-826f-5a3ddf7699a0.png" /></p>
 <p>通过测试，发现数据没有变化，事务起作用了。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_14">事务属性</h3>
 <h4 id="_15">事务属性包括哪些</h4>
 <p><img alt="" src="assets/1666506552984-8a4f9d42-73ba-4ded-853d-564d27340db5.png" /></p>
@@ -9857,7 +9858,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <li>设置出现哪些异常回滚事务</li>
 <li>设置出现哪些异常不回滚事务</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_16">事务传播行为</h4>
 <p>什么是事务的传播行为？</p>
 <p>在service类中有a()方法和b()方法，a()方法上有事务，b()方法上也有事务，当a()方法执行过程中调用了b()方法，事务是如何传递的？合并到一个事务里？还是开启一个新的事务？这就是事务传播行为。</p>
@@ -10070,7 +10071,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </code></pre></div>
 
 <p>通过执行结果可以清晰的看出隔离级别不同，执行效果不同。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_18">事务超时</h4>
 <p>代码如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Transactional</span><span class="p">(</span><span class="n">timeout</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span>
@@ -10107,7 +10108,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p><strong><font style="color:#ff7b72;font-weight:600;">当然，如果想让整个方法的所有代码都计入超时时间的话，可以在方法最后一行添加一行无关紧要的DML语句。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_19">只读事务</h4>
 <p>代码如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Transactional</span><span class="p">(</span><span class="n">readOnly</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">)</span>
@@ -10116,7 +10117,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>将当前事务设置为只读事务，在该事务执行过程中只允许select语句执行，delete insert update均不可执行。</p>
 <p>该特性的作用是：<strong><font style="color:#ff7b72;font-weight:600;">启动spring的优化策略。提高select语句执行效率。</font></strong></p>
 <p>如果该事务中确实没有增删改操作，建议设置为只读事务。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h4 id="_20">设置哪些异常回滚事务</h4>
 <p>代码如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@Transactional</span><span class="p">(</span><span class="n">rollbackFor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">.</span><span class="na">class</span><span class="p">)</span>
@@ -10129,7 +10130,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </code></pre></div>
 
 <p>表示发生NullPointerException<font style="color:rgb(35, 41, 48);">或该异常的子类异常不回滚，其他异常则回滚。</font></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="_22"><font style="color:rgb(35, 41, 48);">事务的全注解式开发</font></h3>
 <p>编写一个类来代替配置文件，代码如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.bank</span><span class="p">;</span>
@@ -10200,7 +10201,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p><img alt="" src="assets/1666511446141-925a1a0e-05ab-4306-996f-532878d5c5a3.png" /></p>
 <p>数据库表中数据：</p>
 <p><img alt="" src="assets/1666511460275-5ede53ce-9ad1-4bce-935a-32436a46c83a.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h3 id="xml">声明式事务之XML实现方式</h3>
 <p>配置步骤：</p>
 <ul>
@@ -10288,7 +10289,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>数据库表中记录：</p>
 <p><img alt="" src="assets/1666510230350-5150f5ca-3812-40d6-8817-adc102516e7e.png" /></p>
 <p>通过测试可以看到配置XML已经起作用了。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-17">
@@ -10434,7 +10435,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>@RunWith(SpringJUnit4ClassRunner.class)<br />
 @ContextConfiguration("classpath:spring.xml")</p>
 <p>在单元测试类上使用这两个注解之后，在单元测试类中的属性上可以使用@Autowired。比较方便。</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="172-springjunit5">17.2 Spring对JUnit5的支持</h2>
 <p>引入JUnit5的依赖，Spring对JUnit支持的依赖还是：spring-test，如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -10514,7 +10515,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>在JUnit5当中，可以使用Spring提供的以下两个注解，标注到单元测试类上，这样在类当中就可以使用@Autowired注解了。</p>
 <p>@ExtendWith(SpringExtension.class)</p>
 <p>@ContextConfiguration("classpath:spring.xml")</p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-18">
@@ -10595,7 +10596,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 </li>
 <li>第十一步：编写测试程序，并添加事务，进行测试</li>
 </ul>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="182">18.2 具体实现</h2>
 <ul>
 <li>第一步：准备数据库表</li>
@@ -11047,7 +11048,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p><strong><font style="color:#ff7b72;font-weight:600;">最后大家别忘了测试事务！！！！</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="183-springimport">18.3 Spring配置文件的import</h2>
 <p>spring配置文件有多个，并且可以在spring的核心配置文件中使用import进行引入，我们可以将组件扫描单独定义到一个配置文件中，如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
@@ -11077,7 +11078,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 
 <p><strong><font style="color:#ff7b72;font-weight:600;">注意：在实际开发中，service单独配置到一个文件中，dao单独配置到一个文件中，然后在核心配置文件中引入，养成好习惯。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 
 </section>
 <section class="chapter" id="ch-19">
@@ -11090,7 +11091,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <h2 id="193">19.3 单例模式</h2>
 <p>Spring用的是双重判断加锁的单例模式。请看下面代码，我们之前讲解Bean的循环依赖的时候见过：</p>
 <p><img alt="" src="assets/1666663352271-4ba8d737-1e32-4f0e-b01a-aa305ad3abea.png" /></p>
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="194">19.4 代理模式</h2>
 <p>Spring的AOP就是使用了动态代理实现的。</p>
 <h2 id="195">19.5 装饰器模式</h2>
@@ -11100,7 +11101,7 @@ at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolve
 <p>Spring根据每次请求的不同，将dataSource属性设置成不同的数据源，以到达切换数据源的目的。</p>
 <p><strong><font style="color:#ff7b72;font-weight:600;">Spring中类名中带有：Decorator和Wrapper单词的类，都是装饰器模式。</font></strong></p>
 <hr />
-<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg.jpg" /></p>
+<p><img alt="" src="assets/1692002570088-3338946f-42b3-4174-8910-7e749c31e950.jpeg" /></p>
 <h2 id="196">19.6 观察者模式</h2>
 <p>定义对象间的一对多的关系，当一个对象的状态发生改变时，所有依赖于它的对象都得到通知并自动更新。Spring中观察者模式一般用在listener的实现。</p>
 <p>Spring中的事件编程模型就是观察者模式的实现。在Spring中定义了一个ApplicationListener接口，用来监听Application的事件，Application其实就是ApplicationContext，ApplicationContext内置了几个事件，其中比较容易理解的是：ContextRefreshedEvent、ContextStartedEvent、ContextStoppedEvent、ContextClosedEvent</p>

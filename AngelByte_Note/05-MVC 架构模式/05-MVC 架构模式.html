@@ -180,23 +180,39 @@ td code{white-space:nowrap}
 <nav class="sidebar" id="sidebar">
   <div class="brand"><span class="logo">📒</span><div><b>05-MVC 架构模式</b><div class="cnt">目录 · 点击跳转</div></div></div>
   <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
-  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>05-MVC 架构模式</span></a>
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>🌊 视频对应资料</span></a>
+<a class="toc-item" href="#ch-02"><span class="toc-idx">02</span><span>🌊 不使用MVC架构模式程序存在的缺陷</span></a>
+<a class="toc-item" href="#ch-03"><span class="toc-idx">03</span><span>🌊 MVC架构模式理论基础</span></a>
+<a class="toc-item" href="#ch-04"><span class="toc-idx">04</span><span>🌊 JavaEE设计模式-DAO模式</span></a>
+<a class="toc-item" href="#ch-05"><span class="toc-idx">05</span><span>🌊 pojo &amp; bean &amp; domain</span></a>
+<a class="toc-item" href="#ch-06"><span class="toc-idx">06</span><span>🌊 业务层抽取以及业务类实现</span></a>
+<a class="toc-item" href="#ch-07"><span class="toc-idx">07</span><span>🌊 控制层</span></a>
+<a class="toc-item" href="#ch-08"><span class="toc-idx">08</span><span>🌊 MVC架构模式与三层架构的关系</span></a>
+<a class="toc-item" href="#ch-09"><span class="toc-idx">09</span><span>🌊 手撕ThreadLocal源码</span></a>
+<a class="toc-item" href="#ch-10"><span class="toc-idx">10</span><span>🌊 ThreadLocal的使用</span></a>
+<a class="toc-item" href="#ch-11"><span class="toc-idx">11</span><span>🌊 不同功能的类放在不同的包下</span></a>
+<a class="toc-item" href="#ch-12"><span class="toc-idx">12</span><span>🌊 层与层之间应该使用接口进行衔接以及当前项目存在的两大问题</span></a>
 </nav>
 <main class="main">
 <header class="hero">
   <h1 class="title">05-MVC 架构模式</h1>
   <div class="sub"></div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">12</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">13</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">6</div><div class="d">远程 6 · 远程图离线时不显示</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">20K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">12</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">12</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">13</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">6</div><div class="d">远程 6 · 远程图离线时不显示</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">20K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
-<h2 id="_1">🌊 视频对应资料</h2>
+<div class="ch-head"><span class="ch-num">01</span><h1>🌊 视频对应资料</h1></div>
+
 <blockquote>
 <p>视频地址：动力节点最新<span class="wl" title="Obsidian 内链：02-Java Web|JavaWeb">🔗 JavaWeb</span>视频教程,javaweb零基础入门到精通IDEA版<a href="https://www.bilibili.com/video/BV1Z3411C7NZ?p=1&amp;vd_source=93ab990b9131a1b90943874a5448830a">https://www.bilibili.com/video/BV1Z3411C7NZ?p=1&amp;vd_source=93ab990b9131a1b90943874a5448830a</a><br />
 资料链接：<a href="https://pan.baidu.com/s/1y-Dm0dGjQQOvARFBmGiG1w?pwd=1234">https://pan.baidu.com/s/1y-Dm0dGjQQOvARFBmGiG1w?pwd=1234 </a><br />
 提取码：1234
 </p>
 </blockquote>
-<h2 id="mvc">🌊 不使用MVC架构模式程序存在的缺陷</h2>
+
+</section>
+<section class="chapter" id="ch-02">
+<div class="ch-head"><span class="ch-num">02</span><h1>🌊 不使用MVC架构模式程序存在的缺陷</h1></div>
+
 <ul>
 <li>在不使用MVC架构模式的前提下，完成银行账户转账。</li>
 <li>分析以下AccountTransferServlet他都负责了什么？ <ul>
@@ -217,9 +233,17 @@ td code{white-space:nowrap}
 </ul>
 </li>
 </ul>
-<h2 id="mvc_1">🌊 MVC架构模式理论基础</h2>
+
+</section>
+<section class="chapter" id="ch-03">
+<div class="ch-head"><span class="ch-num">03</span><h1>🌊 MVC架构模式理论基础</h1></div>
+
 <p><img alt="" src="assets/1762852044483-f7d5038b-b4fe-4cb7-a479-8dcd0bb8340f.png" /></p>
-<h2 id="javaee-dao">🌊 JavaEE设计模式-DAO模式</h2>
+
+</section>
+<section class="chapter" id="ch-04">
+<div class="ch-head"><span class="ch-num">04</span><h1>🌊 JavaEE设计模式-DAO模式</h1></div>
+
 <ul>
 <li>AccountDao是负责Account数据的增删改查的。</li>
 <li>什么是DAO？ <ul>
@@ -391,7 +415,11 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="pojo-bean-domain">🌊 pojo &amp; bean &amp; domain</h2>
+
+</section>
+<section class="chapter" id="ch-05">
+<div class="ch-head"><span class="ch-num">05</span><h1>🌊 pojo &amp; bean &amp; domain</h1></div>
+
 <ul>
 <li>账户实体类：封装账户信息的。</li>
 <li>一般是一张表对应一个。</li>
@@ -463,7 +491,11 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="_2">🌊 业务层抽取以及业务类实现</h2>
+
+</section>
+<section class="chapter" id="ch-06">
+<div class="ch-head"><span class="ch-num">06</span><h1>🌊 业务层抽取以及业务类实现</h1></div>
+
 <ul>
 <li>service翻译为：业务。</li>
 <li>AccountService：专门处理Account业务的一个类。</li>
@@ -512,7 +544,11 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="_3">🌊 控制层</h2>
+
+</section>
+<section class="chapter" id="ch-07">
+<div class="ch-head"><span class="ch-num">07</span><h1>🌊 控制层</h1></div>
+
 <ul>
 <li>账户小程序</li>
 <li>AccountServlet是一个司令官。他负责调度其他组件来完成任务。</li>
@@ -547,10 +583,18 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="mvc_2">🌊 MVC架构模式与三层架构的关系</h2>
+
+</section>
+<section class="chapter" id="ch-08">
+<div class="ch-head"><span class="ch-num">08</span><h1>🌊 MVC架构模式与三层架构的关系</h1></div>
+
 <p><img alt="" src="assets/1762852044437-a2bcb1f6-018c-41e8-8e6e-a06005c54713.png" /><br />
 <img alt="" src="assets/1762852045692-2d2d9118-3d92-4917-9ede-8ba367a1ecab.png" /></p>
-<h2 id="threadlocal">🌊 手撕ThreadLocal源码</h2>
+
+</section>
+<section class="chapter" id="ch-09">
+<div class="ch-head"><span class="ch-num">09</span><h1>🌊 手撕ThreadLocal源码</h1></div>
+
 <p><img alt="" src="assets/1762852044673-2bb92390-6d1b-4a3f-9b9f-13e309ee287f.png" /></p>
 <div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Connection</span><span class="w"> </span><span class="p">{</span>
 <span class="p">}</span>
@@ -671,7 +715,11 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="threadlocal_1">🌊 ThreadLocal的使用</h2>
+
+</section>
+<section class="chapter" id="ch-10">
+<div class="ch-head"><span class="ch-num">10</span><h1>🌊 ThreadLocal的使用</h1></div>
+
 <blockquote>
 <p>JDK有ThreadLocal类的实现
 </p>
@@ -946,13 +994,21 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="_4">🌊 不同功能的类放在不同的包下</h2>
+
+</section>
+<section class="chapter" id="ch-11">
+<div class="ch-head"><span class="ch-num">11</span><h1>🌊 不同功能的类放在不同的包下</h1></div>
+
 <p><img alt="" src="assets/1762852044579-804b21e0-2515-4e2c-97f3-153213a3b3f5.png" /></p>
 <blockquote>
 <p>ssm里面一般都把dao包起名为mapper，把web包起名为controller
 </p>
 </blockquote>
-<h2 id="_5">🌊 层与层之间应该使用接口进行衔接以及当前项目存在的两大问题</h2>
+
+</section>
+<section class="chapter" id="ch-12">
+<div class="ch-head"><span class="ch-num">12</span><h1>🌊 层与层之间应该使用接口进行衔接以及当前项目存在的两大问题</h1></div>
+
 <p><img alt="" src="assets/1762852045203-eba87152-10f0-4875-86ee-3d84cab872f2.png" /></p>
 </section>
 <div class="foot">由 Markdown 转换生成 · 2026-09-07 · Mermaid 图表需联网加载渲染器，失败时显示源码</div>

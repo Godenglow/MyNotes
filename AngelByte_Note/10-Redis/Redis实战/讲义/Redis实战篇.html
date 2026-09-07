@@ -180,17 +180,30 @@ td code{white-space:nowrap}
 <nav class="sidebar" id="sidebar">
   <div class="brand"><span class="logo">📒</span><div><b>实战篇Redis</b><div class="cnt">目录 · 点击跳转</div></div></div>
   <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
-  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>实战篇Redis</span></a>
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>开篇导读</span></a>
+<a class="toc-item" href="#ch-02"><span class="toc-idx">02</span><span>1、短信登录</span></a>
+<a class="toc-item" href="#ch-03"><span class="toc-idx">03</span><span>2、商户查询缓存</span></a>
+<a class="toc-item" href="#ch-04"><span class="toc-idx">04</span><span>3、优惠卷秒杀</span></a>
+<a class="toc-item" href="#ch-05"><span class="toc-idx">05</span><span>4、分布式锁</span></a>
+<a class="toc-item" href="#ch-06"><span class="toc-idx">06</span><span>5、分布式锁-redission</span></a>
+<a class="toc-item" href="#ch-07"><span class="toc-idx">07</span><span>6、秒杀优化</span></a>
+<a class="toc-item" href="#ch-08"><span class="toc-idx">08</span><span>7、Redis消息队列</span></a>
+<a class="toc-item" href="#ch-09"><span class="toc-idx">09</span><span>8、达人探店</span></a>
+<a class="toc-item" href="#ch-10"><span class="toc-idx">10</span><span>9、好友关注</span></a>
+<a class="toc-item" href="#ch-11"><span class="toc-idx">11</span><span>10、附近商户</span></a>
+<a class="toc-item" href="#ch-12"><span class="toc-idx">12</span><span>11、用户签到</span></a>
+<a class="toc-item" href="#ch-13"><span class="toc-idx">13</span><span>12、UV统计</span></a>
 </nav>
 <main class="main">
 <header class="hero">
   <h1 class="title">实战篇Redis</h1>
   <div class="sub"></div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">77</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">85</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">117</div><div class="d">本地 117 · 远程图离线时不显示</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">100K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">13</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">77</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">85</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">117</div><div class="d">本地 117 · 远程图离线时不显示</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">100K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
+<div class="ch-head"><span class="ch-num">01</span><h1>开篇导读</h1></div>
 <p>实战篇Redis</p>
-<h2 id="_1">开篇导读</h2>
+
 <p>亲爱的小伙伴们大家好，马上咱们就开始实战篇的内容了，相信通过本章的学习，小伙伴们就能理解各种redis的使用啦，接下来咱们来一起看看实战篇我们要学习一些什么样的内容</p>
 <ul>
 <li>短信登录</li>
@@ -226,7 +239,11 @@ td code{white-space:nowrap}
 <p>基于List来完成点赞列表的操作，同时基于SortedSet来完成点赞的排行榜功能</p>
 <p>以上这些内容咱们统统都会给小伙伴们讲解清楚，让大家充分理解如何使用Redis</p>
 <p><img alt="1653056228879" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653056228879.png" /></p>
-<h2 id="1">1、短信登录</h2>
+
+</section>
+<section class="chapter" id="ch-02">
+<div class="ch-head"><span class="ch-num">02</span><h1>1、短信登录</h1></div>
+
 <h3 id="11">1.1、导入黑马点评项目</h3>
 <h4 id="111-sql">1.1.1 、导入SQL</h4>
 <p><img alt="1653057872536" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653057872536.png" /></p>
@@ -534,7 +551,11 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="2">2、商户查询缓存</h2>
+
+</section>
+<section class="chapter" id="ch-03">
+<div class="ch-head"><span class="ch-num">03</span><h1>2、商户查询缓存</h1></div>
+
 <h3 id="21">2.1 什么是缓存?</h3>
 <p><strong>前言</strong>:<strong>什么是缓存?</strong></p>
 <p>就像自行车,越野车的避震器 <img alt="" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/%E9%81%BF%E9%9C%87%E5%99%A8.gif" /></p>
@@ -1028,7 +1049,11 @@ public class RedisData {
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 
-<h2 id="3">3、优惠卷秒杀</h2>
+
+</section>
+<section class="chapter" id="ch-04">
+<div class="ch-head"><span class="ch-num">04</span><h1>3、优惠卷秒杀</h1></div>
+
 <h3 id="31-id">3.1 -全局唯一ID</h3>
 <p>每个店铺都可以发布优惠券：</p>
 <p><img alt="1653362612286" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653362612286.png" /></p>
@@ -1427,7 +1452,11 @@ intern() 这个方法是从常量池中拿到数据，如果我们直接使用us
 <p><strong>有关锁失效原因分析</strong></p>
 <p>由于现在我们部署了多个tomcat，每个tomcat都有一个属于自己的jvm，那么假设在服务器A的tomcat内部，有两个线程，这两个线程由于使用的是同一份代码，那么他们的锁对象是同一个，是可以实现互斥的，但是如果现在是服务器B的tomcat内部，又有两个线程，但是他们的锁对象写的虽然和服务器A一样，但是锁对象却不是同一个，所以线程3和线程4可以实现互斥，但是却无法和线程1和线程2实现互斥，这就是 集群环境下，syn锁失效的原因，在这种情况下，我们就需要使用分布式锁来解决这个问题。</p>
 <p><img alt="1653374044740" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653374044740.png" /></p>
-<h2 id="4">4、分布式锁</h2>
+
+</section>
+<section class="chapter" id="ch-05">
+<div class="ch-head"><span class="ch-num">05</span><h1>4、分布式锁</h1></div>
+
 <h3 id="41">4.1 、基本原理和实现方式对比</h3>
 <p>分布式锁：满足分布式系统或集群模式下多进程可见并且互斥的锁。</p>
 <p>分布式锁的核心思想就是让大家都使用同一把锁，只要大家使用的是同一把锁，那么我们就能锁住线程，不让线程进行，让程序串行执行，这就是分布式锁的核心思路</p>
@@ -1670,7 +1699,11 @@ intern() 这个方法是从常量池中拿到数据，如果我们直接使用us
 <p>但是目前还剩下一个问题锁不住，什么是锁不住呢，你想一想，如果当过期时间到了之后，我们可以给他续期一下，比如续个30s，就好像是网吧上网， 网费到了之后，然后说，来，网管，再给我来10块的，是不是后边的问题都不会发生了，那么续期问题怎么解决呢，可以依赖于我们接下来要学习redission啦</p>
 <p><strong>测试逻辑：</strong></p>
 <p>第一个线程进来，得到了锁，手动删除锁，模拟锁超时了，其他线程会执行lua来抢锁，当第一天线程利用lua删除锁时，lua能保证他不能删除他的锁，第二个线程删除锁时，利用lua同样可以保证不会删除别人的锁，同时还能保证原子性。</p>
-<h2 id="5-redission">5、分布式锁-redission</h2>
+
+</section>
+<section class="chapter" id="ch-06">
+<div class="ch-head"><span class="ch-num">06</span><h1>5、分布式锁-redission</h1></div>
+
 <h3 id="51-redission">5.1 分布式锁-redission功能介绍</h3>
 <p>基于setnx实现的分布式锁存在下面的问题：</p>
 <p><strong>重入问题</strong>：重入问题是指 获得锁的线程可以再次进入到相同的锁的代码块中，可重入锁的意义在于防止死锁，比如HashTable这样的代码中，他的方法都是使用synchronized修饰的，假如他在一个方法内，调用另一个方法，那么此时如果是不可重入的，不就死锁了吗？所以可重入锁他的主要意义是防止死锁，我们的synchronized和Lock锁都是可重入的。</p>
@@ -1901,7 +1934,11 @@ intern() 这个方法是从常量池中拿到数据，如果我们直接使用us
 <p>那么MutiLock 加锁原理是什么呢？笔者画了一幅图来说明</p>
 <p>当我们去设置了多个锁时，redission会将多个锁添加到一个集合中，然后用while循环去不停去尝试拿锁，但是会有一个总共的加锁时间，这个时间是用需要加锁的个数 * 1500ms ，假设有3个锁，那么时间就是4500ms，假设在这4500ms内，所有的锁都加锁成功， 那么此时才算是加锁成功，如果在4500ms有线程加锁失败，则会再次去进行重试.</p>
 <p><img alt="1653553093967" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653553093967.png" /></p>
-<h2 id="6">6、秒杀优化</h2>
+
+</section>
+<section class="chapter" id="ch-07">
+<div class="ch-head"><span class="ch-num">07</span><h1>6、秒杀优化</h1></div>
+
 <h3 id="61-">6.1 秒杀优化-异步秒杀思路</h3>
 <p>我们来回顾一下下单流程</p>
 <p>当用户发起请求，此时会请求nginx，nginx会访问到tomcat，而tomcat中的程序，会进行串行操作，分成如下几个步骤</p>
@@ -2139,7 +2176,11 @@ intern() 这个方法是从常量池中拿到数据，如果我们直接使用us
 <li>内存限制问题</li>
 <li>数据安全问题</li>
 </ul>
-<h2 id="7redis">7、Redis消息队列</h2>
+
+</section>
+<section class="chapter" id="ch-08">
+<div class="ch-head"><span class="ch-num">08</span><h1>7、Redis消息队列</h1></div>
+
 <h3 id="71-redis-">7.1 Redis消息队列-认识消息队列</h3>
 <p>什么是消息队列：字面意思就是存放消息的队列。最简单的消息队列模型包括3个角色：</p>
 <ul>
@@ -2334,7 +2375,11 @@ MKSTREAM：队列不存在时自动创建队列
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="8">8、达人探店</h2>
+
+</section>
+<section class="chapter" id="ch-09">
+<div class="ch-head"><span class="ch-num">09</span><h1>8、达人探店</h1></div>
+
 <h3 id="81-">8.1、达人探店-发布探店笔记</h3>
 <p>发布探店笔记</p>
 <p>探店笔记类似点评网站的评价，往往是图文结合。对应的表有两个：
@@ -2555,7 +2600,11 @@ tb_blog_comments：其他用户对探店笔记的评价</p>
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="9">9、好友关注</h2>
+
+</section>
+<section class="chapter" id="ch-10">
+<div class="ch-head"><span class="ch-num">10</span><h1>9、好友关注</h1></div>
+
 <h3 id="91-">9.1 好友关注-关注和取消关注</h3>
 <p>针对用户的操作：可以对用户进行关注和取消关注功能。</p>
 <p><img alt="1653806140822" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653806140822.png" /></p>
@@ -2868,7 +2917,11 @@ Timeline：不做内容筛选，简单的按照内容发布时间排序，常用
 <span class="p">}</span>
 </code></pre></div>
 
-<h2 id="10">10、附近商户</h2>
+
+</section>
+<section class="chapter" id="ch-11">
+<div class="ch-head"><span class="ch-num">11</span><h1>10、附近商户</h1></div>
+
 <h3 id="101-geo">10.1、附近商户-GEO数据结构的基本用法</h3>
 <p>GEO就是Geolocation的简写形式，代表地理坐标。Redis在3.2版本中加入了对GEO的支持，允许存储地理坐标信息，帮助我们根据经纬度来检索数据。常见的命令有：</p>
 <ul>
@@ -3015,7 +3068,11 @@ Timeline：不做内容筛选，简单的按照内容发布时间排序，常用
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 
-<h2 id="11_1">11、用户签到</h2>
+
+</section>
+<section class="chapter" id="ch-12">
+<div class="ch-head"><span class="ch-num">12</span><h1>11、用户签到</h1></div>
+
 <h4 id="111-bitmap">11.1、用户签到-BitMap功能演示</h4>
 <p>我们针对签到功能完全可以通过mysql来完成，比如说以下这张表</p>
 <p><img alt="1653823145495" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653823145495.png" /></p>
@@ -3156,7 +3213,11 @@ Timeline：不做内容筛选，简单的按照内容发布时间排序，常用
 <p>我们可以把list数据抽象成一个非常大的bitmap，我们不再使用list，而是将db中的id数据利用哈希思想，比如：</p>
 <p>id % bitmap.size  = 算出当前这个id对应应该落在bitmap的哪个索引上，然后将这个值从0变成1，然后当用户来查询数据时，此时已经没有了list，让用户用他查询的id去用相同的哈希算法， 算出来当前这个id应当落在bitmap的哪一位，然后判断这一位是0，还是1，如果是0则表明这一位上的数据一定不存在，  采用这种方式来处理，需要重点考虑一个事情，就是误差率，所谓的误差率就是指当发生哈希冲突的时候，产生的误差。</p>
 <p><img alt="1653836578970" src="./Redis%E5%AE%9E%E6%88%98%E7%AF%87.assets/1653836578970.png" /></p>
-<h2 id="12uv">12、UV统计</h2>
+
+</section>
+<section class="chapter" id="ch-13">
+<div class="ch-head"><span class="ch-num">13</span><h1>12、UV统计</h1></div>
+
 <h3 id="121-uv-hyperloglog">12.1 、UV统计-HyperLogLog</h3>
 <p>首先我们搞懂两个概念：</p>
 <ul>
