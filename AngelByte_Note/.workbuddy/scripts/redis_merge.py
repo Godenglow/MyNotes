@@ -9,7 +9,9 @@
 归档:
   .workbuddy/notes_backup_20260907_095204/redis_archive/
 """
+import hashlib
 import io, os, re, shutil, subprocess, sys
+import urllib.parse
 
 VAULT = r"D:\MyNotes\AngelByte_Note\10-Redis"
 BK = r"D:\MyNotes\AngelByte_Note\.workbuddy\notes_backup_20260907_095204"
@@ -102,6 +104,8 @@ for md_name, fb, dst_name in [
     ch, body = chapter(os.path.join(BKR, md_name), fb)
     parts.append(f"# {ch}\n\n{body}")
 merged = "\n\n---\n\n".join(parts)
+# 图片路径归一：源 md 的 Redis.assets/、Redis实战篇.assets/ 已并入 assets/，转换前统一改写
+merged = merged.replace("Redis.assets/", "assets/").replace("Redis实战篇.assets/", "assets/")
 tmp = J("_merged.md")
 io.open(tmp, "w", encoding="utf-8").write(merged)
 print(f"合并 md: 3 章, {len(merged)//1024}KB")
@@ -113,7 +117,41 @@ os.remove(tmp)
 if r.returncode != 0:
     sys.exit("转换失败，中止清理")
 
-# ---------- 5) 删除已被合并替代的旧文件 ----------
+# ---------- 5.5) 图片目录三合一：Redis.assets / Redis实战篇.assets -> assets/ ----------
+def _md5(p):
+    return hashlib.md5(open(p, "rb").read()).hexdigest()
+
+assets_dir = J("assets")
+os.makedirs(assets_dir, exist_ok=True)
+html_p = J("Redis.html")
+sh = io.open(html_p, encoding="utf-8").read()
+for sub in ["Redis.assets", "Redis实战篇.assets"]:
+    sd = J(sub)
+    if not os.path.isdir(sd):
+        continue
+    for n in os.listdir(sd):
+        src, dst = os.path.join(sd, n), os.path.join(assets_dir, n)
+        if not os.path.exists(dst):
+            shutil.move(src, dst)
+            continue
+        if _md5(src) == _md5(dst):
+            os.remove(src)
+            continue
+        stem, ext = os.path.splitext(n)
+        i = 2
+        while os.path.exists(dst2 := os.path.join(assets_dir, f"{stem}_{i}{ext}")):
+            i += 1
+        shutil.move(src, dst2)
+        sh = sh.replace(f"{sub}/{n}", f"assets/{stem}_{i}{ext}")
+        sh = sh.replace(urllib.parse.quote(f"{sub}/{n}"), f"assets/{stem}_{i}{ext}")
+    if not os.listdir(sd):
+        os.rmdir(sd)
+sh = sh.replace("Redis.assets/", "assets/").replace("Redis实战篇.assets/", "assets/")
+sh = sh.replace(urllib.parse.quote("Redis实战篇.assets") + "/", "assets/")
+io.open(html_p, "w", encoding="utf-8").write(sh)
+print("图片目录三合一完成，剩余目录:", [d for d in os.listdir(VAULT) if os.path.isdir(J(d))])
+
+# ---------- 6) 删除已被合并替代的旧文件 ----------
 for old in [J("Redis入门", "讲义", "Redis.html"),
             J("Redis入门", "讲义", "00.课程介绍.html"),
             J("Redis实战", "讲义", "Redis实战篇.html")]:
