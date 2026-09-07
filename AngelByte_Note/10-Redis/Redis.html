@@ -939,7 +939,7 @@ OK
 <li>LRANGE key star end：返回一段角标范围内的所有元素</li>
 <li>BLPOP和BRPOP：与LPOP和RPOP类似，只不过在没有元素时等待指定时间，而不是直接返回nil</li>
 </ul>
-<p><img alt="1652943604992" src="Redis.assets/1652943604992.png" /></p>
+<p><img alt="1652943604992" src="assets/1652943604992.png" /></p>
 <ul>
 <li>LPUSH和RPUSH</li>
 </ul>
@@ -1105,7 +1105,7 @@ OK
 <p><strong>入门案例详细步骤</strong></p>
 <p>案例分析：</p>
 <p>0）创建工程：</p>
-<p><img alt="1652959239813" src="Redis.assets/1652959239813.png" /></p>
+<p><img alt="1652959239813" src="assets/1652959239813.png" /></p>
 <p>1）引入依赖：</p>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--jedis--&gt;</span>
 <span class="nt">&lt;dependency&gt;</span>
@@ -1245,7 +1245,7 @@ OK
 <li>支持基于Redis的JDKCollection实现</li>
 </ul>
 <p>SpringDataRedis中提供了RedisTemplate工具类，其中封装了各种对Redis的操作。并且将不同数据类型的操作API封装到了不同的类型中：</p>
-<p><img alt="1652976773295" src="Redis.assets/1652976773295.png" /></p>
+<p><img alt="1652976773295" src="assets/1652976773295.png" /></p>
 <h4 id="61">6.1.快速入门</h4>
 <p>SpringBoot已经提供了对SpringDataRedis的支持，使用非常简单：</p>
 <h5 id="611pom">6.1.1.导入pom坐标</h5>
@@ -1397,10 +1397,10 @@ OK
 <p>整体可读性有了很大提升，并且能将Java对象自动的序列化为JSON字符串，并且查询时能自动把JSON反序列化为Java对象。不过，其中记录了序列化时对应的class名称，目的是为了查询时实现自动反序列化。这会带来额外的内存开销。</p>
 <h4 id="63-stringredistemplate">6.3 StringRedisTemplate</h4>
 <p>尽管JSON的序列化方式可以满足我们的需求，但依然存在一些问题，如图：</p>
-<p><img alt="1653054602930" src="Redis.assets/1653054602930.png" /></p>
+<p><img alt="1653054602930" src="assets/1653054602930.png" /></p>
 <p>为了在反序列化时知道对象的类型，JSON序列化器会将类的class类型写入json结果中，存入Redis，会带来额外的内存开销。</p>
 <p>为了减少内存的消耗，我们可以采用手动序列化的方式，换句话说，就是不借助默认的序列化器，而是我们自己来控制序列化的动作，同时，我们只采用String的序列化器，这样，在存储value时，我们就不需要在内存中就不用多存储数据，从而节约我们的内存空间</p>
-<p><img alt="1653054744832" src="Redis.assets/1653054744832.png" /></p>
+<p><img alt="1653054744832" src="assets/1653054744832.png" /></p>
 <p>这种用法比较普遍，因此SpringDataRedis就提供了RedisTemplate的子类：StringRedisTemplate，它的key和value的序列化方式默认就是String方式。</p>
 <div class="img-missing">🖼 原图缺失（imgur 图床已删除该图，实测 404）</div>
 
@@ -1442,7 +1442,7 @@ OK
 </code></pre></div>
 
 <p>此时我们再来看一看存储的数据，小伙伴们就会发现那个class数据已经不在了，节约了我们的空间~</p>
-<p><img alt="1653054945211" src="Redis.assets/1653054945211.png" /></p>
+<p><img alt="1653054945211" src="assets/1653054945211.png" /></p>
 <p>最后小总结：</p>
 <p>RedisTemplate的两种序列化实践方案：</p>
 <ul>
