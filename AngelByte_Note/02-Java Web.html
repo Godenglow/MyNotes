@@ -151,7 +151,12 @@ td code{white-space:nowrap}
 .diagram-card pre.mermaid{font-family:Consolas,monospace;font-size:12px;color:#8b949e;white-space:pre-wrap}
 .diagram-card svg{max-width:100%;height:auto}
 .img-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;padding:14px;display:flex;justify-content:center}
-.img-card img{max-width:100%;height:auto;border-radius:6px}
+.img-card img{max-width:100%;max-height:540px;width:auto;height:auto;border-radius:6px}
+.chapter img{max-width:100%;max-height:540px;width:auto;height:auto;border-radius:6px;cursor:zoom-in}
+.chapter p:has(>img){text-align:center}
+.lightbox{position:fixed;inset:0;background:rgba(1,4,9,.93);display:none;z-index:100;cursor:zoom-out}
+.lightbox.open{display:flex;align-items:center;justify-content:center}
+.lightbox img{max-width:96vw;max-height:96vh;width:auto;height:auto;border-radius:4px}
 .wl{color:#58a6ff;background:rgba(88,166,255,.1);padding:1px 7px;border-radius:20px;font-size:12.5px}
 .top-btn{position:fixed;right:26px;bottom:26px;width:40px;height:40px;border-radius:50%;background:#21262d;border:1px solid #30363d;color:#8b949e;font-size:17px;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;opacity:0;pointer-events:none;transition:opacity .25s}
 .top-btn.show{opacity:1;pointer-events:auto}
@@ -3593,6 +3598,12 @@ document.addEventListener('click',e=>{
 const ts=document.getElementById('tocSearch');
 if(ts)ts.oninput=()=>{const q=ts.value.trim().toLowerCase();
   items.forEach(a=>{a.style.display=(!q||a.textContent.toLowerCase().includes(q))?'flex':'none';});};
+const lb=document.createElement('div');lb.className='lightbox';lb.innerHTML='<img alt="">';
+document.body.appendChild(lb);
+lb.onclick=()=>lb.classList.remove('open');
+addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open');});
+document.querySelectorAll('.chapter img,.img-card img').forEach(im=>{
+  im.onclick=()=>{lb.querySelector('img').src=im.src;lb.classList.add('open');};});
 document.querySelectorAll('.codehilite').forEach(el=>{
   const b=document.createElement('button');b.className='copy-btn';b.textContent='复制';
   b.onclick=()=>{const c=el.querySelector('code')||el.querySelector('pre');
