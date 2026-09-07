@@ -4970,7 +4970,7 @@ end;
 </code></pre></div>
 
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2023/png/21376908/1692589931246-7027b294-1121-41c0-84ae-13b21aea707d.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_33%2Ctext_6ICB5p2c%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" /></p>
-<p><strong><font style="color:#DF2A3F;">注意：table列中的</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;&lt;derived2&gt;&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">表示查询</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;派生表&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">，其中的</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;2&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">表示id为2的派生表。</font></strong></p>
+<p><strong><font style="color:#DF2A3F;">注意：table列中的</font></strong><code>**&lt;derived2&gt;**</code><strong><font style="color:#DF2A3F;">表示查询</font></strong><code>**派生表**</code><strong><font style="color:#DF2A3F;">，其中的</font></strong><code>**2**</code><strong><font style="color:#DF2A3F;">表示id为2的派生表。</font></strong></p>
 <p>执行计划是：先生成派生表student，然后先扫描派生表student，再扫描grade表。</p>
 <p><strong><font style="color:#DF2A3F;">id为NULL</font></strong></p>
 <div class="codehilite"><pre><span></span><code><span class="k">explain</span>
@@ -4981,7 +4981,7 @@ end;
 
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2023/png/21376908/1692590567960-16d47f04-d497-4d0f-8eee-22774d83cf06.png?x-oss-process=image%2Fwatermark%2Ctype_d3F5LW1pY3JvaGVp%2Csize_35%2Ctext_6ICB5p2c%2Ccolor_FFFFFF%2Cshadow_50%2Ct_80%2Cg_se%2Cx_10%2Cy_10" /></p>
 <p>先扫描course表，再扫描student表。最后合并。合并动作严格来说不是一个查询操作。</p>
-<p><strong><font style="color:#DF2A3F;">注意：id为NULL表示最后执行，或者这个动作不是一个查询操作时。table为</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;&lt;union 1,2&gt;&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">表示这是一个合并的结果集。</font></strong></p>
+<p><strong><font style="color:#DF2A3F;">注意：id为NULL表示最后执行，或者这个动作不是一个查询操作时。table为</font></strong><code>**&lt;union 1,2&gt;**</code><strong><font style="color:#DF2A3F;">表示这是一个合并的结果集。</font></strong></p>
 <hr />
 <hr />
 <p><strong><font style="color:#DF2A3F;">MySQL优化器的自动优化</font></strong></p>

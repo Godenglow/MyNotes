@@ -197,7 +197,7 @@ td code{white-space:nowrap}
 <header class="hero">
   <h1 class="title">初始SpringMVC</h1>
   <div class="sub">## 学习本套教程前的知识储备</div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">13</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">163</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">217</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">242</div><div class="d">远程 242 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">202K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">13</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">163</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">217</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">242</div><div class="d">远程 242 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">201K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
 <div class="ch-head"><span class="ch-num">01</span><h1>初始SpringMVC</h1></div>
@@ -1541,7 +1541,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710418729572-558f5f1f-b30c-48f6-be0b-be0e58ce8af9.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <h2 id="servlet-api">使用原生的Servlet API进行获取</h2>
 <p>原生的Servlet API指的是：HttpServletRequest</p>
-<p>在SpringMVC当中，一个Controller类中的方法参数上如果有HttpServletRequest，SpringMVC会自动将<code>**&lt;font style="color:#DF2A3F;"&gt;当前请求对象&lt;/font&gt;**</code>传递给这个参数，因此我们可以通过这个参数来获取请求提交的数据。测试一下。</p>
+<p>在SpringMVC当中，一个Controller类中的方法参数上如果有HttpServletRequest，SpringMVC会自动将<code>**当前请求对象**</code>传递给这个参数，因此我们可以通过这个参数来获取请求提交的数据。测试一下。</p>
 <p>在 register.html 中准备一个注册的表单：</p>
 <div class="codehilite"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
 <span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">"en"</span> <span class="na">xmlns:th</span><span class="o">=</span><span class="s">"http://www.thymeleaf.org"</span><span class="p">&gt;</span>
@@ -2736,7 +2736,7 @@ td code{white-space:nowrap}
 <ul>
 <li><strong><font style="color:#DF2A3F;">实现视图的核心类和接口包括：ViewResolverRegistry、DispatcherServlet、ViewResolver、View</font></strong></li>
 <li><strong><font style="color:#DF2A3F;">如果你想定制自己的视图组件：</font></strong><ul>
-<li><strong><font style="color:#DF2A3F;">编写类实现ViewResolver接口，实现resolveViewName方法，在该方法中完成</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;逻辑视图名&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">转换为</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;物理视图名&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">，并返回View对象。</font></strong></li>
+<li><strong><font style="color:#DF2A3F;">编写类实现ViewResolver接口，实现resolveViewName方法，在该方法中完成</font></strong><code>**逻辑视图名**</code><strong><font style="color:#DF2A3F;">转换为</font></strong><code>**物理视图名**</code><strong><font style="color:#DF2A3F;">，并返回View对象。</font></strong></li>
 <li><strong><font style="color:#DF2A3F;">编写类实现View接口，实现render方法，在该方法中将模板语言转换成HTML代码，并将HTML代码响应到浏览器。</font></strong></li>
 </ul>
 </li>
@@ -3009,7 +3009,7 @@ td code{white-space:nowrap}
 </ul>
 <p>这说明转发底层创建的视图对象是：InternalResourceView。</p>
 <p><strong><font style="color:#74B602;">思考：既然会创建InternalResourceView，应该会对应一个视图解析器呀（InternalResourceViewResolver）？但是我在springmvc.xml文件中只配置了ThymeleafViewResolver，并没有配置InternalResourceViewResolver呀？这是为什么？</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">这是因为</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;forward:&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;"> 后面的不是</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;逻辑视图名&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">，而是一个</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;请求路径&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">。因此转发是不需要视图解析器的。</font></strong></p>
+<p><strong><font style="color:#DF2A3F;">这是因为</font></strong><code>**forward:**</code><strong><font style="color:#DF2A3F;"> 后面的不是</font></strong><code>**逻辑视图名**</code><strong><font style="color:#DF2A3F;">，而是一个</font></strong><code>**请求路径**</code><strong><font style="color:#DF2A3F;">。因此转发是不需要视图解析器的。</font></strong></p>
 <p><strong><font style="color:#DF2A3F;">另外，转发使用的是InternalResourceView，也说明了转发是内部资源的跳转。（Internal是内部的意思，Resource是资源的意思。）</font></strong></p>
 <h3 id="redirect"><font style="color:#000000;">redirect</font></h3>
 <p>redirect是专门完成重定向效果的。和forward语法类似，只需要将之前的 <code>return "forward:/b"</code>修改为 <code>return "redirect:/b"</code>即可。</p>
@@ -3080,7 +3080,7 @@ td code{white-space:nowrap}
 
 <p>上述配置将会匹配上访问应用程序的根路径，如：http://localhost:8080/。当用户在浏览器中访问该根路径时，就会直接渲染名为 <code>index</code> 的视图。</p>
 <h2 id="_26"><font style="color:#080808;background-color:#ffffff;"><mvc:annotation-driven/></font></h2>
-<p>在SpringMVC中，如果在springmvc.xml文件中配置了 <code>&lt;font style="color:#080808;background-color:#ffffff;"&gt;&lt;mvc:view-controller&gt;&lt;/font&gt;</code><font style="color:#080808;background-color:#ffffff;">，就需要同时在springmvc.xml文件中添加如下配置：</font></p>
+<p>在SpringMVC中，如果在springmvc.xml文件中配置了 <code>&lt;mvc:view-controller&gt;</code><font style="color:#080808;background-color:#ffffff;">，就需要同时在springmvc.xml文件中添加如下配置：</font></p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;</span><span class="n">mvc</span><span class="p">:</span><span class="n">annotation</span><span class="o">-</span><span class="n">driven</span><span class="o">/&gt;</span>
 </code></pre></div>
 
@@ -3175,7 +3175,7 @@ td code{white-space:nowrap}
 </li>
 <li>REST风格的URL：<font style="color:#DF2A3F;">delete请求</font>, /springmvc/user/1</li>
 </ul>
-<p>RESTFul对URL的约束和规范的核心是：<strong><font style="color:#DF2A3F;">通过采用</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;不同的请求方式&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">+ </font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;URL&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">来确定WEB服务中的资源。</font></strong></p>
+<p>RESTFul对URL的约束和规范的核心是：<strong><font style="color:#DF2A3F;">通过采用</font></strong><code>**不同的请求方式**</code><strong><font style="color:#DF2A3F;">+ </font></strong><code>**URL**</code><strong><font style="color:#DF2A3F;">来确定WEB服务中的资源。</font></strong></p>
 <hr />
 <p><strong><font style="color:#DF2A3F;">RESTful 的英文全称是 Representational State Transfer（表述性状态转移）。简称REST。</font></strong></p>
 <p>表述性（Representational）是：URI + 请求方式。</p>
@@ -3347,7 +3347,7 @@ td code{white-space:nowrap}
 <p>RESTFul规范中规定，如果要进行保存操作，需要发送PUT请求。</p>
 <p><strong><font style="color:#DF2A3F;">如何发送PUT请求？</font></strong></p>
 <p><strong><font style="color:#DF2A3F;">第一步：首先你必须是一个POST请求。</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">第二步：在发送POST请求的时候，提交这样的数据：</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;_method=PUT&lt;/font&gt;**</code></p>
+<p><strong><font style="color:#DF2A3F;">第二步：在发送POST请求的时候，提交这样的数据：</font></strong><code>**_method=PUT**</code></p>
 <p><strong><font style="color:#DF2A3F;">第三步：在web.xml文件配置SpringMVC提供的过滤器：HiddenHttpMethodFilter</font></strong></p>
 <p>实践一下：</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;!--</span><span class="n">修改用户</span><span class="o">--&gt;</span>
@@ -4464,7 +4464,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">重点来了，Controller怎么写呢，之前我们都是传统的请求，Controller返回一个</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;逻辑视图名&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">，然后交给</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;视图解析器&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">解析。最后跳转页面。而AJAX请求是不需要跳转页面的，因为AJAX是页面局部刷新，以前我们在Servlet中使用</font></strong><code>**&lt;font style="color:#DF2A3F;"&gt;response.getWriter().print("message")&lt;/font&gt;**</code><strong><font style="color:#DF2A3F;">的方式响应。在Spring MVC中怎么办呢？当然，我们在Spring MVC中也可以使用Servlet原生API来完成这个功能，代码如下：</font></strong></p>
+<p><strong><font style="color:#DF2A3F;">重点来了，Controller怎么写呢，之前我们都是传统的请求，Controller返回一个</font></strong><code>**逻辑视图名**</code><strong><font style="color:#DF2A3F;">，然后交给</font></strong><code>**视图解析器**</code><strong><font style="color:#DF2A3F;">解析。最后跳转页面。而AJAX请求是不需要跳转页面的，因为AJAX是页面局部刷新，以前我们在Servlet中使用</font></strong><code>**response.getWriter().print("message")**</code><strong><font style="color:#DF2A3F;">的方式响应。在Spring MVC中怎么办呢？当然，我们在Spring MVC中也可以使用Servlet原生API来完成这个功能，代码如下：</font></strong></p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.servlet.http.HttpServletResponse</span><span class="p">;</span>
