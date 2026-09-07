@@ -73,7 +73,6 @@ for src, out, *extra in [
      ["--embed-dir", os.path.join(VAULT, "00-JavaSE", "document")]),
     # Redis 5 个（备份拍平，映射回原目录）
     (os.path.join(BK_MAIN, "10-Redis", "Redis.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "讲义", "Redis.html"), []),
-    (os.path.join(BK_MAIN, "10-Redis", "01.快速入门.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "讲义", "01.快速入门.html"), []),
     (os.path.join(BK_MAIN, "10-Redis", "00.课程介绍.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "讲义", "00.课程介绍.html"), []),
     (os.path.join(BK_MAIN, "10-Redis", "Redis实战篇.md"), os.path.join(VAULT, "10-Redis", "Redis实战", "讲义", "Redis实战篇.html"), []),
     (os.path.join(BK_MAIN, "10-Redis", "Redis注释版.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "代码", "Redis注释版", "Redis.html"), []),
