@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-page-node-id="CqTaPHHcsIdULfrmXMVXgX">
-<head data-page-node-id="czjvPNOnhYeAvqvOL4uZDy">
-<meta charset="utf-8" data-page-node-id="rnhfJ5hmnkEoRpX3yX5wdp">
-<meta name="viewport" content="width=device-width,initial-scale=1" data-page-node-id="WtTruJTNIHB901qftY46fE">
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Git 完整笔记</title>
 <style>pre { line-height: 125%; }
 td.linenos .normal { color: inherit; background-color: transparent; padding-left: 5px; padding-right: 5px; }
@@ -153,7 +153,9 @@ td code{white-space:nowrap}
 .img-card{background:#161b22;border:1px solid #262d38;border-radius:10px;margin:16px 0;padding:14px;display:flex;justify-content:center}
 .img-card img{max-width:100%;max-height:540px;width:auto;height:auto;border-radius:6px}
 .chapter img{max-width:100%;max-height:540px;width:auto;height:auto;border-radius:6px;cursor:zoom-in}
-.chapter p:has(>img){text-align:center}
+/* "说明：![图]" 型段落：图独立成行，说明变图上方步骤标题 */
+.chapter p img{display:block;margin:10px auto 16px}
+.chapter p:has(>img){text-align:center;font-weight:600;color:#f0f6fc}
 .lightbox{position:fixed;inset:0;background:rgba(1,4,9,.93);display:none;z-index:100;cursor:zoom-out}
 .lightbox.open{display:flex;align-items:center;justify-content:center}
 .lightbox img{max-width:96vw;max-height:96vh;width:auto;height:auto;border-radius:4px}
@@ -172,26 +174,26 @@ td code{white-space:nowrap}
 }
 </style>
 </head>
-<body data-page-node-id="sDK1QcsQaQYgNxTqJQIzUy">
-<button class="menu-btn" id="menuBtn" data-page-node-id="1yddlCQMxbSM96v9BJFsDe">☰</button>
-<nav class="sidebar" id="sidebar" data-page-node-id="U6oEF3kxluPNBKpjkB4nKq">
-  <div class="brand" data-page-node-id="FP8qEdgJIbNehlOLMDCQ2K"><span class="logo" data-page-node-id="DELBlwPjm0erjcxtXtH9bx">📒</span><div data-page-node-id="SLWBgypB1TTpG4Lr4S1SZO"><b data-page-node-id="wtbfFgH6DsRnAKw50QiHUx">Git 完整笔记</b><div class="cnt" data-page-node-id="dFg8lrzFKfiXlCeAxP130e">目录 · 点击跳转</div></div></div>
-  <input id="tocSearch" class="toc-search" placeholder="过滤章节…" data-page-node-id="H2EEpXpshdodkImLGl1nec">
-  <a class="toc-item" href="#ch-01" data-page-node-id="suXTPj8Hgnv2lzYUrQJGuM"><span class="toc-idx" data-page-node-id="0Y3Vfrw1zjJsl1X2jP0STr">01</span><span data-page-node-id="fkwZq6mL9qBKkiTCmUvMoD">git #版本控制 #工具 #教程 #SVN #GitHub #Gitee #GitLab</span></a>
+<body>
+<button class="menu-btn" id="menuBtn">☰</button>
+<nav class="sidebar" id="sidebar">
+  <div class="brand"><span class="logo">📒</span><div><b>Git 完整笔记</b><div class="cnt">目录 · 点击跳转</div></div></div>
+  <input id="tocSearch" class="toc-search" placeholder="过滤章节…">
+  <a class="toc-item" href="#ch-01"><span class="toc-idx">01</span><span>git #版本控制 #工具 #教程 #SVN #GitHub #Gitee #GitLab</span></a>
 </nav>
-<main class="main" data-page-node-id="Y0VxGFZHLUZXj3BSJFXSyQ">
-<header class="hero" data-page-node-id="gKoK4Fz6tTljraLoDc7Fc4">
-  <h1 class="title" data-page-node-id="7nPOmjDp3ivdCozFO6gLDr">Git 完整笔记</h1>
-  <div class="sub" data-page-node-id="BxyY0YgqIbEnu8ASUZPgT8">## 目录</div>
-  <div class="cards" data-page-node-id="k4qDO6NBxZYNwhH4lMgLcd"><div class="card" data-page-node-id="X4ItIE0c1XrjLtMmjneb9m"><div class="k" data-page-node-id="IF5uUbeSyErMt9l9SOzFO3">章节</div><div class="v" style="color:#58a6ff" data-page-node-id="h8yB1mCDUSDWDQ4PQYR9kV">1</div><div class="d" data-page-node-id="LZABiqjbmGVrr4ay4VjLbV">点击左侧目录跳转</div></div><div class="card" data-page-node-id="uzNZG8irhWnDDV8puaWr6B"><div class="k" data-page-node-id="zPWB1aCmpdF8XpZ9HWqUhw">知识点小节</div><div class="v" style="color:#3fb950" data-page-node-id="kB1cZ0MRQXIg5tzOPpYGuK">81</div><div class="d" data-page-node-id="kOj2x06rYqfOJ3evHIFjDt">h2 / h3 标题</div></div><div class="card" data-page-node-id="sYTFiAwV4VLzauORbi3Joz"><div class="k" data-page-node-id="Gi3ial0pNJiSTbPLK2iSdx">代码块</div><div class="v" style="color:#a371f7" data-page-node-id="zuL1HnxPAtyTXHmVHyASeb">58</div><div class="d" data-page-node-id="ChRALyGjE2Cpd0D2JSMTaS">one-dark 高亮</div></div><div class="card" data-page-node-id="Sek3AApcfw9LoDxexw0OLa"><div class="k" data-page-node-id="yMFIykY6SWKgox6YYg8D5f">表格</div><div class="v" style="color:#79c0ff" data-page-node-id="5pVjZhGomxZc7wscr1mbeK">12</div><div class="d" data-page-node-id="HcEM3m3N8Kt88ehkTgsFEk">深色卡片样式</div></div><div class="card" data-page-node-id="8EX66ZHqhz8u2Xr02lVl2C"><div class="k" data-page-node-id="MWMqercnn0LfpG3jR54DBV">篇幅</div><div class="v" style="color:#39c5cf" data-page-node-id="gER8KRL0Xn72b0g3LTLWLq">20K</div><div class="d" data-page-node-id="LFG8MsCE7Bha8SupD89LxW">字符</div></div></div>
+<main class="main">
+<header class="hero">
+  <h1 class="title">Git 完整笔记</h1>
+  <div class="sub">## 目录</div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">1</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">81</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">58</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">12</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">20K</div><div class="d">字符</div></div></div>
 </header>
-<section class="chapter" id="ch-01" data-page-node-id="k5WMjK2ddQJSqCXX5gbr2R">
-<div class="ch-head" data-page-node-id="fQxfYnmALaGtk1saIgzm2U"><span class="ch-num" data-page-node-id="HuEWubYEczEuCFSep12yNX">01</span><h1 data-page-node-id="uwHiCCmPCWqlNNYAQCQJTJ">git #版本控制 #工具 #教程 #SVN #GitHub #Gitee #GitLab</h1></div>
+<section class="chapter" id="ch-01">
+<div class="ch-head"><span class="ch-num">01</span><h1>git #版本控制 #工具 #教程 #SVN #GitHub #Gitee #GitLab</h1></div>
 
 </section>
-<div class="foot" data-page-node-id="qETLDHGe7WxgRDMXbeDZaX">由 Markdown 转换生成 · 2026-09-07 · Mermaid 图表需联网加载渲染器，失败时显示源码</div>
+<div class="foot">由 Markdown 转换生成 · 2026-09-07 · Mermaid 图表需联网加载渲染器，失败时显示源码</div>
 </main>
-<button class="top-btn" id="topBtn" title="回到顶部" data-page-node-id="qqb1PGbZfdEDWARnlNcBPy">↑</button>
+<button class="top-btn" id="topBtn" title="回到顶部">↑</button>
 
 <script>
 const items=[...document.querySelectorAll('.toc-item')];
