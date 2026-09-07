@@ -50,6 +50,9 @@ if os.path.isdir(J("Redis入门", "讲义", "assets")):
 if os.path.isdir(J("Redis实战", "讲义", "Redis实战篇.assets")):
     shutil.move(J("Redis实战", "讲义", "Redis实战篇.assets"), J("Redis实战篇.assets"))
     print("图片集中: Redis实战篇.assets/ <- Redis实战/讲义")
+if os.path.isdir(J("Redis入门", "讲义", "Redis.assets")):
+    shutil.move(J("Redis入门", "讲义", "Redis.assets"), J("Redis.assets"))
+    print("图片集中: Redis.assets/ <- Redis入门/讲义")
 
 # pptx 提到顶层
 for root, dirs, files in os.walk(VAULT):
@@ -104,7 +107,7 @@ io.open(tmp, "w", encoding="utf-8").write(merged)
 print(f"合并 md: 3 章, {len(merged)//1024}KB")
 
 # ---------- 4) 转换 ----------
-r = subprocess.run([PY, SKILL, tmp, "-o", J("Redis.html")], capture_output=True, text=True)
+r = subprocess.run([PY, SKILL, tmp, "-o", J("Redis.html"), "--keep-first-h1"], capture_output=True, text=True)
 print((r.stdout or r.stderr).strip().splitlines()[-1])
 os.remove(tmp)
 if r.returncode != 0:
@@ -125,8 +128,3 @@ for sub in [("Redis入门", "讲义"), ("Redis实战", "讲义"),
     if os.path.isdir(d) and not os.listdir(d):
         os.rmdir(d)
         print("移除空目录:", os.path.relpath(d, VAULT))
-
-print("\n== 最终结构 ==")
-for root, dirs, files in os.walk(VAULT):
-    rel = os.path.relpath(root, VAULT)
-    print(f"[{rel}] dirs={dirs} files={len(files)}")

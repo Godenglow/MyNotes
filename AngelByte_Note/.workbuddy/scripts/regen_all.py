@@ -71,13 +71,16 @@ for src, out, *extra in [
      ["--embed-dir", os.path.join(VAULT, "00-JavaSE", "assets")]),
     (os.path.join(BK_JAVASE, "JavaSE.md"), os.path.join(VAULT, "00-JavaSE", "JavaSE.html"),
      ["--embed-dir", os.path.join(VAULT, "00-JavaSE", "document")]),
-    # Redis 5 个（备份拍平，映射回原目录）
-    (os.path.join(BK_MAIN, "10-Redis", "Redis.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "讲义", "Redis.html"), []),
-    (os.path.join(BK_MAIN, "10-Redis", "00.课程介绍.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "讲义", "00.课程介绍.html"), []),
-    (os.path.join(BK_MAIN, "10-Redis", "Redis实战篇.md"), os.path.join(VAULT, "10-Redis", "Redis实战", "讲义", "Redis实战篇.html"), []),
-    (os.path.join(BK_MAIN, "10-Redis", "Redis注释版.md"), os.path.join(VAULT, "10-Redis", "Redis入门", "代码", "Redis注释版", "Redis.html"), []),
+    # Redis 已三合一为 10-Redis/Redis.html（课程介绍+基础篇+实战篇），由 redis_merge.py 处理
 ]:
     ok += run(src, out, extra)
+
+# Redis：合并 + 转换 + 清理（归档/图片集中均幂等）
+r = subprocess.run([PY, os.path.join(os.path.dirname(os.path.abspath(__file__)), "redis_merge.py")],
+                   capture_output=True, text=True)
+tail = (r.stdout or r.stderr).strip().splitlines()
+print("Redis 三合一:", tail[-3] if len(tail) >= 3 else tail)
+ok += (r.returncode == 0)
 
 # RMQ：合并 + 转换 + 删临时 md
 if merge_rmq():
