@@ -197,21 +197,21 @@ td code{white-space:nowrap}
 <header class="hero">
   <h1 class="title">初始SpringMVC</h1>
   <div class="sub">## 学习本套教程前的知识储备</div>
-  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">13</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">163</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">217</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">242</div><div class="d">远程 242 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">201K</div><div class="d">字符</div></div></div>
+  <div class="cards"><div class="card"><div class="k">章节</div><div class="v" style="color:#58a6ff">13</div><div class="d">点击左侧目录跳转</div></div><div class="card"><div class="k">知识点小节</div><div class="v" style="color:#3fb950">163</div><div class="d">h2 / h3 标题</div></div><div class="card"><div class="k">代码块</div><div class="v" style="color:#a371f7">217</div><div class="d">one-dark 高亮</div></div><div class="card"><div class="k">图片</div><div class="v" style="color:#ffa657">242</div><div class="d">远程 242 · 远程图离线时不显示</div></div><div class="card"><div class="k">表格</div><div class="v" style="color:#79c0ff">1</div><div class="d">深色卡片样式</div></div><div class="card"><div class="k">篇幅</div><div class="v" style="color:#39c5cf">203K</div><div class="d">字符</div></div></div>
 </header>
 <section class="chapter" id="ch-01">
 <div class="ch-head"><span class="ch-num">01</span><h1>初始SpringMVC</h1></div>
 
 <h2 id="_1">学习本套教程前的知识储备</h2>
 <ul>
-<li><strong><font style="color:#DF2A3F;"><span class="wl" title="Obsidian 内链：00-JavaSE|JavaSE">🔗 JavaSE</span></font></strong></li>
-<li><strong><font style="color:#DF2A3F;"><span class="wl" title="Obsidian 内链：01-HTML+CSS|HTML+CSS+JavaScript">🔗 HTML+CSS+JavaScript</span></font></strong></li>
-<li><strong><font style="color:#DF2A3F;">Vue</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">AJAX + axios</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">Thymeleaf</font></strong></li>
-<li><strong><font style="color:#DF2A3F;"><span class="wl" title="Obsidian 内链：02-Java Web|Servlet">🔗 Servlet</span></font></strong></li>
-<li><strong><font style="color:#DF2A3F;">Maven</font></strong></li>
-<li><strong><font style="color:#DF2A3F;"><span class="wl" title="Obsidian 内链：07-Spring6框架|Spring">🔗 Spring</span></font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;"><span class="wl" title="Obsidian 内链：00-JavaSE|JavaSE">🔗 JavaSE</span></font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;"><span class="wl" title="Obsidian 内链：01-HTML+CSS|HTML+CSS+JavaScript">🔗 HTML+CSS+JavaScript</span></font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">Vue</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">AJAX + axios</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">Thymeleaf</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;"><span class="wl" title="Obsidian 内链：02-Java Web|Servlet">🔗 Servlet</span></font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">Maven</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;"><span class="wl" title="Obsidian 内链：07-Spring6框架|Spring">🔗 Spring</span></font></strong></li>
 </ul>
 <h2 id="mvc">什么是MVC</h2>
 <p><span class="wl" title="Obsidian 内链：05-MVC 架构模式|MVC架构模式">🔗 MVC架构模式</span>相关课程，在老杜的JavaWeb课程中已经详细的讲解了，如果没有学过的，可以看这个视频：<a href="https://www.bilibili.com/video/BV1Z3411C7NZ/?share_source=copy_web&amp;vd_source=ec35128d1000684f9b28e503d6278a41">https://www.bilibili.com/video/BV1Z3411C7NZ</a></p>
@@ -246,7 +246,7 @@ td code{white-space:nowrap}
 <h2 id="springmvc_1">什么是SpringMVC</h2>
 <h3 id="springmvc_2">SpringMVC概述</h3>
 <p>SpringMVC是一个实现了MVC架构模式的Web框架，底层基于Servlet实现。</p>
-<p>SpringMVC已经将MVC架构模式实现了，因此只要我们是基于SpringMVC框架写代码，编写的程序就是符合MVC架构模式的。（<strong><font style="color:#DF2A3F;">MVC的架子搭好了，我们只需要添添补补</font></strong>）</p>
+<p>SpringMVC已经将MVC架构模式实现了，因此只要我们是基于SpringMVC框架写代码，编写的程序就是符合MVC架构模式的。（<strong><font style="color:#ff7b72;font-weight:600;">MVC的架子搭好了，我们只需要添添补补</font></strong>）</p>
 <p>Spring框架中有一个子项目叫做Spring Web，Spring Web子项目当中包含很多模块，例如：</p>
 <ul>
 <li>Spring MVC</li>
@@ -357,7 +357,7 @@ td code{white-space:nowrap}
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710236651417-5d2d8216-0848-41b8-9dcd-82daf9928e60.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>第二步：添加web.xml配置文件</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710236821253-9144e1b5-8e6a-441a-8aa7-8464a2f30bf4.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p>注意 web.xml 文件的位置：E:\Spring MVC\code\springmvc\springmvc-001*<em><font style="color:#DF2A3F;">src\main\webapp\WEB-INF\web.xml</font></em>*</p>
+<p>注意 web.xml 文件的位置：E:\Spring MVC\code\springmvc\springmvc-001*<em><font style="color:#ff7b72;font-weight:600;">src\main\webapp\WEB-INF\web.xml</font></em>*</p>
 <p>注意版本选择：6.0</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710236908015-b84441b8-72e4-41d4-bf50-aea212651f99.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>添加web支持后的目录结构：</p>
@@ -626,8 +626,8 @@ td code{white-space:nowrap}
 <span class="nt">&lt;/web-app&gt;</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">通过<init-param>来设置SpringMVC配置文件的路径和名字。在DispatcherServlet的init方法执行时设置的。</font></strong></p>
-<p><strong><font style="color:#DF2A3F;"><load-on-startup>1</load-on-startup>建议加上，这样可以提高用户第一次访问的效率。表示在web服务器启动时初始化DispatcherServlet。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">通过<init-param>来设置SpringMVC配置文件的路径和名字。在DispatcherServlet的init方法执行时设置的。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;"><load-on-startup>1</load-on-startup>建议加上，这样可以提高用户第一次访问的效率。表示在web服务器启动时初始化DispatcherServlet。</font></strong></p>
 <h3 id="indexcontroller">编写IndexController</h3>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
 
@@ -651,7 +651,7 @@ td code{white-space:nowrap}
 </code></pre></div>
 
 <p>表示请求路径如果是：<a href="http://localhost:8080/springmvc/">http://localhost:8080/springmvc/</a> ，则进入 /WEB-INF/templates/index.html 页面。</p>
-<p><strong><font style="color:#DF2A3F;">这就是项目的首页效果！！！！！</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">这就是项目的首页效果！！！！！</font></strong></p>
 <h3 id="resourcesspringmvcxml"><font style="color:#000000;">在resources目录下配置springmvc.xml文件</font></h3>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710316235461-25d719f5-5b8f-4600-922a-8568d9cd63dc.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>配置内容和之前一样，一个是视图解析器，一个是组件扫描。</p>
@@ -1112,7 +1112,7 @@ td code{white-space:nowrap}
 
 <p>再次测试：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710383866495-ea6560e6-b458-4385-95cb-c9a9b24b08cd.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">因此，可以看出，对于RequestMapping注解来说，多一个属性，就相当于多了一个映射的条件，如果value和method属性都有，则表示只有前端发送的请求路径 + 请求方式都满足时才能与控制器上的方法建立映射关系，只要有一个不满足，则无法建立映射关系。例如：@RequestMapping(value="/login", method = RequestMethod.POST) 表示当前端发送的请求路径是 /login，并且发送请求的方式是POST的时候才会建立映射关系。如果前端发送的是get请求，或者前端发送的请求路径不是 /login，则都是无法建立映射的。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">因此，可以看出，对于RequestMapping注解来说，多一个属性，就相当于多了一个映射的条件，如果value和method属性都有，则表示只有前端发送的请求路径 + 请求方式都满足时才能与控制器上的方法建立映射关系，只要有一个不满足，则无法建立映射关系。例如：@RequestMapping(value="/login", method = RequestMethod.POST) 表示当前端发送的请求路径是 /login，并且发送请求的方式是POST的时候才会建立映射关系。如果前端发送的是get请求，或者前端发送的请求路径不是 /login，则都是无法建立映射的。</font></strong></p>
 <h3 id="mapping"><font style="color:#000000;">衍生Mapping</font></h3>
 <p>对于以上的程序来说，SpringMVC提供了另一个注解，使用这个注解更加的方便，它就是：PostMapping，使用该注解时，不需要指定method属性，因为它默认采用的就是POST处理方式：修改<font style="color:#000000;background-color:#ffffff;">RequestMappingTestController代码如下</font></p>
 <div class="codehilite"><pre><span></span><code><span class="c1">//@RequestMapping(value="/login", method = RequestMethod.POST)</span>
@@ -1126,21 +1126,21 @@ td code{white-space:nowrap}
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710384745231-3f0f3e3d-e151-4ac8-bde2-e48798aadde0.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>当前端发送post请求时，测试一下：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710384819897-64de621f-fb7d-495e-98d3-5e7b192c458d.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p>在SpringMVC中不仅提供了 <strong><font style="color:#DF2A3F;">PostMaping</font></strong>注解，像这样的注解还有四个，包括：</p>
+<p>在SpringMVC中不仅提供了 <strong><font style="color:#ff7b72;font-weight:600;">PostMaping</font></strong>注解，像这样的注解还有四个，包括：</p>
 <ul>
-<li><strong><font style="color:#DF2A3F;background-color:#ffffff;">GetMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送get请求</font></li>
-<li><strong><font style="color:#DF2A3F;background-color:#ffffff;">PutMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送put请求</font></li>
-<li><strong><font style="color:#DF2A3F;background-color:#ffffff;">DeleteMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送delete请求</font></li>
-<li><strong><font style="color:#DF2A3F;background-color:#ffffff;">PatchMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送patch请求</font></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">GetMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送get请求</font></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">PutMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送put请求</font></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">DeleteMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送delete请求</font></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">PatchMapping</font></strong><font style="color:#000000;background-color:#ffffff;">：要求前端必须发送patch请求</font></li>
 </ul>
 <h3 id="web_2"><font style="color:#000000;background-color:#ffffff;">web的请求方式</font></h3>
 <p><font style="color:#000000;background-color:#ffffff;">前端向服务器发送请求的方式包括哪些？共9种，前5种常用，后面作为了解：</font></p>
 <ul>
-<li><strong><font style="color:#DF2A3F;">GET：获取资源，只允许读取数据，不影响数据的状态和功能。使用 URL 中传递参数或者在 HTTP 请求的头部使用参数，服务器返回请求的资源。</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">POST：向服务器提交资源，可能还会改变数据的状态和功能。通过表单等方式提交请求体，服务器接收请求体后，进行数据处理。</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">PUT：更新资源，用于更新指定的资源上所有可编辑内容。通过请求体发送需要被更新的全部内容，服务器接收数据后，将被更新的资源进行替换或修改。</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">DELETE：删除资源，用于删除指定的资源。将要被删除的资源标识符放在 URL 中或请求体中。</font></strong></li>
-<li><strong><font style="color:#DF2A3F;background-color:#ffffff;">HEAD：请求服务器返回资源的头部，与 GET 命令类似，但是所有返回的信息都是头部信息，不能包含数据体。主要用于资源检测和缓存控制。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">GET：获取资源，只允许读取数据，不影响数据的状态和功能。使用 URL 中传递参数或者在 HTTP 请求的头部使用参数，服务器返回请求的资源。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">POST：向服务器提交资源，可能还会改变数据的状态和功能。通过表单等方式提交请求体，服务器接收请求体后，进行数据处理。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">PUT：更新资源，用于更新指定的资源上所有可编辑内容。通过请求体发送需要被更新的全部内容，服务器接收数据后，将被更新的资源进行替换或修改。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">DELETE：删除资源，用于删除指定的资源。将要被删除的资源标识符放在 URL 中或请求体中。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">HEAD：请求服务器返回资源的头部，与 GET 命令类似，但是所有返回的信息都是头部信息，不能包含数据体。主要用于资源检测和缓存控制。</font></strong></li>
 <li><font style="color:#000000;background-color:#ffffff;">PATCH：部分更改请求。当被请求的资源是可被更改的资源时，请求服务器对该资源进行部分更新，即每次更新一部分。</font></li>
 <li><font style="color:#000000;background-color:#ffffff;">OPTIONS：请求获得服务器支持的请求方法类型，以及支持的请求头标志。“OPTIONS *”则返回支持全部方法类型的服务器标志。</font></li>
 <li><font style="color:#000000;background-color:#ffffff;">TRACE：服务器响应输出客户端的 HTTP 请求，主要用于调试和测试。</font></li>
@@ -1153,7 +1153,7 @@ td code{white-space:nowrap}
 <li><font style="color:#000000;background-color:#ffffff;">使用form表单，如果没有设置method，发送get请求</font></li>
 <li><font style="color:#000000;background-color:#ffffff;">使用form表单，设置method="get"，发送get请求</font></li>
 <li><font style="color:#000000;background-color:#ffffff;">使用form表单，设置method="post"，发送post请求</font></li>
-<li><strong><font style="color:#DF2A3F;background-color:#ffffff;">使用form表单，设置method="put/delete/head"，发送get请求。（针对这种情况，可以测试一下）</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">使用form表单，设置method="put/delete/head"，发送get请求。（针对这种情况，可以测试一下）</font></strong></li>
 </ol>
 <hr />
 <p><font style="color:#000000;background-color:#ffffff;">将index.html中登录表单的提交方式method设置为put：</font></p>
@@ -1265,16 +1265,16 @@ td code{white-space:nowrap}
 <ul>
 <li>value属性是一个数组，只要满足数组中的任意一个路径，就能映射成功</li>
 <li>method属性也是一个数组，只要满足数组中任意一个请求方式，就能映射成功。</li>
-<li><strong><font style="color:#DF2A3F;">params属性也是一个数组，不过要求请求参数必须和params数组中要求的所有参数完全一致后，才能映射成功。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">params属性也是一个数组，不过要求请求参数必须和params数组中要求的所有参数完全一致后，才能映射成功。</font></strong></li>
 </ul>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710398311030-55ee91e0-b4d0-4b43-9d65-36a552eb6d3a.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <h3 id="params4">params属性的4种用法</h3>
-<p>@RequestMapping(value="/login", params={<strong><font style="color:#DF2A3F;">"username"</font></strong>, "password"}) 表示：请求参数中必须包含 username 和 password，才能与当前标注的方法进行映射。</p>
-<p>@RequestMapping(value="/login", params={<strong><font style="color:#DF2A3F;">"!username"</font></strong>, "password"}) 表示：请求参数中不能包含username参数，但必须包含password参数，才能与当前标注的方法进行映射。</p>
-<p>@RequestMapping(value="/login", params={<strong><font style="color:#DF2A3F;">"username=admin"</font></strong>, "password"}) 表示：请求参数中必须包含username参数，并且参数的值必须是admin，另外也必须包含password参数，才能与当前标注的方法进行映射。</p>
-<p>@RequestMapping(value="/login", params={<strong><font style="color:#DF2A3F;">"username!=admin"</font></strong>, "password"}) 表示：请求参数中必须包含username参数，但参数的值不能是admin，另外也必须包含password参数，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", params={<strong><font style="color:#ff7b72;font-weight:600;">"username"</font></strong>, "password"}) 表示：请求参数中必须包含 username 和 password，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", params={<strong><font style="color:#ff7b72;font-weight:600;">"!username"</font></strong>, "password"}) 表示：请求参数中不能包含username参数，但必须包含password参数，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", params={<strong><font style="color:#ff7b72;font-weight:600;">"username=admin"</font></strong>, "password"}) 表示：请求参数中必须包含username参数，并且参数的值必须是admin，另外也必须包含password参数，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", params={<strong><font style="color:#ff7b72;font-weight:600;">"username!=admin"</font></strong>, "password"}) 表示：请求参数中必须包含username参数，但参数的值不能是admin，另外也必须包含password参数，才能与当前标注的方法进行映射。</p>
 <p>注意：如果前端提交的参数，和后端要求的请求参数不一致，则出现400错误！！！</p>
-<p><strong><font style="color:#DF2A3F;">HTTP状态码400的原因：请求参数格式不正确而导致的。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">HTTP状态码400的原因：请求参数格式不正确而导致的。</font></strong></p>
 <h3 id="params_1">测试params属性</h3>
 <p>在 <font style="color:#000000;background-color:#ffffff;">RequestMappingTestController 类中添加如下方法：</font></p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/testParams"</span><span class="p">,</span><span class="w"> </span><span class="n">params</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s">"username"</span><span class="p">,</span><span class="w"> </span><span class="s">"password"</span><span class="p">})</span>
@@ -1329,10 +1329,10 @@ td code{white-space:nowrap}
 <li>Host: localhost:8080     键是Host，值是localhost:8080</li>
 </ul>
 <h3 id="headers4">headers属性的4种用法</h3>
-<p>@RequestMapping(value="/login", headers={<strong><font style="color:#DF2A3F;">"Referer"</font></strong>, "Host"}) 表示：请求头信息中必须包含Referer和Host，才能与当前标注的方法进行映射。</p>
-<p>@RequestMapping(value="/login", headers={<strong><font style="color:#DF2A3F;">"Referer"</font></strong>, "!Host"}) 表示：请求头信息中必须包含Referer，但不包含Host，才能与当前标注的方法进行映射。</p>
-<p>@RequestMapping(value="/login", headers={<strong><font style="color:#DF2A3F;">"Referer=http://localhost:8080/springmvc/"</font></strong>, "Host"}) 表示：请求头信息中必须包含Referer和Host，并且Referer的值必须是http://localhost:8080/springmvc/，才能与当前标注的方法进行映射。</p>
-<p>@RequestMapping(value="/login", headers={<strong><font style="color:#DF2A3F;">"Referer!=http://localhost:8080/springmvc/"</font></strong>, "Host"}) 表示：请求头信息中必须包含Referer和Host，并且Referer的值不是http://localhost:8080/springmvc/，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", headers={<strong><font style="color:#ff7b72;font-weight:600;">"Referer"</font></strong>, "Host"}) 表示：请求头信息中必须包含Referer和Host，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", headers={<strong><font style="color:#ff7b72;font-weight:600;">"Referer"</font></strong>, "!Host"}) 表示：请求头信息中必须包含Referer，但不包含Host，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", headers={<strong><font style="color:#ff7b72;font-weight:600;">"Referer=http://localhost:8080/springmvc/"</font></strong>, "Host"}) 表示：请求头信息中必须包含Referer和Host，并且Referer的值必须是http://localhost:8080/springmvc/，才能与当前标注的方法进行映射。</p>
+<p>@RequestMapping(value="/login", headers={<strong><font style="color:#ff7b72;font-weight:600;">"Referer!=http://localhost:8080/springmvc/"</font></strong>, "Host"}) 表示：请求头信息中必须包含Referer和Host，并且Referer的值不是http://localhost:8080/springmvc/，才能与当前标注的方法进行映射。</p>
 <p>注意：如果前端提交的请求头信息，和后端要求的请求头信息不一致，则出现404错误！！！</p>
 <h3 id="headers_1">测试headers属性</h3>
 <p>在 <font style="color:#000000;background-color:#ffffff;">RequestMappingTestController 类中添加以下方法：</font></p>
@@ -1606,7 +1606,7 @@ td code{white-space:nowrap}
 <p>测试：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710419827530-70740ef1-28a3-4766-9825-6d0cb5ebbf4a.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710419792573-b4d36148-dff4-45f6-ab97-e6de4e74a362.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">这样通过Servlet原生的API获取到提交的数据。但是这种方式不建议使用，因为方法的参数依赖Servlet原生API，Controller的测试将不能单独测试，必须依赖WEB服务器才能测试。另外，换句话说，如果在SpringMVC中使用了原生的Servlet，你为什么还要用SpringMVC框架呢！！！！！</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">这样通过Servlet原生的API获取到提交的数据。但是这种方式不建议使用，因为方法的参数依赖Servlet原生API，Controller的测试将不能单独测试，必须依赖WEB服务器才能测试。另外，换句话说，如果在SpringMVC中使用了原生的Servlet，你为什么还要用SpringMVC框架呢！！！！！</font></strong></p>
 <h2 id="requestparam"><font style="color:#000000;">使用RequestParam注解标注</font></h2>
 <h3 id="requestparam_1">RequestParam注解的基本使用</h3>
 <p>RequestParam注解作用：将<code>请求参数</code>与方法上的<code>形参</code>映射。</p>
@@ -1697,8 +1697,8 @@ td code{white-space:nowrap}
 <span class="nt">&lt;/build&gt;</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">注意：如果你使用的是Spring5的版本，以上的配置是不需要的。</font></strong></p>
-<p>Controller中的方法只需要这样写：<strong><font style="color:#DF2A3F;">形参的名字必须和提交的数据的name一致！！！！！</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">注意：如果你使用的是Spring5的版本，以上的配置是不需要的。</font></strong></p>
+<p>Controller中的方法只需要这样写：<strong><font style="color:#ff7b72;font-weight:600;">形参的名字必须和提交的数据的name一致！！！！！</font></strong></p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@PostMapping</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="s">"/register"</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">register</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">username</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">password</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">sex</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">hobby</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">intro</span><span class="p">){</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">username</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">password</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sex</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Arrays</span><span class="p">.</span><span class="na">toString</span><span class="p">(</span><span class="n">hobby</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">","</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">intro</span><span class="p">);</span>
@@ -1829,8 +1829,8 @@ td code{white-space:nowrap}
 <p>执行结果：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471338770-502eefb8-15b7-4632-9d07-37b1fa60a539.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471328104-0ef741e8-70d3-4294-a559-165ffee8a821.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">底层的实现原理：反射机制。先获取请求参数的名字，因为请求参数的名字就是JavaBean的属性名，通过这种方式给对应的属性赋值</font></strong>。</p>
-<p>我们来测试一下：当JavaBean的属性名和请求参数的参数名不一致时，会出现什么问题？（注意：<strong><font style="color:#DF2A3F;">getter和setter的方法名不修改，只修改属性名</font></strong>）</p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">底层的实现原理：反射机制。先获取请求参数的名字，因为请求参数的名字就是JavaBean的属性名，通过这种方式给对应的属性赋值</font></strong>。</p>
+<p>我们来测试一下：当JavaBean的属性名和请求参数的参数名不一致时，会出现什么问题？（注意：<strong><font style="color:#ff7b72;font-weight:600;">getter和setter的方法名不修改，只修改属性名</font></strong>）</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.pojo</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
@@ -1933,7 +1933,7 @@ td code{white-space:nowrap}
 <p>再次测试：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471941379-7da74eee-7b34-4dae-8589-98c0cf0a4d04.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471949916-1049b6e4-df85-44f0-ba78-d2fe556f4fb9.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">通过测试可以看到：username属性没有赋上值。可见请求参数是否可以赋值到JavaBean对应的属性上，不是取决于属性名，而是setter方法名</font></strong>。</p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">通过测试可以看到：username属性没有赋上值。可见请求参数是否可以赋值到JavaBean对应的属性上，不是取决于属性名，而是setter方法名</font></strong>。</p>
 <h2 id="requestheader"><font style="color:#000000;background-color:#ffffff;">RequestHeader注解</font></h2>
 <p>该注解的作用是：将<code>请求头信息</code>映射到<code>方法的形参上</code>。</p>
 <p>和RequestParam注解功能相似，RequestParam注解的作用：将<code>请求参数</code>映射到<code>方法的形参</code>上。</p>
@@ -2023,11 +2023,11 @@ td code{white-space:nowrap}
 <div class="codehilite"><pre><span></span><code><span class="n">request</span><span class="p">.</span><span class="na">setCharacterEncoding</span><span class="p">(</span><span class="s">"UTF-8"</span><span class="p">);</span>
 </code></pre></div>
 
-<p>同样，对于高版本的<strong><font style="color:#DF2A3F;">Tomcat10</font></strong>服务器来说，针对请求体中的字符编码也是配置好的，默认也是采用了UTF-8，中文乱码问题也解决了，在这个文件中配置的：apache-tomcat-10.1.19\conf\web.xml</p>
+<p>同样，对于高版本的<strong><font style="color:#ff7b72;font-weight:600;">Tomcat10</font></strong>服务器来说，针对请求体中的字符编码也是配置好的，默认也是采用了UTF-8，中文乱码问题也解决了，在这个文件中配置的：apache-tomcat-10.1.19\conf\web.xml</p>
 <p>配置内容如下：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710731491577-383b3f5b-046a-47c4-8da9-86b52ab1f535.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>通过以上配置可以看到，Tomcat10对请求和响应都设置了默认的字符编码方式为UTF-8</p>
-<p><strong><font style="color:#DF2A3F;">一定要注意：Tomcat9以及之前的版本，以上的配置是没有的。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">一定要注意：Tomcat9以及之前的版本，以上的配置是没有的。</font></strong></p>
 <hr />
 <p><font style="color:#000000;">我们来测试一下，针对Tomcat10来说，SpringMVC会不会有乱码问题：</font></p>
 <div class="codehilite"><pre><span></span><code><span class="p">&lt;</span><span class="nt">form</span> <span class="na">th:action</span><span class="o">=</span><span class="s">"@{/register}"</span> <span class="na">method</span><span class="o">=</span><span class="s">"post"</span><span class="p">&gt;</span>
@@ -2061,7 +2061,7 @@ td code{white-space:nowrap}
 <p>通过测试可以看到在Tomcat10当中，默认SpringMVC，发送POST请求，是不会出现乱码问题的。</p>
 <p>有可能很多同学使用的不是Tomcat10，如果不是Tomcat10，则会出现乱码问题，我们来模拟一下乱码的产生，将apache-tomcat-10.1.19\conf\web.xml文件中的UTF-8配置修改为ISO-8859-1：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710732413713-0f034192-e4d4-4c33-aeb3-169726468251.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">一定要重启Tomcat10</font></strong>，新的配置才能生效，来测试一下是否存在乱码：</p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">一定要重启Tomcat10</font></strong>，新的配置才能生效，来测试一下是否存在乱码：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710732483068-b356942a-9183-4734-812d-041a151df48d.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>那么，在SpringMVC中如何解决请求体的中文乱码问题呢？当然，还是使用<code>request.setCharacterEncoding("UTF-8")</code></p>
 <p>使用它有一个前提条件，要想解决请求体乱码问题，以上代码必须在 <code>request.getParameter("username")</code>执行之前执行才有效。</p>
@@ -2732,17 +2732,17 @@ td code{white-space:nowrap}
 </ol>
 </li>
 </ol>
-<p><strong><font style="color:#DF2A3F;">总结：</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">总结：</font></strong></p>
 <ul>
-<li><strong><font style="color:#DF2A3F;">实现视图的核心类和接口包括：ViewResolverRegistry、DispatcherServlet、ViewResolver、View</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">如果你想定制自己的视图组件：</font></strong><ul>
-<li><strong><font style="color:#DF2A3F;">编写类实现ViewResolver接口，实现resolveViewName方法，在该方法中完成</font></strong><code>**逻辑视图名**</code><strong><font style="color:#DF2A3F;">转换为</font></strong><code>**物理视图名**</code><strong><font style="color:#DF2A3F;">，并返回View对象。</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">编写类实现View接口，实现render方法，在该方法中将模板语言转换成HTML代码，并将HTML代码响应到浏览器。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">实现视图的核心类和接口包括：ViewResolverRegistry、DispatcherServlet、ViewResolver、View</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">如果你想定制自己的视图组件：</font></strong><ul>
+<li><strong><font style="color:#ff7b72;font-weight:600;">编写类实现ViewResolver接口，实现resolveViewName方法，在该方法中完成</font></strong><code>**逻辑视图名**</code><strong><font style="color:#ff7b72;font-weight:600;">转换为</font></strong><code>**物理视图名**</code><strong><font style="color:#ff7b72;font-weight:600;">，并返回View对象。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">编写类实现View接口，实现render方法，在该方法中将模板语言转换成HTML代码，并将HTML代码响应到浏览器。</font></strong></li>
 </ul>
 </li>
-<li><strong><font style="color:#DF2A3F;">如果Spring MVC框架中使用Thymeleaf作为视图技术。那么相关的类包括：</font></strong><ul>
-<li><strong><font style="color:#DF2A3F;">ThymeleafView</font></strong></li>
-<li><strong><font style="color:#DF2A3F;">ThymeleafViewResolver</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">如果Spring MVC框架中使用Thymeleaf作为视图技术。那么相关的类包括：</font></strong><ul>
+<li><strong><font style="color:#ff7b72;font-weight:600;">ThymeleafView</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">ThymeleafViewResolver</font></strong></li>
 </ul>
 </li>
 </ul>
@@ -3009,8 +3009,8 @@ td code{white-space:nowrap}
 </ul>
 <p>这说明转发底层创建的视图对象是：InternalResourceView。</p>
 <p><strong><font style="color:#74B602;">思考：既然会创建InternalResourceView，应该会对应一个视图解析器呀（InternalResourceViewResolver）？但是我在springmvc.xml文件中只配置了ThymeleafViewResolver，并没有配置InternalResourceViewResolver呀？这是为什么？</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">这是因为</font></strong><code>**forward:**</code><strong><font style="color:#DF2A3F;"> 后面的不是</font></strong><code>**逻辑视图名**</code><strong><font style="color:#DF2A3F;">，而是一个</font></strong><code>**请求路径**</code><strong><font style="color:#DF2A3F;">。因此转发是不需要视图解析器的。</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">另外，转发使用的是InternalResourceView，也说明了转发是内部资源的跳转。（Internal是内部的意思，Resource是资源的意思。）</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">这是因为</font></strong><code>**forward:**</code><strong><font style="color:#ff7b72;font-weight:600;"> 后面的不是</font></strong><code>**逻辑视图名**</code><strong><font style="color:#ff7b72;font-weight:600;">，而是一个</font></strong><code>**请求路径**</code><strong><font style="color:#ff7b72;font-weight:600;">。因此转发是不需要视图解析器的。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">另外，转发使用的是InternalResourceView，也说明了转发是内部资源的跳转。（Internal是内部的意思，Resource是资源的意思。）</font></strong></p>
 <h3 id="redirect"><font style="color:#000000;">redirect</font></h3>
 <p>redirect是专门完成重定向效果的。和forward语法类似，只需要将之前的 <code>return "forward:/b"</code>修改为 <code>return "redirect:/b"</code>即可。</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
@@ -3052,7 +3052,7 @@ td code{white-space:nowrap}
 <p>可以看一下源码，在重定向的时候，Spring MVC创建哪个视图对象？</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710857964522-8ccd525e-e458-41e2-abc8-6336a46bc17c.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710858016866-c2e30ccf-0b94-494d-9b89-0853fb2fa7af.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p>通过断点调试可以看出，当重定向的时候，SpringMVC会创建一个重定向视图对象：<strong><font style="color:#DF2A3F;">RedirectView</font></strong>。这个视图对象也是SpringMVC框架内置的。</p>
+<p>通过断点调试可以看出，当重定向的时候，SpringMVC会创建一个重定向视图对象：<strong><font style="color:#ff7b72;font-weight:600;">RedirectView</font></strong>。这个视图对象也是SpringMVC框架内置的。</p>
 <p>另外可以看出重定向之后的第二次请求创建的视图对象就是ThymeleafView了。</p>
 <p>注意：从springmvc应用重定向到springmvc2应用（跨域），语法是：</p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/a"</span><span class="p">)</span>
@@ -3123,7 +3123,7 @@ td code{white-space:nowrap}
 <span class="o">&lt;/</span><span class="n">servlet</span><span class="o">-</span><span class="n">mapping</span><span class="o">&gt;</span>
 </code></pre></div>
 
-<p>以上配置url-pattern使用的也是"/"，和DispatcherServlet一样。表示的含义是：<strong><font style="color:#DF2A3F;">同一个请求路径，先走DispatcherServlet，如果找不到则走默认的Servlet。</font></strong></p>
+<p>以上配置url-pattern使用的也是"/"，和DispatcherServlet一样。表示的含义是：<strong><font style="color:#ff7b72;font-weight:600;">同一个请求路径，先走DispatcherServlet，如果找不到则走默认的Servlet。</font></strong></p>
 <p>默认的 Servlet 类中的代码已经由 Tomcat 服务器提供了实现，一般不需要开发者自己编写。在上面的示例中，我们指定了 <code>org.apache.catalina.servlets.DefaultServlet</code>，则 Tomcat 服务器会自动将请求转发给该类处理。在处理时，该类会根据请求的 URL 去查询 Web 应用的静态资源（如 HTML、CSS、JavaScript 和图片等），并将其返回给用户。</p>
 <p>告诉大家一个好消息，以上在web.xml文件中的配置我们也可以省略了，因为在Tomcat服务器中已经为我们提前配置好了，在CATALINA_HOME/conf/web.xml文件中，如下：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710919316908-f4fb4a3a-7f7f-48f4-b135-9c8476a1c49b.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
@@ -3168,16 +3168,16 @@ td code{white-space:nowrap}
 <ul>
 <li>传统的URL：get请求，/springmvc/getUserById?id=1</li>
 <li>
-<p>REST风格的URL：<font style="color:#DF2A3F;">get请求</font>，/springmvc/user/1</p>
+<p>REST风格的URL：<font style="color:#ff7b72;font-weight:600;">get请求</font>，/springmvc/user/1</p>
 </li>
 <li>
 <p>传统的URL：get请求，/springmvc/deleteUserById?id=1</p>
 </li>
-<li>REST风格的URL：<font style="color:#DF2A3F;">delete请求</font>, /springmvc/user/1</li>
+<li>REST风格的URL：<font style="color:#ff7b72;font-weight:600;">delete请求</font>, /springmvc/user/1</li>
 </ul>
-<p>RESTFul对URL的约束和规范的核心是：<strong><font style="color:#DF2A3F;">通过采用</font></strong><code>**不同的请求方式**</code><strong><font style="color:#DF2A3F;">+ </font></strong><code>**URL**</code><strong><font style="color:#DF2A3F;">来确定WEB服务中的资源。</font></strong></p>
+<p>RESTFul对URL的约束和规范的核心是：<strong><font style="color:#ff7b72;font-weight:600;">通过采用</font></strong><code>**不同的请求方式**</code><strong><font style="color:#ff7b72;font-weight:600;">+ </font></strong><code>**URL**</code><strong><font style="color:#ff7b72;font-weight:600;">来确定WEB服务中的资源。</font></strong></p>
 <hr />
-<p><strong><font style="color:#DF2A3F;">RESTful 的英文全称是 Representational State Transfer（表述性状态转移）。简称REST。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">RESTful 的英文全称是 Representational State Transfer（表述性状态转移）。简称REST。</font></strong></p>
 <p>表述性（Representational）是：URI + 请求方式。</p>
 <p>状态（State）是：服务器端的数据。</p>
 <p>转移（Transfer）是：变化。</p>
@@ -3345,10 +3345,10 @@ td code{white-space:nowrap}
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710946468943-5ecc05c9-cc83-47b7-966b-8fe0df99a3f5.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <h3 id="restful_5">RESTFul方式演示修改</h3>
 <p>RESTFul规范中规定，如果要进行保存操作，需要发送PUT请求。</p>
-<p><strong><font style="color:#DF2A3F;">如何发送PUT请求？</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">第一步：首先你必须是一个POST请求。</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">第二步：在发送POST请求的时候，提交这样的数据：</font></strong><code>**_method=PUT**</code></p>
-<p><strong><font style="color:#DF2A3F;">第三步：在web.xml文件配置SpringMVC提供的过滤器：HiddenHttpMethodFilter</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">如何发送PUT请求？</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">第一步：首先你必须是一个POST请求。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">第二步：在发送POST请求的时候，提交这样的数据：</font></strong><code>**_method=PUT**</code></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">第三步：在web.xml文件配置SpringMVC提供的过滤器：HiddenHttpMethodFilter</font></strong></p>
 <p>实践一下：</p>
 <div class="codehilite"><pre><span></span><code><span class="o">&lt;!--</span><span class="n">修改用户</span><span class="o">--&gt;</span>
 <span class="o">&lt;</span><span class="n">hr</span><span class="o">&gt;</span>
@@ -3388,7 +3388,7 @@ td code{white-space:nowrap}
 <p>通过源码可以看到，if语句中，首先判断是否为POST请求，如果是POST请求，调用<code>request.getParameter(this.methodParam)</code>。可以看到<code>this.methodParam</code>是<code>_method</code>，这样就要求我们在提交请求方式的时候必须采用这个格式：<code>_method=put</code>。获取到请求方式之后，调用了toUpperCase转换成大写了。因此前端页面中小写的put或者大写的PUT都是可以的。if语句中嵌套的if语句说的是，只有请求方式是 PUT,DELETE,PATCH的时候会创建HttpMethodRequestWrapper对象。而HttpMethodRequestWrapper对象的构造方法是这样的：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710984179119-96331e0b-ae39-45b0-bba1-b8db3ec7107f.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>这样method就从POST变成了：PUT/DELETE/PATCH。</p>
-<p><strong><font style="color:#DF2A3F;">重点注意事项：CharacterEncodingFilter和</font></strong><strong><font style="color:#DF2A3F;background-color:#ffffff;">HiddenHttpMethodFilter的顺序</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">重点注意事项：CharacterEncodingFilter和</font></strong><strong><font style="color:#ff7b72;font-weight:600;background-color:#ffffff;">HiddenHttpMethodFilter的顺序</font></strong></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710984264334-7df83331-ddbb-4ead-a58c-cb4dc6c19ef6.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>大家是否还记得，字符编码过滤器执行之前不能调用 request.getParameter方法，如果提前调用了，乱码问题就无法解决了。因为request.setCharacterEncoding()方法的执行必须在所有request.getParameter()方法之前执行。因此这两个过滤器就有先后顺序的要求，在web.xml文件中，应该先配置CharacterEncodingFilter，然后再配置HiddenHttpMethodFilter。</p>
 <h2 id="restful_6">使用RESTFul实现用户管理系统</h2>
@@ -4086,7 +4086,7 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">注意：保存成功后，采用重定向的方式跳转到用户列表。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">注意：保存成功后，采用重定向的方式跳转到用户列表。</font></strong></p>
 <hr />
 <p><font style="color:#000000;">编写UserDao：</font></p>
 <div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Long</span><span class="w"> </span><span class="nf">generateId</span><span class="p">(){</span>
@@ -4103,7 +4103,7 @@ td code{white-space:nowrap}
 <span class="p">}</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">注意：单独写了一个方法生成id，内部使用了Stream API，不会这块内容的可以看老杜最新发布的2024版JavaSE。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">注意：单独写了一个方法生成id，内部使用了Stream API，不会这块内容的可以看老杜最新发布的2024版JavaSE。</font></strong></p>
 <hr />
 <p><font style="color:#000000;">启动服务器测试：</font></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1710925396950-eb9be9ac-0640-4bef-94c0-3ca586769901.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
@@ -4366,9 +4366,9 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <p>通过以上内容的学习，大家应该能够了解到<code>HttpMessageConverter</code>接口是用来做什么的了：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711003929875-072161b4-af27-4855-9980-5d8ba186730b.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p>如上图所示：HttpMessageConverter接口的可以将请求协议转换成Java对象，也可以把Java对象转换为响应协议。</p>
-<p><strong><font style="color:#DF2A3F;">HttpMessageConverter是接口，SpringMVC帮我们提供了非常多而丰富的实现类。每个实现类都有自己不同的转换风格。</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">对于我们程序员来说，Spring MVC已经帮助我们写好了，我们只需要在不同的业务场景下，选择合适的HTTP消息转换器即可。</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">怎么选择呢？当然是通过SpringMVC为我们提供的注解，我们通过使用不同的注解来启用不同的消息转换器。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">HttpMessageConverter是接口，SpringMVC帮我们提供了非常多而丰富的实现类。每个实现类都有自己不同的转换风格。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">对于我们程序员来说，Spring MVC已经帮助我们写好了，我们只需要在不同的业务场景下，选择合适的HTTP消息转换器即可。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">怎么选择呢？当然是通过SpringMVC为我们提供的注解，我们通过使用不同的注解来启用不同的消息转换器。</font></strong></p>
 <p>在HTTP消息转换器这一小节，我们重点要掌握的是两个注解两个类：</p>
 <ul>
 <li>@ResponseBody</li>
@@ -4464,7 +4464,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">重点来了，Controller怎么写呢，之前我们都是传统的请求，Controller返回一个</font></strong><code>**逻辑视图名**</code><strong><font style="color:#DF2A3F;">，然后交给</font></strong><code>**视图解析器**</code><strong><font style="color:#DF2A3F;">解析。最后跳转页面。而AJAX请求是不需要跳转页面的，因为AJAX是页面局部刷新，以前我们在Servlet中使用</font></strong><code>**response.getWriter().print("message")**</code><strong><font style="color:#DF2A3F;">的方式响应。在Spring MVC中怎么办呢？当然，我们在Spring MVC中也可以使用Servlet原生API来完成这个功能，代码如下：</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">重点来了，Controller怎么写呢，之前我们都是传统的请求，Controller返回一个</font></strong><code>**逻辑视图名**</code><strong><font style="color:#ff7b72;font-weight:600;">，然后交给</font></strong><code>**视图解析器**</code><strong><font style="color:#ff7b72;font-weight:600;">解析。最后跳转页面。而AJAX请求是不需要跳转页面的，因为AJAX是页面局部刷新，以前我们在Servlet中使用</font></strong><code>**response.getWriter().print("message")**</code><strong><font style="color:#ff7b72;font-weight:600;">的方式响应。在Spring MVC中怎么办呢？当然，我们在Spring MVC中也可以使用Servlet原生API来完成这个功能，代码如下：</font></strong></p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.servlet.http.HttpServletResponse</span><span class="p">;</span>
@@ -4506,7 +4506,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <p>启动服务器测试：<a href="http://localhost:8080/springmvc/">http://localhost:8080/springmvc/</a></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711011917028-242026ab-86de-409b-8a91-13f3cbb1b142.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711011931023-727ffe37-387a-4b75-b594-9fec8b7d7944.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">注意：如果采用这种方式响应，则和 springmvc.xml 文件中配置的视图解析器没有关系，不走视图解析器了。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">注意：如果采用这种方式响应，则和 springmvc.xml 文件中配置的视图解析器没有关系，不走视图解析器了。</font></strong></p>
 <hr />
 <p>难道我们以后AJAX请求都要使用原生Servlet API吗？</p>
 <ul>
@@ -4539,7 +4539,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 
 <p>最核心需要理解的位置是：return "hello";</p>
 <p>这里的"hello"不是逻辑视图名了，而是作为响应体的内容进行响应。直接输出到浏览器客户端。</p>
-<p>以上程序中使用的消息转换器是：<strong><font style="color:#DF2A3F;">StringHttpMessageConverter</font></strong>，为什么会启用这个消息转换器呢？因为你添加<code>@ResponseBody</code>这个注解。</p>
+<p>以上程序中使用的消息转换器是：<strong><font style="color:#ff7b72;font-weight:600;">StringHttpMessageConverter</font></strong>，为什么会启用这个消息转换器呢？因为你添加<code>@ResponseBody</code>这个注解。</p>
 <p>通常AJAX请求需要服务器给返回一段JSON格式的字符串，可以返回JSON格式的字符串吗？当然可以，代码如下：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
 
@@ -4560,7 +4560,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 
 <p>测试：</p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711013196948-31c55e31-5868-40e9-b75c-f84810ef3056.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p>这是完全可以的，此时底层使用的消息转换器还是：<strong><font style="color:#DF2A3F;">StringHttpMessageConverter</font></strong></p>
+<p>这是完全可以的，此时底层使用的消息转换器还是：<strong><font style="color:#ff7b72;font-weight:600;">StringHttpMessageConverter</font></strong></p>
 <p>那如果在程序中是一个POJO对象，怎么将POJO对象以JSON格式的字符串响应给浏览器呢？两种方式：</p>
 <ul>
 <li>第一种方式：自己写代码将POJO对象转换成JSON格式的字符串，用上面的方式直接return即可。</li>
@@ -4680,7 +4680,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 </code></pre></div>
 
 <p>那么Spring MVC会自动使用 <code>FormHttpMessageConverter</code>消息转换器，将请求体转换成user对象。</p>
-<p>当使用这个注解的时候：<strong><font style="color:#DF2A3F;">这个注解只能出现在方法的参数上。</font></strong></p>
+<p>当使用这个注解的时候：<strong><font style="color:#ff7b72;font-weight:600;">这个注解只能出现在方法的参数上。</font></strong></p>
 <div class="codehilite"><pre><span></span><code><span class="nd">@RequestMapping</span><span class="p">(</span><span class="s">"/save"</span><span class="p">)</span>
 <span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">save</span><span class="p">(</span><span class="nd">@RequestBody</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">requestBodyStr</span><span class="p">){</span>
 <span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"请求体："</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">requestBodyStr</span><span class="p">);</span>
@@ -4858,7 +4858,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <div class="ch-head"><span class="ch-num">08</span><h1>文件上传与下载</h1></div>
 
 <h2 id="_39">文件上传</h2>
-<p>使用SpringMVC6版本，<strong><font style="color:#DF2A3F;">不需要</font></strong>添加以下依赖：</p>
+<p>使用SpringMVC6版本，<strong><font style="color:#ff7b72;font-weight:600;">不需要</font></strong>添加以下依赖：</p>
 <div class="codehilite"><pre><span></span><code><span class="nt">&lt;dependency&gt;</span>
 <span class="w">  </span><span class="nt">&lt;groupId&gt;</span>commons-fileupload<span class="nt">&lt;/groupId&gt;</span>
 <span class="w">  </span><span class="nt">&lt;artifactId&gt;</span>commons-fileupload<span class="nt">&lt;/artifactId&gt;</span>
@@ -4912,8 +4912,8 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <span class="p">&lt;/</span><span class="nt">servlet-mapping</span><span class="p">&gt;</span>
 </code></pre></div>
 
-<p><strong><font style="color:#DF2A3F;">重点：在DispatcherServlet配置时，添加 multipart-config 配置信息。（这是Spring6，如果是Spring5，则不是这样配置，而是在springmvc.xml文件中配置：CommonsMultipartResolver）</font></strong></p>
-<p><strong><font style="color:#DF2A3F;">SpringMVC6中把这个类已经删除了。废弃了。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">重点：在DispatcherServlet配置时，添加 multipart-config 配置信息。（这是Spring6，如果是Spring5，则不是这样配置，而是在springmvc.xml文件中配置：CommonsMultipartResolver）</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">SpringMVC6中把这个类已经删除了。废弃了。</font></strong></p>
 <p>Controller中的代码：</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.powernode.springmvc.controller</span><span class="p">;</span>
 
@@ -4972,7 +4972,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711331360045-38714fe4-a729-4068-b0a8-f805117da5bf.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711331351567-6b421e6f-b5b6-4bf4-95b8-69404a864530.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711331379294-e15e0870-18fd-4512-a098-032eed43f03a.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">建议：上传文件时，文件起名采用UUID。以防文件覆盖。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">建议：上传文件时，文件起名采用UUID。以防文件覆盖。</font></strong></p>
 <h2 id="_40"><font style="color:#000000;">文件下载</font></h2>
 <div class="codehilite"><pre><span></span><code><span class="cm">&lt;!--文件下载--&gt;</span>
 <span class="p">&lt;</span><span class="nt">a</span> <span class="na">th:href</span><span class="o">=</span><span class="s">"@{/download}"</span><span class="p">&gt;</span>文件下载<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
@@ -5074,7 +5074,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <div class="ch-head"><span class="ch-num">10</span><h1>拦截器</h1></div>
 
 <h2 id="_48">拦截器概述</h2>
-<p><strong><font style="color:#DF2A3F;">拦截器（Interceptor）类似于过滤器（Filter）</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">拦截器（Interceptor）类似于过滤器（Filter）</font></strong></p>
 <p>Spring MVC的拦截器作用是在请求到达控制器之前或之后进行拦截，可以对请求和响应进行一些特定的处理。</p>
 <p>拦截器可以用于很多场景下：</p>
 <ol>
@@ -5088,7 +5088,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <li>过滤器更注重在请求和响应的流程中进行处理，可以修改请求和响应的内容，例如设置编码和字符集、请求头、状态码等。</li>
 <li>拦截器则更加侧重于对控制器进行前置或后置处理，在请求到达控制器之前或之后进行特定的操作，例如打印日志、权限验证等。</li>
 </ul>
-<p><strong><font style="color:#DF2A3F;">Filter、Servlet、Interceptor、Controller的执行顺序：</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">Filter、Servlet、Interceptor、Controller的执行顺序：</font></strong></p>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711639953694-56fde7e8-af9f-4abc-b680-48ccf30b9df9.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <ul>
 <li>过滤器是Servlet规范中的</li>
@@ -5099,7 +5099,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <p>实现<code>org.springframework.web.servlet.HandlerInterceptor</code> 接口，共有三个方法可以进行选择性的实现：</p>
 <ul>
 <li>preHandle：处理器方法调用之前执行<ul>
-<li><strong><font style="color:#DF2A3F;">只有该方法有返回值，返回值是布尔类型，true放行，false拦截。</font></strong></li>
+<li><strong><font style="color:#ff7b72;font-weight:600;">只有该方法有返回值，返回值是布尔类型，true放行，false拦截。</font></strong></li>
 </ul>
 </li>
 <li>postHandle：处理器方法调用之后执行</li>
@@ -5128,7 +5128,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <li>前提2：使用 @Component 注解进行标注</li>
 </ul>
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711677132812-77ff787c-8f94-41d6-abd8-721037ff0160.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
-<p><strong><font style="color:#DF2A3F;">注意：对于这种基本配置来说，拦截器是拦截所有请求的。</font></strong></p>
+<p><strong><font style="color:#ff7b72;font-weight:600;">注意：对于这种基本配置来说，拦截器是拦截所有请求的。</font></strong></p>
 <h3 id="_52">拦截器部分源码分析</h3>
 <h4 id="_53"><font style="color:#000000;">方法执行顺序的源码分析</font></h4>
 <div class="codehilite"><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DispatcherServlet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">FrameworkServlet</span><span class="w"> </span><span class="p">{</span>
@@ -5385,7 +5385,7 @@ Server: Apache/2.4.43 (Win64) OpenSSL/1.1.1g
 <p><img alt="" src="https://cdn.nlark.com/yuque/0/2024/png/21376908/1711943505835-476f954e-ba6c-4a78-b16b-683524e25520.png?x-oss-process=image%2Fformat%2Cwebp" /></p>
 <h2 id="web_5">WEB服务器启动时都做了什么</h2>
 <p>先搞明白核心类的继承关系：</p>
-<p><font style="color:#DF2A3F;">DispatcherServlet</font> extends <font style="color:#DF2A3F;">FrameworkServlet</font> extends <font style="color:#DF2A3F;">HttpServletBean</font> extends <font style="color:#DF2A3F;">HttpServlet</font> extends <font style="color:#DF2A3F;">GenericServlet</font> implements <font style="color:#DF2A3F;">Servlet</font></p>
+<p><font style="color:#ff7b72;font-weight:600;">DispatcherServlet</font> extends <font style="color:#ff7b72;font-weight:600;">FrameworkServlet</font> extends <font style="color:#ff7b72;font-weight:600;">HttpServletBean</font> extends <font style="color:#ff7b72;font-weight:600;">HttpServlet</font> extends <font style="color:#ff7b72;font-weight:600;">GenericServlet</font> implements <font style="color:#ff7b72;font-weight:600;">Servlet</font></p>
 <p>服务器启动阶段完成了：</p>
 <ol>
 <li>初始化Spring上下文，也就是创建所有的bean，让IoC容器将其管理起来。</li>
