@@ -24,9 +24,13 @@
 - 笔记夹"大改"方向：md 笔记 → 深色 GitHub 风格 HTML（#0d1117 卡片风），转完删源 md。
 - 已沉淀为用户级 skill `md-to-dark-html`（~/.workbuddy/skills/），脚本 `scripts/md2dark_html.py`，
   用法/规则/边界/删除流程全在 SKILL.md，触发词"笔记转 HTML / md 转网页"。
-- 已完成：00-JavaSE（JavaSE.html，源 md 已删）。候选：01-HTML+CSS、02-Java Web、03-JDBC、04-MySQL、
-  05-MVC、06-Mybatis、07-Spring6、08-SpringMVC、Git.md、09-Docker、10-Redis、11-RMQ、12-Seata。
+- 已完成（2026-09-07）：全部 18 个 HTML 就位——根目录 9 个、00-JavaSE 2 个、10-Redis 3 个
+  （基础篇/注释版/课程介绍；快速入门因被基础篇完全覆盖已删）、11-RMQ（23 碎片合并）、12-Seata。
+  09-Docker/Docker.md 为 192B 存根，按用户决定不转。源 md 已删，备份在 .workbuddy/notes_backup_*。
+- 一键重生成：`.workbuddy/scripts/regen_all.py`（从备份重建 18 个 HTML + RMQ 重合并）；
+  终验脚本 `.workbuddy/scripts/verify_fixes.py`（断图/rel/占位三重校验）。
 - venv（C:/Users/29074/.workbuddy/binaries/python/envs/default）已装 markdown + pygments，勿全局装。
+- 10-Radis/（拼错目录）已删：182 文件与 10-Redis 逐文件 MD5 全同，纯冗余。
 
 ## skill md-to-dark-html v2 要点（2026-09-07）
 
