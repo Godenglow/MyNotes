@@ -205,13 +205,13 @@ td code{white-space:nowrap}
 <p>事务是数据库的核心机制之一，是访问和更新数据库的程序执行单元；事务中可能包含一个或多个sql语句，这些语句要么都执行，要么都不执行。</p>
 <p>接下来以<span class="wl" title="Obsidian 内链：04-MySQL|MySQL">🔗 MySQL</span>为例，理解数据库事务实现和ACID原理。</p>
 <h3 id="_3">逻辑架构和存储引擎<a href="https://www.cnblogs.com/vitochen/p/18722088#%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%E5%92%8C%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E">#</a></h3>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153147576-1424247431.png"><img alt="DeWatermark.ai_1739327317104" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153147576-1424247431.png" /></a></p>
+<p><a href="assets/1654108-20250218153147576-1424247431.png"><img alt="DeWatermark.ai_1739327317104" src="assets/1654108-20250218153147576-1424247431.png" /></a></p>
 <p>如上图所示，MySQL服务器逻辑架构从上往下可以分为三层：</p>
 <p>（1）第一层：处理客户端连接、授权认证等。</p>
 <p>（2）第二层：服务器层，负责查询语句的解析、优化、缓存以及内置函数的实现、存储过程等。</p>
 <p>（3）第三层：存储引擎，负责MySQL中数据的存储和提取。MySQL中服务器层不管理事务，<strong>事务是由存储引擎实现的</strong>。MySQL支持事务的存储引擎有InnoDB、NDB Cluster等，其中InnoDB的使用最为广泛；其他存储引擎不支持事务，如MyIsam、Memory等。</p>
 <h3 id="_4">事务提交和回滚<a href="https://www.cnblogs.com/vitochen/p/18722088#%E4%BA%8B%E5%8A%A1%E6%8F%90%E4%BA%A4%E5%92%8C%E5%9B%9E%E6%BB%9A">#</a></h3>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153147247-1665531134.png"><img alt="事务" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153147247-1665531134.png" /></a></p>
+<p><a href="assets/1654108-20250218153147247-1665531134.png"><img alt="事务" src="assets/1654108-20250218153147247-1665531134.png" /></a></p>
 <p>MySQL事务操作过程：</p>
 <div class="codehilite"><pre><span></span><code><span class="c1">-- 开始事务</span>
 <span class="k">START</span><span class="w"> </span><span class="k">TRANSACTION</span><span class="p">;</span>
@@ -243,7 +243,7 @@ td code{white-space:nowrap}
 <p>原子性通过MySQL的undo log实现：当事务对数据库进行修改时，InnoDB会生成对应的undo log；如果事务执行失败或调用了rollback，导致事务需要回滚，便可以利用undo log中的信息将数据回滚到修改之前的样子。</p>
 <p>undo log属于逻辑日志，它记录的是sql执行相关的信息。当发生回滚时，InnoDB会根据undo log的内容做与之前相反的工作：对于每个insert，回滚时会执行delete；对于每个delete，回滚时会执行insert；对于每个update，回滚时会执行一个相反的update，把数据改回去。</p>
 <p>以Update为例，首先记录原始数据到undo log，然后修改数据；如果此时读数据，读的是undo buffer。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146994-694335828.png"><img alt="undo log" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146994-694335828.png" /></a></p>
+<p><a href="assets/1654108-20250218153146994-694335828.png"><img alt="undo log" src="assets/1654108-20250218153146994-694335828.png" /></a></p>
 <p>如上图：</p>
 <p>1、事务A执行update操作，此时事务还没提交，会将数据进行备份到对应的undo buffer，然后由undo buffer持久化到磁盘中的undo log文件中，此时undo log保存了未提交之前的操作日志，接着将操作的数据，也就是Teacher表的数据持久保存到InnoDB的数据文件IBD。</p>
 <p>2、此时事务B进行查询操作，直接从undo buffer缓存中进行读取，这时事务A还没提交事务，如果要回滚（rollback）事务，是不读磁盘的，先直接从undo buffer缓存读取。</p>
@@ -271,20 +271,20 @@ td code{white-space:nowrap}
 <p>MySQL中不同的存储引擎支持的锁是不一样的，例如MyIsam只支持表锁，而InnoDB同时支持表锁和行锁，且出于性能考虑，绝大多数情况下使用的都是行锁。</p>
 <h5 id="_9">脏读，不可重复读，幻读</h5>
 <p>（1）脏读：当前事务(A)中可以读到其他事务(B)未提交的数据（脏数据），这种现象是脏读。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146742-790631094.png"><img alt="脏读" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146742-790631094.png" /></a></p>
+<p><a href="assets/1654108-20250218153146742-790631094.png"><img alt="脏读" src="assets/1654108-20250218153146742-790631094.png" /></a></p>
 <p>（2）不可重复读：在事务A中先后两次读取同一个数据，两次读取的结果不一样，这种现象称为不可重复读。脏读与不可重复读的区别在于：前者读到的是其他事务未提交的数据，后者读到的是其他事务已提交的数据。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146460-680982383.png"><img alt="不可重复读" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146460-680982383.png" /></a></p>
+<p><a href="assets/1654108-20250218153146460-680982383.png"><img alt="不可重复读" src="assets/1654108-20250218153146460-680982383.png" /></a></p>
 <p>（3）幻读：在事务A中按照某个条件先后两次查询数据库，两次查询结果的条数不同，这种现象称为幻读。不可重复读与幻读的区别可以通俗的理解为：前者是数据变了，后者是数据的行数变了。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146114-486101375.png"><img alt="幻读" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153146114-486101375.png" /></a></p>
+<p><a href="assets/1654108-20250218153146114-486101375.png"><img alt="幻读" src="assets/1654108-20250218153146114-486101375.png" /></a></p>
 <h5 id="_10">事务隔离级别</h5>
 <p>SQL标准中定义了四种隔离级别，并规定了每种隔离级别下上述几个问题是否存在。一般来说，隔离级别越低，系统开销越低，可支持的并发越高，但隔离性也越差。隔离级别与读问题的关系如下：</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153145764-400568623.png"><img alt="事务隔离级别" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153145764-400568623.png" /></a></p>
+<p><a href="assets/1654108-20250218153145764-400568623.png"><img alt="事务隔离级别" src="assets/1654108-20250218153145764-400568623.png" /></a></p>
 <p>在实际应用中，<strong>读未提交</strong>在并发时会导致很多问题，而性能相对于其他隔离级别提高却很有限，因此使用较少。<strong>可串行化</strong>强制事务串行，并发效率很低，只有当对数据一致性要求极高且可以接受没有并发时使用，因此使用也较少。因此在大多数数据库系统中，默认的隔离级别是<strong>读已提交</strong>(如Oracle)或<strong>可重复读</strong>（后文简称RR）。</p>
 <p>InnoDB默认的隔离级别是RR，后文会重点介绍RR。需要注意的是，在SQL标准中，RR是无法避免幻读问题的；但是InnoDB实现的RR，在只读事务中可以避免幻读问题。</p>
 <h5 id="mvcc">MVCC</h5>
 <p>RR解决脏读、不可重复读、幻读等问题，使用的是MVCC：MVCC全称Multi-Version Concurrency Control，即多版本的并发控制协议。</p>
 <p>下面的例子很好的体现了MVCC的特点：在同一时刻，不同的事务读取到的数据可能是不同的(即多版本)——在T5时刻，事务A和事务C可以读取到不同版本的数据。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153145449-1952007534.png"><img alt="mvcc" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153145449-1952007534.png" /></a></p>
+<p><a href="assets/1654108-20250218153145449-1952007534.png"><img alt="mvcc" src="assets/1654108-20250218153145449-1952007534.png" /></a></p>
 <p>MVCC最大的优点是读不加锁，因此读写不冲突，并发性能好。InnoDB实现MVCC，多个版本的数据可以共存，主要基于以下技术及数据结构：</p>
 <p>1）隐藏列：InnoDB中每行数据都有隐藏列，隐藏列中包含了本行数据的事务id、指向undo log的指针等。</p>
 <p>2）基于undo log的版本链：前面说到每行数据的隐藏列中包含了指向undo log的指针，而每条undo log也会指向更早版本的undo log，从而形成一条版本链。</p>
@@ -328,7 +328,7 @@ td code{white-space:nowrap}
 <li>各参与者执行本地事务操作，将 undo 和 redo 信息记入事务日志中，但不提交；</li>
 <li>如参与者执行成功，给协调者反馈同意，否则反馈中止，表示事务不可以执行；</li>
 </ol>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153145076-2014373611.png"><img alt="2pc-1" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153145076-2014373611.png" /></a></p>
+<p><a href="assets/1654108-20250218153145076-2014373611.png"><img alt="2pc-1" src="assets/1654108-20250218153145076-2014373611.png" /></a></p>
 <h4 id="_14">提交/回滚阶段<a href="https://www.cnblogs.com/vitochen/p/18722088#%E6%8F%90%E4%BA%A4%E5%9B%9E%E6%BB%9A%E9%98%B6%E6%AE%B5">#</a></h4>
 <p>协调者收到各个参与者的准备消息后，根据反馈情况通知各个参与者提交或回滚。<br />
 <strong>提交事务</strong></p>
@@ -347,7 +347,7 @@ td code{white-space:nowrap}
 <li>参与者在完成事务回滚之后，向协调者发送回滚完成的 ACK 消息</li>
 <li>协调者收到所有参与者反馈的 ACK 消息后，取消事务</li>
 </ol>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153144786-124137123.png"><img alt="2pc-2" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153144786-124137123.png" /></a></p>
+<p><a href="assets/1654108-20250218153144786-124137123.png"><img alt="2pc-2" src="assets/1654108-20250218153144786-124137123.png" /></a></p>
 <blockquote>
 <p>[!NOTE]</p>
 <p>2PC缺点：</p>
@@ -363,7 +363,7 @@ td code{white-space:nowrap}
 <li>RM，Resource Manager，<strong>资源管理者</strong>，管理分支事务，与 TC 进行协调注册分支事务，并且汇报分支事务的状态，驱动分支事务的提交或回滚。</li>
 </ul>
 <p>简单流程图：</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153144473-303726976.png"><img alt="简单流程图" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153144473-303726976.png" /></a></p>
+<p><a href="assets/1654108-20250218153144473-303726976.png"><img alt="简单流程图" src="assets/1654108-20250218153144473-303726976.png" /></a></p>
 <h4 id="xa">XA模式<a href="https://www.cnblogs.com/vitochen/p/18722088#xa%E6%A8%A1%E5%BC%8F">#</a></h4>
 <p>Seata的XA模式完全按照2PC事务设计。</p>
 <p><strong>第一阶段：</strong></p>
@@ -377,7 +377,7 @@ td code{white-space:nowrap}
 <li>TC 检测检测各分支事务状态，判断整体事务提交或回滚；</li>
 <li>RM 接受 TC 的指令，进行统一的提交或回滚操作。</li>
 </ol>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153144091-1851806196.png"><img alt="image-20250214102255406" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153144091-1851806196.png" /></a></p>
+<p><a href="assets/1654108-20250218153144091-1851806196.png"><img alt="image-20250214102255406" src="assets/1654108-20250218153144091-1851806196.png" /></a></p>
 <p>XA优点：</p>
 <ol>
 <li>事务强一致性，满足 ACID 原则；</li>
@@ -409,12 +409,12 @@ td code{white-space:nowrap}
 </ul>
 </li>
 </ol>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153143713-1820211583.png"><img alt="image-20250214110111520" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153143713-1820211583.png" /></a></p>
+<p><a href="assets/1654108-20250218153143713-1820211583.png"><img alt="image-20250214110111520" src="assets/1654108-20250218153143713-1820211583.png" /></a></p>
 <h5 id="_16">全局锁解决脏写</h5>
 <p>因为AT模式下第一阶段数据会提交，如果第二阶段要回滚前，有另一个事务也修改了这条数据，那么回滚就导致另一个事务修改的数据被覆盖，导致数据丢失。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153143253-1128399211.png"><img alt="AT脏写" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153143253-1128399211.png" /></a></p>
+<p><a href="assets/1654108-20250218153143253-1128399211.png"><img alt="AT脏写" src="assets/1654108-20250218153143253-1128399211.png" /></a></p>
 <p>AT模式中通过全局锁来解决脏写问题，只有持有全局锁的事务才有执行SQL的权限。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153142825-297317616.png"><img alt="AT全局锁" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153142825-297317616.png" /></a></p>
+<p><a href="assets/1654108-20250218153142825-297317616.png"><img alt="AT全局锁" src="assets/1654108-20250218153142825-297317616.png" /></a></p>
 <p>流程如下：</p>
 <ol>
 <li>一阶段本地事务提交前，需要确保先拿到全局锁 ；</li>
@@ -429,7 +429,7 @@ td code{white-space:nowrap}
 <li><code>after-image</code>：数据修改后的快照</li>
 </ul>
 <p>当发生异常时，<code>before-image</code>用来做数据回滚，<code>after-image</code>用<strong>来判断修改后数据于当前数据是否相同</strong>，相同则通过<code>before-image</code>做数据回滚，不同则说明被其他非 Seata 事务修改过，记录异常，<strong>人工介入</strong>。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153142423-1336778905.png"><img alt="非Seata脏写" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153142423-1336778905.png" /></a></p>
+<p><a href="assets/1654108-20250218153142423-1336778905.png"><img alt="非Seata脏写" src="assets/1654108-20250218153142423-1336778905.png" /></a></p>
 <h5 id="_17">脏读问题</h5>
 <p>AT模式的脏读是指，在全局事务未提交前，被其它业务读到已提交的分支事务的数据，即读未提交。</p>
 <p>Seata AT默认全局隔离级别就是<strong>读未提交</strong>，即容忍可这种脏读行为。</p>
@@ -454,7 +454,7 @@ td code{white-space:nowrap}
 </ol>
 <h4 id="tcc">TCC模式<a href="https://www.cnblogs.com/vitochen/p/18722088#tcc%E6%A8%A1%E5%BC%8F">#</a></h4>
 <p>TCC模式也可以看做2PC的一个变种，与AT模式一样在每一阶段都直接进行事务提交，不同的是，TCC模式的每一步都需要业务代码实现，对业务是强侵入性的。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153141958-1754350251.png"><img alt="image-20250217153608508" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153141958-1754350251.png" /></a></p>
+<p><a href="assets/1654108-20250218153141958-1754350251.png"><img alt="image-20250217153608508" src="assets/1654108-20250218153141958-1754350251.png" /></a></p>
 <p>以账户余额扣除为例，讲解TCC业务代码流程：</p>
 <ul>
 <li>Try：资源的检测和预留；业务上，检查余额是否充足，如果充足则冻结金额增加30元，可用余额扣除30</li>
@@ -467,7 +467,7 @@ td code{white-space:nowrap}
 <li>业务悬挂：对于已经空回滚的业务，这时如果线程不再阻塞，继续执行<code>Try</code>，但不可能<code>Confirm</code>或<code>Cancel</code>，这就是业务悬挂，需要避免空回滚后的<code>Try</code>操作。</li>
 </ul>
 <p>通过记录当前事务 ID 和执行状态，解决空回滚和业务悬挂问题：</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153141524-35481162.png"><img alt="空回滚避免" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153141524-35481162.png" /></a></p>
+<p><a href="assets/1654108-20250218153141524-35481162.png"><img alt="空回滚避免" src="assets/1654108-20250218153141524-35481162.png" /></a></p>
 <p>TCC<strong>优点：</strong></p>
 <ol>
 <li>一阶段直接完成事务提交，释放数据库资源，性能比较好；</li>
@@ -487,7 +487,7 @@ td code{white-space:nowrap}
 <li><strong>一阶段：</strong> 直接提交本地事务</li>
 <li><strong>二阶段：</strong> 成功则什么都不做；失败则通过编写补偿业务来回滚</li>
 </ul>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153141188-1786042809.png"><img alt="saga" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153141188-1786042809.png" /></a></p>
+<p><a href="assets/1654108-20250218153141188-1786042809.png"><img alt="saga" src="assets/1654108-20250218153141188-1786042809.png" /></a></p>
 <p>Saga<strong>优点：</strong></p>
 <ol>
 <li>事务参与者可以基于事件驱动实现异步调用，吞吐高；</li>
@@ -528,28 +528,28 @@ td code{white-space:nowrap}
 </ul>
 </li>
 </ol>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153140842-722580496.png"><img alt="服务示例" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153140842-722580496.png" /></a></p>
+<p><a href="assets/1654108-20250218153140842-722580496.png"><img alt="服务示例" src="assets/1654108-20250218153140842-722580496.png" /></a></p>
 <p>添加分布式事务，只需要在business业务方法上增加<code>@GlobalTransactional</code>注解即可。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153140513-551664695.png"><img alt="image-20250217181102450" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153140513-551664695.png" /></a></p>
+<p><a href="assets/1654108-20250218153140513-551664695.png"><img alt="image-20250217181102450" src="assets/1654108-20250218153140513-551664695.png" /></a></p>
 <h4 id="_20">业务正常并提交<a href="https://www.cnblogs.com/vitochen/p/18722088#%E4%B8%9A%E5%8A%A1%E6%AD%A3%E5%B8%B8%E5%B9%B6%E6%8F%90%E4%BA%A4">#</a></h4>
 <p>访问commit方法并传入参数，commit正常调用所有方案，无异常</p>
 <p><a href="http://127.0.0.1:9999/test/commit?userId=ACC_001&amp;commodityCode=STOCK_001&amp;orderCount=1">http://127.0.0.1:9999/test/commit?userId=ACC_001&amp;commodityCode=STOCK_001&amp;orderCount=1</a></p>
 <p>界面返回commit信息</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153140229-49588897.png"><img alt="image-20250218101506267" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153140229-49588897.png" /></a></p>
+<p><a href="assets/1654108-20250218153140229-49588897.png"><img alt="image-20250218101506267" src="assets/1654108-20250218153140229-49588897.png" /></a></p>
 <p>后台返回分布式事务相关信息</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153139939-1022516895.png"><img alt="image-20250218101445167" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153139939-1022516895.png" /></a></p>
+<p><a href="assets/1654108-20250218153139939-1022516895.png"><img alt="image-20250218101445167" src="assets/1654108-20250218153139939-1022516895.png" /></a></p>
 <p>查看数据库，出现order库记录订单信息，account库金额减少，stock库存减少</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153139567-500297686.png"><img alt="image-20250218112219731" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153139567-500297686.png" /></a></p>
+<p><a href="assets/1654108-20250218153139567-500297686.png"><img alt="image-20250218112219731" src="assets/1654108-20250218153139567-500297686.png" /></a></p>
 <h4 id="_21">业务异常并回滚<a href="https://www.cnblogs.com/vitochen/p/18722088#%E4%B8%9A%E5%8A%A1%E5%BC%82%E5%B8%B8%E5%B9%B6%E5%9B%9E%E6%BB%9A">#</a></h4>
 <p>访问business的rollback方法，会调用purchaseRollback，在发起业务后，抛出异常，模拟业务异常。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153139233-1050161780.png"><img alt="image-20250218151818119" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153139233-1050161780.png" /></a></p>
+<p><a href="assets/1654108-20250218153139233-1050161780.png"><img alt="image-20250218151818119" src="assets/1654108-20250218153139233-1050161780.png" /></a></p>
 <p>界面返回rollback信息</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153138810-1039234240.png"><img alt="image-20250218152008443" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153138810-1039234240.png" /></a></p>
+<p><a href="assets/1654108-20250218153138810-1039234240.png"><img alt="image-20250218152008443" src="assets/1654108-20250218153138810-1039234240.png" /></a></p>
 <p>后台返回分布式事务相关信息，显示业务被回滚</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153138528-878010026.png"><img alt="image-20250218152031930" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153138528-878010026.png" /></a></p>
+<p><a href="assets/1654108-20250218153138528-878010026.png"><img alt="image-20250218152031930" src="assets/1654108-20250218153138528-878010026.png" /></a></p>
 <p>此时数据库不会有任何变化，因为数据库的变更都被回滚了。</p>
 <p>但如果再执行正常指令，会发现order库id有中断，即中间插入过数据但被回滚了。</p>
-<p><a href="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153137953-1081063719.png"><img alt="image-20250218152651511" src="https://img2023.cnblogs.com/blog/1654108/202502/1654108-20250218153137953-1081063719.png" /></a></p>
+<p><a href="assets/1654108-20250218153137953-1081063719.png"><img alt="image-20250218152651511" src="assets/1654108-20250218153137953-1081063719.png" /></a></p>
 <p>作者：vitochen</p>
 <p>出处：<a href="https://www.cnblogs.com/vitochen/p/18722088">https://www.cnblogs.com/vitochen/p/18722088</a></p>
 </section>
