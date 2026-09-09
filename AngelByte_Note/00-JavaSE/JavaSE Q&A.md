@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口
 
 ---
 
@@ -29,6 +29,8 @@
 16. [[#十六、方法覆盖（Override）|方法覆盖（Override）]]
 17. [[#十七、多态（Polymorphism）|多态（Polymorphism）]]
 18. [[#十八、抽象类（abstract）|抽象类（abstract）]]
+19. [[#十九、接口（interface）基础|接口（interface）基础]]
+20. [[#二十、接口 vs 抽象类（终极对比）|接口 vs 抽象类（终极对比）]]
 
 ---
 
@@ -1490,6 +1492,277 @@ public class Test {
 
 ---
 
+## 十九、接口（interface）基础
+
+> **一句话**：接口是**完全抽象**的规范（合约），只能定义常量和抽象方法（Java 8+ 允许 default / static，Java 9+ 允许 private），**没有构造方法、不能 new**，用来描述"实现类应该有什么行为"。
+
+### 概念
+
+接口定义一组**抽象方法 + 常量**，描述实现这个接口的类应该具有哪些行为和属性。**接口和类一样，也是一种引用数据类型**。
+
+### 定义语法
+
+```java
+[修饰符列表] interface 接口名 {
+    // 接口体
+}
+```
+
+### 接口是完全抽象的
+
+| 维度 | 抽象类 | 接口 |
+|------|--------|------|
+| 抽象程度 | **半**抽象 | **完全**抽象 |
+| 构造方法 | ✅ 有（给子类用） | ❌ 没有 |
+| 实例化 | ❌ | ❌ |
+
+### 接口中能定义什么
+
+| 成员 | 完整写法 | 可省略 | 编译器自动补 |
+|------|----------|--------|--------------|
+| 常量 | `public static final` | **三个都能省** | `public static final` |
+| 抽象方法 | `public abstract` | **两个都能省** | `public abstract` |
+| 默认方法（Java 8+） | `public default` | `default` **不能省** | `public` |
+| 静态方法（Java 8+） | `public static` | `static` **不能省** | `public` |
+| 私有方法（Java 9+） | `private` / `private static` | 都不能省 | — |
+
+> **核心规则**：接口里**所有**方法和变量**默认都是 public**。
+
+```java
+public interface Usb {
+    int VERSION = 3;                 // 等价 public static final int VERSION = 3;
+
+    void read();                      // 等价 public abstract void read();
+    void write();                     // 等价 public abstract void write();
+
+    default void log(String s) {      // Java 8+ 默认方法
+        System.out.println("log: " + s);
+    }
+
+    static void info() {              // Java 8+ 静态方法
+        System.out.println("Usb v" + VERSION);
+    }
+
+    private void helper() {           // Java 9+ 私有方法，为 default 服务
+        System.out.println("internal");
+    }
+}
+```
+
+### 接口的继承与实现（四种关系）
+
+| 关系 | 关键字 | 方向 | 数量 |
+|------|--------|------|------|
+| 类继承类 | `extends` | 子类 → 父类 | **单**继承 |
+| **接口继承接口** | `extends` | 子接口 → 父接口 | **多**继承 |
+| **类实现接口** | `implements` | 实现类 → 接口 | **多**实现 |
+| 接口继承类 | — | — | ❌ 不允许 |
+
+```java
+interface A { void ma(); }
+interface B { void mb(); }
+interface C extends A, B { void mc(); }     // ✅ 接口多继承
+
+class X implements A, B {                    // ✅ 类多实现
+    public void ma() { }
+    public void mb() { }
+}
+```
+
+### 实现类必须重写全部抽象方法
+
+与抽象类规则一致：非抽象实现类必须**全部实现**，否则自己也声明为 `abstract`。
+
+```java
+class Printer implements Usb {                // 非抽象类
+    @Override public void read()  { System.out.println("读数据"); }
+    @Override public void write() { System.out.println("写数据"); }
+}
+```
+
+### Java 8 默认方法：解决「接口演变」问题
+
+**问题**：`Usb` 已被 Printer、HardDrive 实现。某天要给 `Usb` 加一个 `format()` 方法 → **所有实现类都得改**，否则编译报错。这就是**接口演变问题**。
+
+**解决**：用 `default` 提供默认实现，实现类**可选择**是否重写。
+
+```java
+public interface Usb {
+    void read();
+    void write();
+
+    default void format() {                  // 默认实现
+        System.out.println("默认格式化");
+    }
+}
+
+class Printer implements Usb {
+    public void read()  { }
+    public void write() { }
+    // 不重写 format() 也合法 → 走 Usb 的默认实现
+}
+```
+
+### Java 8 接口静态方法（反直觉规则）
+
+> **接口的静态方法只能通过接口名调用，实现类不会继承它。**
+
+```java
+Usb.info();               // ✅ 通过接口名调用
+Printer.info();           // ❌ 编译报错：实现类不继承接口静态方法
+new Printer().info();     // ❌ 编译报错
+```
+
+**这和类的静态方法完全不同**（类的静态方法可被子类继承、通过子类名调用）。这是 Java 8 的防御性设计。
+
+### Java 9 私有方法
+
+```java
+public interface Usb {
+    default void start() { helper(); System.out.println("start"); }
+    default void stop()  { helper(); System.out.println("stop");  }
+
+    private void helper() {                     // 只为 default 服务
+        System.out.println("公共初始化");
+    }
+}
+```
+
+**目的**：避免 `helper()` 这类辅助代码在多个 `default` 方法里重复。
+
+### 接口隐式继承 Object
+
+接口虽然"完全抽象"，但默认可以调用 `Object` 的方法（`toString()` / `equals()` / `hashCode()`）。
+
+### 接口的作用：解耦合
+
+| 角色 | 比喻 | 行为 |
+|------|------|------|
+| **接口调用者** | 顾客 | 拿着接口（菜单）去用 |
+| **接口实现者** | 厨师 | 按接口（菜单）做菜 |
+| **接口本身** | 菜单 | 双方遵守的规范 |
+
+**两个收益**：
+
+- **降低耦合度**：调用者不关心实现者，双方都遵循接口
+- **提高扩展力**：新增实现者不改调用者代码
+
+![[interface-usb-decoupling.svg]]
+
+### 完整示例：USB 接口
+
+```java
+public interface Usb {
+    void read();
+    void write();
+}
+
+public class Computer {                       // 调用者
+    public void conn(Usb usb) {               // 形参是接口类型
+        usb.read();                            // 多态：实际对象是哪个就调哪个
+        usb.write();
+    }
+}
+
+public class Printer implements Usb {         // 实现者 1
+    public void read()  { System.out.println("打印机读"); }
+    public void write() { System.out.println("打印机写"); }
+}
+
+public class HardDrive implements Usb {       // 实现者 2
+    public void read()  { System.out.println("硬盘读"); }
+    public void write() { System.out.println("硬盘写"); }
+}
+
+Computer c = new Computer();
+c.conn(new Printer());        // 打印机工作
+c.conn(new HardDrive());      // 硬盘工作
+// Computer 不用改，新增任何 Usb 实现都能接入
+```
+
+### 速记
+
+> 接口 = 完全抽象的规范：常量 + 抽象方法 +（default / static / private）
+> 全部 public：常量默认 `public static final`，方法默认 `public abstract`
+> 类单继承、类多实现、接口多继承，接口不能继承类
+> Java 8 `default` 解决接口演变，静态方法只能接口名调用（实现类不继承）
+> 接口的价值：解耦合、提扩展；面向接口编程，不面向实现编程
+
+---
+
+## 二十、接口 vs 抽象类（终极对比）
+
+> **一句话**：抽象类是 `is-a`（是什么，复用代码骨架），接口是 `can-do`（能做什么，只定规范）；**一个类只能有一个身份，但可以有多种能力**。
+
+### 逐维度对照表
+
+| 维度 | 抽象类 | 接口 |
+|------|--------|------|
+| 抽象程度 | 半抽象 | **完全抽象** |
+| 关键字 | `abstract class` | `interface` |
+| 使用方式 | `extends`（**单**继承） | `implements`（**多**实现） |
+| 构造方法 | ✅ 有 | ❌ **没有** |
+| 实例化 | ❌ 不能 new | ❌ 不能 new |
+| 普通成员方法 | ✅ 可以有 | Java 8+ 用 `default` 实现 |
+| 成员变量 | 普通字段 | **只能是 `public static final` 常量** |
+| 抽象方法 | ✅ | ✅（默认 `public abstract`） |
+| 静态方法 | ✅（子类可继承） | ✅（**实现类不继承**，只能接口名调用） |
+| 私有方法 | ✅ | Java 9+ `private`（为 default / static 服务） |
+| 多继承 | ❌ | ✅（接口之间多继承，类多实现） |
+| 设计意图 | **模板复用**（共享代码骨架） | **规范抽象**（约定能力，不复用代码） |
+
+### 设计意图：is-a vs can-do
+
+![[interface-vs-abstract.svg]]
+
+| 用法 | 语义 | 例子 |
+|------|------|------|
+| **抽象类** | `is-a`：**是什么** | `Duck is-a Animal`（鸭子**是**动物） |
+| **接口** | `can-do`：**能做什么** | `Duck can fly` / `Duck can swim`（鸭子**会**飞、会游） |
+
+> **一个类只能继承一个抽象类（血缘唯一），但可以实现多个接口（能力叠加）。**
+
+### 组合使用：一个身份 + 多种能力
+
+```java
+interface Flyable   { void fly(); }          // 能力 1
+interface Swimmable { void swim(); }         // 能力 2
+
+abstract class Animal {                       // 身份（模板）
+    protected String name;
+    public Animal(String name) { this.name = name; }
+    public abstract void eat();
+}
+
+class Duck extends Animal                     // extends 只能一个（血缘）
+        implements Flyable, Swimmable {       // implements 可以多个（能力）
+    public Duck(String name) { super(name); }
+
+    @Override public void eat()  { System.out.println(name + " 吃"); }
+    @Override public void fly()  { System.out.println(name + " 飞"); }
+    @Override public void swim() { System.out.println(name + " 游"); }
+}
+```
+
+### 什么时候用哪个
+
+| 场景 | 选择 | 理由 |
+|------|------|------|
+| 需要**复用代码**（多个子类共享一堆方法实现） | 抽象类 | 接口不能提供可复用的实例方法（只有 default，能力有限） |
+| 只是**定规范**，不关心实现细节 | 接口 | 更灵活，不占用继承名额 |
+| 需要类具备**多种能力** | 接口 | 单继承限制，只能靠多实现 |
+| 需要**定义状态**（实例字段） | 抽象类 | 接口只能有常量 |
+| 两者都要 | **抽象类 + 接口组合** | `extends` 一个抽象类 + `implements` 多个接口 |
+
+### 速记
+
+> 抽象类 = `is-a` 是什么（模板复用），接口 = `can-do` 能做什么（规范抽象）
+> 类单继承、类多实现、接口多继承
+> 需要共享代码用抽象类，只需要定规范用接口
+> 关键差异：接口没构造方法、字段只能是常量、静态方法不被实现类继承
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -1542,6 +1815,10 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 抽象类 | 半成品模板，不能 new 但有构造方法，作用是逼子类实现细节 |
 | 抽象方法 | 只有声明没有方法体（`;` 结尾），非抽象子类必须重写 |
 | `abstract` | 修饰类 → 不能实例化；修饰方法 → 无方法体，强制子类重写 |
+| 接口 | 完全抽象的规范，描述实现类该有什么行为，不能 new、无构造方法 |
+| `implements` | 类实现接口，可以多实现 |
+| 默认方法 | Java 8+ `default`，接口提供默认实现，解决接口演变问题 |
+| is-a / can-do | 抽象类表达"是什么"（单继承），接口表达"能做什么"（多实现） |
 
 ### 报错速查
 
@@ -1573,3 +1850,7 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `private abstract void m();` | ❌ | private 不继承，无法被重写 |
 | `final abstract void m();` | ❌ | final 禁止重写，与 abstract 矛盾 |
 | `static abstract void m();` | ❌ | static 无多态，"重写"无意义 |
+| 实现类不重写接口所有抽象方法 | ❌ | 非抽象实现类必须全部实现（或自己 abstract） |
+| `Printer.info()`（info 是接口静态方法） | ❌ | 接口静态方法不被实现类继承，只能 `Usb.info()` |
+| 接口中定义普通实例字段 | ❌ | 接口字段只能是 `public static final` 常量 |
+| `new Usb()`（Usb 是接口） | ❌ | 接口完全没有构造方法，不能实例化 |

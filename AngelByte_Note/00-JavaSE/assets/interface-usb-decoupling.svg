@@ -1,0 +1,69 @@
+<svg width="680" height="420" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="680" height="420" fill="#0d1117"/>
+
+  <text x="340" y="28" text-anchor="middle" fill="#e6edf3" font-size="17" font-weight="700">USB 接口：调用者不关心实现者</text>
+  <text x="340" y="48" text-anchor="middle" fill="#8b949e" font-size="11.5">Computer 通过 Usb 接口与任何实现者解耦</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="90" width="160" height="90" rx="8" fill="#161b22" stroke="#1f6feb" stroke-width="1.6"/>
+    <text x="120" y="116" text-anchor="middle" fill="#58a6ff" font-size="12" font-weight="700">调用者</text>
+    <text x="120" y="138" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">Computer</text>
+    <line x1="60" y1="148" x2="180" y2="148" stroke="#30363d"/>
+    <text x="120" y="166" text-anchor="middle" fill="#8b949e" font-size="10.5">conn(Usb usb)</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="260" y="90" width="160" height="90" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1.6" stroke-dasharray="6 3"/>
+    <text x="340" y="116" text-anchor="middle" fill="#d29922" font-size="12" font-weight="700">接口（规范）</text>
+    <text x="340" y="138" text-anchor="middle" fill="#e6edf3" font-size="14" font-weight="600">Usb</text>
+    <line x1="280" y1="148" x2="400" y2="148" stroke="#30363d"/>
+    <text x="340" y="166" text-anchor="middle" fill="#8b949e" font-size="10.5">read() / write()</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="480" y="70" width="160" height="50" rx="7" fill="#21262d" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="560" y="93" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">Printer</text>
+    <text x="560" y="108" text-anchor="middle" fill="#79c0ff" font-size="10.5">implements Usb</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="480" y="135" width="160" height="50" rx="7" fill="#21262d" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="560" y="158" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">HardDrive</text>
+    <text x="560" y="173" text-anchor="middle" fill="#79c0ff" font-size="10.5">implements Usb</text>
+  </g>
+  <g filter="url(#shadow)">
+    <rect x="480" y="200" width="160" height="50" rx="7" fill="#21262d" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="560" y="223" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">Camera</text>
+    <text x="560" y="238" text-anchor="middle" fill="#79c0ff" font-size="10.5">implements Usb</text>
+  </g>
+
+  <g stroke="#30363d" stroke-width="2" fill="none">
+    <line x1="200" y1="135" x2="260" y2="135"/>
+    <line x1="420" y1="115" x2="480" y2="95"/>
+    <line x1="420" y1="135" x2="480" y2="160"/>
+    <line x1="420" y1="155" x2="480" y2="225"/>
+  </g>
+
+  <text x="230" y="128" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">调用</text>
+  <text x="450" y="103" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">实现</text>
+  <text x="450" y="170" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">实现</text>
+  <text x="450" y="240" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">实现</text>
+
+  <g filter="url(#shadow)">
+    <rect x="480" y="280" width="160" height="50" rx="7" fill="#21262d" stroke="#58a6ff" stroke-width="1.2" stroke-dasharray="4 3"/>
+    <text x="560" y="303" text-anchor="middle" fill="#58a6ff" font-size="11.5" font-style="italic">+ 新 Usb 设备</text>
+    <text x="560" y="318" text-anchor="middle" fill="#8b949e" font-size="10">implements Usb</text>
+  </g>
+  <line x1="420" y1="175" x2="480" y2="305" stroke="#30363d" stroke-width="2" stroke-dasharray="4 3" fill="none"/>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="350" width="600" height="52" rx="7" fill="#161b22" stroke="#1f6feb" stroke-width="1.2"/>
+    <text x="340" y="372" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="600">Computer 写一次，所有 Usb 实现都能接入</text>
+    <text x="340" y="392" text-anchor="middle" fill="#8b949e" font-size="11">新增 Usb 实现（如 U盘、键盘）→ Computer 一行不用改</text>
+  </g>
+</svg>
