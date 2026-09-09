@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数
 
 ---
 
@@ -33,6 +33,7 @@
 20. [[#二十、接口 vs 抽象类（终极对比）|接口 vs 抽象类（终极对比）]]
 21. [[#二十一、访问控制权限（4 个修饰符）|访问控制权限（4 个修饰符）]]
 22. [[#二十二、内部类（4 种）|内部类（4 种）]]
+23. [[#二十三、main 方法 args 与可变长参数|main 方法 args 与可变长参数]]
 
 ---
 
@@ -2024,6 +2025,111 @@ Runnable r = () -> System.out.println("跑");
 
 ---
 
+## 二十三、main 方法 args 与可变长参数
+
+> **一句话**：`main(String[] args)` 的 `args` 接收**命令行参数**；可变长参数 `int...` 是 `int[]` 的**语法糖**，只能放形参列表最后且一个方法最多一个。
+
+### main 方法的 args
+
+```java
+public static void main(String[] args) { }
+```
+
+`args` 就是一个普通的 `String[]`，**用来接收命令行参数**。
+
+### 怎么传参
+
+| 方式 | 操作 |
+|------|------|
+| **DOS 命令行** | `java Demo Tom Jerry 25` |
+| **IDEA** | `Run` → `Edit Configurations` → 选类 → `Program arguments` 填 `Tom Jerry 25` |
+
+```bash
+javac Demo.java
+java Demo Tom Jerry 25
+# 此时 args = {"Tom", "Jerry", "25"}
+```
+
+```java
+public static void main(String[] args) {
+    if (args.length == 0) {                     // 没传参时长度是 0
+        System.out.println("没传参");
+        return;
+    }
+    System.out.println("第一个参数：" + args[0]);
+    System.out.println("参数个数：" + args.length);
+}
+```
+
+| 元素 | 值 |
+|------|-----|
+| `args[0]` | `"Tom"` |
+| `args[1]` | `"Jerry"` |
+| `args[2]` | `"25"` |
+| `args.length` | `3` |
+
+> **细节**：多个参数用**空格**分隔；参数本身带空格时用**双引号**包起来：`java Demo "hello world" foo`。
+> **没传参时** `args` 是**空数组**（`length == 0`），**不是 `null`** —— 可以直接 `args.length` 不用判空。
+
+### 可变长参数（varargs）
+
+```java
+public static int sum(int... nums) {       // int... 语法糖
+    int total = 0;
+    for (int n : nums) {                    // 当数组用
+        total += n;
+    }
+    return total;
+}
+
+sum(1, 2, 3, 4);                            // ✅ 任意多个
+sum(1, 2);                                 // ✅
+sum();                                     // ✅ 空参（nums 是空数组，不是 null）
+sum(new int[]{1, 2, 3});                   // ✅ 也可直接传数组
+```
+
+### 两条硬规则
+
+| # | 规则 |
+|---|------|
+| ① | **只能放在形参列表最后**，一个方法最多**一个** |
+| ② | 编译器**当数组处理**（`int...` ≡ `int[]`） |
+
+```java
+// ❌ 错误
+public void m(int... a, String b) { }      // 不能放前面
+public void m(int... a, int... b) { }      // 一个方法最多一个
+
+// ✅ 正确
+public void m(String a, int... nums) { }   // 放最后
+```
+
+### ⚠️ 与数组重载冲突（高频坑）
+
+```java
+public static void m(int[] a) { }           // ①
+public static void m(int... a) { }         // ②
+
+m(new int[]{1, 2});                        // ❌ 编译报错：重复方法
+```
+
+**原因**：`int...` 编译后**就是 `int[]`**，两个签名对编译器来说**完全相同**，所以报"重复方法"。
+
+> **结论**：写代码时**二选一**，不要同时写 `int[]` 和 `int...` 两种重载。
+
+### 图示
+
+![[main-args-and-varargs.svg]]
+
+### 速记
+
+> `main(String[] args)` 收命令行参数，**空格分隔**，IDEA 在 Run Configurations 里填
+> 没传参时 `args` 是**空数组不是 null**
+> 可变长参数 `int...` ≡ `int[]`，**只能放最后**、**最多一个**
+> `int[]` 和 `int...` **不能重载共存**（编译器视为同一签名）
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -2089,6 +2195,8 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `outer.new Inner()` | 实例内部类，成员区，**必须**先有 outer 实例 |
 | 匿名内部类 | 没有类名，定义即实例化，函数式接口可用 Lambda 替代 |
 | 有效 final | JDK 8+，局部变量没被改过就视为 final，被内部类用过后就"冻结" |
+| `args` | main 方法的 String[] 形参，接收命令行参数，空格分隔 |
+| 可变长参数 | `int...` 是 `int[]` 的语法糖，只能放形参最后、一个方法最多一个 |
 
 ### 报错速查
 
@@ -2132,3 +2240,6 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 在实例内部类里定义 `static int a;` | ❌ | 实例内部类不能有静态成员（`static final` 常量除外） |
 | 匿名内部类继承 2 个类 | ❌ | 匿名内部类只能继承一个类 或 实现一个接口（二选一） |
 | 内部类里修改被捕获的局部变量 | ❌ | 局部变量被内部类用过后就被"冻结"（有效 final） |
+| `void m(int... a, String b)` | ❌ | 可变长参数只能放形参列表最后 |
+| `void m(int... a, int... b)` | ❌ | 一个方法最多一个可变长参数 |
+| `m(int[])` 与 `m(int...)` 同时定义 | ❌ | 编译后签名相同 → 报"重复方法" |

@@ -1,0 +1,77 @@
+<svg width="680" height="480" viewBox="0 0 680 480" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#58a6ff"/>
+    </marker>
+  </defs>
+
+  <rect width="680" height="480" fill="#0d1117"/>
+
+  <text x="340" y="26" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">main 的 args 与可变长参数</text>
+  <text x="340" y="44" text-anchor="middle" fill="#8b949e" font-size="11">命令行参数 → args 数组；可变长参数 → 编译器自动装箱成数组</text>
+
+  <!-- ============== 上半：main args ============== -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="64" width="600" height="176" rx="9" fill="#161b22" stroke="#1f6feb" stroke-width="1.4"/>
+    <text x="340" y="88" text-anchor="middle" fill="#58a6ff" font-size="13" font-weight="700">① main(String[] args) 接收命令行参数</text>
+
+    <!-- 命令行 -->
+    <rect x="60" y="104" width="220" height="46" rx="6" fill="#0d1117" stroke="#d29922" stroke-width="1.3"/>
+    <text x="170" y="123" text-anchor="middle" fill="#d29922" font-size="10.5" font-weight="600">DOS / IDEA</text>
+    <text x="170" y="141" text-anchor="middle" fill="#e6edf3" font-size="11">java Demo Tom Jerry 25</text>
+
+    <!-- 箭头 -->
+    <line x1="284" y1="127" x2="356" y2="127" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="320" y="118" text-anchor="middle" fill="#58a6ff" font-size="9.5">空格分隔</text>
+
+    <!-- args 数组 -->
+    <rect x="360" y="104" width="260" height="46" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.3"/>
+    <text x="490" y="123" text-anchor="middle" fill="#3fb950" font-size="10.5" font-weight="600">args（String[]）</text>
+    <text x="490" y="141" text-anchor="middle" fill="#e6edf3" font-size="11">args = {"Tom", "Jerry", "25"}</text>
+
+    <!-- 下标 -->
+    <text x="60" y="176" fill="#7d8590" font-size="10">args[0] = "Tom"</text>
+    <text x="200" y="176" fill="#7d8590" font-size="10">args[1] = "Jerry"</text>
+    <text x="360" y="176" fill="#7d8590" font-size="10">args[2] = "25"</text>
+    <text x="500" y="176" fill="#7d8590" font-size="10">args.length = 3</text>
+
+    <text x="60" y="206" fill="#e6edf3" font-size="10.5">· 带空格的参数用双引号包起来："hello world" foo</text>
+    <text x="60" y="224" fill="#e6edf3" font-size="10.5">· IDEA：Run → Edit Configurations → Program arguments</text>
+  </g>
+
+  <!-- ============== 下半：可变长参数 ============== -->
+  <g filter="url(#shadow)">
+    <rect x="40" y="256" width="600" height="200" rx="9" fill="#161b22" stroke="#a371f7" stroke-width="1.4"/>
+    <text x="340" y="280" text-anchor="middle" fill="#a371f7" font-size="13" font-weight="700">② 可变长参数 int... ≡ int[]（编译器装箱）</text>
+
+    <!-- 调用 -->
+    <rect x="60" y="296" width="220" height="46" rx="6" fill="#0d1117" stroke="#d29922" stroke-width="1.3"/>
+    <text x="170" y="315" text-anchor="middle" fill="#d29922" font-size="10.5" font-weight="600">调用处</text>
+    <text x="170" y="333" text-anchor="middle" fill="#e6edf3" font-size="11">sum(1, 2, 3, 4)</text>
+
+    <!-- 箭头 -->
+    <line x1="284" y1="319" x2="356" y2="319" stroke="#58a6ff" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="320" y="310" text-anchor="middle" fill="#58a6ff" font-size="9.5">编译器</text>
+
+    <!-- 等价 -->
+    <rect x="360" y="296" width="260" height="46" rx="6" fill="#0d1117" stroke="#3fb950" stroke-width="1.3"/>
+    <text x="490" y="315" text-anchor="middle" fill="#3fb950" font-size="10.5" font-weight="600">等价写法</text>
+    <text x="490" y="333" text-anchor="middle" fill="#e6edf3" font-size="11">sum(new int[]{1, 2, 3, 4})</text>
+
+    <!-- 两条规则 -->
+    <line x1="60" y1="356" x2="620" y2="356" stroke="#30363d" stroke-dasharray="3 3"/>
+    <text x="60" y="380" fill="#d29922" font-size="11" font-weight="700">两条硬规则</text>
+
+    <text x="60" y="404" fill="#f85149" font-size="10.5">❌ void m(int... a, String b)</text>
+    <text x="300" y="404" fill="#7d8590" font-size="10.5">可变长参数只能放最后</text>
+
+    <text x="60" y="424" fill="#f85149" font-size="10.5">❌ void m(int... a, int... b)</text>
+    <text x="300" y="424" fill="#7d8590" font-size="10.5">一个方法最多一个</text>
+
+    <text x="60" y="446" fill="#f85149" font-size="10.5">❌ m(int[]) 与 m(int...) 共存</text>
+    <text x="300" y="446" fill="#7d8590" font-size="10.5">签名相同 → 编译报"重复方法"</text>
+  </g>
+</svg>
