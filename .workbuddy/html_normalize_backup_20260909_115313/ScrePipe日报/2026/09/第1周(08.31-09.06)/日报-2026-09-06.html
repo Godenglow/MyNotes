@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工作日报 2026-09-06</title><style>
+/* ===== 双主题变量（inject_theme.py 注入） ===== */
+:root{
+--bg:#0d1117;--side:#010409;--card:#161b22;--chip:#21262d;
+--border:#262d38;--hover:#10161f;
+--fg:#e6edf3;--strong:#f0f6fc;--muted:#8b949e;--faint:#6e7681;--quote:#b6c2cf;
+--link:#58a6ff;--h3:#79c0ff;--pre-fg:#c9d1d9;
+--warn:#d29922;--good:#3fb950;--bad:#f85149;
+--pre-bg:#282c34;
+--t-def:#abb2bf;--t-red:#e06c75;--t-green:#98c379;--t-orange:#d19a66;--t-purple:#c678dd;--t-yellow:#e5c07b;--t-cyan:#56b6c2;--t-blue:#61afef;--t-comment:#7f848e;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--side:#f6f8fa;--card:#f6f8fa;--chip:#eff2f5;
+--border:#d0d7de;--hover:#eef1f4;
+--fg:#1f2328;--strong:#1f2328;--muted:#57606a;--faint:#8c959f;--quote:#57606a;
+--link:#0969da;--h3:#0550ae;--pre-fg:#24292f;
+--warn:#9a6700;--good:#1a7f37;--bad:#cf222e;
+--pre-bg:#f6f8fa;
+--t-def:#24292f;--t-red:#cf222e;--t-green:#116329;--t-orange:#953800;--t-purple:#8250df;--t-yellow:#9a6700;--t-cyan:#0550ae;--t-blue:#0550ae;--t-comment:#6e7781;
+}
+.theme-btn{position:fixed;right:74px;bottom:26px;width:40px;height:40px;border-radius:50%;
+background:var(--chip);border:1px solid var(--border);color:var(--fg);font-size:16px;
+display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;transition:transform .15s}
+.theme-btn:hover{transform:scale(1.1);border-color:var(--link)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;padding:28px 20px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:26px;font-weight:700;letter-spacing:-.4px}
+h2{font-size:19px;font-weight:650;margin:38px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--chip);color:var(--muted);font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:620;margin:22px 0 9px}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:11px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:13px 14px}
+.card .k{color:var(--muted);font-size:11px;letter-spacing:.3px}
+.card .v{font-size:23px;font-weight:680;margin-top:3px;line-height:1.2}
+.card .d{color:var(--muted);font-size:11px;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:11px 0}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--chip)}
+th{color:var(--muted);font-weight:600;font-size:11.5px;background:var(--card)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--card)}
+.tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600}
+.t-bad{background:rgba(248,81,73,.16);color:var(--bad)}
+.t-warn{background:rgba(210,153,34,.16);color:var(--warn)}
+.t-ok{background:rgba(63,185,80,.16);color:var(--good)}
+.t-info{background:rgba(88,166,255,.16);color:var(--link)}
+.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:var(--card);font-size:13.5px}
+.box .t{font-weight:650;margin-bottom:5px;font-size:13.5px}
+.b-bad{border-color:var(--bad)} .b-bad .t{color:var(--bad)}
+.b-warn{border-color:var(--warn)} .b-warn .t{color:var(--warn)}
+.b-ok{border-color:var(--good)} .b-ok .t{color:var(--good)}
+.b-info{border-color:var(--link)} .b-info .t{color:var(--link)}
+ul,ol{margin:8px 0 8px 20px} li{margin:4px 0;font-size:13.5px}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:12px;color:#bc8cff}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--border);padding-bottom:16px}
+.meta{color:var(--muted);font-size:12px;text-align:right;line-height:1.8}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
+.crumbs{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:14px 0 4px;font-size:12px;color:var(--muted)}
+.crumbs a{color:var(--link);text-decoration:none}
+.it{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--chip)}
+.it:last-child{border-bottom:none}
+.tm{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--link);background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);padding:1px 8px;border-radius:6px;font-size:12px;height:fit-content;margin-top:2px;white-space:nowrap}
+.ib{font-size:13.5px;flex:1}
+.ib b.t{color:var(--fg);display:block;margin-bottom:2px}
+.bar{height:8px;border-radius:4px;background:var(--chip);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;border-radius:4px}
+</style><script>
+(function(){var t=null;try{t=localStorage.getItem('nb-theme');}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+document.documentElement.dataset.theme=t;})();
+</script></head><body><div class="wrap">
+
+<div class="crumbs"><a href="../../../说明文件.html">ScrePipe日报</a> › <a href="../月度总结.html">2026-09</a> › <a href="周总结.html">第1周(08.31-09.06)</a> › <b>日报-2026-09-06</b> · <a href="日报-2026-09-05.html">← 前日</a></div>
+
+<div class="hd"><div>
+<h1>工作日报 2026-09-06</h1>
+<div class="sub">screenpipe 屏幕记录自动归纳 · 07:38 开机 – 22:24 前台记录（截至生成时刻，口径同 22:00 定时版）· 00:00–07:37 与 09:04–13:31 无前台活动（休息/离机）· 当日无音频捕获（0 段，无会议/通话）</div>
+</div><div class="meta">
+数据源：screenpipe activity-summary + 窗口记录<br>
+活跃总时长：约 535 分钟（≈8.9 h，估算）<br>
+本周位置：2026-09 第 1 周（08.31–09.06）周日 · 周完结日
+</div></div>
+
+<div class="cards">
+<div class="card"><div class="k">活跃总时长</div><div class="v" style="color:#58a6ff">8.9 h</div><div class="d">约 535 分钟（07:38–22:24；午间 09:04–13:31 长空闲）</div></div>
+<div class="card"><div class="k">工作 / 学习</div><div class="v" style="color:#a371f7">1.6 h</div><div class="d">约 95 分钟 · 占 18%（晨 DeepSeek 用量核对 + 日报复核 + 午后 dsh 插件调研）</div><div class="bar"><i style="width:18%;background:#a371f7"></i></div></div>
+<div class="card"><div class="k">游戏 / 挂机</div><div class="v" style="color:#39c5cf">3.1 h</div><div class="d">约 185 分钟 · 占 35%（窗口合计 190m 去重；方舟手动 + 自动化挂机 + 终末地）</div><div class="bar"><i style="width:35%;background:#39c5cf"></i></div></div>
+<div class="card"><div class="k">其他娱乐</div><div class="v" style="color:#ffa657">4.3 h</div><div class="d">约 255 分钟 · 占 48%（抖音 3.9h 较昨日大幅回落 + 网易云伴听）</div><div class="bar"><i style="width:48%;background:#ffa657"></i></div></div>
+<div class="card"><div class="k">事故 / 提醒</div><div class="v" style="color:#f85149">1 件</div><div class="d">酷狗音乐未响应复发（16:31，转网易云绕过）；Endfield 启动失败自愈另见问题节</div></div>
+</div>
+<div class="box b-info"><div class="t">数据口径说明</div>
+07:38 开机起前台记录至 22:24（本次生成时刻）；00:00–07:37 与 09:04–13:31 无前台活动（夜间休息、午间离机/屏幕空闲），非录制故障。无音频（audio 未启用，0 段）。今日节奏前松后紧：工作/学习集中于早晨与午后；17:34 起进入游戏时段（明日方舟手动 → AUTO-MAS/M9A 自动化 → 碧蓝档案 → 终末地，自动化窗口与模拟器并存，前台已按主窗口归纳去重）；娱乐以抖音为主，约 235 分钟（14:02–17:34 主段 + 20:50–22:24 段），较昨日约 10.7h 明显回落；16:32 起网易云音乐伴听约 18 分钟（酷狗 16:31 崩溃后转用）。SpeedBall 下载器后台常驻 08:45–21:13（前台合计约 47 分钟，多为挂页/速度面板，主动操作约 20 分钟计入杂项）。分类与时长均"约/估算"，占比以活跃总时长 535 分钟为分母。</div>
+
+<h2><span class="n">1</span>今日完成</h2>
+<div class="it"><span class="tm">07:38–07:55</span><div class="ib"><b class="t">开机 · 校园网接入 · DeepSeek 开放平台用量核对</b>
+07:38 开机（TRAE SOLO/TraeWork CN、WorkBuddy、DSATray 等随系统自启）；msedge（东风谷早苗 profile）打开 platform.deepseek.com/usage 用量页并可用沉浸式翻译双语查看：当前模型 deepseek-v4-pro、API 请求次数 54、累计 Tokens 749,251——用于复核 QQ AI Bot 侧的 DeepSeek 额度消耗。</div></div>
+<div class="it"><span class="tm">08:43–09:05</span><div class="ib"><b class="t">日报体系复核（Obsidian + 桌面）· SpeedBall 启动</b>
+Obsidian 依次打开 日报-2026-09-05.html、日报-2026-09-04.html、周总结.html、月度总结.html（即昨晚会话内人工补齐的三件套，含 09-04 口径修正后的脚注），快速核对后关闭；随后桌面浏览（Program Manager：回收站/Edge/Chrome/微信/QQ/B站/抖音/Piliplus/网易云/QQ音乐/酷狗/语雀/WorkBuddy/CC Switch/TraeWork/东方夜雀食堂/腾讯围棋/AUTO-MAS/MAA/M9A/BetterGI 等图标）；08:45 启动 SpeedBall 下载器（今日常驻至 21:13）。</div></div>
+<div class="it"><span class="tm">13:32–14:04</span><div class="ib"><b class="t">DeepSeek Harness（dsh）网页版插件调研（GitHub）</b>
+msedge 浏览 GitHub：awesome-dsh-plugin/awesome-dsh-plugin（"DeepSeek Harness (dsh) 插件精选列表"）及相关仓库（如 DamonKoy/dsh-*），逐条查看插件说明——消息面板/侧边栏/编辑器的"独立透明度控制"、"可调整大小的文件与预览右面板"、"本地持久化看板视图"等条目（workspace references 相关）；并再查 DeepSeek 开放平台用量页（dsh 网页版与账号关联）；13:37–13:41 Cherry Studio 前台约 4 分钟；14:02 资源管理器打开 dsh-web-ui 目录（本机 dsh 网页版工程，为后续插件安装定位落点）。属本周 AI 工具链探索的延续。</div></div>
+<div class="it"><span class="tm">全天零碎</span><div class="ib"><b class="t">网络 / 系统 / 定时处置</b>
+15:17 打开快速设置处理 Wi-Fi（约 1 分钟）；16:31 酷狗音乐打开即"未响应"（WerFault，见问题 2），16:32 转用网易云音乐；20:09 快速设置再次处理 Wi-Fi："XYXY_Teacher 需要操作，没有 internet，开放，信号强度 4 格(共 4 格)"，处理后恢复（此后抖音/终末地联网正常）；22:02 桌面浏览片刻；22:20 起本会话内将 daily-work-report 定时由 23:00 提前至 22:00（pipe.md frontmatter、screenpipe 调度配置、注册表三处同步；pipe.md 第 5 步同时固化"每晚随跑增量更新周/月总结"规则），随后人工补跑本日报——即对 09-05 定时超时问题的正式处置（见问题 1）。</div></div>
+
+<h3>时间分布</h3>
+<table>
+<tr><th>序号</th><th>事项</th><th class="n">时长（约）</th><th class="n">占比</th></tr>
+<tr><td class="n">1</td><td>开机 · DeepSeek 开放平台用量核对（07:38–07:55）</td><td class="n">8 分钟</td><td class="n">8%</td></tr>
+<tr><td class="n">2</td><td>日报体系复核 + SpeedBall 启动（08:43–09:05）</td><td class="n">20 分钟</td><td class="n">21%</td></tr>
+<tr><td class="n">3</td><td>dsh 网页版插件调研（13:32–14:04，含 Cherry Studio 4m）</td><td class="n">25 分钟</td><td class="n">26%</td></tr>
+<tr><td class="n">4</td><td>系统与杂项：Wi-Fi 处理 ×2 · 酷狗处置 · 定时改点与会话内补跑（含 SpeedBall 主动操作约 20m）</td><td class="n">42 分钟</td><td class="n">44%</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 4 项，合计约 95 分钟（工作/事务类前台口径；SpeedBall 挂页约 28 分钟与长空闲段未计入，全天其余主体为游戏与娱乐，见第 4 节）。</p>
+
+<h2><span class="n">2</span>进行中</h2>
+<table>
+<tr><th>事项</th><th>当前进展</th><th>还差什么</th></tr>
+<tr><td>dsh 网页版插件选型</td><td>已调研 awesome-dsh-plugin 精选清单与相关仓库（透明度控制/预览面板/看板类插件说明已看）</td><td><span class="tag t-warn">待落地</span> 选定 1–2 个插件安装到 dsh-web-ui 并验证</td></tr>
+<tr><td>Java / Maven 重启</td><td>Maven 3.8.6 安装包已于 09-05 下载（D:\BaiduNetdiskDownload，未解压/未配 PATH）；Java 学习仍停滞于第三章后</td><td><span class="tag t-warn">待开始</span> 解压配置 Maven → 续 Java 第四章/项目实操</td></tr>
+<tr><td>pixiv 阅览工具落地</td><td>09-05 已下载 v1.33.0（android.apk 18.52MB/AppImage）并 QQ 分发好友</td><td><span class="tag t-warn">待配置</span> 本机安装与登录（RefreshToken/OAuth/Cookie）</td></tr>
+<tr><td>本周遗留（周末未推进）</td><td>AUTO-MAS 今日例行挂机约 2h49m 运行正常（非修复）；QQ AI Bot 收尾、服务器下单未动</td><td><span class="tag t-warn">待办</span> 择时逐项实操</td></tr>
+<tr><td>CET-6 报名跟进</td><td>报名通知 09-05 已收到（9/11 12:00 起错峰报名），今日未转发/未报名</td><td><span class="tag t-warn">待办</span> 9/9 前核对学籍信息/照片；9/11 起报名</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 5 项（第 1 项今日有调研推进；第 2、3、5 项待办；第 4 项为本周延续，周末无实质推进）。</p>
+
+<h2><span class="n">3</span>问题与阻塞</h2>
+<div class="box b-warn"><div class="t">日报定时链路处置：23:00 → 22:00（09-06）<span class="tag t-warn">已处置 · 待 09-07 复验</span></div>
+背景：09-05 23:00 daily-work-report 定时超时（600s）未产出日报，截至今日连续失败已达 5 次。处置（今日 22:20 起，本会话内）：① 定时由 23:00 提前至 22:00（cron 0 22 * * *，晚间黄金段提前一小时），pipe.md frontmatter、screenpipe 调度配置、pi-chat 注册三处已同步，下一次自动执行 2026-09-07 22:00；② 在 pipe.md 第 5 步固化"每晚运行须增量更新周文件夹 周总结.html 与月文件夹 月度总结.html"规则（screenpipe 免费档仅保留 24h，只能逐日累积）；③ 本日（09-06）任务由会话内人工补齐，即本文件。状态：已处置；自动链路是否恢复需 09-07 22:00 观察。</div>
+<div class="box b-bad"><div class="t">酷狗音乐"未响应"复发（16:31–16:33）<span class="tag t-bad">待处理</span></div>
+现象：16:31 打开酷狗音乐即"未响应"，WerFault 崩溃弹窗（dwm 窗口"酷狗音乐 (未响应)"）；与 08-31 同款问题，09-01 重启恢复后 5 天未犯，今日复发。处理：结束进程；16:32 起改用网易云音乐（今日伴听约 18 分钟）。状态：待处理——可尝试彻底卸载重装，或就此以网易云替代。</div>
+<div class="box b-ok"><div class="t">终末地启动"获取网络配置失败"（19:33–19:39）<span class="tag t-ok">已解决（自愈）</span></div>
+现象：Endfield（明日方舟：终末地）启动时两次提示"获取网络配置失败，请检查网络状态后重试 错误号:0"，19:39 关闭放弃。处理：未做特殊操作；20:27 重开成功进入游戏（结合 20:09 Wi-Fi 处理，判断为当时网络短暂波动）。状态：已解决，无需再处理。</div>
+<div class="box b-info"><div class="t">Wi-Fi 需操作（20:09）<span class="tag t-info">已处理 · 备注</span></div>
+快速设置提示"XYXY_Teacher 需要操作，没有 internet，开放，信号强度 4 格(共 4 格)"；处理后网络恢复（随后抖音连播、终末地联网均正常）。另：00:00–07:37、09:04–13:31 无前台活动系休息/离机所致，非问题。</div>
+<table>
+<tr><th>现象</th><th class="n">时长（约）</th><th class="n">占比</th><th>状态</th></tr>
+<tr><td>日报定时链路处置（改 22:00 + 会话内补跑，22:20–22:35）</td><td class="n">15 分钟</td><td class="n">60%</td><td><span class="tag t-warn">已处置 · 待复验</span></td></tr>
+<tr><td>酷狗音乐未响应复发（16:31–16:33）</td><td class="n">2 分钟</td><td class="n">8%</td><td><span class="tag t-bad">待处理</span></td></tr>
+<tr><td>终末地获取网络配置失败（19:33–19:39）</td><td class="n">6 分钟</td><td class="n">24%</td><td><span class="tag t-ok">已解决（自愈）</span></td></tr>
+<tr><td>Wi-Fi XYXY_Teacher 需操作（20:09）</td><td class="n">2 分钟</td><td class="n">8%</td><td><span class="tag t-ok">已处理</span></td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">状态分布小计：共 4 项、合计约 25 分钟——已处置（待复验）1 / 待处理 1 / 已解决（自愈）1 / 已处理 1。</p>
+
+<h2><span class="n">4</span>游戏娱乐</h2>
+<h3>游戏</h3>
+<table>
+<tr><th>游戏</th><th class="n">时长（约）</th><th class="n">占比</th><th>类型</th><th>说明</th></tr>
+<tr><td>MuMu 模拟器 12（明日方舟 / 碧蓝档案）</td><td class="n">112 分钟</td><td class="n">59%</td><td><span class="tag t-ok">手动</span> <span class="tag t-info">挂机/自动化</span></td><td>17:34–18:24 手动《明日方舟》关卡作战约 50m（干员 星熊 攻 677/防 572/法抗 15/阻挡 3 面板、界面 ENERIY 126–131/144、剩余可放置角色计数等）；18:24 起为 AUTO-MAS 自动化执行段，模拟器画面持续至 19:32（方舟基建/任务界面）；20:08–20:25 前台为《碧蓝档案》日常（咖啡厅/编队/制造/商店招募、成员 151/160、东风谷早苗 1855/2550、每日任务完成 8 次奖励 熟练证书×100、成就挑战"3 回合内以集中指挥通关 任务2-2 普通关卡"）</td></tr>
+<tr><td>AUTO-MAS（v5.4.0）</td><td class="n">35 分钟</td><td class="n">18%</td><td><span class="tag t-info">挂机/自动化</span></td><td>18:24 接管模拟器（MuMu 弹"运行时主动管理内存使用…"提示）；调度中心/任务总览窗口前台约 35m（含"BAAH-碧蓝档案（1 个用户）"签到/任务配置）；18:24–21:13 全程后台运行约 2h49m，20:27 MaaEnd 收尾</td></tr>
+<tr><td>M9A / MFA 任务管理器（m9a.exe v4.7.1）</td><td class="n">11 分钟</td><td class="n">6%</td><td><span class="tag t-info">挂机/自动化</span></td><td>18:53–19:04 前台；窗口"MFA 任务管理器 v2.16.1-beta.3 | M9A v4.7.1"，任务日志：累计已刷 19 次/任务结束，含"自动深眠"、交付订单、商店购物领奖、关闭游戏等流程</td></tr>
+<tr><td>明日方舟：终末地（Endfield PC 客户端）</td><td class="n">30 分钟</td><td class="n">16%</td><td><span class="tag t-ok">手动</span></td><td>19:33–19:39 启动失败约 6m（网络错误号 0，见问题 3）；20:27–20:50 约 24m：地区建设/四号谷地（收支 144 万/3000 万）、仓储节点（武陵城/试验园，本地库存上限 90000、约 7h 后就绪）、贵重品库（武器 294/2000）、据点升级（调度券 7770+70）；UID 1920666934</td></tr>
+<tr><td>MAA / 更新器 / 启动器零碎</td><td class="n">2 分钟</td><td class="n">1%</td><td><span class="tag t-warn">挂机/工具</span></td><td>MAA.exe（18:34）、MAA.Updater（18:41）、MuMuNxMain/MuMuNxUpdater（17:34/18:24）等启动器与更新器进程</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">游戏前台窗口合计约 190 分钟（≈3.2 h；AUTO-MAS/M9A/MAA 与模拟器并存前台有重叠，去重后约 185 分钟≈3.1 h，概览卡按此计）。其中手动游玩约 74–80m（方舟 50m + 终末地 24–30m），自动化/挂机执行与查看约 110m；AUTO-MAS 后台全程 2h49m 计入"游戏/挂机"类别口径。</p>
+
+<h3>其他娱乐</h3>
+<table>
+<tr><th>类别</th><th class="n">时长（约）</th><th class="n">占比</th><th>说明</th></tr>
+<tr><td>抖音短视频（Chrome 网页）</td><td class="n">235 分钟</td><td class="n">92%</td><td>14:02–17:34 主段约 160m（16:31 酷狗崩溃处置有短暂间隙）+ 20:50–22:24 段约 70m（21:15 前后 SpeedBall 前台短操作）。内容样本：滕王阁序 转发热门、沙雕二创（莫川-60）、明日方舟 联限话题（"月下男人水上行走 vs 残月女人乐团演奏"，评分 9.6）、G.E.M. 邓紫棋 MV、卢旺达新疆菜探店、地下忍者、电动车大运喇叭安装、cos（9 月 8 日"最还原"系列）、古风段子（"两千年前的串子叫纵横，孝子叫儒家，摆子叫道家，压力哥叫法家，到处管的嘉豪叫墨家"）等</td></tr>
+<tr><td>音乐（网易云音乐）</td><td class="n">18 分钟</td><td class="n">7%</td><td>16:32–18:25 伴听/前台（酷狗崩溃后转用）；曲目含 真的爱你（Beyond）、黑夜问白天（林俊杰）、童祭 ~ Innocent Treasures（市松椿）、流光记（银临）、情人（G.E.M. 邓紫棋）、最后一页（江语晨）</td></tr>
+<tr><td>资讯 / 桌面浏览零碎</td><td class="n">2 分钟</td><td class="n">1%</td><td>22:02 桌面浏览（东方夜雀食堂 图标等）与浏览器零碎页面</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">其他娱乐合计约 255 分钟（≈4.3 h）。注：抖音 235m 较昨日（约 645m/10.7h）大幅回落——今日傍晚时段被游戏与音乐占据，主段为 14:02–17:34 的午后连播。</p>
+
+<h2><span class="n">5</span>明日计划</h2>
+<table>
+<tr><th>序号</th><th>计划</th><th>依据/跟进</th></tr>
+<tr><td class="n">1</td><td>复验日报定时链路：09-07（周一）22:00 首次按新时间自动执行；确认自动产出日报且周/月总结随跑更新；再失败则查执行日志与超时上限</td><td>今日问题 1（定时已改 22:00，pipe.md 已固化增量规则）</td></tr>
+<tr><td class="n">2</td><td>转发 CET-6 报名通知至班群并自检：9/9 前确认学籍信息/照片无误；9/11 12:00 起错峰报名（23/24/25 级批次）</td><td>09-05 收到报名通知（进行中 5）</td></tr>
+<tr><td class="n">3</td><td>Java 重启：解压配置 Maven 3.8.6（安装包已下载）→ 续 Java 第四章/项目学习</td><td>进行中 2 + 周总结遗留</td></tr>
+<tr><td class="n">4</td><td>dsh 插件落地：从 awesome-dsh-plugin 精选 1–2 个装进 dsh-web-ui 验证；Cherry Studio 插件/配置顺带整理</td><td>今日调研（进行中 1）</td></tr>
+<tr><td class="n">5</td><td>pixiv-viewer 本机安装与登录配置（RefreshToken/OAuth/Cookie）</td><td>进行中 3（09-05 已下载分发）</td></tr>
+<tr><td class="n">6</td><td>（周内收尾，可选）AUTO-MAS 同步覆盖修复、QQ AI Bot 收尾 4 项 + bot-projects 备份、服务器下单</td><td>本周遗留（进行中 4）</td></tr>
+</table>
+
+<div class="foot">
+数据来源：screenpipe 屏幕记录（activity-summary 与窗口时长归纳，均标注"约/估算"）· <a href="周总结.html" style="color:#58a6ff">本周总结</a> · <a href="日报-2026-09-05.html" style="color:#58a6ff">← 前日</a>
+</div>
+</div><button class="theme-btn" id="themeBtn" title="切换 浅色/深色（默认跟随系统）">☀️</button>
+<script>
+(function(){
+var tb=document.getElementById('themeBtn');if(!tb)return;
+function syncIcon(){tb.textContent=document.documentElement.dataset.theme==='light'?'🌙':'☀️';}
+syncIcon();
+tb.onclick=function(){
+  var next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('nb-theme',next);}catch(e){}
+  try{sessionStorage.setItem('nb-scroll',window.scrollY);}catch(e){}
+  location.reload();
+};
+try{var y=sessionStorage.getItem('nb-scroll');if(y!==null){window.scrollTo(0,+y);sessionStorage.removeItem('nb-scroll');}}catch(e){}
+})();
+</script></body></html>

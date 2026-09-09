@@ -33,19 +33,19 @@ def detect_template(html: str) -> str:
     return 'A'
 
 # ---------- 同模板内的 CSS 抹平规则 ----------
-# 每条规则:(template_or_'*', css_selector_pattern, replacement_css)
-# 注意:replacement 必须是完整的 "selector { ... }" 块
+# 每条规则:(template_or_'*', 旧模式, 新 CSS 块)
+# 只做"明确不一致"的最小修正,不动 padding/max-width 等可能影响布局的项
 RULES = [
-    # 模板 A:长文档(AngelByte_Note) — 抹平内部偏差
-    ('A', r'body\s*\{[^}]*\}',
-     'body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.75;padding:34px 38px;max-width:1140px;margin:0 auto}'),
-
-    # 模板 B:数据报告(ScrePipe/vivo) — 抹平 line-height / cards minmax / th sticky
-    ('B', r'body\s*\{[^}]*line-height:\s*1\.6\d[^}]*\}',
-     'body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:34px 38px;max-width:1140px;margin:0 auto}'),
-    ('B', r'\.cards\{[^}]*minmax\((?:158|148)px,[^)]*\)[^}]*\}',
-     '.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:11px;margin:18px 0}'),
-    # 模板 B 的 th 如果没 sticky,加上(可选——这里不强制,只在缺时补)
+    # 模板 B:line-height 1.65 → 1.7(抹平 1.65 vs 1.70 不一致)
+    ('B', r'(body\{[^}]*?line-height:)\s*1\.65(\s*;[^}]*\})',
+     r'\g<1>1.7\g<2>'),
+    # 模板 B:cards minmax 148 → 158(抹平 148 vs 158 不一致)
+    ('B', r'(\.cards\{[^}]*?minmax\()148(px,[^)]*\)[^}]*\})',
+     r'\g<1>158\g<2>'),
+    # 模板 B:cards margin 16px → 18px(抹平 16 vs 18 不一致)
+    ('B', r'(\.cards\{[^}]*?)margin:16px 0(\s*\})',
+     r'\g<1>margin:18px 0\g<2>'),
+    # 模板 B:th 不一致 — 如果 th 已 sticky 则跳过;没有 sticky 不强加
 ]
 
 
