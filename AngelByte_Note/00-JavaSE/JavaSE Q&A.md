@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类
 
 ---
 
@@ -1844,6 +1844,186 @@ public class Cat extends Animal {
 
 ---
 
+## 二十二、内部类（4 种）
+
+> **一句话**：内部类是**定义在类内部的类**，共 4 种 —— 静态内部类（成员区）、实例内部类（成员区）、局部内部类（方法里）、匿名内部类（一次性）；**修饰符、位置、实例化语法都不同**。
+
+### 什么是内部类
+
+**定义在一个类内部的类**。Java 允许把类作为成员嵌套在另一个类里，共 4 种形式。
+
+### 什么时候用内部类
+
+| # | 理由 | 直白讲 |
+|---|------|--------|
+| ① | 两个类联系密切，独立定义会**增加类数量** | 内部类**就近**写在用它的类旁边 |
+| ② | 内部类能**直接访问外部类私有成员**，提高封装性 | 把"配套"类藏起来 |
+| ③ | 匿名内部类**只用一次**的场景 | 不想起名字时用 |
+
+### 4 种内部类位置示意
+
+![[inner-class-positions.svg]]
+
+### 4 种内部类对照表 ⭐ 必背
+
+| 类型 | 修饰符 | 类体位置 | 实例化方式 | 能否定义静态成员 |
+|------|--------|----------|------------|------------------|
+| **静态内部类** | `static class` | 外部类的**成员区** | `new Outer.StaticInner()` | ✅ 可以 |
+| **实例内部类** | `class` | 外部类的**成员区** | `new Outer().new Inner()` | ❌ 不能（`static final` 常量除外） |
+| **局部内部类** | `class` | **方法体 / 代码块**内 | 在其作用域内 `new` | ❌ 不能 |
+| **匿名内部类** | 无类名，`new 父类(){}` | 通常在**方法参数**位置 | 定义即实例化 | ❌ 不能 |
+
+### 4 种内部类访问外部类的能力
+
+| 类型 | 访问外部**实例**成员 | 访问外部**静态**成员 | 访问**局部**变量 |
+|------|----------------------|----------------------|------------------|
+| 静态内部类 | ❌ | ✅ | — |
+| 实例内部类 | ✅（含 private） | ✅ | — |
+| 局部内部类 | ✅ | ✅ | ✅ 只能访问**有效 final** |
+| 匿名内部类 | ✅ | ✅ | ✅ 只能访问**有效 final** |
+
+### ① 静态内部类
+
+```java
+public class Outer {
+    private static int y = 20;
+
+    static class StaticInner {            // 静态内部类
+        void test() {
+            System.out.println(y);        // ✅ 访问外部静态
+            // System.out.println(x);     // ❌ 不能访问外部实例
+        }
+    }
+}
+
+// 实例化（不用先有 Outer 实例）
+Outer.StaticInner s = new Outer.StaticInner();
+```
+
+> 相当于外部类的一个"静态成员"，**可以**有自己的静态成员。
+
+### ② 实例内部类 ⭐ 高频考点
+
+```java
+public class Outer {
+    private int x = 10;
+    private static int y = 20;
+
+    class Inner {                          // 实例内部类
+        void test() {
+            System.out.println(x);              // ✅ 直接访问
+            System.out.println(Outer.this.x);   // 显式访问外部的 x
+            System.out.println(y);              // ✅ 静态也行
+        }
+    }
+}
+
+// 实例化（必须先有 Outer 实例）
+Outer outer = new Outer();
+Outer.Inner i = outer.new Inner();         // ⚠️ 链式 new 语法
+```
+
+> **不能有静态成员**（`static final` 常量除外）。
+> `this` 指向内部类自身，`外部类.this` 指向外部类实例（同名变量时必须写）。
+
+**同名变量问题**：
+
+```java
+class Outer {
+    int x = 10;
+    class Inner {
+        int x = 20;                         // 内外同名
+        void test() {
+            System.out.println(x);              // 20  ← Inner 的
+            System.out.println(Outer.this.x);   // 10  ← Outer 的
+        }
+    }
+}
+```
+
+### ③ 局部内部类
+
+```java
+public void method() {
+    int localVar = 30;                      // 局部变量
+
+    class LocalInner {                      // 写在方法里
+        void test() {
+            System.out.println(localVar);   // ✅ JDK 8+ 自动 final
+        }
+    }
+
+    new LocalInner().test();
+}
+```
+
+> **JDK 8+**：不用显式 `final`，**自动判定**"有效 final"（变量没被改过）。
+> **但**：**只要内部类用了这个局部变量，它就被"冻结"了**，不能再赋值。
+> **实际中**：局部内部类几乎不用，要用也用**匿名内部类**代替。
+
+### ④ 匿名内部类 ⭐ 最常用
+
+```java
+// 1. 继承一个类
+new Animal() {                              // 没名字，直接继承
+    @Override
+    public void eat() {
+        System.out.println("猫吃鱼");
+    }
+}.eat();
+
+// 2. 实现一个接口
+Runnable r = new Runnable() {
+    @Override
+    public void run() {
+        System.out.println("跑起来");
+    }
+};
+r.run();
+```
+
+**4 个硬性限制**：
+
+| # | 限制 |
+|---|------|
+| ① | **没有类名**，不能重复使用 |
+| ② | **必须继承一个类 或 实现一个接口**（二选一） |
+| ③ | **不能定义构造方法**（没有类名） |
+| ④ | 访问外部**局部**变量时同样受**有效 final** 约束 |
+
+**Lambda 替代**（Java 8+ 函数式接口）：
+
+```java
+// 匿名内部类
+Runnable r = new Runnable() {
+    @Override
+    public void run() { System.out.println("跑"); }
+};
+
+// Lambda 写法
+Runnable r = () -> System.out.println("跑");
+```
+
+> **函数式接口**（只有一个抽象方法的接口）的匿名内部类能用 Lambda 替代，**更简洁**。
+
+### 实例化语法速记
+
+| 类型 | 语法 |
+|------|------|
+| 静态内部类 | `new Outer.StaticInner()` |
+| 实例内部类 | `outer.new Inner()` |
+| 局部内部类 | `new LocalInner()` |
+| 匿名内部类 | `new 父类() { ... }` 或 `new 接口() { ... }` |
+
+### 速记
+
+> 4 种内部类：静态（成员区·可静态）+ 实例（成员区·必须 `outer.new`）+ 局部（方法里·几乎不用）+ 匿名（一次性·函数式接口用 Lambda 替）
+> 实例内部类**不能**有静态成员、**不能**直接 new
+> 后 3 种访问外部局部变量 → 必须「有效 final」，**用了就被冻结**
+> 匿名内部类只能继承一个类或实现一个接口
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -1904,6 +2084,11 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `private` | 只能本类访问，范围最小 |
 | `public` | 任何位置都能访问，范围最大 |
 | `protected` | 同包 + 子类可访问，给"子孙"用 |
+| 内部类 | 定义在类内部的类，共 4 种（静态·实例·局部·匿名） |
+| `static class` | 静态内部类，成员区，可有静态成员，`new Outer.Inner()` |
+| `outer.new Inner()` | 实例内部类，成员区，**必须**先有 outer 实例 |
+| 匿名内部类 | 没有类名，定义即实例化，函数式接口可用 Lambda 替代 |
+| 有效 final | JDK 8+，局部变量没被改过就视为 final，被内部类用过后就"冻结" |
 
 ### 报错速查
 
@@ -1943,3 +2128,7 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 顶层类用 `protected` 修饰 | ❌ | 同上，`protected` 不修饰顶层类 |
 | 访问控制符修饰局部变量 | ❌ | 局部变量只在方法内，谈不上跨类访问 |
 | 跨包普通类访问 protected 字段 | ❌ | `protected` 只对子类和同包开放，不对"路人"开放 |
+| `new Outer.Inner()`（Inner 是实例内部类） | ❌ | 实例内部类必须 `outer.new Inner()` |
+| 在实例内部类里定义 `static int a;` | ❌ | 实例内部类不能有静态成员（`static final` 常量除外） |
+| 匿名内部类继承 2 个类 | ❌ | 匿名内部类只能继承一个类 或 实现一个接口（二选一） |
+| 内部类里修改被捕获的局部变量 | ❌ | 局部变量被内部类用过后就被"冻结"（有效 final） |
