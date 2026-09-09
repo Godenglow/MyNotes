@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数、单元测试、异常体系
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数、单元测试、异常体系、自定义异常
 
 ---
 
@@ -36,6 +36,7 @@
 23. [[#二十三、main 方法 args 与可变长参数|main 方法 args 与可变长参数]]
 24. [[#二十四、单元测试（JUnit 5）|单元测试（JUnit 5）]]
 25. [[#二十五、异常继承结构（Throwable 体系）|异常继承结构（Throwable 体系）]]
+26. [[#二十六、自定义异常|自定义异常]]
 
 ---
 
@@ -2413,6 +2414,141 @@ public String safeToString(Object o) {
 
 ---
 
+## 二十六、自定义异常
+
+> **一句话**：JDK 内置异常覆盖不了业务错误（名字长度、年龄、余额不足），**自定义异常 = 继承 `Exception` / `RuntimeException` + 两个构造方法**，业务代码里用 `throw new` 手动抛出。
+
+### 为什么要自定义异常
+
+| 场景 | JDK 有没有现成异常 |
+|------|--------------------|
+| 空指针、下标越界、类型转换 | ✅ 有（NPE、AIOOBE、CCE） |
+| **用户名长度不在 6-12 位** | ❌ 没有 |
+| **年龄小于 18 岁 / 余额不足** | ❌ 没有 |
+
+> **业务规则违反** → JDK 不可能预知你的业务 → **自己定义**。
+
+### 定义两步走 ⭐
+
+| 步骤 | 内容 |
+|------|------|
+| **第一步** | 编写异常类，**继承 `Exception`（编译时）或 `RuntimeException`（运行时）** |
+| **第二步** | 提供**两个构造方法**：无参 + `String message` 有参，有参里 `super(message)` |
+
+```java
+/** 编译时异常：继承 Exception */
+public class IllegalAgeException extends Exception {
+    public IllegalAgeException() { }
+
+    public IllegalAgeException(String message) {
+        super(message);          // 错误信息传给父类，getMessage() 能取到
+    }
+}
+
+/** 运行时异常：继承 RuntimeException */
+public class IllegalNameException extends RuntimeException {
+    public IllegalNameException() { }
+
+    public IllegalNameException(String message) {
+        super(message);
+    }
+}
+```
+
+> **为什么必须有 String 构造方法**：`throw new IllegalAgeException("年龄必须大于18")` 把信息存进父类 message 字段，异常被 catch 后 `e.getMessage()` 才能拿到。没有它，异常**只有类型没有信息**，排查全靠猜。
+
+### 继承 Exception 还是 RuntimeException？
+
+| 选择 | 异常性质 | 调用方 |
+|------|----------|--------|
+| `extends Exception` | 编译时异常（受检） | **必须** try-catch 或 throws |
+| `extends RuntimeException` | 运行时异常（非受检） | 可处理可不处理 |
+
+> **实际开发多用 `RuntimeException`**（Spring 的业务异常基本都是 Runtime 派），避免调用方到处写 try-catch。
+
+### 完整实战：用户注册
+
+```java
+// ① 自定义两个编译时异常
+public class IllegalNameException extends Exception {
+    public IllegalNameException() { }
+    public IllegalNameException(String message) { super(message); }
+}
+
+public class IllegalAgeException extends Exception {
+    public IllegalAgeException() { }
+    public IllegalAgeException(String message) { super(message); }
+}
+
+// ② 业务方法：抛出异常
+public class UserService {
+    public void register(String name, int age)
+            throws IllegalNameException, IllegalAgeException {   // 编译时异常要 throws 声明
+
+        if (name.length() < 6 || name.length() > 12) {
+            throw new IllegalNameException("名字长度必须在 6-12 位");
+        }
+        if (age < 18) {
+            throw new IllegalAgeException("年龄必须大于 18");
+        }
+        System.out.println("恭喜" + name + "注册成功！");
+    }
+}
+
+// ③ 调用方：必须处理
+public class Test {
+    public static void main(String[] args) {
+        UserService service = new UserService();
+        try {
+            service.register("tom", 20);          // ✅ 注册成功
+            service.register("tom", 15);          // ❌ 抛 IllegalAgeException
+        } catch (IllegalNameException | IllegalAgeException e) {
+            System.out.println("注册失败：" + e.getMessage());
+        }
+    }
+}
+```
+
+**运行效果**：
+
+```
+恭喜tom注册成功！
+注册失败：年龄必须大于 18
+```
+
+### 图示：抛出与捕获流转
+
+![[custom-exception-flow.svg]]
+
+### ⭐ throw vs throws（面试高频）
+
+| 维度 | `throw` | `throws` |
+|------|---------|----------|
+| **位置** | 方法**体内** | 方法**签名**上 |
+| **作用** | **动作**：抛出一个异常对象 | **声明**：本方法可能抛出的异常类型 |
+| **后跟** | 一个**异常对象**（`new` 的） | **异常类名**（可多个，逗号隔开） |
+| **执行后** | 方法**立即终止** | 只是声明，不终止 |
+| **数量** | 一次抛一个 | 可声明多个 |
+
+```java
+public void register(String name, int age)                     // 方法签名
+        throws IllegalNameException, IllegalAgeException {     // ← throws：声明
+    throw new IllegalNameException("...");                     // ← throw：动作
+}
+```
+
+> **口诀**：**throws 是预告片（可能出事），throw 是案发现场（真出事了）**。
+
+### 速记
+
+> 自定义异常两步：**继承 Exception / RuntimeException + 两个构造方法（无参 + String）**
+> `super(message)` 把错误信息传给父类，catch 后 `getMessage()` 能取到
+> `extends Exception` → 编译时（调用方必须处理）；`extends RuntimeException` → 运行时（看着办）
+> 实际开发**多用 RuntimeException**（Spring 业务异常都是 Runtime 派）
+> **throws 预告片、throw 案发现场** —— 前者声明可能出事，后者真的出事
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -2490,6 +2626,9 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `Exception` | 程序层面异常，可处理，分 Checked（受检）和 RuntimeException（非受检） |
 | Checked 异常 | 受检异常，编译器强制 try-catch 或 throws（如 IOException） |
 | Unchecked 异常 | 非受检异常（RuntimeException 派），编译器不强制处理（如 NPE） |
+| 自定义异常 | 继承 Exception/RuntimeException + 两个构造方法（无参 + String），表示业务错误 |
+| `throw` | 方法体内手动抛出异常对象，抛出后方法立即终止 |
+| `throws` | 方法签名上声明可能抛出的异常类型，只是声明不终止 |
 
 ### 报错速查
 
@@ -2544,3 +2683,6 @@ byte / short / char  →  int  →  long  →  float  →  double
 | try-catch 捕获 `OutOfMemoryError` | ⚠️ | Error 接不住也没意义，出现即 JVM 终止 |
 | `Integer.parseInt("abc")` | ❌ | 抛 NumberFormatException（运行时异常） |
 | `new FileInputStream("不存在的文件")` | ❌ | 抛 FileNotFoundException（编译时异常，必须处理） |
+| 自定义异常只有无参构造 | ⚠️ | 缺 String 构造 → 异常只有类型没信息，getMessage() 拿不到描述 |
+| `throw` 后面还写代码 | ❌ | throw 抛出后方法立即终止，后面代码不可达（编译报错） |
+| 方法 throws 编译时异常但调用方不处理 | ❌ | 调用方必须 try-catch 或继续 throws |
