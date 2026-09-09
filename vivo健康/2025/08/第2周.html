@@ -1,45 +1,88 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第2周周报 · 2025年08月</title><style>
+/* ===== 双主题变量（inject_theme.py 注入） ===== */
+:root{
+--bg:#0d1117;--side:#010409;--card:#161b22;--chip:#21262d;
+--border:#262d38;--hover:#10161f;
+--fg:#e6edf3;--strong:#f0f6fc;--muted:#8b949e;--faint:#6e7681;--quote:#b6c2cf;
+--link:#58a6ff;--h3:#79c0ff;--pre-fg:#c9d1d9;
+--warn:#d29922;--good:#3fb950;--bad:#f85149;
+--pre-bg:#282c34;
+--t-def:#abb2bf;--t-red:#e06c75;--t-green:#98c379;--t-orange:#d19a66;--t-purple:#c678dd;--t-yellow:#e5c07b;--t-cyan:#56b6c2;--t-blue:#61afef;--t-comment:#7f848e;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--side:#f6f8fa;--card:#f6f8fa;--chip:#eff2f5;
+--border:#d0d7de;--hover:#eef1f4;
+--fg:#1f2328;--strong:#1f2328;--muted:#57606a;--faint:#8c959f;--quote:#57606a;
+--link:#0969da;--h3:#0550ae;--pre-fg:#24292f;
+--warn:#9a6700;--good:#1a7f37;--bad:#cf222e;
+--pre-bg:#f6f8fa;
+--t-def:#24292f;--t-red:#cf222e;--t-green:#116329;--t-orange:#953800;--t-purple:#8250df;--t-yellow:#9a6700;--t-cyan:#0550ae;--t-blue:#0550ae;--t-comment:#6e7781;
+}
+.theme-btn{position:fixed;right:74px;bottom:26px;width:40px;height:40px;border-radius:50%;
+background:var(--chip);border:1px solid var(--border);color:var(--fg);font-size:16px;
+display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;transition:transform .15s}
+.theme-btn:hover{transform:scale(1.1);border-color:var(--link)}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:28px 20px 80px}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:28px 20px 80px}
 .wrap{max-width:1080px;margin:0 auto}
 h1{font-size:26px;font-weight:700;letter-spacing:-.4px}
-h2{font-size:19px;font-weight:650;margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid #262d38;display:flex;align-items:center;gap:9px}
-h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:#21262d;color:#8b949e;font-size:12px;font-weight:700}
-.sub{color:#8b949e;font-size:13px;margin-top:6px}
+h2{font-size:19px;font-weight:650;margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--chip);color:var(--muted);font-size:12px;font-weight:700}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:11px;margin:16px 0}
-.card{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:12px 14px}
-.card .k{color:#8b949e;font-size:11px;letter-spacing:.3px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:12px 14px}
+.card .k{color:var(--muted);font-size:11px;letter-spacing:.3px}
 .card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
-.card .d{color:#8b949e;font-size:11px;margin-top:3px}
+.card .d{color:var(--muted);font-size:11px;margin-top:3px}
 table{width:100%;border-collapse:collapse;font-size:12.5px;margin:11px 0}
-th,td{padding:6px 9px;text-align:left;border-bottom:1px solid #21262d}
-th{color:#8b949e;font-weight:600;font-size:11.5px;background:#161b22}
+th,td{padding:6px 9px;text-align:left;border-bottom:1px solid var(--chip)}
+th{color:var(--muted);font-weight:600;font-size:11.5px;background:var(--card)}
 td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
-.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:#161b22;font-size:13.5px}
+.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:var(--card);font-size:13.5px}
 .box .t{font-weight:650;margin-bottom:6px;font-size:13.5px}
-.b-ok{border-color:#3fb950}.b-ok .t{color:#3fb950}
-.b-warn{border-color:#d29922}.b-warn .t{color:#d29922}
-.b-bad{border-color:#f85149}.b-bad .t{color:#f85149}
-.b-info{border-color:#58a6ff}.b-info .t{color:#58a6ff}
+.b-ok{border-color:var(--good)}.b-ok .t{color:var(--good)}
+.b-warn{border-color:var(--warn)}.b-warn .t{color:var(--warn)}
+.b-bad{border-color:var(--bad)}.b-bad .t{color:var(--bad)}
+.b-info{border-color:var(--link)}.b-info .t{color:var(--link)}
 .box p{margin:4px 0}
-.box b{color:#e6edf3}
-.firstline{display:inline-block;background:#1c2431;border:1px solid #30394a;border-radius:8px;color:#58a6ff;font-weight:650;font-size:14.5px;padding:7px 16px;margin:2px 0 16px;font-variant-numeric:tabular-nums}
+.box b{color:var(--fg)}
+.firstline{display:inline-block;background:var(--card);border:1px solid var(--border);border-radius:8px;color:var(--link);font-weight:650;font-size:14.5px;padding:7px 16px;margin:2px 0 16px;font-variant-numeric:tabular-nums}
 ul,ol{margin:8px 0 8px 20px} li{margin:6px 0;font-size:13.5px}
-.chart{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:14px 12px 8px;margin:13px 0}
-.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid #262d38;padding-bottom:16px;margin-bottom:4px}
-.meta{color:#8b949e;font-size:12px;text-align:right;line-height:1.8}
-.foot{margin-top:36px;padding-top:16px;border-top:1px solid #262d38;color:#8b949e;font-size:11.5px}
+.chart{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:14px 12px 8px;margin:13px 0}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--border);padding-bottom:16px;margin-bottom:4px}
+.meta{color:var(--muted);font-size:12px;text-align:right;line-height:1.8}
+.foot{margin-top:36px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
 .tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600}
-.t-ok{background:rgba(63,185,80,.16);color:#3fb950}
-.t-warn{background:rgba(210,153,34,.16);color:#d29922}
-.t-bad{background:rgba(248,81,73,.16);color:#f85149}
-.t-info{background:rgba(88,166,255,.16);color:#58a6ff}
-.t-mu{background:#21262d;color:#8b949e}
-</style></head><body><div class="wrap"><div class="firstline">第2周：2025-08-11 ~ 2025-08-17</div><div class="hd"><div><h1>2025 年 08 月 · 第 2 周</h1></div><div class="meta">周期 2025-08-11 ~ 2025-08-17<br>2025 年 08 月 · 第 2 周 / 共 4 周</div></div>
+.t-ok{background:rgba(63,185,80,.16);color:var(--good)}
+.t-warn{background:rgba(210,153,34,.16);color:var(--warn)}
+.t-bad{background:rgba(248,81,73,.16);color:var(--bad)}
+.t-info{background:rgba(88,166,255,.16);color:var(--link)}
+.t-mu{background:var(--chip);color:var(--muted)}
+</style><script>
+(function(){var t=null;try{t=localStorage.getItem('nb-theme');}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+document.documentElement.dataset.theme=t;})();
+</script></head><body><div class="wrap"><div class="firstline">第2周：2025-08-11 ~ 2025-08-17</div><div class="hd"><div><h1>2025 年 08 月 · 第 2 周</h1></div><div class="meta">周期 2025-08-11 ~ 2025-08-17<br>2025 年 08 月 · 第 2 周 / 共 4 周</div></div>
 <h2><span class="n">A</span>周期信息</h2>
 <div class="cards"><div class="card"><div class="k">周序号</div><div class="v" style="color:#58a6ff">第 2 周</div><div class="d">2025 年 08 月 · 共 4 周</div></div><div class="card"><div class="k">覆盖天数</div><div class="v" style="color:#58a6ff">7 天</div><div class="d">2025-08-11 → 2025-08-17</div></div><div class="card"><div class="k">数据天数</div><div class="v" style="color:#3fb950">7 / 7</div><div class="d">vivo 有效记录</div></div><div class="card"><div class="k">总步数环比</div><div class="v" style="color:#39c5cf"><span style='color:#ff7b72'>-56%</span></div><div class="d">对比上一自然周</div></div></div>
 <h2><span class="n">1</span>步数与活动</h2>
 <div class="cards"><div class="card"><div class="k">总步数</div><div class="v" style="color:#58a6ff">6,429</div><div class="d">环比 <span style='color:#ff7b72'>-56%</span></div></div><div class="card"><div class="k">日均步数</div><div class="v" style="color:#58a6ff">918</div><div class="d">目标 8000</div></div><div class="card"><div class="k">达标天数(≥8000)</div><div class="v" style="color:#3fb950">0 / 7</div><div class="d"></div></div><div class="card"><div class="k">久坐天数(<1000)</div><div class="v" style="color:#d29922">4</div><div class="d"></div></div><div class="card"><div class="k">总距离</div><div class="v" style="color:#39c5cf">4.95 km</div><div class="d">环比 <span style='color:#ff7b72'>-56%</span></div></div><div class="card"><div class="k">活动热量</div><div class="v" style="color:#d29922">174 kcal</div><div class="d">环比 <span style='color:#ff7b72'>-56%</span></div></div></div>
 <div class="chart"><svg viewBox="0 0 1000 250" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block"><text x="46" y="34" fill="#e6edf3" font-size="13" font-weight="600">每日步数（绿色 = 达标 ≥8000）</text><line x1="46" y1="204.0" x2="954" y2="204.0" stroke="#21262d"/><text x="40" y="207.0" fill="#8b949e" font-size="9" text-anchor="end">0</text><line x1="46" y1="164.5" x2="954" y2="164.5" stroke="#21262d"/><text x="40" y="167.5" fill="#8b949e" font-size="9" text-anchor="end">2,300</text><line x1="46" y1="125.0" x2="954" y2="125.0" stroke="#21262d"/><text x="40" y="128.0" fill="#8b949e" font-size="9" text-anchor="end">4,600</text><line x1="46" y1="85.5" x2="954" y2="85.5" stroke="#21262d"/><text x="40" y="88.5" fill="#8b949e" font-size="9" text-anchor="end">6,900</text><line x1="46" y1="46.0" x2="954" y2="46.0" stroke="#21262d"/><text x="40" y="49.0" fill="#8b949e" font-size="9" text-anchor="end">9,200</text><line x1="46" y1="66.6" x2="954" y2="66.6" stroke="#d29922" stroke-width="1.2" stroke-dasharray="5,4"/><text x="950" y="61.6" fill="#d29922" font-size="9" text-anchor="end">目标 8000</text><rect x="61.6" y="180.7" width="98.6" height="23.3" fill="#58a6ff" opacity="0.85" rx="3"/><text x="110.9" y="176.7" fill="#8b949e" font-size="9.5" text-anchor="middle">1,359</text><text x="110.9" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周一 8/11</text><rect x="191.3" y="186.6" width="98.6" height="17.4" fill="#58a6ff" opacity="0.85" rx="3"/><text x="240.6" y="182.6" fill="#8b949e" font-size="9.5" text-anchor="middle">1,014</text><text x="240.6" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周二 8/12</text><rect x="321.0" y="182.9" width="98.6" height="21.1" fill="#58a6ff" opacity="0.85" rx="3"/><text x="370.3" y="178.9" fill="#8b949e" font-size="9.5" text-anchor="middle">1,228</text><text x="370.3" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周三 8/13</text><rect x="450.7" y="194.1" width="98.6" height="9.9" fill="#d29922" opacity="0.85" rx="3"/><text x="500.0" y="190.1" fill="#8b949e" font-size="9.5" text-anchor="middle">574</text><text x="500.0" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周四 8/14</text><rect x="580.4" y="190.0" width="98.6" height="14.0" fill="#d29922" opacity="0.85" rx="3"/><text x="629.7" y="186.0" fill="#8b949e" font-size="9.5" text-anchor="middle">814</text><text x="629.7" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周五 8/15</text><rect x="710.1" y="188.3" width="98.6" height="15.7" fill="#d29922" opacity="0.85" rx="3"/><text x="759.4" y="184.3" fill="#8b949e" font-size="9.5" text-anchor="middle">915</text><text x="759.4" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周六 8/16</text><rect x="839.9" y="195.0" width="98.6" height="9.0" fill="#d29922" opacity="0.85" rx="3"/><text x="889.1" y="191.0" fill="#8b949e" font-size="9.5" text-anchor="middle">525</text><text x="889.1" y="219" fill="#8b949e" font-size="9" text-anchor="middle">周日 8/17</text></svg></div>
 <table><tr><th>日期</th><th>星期</th><th class="n">步数</th><th class="n">距离(km)</th><th class="n">热量(kcal)</th><th>状态</th></tr>
-<tr><td>2025-08-11</td><td>周一</td><td class='n'>1,359</td><td class='n'>1.05</td><td class='n'>37</td><td><span class='tag t-info'>未达标</span></td></tr><tr><td>2025-08-12</td><td>周二</td><td class='n'>1,014</td><td class='n'>0.78</td><td class='n'>27</td><td><span class='tag t-info'>未达标</span></td></tr><tr><td>2025-08-13</td><td>周三</td><td class='n'>1,228</td><td class='n'>0.95</td><td class='n'>33</td><td><span class='tag t-info'>未达标</span></td></tr><tr><td>2025-08-14</td><td>周四</td><td class='n'>574</td><td class='n'>0.44</td><td class='n'>16</td><td><span class='tag t-bad'>久坐</span></td></tr><tr><td>2025-08-15</td><td>周五</td><td class='n'>814</td><td class='n'>0.63</td><td class='n'>22</td><td><span class='tag t-bad'>久坐</span></td></tr><tr><td>2025-08-16</td><td>周六</td><td class='n'>915</td><td class='n'>0.70</td><td class='n'>25</td><td><span class='tag t-bad'>久坐</span></td></tr><tr><td>2025-08-17</td><td>周日</td><td class='n'>525</td><td class='n'>0.40</td><td class='n'>14</td><td><span class='tag t-bad'>久坐</span></td></tr></table><div class="chart"><svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block"><text x="46" y="34" fill="#e6edf3" font-size="13" font-weight="600">活动时段分布（按步数占比）</text><rect x="46.0" y="46" width="78.2" height="40" fill="#8b949e" opacity="0.8" rx="4"/><text x="85.1" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">9%</text><rect x="124.2" y="46" width="212.4" height="40" fill="#58a6ff" opacity="0.8" rx="4"/><text x="230.5" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">23%</text><rect x="336.7" y="46" width="220.2" height="40" fill="#39c5cf" opacity="0.8" rx="4"/><text x="446.8" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">24%</text><rect x="556.8" y="46" width="397.2" height="40" fill="#d29922" opacity="0.8" rx="4"/><text x="755.4" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">44%</text><rect x="46" y="128" width="9" height="9" fill="#8b949e" rx="2"/><text x="59" y="136" fill="#8b949e" font-size="10">凌晨(0-6) 9%</text><rect x="221" y="128" width="9" height="9" fill="#58a6ff" rx="2"/><text x="234" y="136" fill="#8b949e" font-size="10">上午(6-12) 23%</text><rect x="396" y="128" width="9" height="9" fill="#39c5cf" rx="2"/><text x="409" y="136" fill="#8b949e" font-size="10">下午(12-18) 24%</text><rect x="571" y="128" width="9" height="9" fill="#d29922" rx="2"/><text x="584" y="136" fill="#8b949e" font-size="10">晚间(18-24) 44%</text></svg></div><div class="box b-info"><div class="t">针对性建议（步数）</div><ul><li><b>达标天数为 0</b>：8000 目标对当前基线偏高，先降到 5000 步让每天都能“达成”，第 1–4 周稳住后再按 5000→6500→8000 分阶段上调。</li><li><b>久坐 4 天</b>（&lt;1000 步）：设 10:00 / 15:00 / 17:00 三个起身提醒，每次走 3–5 分钟，仅此一项每天约增加 600–1000 步。</li></ul></div><h2><span class="n">2</span>心率 / 血氧 / 压力</h2><div class="box b-info"><div class="t">无手表数据</div>该时段 vivo WATCH GT2 尚未启用（2026-07-02 起），无连续心率、血氧与压力记录。</div><h2><span class="n">3</span>睡眠</h2><div class="box b-info"><div class="t">无睡眠记录</div>该时段无手表睡眠监测数据。</div><h2><span class="n">4</span>运动记录</h2><div class="box b-info"><div class="t">无运动记录</div>该时段没有结构化运动（自动识别或手动打卡）。</div><h2><span class="n">5</span>本周小结</h2><div class="box b-bad"><div class="t">本周小结</div><ul><li>有数据 7/7 天，总步数 <b>6,429</b>，日均 <b>918</b>。</li><li>达标（≥8000）<b>0 天</b>，久坐（&lt;1000 步）4 天。</li><li>最高单日 <b>1,359 步</b>（2025-08-11）。</li><li>本周无结构化运动记录。</li></ul></div><div class="foot">数据来源：vivo 健康 App 导出包 · 步数/距离/热量 2023-08-06 起，心率/血氧/压力/睡眠/运动 2026-07-02（手表）起 · 无数据时段如实标注 · 生成 2026-09-04</div></div></body></html>
+<tr><td>2025-08-11</td><td>周一</td><td class='n'>1,359</td><td class='n'>1.05</td><td class='n'>37</td><td><span class='tag t-info'>未达标</span></td></tr><tr><td>2025-08-12</td><td>周二</td><td class='n'>1,014</td><td class='n'>0.78</td><td class='n'>27</td><td><span class='tag t-info'>未达标</span></td></tr><tr><td>2025-08-13</td><td>周三</td><td class='n'>1,228</td><td class='n'>0.95</td><td class='n'>33</td><td><span class='tag t-info'>未达标</span></td></tr><tr><td>2025-08-14</td><td>周四</td><td class='n'>574</td><td class='n'>0.44</td><td class='n'>16</td><td><span class='tag t-bad'>久坐</span></td></tr><tr><td>2025-08-15</td><td>周五</td><td class='n'>814</td><td class='n'>0.63</td><td class='n'>22</td><td><span class='tag t-bad'>久坐</span></td></tr><tr><td>2025-08-16</td><td>周六</td><td class='n'>915</td><td class='n'>0.70</td><td class='n'>25</td><td><span class='tag t-bad'>久坐</span></td></tr><tr><td>2025-08-17</td><td>周日</td><td class='n'>525</td><td class='n'>0.40</td><td class='n'>14</td><td><span class='tag t-bad'>久坐</span></td></tr></table><div class="chart"><svg viewBox="0 0 1000 150" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block"><text x="46" y="34" fill="#e6edf3" font-size="13" font-weight="600">活动时段分布（按步数占比）</text><rect x="46.0" y="46" width="78.2" height="40" fill="#8b949e" opacity="0.8" rx="4"/><text x="85.1" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">9%</text><rect x="124.2" y="46" width="212.4" height="40" fill="#58a6ff" opacity="0.8" rx="4"/><text x="230.5" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">23%</text><rect x="336.7" y="46" width="220.2" height="40" fill="#39c5cf" opacity="0.8" rx="4"/><text x="446.8" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">24%</text><rect x="556.8" y="46" width="397.2" height="40" fill="#d29922" opacity="0.8" rx="4"/><text x="755.4" y="80" fill="#0d1117" font-size="11" font-weight="600" text-anchor="middle">44%</text><rect x="46" y="128" width="9" height="9" fill="#8b949e" rx="2"/><text x="59" y="136" fill="#8b949e" font-size="10">凌晨(0-6) 9%</text><rect x="221" y="128" width="9" height="9" fill="#58a6ff" rx="2"/><text x="234" y="136" fill="#8b949e" font-size="10">上午(6-12) 23%</text><rect x="396" y="128" width="9" height="9" fill="#39c5cf" rx="2"/><text x="409" y="136" fill="#8b949e" font-size="10">下午(12-18) 24%</text><rect x="571" y="128" width="9" height="9" fill="#d29922" rx="2"/><text x="584" y="136" fill="#8b949e" font-size="10">晚间(18-24) 44%</text></svg></div><div class="box b-info"><div class="t">针对性建议（步数）</div><ul><li><b>达标天数为 0</b>：8000 目标对当前基线偏高，先降到 5000 步让每天都能“达成”，第 1–4 周稳住后再按 5000→6500→8000 分阶段上调。</li><li><b>久坐 4 天</b>（&lt;1000 步）：设 10:00 / 15:00 / 17:00 三个起身提醒，每次走 3–5 分钟，仅此一项每天约增加 600–1000 步。</li></ul></div><h2><span class="n">2</span>心率 / 血氧 / 压力</h2><div class="box b-info"><div class="t">无手表数据</div>该时段 vivo WATCH GT2 尚未启用（2026-07-02 起），无连续心率、血氧与压力记录。</div><h2><span class="n">3</span>睡眠</h2><div class="box b-info"><div class="t">无睡眠记录</div>该时段无手表睡眠监测数据。</div><h2><span class="n">4</span>运动记录</h2><div class="box b-info"><div class="t">无运动记录</div>该时段没有结构化运动（自动识别或手动打卡）。</div><h2><span class="n">5</span>本周小结</h2><div class="box b-bad"><div class="t">本周小结</div><ul><li>有数据 7/7 天，总步数 <b>6,429</b>，日均 <b>918</b>。</li><li>达标（≥8000）<b>0 天</b>，久坐（&lt;1000 步）4 天。</li><li>最高单日 <b>1,359 步</b>（2025-08-11）。</li><li>本周无结构化运动记录。</li></ul></div><div class="foot">数据来源：vivo 健康 App 导出包 · 步数/距离/热量 2023-08-06 起，心率/血氧/压力/睡眠/运动 2026-07-02（手表）起 · 无数据时段如实标注 · 生成 2026-09-04</div></div><button class="theme-btn" id="themeBtn" title="切换 浅色/深色（默认跟随系统）">☀️</button>
+<script>
+(function(){
+var tb=document.getElementById('themeBtn');if(!tb)return;
+function syncIcon(){tb.textContent=document.documentElement.dataset.theme==='light'?'🌙':'☀️';}
+syncIcon();
+tb.onclick=function(){
+  var next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('nb-theme',next);}catch(e){}
+  try{sessionStorage.setItem('nb-scroll',window.scrollY);}catch(e){}
+  location.reload();
+};
+try{var y=sessionStorage.getItem('nb-scroll');if(y!==null){window.scrollTo(0,+y);sessionStorage.removeItem('nb-scroll');}}catch(e){}
+})();
+</script></body></html>

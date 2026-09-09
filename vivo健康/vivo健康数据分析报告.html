@@ -1,42 +1,70 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>vivo 健康数据分析报告</title><style>
+/* ===== 双主题变量（inject_theme.py 注入） ===== */
+:root{
+--bg:#0d1117;--side:#010409;--card:#161b22;--chip:#21262d;
+--border:#262d38;--hover:#10161f;
+--fg:#e6edf3;--strong:#f0f6fc;--muted:#8b949e;--faint:#6e7681;--quote:#b6c2cf;
+--link:#58a6ff;--h3:#79c0ff;--pre-fg:#c9d1d9;
+--warn:#d29922;--good:#3fb950;--bad:#f85149;
+--pre-bg:#282c34;
+--t-def:#abb2bf;--t-red:#e06c75;--t-green:#98c379;--t-orange:#d19a66;--t-purple:#c678dd;--t-yellow:#e5c07b;--t-cyan:#56b6c2;--t-blue:#61afef;--t-comment:#7f848e;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--side:#f6f8fa;--card:#f6f8fa;--chip:#eff2f5;
+--border:#d0d7de;--hover:#eef1f4;
+--fg:#1f2328;--strong:#1f2328;--muted:#57606a;--faint:#8c959f;--quote:#57606a;
+--link:#0969da;--h3:#0550ae;--pre-fg:#24292f;
+--warn:#9a6700;--good:#1a7f37;--bad:#cf222e;
+--pre-bg:#f6f8fa;
+--t-def:#24292f;--t-red:#cf222e;--t-green:#116329;--t-orange:#953800;--t-purple:#8250df;--t-yellow:#9a6700;--t-cyan:#0550ae;--t-blue:#0550ae;--t-comment:#6e7781;
+}
+.theme-btn{position:fixed;right:74px;bottom:26px;width:40px;height:40px;border-radius:50%;
+background:var(--chip);border:1px solid var(--border);color:var(--fg);font-size:16px;
+display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;transition:transform .15s}
+.theme-btn:hover{transform:scale(1.1);border-color:var(--link)}
+
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;padding:28px 20px 80px}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.65;padding:28px 20px 80px}
 .wrap{max-width:1080px;margin:0 auto}
 h1{font-size:26px;font-weight:700;letter-spacing:-.4px}
-h2{font-size:19px;font-weight:650;margin:38px 0 14px;padding-bottom:9px;border-bottom:1px solid #262d38;display:flex;align-items:center;gap:9px}
-h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:#21262d;color:#8b949e;font-size:12px;font-weight:700}
-h3{font-size:15px;font-weight:620;margin:22px 0 9px;color:#e6edf3}
-.sub{color:#8b949e;font-size:13px;margin-top:6px}
+h2{font-size:19px;font-weight:650;margin:38px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--chip);color:var(--muted);font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:620;margin:22px 0 9px;color:var(--fg)}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(158px,1fr));gap:11px;margin:18px 0}
-.card{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:13px 14px}
-.card .k{color:#8b949e;font-size:11px;letter-spacing:.3px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:13px 14px}
+.card .k{color:var(--muted);font-size:11px;letter-spacing:.3px}
 .card .v{font-size:23px;font-weight:680;margin-top:3px;line-height:1.2}
-.card .d{color:#8b949e;font-size:11px;margin-top:3px}
-.chart{background:#161b22;border:1px solid #262d38;border-radius:9px;padding:14px 12px 8px;margin:13px 0}
+.card .d{color:var(--muted);font-size:11px;margin-top:3px}
+.chart{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:14px 12px 8px;margin:13px 0}
 table{width:100%;border-collapse:collapse;font-size:12.5px;margin:11px 0}
-th,td{padding:7px 9px;text-align:left;border-bottom:1px solid #21262d}
-th{color:#8b949e;font-weight:600;font-size:11.5px;background:#161b22;position:sticky;top:0}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--chip)}
+th{color:var(--muted);font-weight:600;font-size:11.5px;background:var(--card);position:sticky;top:0}
 td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
-tr:hover td{background:#161b22}
+tr:hover td{background:var(--card)}
 .tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600}
-.t-bad{background:rgba(248,81,73,.16);color:#f85149}
-.t-warn{background:rgba(210,153,34,.16);color:#d29922}
-.t-ok{background:rgba(63,185,80,.16);color:#3fb950}
-.t-info{background:rgba(88,166,255,.16);color:#58a6ff}
-.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:#161b22;font-size:13.5px}
+.t-bad{background:rgba(248,81,73,.16);color:var(--bad)}
+.t-warn{background:rgba(210,153,34,.16);color:var(--warn)}
+.t-ok{background:rgba(63,185,80,.16);color:var(--good)}
+.t-info{background:rgba(88,166,255,.16);color:var(--link)}
+.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:var(--card);font-size:13.5px}
 .box .t{font-weight:650;margin-bottom:5px;font-size:13.5px}
-.b-bad{border-color:#f85149} .b-bad .t{color:#f85149}
-.b-warn{border-color:#d29922} .b-warn .t{color:#d29922}
-.b-ok{border-color:#3fb950} .b-ok .t{color:#3fb950}
-.b-info{border-color:#58a6ff} .b-info .t{color:#58a6ff}
+.b-bad{border-color:var(--bad)} .b-bad .t{color:var(--bad)}
+.b-warn{border-color:var(--warn)} .b-warn .t{color:var(--warn)}
+.b-ok{border-color:var(--good)} .b-ok .t{color:var(--good)}
+.b-info{border-color:var(--link)} .b-info .t{color:var(--link)}
 ul,ol{margin:8px 0 8px 20px} li{margin:4px 0;font-size:13.5px}
-code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:12px;color:#bc8cff}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:12px;color:#bc8cff}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:13px}
 @media(max-width:760px){.grid2{grid-template-columns:1fr}}
-.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid #262d38;padding-bottom:16px}
-.meta{color:#8b949e;font-size:12px;text-align:right;line-height:1.8}
-.foot{margin-top:40px;padding-top:16px;border-top:1px solid #262d38;color:#8b949e;font-size:11.5px}
-</style></head><body><div class="wrap"><div class="hd"><div>
+.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--border);padding-bottom:16px}
+.meta{color:var(--muted);font-size:12px;text-align:right;line-height:1.8}
+.foot{margin-top:40px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
+</style><script>
+(function(){var t=null;try{t=localStorage.getItem('nb-theme');}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+document.documentElement.dataset.theme=t;})();
+</script></head><body><div class="wrap"><div class="hd"><div>
 <h1>vivo 健康数据分析报告</h1>
 <div class="sub">数据源：vivo 健康 App 导出包 <code>2095636178481512449健康.xlsx</code>（13 张表，4.5 MB）　·　生成于 2026-09-04</div>
 </div><div class="meta">
@@ -252,4 +280,19 @@ code{background:#21262d;padding:1px 5px;border-radius:4px;font-size:12px;color:#
 置信度说明：步数 / 运动记录为高置信；睡眠仅有起止时间与总时长、<b>无分期数据</b>；心率为日最高 / 日最低标量、<b>无连续曲线</b>；体重仅单一快照；压力与血氧基于手表连续采样，样本 63 天。<br>
 <b>本文为数据解读与生活方式建议，不构成医学诊断。</b>涉及睡眠障碍、体重管理与运动处方，请结合体检与医生意见执行。<br>
 生成时间：2026-09-04　·　样本区间：2023-08-06 → 2026-09-03（1023 天）
-</div></div></body></html>
+</div></div><button class="theme-btn" id="themeBtn" title="切换 浅色/深色（默认跟随系统）">☀️</button>
+<script>
+(function(){
+var tb=document.getElementById('themeBtn');if(!tb)return;
+function syncIcon(){tb.textContent=document.documentElement.dataset.theme==='light'?'🌙':'☀️';}
+syncIcon();
+tb.onclick=function(){
+  var next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('nb-theme',next);}catch(e){}
+  try{sessionStorage.setItem('nb-scroll',window.scrollY);}catch(e){}
+  location.reload();
+};
+try{var y=sessionStorage.getItem('nb-scroll');if(y!==null){window.scrollTo(0,+y);sessionStorage.removeItem('nb-scroll');}}catch(e){}
+})();
+</script></body></html>
