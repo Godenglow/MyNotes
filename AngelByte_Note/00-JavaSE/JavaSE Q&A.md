@@ -48,6 +48,7 @@
 35. [[#三十五、HashMap 底层：哈希表与源码|HashMap 底层：哈希表与源码]]
 36. [[#三十六、进程与线程概述|进程与线程概述]]
 37. [[#三十七、JVM 与 Java 程序运行原理|JVM 与 Java 程序运行原理]]
+38. [[#三十八、实现线程的两种方式与 run/start 区别|实现线程的两种方式与 run/start 区别]]
 
 ---
 
@@ -3147,6 +3148,64 @@ CPU 处理一个任务的同时还能处理多个线程 → 充分利用 CPU 资
 
 ---
 
+## 三十八、实现线程的两种方式与 run/start 区别
+
+> **一句话**：实现线程要么**继承 Thread**、要么**实现 Runnable 接口**（推荐，保留继承权），任务统一写在 `run()` 里；但启动必须用 `t.start()` —— **直接调 `run()` 只是普通方法调用，不会新建线程**。
+
+![[thread-impl-run-vs-start.svg]]
+
+### 两种实现方式
+
+```java
+// 方式一：继承 Thread
+class MyThread extends Thread {
+    @Override public void run() { /* 任务代码 */ }
+}
+Thread t = new MyThread();
+t.start();
+
+// 方式二：实现 Runnable（推荐）
+class MyRunnable implements Runnable {
+    @Override public void run() { /* 任务代码 */ }
+}
+Thread t = new Thread(new MyRunnable());
+t.start();
+```
+
+### 为什么优先选 Runnable
+
+1. 实现接口的同时**保留了类的继承**（Java 单继承，继承了 Thread 就不能再继承别的）
+2. 可以使用匿名内部类，写法更简洁
+3. 内存视角：多个线程可以共享堆里**同一个** MyRunnable 对象，天然适合资源共享
+4. 解开"任务"与"线程"的耦合 —— 任务交给谁执行（Thread / 线程池）都行
+
+### t.start() 和 t.run() 的本质区别
+
+| | t.run() | t.start() |
+|---|---------|-----------|
+| 本质 | **普通方法调用** | **启动新线程** |
+| 执行位置 | 当前线程的栈里压栈执行 | 新线程自己的栈里执行 |
+| 新建线程？ | ❌ 不新建 | ✅ 新建 |
+| 调用后 | 跑完 run 才回去 | start() 立即结束，任务由新线程异步执行 |
+
+两者本质上没有区别，都是方法调用，只不过两个方法完成的任务不同：`start()` 负责"生"新线程，`run()` 负责"干"任务。
+
+### 线程常用方法
+
+| 方法 | 类型 | 作用 |
+|------|------|------|
+| `String getName()` | 实例方法 | 获取线程名 |
+| `void setName(String name)` | 实例方法 | 设置线程名 |
+| `static Thread currentThread()` | 静态方法 | 获取当前正在执行的线程对象 |
+
+### 速记
+
+> 实现线程两招：extends Thread / implements Runnable，推荐后者（保留继承 + 可共享任务对象）
+> `start()` 生新线程（新栈），`run()` 只是普通调用（当前栈）—— 直接调 run 不会有多线程
+> `currentThread()` 拿当前线程；getName/setName 管名字
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -3281,6 +3340,11 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 线程共享内存 | 堆 Heap、方法区（一份，线程通信的地方，也是冲突来源） |
 | 线程私有内存 | 虚拟机栈、本地方法栈、程序计数器（各一份，互不干扰） |
 | JVM 启动线程 | java 程序启动至少两个线程：main 主线程 + 垃圾回收线程 |
+| 实现 Thread | 继承 Thread 重写 run()；缺点：占掉唯一继承权 |
+| 实现 Runnable | 推荐：实现接口保留继承，多线程可共享同一个任务对象 |
+| `t.start()` | 启动新线程（新栈），start() 立即结束，任务异步执行 |
+| `t.run()` | 普通方法调用，在当前线程栈里执行，不会新建线程 |
+| `currentThread()` | 静态方法，获取当前正在执行的线程对象 |
 
 ### 报错速查
 
@@ -3339,5 +3403,6 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `throw` 后面还写代码 | ❌ | throw 抛出后方法立即终止，后面代码不可达（编译报错） |
 | 方法 throws 编译时异常但调用方不处理 | ❌ | 调用方必须 try-catch 或继续 throws |
 | 自定义类只重写 equals 不重写 hashCode 当 key | ⚠️ | 内容相同的两个对象散到不同桶 → 去重失效 |
+| 想启动线程却直接调 `t.run()` | ⚠️ | 只是普通方法调用，没有新线程，全在当前线程跑 |
 | 自定义类只重写 hashCode 不重写 equals 当 key | ⚠️ | 同桶内 equals 判"不同" → 出现重复 key |
 | new HashMap() 后立即 put 前访问内部数组 | ⚠️ | table 为 null，首次 put 才初始化（懒加载） |

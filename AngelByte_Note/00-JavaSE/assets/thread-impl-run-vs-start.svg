@@ -1,0 +1,47 @@
+<svg viewBox="0 0 680 428" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI','Microsoft YaHei',sans-serif">
+  <rect width="680" height="428" fill="#0d1117"/>
+  <text x="340" y="26" text-anchor="middle" font-size="16" font-weight="bold" fill="#e6edf3">实现线程：两种方式 &amp; run vs start</text>
+
+  <rect x="20" y="40" width="310" height="240" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="38" y="62" font-size="13" font-weight="bold" fill="#58a6ff">方式一：继承 Thread</text>
+  <g font-family="Consolas,monospace" font-size="11" fill="#c9d1d9">
+    <text x="44" y="82">class MyThread extends Thread {</text>
+    <text x="58" y="99" fill="#8b949e">@Override public void run() {...}</text>
+    <text x="44" y="116">}</text>
+    <text x="44" y="133">Thread t = new MyThread();</text>
+    <text x="44" y="150">t.start();   <tspan fill="#3fb950">// 启动线程</tspan></text>
+  </g>
+  <text x="38" y="180" font-size="13" font-weight="bold" fill="#3fb950">方式二：实现 Runnable（推荐）</text>
+  <g font-family="Consolas,monospace" font-size="11" fill="#c9d1d9">
+    <text x="44" y="200">class MyRunnable implements Runnable {</text>
+    <text x="58" y="217" fill="#8b949e">@Override public void run() {...}</text>
+    <text x="44" y="234">}</text>
+    <text x="44" y="251">Thread t = new Thread(new MyRunnable());</text>
+  </g>
+  <text x="38" y="272" font-size="11" fill="#d29922">推荐第二种：实现接口的同时保留了类的继承</text>
+
+  <rect x="350" y="40" width="310" height="240" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="368" y="62" font-size="13" font-weight="bold" fill="#bc8cff">JVM 内存视角</text>
+  <rect x="368" y="74" width="128" height="92" rx="8" fill="#1c2530" stroke="#58a6ff"/>
+  <text x="432" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#58a6ff">方式一</text>
+  <text x="378" y="110" font-size="10.5" fill="#c9d1d9">main 栈：MyThread t</text>
+  <text x="378" y="128" font-size="10.5" fill="#c9d1d9">每个线程 run 各自的栈帧</text>
+  <text x="378" y="146" font-size="10.5" fill="#8b949e">new 几个就有几个任务对象</text>
+  <rect x="512" y="74" width="128" height="92" rx="8" fill="#1c2530" stroke="#3fb950"/>
+  <text x="576" y="92" text-anchor="middle" font-size="11" font-weight="bold" fill="#3fb950">方式二</text>
+  <text x="522" y="110" font-size="10.5" fill="#c9d1d9">两个线程共享堆里</text>
+  <text x="522" y="128" font-size="10.5" fill="#c9d1d9"><tspan fill="#d29922" font-weight="bold">同一个</tspan> MyRunnable 对象</text>
+  <text x="522" y="146" font-size="10.5" fill="#8b949e">→ 天然适合资源共享</text>
+  <rect x="368" y="176" width="272" height="52" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <text x="380" y="196" font-size="10.5" fill="#c9d1d9">main 栈帧：t ──→ 堆：MyThread/Runnable 对象</text>
+  <text x="380" y="216" font-size="10.5" fill="#c9d1d9">线程栈（VM Stack）每线程一个，互不干扰</text>
+  <text x="368" y="252" font-size="11" fill="#8b949e">接口方式解开"任务"与"线程"的耦合：</text>
+  <text x="368" y="270" font-size="11" fill="#c9d1d9">任务交给谁执行（Thread / 线程池）都行</text>
+
+  <rect x="20" y="294" width="640" height="118" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="38" y="318" font-size="13" font-weight="bold" fill="#f85149">t.start() 和 t.run() 的本质区别</text>
+  <text x="38" y="340" font-size="11.5" fill="#c9d1d9"><tspan fill="#f85149" font-weight="bold">t.run()</tspan>：普通方法调用 —— 在<tspan font-weight="bold">当前线程</tspan>的栈里压栈执行，不新建线程，跑完才回去</text>
+  <text x="38" y="362" font-size="11.5" fill="#c9d1d9"><tspan fill="#3fb950" font-weight="bold">t.start()</tspan>：启动新线程 —— 新线程有<tspan font-weight="bold">自己的栈</tspan>，JVM 把 run 压到<tspan font-weight="bold">新栈</tspan>里自动调用</text>
+  <text x="38" y="384" font-size="11" fill="#8b949e">本质没区别：都是方法调用，只是完成的任务不同；start() 启动后立即结束，任务由新线程异步执行</text>
+  <text x="38" y="404" font-size="11" fill="#bc8cff">常用方法：getName() / setName(String)　·　static Thread currentThread()（当前线程对象）</text>
+</svg>
