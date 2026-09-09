@@ -3291,6 +3291,45 @@ public static synchronized void m() { ... }
 
 ---
 
+## 四十一、synchronized 互斥判断：四道面试题
+
+> **一句话**：锁（monitor）**挂在对象上**（对象头 Mark Word），不挂在方法上 —— 互斥判断只看一件事：**抢的是不是同一把锁**。同锁才互斥，跟几个方法、几个线程无关。
+
+![[thread-sync-interview.svg]]
+
+### 底层真相（判断的前提）
+
+```java
+// 实例方法上的 synchronized 是语法糖，两者完全等价：
+public synchronized void withdraw(double money) { ... }
+
+public void withdraw(double money) {
+    synchronized (this) { ... }
+}
+```
+
+一个对象只有一把锁；实例方法锁固定是 this，不够灵活 —— `synchronized(共享对象){...}` 代码块可自选锁对象和同步范围，更灵活。
+
+### 四道面试题对照
+
+| 场景 | 结果 | 原因 |
+|------|------|------|
+| ① 同一对象，m1/m2 都 synchronized，t1 调 m1（5s）后 t2 调 m2 | **m2 必须等** | 抢同一个 this 锁，一把锁只能一人持有 |
+| ② m1/m2 都 synchronized，但两个线程各 new 一个对象 | **不用等** | 两个对象 = 两把不同的 this 锁 |
+| ③ withdraw() 加锁，getBalance() 没加 | **不拦** | 非同步方法不参与抢锁，照样能进 |
+| ④ static synchronized 方法 | **全局排队** | 锁 MyClass.class 类锁，类只有一个 → 类锁只有一把 |
+
+注意：**类锁和 this 锁是两把不同的锁** —— 一个线程进静态同步方法、另一个线程进同一对象的实例同步方法，互不干扰。
+
+### 速记
+
+> synchronized 实例方法 = synchronized(this) 语法糖
+> 锁挂对象不挂方法（monitor 在对象头 Mark Word）
+> 同锁才互斥：同对象等，不同对象不等，非同步方法不拦
+> 静态方法锁类锁，全局排队；类锁 ≠ this 锁
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -3442,6 +3481,12 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 静态同步方法 | synchronized 修饰静态方法，锁类锁 XXX.class，全局唯一，保护静态变量 |
 | 监视器 | 每个对象自带一把锁；进同步代码拿锁，出则放锁，拿不到就等（BLOCKED） |
 | 同步三原则 | 代码尽量短、锁对象尽量唯一、操作尽量快 |
+| synchronized 语法糖 | 实例方法加 synchronized ≡ synchronized(this){} 包住方法体 |
+| 锁挂在哪 | 对象上（monitor 在对象头 Mark Word），一个对象一把锁 |
+| 同对象两个同步方法 | 互斥，后者必须等前者放锁（同一把 this 锁） |
+| 不同对象同步方法 | 不互斥，两把不同的 this 锁 |
+| 同步方法 vs 非同步方法 | 非同步方法不参与抢锁，不被拦 |
+| 静态同步方法 | 锁类锁 XXX.class，全局一把；类锁与 this 锁互不干扰 |
 
 ### 报错速查
 
