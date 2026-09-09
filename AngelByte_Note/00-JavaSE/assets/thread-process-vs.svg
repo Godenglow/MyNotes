@@ -1,0 +1,28 @@
+<svg viewBox="0 0 680 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI','Microsoft YaHei',sans-serif">
+  <rect width="680" height="300" fill="#0d1117"/>
+  <text x="340" y="28" text-anchor="middle" font-size="16" font-weight="bold" fill="#e6edf3">进程 vs 线程（厂房与工人）</text>
+
+  <rect x="20" y="44" width="640" height="150" rx="10" fill="#161b22" stroke="#58a6ff" stroke-dasharray="5 4"/>
+  <text x="38" y="68" font-size="13" font-weight="bold" fill="#58a6ff">进程 = 独立厂房</text>
+  <text x="38" y="90" font-size="11.5" fill="#c9d1d9">操作系统中正在执行的程序实例，有独立的内存空间和系统资源（文件、网络端口等）</text>
+  <text x="38" y="110" font-size="11.5" fill="#c9d1d9">创建顺序：先创建进程，再在进程中创建线程去执行代码</text>
+  <text x="38" y="130" font-size="11.5" fill="#c9d1d9">现代 OS 支持多进程并发：一个软件可以启动多个进程</text>
+
+  <rect x="60" y="122" width="120" height="56" rx="8" fill="#1c2530" stroke="#3fb950"/>
+  <text x="120" y="144" text-anchor="middle" font-size="12" font-weight="bold" fill="#3fb950">线程 = 工人</text>
+  <text x="120" y="162" text-anchor="middle" font-size="10" fill="#8b949e">执行进程中一段代码</text>
+  <rect x="200" y="122" width="120" height="56" rx="8" fill="#1c2530" stroke="#3fb950"/>
+  <text x="260" y="144" text-anchor="middle" font-size="12" font-weight="bold" fill="#3fb950">共享厂房资源</text>
+  <text x="260" y="162" text-anchor="middle" font-size="10" fill="#8b949e">内存、文件、端口</text>
+  <rect x="340" y="122" width="120" height="56" rx="8" fill="#1c2530" stroke="#d29922"/>
+  <text x="400" y="144" text-anchor="middle" font-size="12" font-weight="bold" fill="#d29922">私有工具</text>
+  <text x="400" y="162" text-anchor="middle" font-size="10" fill="#8b949e">自己的栈 + 程序计数器</text>
+  <rect x="480" y="122" width="120" height="56" rx="8" fill="#1c2530" stroke="#bc8cff"/>
+  <text x="540" y="144" text-anchor="middle" font-size="12" font-weight="bold" fill="#bc8cff">多线程并发</text>
+  <text x="540" y="162" text-anchor="middle" font-size="10" fill="#8b949e">同一时刻干不同的活</text>
+
+  <rect x="20" y="210" width="640" height="72" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="38" y="234" font-size="12.5" font-weight="bold" fill="#3fb950">多线程的作用：榨干 CPU</text>
+  <text x="38" y="256" font-size="11.5" fill="#c9d1d9">CPU 处理一个任务的同时还能处理多个线程 → 充分利用 CPU 资源 → 提高处理效率与利用率</text>
+  <text x="38" y="274" font-size="10.5" fill="#8b949e">多进程并发 = OS 同时跑多个软件；多线程并发 = 一个软件内部同时干多件事</text>
+</svg>
