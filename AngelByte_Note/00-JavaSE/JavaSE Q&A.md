@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类
 
 ---
 
@@ -28,6 +28,7 @@
 15. [[#十五、继承（extends）基本概念|继承（extends）基本概念]]
 16. [[#十六、方法覆盖（Override）|方法覆盖（Override）]]
 17. [[#十七、多态（Polymorphism）|多态（Polymorphism）]]
+18. [[#十八、抽象类（abstract）|抽象类（abstract）]]
 
 ---
 
@@ -1308,6 +1309,187 @@ class Master {
 
 ---
 
+## 十八、抽象类（abstract）
+
+> **一句话**：抽象方法是「只有声明、没有实现」的方法，有抽象方法的类必须声明为 `abstract`；**抽象类不能被 `new`，但有构造方法**，作用是当半成品模板逼子类实现细节。
+
+### 什么时候定义抽象类
+
+父类**知道有这么个方法，但不知道怎么实现** → 只声明、不实现 → 强制子类给出自己的实现。
+
+| 例子 | 为什么父类实现不了 |
+|------|--------------------|
+| `Person.greet()` | 中国人说「你好」、英国人说「Hello」，实现取决于子类 |
+| `Pet.eat()` | 不知道养的是什么宠物，`eat()` 方法体没意义 |
+
+> **抽象类的本质：半成品模板** —— 父类规定「子类必须长这样」，不管「具体长什么样」。
+
+### 定义语法
+
+```java
+public abstract class Animal {              // 抽象类
+    protected String name;                  // ✅ 可以有成员变量
+
+    public Animal(String name) {            // ✅ 可以有构造方法
+        this.name = name;
+    }
+
+    public void sleep() {                   // ✅ 可以有普通方法（有方法体）
+        System.out.println(name + " 睡觉");
+    }
+
+    public abstract void eat();             // ✅ 抽象方法：只有声明，没有方法体
+}
+```
+
+| 元素 | 语法 | 注意 |
+|------|------|------|
+| 抽象类 | `abstract class 类名 {}` | `abstract` 在 `class` 前 |
+| 抽象方法 | `abstract 返回值类型 方法名(形参);` | **末尾是分号，不是 `{}`** |
+
+### ③ 不能实例化，但有构造方法
+
+```java
+public abstract class Animal {
+    public Animal() { }              // ✅ 可以有构造方法
+}
+
+Animal a = new Animal();             // ❌ 编译报错：Animal 是抽象的，无法实例化
+```
+
+> **抽象类的构造方法给子类用**：`new Cat()` 时子类构造方法第一行默认 `super()`，用来初始化从父类继承下来的属性。
+
+### ⑤ 抽象类与抽象方法的关系
+
+| 方向 | 是否成立 | 说明 |
+|------|----------|------|
+| 有抽象方法 → 类**必须**是抽象类 | ✅ 强制 | 编译器要求 |
+| 抽象类 → **不一定**有抽象方法 | ✅ 可以没有 | 但没抽象方法还声明 abstract，逻辑上没意义 |
+
+```java
+abstract class A { }                       // ✅ 合法（但没什么用）
+class B { abstract void m(); }              // ❌ 编译报错：含抽象方法的类必须声明为 abstract
+```
+
+### ⑥ 非抽象子类必须重写全部抽象方法
+
+```java
+abstract class Animal {
+    public abstract void eat();
+}
+
+class Cat extends Animal {                  // Cat 是非抽象类
+    @Override
+    public void eat() {                     // ✅ 必须实现，否则编译报错
+        System.out.println("猫吃鱼");
+    }
+}
+
+abstract class Dog extends Animal {         // ✅ 自己也声明 abstract，可以暂不实现
+    // 不实现 eat() 也合法，把"债"继续往下传
+}
+```
+
+> **二选一**：子类要么**实现**所有抽象方法，要么**自己也声明 abstract**。
+
+### ⑦ abstract 不能和这些关键字共存
+
+| 搭配 | 为什么冲突 |
+|------|------------|
+| `abstract + private` | private 不继承 → 子类看不见 → 重写无从谈起 |
+| `abstract + final` | final 禁止重写 → 与「抽象方法必须被重写」直接矛盾 |
+| `abstract + static` | static 属于类、没有多态 → 「重写」无意义 |
+| `abstract + native` | native 方法体在外部 → 与「强制子类重写」矛盾 |
+| `abstract + synchronized` | abstract 没有方法体 → 没有可加锁的代码 |
+
+```java
+abstract class A {
+    private abstract void m1();      // ❌
+    final abstract void m2();        // ❌
+    static abstract void m3();       // ❌
+    public abstract void m4();       // ✅
+}
+```
+
+### 抽象类 vs 普通类
+
+| 维度 | 普通类 | 抽象类 |
+|------|--------|--------|
+| `new` 实例化 | ✅ 可以 | ❌ 不可以 |
+| 抽象方法 | ❌ 不能有 | ✅ 可以有（也可以没有） |
+| 构造方法 | ✅ | ✅（只能给子类用） |
+| 普通方法 | ✅ | ✅ |
+| 成员变量 | ✅ | ✅ |
+| 静态方法 | ✅ | ✅ |
+| 子类继承 | 直接可用 | 必须重写全部抽象方法（除非自己也 abstract） |
+
+> 抽象类的代价只有一个：**不能 new**。换来的是逼着子类干活。
+
+### 图示：父类模板 + 子类实现
+
+![[abstract-class-template.svg]]
+
+### 完整示例
+
+```java
+public abstract class Animal {
+    protected String name;
+
+    public Animal(String name) {          // 构造方法
+        this.name = name;
+    }
+
+    public void sleep() {                  // 普通方法
+        System.out.println(name + " 睡觉");
+    }
+
+    public abstract void eat();            // 抽象方法，子类必须实现
+}
+
+class Cat extends Animal {
+    public Cat(String name) {
+        super(name);                       // 调用父类构造，必须第一行
+    }
+
+    @Override
+    public void eat() {
+        System.out.println(name + " 吃鱼");
+    }
+}
+
+class Dog extends Animal {
+    public Dog(String name) {
+        super(name);
+    }
+
+    @Override
+    public void eat() {
+        System.out.println(name + " 啃骨头");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        // Animal a = new Animal("x");     // ❌ 抽象类不能 new
+
+        Animal a1 = new Cat("Tom");        // ✅ 多态：父引用指子对象
+        Animal a2 = new Dog("旺财");
+        a1.eat();                          // "Tom 吃鱼"    动态分派
+        a2.eat();                          // "旺财 啃骨头"  动态分派
+    }
+}
+```
+
+### 速记
+
+> 抽象类 = 半成品模板，方法没意义就声明 abstract，让子类实现
+> 有抽象方法 → 类必 abstract；abstract 类 → 不一定有抽象方法
+> 抽象类不能 new，但有构造方法（给子类 `super()` 用）
+> 子类必须重写全部抽象方法，否则自己也 abstract
+> abstract 和 private / final / static 是死敌（语义互相打架）
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -1357,6 +1539,9 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 向上转型 | 子 → 父，自动转换，永远安全 |
 | 向下转型 | 父 → 子，必须强转，有 ClassCastException 风险 |
 | `instanceof` | 判断引用指向的对象是否属于某类型，返回 boolean，转型前必用 |
+| 抽象类 | 半成品模板，不能 new 但有构造方法，作用是逼子类实现细节 |
+| 抽象方法 | 只有声明没有方法体（`;` 结尾），非抽象子类必须重写 |
+| `abstract` | 修饰类 → 不能实例化；修饰方法 → 无方法体，强制子类重写 |
 
 ### 报错速查
 
@@ -1383,3 +1568,8 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `Dog d = (Dog) new Cat()` 的引用 | ⚠️ | 编译过、运行抛 ClassCastException |
 | 无继承关系的两个类型互转 | ❌ | 编译报错，转型前提是有继承 |
 | 想靠多态调到子类独有方法 | ❌ | 编译期父类没有该方法，需先向下转型 |
+| `new Animal()`（Animal 是抽象类） | ❌ | 抽象类不能实例化 |
+| 非抽象子类不重写父类抽象方法 | ❌ | 编译器强制要求实现 |
+| `private abstract void m();` | ❌ | private 不继承，无法被重写 |
+| `final abstract void m();` | ❌ | final 禁止重写，与 abstract 矛盾 |
+| `static abstract void m();` | ❌ | static 无多态，"重写"无意义 |

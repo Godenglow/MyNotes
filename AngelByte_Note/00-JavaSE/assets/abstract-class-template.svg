@@ -1,0 +1,58 @@
+<svg width="680" height="380" viewBox="0 0 680 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="680" height="380" fill="#0d1117"/>
+
+  <text x="340" y="28" text-anchor="middle" fill="#e6edf3" font-size="17" font-weight="700">抽象类：父类提供模板，子类各自实现</text>
+  <text x="340" y="48" text-anchor="middle" fill="#8b949e" font-size="11.5">Person.greet() 在不同国家有不同实现 → 父类只声明不实现</text>
+
+  <g stroke="#30363d" stroke-width="2" fill="none">
+    <line x1="340" y1="110" x2="120" y2="210"/>
+    <line x1="340" y1="110" x2="340" y2="210"/>
+    <line x1="340" y1="110" x2="560" y2="210"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="240" y="70" width="200" height="50" rx="7" fill="#161b22" stroke="#d29922" stroke-width="1.6" stroke-dasharray="6 3"/>
+    <text x="340" y="93" text-anchor="middle" fill="#d29922" font-size="12" font-weight="700">abstract class Person</text>
+    <text x="340" y="112" text-anchor="middle" fill="#8b949e" font-size="11">abstract void greet();</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="200" width="160" height="80" rx="7" fill="#21262d" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="120" y="223" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">ChinesePerson</text>
+    <line x1="56" y1="232" x2="184" y2="232" stroke="#30363d"/>
+    <text x="120" y="252" text-anchor="middle" fill="#e6edf3" font-size="11">greet() {</text>
+    <text x="120" y="270" text-anchor="middle" fill="#79c0ff" font-size="10.5">"你好"</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="260" y="200" width="160" height="80" rx="7" fill="#21262d" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="340" y="223" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">EnglishPerson</text>
+    <line x1="276" y1="232" x2="404" y2="232" stroke="#30363d"/>
+    <text x="340" y="252" text-anchor="middle" fill="#e6edf3" font-size="11">greet() {</text>
+    <text x="340" y="270" text-anchor="middle" fill="#79c0ff" font-size="10.5">"Hello"</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="480" y="200" width="160" height="80" rx="7" fill="#21262d" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="560" y="223" text-anchor="middle" fill="#3fb950" font-size="12" font-weight="600">AmericanPerson</text>
+    <line x1="496" y1="232" x2="624" y2="232" stroke="#30363d"/>
+    <text x="560" y="252" text-anchor="middle" fill="#e6edf3" font-size="11">greet() {</text>
+    <text x="560" y="270" text-anchor="middle" fill="#79c0ff" font-size="10.5">"Howdy"</text>
+  </g>
+
+  <text x="270" y="148" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">extends</text>
+  <text x="395" y="148" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">extends</text>
+  <text x="475" y="148" text-anchor="middle" fill="#7d8590" font-size="10" font-style="italic">extends</text>
+
+  <g filter="url(#shadow)">
+    <rect x="40" y="310" width="600" height="52" rx="7" fill="#161b22" stroke="#1f6feb" stroke-width="1.2"/>
+    <text x="340" y="332" text-anchor="middle" fill="#e6edf3" font-size="12" font-weight="600">虚线框 = 抽象类（不能 new）</text>
+    <text x="340" y="352" text-anchor="middle" fill="#8b949e" font-size="11">每个子类必须实现 greet()，实现的内容由各自业务决定</text>
+  </g>
+</svg>
