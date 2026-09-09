@@ -1,0 +1,72 @@
+<svg width="680" height="366" viewBox="0 0 680 366" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#8b949e" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <rect width="680" height="366" fill="#0d1117"/>
+
+  <text x="340" y="28" text-anchor="middle" fill="#f0f6fc" font-size="16" font-weight="700">Map 继承结构：一个接口，三大家族</text>
+
+  <rect x="290" y="46" width="100" height="32" rx="6" fill="#161b22" stroke="#f0f6fc" stroke-width="1.5"/>
+  <text x="340" y="67" text-anchor="middle" fill="#f0f6fc" font-size="13" font-weight="700">«接口» Map</text>
+
+  <text x="340" y="96" text-anchor="middle" fill="#8b949e" font-size="11">Map 与 Collection 没有继承关系 · key 主导，value 是附属 · key 重复则 value 覆盖</text>
+
+  <line x1="120" y1="112" x2="288" y2="66" stroke="#8b949e" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="340" y1="118" x2="340" y2="82" stroke="#8b949e" stroke-width="1" marker-end="url(#arr)"/>
+  <line x1="560" y1="112" x2="392" y2="66" stroke="#8b949e" stroke-width="1" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="20" y="118" width="200" height="88" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="1.4"/>
+    <text x="36" y="142" fill="#58a6ff" font-size="13" font-weight="700">HashMap</text>
+    <text x="36" y="162" fill="#8b949e" font-size="11">底层：哈希表（数组+链表+红黑树）</text>
+    <text x="36" y="179" fill="#e6edf3" font-size="11">key：无序 · 不可重复（唯一性）</text>
+    <text x="36" y="196" fill="#8b949e" font-size="11">线程不安全 · 使用最多</text>
+  </g>
+
+  <g>
+    <rect x="240" y="118" width="200" height="88" rx="9" fill="#161b22" stroke="#8b949e" stroke-width="1.4"/>
+    <text x="256" y="142" fill="#8b949e" font-size="13" font-weight="700">Hashtable</text>
+    <text x="256" y="162" fill="#8b949e" font-size="11">底层：哈希表</text>
+    <text x="256" y="179" fill="#e6edf3" font-size="11">所有方法线程安全 → 效率低</text>
+    <text x="256" y="196" fill="#f85149" font-size="11">使用较少（被 HashMap 取代）</text>
+  </g>
+
+  <g>
+    <rect x="460" y="118" width="200" height="88" rx="9" fill="#161b22" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="476" y="142" fill="#3fb950" font-size="13" font-weight="700">TreeMap</text>
+    <text x="476" y="162" fill="#8b949e" font-size="11">底层：红黑树</text>
+    <text x="476" y="179" fill="#e6edf3" font-size="11">key：可排序 · 不可重复</text>
+    <text x="476" y="196" fill="#8b949e" font-size="11">实现 SortedMap → NavigableMap</text>
+  </g>
+
+  <line x1="120" y1="206" x2="120" y2="244" stroke="#58a6ff" stroke-width="1.2" marker-end="url(#arr)"/>
+  <line x1="340" y1="206" x2="340" y2="244" stroke="#8b949e" stroke-width="1.2" marker-end="url(#arr)"/>
+
+  <g>
+    <rect x="20" y="250" width="200" height="88" rx="9" fill="#161b22" stroke="#58a6ff" stroke-width="1.4"/>
+    <text x="36" y="274" fill="#58a6ff" font-size="13" font-weight="700">LinkedHashMap</text>
+    <text x="36" y="294" fill="#8b949e" font-size="11">底层：双向链表 + 哈希表</text>
+    <text x="36" y="311" fill="#e6edf3" font-size="11">key：有序 · 不可重复</text>
+    <text x="36" y="328" fill="#8b949e" font-size="11">效率比 HashMap 略低</text>
+  </g>
+
+  <g>
+    <rect x="240" y="250" width="200" height="88" rx="9" fill="#161b22" stroke="#8b949e" stroke-width="1.4"/>
+    <text x="256" y="274" fill="#8b949e" font-size="13" font-weight="700">Properties</text>
+    <text x="256" y="294" fill="#8b949e" font-size="11">称为"属性类"</text>
+    <text x="256" y="311" fill="#e6edf3" font-size="11">key 和 value 都只能是 String</text>
+    <text x="256" y="328" fill="#8b949e" font-size="11">配置文件专用</text>
+  </g>
+
+  <g>
+    <rect x="460" y="250" width="200" height="88" rx="9" fill="#161b22" stroke="#3fb950" stroke-width="1.4"/>
+    <text x="476" y="274" fill="#3fb950" font-size="12.5" font-weight="700">«接口» SequencedMap</text>
+    <text x="476" y="294" fill="#8b949e" font-size="11">Java 21 新增的接口</text>
+    <text x="476" y="311" fill="#e6edf3" font-size="11">LinkedHashMap 也实现了它</text>
+    <text x="476" y="328" fill="#8b949e" font-size="11">另有 SortedMap / NavigableMap</text>
+  </g>
+
+  <line x1="460" y1="294" x2="226" y2="294" stroke="#8b949e" stroke-width="1" stroke-dasharray="4,3"/>
+</svg>

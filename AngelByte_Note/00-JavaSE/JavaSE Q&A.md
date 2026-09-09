@@ -42,6 +42,8 @@
 29. [[#二十九、泛型的使用：类 / 静态方法 / 接口|泛型的使用：类 / 静态方法 / 接口]]
 30. [[#三十、泛型通配符与 PECS|泛型通配符与 PECS]]
 31. [[#三十一、迭代时删除元素与 fail-fast 机制|迭代时删除元素与 fail-fast 机制]]
+32. [[#三十二、Map 继承结构与三大家族|Map 继承结构与三大家族]]
+33. [[#三十三、Set 的底层真相（Set 就是 Map 的 key）|Set 的底层真相（Set 就是 Map 的 key）]]
 
 ---
 
@@ -2887,6 +2889,74 @@ list.removeIf(s -> s.equals("B"));
 
 ---
 
+## 三十二、Map 继承结构与三大家族
+
+> **一句话**：Map 是 key/value 键值对集合，**key 主导一切**（不可重复、决定取值，value 只是附属）；整个家族分三派 —— HashMap 系、Hashtable 系、TreeMap 系。
+
+![[map-inheritance.svg]]
+
+### 核心概念
+
+1. Map 以 key/value 键值对存储，**key 和 value 存的都是引用**
+2. **key 起主导作用**，value 是挂在 key 上的附属 —— 取值靠 key，去重也看 key
+3. key 不可重复，**key 重复时 value 覆盖**（相当于修改）
+4. `SequencedMap` 是 Java 21 新增的接口；Map 和 Collection **没有继承关系**（两套独立体系）
+
+### 三大家族对照
+
+| 实现 | 底层数据结构 | key 特点 | 备注 |
+|------|--------------|----------|------|
+| **HashMap** | 哈希表（数组+链表+红黑树） | 无序 · 不可重复 | 使用最多，线程不安全 |
+| **LinkedHashMap** | 双向链表 + 哈希表 | **有序** · 不可重复 | HashMap 子类，效率略低 |
+| **Hashtable** | 哈希表 | 无序 · 不可重复 | 方法全线程安全 → 效率低，已少用 |
+| **Properties** | 哈希表 | key/value **都必须是 String** | 属性类，配置文件专用 |
+| **TreeMap** | 红黑树 | **可排序** · 不可重复 | 实现 SortedMap → NavigableMap |
+
+接口侧：`SortedMap` → `NavigableMap` → 由 TreeMap 实现；`SequencedMap`（Java21）由 LinkedHashMap 实现。
+
+### 速记
+
+> Map：key 主导，value 附属；key 重复 → value 覆盖
+> 三大家族：HashMap（哈希无序）/ TreeMap（红黑树可排序）/ Hashtable（线程安全但慢）
+> Properties：KV 都是 String 的属性类
+> Map 和 Collection 没有继承关系，两套独立体系
+
+---
+
+## 三十三、Set 的底层真相（Set 就是 Map 的 key）
+
+> **一句话**：HashSet 底层 new 了一个 HashMap，TreeSet new 的是 TreeMap，LinkedHashSet new 的是 LinkedHashMap —— **元素全存在 Map 的 key 位，value 位放固定常量 PRESENT 纯占位**，Set 的一切特性都继承自 Map 的 key。
+
+![[set-underlying-map.svg]]
+
+### 对应关系
+
+| Set | 底层 new 的 Map | 特性来源 |
+|-----|-----------------|----------|
+| HashSet | **HashMap**（哈希表） | 哈希表 → 无序、不可重复 |
+| TreeSet | **TreeMap**（红黑树） | 可排序、不可重复 |
+| LinkedHashSet | **LinkedHashMap**（双向链表+哈希表） | 有序、不可重复 |
+
+### add 的真实实现
+
+```java
+// 向 Set 集合 add 时，底层实际是 Map.put：
+set.add(e);   // 等价于 ↓
+map.put(e, PRESENT);   // PRESENT 是固定不变的常量，value 纯占位，主要看 key
+```
+
+### 为什么这个视角有价值
+
+之前单独背的"Set 三兄弟特点"（无序/有序、可排序、不可重复、底层结构）在这一刻**全部有了出处**——它们不是 Set 自己的特性，而是 Map 的 key 的特性顺着底层实现"漏"上来的。理解了这一点，Set 和 Map 两大家族不用分开背。
+
+### 速记
+
+> **HashSet = HashMap 的 key，TreeSet = TreeMap 的 key，LinkedHashSet = LinkedHashMap 的 key**
+> `set.add(e)` 就是 `map.put(e, PRESENT)`，value 是占位常量
+> Set 的特性 = Map 的 key 的特性（无序/有序/可排序/不可重复 全部对上）
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -2991,6 +3061,15 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `expectedModCount` | 迭代器创建时初始化为 modCount；`it.remove()` 会同步 +1，集合 remove 不会 |
 | `it.remove()` | 删除"上一次 next() 返回的元素"，必须先 next 再 remove，否则 IllegalStateException |
 | `removeIf` | JDK8+ 按条件删除，`list.removeIf(s -> s.equals("B"))`，不触发 fail-fast |
+| Map | key/value 键值对集合，key 主导（不可重复、决定取值），value 是附属；与 Collection 无继承关系 |
+| Map 家族 | HashMap（哈希无序）/ LinkedHashMap（链表+哈希有序）/ Hashtable（线程安全慢）/ TreeMap（红黑树可排序） |
+| key 重复 | Map 的 key 重复时 value 覆盖（相当于修改） |
+| Properties | 属性类，key 和 value 都必须是 String，配置文件专用 |
+| SequencedMap | Java 21 新增接口，LinkedHashMap 实现 |
+| HashSet 底层 | new 了一个 HashMap，元素存 key 位，value 放固定常量 PRESENT |
+| TreeSet 底层 | new 了一个 TreeMap（红黑树），可排序 |
+| LinkedHashSet 底层 | new 了一个 LinkedHashMap（双向链表+哈希表），有序 |
+| `set.add(e)` | 实际是 `map.put(e, PRESENT)`，Set 特性全部来自 Map 的 key |
 
 ### 报错速查
 
