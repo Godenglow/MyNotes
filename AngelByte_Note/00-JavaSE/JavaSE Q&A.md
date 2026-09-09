@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数、单元测试
 
 ---
 
@@ -34,6 +34,7 @@
 21. [[#二十一、访问控制权限（4 个修饰符）|访问控制权限（4 个修饰符）]]
 22. [[#二十二、内部类（4 种）|内部类（4 种）]]
 23. [[#二十三、main 方法 args 与可变长参数|main 方法 args 与可变长参数]]
+24. [[#二十四、单元测试（JUnit 5）|单元测试（JUnit 5）]]
 
 ---
 
@@ -2130,6 +2131,175 @@ m(new int[]{1, 2});                        // ❌ 编译报错：重复方法
 
 ---
 
+## 二十四、单元测试（JUnit 5）
+
+> **一句话**：JUnit 5 是 Java 主流的单元测试框架（**JDK 不自带**，需引入 3 个 jar），写测试 = **测试类 + `@Test` 注解方法 + 断言**；4 个生命周期注解负责 setup / teardown。
+
+### 什么是单元测试
+
+**项目 = 很多代码块拼起来的**，每块代码（一个方法 / 一个类）要保证正确，整个项目才正常。**单元 = 一块代码**，**单元测试 = 对这块代码写专门的"验货脚本"**。
+
+### 引入 JUnit 5
+
+**JDK 不自带**，需要额外引入 3 个 jar（Maven/Gradle 用户通过依赖自动管理）：
+
+| jar 包 | 作用 |
+|--------|------|
+| `junit-jupiter-api-5.8.0.jar` | 写测试用的 API（`@Test`、断言方法等） |
+| `junit-platform-commons-1.9.2.jar` | 公共支持（执行器、扩展点） |
+| `junit-platform-engine-1.9.2.jar` | **测试引擎**（IDEA 跑测试要靠它） |
+
+> JUnit 5 把 JUnit 4 的"一个 jar"拆成 3 个，**模块化设计**。Maven 用户引入 `junit-jupiter` 一个依赖自动拉 3 个。
+
+### 测试类（测试用例）怎么写
+
+**命名规范**：`XxxTest`（被测类 `Calculator` → 测试类 `CalculatorTest`），普通 Java 类。
+
+### 测试方法 4 个硬性要求 ⭐
+
+| # | 要求 | 原因 |
+|---|------|------|
+| ① | **必须加 `@Test` 注解** | JUnit 靠注解识别"这是测试方法" |
+| ② | **返回值必须是 `void`** | 测试结果靠"是否抛异常"判定，不需要返回 |
+| ③ | **形参个数为 0** | JUnit 不会传参数给你 |
+| ④ | **建议命名 `testXxx()`** | 一眼能看出是测试方法 |
+
+```java
+@Test
+public void testAdd() {
+    Calculator c = new Calculator();
+    int result = c.add(1, 2);
+    assertEquals(3, result);
+}
+```
+
+### 期望值 vs 实际值 + 断言三件套
+
+| 名称 | 含义 | 例子 |
+|------|------|------|
+| **期望值** | 程序执行**前**你**希望**得到的结果 | 期望 `1 + 2 == 3` |
+| **实际值** | 程序执行**后**实际得到的结果 | 实际 `c.add(1, 2) == 3` |
+| **断言** | 用 `assertXxx` 方法**自动比较**两者 | `assertEquals(3, result)` |
+
+**常用断言方法**：
+
+| 方法 | 作用 |
+|------|------|
+| `assertEquals(expected, actual)` | 期望 == 实际 |
+| `assertNotEquals(expected, actual)` | 期望 != 实际 |
+| `assertTrue(condition)` | 条件为真 |
+| `assertFalse(condition)` | 条件为假 |
+| `assertNull(obj)` | 对象为 null |
+| `assertNotNull(obj)` | 对象不为 null |
+| `assertThrows(异常类.class, () -> {...})` | 期望抛异常 |
+| `assertAll(...)` | 多个断言一起跑（一个挂不终止其他） |
+
+### 完整示例
+
+```java
+import org.junit.jupiter.api.*;
+
+public class Calculator {
+    public int add(int a, int b) { return a + b; }
+    public int divide(int a, int b) { return a / b; }
+}
+
+public class CalculatorTest {
+
+    @Test
+    public void testAdd() {
+        assertEquals(3, new Calculator().add(1, 2));
+    }
+
+    @Test
+    public void testDivideByZero() {
+        assertThrows(ArithmeticException.class, () -> {
+            new Calculator().divide(6, 0);
+        });
+    }
+}
+```
+
+### 4 个生命周期注解 ⭐ 高频
+
+| 注解 | 何时执行 | 执行次数 | 标注方法 |
+|------|----------|----------|----------|
+| `@BeforeAll` | **所有测试方法前** | 整个类跑 **1 次** | 必须是 `static` |
+| `@AfterAll` | **所有测试方法后** | 整个类跑 **1 次** | 必须是 `static` |
+| `@BeforeEach` | **每个测试方法前** | 每个 `@Test` 各跑 1 次 | 实例方法 |
+| `@AfterEach` | **每个测试方法后** | 每个 `@Test` 各跑 1 次 | 实例方法 |
+
+![[junit-lifecycle.svg]]
+
+**完整示例**：
+
+```java
+public class CalculatorTest {
+
+    @BeforeAll
+    static void setupAll() {                // 整个类跑前执行 1 次
+        System.out.println("--- 测试开始 ---");
+    }
+
+    @BeforeEach
+    void setup() {                          // 每个测试方法前
+        System.out.println("准备测试数据");
+    }
+
+    @Test
+    void testAdd() {
+        assertEquals(3, new Calculator().add(1, 2));
+    }
+
+    @Test
+    void testSubtract() {
+        assertEquals(-1, new Calculator().subtract(1, 2));
+    }
+
+    @AfterEach
+    void teardown() {                       // 每个测试方法后
+        System.out.println("清理测试数据");
+    }
+
+    @AfterAll
+    static void teardownAll() {             // 整个类跑后执行 1 次
+        System.out.println("--- 测试结束 ---");
+    }
+}
+```
+
+**典型场景**：
+
+| 注解 | 用途 |
+|------|------|
+| `@BeforeAll` / `@AfterAll` | 打开/关闭数据库连接、加载全局配置 |
+| `@BeforeEach` / `@AfterEach` | 每个测试前 `new` 一个新对象、清理临时文件 |
+
+### Scanner 在测试中失效的解决
+
+**原因**：IDEA 默认把单元测试的输入输出**重定向到非交互模式**，`Scanner.nextLine()` 等就会"卡住"或读不到东西。
+
+**修复**：
+
+1. IDEA 顶部菜单 → `Help` → `Edit Custom VM Options...`
+2. 在打开的 `IDEA64.exe.vmoptions` 文件**末尾**加一行：
+   ```
+   -Ddeditable.java.test.console=true
+   ```
+3. **重启 IDEA**
+
+> Maven/Gradle 用户更简单：在 `pom.xml` 加 `systemPropertyVariables` 配置，或用 JUnit 5 的 `ConsoleLauncher`。
+
+### 速记
+
+> JUnit 5 = 3 个 jar（api + commons + engine），JDK 不自带
+> 测试类 `XxxTest`，测试方法 **`@Test` + `void` + 无参 + `testXxx`**
+> 断言三件套：`assertEquals(期望, 实际)` / `assertTrue` / `assertThrows`
+> **All** 整个类跑 1 次·static，**Each** 每个 Test 跑·实例方法
+> IDEA 跑测试时 Scanner 失效 → `Help → Edit Custom VM Options` 加 `-Ddeditable.java.test.console=true`
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -2197,6 +2367,11 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 有效 final | JDK 8+，局部变量没被改过就视为 final，被内部类用过后就"冻结" |
 | `args` | main 方法的 String[] 形参，接收命令行参数，空格分隔 |
 | 可变长参数 | `int...` 是 `int[]` 的语法糖，只能放形参最后、一个方法最多一个 |
+| JUnit 5 | Java 主流单元测试框架，JDK 不自带，需引入 3 个 jar |
+| `@Test` | 标注方法是测试方法，必须 void + 无参 + 命名 testXxx |
+| 断言 | `assertEquals(期望, 实际)` 等方法自动比较，期望==实际才通过 |
+| `@BeforeAll` / `@AfterAll` | 整个测试类前后各跑 1 次，方法必须是 static |
+| `@BeforeEach` / `@AfterEach` | 每个 @Test 前后各跑 1 次，方法是实例方法 |
 
 ### 报错速查
 
@@ -2243,3 +2418,7 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `void m(int... a, String b)` | ❌ | 可变长参数只能放形参列表最后 |
 | `void m(int... a, int... b)` | ❌ | 一个方法最多一个可变长参数 |
 | `m(int[])` 与 `m(int...)` 同时定义 | ❌ | 编译后签名相同 → 报"重复方法" |
+| 测试方法没加 `@Test` 注解 | ❌ | JUnit 不识别为测试方法，运行时不会跑 |
+| 测试方法返回值非 void | ❌ | JUnit 5 要求测试方法必须返回 void |
+| `@BeforeAll` 标注非 static 方法 | ❌ | @BeforeAll/@AfterAll 必须标注 static 方法 |
+| `@Test` 方法用了带参构造 | ❌ | JUnit 不会传参，测试方法形参必须为 0 |
