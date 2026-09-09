@@ -1,0 +1,156 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第2周周总结 · 2026年09月</title><style>
+/* ===== 双主题变量（inject_theme.py 注入） ===== */
+:root{
+--bg:#0d1117;--side:#010409;--card:#161b22;--chip:#21262d;
+--border:#262d38;--hover:#10161f;
+--fg:#e6edf3;--strong:#f0f6fc;--muted:#8b949e;--faint:#6e7681;--quote:#b6c2cf;
+--link:#58a6ff;--h3:#79c0ff;--pre-fg:#c9d1d9;
+--warn:#d29922;--good:#3fb950;--bad:#f85149;
+--pre-bg:#282c34;
+--t-def:#abb2bf;--t-red:#e06c75;--t-green:#98c379;--t-orange:#d19a66;--t-purple:#c678dd;--t-yellow:#e5c07b;--t-cyan:#56b6c2;--t-blue:#61afef;--t-comment:#7f848e;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--side:#f6f8fa;--card:#f6f8fa;--chip:#eff2f5;
+--border:#d0d7de;--hover:#eef1f4;
+--fg:#1f2328;--strong:#1f2328;--muted:#57606a;--faint:#8c959f;--quote:#57606a;
+--link:#0969da;--h3:#0550ae;--pre-fg:#24292f;
+--warn:#9a6700;--good:#1a7f37;--bad:#cf222e;
+--pre-bg:#f6f8fa;
+--t-def:#24292f;--t-red:#cf222e;--t-green:#116329;--t-orange:#953800;--t-purple:#8250df;--t-yellow:#9a6700;--t-cyan:#0550ae;--t-blue:#0550ae;--t-comment:#6e7781;
+}
+.theme-btn{position:fixed;right:74px;bottom:26px;width:40px;height:40px;border-radius:50%;
+background:var(--chip);border:1px solid var(--border);color:var(--fg);font-size:16px;
+display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;transition:transform .15s}
+.theme-btn:hover{transform:scale(1.1);border-color:var(--link)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:28px 20px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:26px;font-weight:700;letter-spacing:-.4px}
+h2{font-size:19px;font-weight:650;margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--chip);color:var(--muted);font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:620;margin:20px 0 8px}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin:16px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:12px 14px}
+.card .k{color:var(--muted);font-size:11px}
+.card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
+.card .d{color:var(--muted);font-size:11px;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:11px 0}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--chip);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:11.5px;background:var(--card)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--card)}
+.tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600}
+.t-bad{background:rgba(248,81,73,.16);color:var(--bad)}
+.t-warn{background:rgba(210,153,34,.16);color:var(--warn)}
+.t-ok{background:rgba(63,185,80,.16);color:var(--good)}
+.t-info{background:rgba(88,166,255,.16);color:var(--link)}
+.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:var(--card);font-size:13.5px}
+.box .t{font-weight:650;margin-bottom:5px;font-size:13.5px}
+.b-warn{border-color:var(--warn)}.b-warn .t{color:var(--warn)}
+.b-bad{border-color:var(--bad)}.b-bad .t{color:var(--bad)}
+.b-info{border-color:var(--link)}.b-info .t{color:var(--link)}
+ul,ol{margin:8px 0 8px 20px}li{margin:6px 0;font-size:13.5px}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:12px;color:#bc8cff}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--border);padding-bottom:16px}
+.meta{color:var(--muted);font-size:12px;text-align:right;line-height:1.8}
+.foot{margin-top:36px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
+.crumbs{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:14px 0 4px;font-size:12px;color:var(--muted)}
+.crumbs a{color:var(--link);text-decoration:none}
+.day{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:13px 15px;margin:11px 0}
+.day .dh{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px}
+.day .dh b{font-size:14.5px}
+.day .dh span{color:var(--muted);font-size:11.5px}
+.day p{font-size:13.5px;margin-top:6px;color:var(--muted)}
+.day a{color:var(--link);text-decoration:none;font-size:12px}
+.bar{height:8px;border-radius:4px;background:var(--chip);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;border-radius:4px}
+</style><script>
+(function(){var t=null;try{t=localStorage.getItem('nb-theme');}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+document.documentElement.dataset.theme=t;})();
+</script></head><body><div class="wrap">
+
+<div class="crumbs"><a href="../../../说明文件.html">ScrePipe日报</a> › <a href="../月度总结.html">2026-09</a> › <b>第2周(09.07-09.13) 周总结</b> · <a href="../第1周(08.31-09.06)/周总结.html">← 第1周总结</a></div>
+
+<div class="hd"><div>
+<h1>第 2 周周总结 · 2026 年 09 月</h1>
+<div class="sub">自然周 2026-09-07（周一）→ 2026-09-13（周日）· 日报 2 / 7 天（09-07 定时 + 09-08 关机缺跑后补跑）· 进行中，每晚随日报增量更新，周日记数据落齐后出完结版</div>
+</div><div class="meta">
+日报覆盖 2 / 7 天（第 2 周首日 + 09-08 补跑）<br>
+生成于 2026-09-08（随 09-09 00:1x 补跑更新）· 数据为 screenpipe 估算值，窗口存在重叠
+</div></div>
+
+<div class="cards">
+<div class="card"><div class="k">日报覆盖</div><div class="v" style="color:#3fb950">2 / 7 天</div><div class="d">09-07 周一（定时）+ 09-08 周二（关机缺跑，09-09 补跑）；每晚 22:00 随日报累积</div></div>
+<div class="card"><div class="k">活跃合计</div><div class="v" style="color:#58a6ff">14.6 h</div><div class="d">2 天 · 日均 7.3h（12.7h + 1.9h；09-08 仅上午约 2h 在线，口径估算）</div></div>
+<div class="card"><div class="k">工作 / 学习合计</div><div class="v" style="color:#a371f7">6.0 h</div><div class="d">首日 5.5h + 09-08 0.5h（仅上午，应用商店维护 + WorkBuddy 咨询）</div><div class="bar"><i style="width:41%;background:#a371f7"></i></div></div>
+<div class="card"><div class="k">游戏 / 挂机合计</div><div class="v" style="color:#39c5cf">1.0 h</div><div class="d">09-07 方舟挂机等 1.0h；09-08 无游戏（SpeedBall 挂页按口径计娱乐）</div><div class="bar"><i style="width:7%;background:#39c5cf"></i></div></div>
+<div class="card"><div class="k">其他娱乐合计</div><div class="v" style="color:#ffa657">7.6 h</div><div class="d">6.2h（09-07 抖音 3.4h 为主）+ 1.4h（09-08 SpeedBall 挂页 78m + 酷狗试听 5m）</div><div class="bar"><i style="width:52%;background:#ffa657"></i></div></div>
+</div>
+
+<h2><span class="n">1</span>每日一览</h2>
+<table>
+<tr><th>日期</th><th class="n">活跃</th><th class="n">工作/学习</th><th class="n">游戏/挂机</th><th class="n">其他娱乐</th><th>当日主线</th></tr>
+<tr><td><a href="日报-2026-09-07.html" style="color:#58a6ff">09-07 周一</a></td><td class="n">12.7h</td><td class="n">5.5h</td><td class="n">1.0h</td><td class="n">6.2h</td><td>第 2 周首日：WorkBuddy AI 协作笔记库大整理（Redis 讲义重组 3 章/220 代码块/130 本地图、182 个 MD5 冗余副本入回收站、converter 表格转义补丁、HTML 导出校验通过）；Cherry/spacedesk/超级互联 平板副屏折腾；BOSS直聘 求职浏览（多益网络意向、南昌实习、广州校招）；晚间 MuMu+AUTO-MAS 方舟挂机约 2h22m；抖音约 3.4h 延续回落；定时 22:00 改点后首次自动执行（＝本次运行，落盘即复验通过）</td></tr>
+<tr><td><a href="日报-2026-09-08.html" style="color:#58a6ff">09-08 周二</a></td><td class="n">1.9h</td><td class="n">0.5h</td><td class="n">0h</td><td class="n">1.4h</td><td>上午短在线维护日（07:29–09:25，09:25 后关机）：联想应用商店批量安装（微信/QQ 9.9.35 lenovo 定制版/QQ音乐/网易云音乐/VS Code/GitHub Desktop 3.6.5 等安装与启动核对）；酷狗音乐"未响应"第 3 次复发（Geek 触发官方卸载疑似未走完，重开后 09:17 再现冻结）；WorkBuddy 判定 D:\KuGou 纯缓存可安全删；SpeedBall 挂页 78m + 酷狗试听 5m；当日 22:00 定时缺跑 → 09-09 00:1x 补跑（数据仍处 24h 保留期）</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">09-07 数据截至 22:00 生成时刻（尾段 22:00–24:00 未录属正常口径，非缺失）；09-08 记录窗口仅 07:29–09:25（09:25 后关机，22:00 定时缺跑，09-09 00:1x 会话内补跑、24h 保留期内完整回溯——若隔日再补将不可行）。后续每日 22:00 定时随日报追加本表各行；若某日无日报/未开机将如实标注"缺 MM-DD（原因）"。</p>
+
+<h2><span class="n">2</span>本周主线（进行中，每晚修订）</h2>
+<div class="day">
+<div class="dh"><b>① 笔记库 AI 协作大整理（09-07）</b><span>WorkBuddy × Obsidian · 承接上周"规则补丁"思路的一次集中收尾</span></div>
+<p>Redis 讲义重组为 Redis 实战 3 章（实战课/基础篇/实战篇，220 代码块、130 本地图、0 断图），09:52 自动归档 <code>.workbuddy/notes-backup-20260907_095204/redis-archive</code>（124 files）；清理 0 引用重复图片与 182 个"同名同大小且 MD5 逐字节相同"冗余副本（移入回收站可恢复）；主库 14 个 HTML 结构闭合/doctype 齐全；converter 新增 <code>escape_md_table_line</code> 表格转义补丁（52s 深度思考完成）；修正 memory 归档路径记录错误；遗留 35 个 imgur 死链占位待手动处理。</p>
+</div>
+<div class="day">
+<div class="dh"><b>② 求职启动 + 设备折腾（09-07）</b><span>BOSS直聘 意向回复语境 · 平板当副屏方案落地</span></div>
+<p>BOSS直聘：多益网络招聘者（08-27 李女士）消息语境、南昌实习（100–150 元/天，若依相关 JD）、广州 2027 届校招 MJ001005（技术开发管培生）浏览——求职进入实质推进前的资料与意向阶段。设备侧：Cherry Studio 产"联想小新平板断触两年排查维修建议"，spacedesk 驱动下载运行 + 联想超级互联/账号配置，为小新 pad Pro 2025 当笔记本副屏铺路；同时为"手机端 Obsidian Git 同步"收集了 GitHub PAT 教程资料。</p>
+</div>
+<div class="day">
+<div class="dh"><b>③ 日报定时链路复验（09-07 22:00）</b><span>改 22:00 后首次自动执行</span></div>
+<p>09-06 处置（定时 23:00 → 22:00 三处配置同步 + pipe.md 固化周/月增量规则）后，09-07 22:00 定时自动触发本次运行：本日 报、第 2 周周总结（本文件）、9 月月度总结三件套如落地即链路复验通过；明日 09-08 22:00 为连续稳定性的第二次确认点。</p>
+</div>
+<div class="day">
+<div class="dh"><b>④ 软件维护晨间 + 酷狗第 3 次复发（09-08）</b><span>上午短在线（07:29–09:25）· 22:00 定时关机缺跑 → 09-09 补跑</span></div>
+<p>联想应用商店批量软件安装与启动核对：微信（Weixin 登录窗，账号 Goldenglow）、QQ 9.9.35.52892_lenovo_x64（联想定制包）、QQ音乐、网易云音乐、VS Code 安装向导 + GitHub Desktop 3.6.5 等，多为 09-02/09-04 已下载的安装缓存顺次执行。酷狗音乐"未响应"第 3 次复发（08:34 启动即 WerFault，Geek Uninstaller 1.5.3.170 触发官方卸载——告别页"你要好好的"——疑似未走完；09:11 恢复试听《July - In Love》约 6 分钟，09:17 再冻结），当月第 3 起同类问题，仍未根治。WorkBuddy 判定 <code>D:\KuGou</code> 为纯可再生缓存（Lyric 629K/118 krc + Temp 775M），无用户音乐、可安全删除；并打开 workbuddy.cn 控制台成长中心页。SpeedBall 悬浮挂页 78m（读数 0→344K/s、27% 进度）计入娱乐杂项。09:25 关机致当日 22:00 定时缺跑（非链路故障），09-09 00:1x 会话内补跑成功。</p>
+</div>
+<p style="font-size:13px;color:#8b949e">延续待办（未在本周启动）：Java 重启（Maven 3.8.6 已下载）、AUTO-MAS repo→app 启动同步覆盖修复、QQ AI Bot 收尾 4 项 + 备份、dsh 插件落地、家用服务器实操。CET-6 报名 9/9 前核对学籍（期限已到，09-08/09-09 未进行）、9/11 12:00 起错峰报名是本周第一个硬性时间点。09-08 因关机缺跑 22:00 定时（非链路故障，09-09 00:1x 会话补跑成功），09-09 22:00 为链路连续稳定性确认点。</p>
+
+<h2><span class="n">3</span>问题汇总（按状态，第 2 周口径）</h2>
+<table>
+<tr><th>问题</th><th>首现</th><th>状态</th><th>说明</th></tr>
+<tr><td>daily-work-report 定时链路（改 22:00 后自动执行；09-08 关机缺跑 → 09-09 补跑）</td><td>09-05</td><td><span class="tag t-warn">待续验</span></td><td>09-07 22:00 改点后首次自动执行通过；09-08 全天仅上午在线、22:00 关机缺跑（非链路故障）；09-09 00:08 自动补跑因 pi-agent 重装窗口模块缺失启动失败一次，00:12 重装完成后由会话内补跑产出（本文件）；09-09 22:00 再确认连续稳定</td></tr>
+<tr><td>WorkBuddy"未响应"</td><td>09-07</td><td><span class="tag t-ok">已恢复 · 观察</span></td><td>08:0x 弹未响应对话框，约 1–2 分钟后恢复，全天任务执行正常；样式与酷狗音乐（08-31/09-06）同类，留意是否复发</td></tr>
+<tr><td>Steam 登录"等待网络"</td><td>09-07</td><td><span class="tag t-ok">已解决</span></td><td>21:44–21:46 转圈约 2m 后自愈进入商店（网络瞬时抖动）</td></tr>
+<tr><td>HTML 导出 imgur 死链占位（35 个）</td><td>09-07</td><td><span class="tag t-warn">待处理</span></td><td>主库 14 个 HTML 校验通过后发现的死链占位图，需手动迁移图床或删除</td></tr>
+<tr><td>酷狗音乐"未响应"（第 1 周遗留，第 3 次复发）</td><td>08-31</td><td><span class="tag t-bad">待处理</span></td><td>08-31 首现、09-01 恢复、09-06 16:31 复发、09-08 08:34 再发（均"打开即 WerFault"）；09-08 已 Geek 触发官方卸载疑似未走完、重开 09:17 再现冻结——建议彻底卸载重装或直接停用，以网易云/QQ音乐（09-08 已装）替代</td></tr>
+<tr><td>AUTO-MAS repo→app 启动同步覆盖还原修复</td><td>09-02</td><td><span class="tag t-bad">未解决</span></td><td>根因已定位（时间戳回退 + 基线漂移），修复未实施；今日例行挂机约 2h22m 运行正常</td></tr>
+<tr><td>QQ AI Bot 收尾剩余 4 项 + bot-projects 备份</td><td>09-02</td><td><span class="tag t-warn">未开始</span></td><td>安全收敛、JDK 备份意识等；DeepSeek 用量照常增长（今日再查用量页）</td></tr>
+</table>
+
+<h2><span class="n">4</span>趋势与提醒（首日观察）</h2>
+<div class="box b-info"><div class="t">首日+次日节奏：工作高企后遇上午短在线；娱乐仍由挂页虚高</div>
+09-07 工作约 5.5h（占活跃 43%）为第 2 周高起点；09-08 仅上午在线约 2h，工作 0.5h、无实际游戏，娱乐 1.4h 中 78m 为 SpeedBall 纯挂页读数——两天合计：工作 6.0h（41%）、游戏/挂机 1.0h（7%）、娱乐 7.6h（52%），日均活跃被 09-08 短在线拉低至 7.3h。抖音在 09-07 已回落至约 3.4h，09-08 无抖音（记录窗口短）。判断：09-08 属于"短在线维护日"（软件补装 + 故障处置），不影响本周主线节奏，但酷狗第 3 次复发提示音乐类应用处置不能再拖。</div>
+<div class="box b-warn"><div class="t">明日（09-09）优先</div>
+① 酷狗音乐处置拍板：彻底卸载重装或停用（网易云/QQ音乐已装）——第 3 次复发不能再拖；② 确认 SpeedBall 27% 下载任务与 微信/QQ/VS Code/GitHub Desktop 安装结果；③ 22:00 定时链路续验（09-08 关机缺跑后首次）；④ BOSS直聘 回复多益意向/择岗投递；⑤ 手机端 Obsidian Git 真机同步落地；⑥ 平板副屏 spacedesk 实测；⑦ CET-6 学籍核对（期限 9/9 已到，9/11 12:00 报名）；⑧ Java 重启（Maven 配置）。</div>
+
+<div class="foot">
+ScrePipe日报 · 2026-09 第 2 周（进行中，每晚 22:00 随日报增量更新至 09-13 完结）· <a href="../月度总结.html" style="color:#58a6ff">月度总结</a> · <a href="../第1周(08.31-09.06)/周总结.html" style="color:#58a6ff">第1周总结</a> · <a href="../../../说明文件.html" style="color:#58a6ff">说明文件</a>
+</div>
+</div><button class="theme-btn" id="themeBtn" title="切换 浅色/深色（默认跟随系统）">☀️</button>
+<script>
+(function(){
+var tb=document.getElementById('themeBtn');if(!tb)return;
+function syncIcon(){tb.textContent=document.documentElement.dataset.theme==='light'?'🌙':'☀️';}
+syncIcon();
+tb.onclick=function(){
+  var next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('nb-theme',next);}catch(e){}
+  try{sessionStorage.setItem('nb-scroll',window.scrollY);}catch(e){}
+  location.reload();
+};
+try{var y=sessionStorage.getItem('nb-scroll');if(y!==null){window.scrollTo(0,+y);sessionStorage.removeItem('nb-scroll');}}catch(e){}
+})();
+</script></body></html>
