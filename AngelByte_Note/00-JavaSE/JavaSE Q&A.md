@@ -44,6 +44,8 @@
 31. [[#三十一、迭代时删除元素与 fail-fast 机制|迭代时删除元素与 fail-fast 机制]]
 32. [[#三十二、Map 继承结构与三大家族|Map 继承结构与三大家族]]
 33. [[#三十三、Set 的底层真相（Set 就是 Map 的 key）|Set 的底层真相（Set 就是 Map 的 key）]]
+34. [[#三十四、HashMap：key 去重机制与自定义 key 陷阱|HashMap：key 去重机制与自定义 key 陷阱]]
+35. [[#三十五、HashMap 底层：哈希表与源码|HashMap 底层：哈希表与源码]]
 
 ---
 
