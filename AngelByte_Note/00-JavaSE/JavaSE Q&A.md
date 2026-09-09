@@ -1,0 +1,1081 @@
+# JavaSE 基础问答笔记
+
+> 来源：动力节点 JavaSE 教程 · 课堂答疑整理
+> 整理日期：2026-08-31
+> 适用：Obsidian 阅读
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承
+
+---
+
+> 配套：[[JavaSE]]
+
+## 目录
+
+1. [[#一、八种基本数据类型总览|八种基本数据类型总览]]
+2. [[#二、局部变量与成员变量的默认值|局部变量与成员变量的默认值]]
+3. [[#三、为什么 long z = 2147483648 会报错|为什么 long z = 2147483648 会报错]]
+4. [[#四、为什么 float f = 3.0 会报错|为什么 float f = 3.0 会报错]]
+5. [[#五、浮点数为什么不能用 == 比较|浮点数为什么不能用 == 比较]]
+6. [[#六、char 字符型要点|char 字符型要点]]
+7. [[#七、转义字符有什么用|转义字符有什么用]]
+8. [[#八、byte / short / char 运算为什么会报错|byte / short / char 运算为什么会报错]]
+9. [[#九、Scanner 的 nextXxx 怎么选|Scanner 的 nextXxx 怎么选]]
+10. [[#十、&& 与 & 有什么区别|&& 与 & 有什么区别]]
+11. [[#十一、package 与 import 怎么用|package 与 import 怎么用]]
+12. [[#十二、对象的创建与 JVM 内存分析|对象的创建与 JVM 内存分析]]
+13. [[#十三、构造方法|构造方法]]
+14. [[#十四、this 关键字|this 关键字]]
+15. [[#十五、继承（extends）基本概念|继承（extends）基本概念]]
+
+---
+
+## 一、八种基本数据类型总览
+
+> **一句话**：8 种 primitive 类型，整数默认用 int，小数默认用 double。
+
+### 总览表
+
+| 类型 | 字节 | 取值范围 | 默认值 |
+|------|------|----------|--------|
+| byte | 1 | -128 ~ 127 | 0 |
+| short | 2 | -32768 ~ 32767 | 0 |
+| int | 4 | -2147483648 ~ 2147483647 | 0 |
+| long | 8 | -2⁶³ ~ 2⁶³-1 | 0L |
+| float | 4 | 约 ±3.4E38（6~7 位有效数字） | 0.0F |
+| double | 8 | 约 ±1.8E308（15~16 位有效数字） | 0.0 |
+| boolean | 1 | true / false | false |
+| char | 2 | 0 ~ 65535（无符号） | '\u0000' |
+
+### 要点
+
+- 整数范围公式：n 位有符号 → `-2ⁿ⁻¹ ~ 2ⁿ⁻¹-1`
+- 日常整数用 `int`，小数用 `double`
+- boolean 在 Java 里**不能**和 0/1 互换（与 C 不同）
+- char 是无符号 16 位，和 short 字节数相同但范围不同
+
+### 速记
+
+> 整数 4 兄弟：byte < short < int < long
+> 小数 2 兄弟：float < double
+> 外加 boolean（真假）与 char（字符）
+
+---
+
+## 二、局部变量与成员变量的默认值
+
+> **一句话**：局部变量没有默认值，成员变量有默认值。
+
+### 规则
+
+| 变量位置 | 是否有默认值 | 未赋值就用 |
+|----------|--------------|------------|
+| 局部变量（方法内、代码块内） | ❌ 没有 | **编译报错** |
+| 成员变量（类的属性） | ✅ 有 | 按类型默认值 |
+
+### 示例
+
+```java
+public class Test {
+    int a;                // 成员变量
+
+    void method() {
+        int b;            // 局部变量
+        System.out.println(a);  // ✅ 输出 0（自动默认值）
+        System.out.println(b);  // ❌ 编译错误：可能尚未初始化变量 b
+    }
+}
+```
+
+### 原因
+
+- 成员变量随对象在**堆**中创建，JVM 会整体清零初始化
+- 局部变量在**栈**上，JVM 为性能不做清理
+- 「使用前必须赋值」是**编译器**的强制安全检查，不是运行时检查
+
+### 速记
+
+> 方法里的变量，先赋值再用；不确定的话一律显式写 `int b = 0;`
+
+---
+
+## 三、为什么 long z = 2147483648 会报错
+
+> **一句话**：报错在「字面量合法性」阶段，不在赋值转换阶段。
+
+### 规则
+
+**整数类型字面量默认当做 int 类型处理。**
+
+处理顺序：
+
+1. 编译器看到 `2147483648`，**还没有任何赋值动作**
+2. 按规则把它当 int 处理
+3. 检查：int 最大值是 2147483647，`2147483648` 超范围
+4. 还没轮到赋值给 `z`，编译就失败了
+
+### 对比
+
+| 代码 | 结果 | 原因 |
+|------|------|------|
+| `long a = 10;` | ✅ | 合法的 int 字面量，int → long 自动拓宽 |
+| `long b = 2147483648;` | ❌ | 字面量本身超 int 范围 |
+| `long c = 2147483648L;` | ✅ | `L` 让字面量直接成为 long 类型 |
+
+### 要点
+
+- `L` 的作用是告诉编译器「别按 int 处理，直接按 long 处理」
+- 习惯用**大写 `L`**，小写 `l` 容易被看成数字 `1`
+
+### 速记
+
+> 超过 int 范围的整数，字面量必须带 `L`
+
+---
+
+## 四、为什么 float f = 3.0 会报错
+
+> **一句话**：浮点字面量默认是 double，double → float 是大转小，不允许自动收窄。
+
+### 规则
+
+**浮点类型字面量默认当做 double 类型处理。**
+
+### 与 long 案例的区别（重点）
+
+| 代码 | 字面量默认类型 | 报错原因 |
+|------|----------------|----------|
+| `long z = 2147483648;` | int | 字面量**超 int 范围**，int 自己装不下 |
+| `float f = 3.0;` | double | `3.0` 作为 double 合法，但 **double → float 大转小** |
+
+两个报错「病因」不同，但解法一致：**加后缀让字面量出生就正确**。
+
+### 示例
+
+```java
+float f = 3.0F;    // ✅ 字面量直接是 float 类型
+double d = 3.0;    // ✅ 或干脆用 double，什么都不用加
+double d2 = 1.5656856894;   // 输出 1.5656856894（原样）
+float  f2 = 1.5656856894F;  // 输出 1.5656857（被舍入）
+```
+
+### 精度对比
+
+- float：4 字节，约 **6~7 位**有效数字
+- double：8 字节，约 **15~16 位**有效数字
+
+超出精度的位数会被舍入 → 实际开发**小数优先用 double**。
+
+### 速记
+
+> 整数默认 int（超范围加 `L`），小数默认 double（转 float 加 `F`）
+
+---
+
+## 五、浮点数为什么不能用 == 比较
+
+> **一句话**：浮点是近似值，用 `==` 比较会翻车，改用误差范围（epsilon）。
+
+### 规则
+
+float / double 按 IEEE 754 标准存储，**本质都是近似值**，大部分十进制小数无法用二进制精确表示。
+
+### 示例
+
+```java
+double x = 6.9;
+double y = 3.0;
+double z = x / y;      // 数学上应为 2.3，实际是 2.3000000000000003
+
+if (z == 2.3) {        // ❌ false，逐位比较被误差击穿
+}
+```
+
+### 正确写法
+
+```java
+if (Math.abs(z - 2.3) < 0.000001) {   // ✅ 差值在容差内就算相等
+    System.out.println("相等");
+}
+```
+
+注意：只写 `z - 2.3 < 0.000001` 没取绝对值，**比目标小很多的值也会通过**——差值恒为负、必然 < 0.000001，如 `1.0/3.0` ≈ 0.333 也会被判「相等」，必须加 `Math.abs()`。
+
+### 其他常见坑
+
+```java
+double sum = 0.1 + 0.2;
+sum == 0.3;                     // false，实际 0.30000000000000004
+
+double d = 5 / 2;               // 2.0，不是 2.5（整数除法先算完再转）
+double d2 = 5.0 / 2;            // 2.5 ✅
+
+new BigDecimal("1.0").equals(new BigDecimal("1.00"));  // false！scale 不同
+// BigDecimal 比较用 compareTo() == 0
+```
+
+### 速记
+
+| 场景                | 做法                          |
+| ----------------- | --------------------------- |
+| float / double 比较 | `Math.abs(a - b) < epsilon` |
+| 金钱、精确小数           | `BigDecimal`                |
+| 想用 `==` 比浮点       | 默认不写                        |
+
+---
+
+## 六、char 字符型要点
+
+> **一句话**：Java 的 char 是 2 字节 Unicode 字符，本质是 0~65535 的无符号整数。
+
+### 规则
+
+- 占用 **2 字节**，范围 **0 ~ 65535**（无符号）
+- 与 short 字节数相同，但 short 是 -32768 ~ 32767（有符号）
+- 用**单引号**，且**只能一个字符**
+- 可以保存一个汉字（中文也占一个 Unicode 字符）
+- 默认值是空字符 `'\u0000'`
+
+### 示例
+
+```java
+char c1 = 'A';        // ✅
+char c2 = "A";        // ❌ 双引号是 String
+char c3 = 'AB';       // ❌ char 只能存一个字符
+char c4 = '中';       // ✅ 可以存汉字
+char c5 = '';         // ❌ 单引号内必须有一个字符
+char c6 = '\u0000';   // ✅ 空字符，也是默认值
+
+int i = 'A';          // ✅ char → int 自动提升，i = 65
+char c = 20013;       // ✅ 20013 是 '中' 的 Unicode 码点
+```
+
+### 空字符 vs 空格字符
+
+| 名称 | 写法 | 含义 |
+|------|------|------|
+| 空字符 | `'\u0000'` | 无内容，占位置不可见 |
+| 空格字符 | `' '` | 真实空白，显示为空格 |
+
+### 速记
+
+> char = 2 字节 Unicode，单引号包一个字符，默认 `\u0000`
+
+---
+
+## 七、转义字符有什么用
+
+> **一句话**：`\n`、`\\`、`\"` 是高频三件套，写字符串、路径、正则时天天见。
+
+### 常用对照表
+
+| 转义 | 含义 | 典型场景 |
+|------|------|----------|
+| `\n` | 换行 | 多行输出、日志拼接 |
+| `\t` | 制表符 | 表格式对齐输出 |
+| `\"` | 双引号 | 字符串里嵌套引号 |
+| `\'` | 单引号 | char / 字符串里的单引号 |
+| `\\` | 反斜杠 | Windows 路径、正则表达式 |
+
+### 示例
+
+```java
+System.out.println("第一行\n第二行");
+// 第一行
+// 第二行
+
+System.out.println("姓名\t年龄\nAlice\t20");
+// 姓名  年龄
+// Alice 20
+
+String s = "他说：\"你好\"";              // 输出：他说："你好"
+String path = "C:\\Users\\29074\\Desktop"; // 实际是一个 \
+```
+
+### 要点
+
+- `"` 是字符串边界，字符串内写 `"` 必须用 `\"` 转义
+- Windows 路径本来用 `\`，但 `\` 又是转义符，所以写一个真反斜杠要写 `\\`
+
+### 速记
+
+> 字符串里想写「特殊符号」，前面加 `\`
+
+---
+
+## 八、byte / short / char 运算为什么会报错
+
+> **一句话**：字面量默认是 int，且小类型一参与运算就变 int，双重保险 → 结果必然是 int。
+
+### 两条核心规则
+
+| 规则 | 内容 |
+|------|------|
+| ① | **整数字面量默认是 int**，`1`、`99`、`100` 全是 int |
+| ② | **byte / short / char 参与算术运算时，一律先提升成 int** |
+
+Java 里**没有 byte 字面量、没有 short 字面量**，也没有对应后缀，压根不存在。
+
+### 示例
+
+```java
+short s = 100;
+s = s - 99;          // ❌ 结果是 int
+
+byte b = 100;
+b = b + 1;           // ❌ 结果是 int
+
+byte a1 = 1;
+byte a2 = 2;
+byte c = a1 + a2;    // ❌ 没有字面量参与，照样报错！
+
+// 正确写法
+s = (short)(s - 99);
+b = (byte)(b + 1);
+b++;                 // ✅ 自增运算符底层帮你强转
+b += 1;              // ✅ 复合赋值运算符自动强转
+```
+
+### 混合类型运算
+
+```java
+char c = 'a';
+int i = 20;
+float f = .3F;
+
+double d = c + i + f;   // ✅
+// 提升链：char → int → float → double
+// 等价：double d = (double)((float)((int)c + i) + f);
+
+byte b = 100;
+short s = 100;
+
+short x = b + s;              // ❌ byte + short 结果仍是 int
+x = (short)(b + s);           // ✅ 强转后再赋值
+```
+
+### 常量赋值的例外
+
+```java
+short s = 100;   // ✅ 常量直接赋值，值在范围内 → 自动窄化
+byte  b = 100;   // ✅ 同上
+```
+
+### 为什么这样设计
+
+byte / short 运算极易溢出（`100 + 100 = 200` 已超 byte 最大值 127）。
+JVM 规定小整数运算统一在 int 层面进行，避免中间结果溢出 —— 代价是必须手动强转。
+
+### 速记
+
+> 常量直接赋值 → 范围内自动过
+> 变量参与运算 → 结果至少是 int，塞回小类型必须强转
+
+---
+
+## 九、Scanner 的 nextXxx 怎么选
+
+> **一句话**：要什么类型就叫什么方法名，但 `nextInt()` 后接 `nextLine()` 要清换行符。
+
+### 方法对照表
+
+| 方法 | 返回类型 | 读取内容 |
+|------|----------|----------|
+| `next()` | String | 一个「单词」，以空格 / Tab / 换行为分隔 |
+| `nextLine()` | String | 一整行，包含空格，直到换行符 |
+| `nextInt()` | int | 一个整数 |
+| `nextLong()` | long | 一个长整数 |
+| `nextDouble()` | double | 一个小数 |
+| `nextFloat()` | float | 一个单精度小数 |
+| `nextByte()` | byte | 一个 byte |
+| `nextShort()` | short | 一个 short |
+| `nextBoolean()` | boolean | true / false |
+
+### 没有 nextChar()
+
+```java
+char c = scanner.next().charAt(0);   // 先读字符串，再取第一个字符
+```
+
+### 大坑：nextInt() 吞不掉换行符
+
+```java
+scanner.nextInt();     // 输入 18 后按回车
+scanner.nextLine();    // ❌ 读到空字符串，不是下一行输入
+```
+
+**原因**：`nextInt()` 只读数字，没读走末尾的换行符；`nextLine()` 一看到换行符就认为「一行读完了」。
+
+**解决**：中间插一个 `nextLine()` 吃掉残留换行符。
+
+### 完整示例
+
+```java
+import java.util.Scanner;
+
+public class Demo {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("请输入年龄：");
+        int age = scanner.nextInt();
+        scanner.nextLine();              // 清理换行符
+
+        System.out.print("请输入姓名：");
+        String name = scanner.nextLine();
+
+        System.out.println(name + " 今年 " + age + " 岁");
+        scanner.close();
+    }
+}
+```
+
+### 速记
+
+> `nextInt()` 后要接 `nextLine()`，中间补一句 `nextLine()` 清空换行
+
+---
+
+## 十、&& 与 & 有什么区别
+
+> **一句话**：`&&` 短路更高效，但 `&` 在「右边必须执行」和位运算场景下不可替代。
+
+### 对照表
+
+| 运算符 | 是否短路 | 行为 |
+|--------|----------|------|
+| `&&` | ✅ 是 | 左边 false → 右边**不执行** |
+| `&` | ❌ 否 | 不管左边，右边**一定执行** |
+| `\|\|` | ✅ 是 | 左边 true → 右边**不执行** |
+| `\|` | ❌ 否 | 不管左边，右边**一定执行** |
+| `^` | — | 异或（两边不同才为 true） |
+
+### 什么时候必须用 &
+
+**右边有副作用、必须执行时**（如参数校验希望把所有错误都报出来）：
+
+```java
+if (checkA(x) && checkB(x)) { }   // A 失败 → B 不执行
+if (checkA(x) &  checkB(x)) { }   // A 失败 → B 仍然执行
+```
+
+### 位运算只能用 & | ^
+
+`&&` 没有位运算功能：
+
+```java
+int a = 5;   // 二进制 101
+int b = 3;   // 二进制 011
+
+int c = a & b;   // 001 → 1  按位与
+int d = a | b;   // 111 → 7  按位或
+int e = a ^ b;   // 110 → 6  按位异或
+```
+
+### 选择建议
+
+| 场景 | 用哪个 |
+|------|--------|
+| 普通逻辑判断，只求结果 | `&&` / `\|\|`（效率高） |
+| 右边有必须执行的副作用 | `&` / `\|` |
+| 二进制位运算 | 只能 `&` / `\|` / `^` |
+
+### 速记
+
+> 效率不是唯一标准，需求决定用哪个 —— 别无脑把 `&` 全换成 `&&`
+
+---
+
+## 十一、package 与 import 怎么用
+
+> **一句话**：`package` 是给类贴「地址标签」，`import` 是根据地址去「找人」。
+
+### package：类的文件夹地址
+
+```java
+package com.powernode.javase.chapter02;
+
+public class PackageTest {
+    // ...
+}
+```
+
+**规则**
+
+- `package` 必须是 Java 文件的**第一行**
+- 一个文件只能有一个 package
+- 包名**全小写**：`公司域名倒序 + 项目名 + 模块名 + 功能名`
+  - 动力节点域名 `powernode.com` → 倒序 `com.powernode`
+  - 例：`com.powernode.oa.empgt.service`
+
+**目录结构**
+
+```
+项目/
+└── com/
+    └── powernode/
+        ├── javase/
+        │   └── chapter02/
+        │       └── PackageTest.java
+        └── oa/
+            └── empgt/
+                └── service/
+                    └── EmployeeService.java
+```
+
+物理路径必须与 package 声明**一一对应**，编译器靠这个路径找类。
+
+### 带 package 的编译与运行
+
+```bash
+javac -d . PackageTest.java                              # -d 指定 class 文件输出目录
+java com.powernode.javase.chapter02.PackageTest          # 运行要写完整类名
+```
+
+> **完整类名 = 包名 + 类名**
+
+### import：引入其他包的类
+
+```java
+package com.example.service;
+
+import com.example.dao.UserDao;   // 引入另一个包里的类
+
+public class UserService {
+    UserDao userDao = new UserDao();
+}
+```
+
+**规则**
+
+- import 写在 **package 之后、class 之前**
+- 可以写多个 import
+- `java.lang` 包下的类**默认自动导入**，不用写（`String`、`System` 等）
+- 模糊导入 `import java.util.*;` 只导当前这一层，**不递归子包**
+
+### 静态导入（少见，知道即可）
+
+```java
+import static java.lang.System.*;
+
+public class Test {
+    public static void main(String[] args) {
+        out.println("hello");   // 不用写 System.out
+    }
+}
+```
+
+可读性差，日常不建议使用。
+
+### 速记
+
+| 关键字 | 作用 | 位置 |
+|--------|------|------|
+| `package` | 声明这个类属于哪个包 | 文件第一行 |
+| `import` | 引入其他包里的类 | package 之后、class 之前 |
+
+| 情况 | 是否需要 import |
+|------|----------------|
+| 同包下的类 | ❌ 不需要 |
+| 不同包下的类 | ✅ 需要 |
+| `java.lang` 下的类 | ❌ 不需要 |
+
+---
+
+## 十二、对象的创建与 JVM 内存分析
+
+> **一句话**：引用在栈里，对象在堆里，类的元数据在元空间；方法结束栈帧销毁，对象靠 GC 回收。
+
+### 6 条核心结论
+
+| # | 结论 | 说明 |
+|---|------|------|
+| ① | `new` 在**堆**中分配空间 | 这块空间 + 里面的实例变量 = Java 对象 |
+| ② | 对象有内存地址，保存地址的变量叫**引用** | 引用不是对象，只是「门牌号」 |
+| ③ | GC 主要针对**堆内存** | 清理没有任何引用指向的对象 |
+| ④ | **空指针异常** | 引用为 `null` 却去访问对象的属性 / 方法 |
+| ⑤ | 方法传参 = **复制一份值** | 基本类型复制数据，引用类型复制地址 |
+| ⑥ | `this` 代表**当前对象** | 在实例方法中，通常可省略；存于栈帧局部变量表 0 号槽位 |
+
+### 图示 1：方法调用时引用被复制传参
+
+![[jvm-mem-01-ref-passing.svg]]
+
+### 图示 2：方法结束，栈帧销毁但对象还在
+
+```java
+public static void add(User u) {   // u 是 main 中 u 的副本，地址都是 0x12
+    u.age++;                       // 改的是堆里同一个对象，main 看得到
+}
+// add 结束 → add 栈帧销毁 → 但堆里的 User 对象仍在（main 的 u 还指着它）
+```
+
+![[jvm-mem-02-frame-destroyed.svg]]
+
+**注意**：在 `add` 内部写 `u = null`，**不会影响** main 的 `u` —— 改的只是副本。
+
+### 图示 3：Java 8 之后的三块内存区域
+
+![[jvm-mem-03-java8-memory.svg]]
+
+> 类对象（`.class` 的运行时表示）也在堆中，类的**元数据**在元空间 Metaspace（使用本地内存）。
+
+### 图示 4：引用断开 → 对象变垃圾 → GC 回收
+
+```java
+Pet dog = new Pet("小黑", "2012-10-11", '雄');
+dog = null;               // 引用断开
+System.out.println(dog.name);   // ❌ NullPointerException
+```
+
+![[jvm-mem-04-null-gc.svg]]
+
+### 参数传递的本质
+
+| 参数类型 | 传递的内容 | 方法内修改的影响 |
+|----------|------------|------------------|
+| 基本类型 | 数据值的副本 | 不影响原变量 |
+| 引用类型 | 地址的副本 | 改**对象内容**会影响；改**引用本身**（如 `u = null`）不影响 |
+
+### this 关键字
+
+```java
+public class Student {
+    String name;
+    public void setName(String name) {
+        this.name = name;      // this.name = 当前对象的 name
+    }
+}
+```
+
+- `this` 是引用，指向**当前正在调用该方法的对象**
+- 编译后存放在**实例方法栈帧局部变量表的 0 号槽位**
+- 大部分情况下 `this.` 可以省略，仅当**局部变量与成员变量同名**时必须写
+
+### 速记
+
+> 对象在堆，引用在栈，类信息在元空间
+> 方法结束栈帧销毁，对象没人指就 GC
+> 传参一律传副本，改内容生效、改引用不生效
+
+---
+
+## 十三、构造方法
+
+> **一句话**：`new` 对象时自动调用、专门用来初始化对象的特殊方法。
+
+### 作用
+
+对象创建分两个阶段，**不能颠倒、不可分割**：
+
+1. **创建阶段**：`new` 在堆里开辟空间，给属性赋**默认值**
+2. **初始化阶段**：执行构造方法，把属性改成**你想要的值**
+
+```java
+Student s = new Student("张三", 20);
+// ① new 在堆中创建对象
+// ② 调用 Student("张三", 20) 初始化对象
+```
+
+### 定义三要素
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    // 构造方法：没有返回值，方法名必须和类名一样
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+| 要点 | 说明 |
+|------|------|
+| 没有返回值 | 连 `void` 都不能写 |
+| 方法名 = 类名 | 大小写必须完全一致 |
+| 可重载 | 参数列表不同即可 |
+
+### 调用方式
+
+构造方法不是用 `.方法名()` 调用，而是跟在 `new` 后面：
+
+```java
+Student s = new Student("张三", 20);
+```
+
+### 无参构造的坑（重点）
+
+**如果一个构造方法都没写，Java 会自动送你一个无参构造；一旦你写了任意构造方法，系统就不再送了。**
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+
+Student s1 = new Student("张三", 20);   // ✅
+Student s2 = new Student();              // ❌ 编译报错！无参构造已消失
+```
+
+**建议**：不管需不需要，都显式把无参构造写出来。
+
+```java
+public Student() {}   // 手动加上，避免后续踩坑
+```
+
+### 重载示例
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    public Student() {}                              // 无参
+    public Student(String name) { this.name = name; } // 一个参数
+    public Student(String name, int age) {            // 两个参数
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+### 构造代码块
+
+类里用 `{}` 包起来的代码，**每次创建对象时都会执行**，而且在构造方法之前执行。
+
+```java
+public class Student {
+    String name;
+
+    // 构造代码块
+    {
+        System.out.println("构造代码块执行");
+    }
+
+    public Student(String name) {
+        System.out.println("构造方法执行");
+        this.name = name;
+    }
+}
+
+new Student("张三");
+// 输出：
+// 构造代码块执行
+// 构造方法执行
+```
+
+### 对象初始化全过程
+
+![[java-obj-init-order.svg]]
+
+1. `new` 在堆中开辟空间，属性赋默认值
+2. 执行**构造代码块**
+3. 执行**构造方法体**
+4. 构造方法结束，对象初始化完成
+
+### 速记
+
+> 构造方法 = 没有返回值 + 方法名同类名 + new 时自动调用
+> 建议无参构造显式写，否则写了有参构造后默认无参会消失
+
+---
+
+## 十四、this 关键字
+
+> **一句话**：`this` 是指向当前对象的引用。
+
+### this 是什么
+
+`this` 本质上是一个**引用变量**，保存着**当前正在调用方法的那个对象**的内存地址。
+
+```java
+public class Student {
+    String name;
+
+    public void show() {
+        System.out.println(this);     // 打印当前对象的地址
+        System.out.println(this.name);
+    }
+}
+```
+
+### this 能干嘛
+
+通过 `this.` 可以访问实例变量、调用实例方法：
+
+```java
+public class Student {
+    String name;
+
+    public void setName(String name) {
+        this.name = name;            // this.name = 当前对象的 name
+    }
+
+    public void sayHello() {
+        this.study();                // 调用当前对象的 study 方法
+    }
+
+    public void study() {
+        System.out.println(name + " 在学习");
+    }
+}
+```
+
+### this. 什么时候可以省略
+
+大部分情况下，`this.` 可以省略：
+
+```java
+public void study() {
+    System.out.println(this.name);   // ✅ 完整写法
+    System.out.println(name);        // ✅ 省略写法，效果一样
+}
+```
+
+**不能省略**的情况：**局部变量和实例变量同名**。
+
+```java
+public void setName(String name) {
+    name = name;      // ❌ 两个都是参数 name，没意义
+    this.name = name; // ✅ 左边是当前对象的 name，右边是参数 name
+}
+```
+
+### this 不能出现在静态方法中
+
+```java
+public class Student {
+    String name;
+
+    public static void test() {
+        // System.out.println(this.name);   // ❌ 编译报错
+    }
+}
+```
+
+**原因**：静态方法属于类，不属于某个对象；调用时可能根本不存在对象，`this` 就没有指向。
+
+### this(实参) 调用其他构造方法
+
+`this(实参)` 只能出现在**构造方法的第一行**，用来调用本类中另一个构造方法，避免重复写代码。
+
+```java
+public class Student {
+    String name;
+    int age;
+
+    // 无参构造调用有参构造
+    public Student() {
+        this("张三", 20);   // ✅ 必须是第一行
+    }
+
+    public Student(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+```
+
+**注意**：
+- `this(...)` 和 `super(...)` 都必须放在构造方法**第一行**
+- 所以一个构造方法里**不能同时出现** `this(...)` 和 `super(...)`
+
+### this 存储在哪
+
+编译后，`this` 被放在**实例方法栈帧局部变量表的 0 号槽位**。每个实例方法被调用时，JVM 都会悄悄把当前对象的引用塞进去。
+
+### 速记
+
+> `this` = 指向当前对象的引用；同名时必须写，静态方法里不能用，`this(实参)` 调别的构造方法且必须放第一行
+
+---
+
+## 十五、继承（extends）基本概念
+
+> **一句话**：`extends` 让子类直接拥有父类的属性和方法，**Java 只支持单继承**，没写 `extends` 就默认继承 `java.lang.Object`。
+
+### 继承的作用
+
+| 层次 | 作用 | 说明 |
+|------|------|------|
+| 基本作用 | **代码复用** | 不用把父类的属性、方法再抄一遍 |
+| 重要作用 | **铺垫方法覆盖和多态** | 没有继承 → 没有方法覆盖 → 没有多态 |
+
+### 语法
+
+```java
+[修饰符列表] class 子类名 extends 父类名 {
+    // 类体
+}
+```
+
+`extends` 翻译为**扩展**：子类继承父类后，是对父类的**扩展**，不是简单复制。
+
+### 术语对照
+
+以「猫继承动物」为例：
+
+| 角色 | 类名 | 别名 |
+|------|------|------|
+| 被继承的 | `Animal` | 父类 / 超类 / 基类 / **superclass** |
+| 去继承的 | `Cat` | 子类 / 派生类 / **subclass** |
+
+### 三条硬性限制
+
+| # | 限制 | 说明 |
+|---|------|------|
+| ① | **只支持单继承** | 一个类只能 `extends` 一个直接父类 |
+| ② | **不支持多继承** | `class C extends A, B` → ❌ 编译报错 |
+| ③ | **支持多层继承** | `A → B → C` 逐级往下 ✅ 合法 |
+
+```java
+class A {}
+class B {}
+
+class C extends A, B { }        // ❌ 多继承，编译报错
+class D extends A { }            // ✅ 单继承
+class E extends D { }            // ✅ 多层继承（E 的父类是 D，祖宗是 A）
+```
+
+### 哪些成员被继承
+
+| 成员类型 | 是否被继承 | 说明 |
+|----------|------------|------|
+| public / protected 属性、方法 | ✅ 继承 | 子类可直接访问 |
+| **private** 属性、方法 | ⚠️ **继承下来但不可直接访问** | 内存里存在，被 `private` 锁住 |
+| **构造方法** | ❌ **不继承** | 每个类有自己独立的构造方法列表 |
+| 默认（包）访问权限 | 看是否同包 | 跨包访问不到 |
+
+> ⚠️ 常见误解：「private 的不被继承」——**不准确**。private 成员确实存在于子类对象中（占内存），
+> 只是子类代码**没有权限直接访问**，需要靠父类提供的 `getter / setter` 间接操作。
+
+```java
+class Father {
+    private int money = 100;      // 私有
+    public String name = "老王";
+}
+
+class Son extends Father {
+    void test() {
+        System.out.println(name);    // ✅ 老王（public 继承可用）
+        System.out.println(money);   // ❌ 编译报错：money 在 Father 中是 private
+    }
+}
+```
+
+### 默认继承 Object
+
+一个类**没有显式继承任何类**时，编译器自动补上 `extends java.lang.Object`：
+
+```java
+class Animal { }                                  // 等价 → class Animal extends Object { }
+class Animal extends Object { }                   // 手写也行，但没人这么写
+```
+
+`Object` 是 Java 类体系的**根**，所有类（数组、字符串、自定义类）都是它的后代。
+
+### 图示：继承层级
+
+![[inheritance-hierarchy.svg]]
+
+### 示例
+
+```java
+class Animal {                      // 父类（没写 extends → 默认继承 Object）
+    public String name;
+    public void eat() {
+        System.out.println("吃");
+    }
+}
+
+class Cat extends Animal {          // 子类，extends = 扩展
+    public void catchMouse() {      // 子类自己的新方法
+        System.out.println("抓老鼠");
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Cat c = new Cat();
+        c.name = "Tom";             // ✅ 继承自父类的属性
+        c.eat();                    // ✅ 继承自父类的方法（代码复用）
+        c.catchMouse();             // ✅ 子类扩展的方法
+    }
+}
+```
+
+### 速记
+
+> `extends` 是扩展不是复制；一个类只能认一个爹，但可以一代传一代
+> private 继承下来但用不了，构造方法压根不继承
+> 没写 `extends` 就默认继承 `Object`
+
+---
+
+## 附录：速查总表
+
+### 字面量后缀规则
+
+| 写法 | 默认类型 | 说明 |
+|------|----------|------|
+| `100` | int | 整数字面量默认 int |
+| `100L` | long | 超 int 范围必须加 `L` |
+| `3.0` | double | 浮点字面量默认 double |
+| `3.0F` | float | 赋给 float 必须加 `F` |
+
+### 类型提升链
+
+```
+byte / short / char  →  int  →  long  →  float  →  double
+    （一运算就变 int）        （自动拓宽，无需强转）
+```
+
+### 内存区域速查
+
+| 区域 | 存储内容 | 生命周期 |
+|------|----------|----------|
+| 虚拟机栈 | 局部变量、方法栈帧 | 方法结束即销毁栈帧 |
+| 堆 Heap | 对象、实例变量、类对象 | 由 GC 回收 |
+| 元空间 Metaspace | 类的元数据（.class 信息） | 使用本地内存 |
+
+### 常见概念速查
+
+| 概念 | 一句话 |
+|------|--------|
+| 对象 | 堆里的数据块 |
+| 引用 | 保存对象地址的变量 |
+| 空指针 | 引用为 null 却去访问对象 |
+| 参数传递 | 复制一份值再传 |
+| this | 指向当前对象的引用 |
+| 构造方法 | 没有返回值、方法名同类名、new 时自动调用 |
+| 构造代码块 | 类中 `{}` 包起来的代码，每次 new 对象时执行，且在构造方法之前 |
+| 继承 | 子类直接拥有父类的属性和方法，作用是代码复用、铺垫多态 |
+| `extends` | 扩展，子类继承父类后是对父类的扩展 |
+| 父类 / 子类 | 被继承的叫父类（superclass），去继承的叫子类（subclass） |
+| `Object` | Java 类体系的根，没写 extends 的类默认继承它 |
+
+### 报错速查
+
+| 代码 | 是否报错 | 原因 |
+|------|----------|------|
+| `long a = 10;` | ✅ | int → long 自动拓宽 |
+| `long b = 2147483648;` | ❌ | 字面量超 int 范围 |
+| `float c = 3.0;` | ❌ | double → float 大转小 |
+| `short s = 100;` | ✅ | 常量在范围内自动窄化 |
+| `s = s - 99;` | ❌ | 结果是 int |
+| `b = b + 1;` | ❌ | 结果是 int |
+| `b += 1;` | ✅ | 复合赋值自动强转 |
+| `byte c = a1 + a2;` | ❌ | 小类型运算结果仍是 int |
+| `double d = c + i + f;` | ✅ | 向最大类型自动提升 |
+| `z == 2.3`（浮点） | ⚠️ | 逻辑上错，应用 epsilon |
+| `new Student()`（只有有参构造时） | ❌ | 显式定义构造方法后默认无参构造消失 |
+| `class C extends A, B { }` | ❌ | Java 不支持多继承，只能 extends 一个 |
+| 子类里直接访问父类 private 成员 | ❌ | private 继承下来但不可见，需 getter/setter |
+| 子类里直接调用父类构造方法 | ❌ | 构造方法不继承，用 `super(...)` 调用 |
