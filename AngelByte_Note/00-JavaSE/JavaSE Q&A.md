@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖
 
 ---
 
@@ -26,6 +26,7 @@
 13. [[#十三、构造方法|构造方法]]
 14. [[#十四、this 关键字|this 关键字]]
 15. [[#十五、继承（extends）基本概念|继承（extends）基本概念]]
+16. [[#十六、方法覆盖（Override）|方法覆盖（Override）]]
 
 ---
 
@@ -1019,6 +1020,165 @@ public class Test {
 
 ---
 
+## 十六、方法覆盖（Override）
+
+> **一句话**：父子类之间、方法签名完全相同、权限不变低、异常不变多 —— 满足这四条才是方法覆盖，作用是用子类实现**替换**父类实现。
+
+### 什么时候用方法覆盖
+
+只有一种情况：**从父类继承过来的方法，满足不了子类的业务需求**时。
+
+- 想"用"父类方法 → 直接继承，不用覆盖
+- 想"改"父类方法 → 覆盖，换掉实现
+
+### 方法覆盖的 5 个条件
+
+| # | 条件 | 说明 |
+|---|------|------|
+| ① | **有继承关系的父子类之间** | 没有继承就只是普通新方法 |
+| ② | **方法签名完全相同** | 方法名相同 + 形式参数列表相同（个数、类型、顺序） |
+| ③ | **访问权限不能变低，可以变高** | 父类 `protected` → 子类可 `public`，**不能**变 `private` |
+| ④ | **抛出的异常不能变多，可以变少** | 子类异常必须是父类异常的子类或子集 |
+| ⑤ | **返回值类型相同或协变** | 返回值可以是父类方法返回值的**子类**（Java 5+ 协变返回） |
+
+```java
+class Animal {
+    protected Animal eat() throws Exception {    // 父类：protected + 抛 Exception
+        return this;
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public Cat eat() throws IOException {        // ✅ 权限变高 + 异常变少 + 返回值协变
+        return this;
+    }
+}
+```
+
+### 5 个易踩坑的细节
+
+| # | 细节 | 原因 |
+|---|------|------|
+| ① | `@Override` 让编译器**检查是否真的重写** | 写错方法名会编译报错，建议永远加 |
+| ② | **private 方法不能覆盖** | private 不继承 → 子类看不见 → 同名只是新方法 |
+| ③ | **构造方法不能覆盖** | 构造方法压根不继承 |
+| ④ | **静态方法不存在覆盖** | 静态方法属于类，不存在多态，同名叫「隐藏」 |
+| ⑤ | **实例变量无关覆盖** | 变量是静态绑定，看引用类型，不是运行时对象 |
+
+### 细节 ①：@Override 注解
+
+```java
+class Cat extends Animal {
+    @Override
+    public void eat() { }        // 如果父类没有 eat()，编译直接报错
+}
+```
+
+不加 `@Override` 也能重写，但**失去编译期检查**。写错方法名（如 `eats()`）会变成"新增方法"，逻辑静默失效，很难查。
+
+### 细节 ②③④：private / 构造方法 / 静态
+
+```java
+// ② private：不是覆盖
+class Father { private void show() { } }
+class Son extends Father { private void show() { } }   // Son 自己的新方法
+
+// ④ static：不是覆盖，是隐藏
+class Father { public static void m() { } }
+class Son extends Father { public static void m() { } } // 隐藏，看引用类型调用
+```
+
+### 细节 ⑤：实例变量不存在覆盖 ⭐ 高频坑
+
+```java
+class Father {
+    int count = 10;
+    public void method() { System.out.println("父类方法"); }
+}
+
+class Son extends Father {
+    int count = 20;
+    public void method() { System.out.println("子类方法"); }
+}
+
+Father obj = new Son();              // 父类型引用 → 子类对象
+
+System.out.println(obj.count);       // 10   ← 静态分派：看引用类型 Father
+obj.method();                        // 子类方法  ← 动态分派：看实际对象 Son
+```
+
+**同名变量和方法同时存在，结果可能不一致** —— 这是面试高频坑。
+
+![[override-dispatch.svg]]
+
+### 覆盖 vs 隐藏 vs 重载（三个概念别混）
+
+| 现象 | 叫法 | 分派方式 | 决定因素 |
+|------|------|----------|----------|
+| 父子类同名**实例方法** | **Override 覆盖** | 动态分派（运行期） | 实际对象类型 |
+| 父子类同名**静态方法** | Hide 隐藏 | 静态分派（编译期） | 引用类型 |
+| 父子类同名**成员变量** | Hide 隐藏 | 静态分派（编译期） | 引用类型 |
+| 同类中同名不同参 | **Overload 重载** | 静态分派（编译期） | 参数列表 |
+
+覆盖（Override）与重载（Overload）对比：
+
+| 维度 | 覆盖 Override | 重载 Overload |
+|------|---------------|---------------|
+| 发生位置 | 父子类之间 | **同一个类**中 |
+| 方法名 | 必须相同 | 必须相同 |
+| 参数列表 | 必须**相同** | 必须**不同** |
+| 返回类型 | 相同或协变 | 无关 |
+| 访问权限 | 不能变低 | 无关 |
+| 绑定时机 | 运行期 | 编译期 |
+
+```java
+// 重载：同一个类，参数不同
+class Calculator {
+    int add(int a, int b)       { return a + b; }
+    double add(double a, double b) { return a + b; }   // ✅ 重载
+}
+
+// 覆盖：父子类，签名完全相同
+class Animal { void cry() { System.out.println("叫"); } }
+class Cat extends Animal { @Override void cry() { System.out.println("喵"); } }
+```
+
+### 完整示例
+
+```java
+class Animal {
+    public Animal eat() {
+        System.out.println("动物在吃");
+        return this;
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    public Cat eat() {                 // 协变返回：Cat 是 Animal 的子类
+        System.out.println("猫在吃鱼");
+        return this;
+    }
+}
+
+public class Test {
+    public static void main(String[] args) {
+        Animal a = new Cat();          // 多态：父类型引用指向子类对象
+        Animal r = a.eat();            // 输出「猫在吃鱼」—— 动态分派到 Cat.eat()
+    }
+}
+```
+
+### 速记
+
+> 覆盖四要素：父子之间 + 签名相同 + 权限不变低 + 异常不变多（返回值可协变）
+> private / 构造方法 / 静态方法 都不能覆盖，**实例变量也不存在覆盖**
+> 变量看左边（引用类型），方法看右边（实际对象）
+> 永远加 `@Override`，防拼写错
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -1060,6 +1220,10 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `extends` | 扩展，子类继承父类后是对父类的扩展 |
 | 父类 / 子类 | 被继承的叫父类（superclass），去继承的叫子类（subclass） |
 | `Object` | Java 类体系的根，没写 extends 的类默认继承它 |
+| 方法覆盖 | 父子类之间用子类实现替换父类实现，是多态的前提 |
+| `@Override` | 注解，编译期检查是否真的重写了父类方法 |
+| 协变返回 | 子类覆盖方法的返回值可以是父类返回值的子类（Java 5+） |
+| 动态分派 | 实例方法运行期按实际对象类型决定，静态方法/变量是编译期按引用类型 |
 
 ### 报错速查
 
@@ -1079,3 +1243,7 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `class C extends A, B { }` | ❌ | Java 不支持多继承，只能 extends 一个 |
 | 子类里直接访问父类 private 成员 | ❌ | private 继承下来但不可见，需 getter/setter |
 | 子类里直接调用父类构造方法 | ❌ | 构造方法不继承，用 `super(...)` 调用 |
+| 覆盖方法把权限改成 private | ❌ | 访问权限不能变低 |
+| 覆盖方法抛出比父类更多的异常 | ❌ | 异常不能变多，只能变少或是子类 |
+| 子类覆盖父类 private 方法 | ❌ | private 不继承，子类写的只是同名新方法 |
+| `@Override` 标在非覆盖方法上 | ❌ | 编译报错（这正是加注解的价值） |
