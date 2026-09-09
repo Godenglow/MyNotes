@@ -2959,6 +2959,104 @@ map.put(e, PRESENT);   // PRESENT 是固定不变的常量，value 纯占位，�
 
 ---
 
+## 三十四、HashMap：key 去重机制与自定义 key 陷阱
+
+> **一句话**：HashMap 的 key 无序、不可重复，**重复的判断分两步走 —— 先比 hashCode 再比 equals**；把自定义类当 key 用时，必须同时重写 `hashCode()` 和 `equals()`，否则去重失效。
+
+![[hashmap-key-dedup.svg]]
+
+### HashMap 的 key 特点
+
+| 特点 | 说明 |
+|------|------|
+| 无序 | 存进去的顺序和取出来的顺序没有关系（LinkedHashMap 才有序） |
+| 不可重复 | 相同的 key 只保留一个 |
+| value 可重复 | key 判重只看 key，value 随便重复 |
+| key 重复 | **value 覆盖**（新值换旧值，相当于修改） |
+
+### 去重两步走
+
+```java
+// 判断 key 是否相同，先 hashCode 后 equals：
+// 第 1 步：比 hashCode() —— 不同直接判定不是同一个 key（快筛）
+// 第 2 步：hashCode 相同再比 equals() —— 相同才算"重复 key"
+map.put(k1, v1);
+map.put(k2, v2);   // 若 k2 与 k1 判定为同一 key → v1 被 v2 覆盖
+```
+
+### 自定义 key 陷阱（重点）
+
+```java
+// 没重写 hashCode/equals 的类当 key —— 去重失效
+Student s1 = new Student("张三");
+Student s2 = new Student("张三");   // 内容相同，但是两个对象
+map.put(s1, 100);
+map.put(s2, 200);
+// 没重写时 s1、s2 的 hashCode 来自 Object（按地址算）→ 两步都判"不同"
+// → map 里出现两个"张三"，去重失效
+
+// 正确做法：重写类里必须同时重写两个方法
+@Override public int hashCode() { ... }
+@Override public boolean equals(Object o) { ... }
+```
+
+规范约定：**equals 相等 → hashCode 必须相等**；只重写一个会出现"明明 equals 相等却散到不同桶里"的诡异 bug。
+
+### 速记
+
+> HashMap key：无序、不可重复，重复 → value 覆盖
+> 判重两步走：先 hashCode（快筛），再 equals（精判）
+> 自定义类当 key：hashCode 和 equals **必须同时重写**
+> 规范：equals 相等 ⇒ hashCode 相等
+
+---
+
+## 三十五、HashMap 底层：哈希表与源码
+
+> **一句话**：HashMap 底层是**哈希表 = 位桶数组 + 链表 + 红黑树**，靠 hash 定位数组下标做到接近 O(1) 的存取；链表长度 ≥ 8 且数组长度 ≥ 64 时链表树化为红黑树。
+
+![[hashmap-hash-table.svg]]
+
+### 底层结构
+
+| 结构 | 作用 |
+|------|------|
+| 位桶数组 `Node<K,V>[] table` | 哈希表主体，每个格子叫一个"桶"（bucket） |
+| 链表 | hash 冲突的 key 挂在同一个桶里，拉链法 |
+| 红黑树 | 链表太长时的优化，查询从 O(n) 提到 O(log n) |
+
+### Node 源码（JDK 8）
+
+```java
+static class Node<K,V> implements Map.Entry<K,V> {
+    final int hash;      // key 的 hash 值，算一次缓存住
+    final K key;         // final：key 存进去之后引用不再变
+    V value;             // value 可以被覆盖换新
+    Node<K,V> next;      // 单向链表，指向冲突的下一个节点
+}
+```
+
+### 关键机制
+
+1. **首次 put 才初始化数组** —— new HashMap() 时 table 是 null，懒加载
+2. **容量永远是 2 的幂** —— 16 → 32 → 64…，为了 `hash & (capacity-1)` 位运算代替取模，算下标快且散列均匀
+3. **树化条件（两个都要满足）**：链表长度 ≥ 8 **且** 数组长度 ≥ 64；数组不够 64 时优先扩容而不是树化
+4. put 流程：算 key 的 hash → 定位桶 → 桶空直接放 → 不空则两步判重（hashCode/equals）→ 重复覆盖 value，不重复尾插
+
+### 为什么快
+
+存取都先由 hash 直接算出数组下标，不用一个个遍历 —— 定位是 O(1)；即使冲突也只是遍历一小段链表/红黑树。这就是哈希表集合（HashMap / HashSet / Hashtable）效率高的根本原因。
+
+### 速记
+
+> 哈希表 = 数组 + 链表 + 红黑树（JDK 8 起）
+> Node 四件套：hash（缓存）· key（final）· value（可覆盖）· next（拉链）
+> 首次 put 才建数组，容量恒为 2 的幂
+> 树化两条件：链表 ≥ 8 且数组 ≥ 64，否则先扩容
+> 哈希表快的本质：hash 直接定位下标，O(1)
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -3072,6 +3170,15 @@ byte / short / char  →  int  →  long  →  float  →  double
 | TreeSet 底层 | new 了一个 TreeMap（红黑树），可排序 |
 | LinkedHashSet 底层 | new 了一个 LinkedHashMap（双向链表+哈希表），有序 |
 | `set.add(e)` | 实际是 `map.put(e, PRESENT)`，Set 特性全部来自 Map 的 key |
+| HashMap 的 key | 无序、不可重复；key 重复 → value 覆盖 |
+| HashMap 判重两步走 | 先比 hashCode（快筛），相同再比 equals（精判） |
+| 自定义 key | 必须同时重写 hashCode + equals，否则去重失效 |
+| equals / hashCode 规范 | equals 相等 ⇒ hashCode 必须相等 |
+| HashMap 底层 | 哈希表 = 位桶数组 + 链表 + 红黑树，存取接近 O(1) |
+| Node<K,V> | hash（缓存）· key（final）· value（可覆盖）· next（拉链） |
+| HashMap 懒加载 | 首次 put 才初始化数组，new 时 table 为 null |
+| 容量 2 的幂 | 为了 `hash & (capacity-1)` 位运算代替取模，快且散列均匀 |
+| 树化条件 | 链表长度 ≥ 8 **且** 数组长度 ≥ 64，否则优先扩容 |
 
 ### 报错速查
 
@@ -3129,3 +3236,6 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 自定义异常只有无参构造 | ⚠️ | 缺 String 构造 → 异常只有类型没信息，getMessage() 拿不到描述 |
 | `throw` 后面还写代码 | ❌ | throw 抛出后方法立即终止，后面代码不可达（编译报错） |
 | 方法 throws 编译时异常但调用方不处理 | ❌ | 调用方必须 try-catch 或继续 throws |
+| 自定义类只重写 equals 不重写 hashCode 当 key | ⚠️ | 内容相同的两个对象散到不同桶 → 去重失效 |
+| 自定义类只重写 hashCode 不重写 equals 当 key | ⚠️ | 同桶内 equals 判"不同" → 出现重复 key |
+| new HashMap() 后立即 put 前访问内部数组 | ⚠️ | table 为 null，首次 put 才初始化（懒加载） |
