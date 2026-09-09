@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数、单元测试
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限、内部类、main 参数与可变长参数、单元测试、异常体系
 
 ---
 
@@ -35,6 +35,7 @@
 22. [[#二十二、内部类（4 种）|内部类（4 种）]]
 23. [[#二十三、main 方法 args 与可变长参数|main 方法 args 与可变长参数]]
 24. [[#二十四、单元测试（JUnit 5）|单元测试（JUnit 5）]]
+25. [[#二十五、异常继承结构（Throwable 体系）|异常继承结构（Throwable 体系）]]
 
 ---
 
@@ -2300,6 +2301,118 @@ public class CalculatorTest {
 
 ---
 
+## 二十五、异常继承结构（Throwable 体系）
+
+> **一句话**：所有异常和错误都继承 `Throwable`，往下分 **`Error`**（JVM 层面，**无法处理**）和 **`Exception`**（程序层面，**可处理**）；`Exception` 再分**受检（Checked，编译器强制处理）**和**非受检（`RuntimeException` 派，编译器不强制）**。
+
+### ① 一切的根：Throwable
+
+`Throwable` 是 Java 异常体系的**根**，**只有 `Throwable` 及其子类才能被 `throw` / `throws`**。
+
+| 派系 | 含义 | 能否处理 | 出现后 |
+|------|------|----------|--------|
+| **`Error`（错误）** | JVM 层面的问题 | ❌ **不能** | 程序**只能终止** |
+| **`Exception`（异常）** | 程序层面的问题 | ✅ 能 | try-catch 或 throws 抛出 |
+
+### ② Error：无法处理，让程序挂掉
+
+| 常见 Error | 含义 |
+|------------|------|
+| `OutOfMemoryError` | 堆内存耗尽（JVM 给新对象分配空间失败） |
+| `StackOverflowError` | 栈溢出（递归太深、循环方法调用） |
+| `NoClassDefFoundError` | 类定义找不到（jar 包缺失） |
+| `ExceptionInInitializerError` | 静态初始化块抛异常 |
+
+> **特点**：Error 一旦发生，**JVM 直接终止**，**别 try-catch**（接不住，没意义）。
+
+### ③④ Exception 的两大派系
+
+| 派系 | 别名 | 编译器要求 |
+|------|------|------------|
+| **`RuntimeException` 及其子类** | 运行时异常 / 未检查异常 / 非受控异常 / **Unchecked** | **不强制**（可处理可不处理） |
+| **`Exception` 其他子类**（除 `RuntimeException`） | 编译时异常 / 检查异常 / 受控异常 / **Checked** | **必须** try-catch 或 throws |
+
+### ⑤ 编译时异常 vs 运行时异常
+
+| 维度 | 编译时异常（Checked） | 运行时异常（Unchecked） |
+|------|----------------------|------------------------|
+| **包含** | 除 `RuntimeException` 外的 `Exception` 子类 | `RuntimeException` 及其子类 |
+| **编译器要求** | **必须**处理（不写编译报错） | 可处理可不处理（不写不报错） |
+| **处理方式** | try-catch / throws 二选一 | 不写也行（出了再补救或让程序挂） |
+| **来源** | **外部环境**（IO、SQL、文件、线程） | **程序员代码错误**（空指针、下标越界、类型转换） |
+| **能否预防** | 难以预防（环境不可控） | 理论上可预防（写代码时判断） |
+
+```java
+// 编译时异常：必须处理
+public void readFile() throws IOException {        // throws 抛给调用方
+    FileReader fr = new FileReader("a.txt");        // ❌ 不抛就编译报错
+}
+
+// 运行时异常：可以不处理
+public String safeToString(Object o) {
+    return o.toString();                            // 可能 NPE，但编译器不强制
+}
+```
+
+### 5 大常见运行时异常（Unchecked）
+
+| 异常 | 典型场景 |
+|------|----------|
+| `NullPointerException` | 引用为 null 却调用方法或访问属性 |
+| `ArrayIndexOutOfBoundsException` | 数组下标越界（负数、≥ length） |
+| `ClassCastException` | 强制类型转换类型不匹配 |
+| `ArithmeticException` | 算术异常（如 `1 / 0`） |
+| `NumberFormatException` | 数字格式错（如 `Integer.parseInt("abc")`） |
+
+> 由**程序员代码错误**引起，**理论上可以避免**。
+
+### 5 大常见编译时异常（Checked）
+
+| 异常 | 典型场景 |
+|------|----------|
+| `IOException` | I/O 操作失败（读写文件、网络流） |
+| `FileNotFoundException` | 找不到文件（`new FileInputStream("不存在的文件")`） |
+| `SQLException` | 数据库访问出错 |
+| `ClassNotFoundException` | 反射加载类时找不到（`Class.forName("xxx")`） |
+| `InterruptedException` | 线程被中断（`Thread.sleep()`、`wait()`） |
+
+> 由**外部环境**引起，**程序员无法预判**，所以编译器强制要求处理。
+
+### 图示
+
+![[exception-hierarchy.svg]]
+
+### ⚠️ 关键澄清：所有异常都是运行期发生的
+
+> **"编译时异常"并不是在编译阶段发生的异常** —— **所有异常都是运行期发生的**，因为每个异常发生都要 `new` 异常对象，而 `new` 只能在运行期完成。
+>
+> 之所以叫"编译时异常"，是因为编译器**强制**让你在**编译期**就把处理代码写好（try-catch 或 throws），**不写就报错**。
+>
+> 所以更准确的叫法是 **"受检异常（Checked Exception）"** —— 它的本意是"**被编译器检查**"。
+
+**类比**：
+
+- **受检异常** = 出门前必须带伞（不带不让出机场，**编译期检查**）
+- **非受检异常** = 路上可能踩坑（自己小心，**运行期看命**）
+
+### 处理方式速查
+
+| 方式 | 语法 | 何时用 |
+|------|------|--------|
+| **try-catch** | `try { ... } catch (异常 e) { ... }` | 自己能处理 |
+| **throws** | `void m() throws 异常 { ... }` | 自己处理不了，抛给调用方 |
+| **不处理** | — | 只有运行时异常（Unchecked）才能这么干 |
+
+### 速记
+
+> 所有异常 / 错误都继承 **`Throwable`**，往下分 **`Error`**（不能处理，JVM 终止）和 **`Exception`**（能处理）
+> `Exception` 分两派：**`RuntimeException` 派**（Unchecked，编译器不强制）vs **其它**（Checked，编译器强制）
+> 5 大运行时异常：NPE、AIOOBE、CCE、AE、NFE —— **程序员代码错误**
+> 5 大编译时异常：IOE、FNF、SQL、CNF、IE —— **外部环境引起**
+> **所有异常都是运行期发生的**，"编译时异常"只是被**编译器检查**而已
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -2372,6 +2485,11 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 断言 | `assertEquals(期望, 实际)` 等方法自动比较，期望==实际才通过 |
 | `@BeforeAll` / `@AfterAll` | 整个测试类前后各跑 1 次，方法必须是 static |
 | `@BeforeEach` / `@AfterEach` | 每个 @Test 前后各跑 1 次，方法是实例方法 |
+| `Throwable` | 异常体系的根，所有异常和错误都继承它，只有它和子类能 throw/throws |
+| `Error` | JVM 层面错误（OOM、StackOverflow），无法处理，出现即终止 |
+| `Exception` | 程序层面异常，可处理，分 Checked（受检）和 RuntimeException（非受检） |
+| Checked 异常 | 受检异常，编译器强制 try-catch 或 throws（如 IOException） |
+| Unchecked 异常 | 非受检异常（RuntimeException 派），编译器不强制处理（如 NPE） |
 
 ### 报错速查
 
@@ -2422,3 +2540,7 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 测试方法返回值非 void | ❌ | JUnit 5 要求测试方法必须返回 void |
 | `@BeforeAll` 标注非 static 方法 | ❌ | @BeforeAll/@AfterAll 必须标注 static 方法 |
 | `@Test` 方法用了带参构造 | ❌ | JUnit 不会传参，测试方法形参必须为 0 |
+| 编译时异常不写 try-catch / throws | ❌ | 受检异常必须处理，否则编译报错 |
+| try-catch 捕获 `OutOfMemoryError` | ⚠️ | Error 接不住也没意义，出现即 JVM 终止 |
+| `Integer.parseInt("abc")` | ❌ | 抛 NumberFormatException（运行时异常） |
+| `new FileInputStream("不存在的文件")` | ❌ | 抛 FileNotFoundException（编译时异常，必须处理） |
