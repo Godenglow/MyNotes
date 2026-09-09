@@ -41,6 +41,7 @@
 28. [[#二十八、泛型（Generics）|泛型（Generics）]]
 29. [[#二十九、泛型的使用：类 / 静态方法 / 接口|泛型的使用：类 / 静态方法 / 接口]]
 30. [[#三十、泛型通配符与 PECS|泛型通配符与 PECS]]
+31. [[#三十一、迭代时删除元素与 fail-fast 机制|迭代时删除元素与 fail-fast 机制]]
 
 ---
 
@@ -2691,6 +2692,201 @@ Collection<String> strs = new ArrayList<>();   // <> 留空，编译器自己推
 
 ---
 
+## 二十九、泛型的使用：类 / 静态方法 / 接口
+
+> **一句话**：泛型能定义在类、静态方法、接口三个位置 —— 类上的 T 跟着对象走（new 时确定），静态方法没有对象所以必须自己声明 `<T>`，接口泛型由实现类决定写死还是继续传。
+
+![[generics-declaration-positions.svg]]
+
+### ① 在类上定义泛型
+
+语法 `class 类名<泛型1, 泛型2...>`，泛型参数名随便起（惯例 T、E、K、V）：
+
+```java
+public class MyClass<NameType, AgeType> {
+    private NameType name;
+    private AgeType age;
+
+    public MyClass(NameType name, AgeType age) {
+        this.name = name;
+        this.age = age;
+    }
+    // getter/setter 同理，全用 NameType/AgeType
+}
+
+// 使用：new 的那一刻确定类型
+MyClass<String, Integer> myClass = new MyClass<>("jack", 40);
+String name = myClass.getName();     // 直接当 String 用
+Integer age = myClass.getAge();      // 直接当 Integer 用
+```
+
+关键理解：**类上的 T 跟着对象走** —— 每个 `new` 确定一次自己的类型。
+
+### ② 静态方法：类上的泛型用不了，要自己声明
+
+**为什么？** 类上的 T 在 `new` 时才确定，而静态方法**不依赖对象** —— 类加载时就存在了，那时类型还没定，编译器不让用。
+
+解决：静态方法自己声明泛型，写在**返回值类型前面**：
+
+```java
+// <T> 在 static 和返回值之间，这是"方法自己的泛型"
+public static <T> T first(List<T> list) {
+    return list.get(0);
+}
+// 调用时编译器自动推断 T
+String s = first(List.of("a", "b"));   // T = String
+```
+
+### ③ 在接口上定义泛型
+
+```java
+public interface Flyable<T> {
+    void fly(T t);
+}
+```
+
+实现时分两种情况：
+
+```java
+// 知道具体类型：直接写死
+public class MyClass implements Flyable<Bird> {
+    public void fly(Bird b) { ... }
+}
+
+// 不知道具体类型：继续把 T 往下传
+public class MyClass<T> implements Flyable<T> {
+    public void fly(T t) { ... }
+}
+```
+
+第二种就是 `Comparable<E>`、`Comparator<E>` 的用法 —— 写类的人不知道用户要比较什么，把类型决定权留给使用者。
+
+### 速记
+
+> 类上的 T 跟对象走，new 时确定
+> 静态方法没对象 → 自己声明 `<T> T m(...)`，写在返回值前
+> 接口泛型：知道类型写死，不知道 `class C<T> implements I<T>` 继续传
+> `Comparable<E>` 就是"接口泛型 + 继续传"的典型
+
+---
+
+## 三十、泛型通配符与 PECS
+
+> **一句话**：泛型没有继承性（`List<String>` 不是 `List<Object>` 的子类），所以方法参数想收"某类范围的类型"就得用通配符 `?` —— `<?>` 任意、`extends` 上限读、`super` 下限写。
+
+![[generics-wildcards.svg]]
+
+### 先踩坑：泛型没有继承性
+
+```java
+public static void print(List<Object> list) { ... }
+
+print(new ArrayList<String>());   // 编译报错！
+```
+
+`String` 是 `Object` 的子类，但 **`List<String>` 不是 `List<Object>` 的子类**。如果允许，就能往里 `add(new Object())`，把"只装 String"的合同撕了。
+
+### 三种通配符
+
+| 写法 | 含义 | 典型场景 |
+|------|------|----------|
+| `<?>` | 任意类型 | 只关心个数不关心元素 |
+| `<? extends Number>` | Number **及子类**（上限） | 读取元素当 Number 用（只读） |
+| `<? super Number>` | Number **及父类**（下限） | 往里写 Number 及子类（只写） |
+
+```java
+public static double sum(List<? extends Number> list) {   // Integer/Double 都能传
+    double total = 0;
+    for (Number n : list) total += n.doubleValue();
+    return total;
+}
+```
+
+### PECS 口诀
+
+**P**roducer **E**xtends, **C**onsumer **S**uper：
+
+- **生产者用 extends**：数据源只往外读 → `<? extends T>`，读出来一定是 T
+- **消费者用 super**：数据汇只往里写 → `<? super T>`，写的元素一定兼容 T
+
+### 速记
+
+> 泛型无继承性：`List<String>` ≠ `List<Object>` 的子类
+> `?` 三式：任意 `<?>` / 上限 `extends` / 下限 `super`
+> PECS：读 extends，写 super
+
+---
+
+## 三十一、迭代时删除元素与 fail-fast 机制
+
+> **一句话**：遍历集合时要删元素，**只能用 `迭代器对象.remove()`，不能用 `集合对象.remove(元素)`** —— 后者会触发 fail-fast，在下一次 `next()` 时抛 `ConcurrentModificationException`。
+
+![[fail-fast-compare.svg]]
+
+### 三种删除方式对比
+
+| 方式 | 结果 | 原因 |
+|------|------|------|
+| 边遍历边 `集合.remove(元素)` | ❌ 抛异常 | 只改了集合的 `modCount`，迭代器的 `expectedModCount` 没同步 |
+| 边遍历边 `迭代器.remove()` | ✅ 正常 | 两个计数**同时 +1** |
+| 遍历结束后再删 / fori 倒序 / `removeIf` | ✅ 正常 | 遍历过程中没有结构修改 |
+
+### fail-fast 的源码原理
+
+集合体系里有两个计数器，它们的"一致"就是安全线：
+
+```text
+集合对象:   int modCount;          // 结构修改次数，增/删都 +1
+迭代器对象: int expectedModCount;  // 创建迭代器那一刻 = modCount
+```
+
+`next()` 每次执行都先检查 `modCount != expectedModCount`，不等就立刻抛异常 —— **宁可失败，不带错运行**，这就是"快速失败"（fail-fast）。
+
+时序还原：迭代器创建时 `expectedModCount = modCount = 0`；`list.remove("B")` → `modCount=1` 但 `expectedModCount` 仍为 0；下一次 `it.next()` 发现 `1 != 0` → 抛异常。而 `it.remove()` 会把两个计数**同步 +1**，检查永远通过。
+
+### 两个红线（易错点）
+
+1. **单线程也算"并发修改"**：哪怕没有多线程，"迭代器遍历 + 集合删除"这个组合就被认定为并发修改 —— 迭代器无法预知是不是真有另一个线程，干脆一律防御。
+2. **`it.remove()` 删的是"上一次 `next()` 返回的元素"**，所以必须**先 `next()` 再 `remove()`**，否则 `IllegalStateException`：
+
+```java
+Iterator<String> it = list.iterator();
+// it.remove();          // ❌ IllegalStateException，还没 next 过
+it.next();
+it.remove();             // ✅ 先 next 再 remove
+```
+
+### 正确代码 + 不用迭代器的替代方案
+
+```java
+List<String> list = new ArrayList<>(Arrays.asList("A", "B", "C"));
+
+// ✅ 标准写法：迭代器删
+Iterator<String> it = list.iterator();
+while (it.hasNext()) {
+    String s = it.next();
+    if (s.equals("B")) it.remove();
+}
+
+// 替代 1：fori 倒序（从后往前删，不受结构变化影响）
+for (int i = list.size() - 1; i >= 0; i--) {
+    if (list.get(i).equals("B")) list.remove(i);
+}
+
+// 替代 2：JDK8+ 一行搞定，实际开发最常用
+list.removeIf(s -> s.equals("B"));
+```
+
+### 速记
+
+> 遍历中删元素：用**迭代器** remove，不用集合 remove
+> 异常名：`ConcurrentModificationException`（fail-fast 快速失败）
+> 本质：`modCount ≠ expectedModCount` → `next()` 当场抛
+> `it.remove()` 删的是**上一个 next() 返回的**，先 next 再 remove
+> 实战首选 `removeIf`，一行搞定
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -2781,6 +2977,20 @@ byte / short / char  →  int  →  long  →  float  →  double
 | 类型擦除 | 泛型只活在编译阶段，编译后字节码里没有 `<T>`，运行时不知道存过什么类型 |
 | 钻石表达式 | Java 7 `new ArrayList<>()`，右边类型由编译器从左边推断 |
 | 泛型两大好处 | 类型安全（错误从运行时提前到编译期）+ 代码简洁（get 免强转） |
+| 类上泛型 | `class MyClass<T>`，T 跟着对象走，new 时确定 |
+| 静态方法泛型 | 类上的 T 静态方法用不了（没对象），必须自己声明 `static <T> T m(...)`，`<T>` 写在返回值前 |
+| 接口泛型 | `interface Flyable<T>`；实现时知道类型写死 `<Bird>`，不知道 `class C<T> implements I<T>` 继续传 |
+| 泛型无继承性 | `List<String>` 不是 `List<Object>` 的子类，即使 String 是 Object 的子类 |
+| 通配符 `<?>` | 任意引用类型，元素类型未知，除 Object 外啥也不能加 |
+| 上限通配符 | `<? extends Number>`：Number 及子类，适合只读（生产者） |
+| 下限通配符 | `<? super Number>`：Number 及父类，适合只写（消费者） |
+| PECS | Producer Extends / Consumer Super：读 extends，写 super |
+| fail-fast 机制 | 快速失败：迭代期间发现结构修改立即抛异常，不带错运行 |
+| `ConcurrentModificationException` | 遍历时用集合对象删元素触发；本质 `modCount ≠ expectedModCount` |
+| `modCount` | 集合的修改计数字段，增/删都 +1 |
+| `expectedModCount` | 迭代器创建时初始化为 modCount；`it.remove()` 会同步 +1，集合 remove 不会 |
+| `it.remove()` | 删除"上一次 next() 返回的元素"，必须先 next 再 remove，否则 IllegalStateException |
+| `removeIf` | JDK8+ 按条件删除，`list.removeIf(s -> s.equals("B"))`，不触发 fail-fast |
 
 ### 报错速查
 
