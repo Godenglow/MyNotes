@@ -1,0 +1,144 @@
+<svg width="680" height="720" viewBox="0 0 680 720" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <rect width="680" height="720" fill="#0d1117"/>
+
+  <text x="340" y="26" text-anchor="middle" fill="#e6edf3" font-size="16" font-weight="700">Java 访问控制权限 · 目录结构示意</text>
+  <text x="340" y="44" text-anchor="middle" fill="#8b949e" font-size="11">Animal 类在不同目录位置的类访问它时，能看到哪些字段？</text>
+
+  <g filter="url(#shadow)">
+    <rect x="16" y="60" width="184" height="340" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.2"/>
+    <text x="108" y="82" text-anchor="middle" fill="#58a6ff" font-size="12" font-weight="700">调用方所在的目录</text>
+
+    <text x="32" y="108" fill="#e6edf3" font-size="11" font-weight="600">📁 src/</text>
+
+    <text x="48" y="134" fill="#d29922" font-size="11" font-weight="600">📁 com/powernode/</text>
+    <text x="64" y="150" fill="#7d8590" font-size="9" font-style="italic">（本包）</text>
+
+    <rect x="64" y="160" width="124" height="22" rx="4" fill="#21262d" stroke="#d29922" stroke-width="1.1" stroke-dasharray="3 3"/>
+    <text x="126" y="175" text-anchor="middle" fill="#d29922" font-size="9.5" font-weight="700">📄 Animal.java（目标）</text>
+
+    <rect x="64" y="188" width="124" height="22" rx="4" fill="#21262d" stroke="#1f6feb" stroke-width="1.1"/>
+    <text x="126" y="203" text-anchor="middle" fill="#58a6ff" font-size="9.5">📄 SamePackage</text>
+
+    <text x="64" y="234" fill="#3fb950" font-size="11" font-weight="600">📁 sub/</text>
+    <rect x="80" y="244" width="108" height="22" rx="4" fill="#21262d" stroke="#3fb950" stroke-width="1.1"/>
+    <text x="134" y="259" text-anchor="middle" fill="#3fb950" font-size="9.5">📄 SubClass</text>
+
+    <text x="48" y="292" fill="#f85149" font-size="11" font-weight="600">📁 com/other/</text>
+    <text x="64" y="306" fill="#7d8590" font-size="9" font-style="italic">（其他包）</text>
+    <rect x="64" y="314" width="124" height="22" rx="4" fill="#21262d" stroke="#f85149" stroke-width="1.1"/>
+    <text x="126" y="329" text-anchor="middle" fill="#f85149" font-size="9.5">📄 OtherClass</text>
+
+    <text x="108" y="368" text-anchor="middle" fill="#7d8590" font-size="9.5" font-style="italic">↑ 3 种目录位置</text>
+    <text x="108" y="384" text-anchor="middle" fill="#7d8590" font-size="9.5" font-style="italic">（同类见右列"同类"行）</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="220" y="60" width="220" height="340" rx="8" fill="#161b22" stroke="#1f6feb" stroke-width="1.2"/>
+    <text x="330" y="82" text-anchor="middle" fill="#58a6ff" font-size="12" font-weight="700">访问矩阵</text>
+
+    <text x="240" y="116" text-anchor="middle" fill="#7d8590" font-size="9.5">调用方</text>
+
+    <rect x="262" y="104" width="36" height="18" rx="3" fill="#a371f7" opacity="0.25"/>
+    <text x="280" y="116" text-anchor="middle" fill="#a371f7" font-size="9" font-weight="700">pri</text>
+
+    <rect x="305" y="104" width="36" height="18" rx="3" fill="#58a6ff" opacity="0.25"/>
+    <text x="323" y="116" text-anchor="middle" fill="#58a6ff" font-size="9" font-weight="700">def</text>
+
+    <rect x="348" y="104" width="36" height="18" rx="3" fill="#3fb950" opacity="0.25"/>
+    <text x="366" y="116" text-anchor="middle" fill="#3fb950" font-size="9" font-weight="700">pro</text>
+
+    <rect x="391" y="104" width="36" height="18" rx="3" fill="#f85149" opacity="0.25"/>
+    <text x="409" y="116" text-anchor="middle" fill="#f85149" font-size="9" font-weight="700">pub</text>
+
+    <line x1="232" y1="128" x2="428" y2="128" stroke="#30363d"/>
+
+    <text x="240" y="158" text-anchor="middle" fill="#a371f7" font-size="10" font-weight="600">同类</text>
+    <text x="280" y="158" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+    <text x="323" y="158" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+    <text x="366" y="158" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+    <text x="409" y="158" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+
+    <text x="240" y="200" text-anchor="middle" fill="#58a6ff" font-size="10" font-weight="600">同包</text>
+    <text x="280" y="200" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">×</text>
+    <text x="323" y="200" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+    <text x="366" y="200" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+    <text x="409" y="200" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+
+    <text x="240" y="242" text-anchor="middle" fill="#3fb950" font-size="10" font-weight="600">子类</text>
+    <text x="280" y="242" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">×</text>
+    <text x="323" y="242" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">×</text>
+    <text x="366" y="242" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+    <text x="409" y="242" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+
+    <text x="240" y="284" text-anchor="middle" fill="#f85149" font-size="10" font-weight="600">他包</text>
+    <text x="280" y="284" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">×</text>
+    <text x="323" y="284" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">×</text>
+    <text x="366" y="284" text-anchor="middle" fill="#f85149" font-size="14" font-weight="700">×</text>
+    <text x="409" y="284" text-anchor="middle" fill="#3fb950" font-size="14" font-weight="700">√</text>
+
+    <line x1="232" y1="304" x2="428" y2="304" stroke="#30363d"/>
+
+    <text x="330" y="328" text-anchor="middle" fill="#d29922" font-size="10">↑ 同类能看全部</text>
+    <text x="330" y="346" text-anchor="middle" fill="#7d8590" font-size="9.5">越往外能看的越少</text>
+    <text x="330" y="370" text-anchor="middle" fill="#f85149" font-size="9.5">（只 public 全程 √）</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="460" y="60" width="204" height="340" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1.3"/>
+    <text x="562" y="82" text-anchor="middle" fill="#d29922" font-size="12" font-weight="700">Animal.java 的 4 个字段</text>
+
+    <rect x="474" y="100" width="176" height="58" rx="5" fill="#0d1117" stroke="#a371f7" stroke-width="1.3"/>
+    <text x="562" y="121" text-anchor="middle" fill="#a371f7" font-size="11.5" font-weight="700">private</text>
+    <text x="562" y="138" text-anchor="middle" fill="#e6edf3" font-size="11">int money;</text>
+    <text x="562" y="150" text-anchor="middle" fill="#7d8590" font-size="9.5">只能在类内</text>
+
+    <rect x="474" y="166" width="176" height="58" rx="5" fill="#0d1117" stroke="#58a6ff" stroke-width="1.3"/>
+    <text x="562" y="187" text-anchor="middle" fill="#58a6ff" font-size="11.5" font-weight="700">缺省</text>
+    <text x="562" y="204" text-anchor="middle" fill="#e6edf3" font-size="11">String name;</text>
+    <text x="562" y="216" text-anchor="middle" fill="#7d8590" font-size="9.5">同包可访问</text>
+
+    <rect x="474" y="232" width="176" height="58" rx="5" fill="#0d1117" stroke="#3fb950" stroke-width="1.3"/>
+    <text x="562" y="253" text-anchor="middle" fill="#3fb950" font-size="11.5" font-weight="700">protected</text>
+    <text x="562" y="270" text-anchor="middle" fill="#e6edf3" font-size="11">int age;</text>
+    <text x="562" y="282" text-anchor="middle" fill="#7d8590" font-size="9.5">子类可访问</text>
+
+    <rect x="474" y="298" width="176" height="58" rx="5" fill="#0d1117" stroke="#f85149" stroke-width="1.3"/>
+    <text x="562" y="319" text-anchor="middle" fill="#f85149" font-size="11.5" font-weight="700">public</text>
+    <text x="562" y="336" text-anchor="middle" fill="#e6edf3" font-size="11">String info;</text>
+    <text x="562" y="348" text-anchor="middle" fill="#7d8590" font-size="9.5">所有位置可访问</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="16" y="420" width="648" height="280" rx="8" fill="#161b22" stroke="#d29922" stroke-width="1.3"/>
+    <text x="340" y="448" text-anchor="middle" fill="#d29922" font-size="14" font-weight="700">记忆口诀 · 范围从小到大依次累加</text>
+
+    <text x="80" y="484" fill="#a371f7" font-size="13" font-weight="700">private</text>
+    <text x="200" y="484" fill="#e6edf3" font-size="12">→ 只认「自己」（本类内）</text>
+    <text x="500" y="484" fill="#7d8590" font-size="10.5">范围最小</text>
+
+    <text x="80" y="514" fill="#58a6ff" font-size="13" font-weight="700">缺省</text>
+    <text x="200" y="514" fill="#e6edf3" font-size="12">→ 「同包」算自己人</text>
+    <text x="500" y="514" fill="#7d8590" font-size="10.5">+ 同包</text>
+
+    <text x="80" y="544" fill="#3fb950" font-size="13" font-weight="700">protected</text>
+    <text x="200" y="544" fill="#e6edf3" font-size="12">→ 加上「子孙」（同包 + 子类）</text>
+    <text x="500" y="544" fill="#7d8590" font-size="10.5">+ 子类</text>
+
+    <text x="80" y="574" fill="#f85149" font-size="13" font-weight="700">public</text>
+    <text x="200" y="574" fill="#e6edf3" font-size="12">→ 「全世界」都开门</text>
+    <text x="500" y="574" fill="#7d8590" font-size="10.5">+ 所有</text>
+
+    <line x1="40" y1="600" x2="640" y2="600" stroke="#30363d" stroke-dasharray="3 3"/>
+
+    <text x="340" y="628" text-anchor="middle" fill="#58a6ff" font-size="14" font-weight="700">private ⊂ 缺省 ⊂ protected ⊂ public</text>
+    <text x="340" y="652" text-anchor="middle" fill="#e6edf3" font-size="11.5">每一级在前一级基础上多开放一些场景</text>
+
+    <text x="340" y="682" text-anchor="middle" fill="#d29922" font-size="11" font-weight="600">附加 3 条限制</text>
+  </g>
+</svg>

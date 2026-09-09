@@ -3,7 +3,7 @@
 > 来源：动力节点 JavaSE 教程 · 课堂答疑整理
 > 整理日期：2026-08-31
 > 适用：Obsidian 阅读
-> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口
+> 范围：基本数据类型、类型转换、Scanner、运算符、包机制、对象与内存、构造方法、this 关键字、继承、方法覆盖、多态、抽象类、接口、访问控制权限
 
 ---
 
@@ -31,6 +31,7 @@
 18. [[#十八、抽象类（abstract）|抽象类（abstract）]]
 19. [[#十九、接口（interface）基础|接口（interface）基础]]
 20. [[#二十、接口 vs 抽象类（终极对比）|接口 vs 抽象类（终极对比）]]
+21. [[#二十一、访问控制权限（4 个修饰符）|访问控制权限（4 个修饰符）]]
 
 ---
 
@@ -1763,6 +1764,85 @@ class Duck extends Animal                     // extends 只能一个（血缘�
 
 ---
 
+## 二十一、访问控制权限（4 个修饰符）
+
+> **一句话**：4 个修饰符（`private` / 缺省 / `protected` / `public`）控制**类内成员**在不同目录位置的可见性，**范围从小到大依次累加** —— 越往后的修饰符能访问的位置越多。
+
+### 4 个修饰符的含义
+
+| 修饰符 | 关键字 | 含义 | 典型场景 |
+|--------|--------|------|----------|
+| **private** | 私有的 | **只能在本类中**访问 | 类的内部实现细节、敏感字段 |
+| **缺省** | 默认 | **同一个包下**可以访问 | 包级别的工具方法、同包内共享数据 |
+| **protected** | 受保护的 | **同包 + 子类**可以访问 | 给"子孙"用的"家产" |
+| **public** | 公共的 | **任何位置**都可以访问 | 对外暴露的 API、常量 |
+
+### 访问范围对照表 ⭐ 必背
+
+| 修饰符 | 同一个类 | 同一个包 | 子类 | 所有类 |
+|--------|----------|----------|------|--------|
+| `private` | ✅ | ❌ | ❌ | ❌ |
+| 缺省 | ✅ | ✅ | ❌ | ❌ |
+| `protected` | ✅ | ✅ | ✅ | ❌ |
+| `public` | ✅ | ✅ | ✅ | ✅ |
+
+> **口诀**：`private` ⊂ 缺省 ⊂ `protected` ⊂ `public`，**每一级在前一级基础上多开放一个场景**。
+
+![[access-control-package-tree.svg]]
+
+### 4 种调用方位置（目录结构图已展示）
+
+| 位置 | 说明 | 例子 |
+|------|------|------|
+| **同一个类内** | Animal 类自己的方法体 | `Animal.this.method()` |
+| **同包** | 与 Animal 在同一个 `package` 下 | `com.powernode.SamePackage` |
+| **子类** | 跨包继承 Animal 的类 | `com.powernode.sub.SubClass` |
+| **他包** | 完全无关的其他包 | `com.other.OtherClass` |
+
+### 3 条附加限制
+
+| # | 限制 | 说明 |
+|---|------|------|
+| ① | **类的访问权限只有 2 种**：`public` 和缺省 | 顶层类**不能**用 `private` / `protected`（内部类除外） |
+| ② | 访问权限控制符**不能修饰局部变量** | 局部变量只在方法内有效，谈不上跨类访问 |
+| ③ | `protected` 主要给"子孙"用，**跨包子类访问**的是从父类**继承**下来的成员 | 在子类里访问自己的字段不算 protected 生效 |
+
+### 示例
+
+```java
+package com.powernode;
+
+public class Animal {
+    private    int    money = 100;        // 仅本类
+              String name  = "Tom";       // 同包
+    protected int    age   = 5;           // 同包 + 子类
+    public    String info  = "OK";        // 所有位置
+}
+```
+
+```java
+package com.powernode.sub;
+import com.powernode.Animal;
+
+public class Cat extends Animal {
+    void test() {
+        // System.out.println(money);    // ❌ private 不可见
+        // System.out.println(name);     // ❌ 缺省，跨包不可见
+        System.out.println(age);         // ✅ protected，子类可见
+        System.out.println(info);        // ✅ public，所有位置可见
+    }
+}
+```
+
+### 速记
+
+> `private` ⊂ 缺省 ⊂ `protected` ⊂ `public`，**累加**关系
+> 同类能看全部，**只有 `public` 全程 √**
+> 类的访问权限**只有 `public` / 缺省 两种**，**不能修饰局部变量**
+> `protected` 是"给子孙的"，主要场景是**跨包子类继承**
+
+---
+
 ## 附录：速查总表
 
 ### 字面量后缀规则
@@ -1819,6 +1899,10 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `implements` | 类实现接口，可以多实现 |
 | 默认方法 | Java 8+ `default`，接口提供默认实现，解决接口演变问题 |
 | is-a / can-do | 抽象类表达"是什么"（单继承），接口表达"能做什么"（多实现） |
+| 访问控制权限 | 4 个修饰符 `private` / 缺省 / `protected` / `public`，控制成员在不同目录位置的可见性 |
+| `private` | 只能本类访问，范围最小 |
+| `public` | 任何位置都能访问，范围最大 |
+| `protected` | 同包 + 子类可访问，给"子孙"用 |
 
 ### 报错速查
 
@@ -1854,3 +1938,7 @@ byte / short / char  →  int  →  long  →  float  →  double
 | `Printer.info()`（info 是接口静态方法） | ❌ | 接口静态方法不被实现类继承，只能 `Usb.info()` |
 | 接口中定义普通实例字段 | ❌ | 接口字段只能是 `public static final` 常量 |
 | `new Usb()`（Usb 是接口） | ❌ | 接口完全没有构造方法，不能实例化 |
+| 顶层类用 `private` 修饰 | ❌ | 类的访问权限只有 `public` 和缺省两种 |
+| 顶层类用 `protected` 修饰 | ❌ | 同上，`protected` 不修饰顶层类 |
+| 访问控制符修饰局部变量 | ❌ | 局部变量只在方法内，谈不上跨类访问 |
+| 跨包普通类访问 protected 字段 | ❌ | `protected` 只对子类和同包开放，不对"路人"开放 |
