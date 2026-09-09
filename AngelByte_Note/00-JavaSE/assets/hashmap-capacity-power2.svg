@@ -1,0 +1,40 @@
+<svg viewBox="0 0 680 468" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,'Segoe UI','Microsoft YaHei',sans-serif">
+  <rect width="680" height="468" fill="#0d1117"/>
+  <text x="340" y="30" text-anchor="middle" font-size="17" font-weight="bold" fill="#e6edf3">HashMap 容量为什么是 2 的幂 &amp; 扩容机制</text>
+
+  <!-- 左卡：位运算代替取模 -->
+  <rect x="20" y="48" width="310" height="236" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="38" y="74" font-size="13" font-weight="bold" fill="#58a6ff">① 位运算代替取模</text>
+  <g font-family="Consolas,'JetBrains Mono',monospace" font-size="12.5" fill="#c9d1d9">
+    <text x="44" y="102">hash       = <tspan fill="#d29922">1011</tspan>   (即 11)</text>
+    <text x="44" y="124">length - 1 = <tspan fill="#3fb950">1111</tspan>   (16-1)</text>
+    <text x="44" y="146">&amp; ────────────</text>
+    <text x="44" y="168">结果       = <tspan fill="#d29922">1011</tspan>  → 下标 11</text>
+    <text x="44" y="196">hash % 16  = 11   <tspan fill="#3fb950">✓ 结果相同</tspan></text>
+  </g>
+  <text x="38" y="226" font-size="12" fill="#8b949e">前提：length 必须是 2 的幂，等式才成立</text>
+  <text x="38" y="248" font-size="12" fill="#8b949e">位运算是二进制里最快的运算 → 提升效率</text>
+  <text x="38" y="270" font-size="12" fill="#8b949e">所以建议容量一直是 2 的幂</text>
+
+  <!-- 右卡：奇数长度的问题 -->
+  <rect x="350" y="48" width="310" height="236" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="368" y="74" font-size="13" font-weight="bold" fill="#f85149">② 奇数长度会浪费一半桶</text>
+  <g font-family="Consolas,'JetBrains Mono',monospace" font-size="12.5" fill="#c9d1d9">
+    <text x="374" y="102">length = 15（奇数）</text>
+    <text x="374" y="124">15-1 = 14 = <tspan fill="#f85149">111</tspan><tspan fill="#f85149" font-weight="bold">0</tspan>  末位是 0</text>
+    <text x="374" y="146">AND 结果末位<b>必为 0</b></text>
+    <text x="374" y="168">→ 奇数下标 1,3,5… <tspan fill="#f85149">永远空着</tspan></text>
+    <text x="374" y="196">length = 16（偶数）</text>
+    <text x="374" y="218">16-1 = 15 = <tspan fill="#3fb950">1111</tspan>  全是 1</text>
+    <text x="374" y="240">→ 散列均匀 <tspan fill="#3fb950">✓ 减少哈希冲突</tspan></text>
+  </g>
+  <text x="368" y="268" font-size="12" fill="#8b949e">奇数长度 = 白白浪费一半空间</text>
+
+  <!-- 底卡：扩容与负载因子 -->
+  <rect x="20" y="302" width="640" height="146" rx="10" fill="#161b22" stroke="#30363d"/>
+  <text x="38" y="328" font-size="13" font-weight="bold" fill="#d29922">③ 扩容机制与负载因子</text>
+  <text x="38" y="354" font-size="12.5" fill="#c9d1d9">阈值 threshold = 容量 × <tspan fill="#bc8cff">loadFactor(0.75)</tspan> = 16 × 0.75 = <tspan fill="#d29922" font-weight="bold">12</tspan> → 元素数超过 12 就扩容</text>
+  <text x="38" y="380" font-size="12.5" fill="#c9d1d9">扩容 = 容量翻倍（16→32）+ <tspan fill="#f85149">全部元素 rehash 重新散列</tspan> —— 非常消耗性能</text>
+  <text x="38" y="406" font-size="12.5" fill="#c9d1d9">对策：预估元素个数给足容量 —— 存 1000 个：1024×0.75=768 &lt; 1000 仍扩容，<tspan fill="#3fb950">设 2048</tspan>（1536≥1000）一步到位</text>
+  <text x="38" y="432" font-size="12.5" fill="#c9d1d9">思考题：new HashMap(<tspan fill="#58a6ff">15</tspan>) → tableSizeFor(15) → 实际容量 <tspan fill="#3fb950" font-weight="bold">16</tspan>（向上取最近的 2 的幂）</text>
+</svg>
