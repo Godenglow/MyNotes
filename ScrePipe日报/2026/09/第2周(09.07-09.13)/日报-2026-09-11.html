@@ -1,0 +1,241 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>日报 2026-09-11 · 休息日 / 模拟器日常</title><style>
+/* ===== 双主题变量（inject_theme.py 注入） ===== */
+:root{
+--bg:#0d1117;--side:#010409;--card:#161b22;--chip:#21262d;
+--border:#262d38;--hover:#10161f;
+--fg:#e6edf3;--strong:#f0f6fc;--muted:#8b949e;--faint:#6e7681;--quote:#b6c2cf;
+--link:#58a6ff;--h3:#79c0ff;--pre-fg:#c9d1d9;
+--warn:#d29922;--good:#3fb950;--bad:#f85149;
+--pre-bg:#282c34;
+--t-def:#abb2bf;--t-red:#e06c75;--t-green:#98c379;--t-orange:#d19a66;--t-purple:#c678dd;--t-yellow:#e5c07b;--t-cyan:#56b6c2;--t-blue:#61afef;--t-comment:#7f848e;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--side:#f6f8fa;--card:#f6f8fa;--chip:#eff2f5;
+--border:#d0d7de;--hover:#eef1f4;
+--fg:#1f2328;--strong:#1f2328;--muted:#57606a;--faint:#8c959f;--quote:#57606a;
+--link:#0969da;--h3:#0550ae;--pre-fg:#24292f;
+--warn:#9a6700;--good:#1a7f37;--bad:#cf222e;
+--pre-bg:#f6f8fa;
+--t-def:#24292f;--t-red:#cf222e;--t-green:#116329;--t-orange:#953800;--t-purple:#8250df;--t-yellow:#9a6700;--t-cyan:#0550ae;--t-blue:#0550ae;--t-comment:#6e7781;
+}
+.theme-btn{position:fixed;right:74px;bottom:26px;width:40px;height:40px;border-radius:50%;
+background:var(--chip);border:1px solid var(--border);color:var(--fg);font-size:16px;
+display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;transition:transform .15s}
+.theme-btn:hover{transform:scale(1.1);border-color:var(--link)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:28px 20px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:26px;font-weight:700;letter-spacing:-.4px}
+h2{font-size:19px;font-weight:650;margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--chip);color:var(--muted);font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:620;margin:20px 0 8px}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:12px 14px}
+.card .k{color:var(--muted);font-size:11px}
+.card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
+.card .d{color:var(--muted);font-size:11px;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:11px 0}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--chip);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:11.5px;background:var(--card)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--card)}
+.tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600}
+.t-bad{background:rgba(248,81,73,.16);color:var(--bad)}
+.t-warn{background:rgba(210,153,34,.16);color:var(--warn)}
+.t-ok{background:rgba(63,185,80,.16);color:var(--good)}
+.t-info{background:rgba(88,166,255,.16);color:var(--link)}
+.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:var(--card);font-size:13.5px}
+.box .t{font-weight:650;margin-bottom:5px;font-size:13.5px}
+.b-warn{border-color:var(--warn)}.b-warn .t{color:var(--warn)}
+.b-bad{border-color:var(--bad)}.b-bad .t{color:var(--bad)}
+.b-info{border-color:var(--link)}.b-info .t{color:var(--link)}
+.b-good{border-color:var(--good)}.b-good .t{color:var(--good)}
+ul,ol{margin:8px 0 8px 20px}li{margin:6px 0;font-size:13.5px}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:12px;color:#bc8cff}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--border);padding-bottom:16px}
+.meta{color:var(--muted);font-size:12px;text-align:right;line-height:1.8}
+.foot{margin-top:36px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
+.crumbs{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:14px 0 4px;font-size:12px;color:var(--muted)}
+.crumbs a{color:var(--link);text-decoration:none}
+.tl{list-style:none;margin:10px 0 10px 4px}
+.tl li{position:relative;padding-left:16px;margin:7px 0;font-size:13.5px;border-left:1px solid var(--border)}
+.tl li b{color:var(--h3);font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:0 6px;border-radius:5px;background:var(--chip);color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+</style><script>
+(function(){var t=null;try{t=localStorage.getItem('nb-theme');}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+document.documentElement.dataset.theme=t;})();
+</script></head><body><div class="wrap">
+<div class="crumbs"><a href="../../../说明文件.html">ScrePipe日报</a> › <a href="../月度总结.html">2026-09</a> › <a href="周总结.html">第2周(09.07-09.13)</a> › <b>日报-2026-09-11</b> · <a href="日报-2026-09-10.html">← 09-10</a></div>
+
+<div class="hd"><div>
+<h1>日报 · 2026-09-11（周五）</h1>
+<div class="sub">休息日：全天可查记录以抖音与模拟器日常为主，工作／学习仅约 13 分钟（MuMu 模拟器升级 V6.6.4 + 桌面巡检）· 15:43–19:33 锁屏离机无录制</div>
+</div><div class="meta">
+生成于 2026-09-11 22:00（定时执行）<br>
+可查记录窗口 11:42–15:43 + 19:33–22:01（约 6.5h）· 活跃 387 分钟（约 6.5h）<br>
+数据为 screenpipe 估算值，窗口存在重叠；无音频段（当日未采集通话/录音）
+</div></div>
+
+<div class="cards">
+<div class="card"><div class="k">活跃总时长</div><div class="v" style="color:#58a6ff">6.5 h</div><div class="d">387 分钟 · 两段可查窗口 11:42–15:43 + 19:33–22:01；00:00–11:42 关机无录制</div><div class="bar"><i style="width:100%;background:#58a6ff"></i></div></div>
+<div class="card"><div class="k">工作 / 学习</div><div class="v" style="color:#a371f7">0.2 h</div><div class="d">13 分钟 · 占 3%（MuMu 更新器/主程序更新提示 7m + 桌面文件巡检 5m + Obsidian 启动 1m）</div><div class="bar"><i style="width:3%;background:#a371f7"></i></div></div>
+<div class="card"><div class="k">游戏 / 挂机</div><div class="v" style="color:#39c5cf">1.7 h</div><div class="d">103 分钟 · 占 27%（MuMu 模拟器 12-1 明日方舟/重返未来1999/碧蓝档案日常 102m + AUTO-MAS/MAA 2m）</div><div class="bar"><i style="width:27%;background:#39c5cf"></i></div></div>
+<div class="card"><div class="k">其他娱乐</div><div class="v" style="color:#ffa657">4.5 h</div><div class="d">271 分钟 · 占 70%（抖音 173m + 桌面/PixPin 截图停留 79m + Kazumi 番剧 16m + SpeedBall/QQ 3m）</div><div class="bar"><i style="width:70%;background:#ffa657"></i></div></div>
+<div class="card"><div class="k">记录缺口 / 提醒</div><div class="v" style="color:#f85149">3h50m</div><div class="d">15:43–19:33 锁屏离机无录制（非故障）· CET-6 报名窗口内本机无报名页记录</div></div>
+</div>
+
+<div class="box b-info"><div class="t">数据口径说明（重要）</div>
+① <b>00:00–11:42 无录制</b>：机器处于关机状态，今日首帧为 11:42:41 的资源管理器（Program Manager）；该段不可回溯、不计入任何分类。<br>
+② <b>15:43:15–19:33:01 无录制（3 小时 50 分钟）</b>：末帧为 14:04–15:43 的 PixPin 桌面段，恢复首帧为 19:33:01 <code>[System Process]</code>（锁屏/解锁切换），随后 19:33:11 PixPin、19:33:13 AUTO-MAS、19:33:28 MuMu 模拟器依次回前台——判定为<b>锁屏离机</b>，非故障、非缺失。<br>
+③ 可查前台两段合计约 6.5 小时（<code>total_active_minutes = 387.5</code>），与各应用时长之和一致；窗口时长存在重叠，故分类时长按合计口径归一。<br>
+④ 当日<b>无音频采集</b>（<code>segment_count = 0</code>、<code>last_audio_at = null</code>），全部结论基于屏幕 OCR 与窗口证据。<br>
+⑤ <b>浏览器当日只有抖音一个站点</b>：Chrome 全天窗口仅「抖音-记录美好生活」172.6m、「抖音」0.3m、「MuMu模拟器」0m，未出现 CET-6 报名页、B 站课程页等任何其他站点——这一点是下文「CET-6 未见动作」结论的直接依据。
+</div>
+
+<h2><span class="n">1</span>今日完成</h2>
+
+<h3>1.1 时间线（可查窗口 11:42–15:43 + 19:33–22:01）</h3>
+<ul class="tl">
+<li><b>11:42–13:48</b>　开机后<b>抖音网页连续浏览约 2 小时 05 分</b>（Chrome 窗口「抖音-记录美好生活」，<code>douyin.com/?recommend=1</code>）：<span class="pill">11:49</span> 推荐流首页；<span class="pill">11:59</span> 出现过「明日方舟」搜索词与相关视频；<span class="pill">12:39</span> 停留在长文案类视频（含「转学」「没规划好未来」等自述型内容）；<span class="pill">13:29</span> <code>[PHONE]</code> 竖屏视频（「郑成月」等内容）。当日抖音合计 <b>172.6 分钟</b>，为全天最大单项（占活跃 45%）。</li>
+<li><b>13:29–13:30</b>　桌面与笔记库：<span class="pill">13:29:49</span> 抖音窗口最大化；<span class="pill">13:29:55</span> 资源管理器桌面（可见 PixPin、酷狗音乐等图标与播放器「清屏／高清1080P／倍速」控件）；<span class="pill">13:29:56</span> Obsidian 启动并显示「加载插件中…」（当日 Obsidian 侧合计 0.9 分钟，未打开具体笔记）。</li>
+<li><b>13:48–14:04</b>　<b>Kazumi 看番 1 集</b>：13:48:20 起 Kazumi 播放《BanG Dream! YUME∞》MITA 第 10 集（选集面板「第 01–13 集」，进度 05:54 / 25:40），13:59 停在弹幕区（字幕组玩梗「清风拂山岗」「他强任他强」等）。Kazumi 当日合计 <b>15.8 分钟</b>。</li>
+<li><b>14:04–15:43</b>　<b>PixPin 桌面截图段约 1 小时 39 分</b>：14:04:14 起 PixPin 窗口为前台（窗口名 <code>PixPin</code>），屏面为桌面——OCR 可见图标「417综测」「417综测.zip」「附件2 503综测(2).zip」「我的关机助手」「23软件工程25-26学年绩点汇总.xlsx」「新建 XLSX 工作表」，右下角任务栏时间 <span class="pill">2026/9/11 14:35</span>；期间 14:09、14:19 抖音仍多次回前台。PixPin 当日合计 <b>79.3 分钟</b>。<br>说明：<b>09-10 未收口的班级综测材料仍留在桌面</b>（417综测 / 503综测.zip / 附件2），但本日未见任何 WPS／汇总表／压缩包处理动作（全天窗口列表无 WPS、Excel 相关窗口）。</li>
+<li><b>15:43–19:33</b>　<b>锁屏离机</b>：15:43:15 为末帧（PixPin / 桌面），此后 3 小时 50 分钟无任何帧；19:33:01 以 <code>[System Process]</code> 帧恢复，判定为锁屏→解锁（记录中出现 explorer <code>UnlockingWindow</code> 窗口）。</li>
+<li><b>19:33–19:36</b>　解锁后模拟器启动：19:33:13 AUTO-MAS 起来；19:33:26 MuMuNxMain 弹「<b>推荐更新到新版本 V6.6.4</b>」；19:33:28 MuMu 模拟器 12-1 成为前台。19:34–19:35 <b>MAA v6.17.5#0910</b> 停在公告页（SideStory「月行水上」、SR-EX 不适配多作业模式）；19:35 明日方舟出现「更新说明／清除缓存」登录页；19:39 进入「AngelByte 欢迎回来 · 鹰角网络 · ID 156050622 · Ver 2.7.71 · 正在尝试与 Rhodes Island 取得神经连接」。</li>
+<li><b>19:44–20:19</b>　<b>模拟器日常清理</b>：19:44 明日方舟基建（进驻总览／建造模式／制造站／设施列表，材料 812/812、龙门币与异铁）；20:09 商店（可露希尔推荐、源石交易所、家具商店、组合包「已领取」、技巧概要·卷 2、凭证交易所 200）；20:19 转《重返未来 1999》（东风谷早苗 ID 10164465）领取奖励——「故事的最初」、关卡 50 次／任意章节 10 次任务，已领取 5000/50/60/100，获得「苦目糖罐」「迷途之声」。</li>
+<li><b>19:47</b>　资源管理器桌面巡视（约 5 分钟）：桌面含回收站／Edge／Chrome／微信／QQ／B站／抖音／Piliplus／网易云音乐／QQ音乐／酷狗音乐／语雀／WPS／WorkBuddy 与「417综测.zip」「417综测」「503综测」「我的关机助手」「附件2 503综测」「新建 XLSX 工作表」「23软件工程25-26学年绩点汇总.xlsx」。</li>
+<li><b>20:22–20:45</b>　<b>MuMu 模拟器升级 V6.6.4</b>（本日唯一「系统维护」类动作）：MuMuNxUpdater（MuMu 更新器）运行 <b>5.6 分钟</b>，叠加主程序更新提示 1.5 分钟。09-10 曾出现「未响应」28 分钟的同一实例，升级后可观察是否根治。</li>
+<li><b>20:39–20:40</b>　AUTO-MAS v5.4.0 调度中心：「任务完成后电源操作：蓝档案运行／运行模式：自动代理」「正在中止相关进程」「<b>脚本进程超时 2</b>」，并<b>再次</b>提示「<b>检测到后端更新，点击以更新后端</b>」（仍未点）。20:40:06 Chrome 抖音为当日最后一帧。</li>
+<li><b>20:49–21:19</b>　明日方舟手动段：20:49 <b>潜能提升成功</b>（干员「聆音」：部署费用 －1、再部署时间 －4 秒、攻击力 +30）；20:59–21:19 作战 <b>SR-EX-7「激越之拱」</b>（演习模式，不消耗理智）挂自动代理；21:13:41 SpeedBall 悬浮球为当日最后一帧。</li>
+<li><b>21:29–21:59</b>　重返未来 1999 与碧蓝档案：21:29「玫瑰午」读碟时间／分贝 100/1000／NEST FES 领取；21:39「迁流的盛宴 · 重燃！流金之海 Musae's Arcade 预告 ×12 天」「璀璨工房」；21:49 碧蓝档案「未读信息（4）· 菲娜 好感故事」、咖啡厅、76 级东风谷早苗；21:57 QQ 前台 0.4 分钟；21:59 游戏商店（「咆哮的一月」柜员机／衣着风尚／惊奇百货／迷途鉴定／碎片叙事／荒原构想；灵机之种本月限购 10、未知种根骨限购 15；1080×12 天 ¥681.08）。</li>
+<li><b>22:01</b>　本次生成时刻（末帧 22:01:12）。<b>备注</b>：22:02 记录到《公主连结 Re:Dive》启动主菜单（Ver 11.7.2、202609），已超出 22:00 日报口径，仅作备注不计入统计。</li>
+</ul>
+
+<h3>1.2 当日说明：没有实质工作／学习产出（休息日）</h3>
+<div class="box b-info"><div class="t">本日性质：休息日 · 工作／学习合计仅约 13 分钟</div>
+全天 6.5 小时可查记录里，<b>工作／学习口径只有 13 分钟</b>：MuMu 模拟器更新（更新器 5.6m + 主程序更新提示 1.5m）、桌面文件巡检（19:47 资源管理器桌面约 5m）、Obsidian 笔记库启动（0.9m）。<br>
+无课程学习、无编码、无文档写作、无沟通协作、无求职动作。09-10 遗留的三条主线（MySQL 收尾实操、班级综测汇总收口、JavaSE 编码实操）本日<b>全部未推进</b>；桌面上还留着未处理的综测材料（14:35 与 19:47 两处可见）。<br>
+本日唯一与「维护」有关的正向动作是<b>把 MuMu 模拟器升级到 V6.6.4</b>——这同时是对 09-10「未响应」28 分钟问题的处置观察点。
+</div>
+
+<h3>1.3 时间分布（工作 / 学习口径，约 13 分钟）</h3>
+<table>
+<tr><th>序号</th><th>事项</th><th class="n">时长（约）</th><th class="n">占比</th></tr>
+<tr><td>1</td><td>系统维护：MuMu 模拟器更新至 V6.6.4（更新器运行 5.6m + 主程序「推荐更新到新版本」提示处理 1.5m）</td><td class="n">7 分钟</td><td class="n">54%</td></tr>
+<tr><td>2</td><td>桌面 / 文件巡检（19:47 资源管理器桌面，含 417综测 / 503综测.zip / 附件2 / 绩点汇总表；仅查看未处理）</td><td class="n">5 分钟</td><td class="n">38%</td></tr>
+<tr><td>3</td><td>Obsidian 笔记库启动（13:29「加载插件中…」，未打开具体笔记）</td><td class="n">1 分钟</td><td class="n">8%</td></tr>
+<tr><th colspan="2">小计</th><th class="n">13 分钟</th><th class="n">100%</th></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">口径：工作／学习 = 开发、写文档、学习课程、沟通协作、<b>系统维护</b>（与 09-07／09-08／09-09／09-10 一致，故模拟器软件更新计入本表）。占比为该项占本部分合计时长的比例（约）。本日为休息日，工作／学习仅 13 分钟，其余时间见第 4 节。</p>
+
+<h2><span class="n">2</span>进行中</h2>
+<table>
+<tr><th>事项</th><th>当前进展</th><th>还差什么</th></tr>
+<tr><td>班级综测汇总（23 软工一班）</td><td>桌面仍存 417综测 / 417综测.zip / 附件2 503综测(2).zip / 503综测等项目文件（14:35、19:47 两处截图可见）；<b>本日未打开 WPS 或附件1 汇总表继续处理</b></td><td><span class="tag t-warn">未推进</span> 催齐郑雅琴/龚怡繁/张昌芸/王舒慧/刘文静/欧阳怡婷/王博/503 等材料，复核附件1 汇总表并交回</td></tr>
+<tr><td>CET-6 报名</td><td>9/11 12:00 错峰窗口已开，但<b>本机全天无报名页记录</b>（Chrome 窗口仅抖音）；11:43–13:48 该时段正在刷抖音</td><td><span class="tag t-bad">未见动作</span> 立即核对学籍并完成报名（学籍核对期限 9/9 已过，已连续三日未核对）</td></tr>
+<tr><td>MySQL 收尾实操（09-10 遗留）</td><td>课程 196 集已于 09-10 通关，本日无实操动作</td><td><span class="tag t-warn">未推进</span> Powernode 库上跑 explain / 前缀索引 / 最左前缀 / order by / 主键优化并留证据；笔记补「回表与覆盖索引」</td></tr>
+<tr><td>JavaSE 编码实操（Maven 3.8.6）</td><td>09-09 起停滞，本日未推进</td><td><span class="tag t-warn">未推进</span> IDEA 配置 Maven 3.8.6 并跑通第一个工程</td></tr>
+<tr><td>AUTO-MAS 后端更新 / repo→app 启动同步修复</td><td>v5.4.0 调度运行正常（20:39 蓝档案运行中）；本日<b>再次</b>出现「检测到后端更新，点击以更新后端」未点，并有「脚本进程超时 2」</td><td><span class="tag t-warn">待点更新</span> 点更新；repo→app 同步覆盖还原修复仍未实施</td></tr>
+<tr><td>MuMu 模拟器「未响应」（09-10 28 分钟）</td><td>本日已升级 V6.6.4，全天<b>未见任何「未响应」分片</b></td><td><span class="tag t-ok">未复现</span> 再观察 1–2 日确认是否根治</td></tr>
+<tr><td>酷狗音乐（第 4 次复发后的处置）</td><td><b>本日应用列表里完全没有酷狗前台记录</b>（今日无 KuGou 相关窗口），可能未自启或已停用／卸载</td><td><span class="tag t-warn">待确认</span> 确认是否已停用；若残留自启仍在，仍建议彻底卸载清残留</td></tr>
+<tr><td>手机端 Obsidian 同步（Git / 坚果云）</td><td>本日无动作</td><td><span class="tag t-warn">未推进</span> 定 Git 或坚果云方案并落地</td></tr>
+<tr><td>求职（BOSS 直聘）</td><td>本日无动作（无 BOSS 相关页面）</td><td><span class="tag t-warn">未推进</span> 回复多益网络意向、择岗投递</td></tr>
+<tr><td>DeepSeek V4 Pro → V4.1 Flash（9/14 12:00 下线）</td><td>本日无切换动作</td><td><span class="tag t-warn">待切换</span> 检查 dsh / Cherry Studio / 脚本侧默认模型，剩 3 天</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 10 项（其中未推进 5 项、待处理/待确认 4 项、已完成观察项 1 项）。</p>
+
+<h2><span class="n">3</span>问题与阻塞</h2>
+<div class="box b-info"><div class="t">① 记录缺口：15:43–19:33 锁屏离机 3 小时 50 分钟 <span class="tag t-info">如实标注</span></div>
+现象：15:43:15 之后至 19:33:01 之间<b>零帧</b>。判断依据：末帧为 PixPin 桌面段，恢复首帧为 <code>[System Process]</code>，且记录中出现 explorer <code>UnlockingWindow</code>（Windows 锁屏类窗口），19:33 起 AUTO-MAS / MuMu 一并回前台。<br>结论：属<b>锁屏／离机</b>，非 screenpipe 故障、非数据丢失（无任何媒体分片被跳过）。该段不计入活跃时长，也不作归纳。
+</div>
+<div class="box b-bad"><div class="t">② CET-6 报名窗口（9/11 12:00）内本机未见任何报名动作 <span class="tag t-bad">待处理</span></div>
+现象：当日 11:42 开机后 11:43–13:48 全程抖音，12:00 报名窗口打开时正在刷短视频；Chrome 全天窗口仅「抖音-记录美好生活」等，无报名页、无学籍核对页。已尝试的处理：无（未见相关操作）。<br>状态：<b>待处理</b>。学籍核对期限 9/9 已过，已连续三日（09-09／09-10／09-11）未核对；若窗口仍开，须尽快报名。注：不排除在手机端完成，本机记录无法证实。
+</div>
+<div class="box b-warn"><div class="t">③ 娱乐占比 70%、抖音占全天活跃 45%——单日投入结构失衡 <span class="tag t-warn">待调整</span></div>
+现象：全天 6.5 小时中，抖音 173 分钟（45%）、游戏挂机 103 分钟（27%）、番剧 16 分钟，工作／学习仅 13 分钟（3%）。娱乐类合计 271 分钟（70%），是 09-10（92 分钟）的近 3 倍。已尝试的处理：无。状态：<b>待调整</b>（明日为周六，可直接压缩抖音时长）。
+</div>
+<div class="box b-warn"><div class="t">④ AUTO-MAS「检测到后端更新」第 4 日未点，并出现「脚本进程超时 2」 <span class="tag t-warn">待处理</span></div>
+现象：20:39 AUTO-MAS v5.4.0 调度中心显示「任务完成后电源操作：蓝档案运行」「运行模式：自动代理」「正在中止相关进程」「脚本进程超时 2」，顶部弹「检测到后端更新，点击以更新后端」。该提示自 09-09 起连续出现、始终未点。已尝试的处理：无。状态：<b>待处理</b>（当日任务未见失败记录，可先点更新再观察）。
+</div>
+<div class="box b-warn"><div class="t">⑤ DeepSeek V4 Pro 将于 9/14 12:00 下线，仍未切换 <span class="tag t-warn">待切换</span></div>
+现象：09-10 17:51 读到开放平台公告，V4 Pro 请求届时路由到 V4.1 Flash 并按 Flash 计费；本日无任何切换动作。已尝试的处理：无。状态：<b>待切换</b>（剩 3 天，需检查 dsh / Cherry Studio / QQ Bot 脚本侧默认模型）。
+</div>
+<div class="box b-info"><div class="t">⑥ 明日方舟客户端更新 + MAA 公告提示（备注） <span class="tag t-info">参考</span></div>
+19:35 明日方舟出现「更新说明／清除缓存」登录页（SideStory「月行水上」）；MAA v6.17.5#0910 公告页明确「SR-EX 不适配多作业模式」。状态：<b>已知悉</b>，对应「SR-EX-7 激越之拱」本日以演习模式手动／自动代理方式完成，属正常。
+</div>
+<table>
+<tr><th>现象</th><th class="n">时长（约）</th><th class="n">占比</th><th>状态</th></tr>
+<tr><td>15:43–19:33 无录制（锁屏离机，非故障）</td><td class="n">230 分钟</td><td class="n">—</td><td><span class="tag t-info">如实标注</span></td></tr>
+<tr><td>抖音占全天活跃 45% / 娱乐合计占 70%</td><td class="n">173 分钟</td><td class="n">45%</td><td><span class="tag t-warn">待调整</span></td></tr>
+<tr><td>CET-6 报名窗口内本机未见报名动作</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-bad">待处理</span></td></tr>
+<tr><td>AUTO-MAS「检测到后端更新」未点 + 脚本进程超时 2</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-warn">待处理</span></td></tr>
+<tr><td>DeepSeek V4 Pro 9/14 下线未切换</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-warn">待切换</span></td></tr>
+<tr><td>MuMu 模拟器「未响应」（09-10 28 分钟）本日未复现</td><td class="n">0 分钟</td><td class="n">0%</td><td><span class="tag t-ok">未复现</span></td></tr>
+<tr><td>09-10 上午 09:41–11:44 数据缺口（超 24h 保留期）</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-info">已丢失 · 本日无新增</span></td></tr>
+<tr><th colspan="1">小计</th><th class="n">403 分钟</th><th class="n">—</th><th>待处理 2 / 待切换 1 / 待调整 1 / 未复现 1 / 如实标注 2</th></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">占比列为该项时长占当日活跃总时长（387 分钟）的比例；「—」表示该问题无法用时长计量。</p>
+
+<h2><span class="n">4</span>游戏娱乐</h2>
+<h3>4.1 游戏 / 挂机（约 104 分钟）</h3>
+<table>
+<tr><th>游戏</th><th class="n">时长（约）</th><th class="n">占比</th><th>类型</th><th>说明</th></tr>
+<tr><td>MuMu 模拟器 12-1（明日方舟 / 重返未来 1999 / 碧蓝档案）</td><td class="n">102 分钟</td><td class="n">98%</td><td><span class="tag t-ok">手动</span></td><td>19:33–21:59；明日方舟基建造卡 + 商店组合包领取 + 潜能提升 + SR-EX-7「激越之拱」演习自动代理；重返未来 1999 奖励领取 + 商店 + 「迁流的盛宴」；碧蓝档案 好感故事 / 咖啡厅</td></tr>
+<tr><td>AUTO-MAS v5.4.0（调度中心）</td><td class="n">1 分钟</td><td class="n">1%</td><td><span class="tag t-info">自动化</span></td><td>20:39 蓝档案运行中；提示「检测到后端更新」未点，「脚本进程超时 2」</td></tr>
+<tr><td>MAA v6.17.5#0910（明日方舟）</td><td class="n">1 分钟</td><td class="n">1%</td><td><span class="tag t-info">脚本</span></td><td>19:34–19:35 公告页，SideStory「月行水上」SR-EX 不适配多作业模式</td></tr>
+<tr><th colspan="1">小计</th><th class="n">104 分钟</th><th class="n">100%</th><th>手动为主</th><td>模拟器更新（MuMu 更新器 7 分钟）计入第 1 节系统维护，本表不重复计时</td></tr>
+</table>
+<h3>4.2 其他娱乐（约 271 分钟）</h3>
+<table>
+<tr><th>类别</th><th class="n">时长（约）</th><th class="n">占比</th><th>说明</th></tr>
+<tr><td>抖音（网页，Chrome）</td><td class="n">173 分钟</td><td class="n">64%</td><td>11:43–15:43 为主，全天最大单项；含「明日方舟」搜索与多条长文案视频</td></tr>
+<tr><td>桌面停留 / PixPin 截图工具</td><td class="n">79 分钟</td><td class="n">29%</td><td>14:04–15:43 PixPin 为前台、屏面为桌面（可见 417综测 / 503综测.zip / 附件2 等文件）；与抖音同段、双窗口并行，实际专注度更低</td></tr>
+<tr><td>Kazumi 番剧《BanG Dream! YUME∞》MITA 第 10 集</td><td class="n">16 分钟</td><td class="n">6%</td><td>13:48–14:04，进度 05:54 / 25:40，末尾停在弹幕区</td></tr>
+<tr><td>SpeedBall 悬浮挂页</td><td class="n">2 分钟</td><td class="n">1%</td><td>全天零碎，21:13 为当日最后一帧</td></tr>
+<tr><td>QQ / 桌面社交杂项</td><td class="n">1 分钟</td><td class="n">0%</td><td>21:57 QQ 前台 0.4 分钟，未见实际沟通内容</td></tr>
+<tr><th colspan="1">小计</th><th class="n">271 分钟</th><th class="n">100%</th><td>娱乐类占全天活跃 70%</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">与 09-10（娱乐 92 分钟：抖音 86m + SpeedBall 3m + 网易云 2m）相比，本日娱乐时长接近 3 倍，抖音回到 173 分钟；游戏侧从「挂机为主」转为「手动清日常为主」（明日方舟＋重返未来 1999＋碧蓝档案三款）。备注：22:02 记录到《公主连结 Re:Dive》启动（Ver 11.7.2），已超 22:00 口径，不计入。</p>
+
+<h2><span class="n">5</span>明日计划（09-12 周六）</h2>
+<table>
+<tr><th>序号</th><th>计划</th><th>依据 / 跟进</th></tr>
+<tr><td>1</td><td><b>CET-6 报名：核对学籍并完成报名</b></td><td>9/11 12:00 错峰窗口已开，本机全天无报名页记录（已连续三日未核对学籍）——最高优先级硬时间点</td></tr>
+<tr><td>2</td><td>班级综测汇总收尾：催齐材料 + 附件1 汇总表复核并交回</td><td>09-10 未收口；本日桌面仍见 417综测 / 503综测.zip / 附件2，本日未处理</td></tr>
+<tr><td>3</td><td>MySQL 收尾实操：Powernode 库跑 explain / 前缀索引 / order by / 主键优化，笔记补「回表与覆盖索引」</td><td>09-10 课程已通关，仍缺「跑过」；已连续一日未推进</td></tr>
+<tr><td>4</td><td>JavaSE 编码实操重启（IDEA + Maven 3.8.6）</td><td>09-09 起停滞两日</td></tr>
+<tr><td>5</td><td>确认酷狗音乐是否已停用；若残留自启仍在则彻底卸载</td><td>本日无酷狗前台记录，处置口径待确认</td></tr>
+<tr><td>6</td><td>DeepSeek V4 Pro → V4.1 Flash 配置切换</td><td>9/14 12:00 下线，剩 3 天；检查 dsh / Cherry Studio / 脚本默认模型</td></tr>
+<tr><td>7</td><td>点 AUTO-MAS「检测到后端更新」，并安排 repo→app 启动同步覆盖修复</td><td>本日 20:39 再次提示未点，并有「脚本进程超时 2」</td></tr>
+<tr><td>8</td><td>手机端 Obsidian 同步方案定调（Git / 坚果云）+ BOSS 直聘意向回复</td><td>两项均停滞多日（09-10 / 09-07 起）</td></tr>
+<tr><td>9</td><td>周六压缩抖音时长，恢复学习 / 编码节奏</td><td>本日娱乐占比 70%、抖音 173 分钟（占活跃 45%），为本周单日娱乐最高</td></tr>
+</table>
+
+<div class="box b-info"><div class="t">本日一句话</div>
+休息日。6.5 小时可查记录里，抖音 173 分钟（45%）、模拟器日常与挂机 104 分钟（27%）、番剧 1 集 16 分钟，工作／学习只有 13 分钟（升级 MuMu 模拟器到 V6.6.4 + 桌面巡检）。上午 11:42 开机后一路抖音到 13:48，中间看了一集《BanG Dream! YUME∞》，14:04 起 PixPin 桌面截图占屏近 1 小时 40 分（桌面上还摊着 09-10 没处理完的综测材料）；15:43 锁屏离机，19:33 回来把明日方舟／重返未来 1999／碧蓝档案的日常清完。好消息是 09-10 的 MuMu「未响应」全天未复现，酷狗也没有前台记录。两个悬着的事：CET-6 报名窗口 12:00 已开而本机无动作，DeepSeek V4 Pro 9/14 下线还没切。
+</div>
+
+<div class="foot">
+ScrePipe日报 · 2026-09-11（周五）· 数据来源 screenpipe 本地记录（可查窗口 11:42–15:43 + 19:33–22:01）· 15:43–19:33 锁屏离机无录制，已如实标注<br>
+<a href="周总结.html" style="color:#58a6ff">第2周周总结</a> · <a href="../月度总结.html" style="color:#58a6ff">2026-09 月度总结</a> · <a href="日报-2026-09-10.html" style="color:#58a6ff">← 09-10</a> · <a href="../../../说明文件.html" style="color:#58a6ff">说明文件</a>
+</div>
+</div>
+<button class="theme-btn" id="themeBtn" title="切换 浅色/深色（默认跟随系统）">☀️</button>
+<script>
+(function(){
+var tb=document.getElementById('themeBtn');if(!tb)return;
+function syncIcon(){tb.textContent=document.documentElement.dataset.theme==='light'?'🌙':'☀️';}
+syncIcon();
+tb.onclick=function(){
+  var next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('nb-theme',next);}catch(e){}
+  try{sessionStorage.setItem('nb-scroll',window.scrollY);}catch(e){}
+  location.reload();
+};
+try{var y=sessionStorage.getItem('nb-scroll');if(y!==null){window.scrollTo(0,+y);sessionStorage.removeItem('nb-scroll');}}catch(e){}
+})();
+</script></body></html>
