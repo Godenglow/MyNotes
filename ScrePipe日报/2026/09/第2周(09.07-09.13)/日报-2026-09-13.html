@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>工作日报 2026-09-13（周日）</title><style>
+/* ===== 双主题变量（inject_theme.py 注入） ===== */
+:root{
+--bg:#0d1117;--side:#010409;--card:#161b22;--chip:#21262d;
+--border:#262d38;--hover:#10161f;
+--fg:#e6edf3;--strong:#f0f6fc;--muted:#8b949e;--faint:#6e7681;--quote:#b6c2cf;
+--link:#58a6ff;--h3:#79c0ff;--pre-fg:#c9d1d9;
+--warn:#d29922;--good:#3fb950;--bad:#f85149;
+--pre-bg:#282c34;
+--t-def:#abb2bf;--t-red:#e06c75;--t-green:#98c379;--t-orange:#d19a66;--t-purple:#c678dd;--t-yellow:#e5c07b;--t-cyan:#56b6c2;--t-blue:#61afef;--t-comment:#7f848e;
+}
+html[data-theme="light"]{
+--bg:#ffffff;--side:#f6f8fa;--card:#f6f8fa;--chip:#eff2f5;
+--border:#d0d7de;--hover:#eef1f4;
+--fg:#1f2328;--strong:#1f2328;--muted:#57606a;--faint:#8c959f;--quote:#57606a;
+--link:#0969da;--h3:#0550ae;--pre-fg:#24292f;
+--warn:#9a6700;--good:#1a7f37;--bad:#cf222e;
+--pre-bg:#f6f8fa;
+--t-def:#24292f;--t-red:#cf222e;--t-green:#116329;--t-orange:#953800;--t-purple:#8250df;--t-yellow:#9a6700;--t-cyan:#0550ae;--t-blue:#0550ae;--t-comment:#6e7781;
+}
+.theme-btn{position:fixed;right:74px;bottom:26px;width:40px;height:40px;border-radius:50%;
+background:var(--chip);border:1px solid var(--border);color:var(--fg);font-size:16px;
+display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:60;transition:transform .15s}
+.theme-btn:hover{transform:scale(1.1);border-color:var(--link)}
+
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--fg);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;line-height:1.7;padding:28px 20px 80px}
+.wrap{max-width:1080px;margin:0 auto}
+h1{font-size:26px;font-weight:700;letter-spacing:-.4px}
+h2{font-size:19px;font-weight:650;margin:34px 0 14px;padding-bottom:9px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px}
+h2 .n{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border-radius:6px;background:var(--chip);color:var(--muted);font-size:12px;font-weight:700}
+h3{font-size:15px;font-weight:620;margin:20px 0 8px}
+.sub{color:var(--muted);font-size:13px;margin-top:6px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:11px;margin:18px 0}
+.card{background:var(--card);border:1px solid var(--border);border-radius:9px;padding:12px 14px}
+.card .k{color:var(--muted);font-size:11px}
+.card .v{font-size:20px;font-weight:680;margin-top:3px;line-height:1.25}
+.card .d{color:var(--muted);font-size:11px;margin-top:3px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;margin:11px 0}
+th,td{padding:7px 9px;text-align:left;border-bottom:1px solid var(--chip);vertical-align:top}
+th{color:var(--muted);font-weight:600;font-size:11.5px;background:var(--card)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums}
+tr:hover td{background:var(--card)}
+.tag{display:inline-block;padding:1px 7px;border-radius:20px;font-size:11px;font-weight:600}
+.t-bad{background:rgba(248,81,73,.16);color:var(--bad)}
+.t-warn{background:rgba(210,153,34,.16);color:var(--warn)}
+.t-ok{background:rgba(63,185,80,.16);color:var(--good)}
+.t-info{background:rgba(88,166,255,.16);color:var(--link)}
+.box{border-left:3px solid;border-radius:0 7px 7px 0;padding:11px 15px;margin:13px 0;background:var(--card);font-size:13.5px}
+.box .t{font-weight:650;margin-bottom:5px;font-size:13.5px}
+.b-warn{border-color:var(--warn)}.b-warn .t{color:var(--warn)}
+.b-bad{border-color:var(--bad)}.b-bad .t{color:var(--bad)}
+.b-info{border-color:var(--link)}.b-info .t{color:var(--link)}
+.b-good{border-color:var(--good)}.b-good .t{color:var(--good)}
+ul,ol{margin:8px 0 8px 20px}li{margin:6px 0;font-size:13.5px}
+code{background:var(--chip);padding:1px 5px;border-radius:4px;font-size:12px;color:#bc8cff}
+.hd{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:10px;border-bottom:1px solid var(--border);padding-bottom:16px}
+.meta{color:var(--muted);font-size:12px;text-align:right;line-height:1.8}
+.foot{margin-top:36px;padding-top:16px;border-top:1px solid var(--border);color:var(--muted);font-size:11.5px}
+.crumbs{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:14px 0 4px;font-size:12px;color:var(--muted)}
+.crumbs a{color:var(--link);text-decoration:none}
+.tl{list-style:none;margin:10px 0 10px 4px}
+.tl li{position:relative;padding-left:16px;margin:7px 0;font-size:13.5px;border-left:1px solid var(--border)}
+.tl li b{color:var(--h3);font-variant-numeric:tabular-nums}
+.pill{display:inline-block;padding:0 6px;border-radius:5px;background:var(--chip);color:var(--muted);font-size:11px;font-variant-numeric:tabular-nums}
+.it{display:flex;gap:12px;padding:11px 0;border-bottom:1px solid var(--chip)}
+.it:last-child{border-bottom:none}
+.tm{flex:0 0 auto;font-variant-numeric:tabular-nums;color:var(--link);background:rgba(88,166,255,.1);border:1px solid rgba(88,166,255,.25);padding:1px 8px;border-radius:6px;font-size:12px;height:fit-content;margin-top:2px;white-space:nowrap}
+.ib{font-size:13.5px;flex:1}
+.ib b.t{color:var(--fg);display:block;margin-bottom:2px}
+.bar{height:8px;border-radius:4px;background:var(--chip);overflow:hidden;margin-top:6px}
+.bar i{display:block;height:100%;border-radius:4px}
+</style><script>
+(function(){var t=null;try{t=localStorage.getItem('nb-theme');}catch(e){}
+if(t!=='light'&&t!=='dark'){t=window.matchMedia&&matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';}
+document.documentElement.dataset.theme=t;})();
+</script></head><body><div class="wrap">
+<div class="crumbs"><a href="../../../说明文件.html">ScrePipe日报</a> › <a href="../月度总结.html">2026-09</a> › <a href="周总结.html">第2周(09.07-09.13)</a> › <b>日报-2026-09-13</b> · <a href="日报-2026-09-12.html">← 09-12</a></div>
+
+<div class="hd"><div>
+<h1>日报 · 2026-09-13（周日）</h1>
+<div class="sub">第 2 周（09.07–09.13）收官日 · <b>22:00 定时执行通过（本周第 4 次自动执行，7/7 天闭环）</b> · 继续沿用 09-13 上午补跑版恢复的 v2.7.30：10:23 开机自启后全程在线（3033 帧），末帧 20:36:01 · 全天以抖音、方舟系挂机与番剧为主，工作／学习约 50 分钟（其中 34 分钟为班级/学院 QQ 事务沟通）· 12:31–16:31 锁屏离机 4h、20:36 后无新画面</div>
+</div><div class="meta">
+数据源：screenpipe activity-summary + 窗口/OCR 记录（screenpipe-app 0.4.50，10:23:11 起 3033 帧）<br>
+活跃总时长 364 分钟（约 6.1h，估算）· 可查窗口 10:23–12:31 + 16:31–20:36 · 无音频段（audio 为 disabled）<br>
+本周位置：2026-09 第 2 周（09.07–09.13）周日 · 生成于 2026-09-13 22:00（定时执行）<br>
+数据为 screenpipe 估算值，窗口存在重叠
+</div></div>
+
+<div class="cards">
+<div class="card"><div class="k">活跃总时长</div><div class="v" style="color:#58a6ff">6.1 h</div><div class="d">364 分钟 · 两段可查窗口 10:23–12:31 + 16:31–20:36；00:00–10:23 未开机、12:31–16:31 锁屏离机、20:36 后无新画面</div><div class="bar"><i style="width:100%;background:#58a6ff"></i></div></div>
+<div class="card"><div class="k">工作 / 学习</div><div class="v" style="color:#a371f7">0.8 h</div><div class="d">约 50 分钟 · 占 14%（班级/学院 QQ 事务 34m + 日报·周报·月报复盘 4m + 自动化问题回溯 3m + 系统维护与桌面巡检 6m + AUTO-MAS 森空岛授权 3m）</div><div class="bar"><i style="width:14%;background:#a371f7"></i></div></div>
+<div class="card"><div class="k">游戏 / 挂机</div><div class="v" style="color:#39c5cf">1.6 h</div><div class="d">约 94 分钟 · 占 26%（MuMu 明日方舟 36m + 终末地 29m + AUTO-MAS 15m + M9A/MFA 14m + MAA 1m）</div><div class="bar"><i style="width:26%;background:#39c5cf"></i></div></div>
+<div class="card"><div class="k">其他娱乐</div><div class="v" style="color:#ffa657">3.7 h</div><div class="d">约 224 分钟 · 占 62%（抖音 114m + SpeedBall 悬浮挂页 80m + 番剧《寄生兽 生命的准则》第 1 集 29m + PixPin 1m）</div><div class="bar"><i style="width:62%;background:#ffa657"></i></div></div>
+<div class="card"><div class="k">记录缺口 / 提醒</div><div class="v" style="color:#f85149">4h00m</div><div class="d">12:31:09–16:32 锁屏离机无录制（非故障）· 20:36 后至 22:00 生成时刻无新画面（屏幕静止/息屏）· <b>DeepSeek V4 Pro 明日 12:00 下线仍未切换</b></div></div>
+</div>
+
+<div class="box b-info"><div class="t">数据口径说明</div>
+① <b>活跃时长</b>取 activity-summary 的 total_active_minutes = 364 分钟；分类时长由窗口前台时长汇总，<b>窗口存在重叠</b>（如抖音与 MuMu/AUTO-MAS 挂机并行），三类合计 368 分钟略高于活跃总时长，占比按"分类时长 ÷ 活跃总时长"估算，四舍五入后合计可能不等于 100%。<br>
+② <b>SpeedBall 悬浮球</b>沿用 09-08／09-11 口径计入"其他娱乐"杂项，但本日其中 <b>18:13:43–19:25:55 约 72 分钟</b>帧内容为空白、且零键鼠输入（详见【问题与阻塞】①），实质是息屏/离机而非内容消费，解读时请扣除。<br>
+③ <b>无音频段</b>：audio_capture_mode = disabled（当日 segment_count = 0），本文不含任何通话/会议转写内容。<br>
+④ 敏感项（登录验证码、账号口令页等）一律不写入本报告。
+</div>
+
+<h2><span class="n">1</span>今日完成</h2>
+
+<h3>1.1 时间线（可查窗口 10:23–12:31 + 16:31–20:36）</h3>
+<ul class="tl">
+<li><b>10:23 开机 / screenpipe 随自启恢复</b>　10:23:11 首帧（任务栏 10:23 / 电量 78%），screenpipe-app 0.4.50 以 <b>v2.7.30</b> 自启并开始录制（延续 09-13 上午为 09-12 补跑时的同一版本与服务实例，pipeline uptime 至 22:04 约 11.7h，<b>全天无崩溃、无数据丢失</b>）。</li>
+<li><b>10:23–10:51 Obsidian 复盘本周与上月产物（约 4 分钟）</b>　打开 <b>MyNotes</b> 库的 ScrePipe日报 目录并逐篇回看：<span class="pill">10:44:xx</span> 依次切到 <b>日报-2026-09-11</b>、<b>日报-2026-09-12</b>、<b>周总结（第2周 09.07-09.13）</b>、<b>月度总结（2026-09）</b> 四个文件（Obsidian 1.13.7，左侧目录树可见 2026 › 09 › 第1周(08.31-09.06) / 第2周(09.07-09.13)）；同期资源管理器桌面巡检（<b>417综测.zip / 417综测 / 503综测 / 附件2：学生个人综合素质测评登记表（2023年）.docx / 23软件工程25-26学年绩点汇总.xlsx / 我的关机助手</b> 等图标仍在桌面，与 09-10/09-12 一致）。也即：<b>开机第一件事是回看自己的日报体系产物，而不是推进待办</b>。</li>
+<li><b>10:25–12:22 班级/学院事务沟通（QQ，累计 34 分钟）</b>　QQ 全程挂着，内容为"接收 + 看图 + 不回复"型：<b>23软件工程1班（66 人）</b>群公告「<b>大学创新大赛网上报名，各班三个同学一组</b>」（发布者 廖林强）、龚怡繁关于<b>材料收集截止</b>的催促（截图中带「申请书 / 材料」字样）；<b>数计学院文体委员群</b>通知；联系人面板可见 邬金明、汪玉婷、李俊豪、郑雅琴、李成武、曾诚、查子凡、22/24 年级学生等分组。另有两类事务性内容：<span class="pill">10:26:25</span> 接收一条 Microsoft 一次性登录验证码邮件（仅作记录，不写入正文）；<span class="pill">11:57</span> 聊天内容含 <b>学工系统 / 贫困生库</b>说明（"输入综合服务门户账号及密码登陆即可进入学工系统，学生申请-班主任…"）——属资助材料口径。全天<b>未见新的发言、发文件或表格处理动作</b>。</li>
+<li><b>10:32–10:44 / 12:31 SpeedBall 悬浮球零碎段</b>　SpeedBall 窗口每约 30 秒一帧、内容多为空白，仅少数帧可见读数碎片（文件名 <b>综测作表.sx</b> + <b>0 K/s</b> + 进度百分比，疑似传输/下载类悬浮窗）。<span class="pill">12:31:06</span> 该窗口盖在资源管理器上（文件列表含 417综测.zip、417综测、503综测、综测作表.sx、附件2 登记表、绩点汇总表），<span class="pill">12:31:09</span> 为本段最后前台帧。</li>
+<li><b>10:48–12:31 抖音（Chrome 网页版）第一段，约 1 小时 43 分</b>　与 QQ、SpeedBall 交错并行，基本是连续下滑：<span class="pill">08:xx–10:55 起</span> 王者荣耀类长评（关羽/钟馗控制机制、"净化"时机讨论，评论区 663 条）；<span class="pill">11:0x</span> KPL 相关（TTG 夺冠、打野钟馗）；<span class="pill">11:4x</span> @不会拍的Yang《威海的冬天真的好美》（#威海 #冬天 #雪，31.6 万赞、评论区 663 条，弹幕与评论在讨论威海金沙滩学府酒店）；<span class="pill">11:5x</span> 生活/美食切片（@城城家常菜 烤苕皮、@三餐四季 鸭肉油豆泡工作餐）；<span class="pill">12:00–12:18</span> @神不知⁷⁹「大梦催白发～ #李慕婉」（25.5 万赞）、《超人：钢铁之躯》/正义联盟 剪辑（#练肩膀 #练腿）、@JOON 内容；<span class="pill">12:19–12:31</span> 另一条长评（"其实并不是羡慕你炸得有多好吃，羡慕的是你这口锅"）+ 威海外景二次出现。全程<b>无 CET-6 报名页、无学籍核对页</b>，Chrome 全天窗口仅「抖音-记录美好生活」（113.7m）。</li>
+<li><b>12:17–12:22 挂着的问题回溯（WorkBuddy + TraeWork CN / Trae CN）</b>　WorkBuddy 5.4.0（Goldenglow_Dream）打开"最近任务"列表：<b>询问两个数据库的来历</b>（3 天前）、<b>更新JavaSE问答整理 - AngelByte_Note</b>、<b>手机版Obsidian无法安装坚果云插件 - MyNotes</b>、<b>手机端Obsidian Git插件使用方法</b>（6 天前）等；TraeWork CN 侧同时开着任务「<b>排查 MAA 运行明日方舟问题</b>」，文件区显示 <b>AUTO-MAS-明日方舟-1-收尾崩溃修复说明.md</b>、<b>更新我的配置.md</b> 与「2 个文件已更改」，对话末句为"先不升级 Python，直接运行验证修复效果"（模型 GLM-5.3 Max，任务状态停在待执行/手动审批）。<b>本段只做了"看"，没有新执行、没有改文件</b>。</li>
+<li><b>12:19 / 12:31 系统维护与桌面巡检（约 6 分钟）</b>　<span class="pill">12:19:14</span> DSATray 弹出 <b>Intel® Computing Improvement Program</b> 提示窗口（约 2.8 分钟）；<span class="pill">12:31:03</span> 资源管理器桌面帧显示 <b>新生文件名「新建 XLSX 工作表.xlsx」</b>、<b>综测作表.sx</b>、<b>我的关机助手</b> 等仍在桌面。</li>
+<li><b>12:31:09–16:32 锁屏离机 4 小时（无录制）</b>　12:31:09 之后当日帧即中断；恢复侧证据：16:30:58 <code>[System Process]</code> 帧、<b>16:31:53 explorer <code>UnlockingWindow</code></b>（Windows 锁屏类窗口）→ 16:32:02 SpeedBall / 16:32:07 AUTO-MAS 回前台。判定为<b>锁屏离机/休眠，非故障、无媒体分片丢失</b>；该段不计入活跃时长。</li>
+<li><b>16:33–16:36 AUTO-MAS 森空岛账号重新授权（约 3 分钟）</b>　AUTO-MAS v5.4.0 的「<b>森空岛账密获取 Token</b>」页（"不保存任何账号密码；本次登录使用的账号密码仅存在于当前登录请求"）在前台 16:33:52–16:35:57，随后回到"检测到后端更新，点击以更新后端"的主页提示。<b>即当日先补授权再开挂机。</b></li>
+<li><b>16:36–17:42 明日方舟 · MuMu 模拟器 12-1（约 36 分钟前台）</b>　<span class="pill">16:36</span> MuMuNxMain/设备窗口起；期间做日常与活动：作战界面连续出现 <b>OPERATION SR-5 / SR-6 / SR-7</b>（9 倍速代理作战，SR-7 <b>「月悬」</b>，弹幕"它常在你以为它不在时出现"），<span class="pill">16:58</span> 仓库/兑换页（<b>至纯源石 → 理智</b> 类兑换、理智药剂使用）；<span class="pill">17:15</span> 编队页可见 60 级干员 <b>凛御银灰、丰川祥子、乌尔比安、斩业星熊、维什戴尔、逻各斯、艾雅法拉、Mon3tr、歌蕾蒂娅</b> 等。同屏 MAA v6.17.5#0910 公告（SideStory「月行水上」）。</li>
+<li><b>16:37 MAA 一帧公告页（&lt;1 分钟）</b>　MAA v6.17.5#0910 运行日志/公告窗口，与 M9A/AUTO-MAS 同属方舟系自动化三件套。</li>
+<li><b>17:12–17:43 M9A / MFA 任务管理器（终末地自动化）升级到 v4.8.0（约 14 分钟）</b>　进程 m9a.exe，窗口标题 <b>MFA 任务管理器 v2.16.1-beta.3 | M9A v4.7.1</b>；<span class="pill">17:14:2x–17:14:5x</span> 界面显示「<b>资源更新：v4.8.0</b>」与「部分资源热更新 更新 3 个文件」（v4.7.1 → v4.8.0），同时任务列表在跑「收取荒原 / 每日心相（意志解析）/ 活动代币刷取 / 常规作战 / 自动深眠 / 自动醒梦 / 银行购物 / 领取奖励」，日志区有"开始任务：启动游戏 / 任务失败"重试记录；17:43:15 标题变为 <b>M9A v4.8.0</b>，此后进入「设置 / 切换配置」页。</li>
+<li><b>17:43–18:12 明日方舟：终末地（Endfield，约 29 分钟）</b>　UID 1920666934，主线为<b>地区建设与据点运营</b>：<span class="pill">17:50</span> 仓储节点（武陵城 / 试验园区，本地库存上限 +220m，运送委托列表）；<span class="pill">17:51</span> 据点「<b>盈天台建造完毕</b>」（应龙关、天王坪援建点、据点发展值 <b>279 万 / 4200 万</b>）；<span class="pill">17:52</span> 据点交易（<b>18.1 万 / 3.63 万谷地调度券</b>）；<span class="pill">17:53</span> 四号谷地物资调度（工业货品/弹性需求物资 124.8%、库存 5/15/60、冲浪大赛门票等）；<span class="pill">17:54</span> 地区建设总进度 <b>2467 万 / 3000 万</b>；<span class="pill">17:58</span> 高级作战记录 <b>161 / 360 获得奖励</b>（再战消耗 80 理智、行动资历 58 秒后自动退出）。</li>
+<li><b>19:25:55–19:33 回到桌面与系统设置（约 3 分钟）</b>　explorer（Program Manager）→ <b>ShellHost「快速设置」</b>（音量/亮度/网络面板，2.5 分钟）→ 19:26 起转 Chrome。此处也是判断"18:13–19:25 段是否有人"的参照点——该段<b>既无输入事件也无新画面内容</b>。</li>
+<li><b>18:13–19:25 SpeedBall 悬浮窗占前台 72 分钟（空白帧）</b>　18:13:43 window_focus 落到 SpeedBall 后，至 19:25:55 期间只有每约 30 秒一帧的<b>空白画面</b>（无 OCR 文本、无键鼠事件，唯一残留碎片为「综测作表.sx 0 K/s 38%」）；同期 AUTO-MAS 仍在跑方舟挂机。判定为<b>息屏/离机挂页</b>，不计入内容消费。</li>
+<li><b>19:58–20:35 番剧《寄生兽 生命的准则》第 01 集（Kazumi 16.4m + Ani 12.7m）</b>　<span class="pill">19:58</span> Kazumi 播放第 01 集（进度 07:40 / 25:00，弹幕"girigiri 愛"、"胡来的右手"、"新一"）；<span class="pill">20:02–20:23</span> 换到 <b>Ani 客户端</b>同集观看（剧集列表显示"已完结 全 24 话"、标签 2014 年 10 月），两应用交错 → 20:23–20:35 回到 Kazumi。<b>当日唯一"从头看一集"的内容消费。</b></li>
+<li><b>19:25–20:18 抖音第二段（约 53 分钟）</b>　<span class="pill">19:26–20:18</span> 内容：@第一财经「<b>00 后创业"做水"遭农夫山泉起诉，索赔 15 万元</b>」（"国赤山泉"回应仅做样品调研，一审开庭未宣判，评论区观点两极）；"天子到了阴间还是天子"历史讲解（#我的世界）；@风轻轻吖「被儿子和他同学的社交方式整不会了」（#10后社交）；美食/生活切片（溏心蛋涨价、工作餐）。至 <b>20:18:51</b> 抖音为当日最后一个 Chrome 帧。</li>
+<li><b>20:12 / 20:20–20:21 AUTO-MAS 任务配置微调</b>　<span class="pill">20:20–20:21</span> 回到 AUTO-MAS v5.4.0 主页与「任务配置 - 活动代币刷取」（复刻模式 = Yes、活动难度 = 艰难、吃糖 = Yes、糖果有效期 24h）逐条核对；"检测到后端更新，点击以更新后端"<b>仍未点击</b>。SpeedBall 末帧 20:20:07。</li>
+<li><b>20:25–20:36 PixPin 截图/贴图收尾</b>　PixPin.exe 前台约 0.6 分钟（首次 20:25、末帧 <b>20:36:01</b>），为当日最后一个新增帧；此后至 22:04 生成时刻 screenpipe 仍在运行（capture 正常、帧被 dedup 跳过），<b>无新画面=屏幕静止/息屏，非崩溃</b>。</li>
+</ul>
+
+<h3>1.2 工作 / 学习条目明细（约 50 分钟）</h3>
+<div class="it"><span class="tm">10:25–12:22</span><div class="ib"><b class="t">班级/学院事务沟通（QQ，约 34 分钟）</b>23软件工程1班（66 人）群：<b>大学创新大赛网上报名通知</b>（每班三人一组，发布者 廖林强）+ <b>材料收集截止催促</b>（龚怡繁）；数计学院文体委员群通知；联系人面板与聊天面板并行。事务性边界：<span class="pill">10:26:25</span> 一次性登录验证码邮件（仅记录）；<span class="pill">11:57</span> <b>学工系统 / 贫困生库</b>操作说明（综合服务门户登录 → 学生申请 → 班主任流程）。产出：无——<b>全天没有新的回复、没有发出文件、没有打开表格</b>。</div></div>
+<div class="it"><span class="tm">10:23–10:51</span><div class="ib"><b class="t">日报 / 周报 / 月报体系复盘（Obsidian，约 4 分钟）</b>开机后依次打开 <b>日报-2026-09-11</b>、<b>日报-2026-09-12</b>、<b>周总结（第 2 周 09.07-09.13）</b>、<b>月度总结（2026-09）</b> 四篇产物（MyNotes › ScrePipe日报 › 2026 › 09），并在资源管理器桌面巡检待办材料（417综测.zip / 503综测 / 附件2 综测登记表 / 绩点汇总表）。产出：确认 09-12 补跑版已落盘、第 2 周目录完整，但未改动任何文件。</div></div>
+<div class="it"><span class="tm">12:17–12:22</span><div class="ib"><b class="t">自动化问题回溯（WorkBuddy 5.4.0 + TraeWork CN / Trae CN，约 3 分钟）</b>TraeWork 任务「<b>排查 MAA 运行明日方舟问题</b>」：涉及 <b>AUTO-MAS-明日方舟-1-收尾崩溃修复说明.md</b>、<b>更新我的配置.md</b>（"2 个文件已更改"，模型 GLM-5.3 Max，末句"先不升级 Python，直接运行验证修复效果"，任务停在下一次执行前）；WorkBuddy 最近任务：询问两个数据库的来历（3 天前）、更新 JavaSE 问答整理 - AngelByte_Note、手机版 Obsidian 无法安装坚果云插件 - MyNotes、手机端 Obsidian Git 插件使用方法。产出：<b>无新改动</b>（仅回看上下文）。</div></div>
+<div class="it"><span class="tm">12:19 / 12:31</span><div class="ib"><b class="t">系统维护与桌面巡检（约 6 分钟）</b>DSATray 的 <b>Intel® Computing Improvement Program</b> 提示窗口（2.8m）；资源管理器桌面帧两次显示综测相关文件（<b>附件2：学生个人综合素质测评登记表（2023年）.docx</b>、417综测.zip、417综测、503综测、综测作表.sx、23软件工程25-26学年绩点汇总.xlsx、新建 XLSX 工作表.xlsx、我的关机助手）。产出：无——<b>全天未见 WPS/Word/Excel 前台窗口</b>，材料只被"看到"未被打开。</div></div>
+<div class="it"><span class="tm">16:33–16:36</span><div class="ib"><b class="t">AUTO-MAS 森空岛账号重新授权（约 3 分钟）</b>AUTO-MAS v5.4.0「森空岛账密获取 Token」页完成登录授权（页面声明不保存账号密码），随后回到主页的"检测到后端更新"提示。产出：挂机链路当日可正常起跑。</div></div>
+<div class="it"><span class="tm">19:25–19:33</span><div class="ib"><b class="t">回到桌面与系统设置（约 3 分钟）</b>explorer（Program Manager）→ ShellHost「<b>快速设置</b>」面板（音量/亮度/网络）。产出：无；此后进入晚间娱乐段。</div></div>
+
+<h3>1.3 时间分布（工作 / 学习口径，约 50 分钟）</h3>
+<table>
+<tr><th>序号</th><th>事项</th><th class="n">时长（约）</th><th class="n">占比</th></tr>
+<tr><td>1</td><td>班级/学院 QQ 事务沟通（创新大赛报名、材料催促、学工系统口径）</td><td class="n">34 分钟</td><td class="n">68%</td></tr>
+<tr><td>2</td><td>系统维护与桌面巡检（Intel 提示、综测材料文件确认）</td><td class="n">6 分钟</td><td class="n">12%</td></tr>
+<tr><td>3</td><td>日报/周报/月报体系复盘（Obsidian 四篇产物）</td><td class="n">4 分钟</td><td class="n">8%</td></tr>
+<tr><td>4</td><td>自动化问题回溯（MAA/AUTO-MAS 修复说明、Obsidian 同步任务）</td><td class="n">3 分钟</td><td class="n">6%</td></tr>
+<tr><td>5</td><td>AUTO-MAS 森空岛账号授权（挂机前置）</td><td class="n">3 分钟</td><td class="n">6%</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 5 项，合计约 50 分钟（占当日活跃 14%）；其中真正"动手产出"为 0——无文件新建/修改、无表格处理、无编码、无提交。</p>
+
+<h2><span class="n">2</span>进行中</h2>
+<table>
+<tr><th>事项</th><th>当前进展</th><th>还差什么</th></tr>
+<tr><td>班级综测汇总（23 软工一班 / 417 宿舍）</td><td>09-10 已完成材料收件与《附件1》按行核对；09-11/09-12/09-13 三日仅在桌面与资源管理器里"看到"材料（09-13 12:31、20:31 两处），<b>本机连续第三日无 WPS/Excel 前台窗口</b></td><td><span class="tag t-warn">待收口</span>材料催齐（缺件仍未集齐）→ 复核《附件1》德育/智育/体育与测评积分 → 回交（郑雅琴"改完发我"、龚怡繁处）</td></tr>
+<tr><td>MAA / AUTO-MAS 收尾崩溃修复</td><td>修复说明与配置文件已在 TraeWork 任务里成形（AUTO-MAS-明日方舟-1-收尾崩溃修复说明.md、更新我的配置.md，2 文件已更改），计划为"先不升级 Python，直接运行验证"；09-13 仅回看未执行</td><td><span class="tag t-warn">待验证</span>按说明跑一轮实机验证（含 repo→app 启动同步覆盖的还原修复）并合入</td></tr>
+<tr><td>AUTO-MAS 后端更新</td><td>16:35、20:20–20:21 两次见到"检测到后端更新，点击以更新后端"，未点击；当日挂机任务本身运行正常</td><td><span class="tag t-warn">待点击</span>点更新 → 重启后端 → 确认脚本列表无回退</td></tr>
+<tr><td>M9A / MFA 任务管理器（终末地自动化）</td><td>17:14 资源热更新（更新 3 个文件）并升至 <b>M9A v4.8.0</b>，任务队列正常；日志中仍有"启动游戏/收取荒原"失败重试</td><td><span class="tag t-info">新版本首日观察</span>跑满一日后确认失败重试是否消失</td></tr>
+<tr><td>MySQL 收尾实操</td><td>09-10 课程全集通关后<b>连续第 3 日未推进</b>（今日无 DataGrip/终端前台窗口）</td><td><span class="tag t-bad">未动手</span>Powernode 库跑 explain / 前缀索引 / 最左前缀 / order by / 主键优化并留证据；笔记补「回表与覆盖索引」</td></tr>
+<tr><td>JavaSE 编码实操（Maven 3.8.6）</td><td>自 09-09 课件巡检后<b>停滞第 4 日</b>（今日无 IDEA 前台窗口）</td><td><span class="tag t-bad">未动手</span>IDEA 配置 Maven 并跑通第一个工程</td></tr>
+<tr><td>DeepSeek V4 Pro → V4.1 Flash 切换</td><td>09-10 收到开放平台公告，连续 4 日未做切换动作；<b>明天 9/14 12:00 即下线</b></td><td><span class="tag t-bad">24 小时内到期</span>检查 dsh / Cherry Studio / QQ AI Bot 脚本三处默认模型并改到 V4.1 Flash</td></tr>
+<tr><td>手机端 Obsidian 同步</td><td>WorkBuddy 最近任务里两次出现（坚果云插件无法安装、Git 插件用法），今日无新动作</td><td><span class="tag t-warn">待定方案</span>在 Git 与坚果云间定一种并落地（09-07 已收集 PAT 材料）</td></tr>
+<tr><td>求职（BOSS 直聘）</td><td>09-07 跟进多益网络意向后无后续；今日无相关页面</td><td><span class="tag t-info">待继续</span>回复意向 + 择岗投递（南昌实习/广州管培生线）</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 9 项（其中"未动手/到期"3 项、"待收口/待验证/待点击"4 项、观察与待继续 2 项）。</p>
+
+<h2><span class="n">3</span>问题与阻塞</h2>
+
+<div class="box b-warn"><div class="t">SpeedBall 悬浮窗占前台 72 分钟且零输入（18:13:43–19:25:55） <span class="tag t-warn">待观察 / 口径</span></div>
+时间段：18:13–19:26（约 72 分钟；当日 SpeedBall 累计前台 80.5 分钟）｜现象：window_focus 一直停在 SpeedBall.exe（窗口名 SpeedBall），期间每约 30 秒一帧但<b>画面全空白、无 OCR 文本、无任何键鼠事件</b>（ui_recorder 最后事件 20:35:30，该段前亦无事件）；同期 AUTO-MAS 方舟挂机仍在运行｜已尝试的处理：对照 18:12 末帧（终末地）与 19:25:55 explorer「快速设置」返回点，并检查 09-08／09-11 同类段｜当前状态：判定为<b>息屏/离机挂页</b>（非崩溃、无数据丢失），本报告按 09-08／09-11 口径计入"其他娱乐"杂项，<b>但解读时请扣除这 72 分钟</b>。
+</div>
+
+<div class="box b-info"><div class="t">记录缺口：12:31:09–16:32 锁屏离机 4 小时 <span class="tag t-info">如实标注</span></div>
+时间段：12:31:09 → 16:30:58/16:31:53｜现象：当日帧在 12:31:09 后中断（最后前台为 SpeedBall 盖在资源管理器上），恢复首帧为 <code>[System Process]</code>，随后 explorer <code>UnlockingWindow</code>（Windows 锁屏类窗口），16:32:02 SpeedBall / 16:32:07 AUTO-MAS 回前台｜已尝试的处理：与 09-11 的 15:43–19:33 锁屏段同一判定方法（末帧 → UnlockingWindow → 应用集体回前台）｜当前状态：<b>非故障、无媒体分片丢失</b>，该段不计入活跃时长；00:00–10:23（未开机）与 20:36–22:04（在线但无新画面，帧被 dedup 跳过）同样不作出"未做"判断。
+</div>
+
+<div class="box b-bad"><div class="t">DeepSeek V4 Pro 明日 12:00 下线，仍未切换 <span class="tag t-bad">待处理</span></div>
+时间段：09-10 17:51 公告 → 09-13 全天｜现象：开放平台公告 V4 Pro 请求将路由至 V4.1 Flash 并按 Flash 计费；今日无 dsh／Cherry Studio／QQ Bot 脚本的前台记录，即<b>未做任何模型切换</b>｜已尝试的处理：无（连续 4 日）｜当前状态：<b>距下线不足 24 小时</b>，需人工在 dsh / Cherry Studio / QQ AI Bot 三处检查默认模型。
+</div>
+
+<div class="box b-bad"><div class="t">CET-6 报名：本机连续 4 日无报名页记录 <span class="tag t-bad">待人工确认</span></div>
+时间段：9/11 12:00 错峰开放 → 09-13｜现象：今日 Chrome 全天窗口仅「抖音-记录美好生活」（113.7m），无报名页/学籍核对页；09-11、09-12 同样无记录｜已尝试的处理：逐日核对 Chrome 窗口与 URL、桌面帧｜当前状态：<b>是否已在手机端完成无从判断</b>（规则禁止据缺口断言"未做"，但窗口期已第 3 日），需人工确认，若仍开放立即补做。
+</div>
+
+<div class="box b-bad"><div class="t">AUTO-MAS「检测到后端更新」连续未点 <span class="tag t-bad">待处理</span></div>
+时间段：16:35:38、20:20–20:21（自 09-09 起反复出现）｜现象：AUTO-MAS v5.4.0 主页持续显示"检测到后端更新，点击以更新后端"；当日挂机任务（12 项队列）运行正常，森空岛 Token 已重新授权｜已尝试的处理：核对任务配置（活动代币刷取：复刻模式 Yes / 艰难 / 吃糖 Yes / 糖果 24h）｜当前状态：与"MAA/AUTO-MAS 收尾崩溃修复"同一条线，未闭环。
+</div>
+
+<div class="box b-warn"><div class="t">综测材料连续第三日摊在桌面未处理 <span class="tag t-warn">待确认</span></div>
+时间段：10:32–10:44、12:31、20:31（资源管理器/桌面帧）｜现象：附件2 登记表、417综测.zip、417综测、503综测、综测作表.sx、23软件工程25-26学年绩点汇总.xlsx、新建 XLSX 工作表.xlsx 反复出现，<b>全天无 WPS/Word/Excel 前台窗口</b>｜已尝试的处理：三处帧逐一比对文件名｜当前状态：<b>待确认</b>——是否已在手机/其他设备处理过本机无法证实（09-12 后有 19h34m + 本日 4h 两处缺口）。
+</div>
+
+<div class="box b-warn"><div class="t">M9A 任务重试与首日新版本 <span class="tag t-warn">待验证</span></div>
+时间段：17:14–17:43｜现象：升级 v4.7.1 → <b>v4.8.0</b> 时日志出现"开始任务：启动游戏 / 任务失败"重试；窗口标题在 17:43 才切换为 v4.8.0｜已尝试的处理：资源热更新 3 个文件完成后重跑｜当前状态：任务队列（收取荒原/每日心相/活动代币刷取等）最终正常运行，<b>待跑满一日验证</b>。
+</div>
+
+<div class="box b-info"><div class="t">无音频段 + MAA 公告（备注） <span class="tag t-info">已知悉</span></div>
+audio_capture_mode = disabled（segment_count = 0）：本文不含通话/会议内容；MAA v6.17.5#0910 为 SideStory「月行水上」版本（16:37 一帧公告）。
+</div>
+
+<h3>问题汇总</h3>
+<table>
+<tr><th>现象</th><th class="n">时长（约）</th><th class="n">占比</th><th>状态</th></tr>
+<tr><td>SpeedBall 悬浮窗占前台、空白帧零输入（18:13–19:26）</td><td class="n">72 分钟</td><td class="n">33%</td><td><span class="tag t-warn">待观察 / 口径</span></td></tr>
+<tr><td>记录缺口：12:31–16:32 锁屏离机（无帧，无分片丢失）</td><td class="n">240 分钟</td><td class="n">61%</td><td><span class="tag t-info">如实标注</span></td></tr>
+<tr><td>20:36–22:04 在线但无新画面（dedup 跳过，非崩溃）</td><td class="n">8 分钟*</td><td class="n">2%</td><td><span class="tag t-info">如实标注</span></td></tr>
+<tr><td>DeepSeek V4 Pro 明日 12:00 下线未切换</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-bad">待处理</span></td></tr>
+<tr><td>CET-6 报名连续 4 日无本机动作</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-bad">待确认</span></td></tr>
+<tr><td>AUTO-MAS「检测到后端更新」未点</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-bad">待处理</span></td></tr>
+<tr><td>综测材料摊桌面未打开（第三日）</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-warn">待确认</span></td></tr>
+<tr><td>M9A 启动失败重试（新版本首日）</td><td class="n">—</td><td class="n">—</td><td><span class="tag t-warn">待验证</span></td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">状态分布小计：待处理 2 / 待确认 2 / 待观察·待验证 2 / 如实标注 2。<br>*"20:36–22:04 无新画面"按 20:36–22:00 生成时刻计约 84 分钟，此处仅列与"记录可解读性"直接相关的口径项，实际该段属正常息屏/静止，不计入故障时长。</p>
+
+<h2><span class="n">4</span>游戏娱乐</h2>
+
+<h3>4.1 游戏 / 挂机（约 94 分钟）</h3>
+<table>
+<tr><th>游戏</th><th class="n">时长（约）</th><th class="n">占比</th><th>类型</th><th>说明</th></tr>
+<tr><td>明日方舟（MuMu 模拟器 12-1）</td><td class="n">36 分钟</td><td class="n">38%</td><td><span class="tag t-ok">手动</span></td><td>16:36–17:42：SR-5/SR-6/SR-7 代理作战（9 倍速，SR-7「月悬」）；16:58 理智兑换；编队含 60 级凛御银灰、丰川祥子、乌尔比安等</td></tr>
+<tr><td>明日方舟：终末地（Endfield）</td><td class="n">29 分钟</td><td class="n">31%</td><td><span class="tag t-ok">手动</span></td><td>17:44–18:12：盈天台建造完毕、据点发展值 279 万/4200 万、据点交易 18.1 万券、物资调度与仓储节点；高级作战记录 161/360</td></tr>
+<tr><td>AUTO-MAS v5.4.0（方舟挂机调度）</td><td class="n">15 分钟</td><td class="n">16%</td><td><span class="tag t-info">挂机/自动化</span></td><td>16:32–20:21：12 项任务队列（收取荒原/活动代币刷取/自动深眠等）；活动代币刷取设"艰难 + 吃糖（24h）"；16:33 森空岛 Token 重新授权</td></tr>
+<tr><td>M9A / MFA 任务管理器（终末地自动化）</td><td class="n">14 分钟</td><td class="n">15%</td><td><span class="tag t-info">挂机/自动化</span></td><td>17:12–17:43：v4.7.1 → <b>v4.8.0</b>（资源热更新 3 文件），任务队列运行，日志有启动失败重试</td></tr>
+<tr><td>MAA v6.17.5#0910</td><td class="n">&lt;1 分钟</td><td class="n">&lt;1%</td><td><span class="tag t-info">脚本</span></td><td>16:37 公告页一帧（SideStory「月行水上」，9 倍速代理作战同屏）</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 5 项，合计约 94 分钟（占当日活跃 26%）；其中自动化/挂机类 29 分钟、手动游玩类 65 分钟。</p>
+
+<h3>4.2 其他娱乐（约 224 分钟）</h3>
+<table>
+<tr><th>类别</th><th class="n">时长（约）</th><th class="n">占比</th><th>说明</th></tr>
+<tr><td>抖音（Chrome 网页版）</td><td class="n">114 分钟</td><td class="n">51%</td><td>10:48–12:31 + 19:25–20:18：威海雪景（31.6 万赞）、烤苕皮/工作餐、KPL 夺冠、#李慕婉、超人钢铁之躯、00 后创业"做水"被农夫山泉起诉索赔 15 万、天子/阴间历史讲解、10 后社交等</td></tr>
+<tr><td>SpeedBall 悬浮挂页</td><td class="n">80 分钟</td><td class="n">36%</td><td><span class="tag t-warn">挂页/离机</span>累计 80.5 分钟；其中 18:13:43–19:25:55 约 72 分钟空白帧且零输入（判定息屏/离机，非内容消费）；仅见「综测作表.sx 0 K/s 38%」读数碎片</td></tr>
+<tr><td>番剧《寄生兽 生命的准则》第 01 集（Kazumi）</td><td class="n">16 分钟</td><td class="n">7%</td><td>19:58–20:35（含中途回切）：进度 07:40/25:00，弹幕 girigiri 愛</td></tr>
+<tr><td>番剧《寄生兽 生命的准则》第 01 集（Ani 客户端）</td><td class="n">13 分钟</td><td class="n">6%</td><td>20:02–20:23：剧集列表显示"已完结 全 24 话"</td></tr>
+<tr><td>PixPin 截图/贴图</td><td class="n">1 分钟</td><td class="n">&lt;1%</td><td>20:25–20:36（当日末帧 20:36:01）</td></tr>
+</table>
+<p style="font-size:12px;color:#8b949e">小计：共 5 项，合计约 224 分钟（占当日活跃 62%）；扣除 SpeedBall 离机挂页（80 分钟）后，实际内容消费约 144 分钟。</p>
+
+<h2><span class="n">5</span>明日计划</h2>
+<table>
+<tr><th class="n">序号</th><th>计划</th><th>依据 / 跟进</th></tr>
+<tr><td class="n">1</td><td><b>把 dsh / Cherry Studio / QQ AI Bot 的默认模型切到 V4.1 Flash</b></td><td>【进行中】第 7 项：V4 Pro <b>9/14 12:00 下线</b>，距今不足 24 小时（最高优先级）</td></tr>
+<tr><td class="n">2</td><td>确认 CET-6 报名状态（手机端是否已完成），未完成立即补做</td><td>【问题与阻塞】第 3 条：报名窗口已开第 3 日，本机连续 4 日无报名页</td></tr>
+<tr><td class="n">3</td><td>班级综测收口：催齐缺件 → 复核《附件1》→ 回交</td><td>【进行中】第 1 项 +【问题与阻塞】第 5 条：材料第三日摊在桌面</td></tr>
+<tr><td class="n">4</td><td>MAA/AUTO-MAS 修复落地：按修复说明跑一轮实机验证，并点掉"检测到后端更新"</td><td>【进行中】第 2、3 项；TraeWork 任务计划为"先不升级 Python，直接运行验证"</td></tr>
+<tr><td class="n">5</td><td>MySQL 收尾实操：Powernode 库跑 explain / 前缀索引 / 最左前缀 / order by / 主键优化并留证据，笔记补「回表与覆盖索引」</td><td>【进行中】第 5 项：09-10 通关后连续第 3 日未动手</td></tr>
+<tr><td class="n">6</td><td>JavaSE 编码实操重启：IDEA 配置 Maven 3.8.6 并跑通第一个工程</td><td>【进行中】第 6 项：停滞第 4 日，为月内最大"只学不练"缺口</td></tr>
+<tr><td class="n">7</td><td>观察 M9A v4.8.0 首日跑满情况；确认终末地/方舟挂机队列无失败重试</td><td>【问题与阻塞】第 6 条：17:14 出现"启动游戏/收取荒原"失败重试</td></tr>
+<tr><td class="n">8</td><td>手机端 Obsidian 同步定方案（Git 或坚果云）并落地；顺手回复 BOSS 直聘意向</td><td>【进行中】第 8、9 项（09-07 已备 PAT 材料，搁置第 6 日）</td></tr>
+<tr><td class="n">9</td><td>控制抖音时长（连续三日娱乐占比 ≥60%），把 22:00 前的在线时段留给实操</td><td>本日娱乐 224 分钟占 62%、今日完成中"动手产出 0"；第 2 周七日娱乐合计 22.9h 为工作 12.5h 的 1.8 倍</td></tr>
+<tr><td class="n">10</td><td>周一（09-14）第 3 周开局：新建 <code>2026/09/第3周(09.14-09.20)/周总结.html</code> 骨架，并确认 22:00 前 screenpipe 在线</td><td>本日为第 2 周收官日（7/7 天闭环），本周 22:00 定时链路 4 通过 3 缺跑，崩溃后需人工确认在线</td></tr>
+</table>
+
+<div class="foot">数据来源：screenpipe 屏幕记录（activity-summary 与窗口/OCR 时长归纳，均标注"约/估算"）· 生成于 2026-09-13 22:00 定时执行 · <a href="周总结.html" style="color:#58a6ff">本周总结</a> · <a href="../月度总结.html" style="color:#58a6ff">本月总结</a> · <a href="日报-2026-09-12.html" style="color:#58a6ff">← 前日</a></div>
+
+</div>
+<button class="theme-btn" id="themeBtn" title="切换 浅色/深色（默认跟随系统）">☀️</button>
+<script>
+(function(){
+var tb=document.getElementById('themeBtn');if(!tb)return;
+function syncIcon(){tb.textContent=document.documentElement.dataset.theme==='light'?'🌙':'☀️';}
+syncIcon();
+tb.onclick=function(){
+  var next=document.documentElement.dataset.theme==='light'?'dark':'light';
+  document.documentElement.dataset.theme=next;
+  try{localStorage.setItem('nb-theme',next);}catch(e){}
+  try{sessionStorage.setItem('nb-scroll',window.scrollY);}catch(e){}
+  location.reload();
+};
+try{var y=sessionStorage.getItem('nb-scroll');if(y!==null){window.scrollTo(0,+y);sessionStorage.removeItem('nb-scroll');}}catch(e){}
+})();
+</script></body></html>
