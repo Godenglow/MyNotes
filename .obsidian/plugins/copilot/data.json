@@ -416,7 +416,7 @@
       "providerId": "2ef69090-db99-4ec8-9dd8-16272408d8a4",
       "info": {
         "id": "opus",
-        "displayName": "deepseek-v4-pro",
+        "displayName": "deepseek-v4-flash",
         "description": "Custom Opus model (1M context)"
       },
       "configuredModelId": "67b6603b-abe6-4c41-9598-a82d3b0e9919",
@@ -451,6 +451,16 @@
       },
       "configuredModelId": "0bcc0add-cdf1-4861-bf83-64480d58b0b3",
       "configuredAt": 1788056036148
+    },
+    {
+      "providerId": "2ef69090-db99-4ec8-9dd8-16272408d8a4",
+      "info": {
+        "id": "opus[1m]",
+        "displayName": "Opus (1M context)",
+        "description": "Opus 4.8 with 1M context · Best for everyday, complex tasks"
+      },
+      "configuredModelId": "8e7ba7b2-bd68-4b10-a884-dd0b464ae577",
+      "configuredAt": 1789376113936
     }
   ],
   "backends": {
