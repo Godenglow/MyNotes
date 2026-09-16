@@ -53,8 +53,46 @@ date: 2026-09-16
 > [!warning] 最高频追问：@Transactional 为什么会失效
 > 事务靠 AOP 代理实现；对象内部 `this.method()` 自调用走的是**原始对象**而不是代理 → 通知根本没机会执行。解法：拆到另一个 Bean、注入自身代理（`AopContext.currentProxy()`）、或改用 AspectJ 编译期织入。
 
+## AOP 在 Spring 中的应用场景
+
+| 场景 | 实现要点 |
+| --- | --- |
+| **声明式事务** | `@Transactional`：AOP 在方法前开事务，异常按规则回滚（底层 = 动态代理 + **ThreadLocal 绑定 Connection**，同线程同一事务） |
+| **日志记录** | `@Before` 拿入参、`@AfterReturning` 拿返回值、`@Around` 统计耗时 |
+| **权限校验** | 自定义注解 + 切面，方法执行前校验登录态 / 角色 |
+| **接口限流** | `@Around` + Semaphore / Redis 计数，超限直接拒绝 |
+| **缓存** | `@Cacheable` 本质也是 AOP（CacheInterceptor 先查缓存再执行方法） |
+| **统一异常 / 审计** | `@AfterThrowing` 上报监控、埋点 |
+
+`@Around` 统计耗时的典型写法：
+
+```java
+@Around("@within(org.springframework.stereotype.Service)")
+public Object timing(ProceedingJoinPoint pjp) throws Throwable {
+    long start = System.currentTimeMillis();
+    try {
+        return pjp.proceed();               // 目标方法在这执行
+    } finally {
+        log.info("{} 耗时 {} ms", pjp.getSignature(), System.currentTimeMillis() - start);
+    }
+}
+```
+
+### 五种通知的执行顺序（高频追问）
+
+![[AOP通知执行顺序.svg]]
+
+- 正常返回：`@Around` 前半 → `@Before` → 目标方法 → `@Around` 后半 → `@After` → `@AfterReturning`
+- 抛异常：Around 后半不执行（除非 try 包住 proceed）→ `@AfterThrowing` → `@After`（finally 语义）
+- 跨切面顺序由 `@Order` 决定，**值越小优先级越高**
+
+> [!warning] @Around 的能力与危险
+> 环绕通知能改参数、改返回值、吞异常 —— 最强大也最容易出 bug：在 proceed() 外不 re-throw 异常，事务的回滚判断会失效。
+
+> [!note] 关联
+> 声明式事务 = 动态代理 + ThreadLocal（连接绑定当前线程），与 [[16-ThreadLocal原理与内存泄漏]] 的"线程隔离"思路同源；代理原理与自调用失效见上文。
+> 底层机制回链：[[06-Java反射机制]]（IOC 创建 Bean、JDK 代理转发全是反射家族）、[[05-Java创建对象的方式]]（反射创建不走 new）。
+
 > [!tip] 一句话速记
 > **IOC 反转的是创建权：工厂 + 反射 + 注入；AOP 织入的是横切面：运行时代理 —— JDK 走接口，CGLIB 走继承，Boot 2.x 默认 CGLIB。**
 
-> [!note] 关联
-> [[06-Java反射机制]]：IOC 创建 Bean、JDK 代理转发，底层全是反射家族；[[05-Java创建对象的方式]]：反射创建不走 new（和 clone、反序列化同属"绕过构造器之外"的例外，但反射可以选构造器）。
