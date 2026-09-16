@@ -41,6 +41,5 @@
   <path d="M285 196 L216 196 L216 224" fill="none" stroke="#a32d2d" stroke-width="1.2" marker-end="url(#arrowAdvF)"/>
   <rect x="171" y="226" width="90" height="32" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
   <text x="216" y="242" font-size="11" fill="#791f1f" text-anchor="middle" dominant-baseline="central">@AfterThrowing</text>
-  <path d="M171 242 L150 242 L150 106" fill="none" stroke="#888780" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrowAdvF)"/>
-  <text x="155" y="180" font-size="11" fill="#888780" text-anchor="end">随后 @After（finally 语义）</text>
+  <text x="271" y="246" font-size="11" fill="#888780">随后走 @After（finally 语义）</text>
 </svg>

@@ -53,6 +53,35 @@ date: 2026-09-16
 > [!warning] 最高频追问：@Transactional 为什么会失效
 > 事务靠 AOP 代理实现；对象内部 `this.method()` 自调用走的是**原始对象**而不是代理 → 通知根本没机会执行。解法：拆到另一个 Bean、注入自身代理（`AopContext.currentProxy()`）、或改用 AspectJ 编译期织入。
 
+## 动态代理 vs 静态代理
+
+![[静态代理与动态代理对比.svg]]
+
+| 对比项 | 静态代理 | 动态代理 |
+| --- | --- | --- |
+| 生成时机 | 编译期（手写 / 工具生成） | 运行时（反射 + 字节码生成） |
+| 复用性 | 一个代理类对一个目标，横切逻辑重复写 | 一份 `InvocationHandler` 服务所有目标 |
+| 改动成本 | 接口改动，代理和实现两头改 | 逻辑集中在 handler，改一处生效 |
+
+`invoke()` 转发链（AOP 增强的落点就在这段代码里）：
+
+```java
+UserService proxy = (UserService) Proxy.newProxyInstance(
+    target.getClass().getClassLoader(),
+    new Class[]{UserService.class},
+    (p, method, args) -> {
+        doBefore();                               // 前置增强（如开事务）
+        try {
+            return method.invoke(target, args);   // 反射调真身
+        } finally {
+            doAfter();                            // 后置增强（如提交 / 记日志）
+        }
+    });
+```
+
+> [!note] 纠正原文一处表述
+> "动态代理代理的是一个接口下的多个实现类"不准确 —— 准确说：**同一份代理逻辑（handler）可以在运行时套用到任意接口 / 任意目标类上**。静态代理也可以代理多个实现类（多写几个类），核心区别是**编译期 vs 运行期**、**逻辑写 N 遍 vs 写 1 遍**。
+
 ## AOP 在 Spring 中的应用场景
 
 | 场景 | 实现要点 |

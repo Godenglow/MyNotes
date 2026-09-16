@@ -22,7 +22,7 @@
   <text x="198" y="210" font-size="11" fill="#888780">委托</text>
   <rect x="80" y="220" width="220" height="36" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
   <text x="190" y="238" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">UserServiceImpl（目标对象）</text>
-  <text x="40" y="284" font-size="11" fill="#888780">要求：目标类必须实现接口；调用方拿到的是代理，通知逻辑在 InvocationHandler 里</text>
+  <text x="40" y="284" font-size="11" fill="#888780">要求：目标类必须实现接口</text>
 
   <text x="360" y="70" font-size="12" font-weight="bold" fill="#2c2c2a">② CGLIB —— 基于继承</text>
   <rect x="400" y="84" width="220" height="36" rx="8" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
@@ -36,7 +36,7 @@
   <text x="518" y="210" font-size="11" fill="#888780">super 调用真身</text>
   <rect x="400" y="220" width="220" height="36" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
   <text x="510" y="238" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">字节码库直接生成，无需接口</text>
-  <text x="360" y="284" font-size="11" fill="#888780">限制：final 类 / final 方法 / private 方法无法被代理（继承不了、重写不了）</text>
+  <text x="360" y="284" font-size="11" fill="#888780">限制：final 类 / 方法、private 不可代理</text>
 
   <text x="40" y="316" font-size="12" fill="#2c2c2a">选择规则：传统 Spring 有接口默认 JDK；Spring Boot 2.x 起默认 CGLIB（proxyTargetClass=true）</text>
   <text x="40" y="338" font-size="12" fill="#791f1f">经典坑：对象内部 this.method() 自调用不走代理 → @Transactional 静默失效</text>
