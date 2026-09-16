@@ -2,15 +2,14 @@
   "tabManagerState": {
     "openTabs": [
       {
-        "tabId": "tab-1788050533784-pjl73mq",
-        "conversationId": "conv-1788191833177-urreqg1s2"
+        "tabId": "tab-1789466946242-w5kzrl5",
+        "conversationId": "conv-1789525318747-0nkjp4x8l"
       },
       {
-        "draftModel": "sonnet[1m]",
-        "tabId": "tab-1788412008904-moq3yn4",
-        "conversationId": null
+        "tabId": "tab-1789530219327-kimf15c",
+        "conversationId": "conv-1789530252789-vorabdo9h"
       }
     ],
-    "activeTabId": "tab-1788050533784-pjl73mq"
+    "activeTabId": "tab-1789530219327-kimf15c"
   }
 }

@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="418" viewBox="0 0 680 418" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>JUC 工具箱全景：线程池、并发集合、同步工具、原子类</title>
+  <rect width="680" height="418" fill="#ffffff"/>
+  <style>.mono{font-family:Consolas,'Courier New',monospace}</style>
+
+  <text x="40" y="52" font-size="14" font-weight="bold" fill="#2c2c2a">java.util.concurrent（JUC）：四大类常用工具</text>
+
+  <rect x="40" y="70" width="290" height="156" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="56" y="96" font-size="14" font-weight="bold" fill="#2c2c2a">① 线程池</text>
+  <text class="mono" x="56" y="128" font-size="12" fill="#185fa5">ThreadPoolExecutor</text>
+  <text x="196" y="128" font-size="12" fill="#5f5e5a">线程池本体，手动配参</text>
+  <text class="mono" x="56" y="160" font-size="12" fill="#185fa5">Executors</text>
+  <text x="132" y="160" font-size="12" fill="#5f5e5a">工厂类，快捷创建各种池</text>
+
+  <rect x="350" y="70" width="290" height="156" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="366" y="96" font-size="14" font-weight="bold" fill="#2c2c2a">② 并发集合</text>
+  <text class="mono" x="366" y="128" font-size="12" fill="#185fa5">ConcurrentHashMap</text>
+  <text x="496" y="128" font-size="12" fill="#5f5e5a">线程安全版 HashMap</text>
+  <text class="mono" x="366" y="160" font-size="12" fill="#185fa5">CopyOnWriteArrayList</text>
+  <text x="518" y="160" font-size="12" fill="#5f5e5a">写时复制的 List</text>
+
+  <rect x="40" y="242" width="290" height="156" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="56" y="268" font-size="14" font-weight="bold" fill="#2c2c2a">③ 同步工具</text>
+  <text class="mono" x="56" y="300" font-size="12" fill="#185fa5">CountDownLatch</text>
+  <text x="166" y="300" font-size="12" fill="#5f5e5a">倒计时，等 N 件事完成</text>
+  <text class="mono" x="56" y="332" font-size="12" fill="#185fa5">CyclicBarrier</text>
+  <text x="160" y="332" font-size="12" fill="#5f5e5a">屏障，互相等，可复用</text>
+  <text class="mono" x="56" y="364" font-size="12" fill="#185fa5">Semaphore</text>
+  <text x="130" y="364" font-size="12" fill="#5f5e5a">信号量，限流闸门</text>
+
+  <rect x="350" y="242" width="290" height="156" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="366" y="268" font-size="14" font-weight="bold" fill="#2c2c2a">④ 原子类（CAS）</text>
+  <text class="mono" x="366" y="300" font-size="12" fill="#185fa5">AtomicInteger</text>
+  <text x="470" y="300" font-size="12" fill="#5f5e5a">CAS 无锁计数</text>
+  <text class="mono" x="366" y="332" font-size="12" fill="#185fa5">AtomicReference</text>
+  <text x="484" y="332" font-size="12" fill="#5f5e5a">CAS 更新引用</text>
+  <text class="mono" x="366" y="364" font-size="12" fill="#185fa5">LongAdder</text>
+  <text x="440" y="364" font-size="12" fill="#5f5e5a">高并发计数更快</text>
+</svg>

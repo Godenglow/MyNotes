@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="560" viewBox="0 0 820 560" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <marker id="arrow2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#666666"/>
+    </marker>
+  </defs>
+  <rect width="820" height="560" fill="#ffffff"/>
+
+  <!-- 连线：中心 -> 各方式 -->
+  <line x1="330" y1="245" x2="215" y2="125" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="490" y1="245" x2="600" y2="125" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="540" y1="290" x2="620" y2="290" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="480" y1="335" x2="600" y2="440" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow2)"/>
+  <line x1="340" y1="335" x2="220" y2="440" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow2)"/>
+
+  <!-- 中心节点 -->
+  <rect x="300" y="245" width="220" height="70" rx="10" fill="#eef3fb" stroke="#2c5aa0" stroke-width="2"/>
+  <text x="410" y="275" font-size="17" font-weight="bold" text-anchor="middle" fill="#2c5aa0">Java 创建对象</text>
+  <text x="410" y="299" font-size="17" font-weight="bold" text-anchor="middle" fill="#2c5aa0">的五种方式</text>
+
+  <!-- 1. new -->
+  <rect x="50" y="60" width="240" height="66" rx="8" fill="#ffffff" stroke="#1a7f37" stroke-width="1.8"/>
+  <text x="70" y="88" font-size="15" font-weight="bold" fill="#333333">1. new 关键字</text>
+  <text x="70" y="111" font-size="13" fill="#555555">最常用，编译期确定类</text>
+  <text x="70" y="146" font-size="13" font-weight="bold" fill="#1a7f37">√ 调用构造器</text>
+
+  <!-- 2. 反射 -->
+  <rect x="530" y="60" width="240" height="66" rx="8" fill="#ffffff" stroke="#1a7f37" stroke-width="1.8"/>
+  <text x="550" y="88" font-size="15" font-weight="bold" fill="#333333">2. 反射 newInstance()</text>
+  <text x="550" y="111" font-size="13" fill="#555555">运行时动态创建，Spring IOC</text>
+  <text x="550" y="146" font-size="13" font-weight="bold" fill="#1a7f37">√ 调用构造器</text>
+
+  <!-- 3. clone -->
+  <rect x="620" y="257" width="185" height="66" rx="8" fill="#ffffff" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="640" y="285" font-size="15" font-weight="bold" fill="#333333">3. clone()</text>
+  <text x="640" y="308" font-size="13" fill="#555555">基于现有对象复制</text>
+  <text x="640" y="343" font-size="13" font-weight="bold" fill="#c0392b">× 不调用构造器</text>
+
+  <!-- 4. 反序列化 -->
+  <rect x="530" y="440" width="240" height="66" rx="8" fill="#ffffff" stroke="#c0392b" stroke-width="1.8"/>
+  <text x="550" y="468" font-size="15" font-weight="bold" fill="#333333">4. 反序列化</text>
+  <text x="550" y="491" font-size="13" fill="#555555">从字节流重建对象，需 Serializable</text>
+  <text x="550" y="526" font-size="13" font-weight="bold" fill="#c0392b">× 不调用构造器</text>
+
+  <!-- 5. 工厂模式 -->
+  <rect x="50" y="440" width="240" height="66" rx="8" fill="#ffffff" stroke="#1a7f37" stroke-width="1.8"/>
+  <text x="70" y="468" font-size="15" font-weight="bold" fill="#333333">5. 工厂模式</text>
+  <text x="70" y="491" font-size="13" fill="#555555">静态工厂方法，私有构造器</text>
+  <text x="70" y="526" font-size="13" font-weight="bold" fill="#1a7f37">√ 调用构造器（藏在方法里）</text>
+
+  <!-- 图例 -->
+  <text x="410" y="40" font-size="14" text-anchor="middle" fill="#333333">面试关键：哪些方式会调用构造器</text>
+</svg>

@@ -13,3 +13,11 @@ Thumbs.db
 
 # Claude 会话记录(隐私)
 .claudian/
+
+# PDF / 电子书（大文件，不同步）
+*.pdf
+*.epub
+面试/小林coding图解网站合集PDF/
+
+# Python 缓存
+__pycache__/

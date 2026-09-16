@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="560" viewBox="0 0 880 560" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <marker id="mq-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c5aa0"/>
+    </marker>
+  </defs>
+  <rect width="880" height="560" fill="#ffffff"/>
+
+  <text x="30" y="30" font-size="16" font-weight="bold" fill="#333333">RabbitMQ 消息可靠性：三个环节各自会怎么丢、怎么防</text>
+
+  <!-- 生产端 -->
+  <rect x="30" y="70" width="250" height="290" rx="8" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <text x="50" y="100" font-size="14" font-weight="bold" fill="#333333">① 生产者</text>
+  <text x="50" y="130" font-size="12" fill="#c0392b">可能丢消息的点：</text>
+  <text x="50" y="154" font-size="12" fill="#555555">· 发送失败（网络抖动）</text>
+  <text x="50" y="178" font-size="12" fill="#555555">· 路由失败被静默丢弃</text>
+  <text x="50" y="208" font-size="12" fill="#1e7a3c">对策：</text>
+  <text x="50" y="232" font-size="12" fill="#555555">· publisher confirm</text>
+  <text x="50" y="256" font-size="12" fill="#555555">· return 回调 + mandatory</text>
+  <text x="50" y="280" font-size="12" fill="#555555">· 本地消息表 / 定时重投</text>
+  <text x="50" y="304" font-size="12" fill="#555555">· 事务模式性能差，一般不用</text>
+  <text x="50" y="334" font-size="12" fill="#888888">关键：消息「真的落到 Broker」才知道</text>
+
+  <line x1="280" y1="215" x2="312" y2="215" stroke="#2c5aa0" stroke-width="2" marker-end="url(#mq-a)"/>
+  <text x="296" y="242" font-size="11" text-anchor="middle" fill="#888888">消息</text>
+
+  <!-- Broker -->
+  <rect x="315" y="70" width="250" height="290" rx="8" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <text x="335" y="100" font-size="14" font-weight="bold" fill="#333333">② Broker</text>
+  <text x="335" y="130" font-size="12" fill="#c0392b">可能丢消息的点：</text>
+  <text x="335" y="154" font-size="12" fill="#555555">· 只在内存未刷盘就宕机</text>
+  <text x="335" y="178" font-size="12" fill="#555555">· 集群节点故障丢数据</text>
+  <text x="335" y="208" font-size="12" fill="#1e7a3c">对策：</text>
+  <text x="335" y="232" font-size="12" fill="#555555">· 队列 durable 持久化</text>
+  <text x="335" y="256" font-size="12" fill="#555555">· 消息 delivery_mode=2</text>
+  <text x="335" y="280" font-size="12" fill="#555555">· 镜像队列 / Quorum 队列</text>
+  <text x="335" y="304" font-size="12" fill="#555555">· 关键消息别用非持久化队列</text>
+  <text x="335" y="334" font-size="12" fill="#888888">关键：durable 是队列，persistent 是消息</text>
+
+  <line x1="565" y1="215" x2="597" y2="215" stroke="#2c5aa0" stroke-width="2" marker-end="url(#mq-a)"/>
+  <text x="581" y="242" font-size="11" text-anchor="middle" fill="#888888">投递</text>
+
+  <!-- 消费端 -->
+  <rect x="600" y="70" width="250" height="290" rx="8" fill="none" stroke="#333333" stroke-width="1.5"/>
+  <text x="620" y="100" font-size="14" font-weight="bold" fill="#333333">③ 消费者</text>
+  <text x="620" y="130" font-size="12" fill="#c0392b">可能丢 / 重复的点：</text>
+  <text x="620" y="154" font-size="12" fill="#555555">· 自动 ack：没处理完就确认</text>
+  <text x="620" y="178" font-size="12" fill="#555555">· 无限重投（毒消息打转）</text>
+  <text x="620" y="202" font-size="12" fill="#555555">· ack 丢失 → 消息重复投递</text>
+  <text x="620" y="232" font-size="12" fill="#1e7a3c">对策：</text>
+  <text x="620" y="256" font-size="12" fill="#555555">· 手动 ack，成功才确认</text>
+  <text x="620" y="280" font-size="12" fill="#555555">· 重试上限 + 退避间隔</text>
+  <text x="620" y="304" font-size="12" fill="#555555">· 死信队列兜住失败消息</text>
+  <text x="620" y="328" font-size="12" fill="#555555">· 消费端幂等（业务唯一键）</text>
+
+  <rect x="30" y="390" width="820" height="80" rx="8" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <text x="50" y="416" font-size="13" font-weight="bold" fill="#333333">三端都配齐了，也只保证「不丢」，并不保证「不重复」</text>
+  <text x="50" y="442" font-size="12" fill="#555555">RabbitMQ 默认是 at-least-once：ack 丢失、消费超时、重试都会让同一条消息再来一次</text>
+  <text x="50" y="464" font-size="12" fill="#555555">幂等键优先用业务唯一键（如 user_id + goods_id），它比消息 ID 更能挡住「用户自己重复发起」</text>
+
+  <rect x="30" y="485" width="820" height="38" rx="6" fill="#fff8e6" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="440" y="510" font-size="13" text-anchor="middle" fill="#c0392b">加分点：主动说清「不丢」与「不重复」是两件独立的事，幂等必须做在消费端，不能指望 MQ 保证</text>
+</svg>

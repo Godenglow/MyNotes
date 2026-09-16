@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="880" height="620" viewBox="0 0 880 620" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <defs>
+    <marker id="mv-a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2c5aa0"/>
+    </marker>
+  </defs>
+  <rect width="880" height="620" fill="#ffffff"/>
+
+  <text x="30" y="30" font-size="16" font-weight="bold" fill="#333333">MVCC：undo log 版本链 + ReadView 可见性判断</text>
+
+  <text x="30" y="62" font-size="13" fill="#333333">① 同一行的历史版本被隐藏字段 roll_pointer 串成链表（版本链，最新的在行里）</text>
+
+  <rect x="40" y="80" width="230" height="70" rx="8" fill="#eef3fb" stroke="#2c5aa0" stroke-width="1.5"/>
+  <text x="155" y="106" font-size="13" text-anchor="middle" fill="#333333">当前记录（最新版本）</text>
+  <text x="155" y="130" font-size="12" text-anchor="middle" fill="#555555">trx_id=100　name=张三</text>
+
+  <line x1="270" y1="115" x2="316" y2="115" stroke="#2c5aa0" stroke-width="2" marker-end="url(#mv-a)"/>
+  <text x="293" y="141" font-size="12" text-anchor="middle" fill="#888888">回溯</text>
+
+  <rect x="320" y="80" width="230" height="70" rx="8" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+  <text x="435" y="106" font-size="13" text-anchor="middle" fill="#333333">undo 中的旧版本</text>
+  <text x="435" y="130" font-size="12" text-anchor="middle" fill="#555555">trx_id=80　name=李四</text>
+
+  <line x1="550" y1="115" x2="596" y2="115" stroke="#2c5aa0" stroke-width="2" marker-end="url(#mv-a)"/>
+  <text x="573" y="141" font-size="12" text-anchor="middle" fill="#888888">回溯</text>
+
+  <rect x="600" y="80" width="230" height="70" rx="8" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+  <text x="715" y="106" font-size="13" text-anchor="middle" fill="#333333">更早的旧版本</text>
+  <text x="715" y="130" font-size="12" text-anchor="middle" fill="#555555">trx_id=50　name=王五</text>
+
+  <text x="30" y="182" font-size="13" fill="#333333">② 快照读时生成 ReadView，记录「此刻还有哪些事务没提交」</text>
+
+  <rect x="40" y="196" width="800" height="80" rx="8" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <text x="60" y="224" font-size="12" fill="#555555">m_ids ＝ [80, 100]　—— 生成 ReadView 时所有「已启动但还没提交」的事务 ID（活跃事务列表）</text>
+  <text x="60" y="250" font-size="12" fill="#555555">min_trx_id ＝ 80　　max_trx_id ＝ 101　　creator_trx_id ＝ 90（当前事务自己的 ID）</text>
+
+  <text x="30" y="306" font-size="13" fill="#333333">③ 沿版本链从最新版本往回找，用四条规则判断「这个版本对我可见吗」</text>
+
+  <rect x="30" y="320" width="190" height="105" rx="8" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+  <text x="125" y="350" font-size="12" text-anchor="middle" fill="#333333">trx_id == creator_trx_id</text>
+  <text x="125" y="374" font-size="12" text-anchor="middle" fill="#555555">自己事务改的</text>
+  <text x="125" y="400" font-size="12" text-anchor="middle" fill="#1e7a3c">→ 可见</text>
+
+  <rect x="240" y="320" width="190" height="105" rx="8" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+  <text x="335" y="350" font-size="12" text-anchor="middle" fill="#333333">trx_id &lt; min_trx_id</text>
+  <text x="335" y="374" font-size="12" text-anchor="middle" fill="#555555">快照前就已提交</text>
+  <text x="335" y="400" font-size="12" text-anchor="middle" fill="#1e7a3c">→ 可见</text>
+
+  <rect x="450" y="320" width="190" height="105" rx="8" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+  <text x="545" y="350" font-size="12" text-anchor="middle" fill="#333333">trx_id ≥ max_trx_id</text>
+  <text x="545" y="374" font-size="12" text-anchor="middle" fill="#555555">快照之后才开启的事务</text>
+  <text x="545" y="400" font-size="12" text-anchor="middle" fill="#c0392b">→ 不可见</text>
+
+  <rect x="660" y="320" width="190" height="105" rx="8" fill="#ffffff" stroke="#333333" stroke-width="1.2"/>
+  <text x="755" y="350" font-size="12" text-anchor="middle" fill="#333333">trx_id 在 m_ids 中</text>
+  <text x="755" y="374" font-size="12" text-anchor="middle" fill="#555555">快照时还没提交</text>
+  <text x="755" y="400" font-size="12" text-anchor="middle" fill="#c0392b">→ 不可见</text>
+
+  <rect x="40" y="450" width="800" height="112" rx="8" fill="none" stroke="#333333" stroke-width="1.2"/>
+  <text x="60" y="474" font-size="13" font-weight="bold" fill="#333333">RR 与 RC 的唯一区别就在 ReadView 的生成时机</text>
+  <text x="60" y="498" font-size="12" fill="#555555">RR（默认）：只在第一次快照读时生成一次，整个事务内复用 → 同一事务里反复读，结果不变</text>
+  <text x="60" y="521" font-size="12" fill="#555555">RC：每次快照读都重新生成 → 能读到别的事务刚刚提交的新数据</text>
+  <text x="60" y="544" font-size="12" fill="#555555">当前读（UPDATE / DELETE / SELECT ... FOR UPDATE）不走 MVCC，直接读最新版本并加锁</text>
+
+  <rect x="40" y="574" width="800" height="38" rx="6" fill="#fff8e6" stroke="#c0392b" stroke-width="1.2"/>
+  <text x="440" y="599" font-size="13" text-anchor="middle" fill="#c0392b">MVCC 只解决「快照读」；RR 下当前读仍可能看到新插入的行，那由 next-key lock（间隙锁）负责</text>
+</svg>

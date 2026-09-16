@@ -1,5 +1,8 @@
 {
   "theme": "system",
   "cssTheme": "",
-  "accentColor": ""
+  "accentColor": "",
+  "enabledCssSnippets": [
+    "claudian-chat-history-dropdown"
+  ]
 }

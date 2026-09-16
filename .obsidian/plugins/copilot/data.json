@@ -317,7 +317,7 @@
   "defaultConversationNoteName": "{$topic}@{$date}_{$time}",
   "inlineEditCommands": [],
   "projectList": [],
-  "lastDismissedVersion": "4.0.6",
+  "lastDismissedVersion": "4.0.8",
   "passMarkdownImages": true,
   "enableAutonomousAgent": true,
   "enableCustomPromptTemplating": true,
@@ -371,7 +371,7 @@
           "baseModelId": "fable",
           "effort": "high"
         },
-        "defaultMode": "plan"
+        "defaultMode": "default"
       }
     },
     "debugFullFrames": true,
@@ -451,16 +451,6 @@
       },
       "configuredModelId": "0bcc0add-cdf1-4861-bf83-64480d58b0b3",
       "configuredAt": 1788056036148
-    },
-    {
-      "providerId": "2ef69090-db99-4ec8-9dd8-16272408d8a4",
-      "info": {
-        "id": "opus[1m]",
-        "displayName": "Opus (1M context)",
-        "description": "Opus 4.8 with 1M context · Best for everyday, complex tasks"
-      },
-      "configuredModelId": "8e7ba7b2-bd68-4b10-a884-dd0b464ae577",
-      "configuredAt": 1789376113936
     }
   ],
   "backends": {

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="414" viewBox="0 0 680 414" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>ThreadLocal 内存结构：Thread 持有 ThreadLocalMap，Entry 的 key 是弱引用</title>
+  <rect width="680" height="414" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowTlF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="arrowTlFR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#a32d2d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <style>.mono{font-family:Consolas,'Courier New',monospace}</style>
+
+  <text x="40" y="52" font-size="14" font-weight="bold" fill="#2c2c2a">ThreadLocal 内存结构（key 弱引用是题眼）</text>
+
+  <rect x="40" y="70" width="300" height="280" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="56" y="94" font-size="12" font-weight="bold" fill="#2c2c2a">Thread 对象</text>
+  <text class="mono" x="56" y="120" font-size="11" fill="#888780">成员变量 threadLocals</text>
+  <rect x="60" y="136" width="260" height="196" rx="8" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <text x="76" y="158" font-size="12" font-weight="bold" fill="#2c2c2a">ThreadLocalMap（定制哈希表）</text>
+
+  <rect x="76" y="170" width="228" height="52" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <rect x="84" y="178" width="88" height="36" rx="4" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text x="128" y="196" font-size="11" fill="#444441" text-anchor="middle" dominant-baseline="central">key</text>
+  <rect x="180" y="178" width="116" height="36" rx="4" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text class="mono" x="238" y="196" font-size="11" fill="#444441" text-anchor="middle" dominant-baseline="central">value1</text>
+
+  <rect x="76" y="234" width="228" height="52" rx="6" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <rect x="84" y="242" width="88" height="36" rx="4" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <text x="128" y="260" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">key = null</text>
+  <rect x="180" y="242" width="116" height="36" rx="4" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text class="mono" x="238" y="260" font-size="11" fill="#791f1f" text-anchor="middle" dominant-baseline="central">value2</text>
+
+  <text x="76" y="316" font-size="11" fill="#888780">冲突解决：开放地址法（线性探测），不是链表</text>
+
+  <rect x="470" y="110" width="140" height="48" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="540" y="134" font-size="12" font-weight="bold" fill="#0c447c" text-anchor="middle" dominant-baseline="central">ThreadLocal 对象</text>
+  <rect x="470" y="190" width="140" height="48" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="540" y="214" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">value1 对象</text>
+  <rect x="470" y="280" width="140" height="48" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="540" y="304" font-size="12" font-weight="bold" fill="#791f1f" text-anchor="middle" dominant-baseline="central">value2 对象</text>
+  <text x="540" y="344" font-size="11" fill="#a32d2d" text-anchor="middle">key 没了，value 仍被强引用</text>
+
+  <path d="M172 196 L466 134" fill="none" stroke="#888780" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrowTlF)"/>
+  <text x="300" y="152" font-size="11" fill="#888780" text-anchor="middle">弱引用</text>
+  <path d="M296 196 L466 214" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowTlF)"/>
+  <text x="380" y="198" font-size="11" fill="#888780">强引用</text>
+  <path d="M296 260 L466 304" fill="none" stroke="#a32d2d" stroke-width="1.2" marker-end="url(#arrowTlFR)"/>
+  <text x="380" y="290" font-size="11" fill="#888780">强引用</text>
+
+  <text x="40" y="372" font-size="12" fill="#888780">value 的引用链：Thread → ThreadLocalMap → Entry → value；线程池里线程不死，value 就一直回收不掉</text>
+  <text x="40" y="394" font-size="12" fill="#888780">框架会顺手清理 key=null 的过期 Entry（探测式清理），但正解是 finally 里 remove()</text>
+</svg>
