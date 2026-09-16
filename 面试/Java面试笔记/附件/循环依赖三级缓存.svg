@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="354" viewBox="0 0 680 354" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>循环依赖三种情况与 Spring 三级缓存结构</title>
+  <rect width="680" height="354" fill="#ffffff"/>
+  <style>.mono{font-family:Consolas,'Courier New',monospace}</style>
+
+  <text x="40" y="44" font-size="14" font-weight="bold" fill="#2c2c2a">循环依赖：三种情况，只有一种被 Spring 解决</text>
+
+  <rect x="40" y="64" width="200" height="76" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="52" y="84" font-size="12" font-weight="bold" fill="#791f1f">① 构造器注入 ✗</text>
+  <text x="52" y="102" font-size="11" fill="#888780">实例化前就要拿到依赖</text>
+  <text x="52" y="118" font-size="11" fill="#888780">对象未出生，无引用可暴露</text>
+  <rect x="250" y="64" width="200" height="76" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="262" y="84" font-size="12" font-weight="bold" fill="#791f1f">② 原型 + Setter ✗</text>
+  <text x="262" y="102" font-size="11" fill="#888780">每次 getBean 都新建实例</text>
+  <text x="262" y="118" font-size="11" fill="#888780">缓存只对单例生效</text>
+  <rect x="460" y="64" width="200" height="76" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="472" y="84" font-size="12" font-weight="bold" fill="#0c447c">③ 单例 + Setter/字段 ✓</text>
+  <text x="472" y="102" font-size="11" fill="#888780">实例化后、填充前</text>
+  <text x="472" y="118" font-size="11" fill="#888780">引用已存在，可提前暴露</text>
+
+  <text x="40" y="176" font-size="12" font-weight="bold" fill="#2c2c2a">三级缓存（DefaultSingletonBeanRegistry 里的三个 Map）</text>
+
+  <rect x="40" y="192" width="600" height="36" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text class="mono" x="56" y="210" font-size="11" fill="#0c447c" dominant-baseline="central">singletonObjects</text>
+  <text x="240" y="210" font-size="11" fill="#444441" dominant-baseline="central">一级 · 成品：初始化与代理全完成，getBean 返回它</text>
+
+  <rect x="40" y="236" width="600" height="36" rx="8" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.5"/>
+  <text class="mono" x="56" y="254" font-size="11" fill="#085041" dominant-baseline="central">earlySingletonObjects</text>
+  <text x="240" y="254" font-size="11" fill="#444441" dominant-baseline="central">二级 · 早期引用（原始或提前代理），防重复创建</text>
+
+  <rect x="40" y="280" width="600" height="36" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text class="mono" x="56" y="298" font-size="11" fill="#444441" dominant-baseline="central">singletonFactories</text>
+  <text x="240" y="298" font-size="11" fill="#444441" dominant-baseline="central">三级 · 工厂：发生循环依赖才调用，延迟决定提前代理</text>
+
+  <text x="40" y="338" font-size="11" fill="#888780">层级记忆：三级能造 → 二级造出来暂存 → 一级交付成品</text>
+</svg>
