@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="388" viewBox="0 0 680 388" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>CMS 四阶段与 G1 分 Region 对比</title>
+  <rect width="680" height="388" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowCgF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <style>.mono{font-family:Consolas,'Courier New',monospace}</style>
+
+  <text x="40" y="44" font-size="14" font-weight="bold" fill="#2c2c2a">CMS 四阶段 vs G1 分 Region</text>
+  <text x="40" y="66" font-size="12" font-weight="bold" fill="#2c2c2a">CMS 四阶段（红条 = STW 全局停顿）</text>
+  <rect x="40" y="72" width="132" height="8" fill="#f09595"/>
+  <rect x="336" y="72" width="132" height="8" fill="#f09595"/>
+
+  <rect x="40" y="84" width="132" height="50" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="106" y="106" font-size="12" font-weight="bold" fill="#791f1f" text-anchor="middle" dominant-baseline="central">初始标记</text>
+  <text x="106" y="124" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">只标 Roots 直达</text>
+  <rect x="188" y="84" width="132" height="50" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="254" y="106" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">并发标记</text>
+  <text x="254" y="124" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">与用户线程并发</text>
+  <rect x="336" y="84" width="132" height="50" rx="8" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="402" y="106" font-size="12" font-weight="bold" fill="#791f1f" text-anchor="middle" dominant-baseline="central">重新标记</text>
+  <text x="402" y="124" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">修正并发期变动</text>
+  <rect x="484" y="84" width="132" height="50" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="550" y="106" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">并发清除</text>
+  <text x="550" y="124" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">并发清 → 浮动垃圾</text>
+  <path d="M174 109 L186 109" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowCgF)"/>
+  <path d="M322 109 L334 109" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowCgF)"/>
+  <path d="M470 109 L482 109" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowCgF)"/>
+
+  <text x="40" y="160" font-size="12" fill="#888780">并发清除期间用户线程仍在运行 → 新产生的垃圾只能下次回收（浮动垃圾），CMS 必须预留空间</text>
+  <text x="40" y="180" font-size="12" fill="#888780">预留不足 → Concurrent Mode Failure → 退化 Serial Old 单线程整堆回收（最惨情况）</text>
+
+  <text x="40" y="212" font-size="12" font-weight="bold" fill="#2c2c2a">G1：堆切成约 2048 个等大 Region，按停顿目标优先收垃圾最多的区域</text>
+
+  <rect x="40" y="228" width="46" height="34" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="63" y="245" font-size="11" fill="#0c447c" text-anchor="middle" dominant-baseline="central">E</text>
+  <rect x="86" y="228" width="46" height="34" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="109" y="245" font-size="11" fill="#0c447c" text-anchor="middle" dominant-baseline="central">E</text>
+  <rect x="132" y="228" width="46" height="34" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="155" y="245" font-size="11" fill="#0c447c" text-anchor="middle" dominant-baseline="central">E</text>
+  <rect x="178" y="228" width="46" height="34" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
+  <text x="201" y="245" font-size="11" fill="#633806" text-anchor="middle" dominant-baseline="central">O</text>
+  <rect x="224" y="228" width="46" height="34" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="247" y="245" font-size="11" fill="#791f1f" text-anchor="middle" dominant-baseline="central">H</text>
+  <rect x="270" y="228" width="46" height="34" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
+  <text x="293" y="245" font-size="11" fill="#633806" text-anchor="middle" dominant-baseline="central">O</text>
+  <rect x="316" y="228" width="46" height="34" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <rect x="362" y="228" width="46" height="34" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <rect x="40" y="262" width="46" height="34" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
+  <text x="63" y="279" font-size="11" fill="#633806" text-anchor="middle" dominant-baseline="central">O</text>
+  <rect x="86" y="262" width="46" height="34" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="109" y="279" font-size="11" fill="#0c447c" text-anchor="middle" dominant-baseline="central">E</text>
+  <rect x="132" y="262" width="46" height="34" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
+  <text x="155" y="279" font-size="11" fill="#633806" text-anchor="middle" dominant-baseline="central">O</text>
+  <rect x="178" y="262" width="46" height="34" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
+  <text x="201" y="279" font-size="11" fill="#633806" text-anchor="middle" dominant-baseline="central">O</text>
+  <rect x="224" y="262" width="46" height="34" fill="#fcebeb" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="247" y="279" font-size="11" fill="#791f1f" text-anchor="middle" dominant-baseline="central">H</text>
+  <rect x="270" y="262" width="46" height="34" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <rect x="316" y="262" width="46" height="34" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="339" y="279" font-size="11" fill="#0c447c" text-anchor="middle" dominant-baseline="central">E</text>
+  <rect x="362" y="262" width="46" height="34" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+
+  <text x="424" y="244" font-size="11" fill="#888780">E/O/H：Eden / Old / 大对象</text>
+  <text x="424" y="264" font-size="11" fill="#888780">收垃圾最多的优先 → 得名</text>
+  <text x="424" y="284" font-size="11" fill="#888780">Region 间复制 → 无碎片</text>
+  <text class="mono" x="424" y="304" font-size="11" fill="#888780">MaxGCPauseMillis=200</text>
+  <text x="424" y="324" font-size="11" fill="#888780">预留不足 → Full GC（JDK10+ 并行）</text>
+
+  <text x="40" y="324" font-size="12" fill="#888780">纠错：G1 也有浮动垃圾（并发标记期间产生），只是筛选回收是 STW 并行复制、无 CMS 的并发碎片问题</text>
+  <text x="40" y="346" font-size="12" fill="#888780">纠错：G1 的 Region 间是复制算法（Evacuation），说「标记-整理」是常见简化说法</text>
+  <text x="40" y="368" font-size="12" fill="#888780">版本：CMS JDK 9 弃用、JDK 14 移除；G1 JDK 9 起默认；更大堆更低延迟 → ZGC</text>
+</svg>
