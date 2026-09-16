@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="566" viewBox="0 0 680 566" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>三大垃圾回收算法逐步图解：标记清除、标记复制、标记整理</title>
+  <rect width="680" height="566" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowAlgoF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="40" font-size="14" font-weight="bold" fill="#2c2c2a">三大回收算法逐步图解</text>
+  <rect x="40" y="56" width="14" height="14" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text x="60" y="68" font-size="11" fill="#5f5e5a">未使用</text>
+  <rect x="140" y="56" width="14" height="14" fill="#f09595" stroke="#a32d2d" stroke-width="0.5"/>
+  <text x="160" y="68" font-size="11" fill="#5f5e5a">标记的存活对象</text>
+  <rect x="280" y="56" width="14" height="14" fill="#85b7eb" stroke="#378add" stroke-width="0.5"/>
+  <text x="300" y="68" font-size="11" fill="#5f5e5a">没有被标记的对象</text>
+
+  <text x="40" y="108" font-size="13" font-weight="bold" fill="#2c2c2a">① 标记-清除：标记存活 → 直接清除垃圾</text>
+  <rect x="40" y="124" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M56 124v64M72 124v64M88 124v64M40 140h64M40 156h64M40 172h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M40 124h14v14h-14zM56 124h14v14h-14zM72 124h14v14h-14zM88 124h14v14h-14zM56 140h14v14h-14zM88 140h14v14h-14zM40 156h14v14h-14zM72 156h14v14h-14zM88 156h14v14h-14zM56 172h14v14h-14zM72 172h14v14h-14zM88 172h14v14h-14z" fill="#85b7eb"/>
+  <rect x="150" y="124" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M166 124v64M182 124v64M198 124v64M150 140h64M150 156h64M150 172h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M150 124h14v14h-14zM182 124h14v14h-14zM166 140h14v14h-14zM150 156h14v14h-14zM198 156h14v14h-14zM182 172h14v14h-14z" fill="#f09595"/>
+  <path d="M166 124h14v14h-14zM198 124h14v14h-14zM198 140h14v14h-14zM182 156h14v14h-14zM166 172h14v14h-14zM198 172h14v14h-14z" fill="#85b7eb"/>
+  <rect x="260" y="124" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M276 124v64M292 124v64M308 124v64M260 140h64M260 156h64M260 172h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M260 124h14v14h-14zM292 124h14v14h-14zM276 140h14v14h-14zM260 156h14v14h-14zM308 156h14v14h-14zM292 172h14v14h-14z" fill="#f09595"/>
+  <path d="M106 156 L144 156" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAlgoF)"/>
+  <path d="M216 156 L254 156" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAlgoF)"/>
+  <text x="71" y="202" font-size="11" fill="#888780" text-anchor="middle">回收前</text>
+  <text x="181" y="202" font-size="11" fill="#888780" text-anchor="middle">标记后</text>
+  <text x="291" y="202" font-size="11" fill="#888780" text-anchor="middle">清除后</text>
+  <text x="40" y="224" font-size="11" fill="#888780">清除后存活对象原地不动，空隙不连续 = 内存碎片；大对象放不下 → 提前触发回收</text>
+
+  <text x="40" y="254" font-size="13" font-weight="bold" fill="#2c2c2a">② 标记-复制：A 区存活对象整体搬到空白的 B 区，然后 A 区整段清空</text>
+  <rect x="40" y="270" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M56 270v64M72 270v64M88 270v64M40 286h64M40 302h64M40 318h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M40 270h14v14h-14zM56 270h14v14h-14zM72 270h14v14h-14zM88 270h14v14h-14zM56 286h14v14h-14zM88 286h14v14h-14zM40 302h14v14h-14zM72 302h14v14h-14zM88 302h14v14h-14zM56 318h14v14h-14zM72 318h14v14h-14zM88 318h14v14h-14z" fill="#85b7eb"/>
+  <rect x="110" y="270" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M126 270v64M142 270v64M158 270v64M110 286h64M110 302h64M110 318h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <rect x="200" y="270" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M216 270v64M232 270v64M248 270v64M200 286h64M200 302h64M200 318h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M200 270h14v14h-14zM232 270h14v14h-14zM216 286h14v14h-14zM200 302h14v14h-14zM248 302h14v14h-14zM232 318h14v14h-14z" fill="#f09595"/>
+  <path d="M216 270h14v14h-14zM248 270h14v14h-14zM248 286h14v14h-14zM232 302h14v14h-14zM216 318h14v14h-14zM248 318h14v14h-14z" fill="#85b7eb"/>
+  <rect x="270" y="270" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M286 270v64M302 270v64M318 270v64M270 286h64M270 302h64M270 318h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <rect x="360" y="270" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M376 270v64M392 270v64M408 270v64M360 286h64M360 302h64M360 318h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <rect x="430" y="270" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M446 270v64M462 270v64M478 270v64M430 286h64M430 302h64M430 318h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M430 270h14v14h-14zM446 270h14v14h-14zM462 270h14v14h-14zM478 270h14v14h-14zM430 286h14v14h-14zM446 286h14v14h-14z" fill="#f09595"/>
+  <path d="M176 302 L196 302" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAlgoF)"/>
+  <path d="M338 302 L354 302" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAlgoF)"/>
+  <text x="71" y="348" font-size="11" fill="#888780" text-anchor="middle">A 区域</text>
+  <text x="141" y="348" font-size="11" fill="#888780" text-anchor="middle">B 区域</text>
+  <text x="231" y="348" font-size="11" fill="#888780" text-anchor="middle">A 区域</text>
+  <text x="301" y="348" font-size="11" fill="#888780" text-anchor="middle">B 区域</text>
+  <text x="391" y="348" font-size="11" fill="#888780" text-anchor="middle">A 区域</text>
+  <text x="461" y="348" font-size="11" fill="#888780" text-anchor="middle">B 区域</text>
+  <text x="40" y="372" font-size="11" fill="#888780">只搬存活对象，存活越少越快、无碎片；代价是常年空着一半 —— 所以只配新生代（Eden:S0:S1 = 8:1:1）</text>
+
+  <text x="40" y="402" font-size="13" font-weight="bold" fill="#2c2c2a">③ 标记-整理：标记后把存活对象压向一端，边界以下一次清空</text>
+  <rect x="40" y="418" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M56 418v64M72 418v64M88 418v64M40 434h64M40 450h64M40 466h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M40 418h14v14h-14zM72 418h14v14h-14zM56 434h14v14h-14zM40 450h14v14h-14zM88 450h14v14h-14zM72 466h14v14h-14z" fill="#f09595"/>
+  <path d="M56 418h14v14h-14zM88 418h14v14h-14zM88 434h14v14h-14zM72 450h14v14h-14zM56 466h14v14h-14zM88 466h14v14h-14z" fill="#85b7eb"/>
+  <rect x="150" y="418" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M166 418v64M182 418v64M198 418v64M150 434h64M150 450h64M150 466h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M150 418h14v14h-14zM166 418h14v14h-14zM182 418h14v14h-14zM198 418h14v14h-14zM150 434h14v14h-14zM166 434h14v14h-14z" fill="#f09595"/>
+  <path d="M148 450 L216 450" fill="none" stroke="#ef9f27" stroke-width="1.2"/>
+  <text x="222" y="454" font-size="11" fill="#854f0b">作为边界</text>
+  <rect x="260" y="418" width="64" height="64" fill="#ffffff" stroke="#b4b2a9" stroke-width="0.5"/>
+  <path d="M276 418v64M292 418v64M308 418v64M260 434h64M260 450h64M260 466h64" fill="none" stroke="#d3d1c7" stroke-width="0.5"/>
+  <path d="M260 418h14v14h-14zM276 418h14v14h-14zM292 418h14v14h-14zM308 418h14v14h-14zM260 434h14v14h-14zM276 434h14v14h-14z" fill="#f09595"/>
+  <path d="M106 450 L144 450" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAlgoF)"/>
+  <path d="M216 450 L254 450" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAlgoF)"/>
+  <text x="71" y="496" font-size="11" fill="#888780" text-anchor="middle">标记后</text>
+  <text x="181" y="496" font-size="11" fill="#888780" text-anchor="middle">整理后</text>
+  <text x="291" y="496" font-size="11" fill="#888780" text-anchor="middle">清除后</text>
+  <text x="40" y="518" font-size="11" fill="#888780">无碎片，但要移动对象、更新引用，停顿更长 —— 适合存活多的老年代</text>
+
+  <text x="40" y="546" font-size="12" fill="#888780">选型逻辑：存活少 → 复制；存活多怕碎片 → 整理；最简单 → 清除。面试可能让你手画这三个过程</text>
+</svg>
