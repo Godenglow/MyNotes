@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="372" viewBox="0 0 680 372" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>Spring IOC 实现链路：配置、BeanDefinition、反射、依赖注入、单例池</title>
+  <rect width="680" height="372" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowIocF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="44" font-size="14" font-weight="bold" fill="#2c2c2a">IOC 实现：工厂模式 + 反射 + 依赖注入</text>
+
+  <rect x="40" y="68" width="200" height="48" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="140" y="90" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">配置（注解 / XML）</text>
+  <text x="140" y="106" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">@Component / @Bean</text>
+  <rect x="262" y="68" width="170" height="48" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="347" y="92" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">解析成 BeanDefinition</text>
+  <text x="347" y="106" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">类的"出生说明书"</text>
+  <rect x="464" y="68" width="176" height="48" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="552" y="92" font-size="12" font-weight="bold" fill="#0c447c" text-anchor="middle" dominant-baseline="central">IOC 容器</text>
+  <text x="552" y="106" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">ApplicationContext</text>
+  <path d="M242 92 L258 92" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowIocF)"/>
+  <path d="M434 92 L460 92" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowIocF)"/>
+
+  <rect x="40" y="150" width="600" height="130" rx="12" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="56" y="172" font-size="12" font-weight="bold" fill="#2c2c2a">容器内部（Bean 出生流程简版）</text>
+  <rect x="56" y="186" width="130" height="40" rx="8" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text x="121" y="206" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">反射创建实例</text>
+  <rect x="200" y="186" width="130" height="40" rx="8" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text x="265" y="206" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">依赖注入（DI）</text>
+  <rect x="344" y="186" width="130" height="40" rx="8" fill="#ffffff" stroke="#888780" stroke-width="0.5"/>
+  <text x="409" y="206" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">初始化回调</text>
+  <rect x="488" y="186" width="130" height="40" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="553" y="206" font-size="12" fill="#0c447c" text-anchor="middle" dominant-baseline="central">放入单例池</text>
+  <path d="M188 206 L196 206" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowIocF)"/>
+  <path d="M332 206 L340 206" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowIocF)"/>
+  <path d="M476 206 L484 206" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowIocF)"/>
+  <text x="56" y="254" font-size="11" fill="#888780">底层全是反射：Class 对象 → getConstructor → newInstance（getBean 时才动手，懒加载看容器类型）</text>
+
+  <rect x="40" y="292" width="200" height="56" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="52" y="312" font-size="12" font-weight="bold" fill="#0c447c">构造器注入（推荐）</text>
+  <text x="52" y="330" font-size="11" fill="#888780">依赖不可变、保证非空</text>
+  <rect x="250" y="292" width="200" height="56" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="262" y="312" font-size="12" font-weight="bold" fill="#2c2c2a">Setter 注入</text>
+  <text x="262" y="330" font-size="11" fill="#888780">适合可选依赖</text>
+  <rect x="460" y="292" width="200" height="56" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="472" y="312" font-size="12" font-weight="bold" fill="#2c2c2a">字段注入（不推荐）</text>
+  <text x="472" y="330" font-size="11" fill="#888780">@Autowired 打字段，难测试</text>
+</svg>

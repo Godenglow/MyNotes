@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="380" viewBox="0 0 680 380" font-family="'Microsoft YaHei','PingFang SC',sans-serif">
+  <title>Spring AOP 两种动态代理：JDK 基于接口、CGLIB 基于继承</title>
+  <rect width="680" height="380" fill="#ffffff"/>
+  <defs>
+    <marker id="arrowAopF" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="#888780" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+  <style>.mono{font-family:Consolas,'Courier New',monospace}</style>
+
+  <text x="40" y="44" font-size="14" font-weight="bold" fill="#2c2c2a">AOP 实现：运行时动态代理（不改编译期源码）</text>
+
+  <text x="40" y="70" font-size="12" font-weight="bold" fill="#2c2c2a">① JDK 动态代理 —— 基于接口</text>
+  <rect x="80" y="84" width="220" height="36" rx="8" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.5"/>
+  <text x="190" y="102" font-size="12" fill="#0c447c" text-anchor="middle" dominant-baseline="central">UserService（接口）</text>
+  <path d="M190 150 L190 124" fill="none" stroke="#888780" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrowAopF)"/>
+  <text class="mono" x="198" y="140" font-size="11" fill="#888780">implements</text>
+  <rect x="80" y="150" width="220" height="44" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text class="mono" x="190" y="172" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">$Proxy0（运行时生成）</text>
+  <text x="190" y="188" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">调用统一转发给 InvocationHandler</text>
+  <path d="M190 194 L190 218" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAopF)"/>
+  <text x="198" y="210" font-size="11" fill="#888780">委托</text>
+  <rect x="80" y="220" width="220" height="36" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="190" y="238" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">UserServiceImpl（目标对象）</text>
+  <text x="40" y="284" font-size="11" fill="#888780">要求：目标类必须实现接口；调用方拿到的是代理，通知逻辑在 InvocationHandler 里</text>
+
+  <text x="360" y="70" font-size="12" font-weight="bold" fill="#2c2c2a">② CGLIB —— 基于继承</text>
+  <rect x="400" y="84" width="220" height="36" rx="8" fill="#faeeda" stroke="#ba7517" stroke-width="0.5"/>
+  <text x="510" y="102" font-size="12" fill="#633806" text-anchor="middle" dominant-baseline="central">UserServiceImpl（父类）</text>
+  <path d="M510 150 L510 124" fill="none" stroke="#888780" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrowAopF)"/>
+  <text class="mono" x="518" y="140" font-size="11" fill="#888780">extends</text>
+  <rect x="400" y="150" width="220" height="44" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text class="mono" x="510" y="172" font-size="12" font-weight="bold" fill="#2c2c2a" text-anchor="middle" dominant-baseline="central">CGLIB 子类（运行时生成）</text>
+  <text x="510" y="188" font-size="11" fill="#888780" text-anchor="middle" dominant-baseline="central">重写方法 → MethodInterceptor 拦截</text>
+  <path d="M510 194 L510 218" fill="none" stroke="#888780" stroke-width="1.2" marker-end="url(#arrowAopF)"/>
+  <text x="518" y="210" font-size="11" fill="#888780">super 调用真身</text>
+  <rect x="400" y="220" width="220" height="36" rx="8" fill="#f1efe8" stroke="#888780" stroke-width="0.5"/>
+  <text x="510" y="238" font-size="12" fill="#444441" text-anchor="middle" dominant-baseline="central">字节码库直接生成，无需接口</text>
+  <text x="360" y="284" font-size="11" fill="#888780">限制：final 类 / final 方法 / private 方法无法被代理（继承不了、重写不了）</text>
+
+  <text x="40" y="316" font-size="12" fill="#2c2c2a">选择规则：传统 Spring 有接口默认 JDK；Spring Boot 2.x 起默认 CGLIB（proxyTargetClass=true）</text>
+  <text x="40" y="338" font-size="12" fill="#791f1f">经典坑：对象内部 this.method() 自调用不走代理 → @Transactional 静默失效</text>
+  <text x="40" y="360" font-size="12" fill="#888780">为什么无侵入：代理是运行时生成的，业务源码零改动 —— AspectJ 则是编译期织入，功能更全但更重</text>
+</svg>
