@@ -12,5 +12,6 @@
   "templater-obsidian",
   "office-viewer",
   "local-web-page-viewer",
-  "obsidian-git"
+  "obsidian-git",
+  "nutstore-sync"
 ]
