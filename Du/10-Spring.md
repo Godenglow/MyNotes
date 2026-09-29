@@ -213,7 +213,7 @@ void makeBirdFly(Bird bird) {
 > **<font style="color:#E8323C;">Spring为简化开发而生，让程序员只需关注核心业务的实现，尽可能的不再关注非业务逻辑代码（事务控制，安全日志等）。</font>**
 >
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ### Spring 的 7 个模块
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643561157-765b31eb-9766-4a14-948b-315a09fec552.png)
@@ -344,6 +344,7 @@ downloadFileFromNetwork("http://example.com/file", new Callback() {
 + 在空的工程spring中创建第一个模块（普通的 Java Maven 模块）：spring-001-first
 
 #### 添加spring context依赖
+
 ```xml
 <dependency>
     <groupId>org.springframework</groupId>
@@ -359,6 +360,7 @@ downloadFileFromNetwork("http://example.com/file", new Callback() {
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763649527180-d0d3dc0c-3b6a-428c-92a1-2c579820ba1c.png)
 
 #### 添加junit5依赖
+
 ```xml
 <dependency>
     <groupId>org.junit.jupiter</groupId>
@@ -369,6 +371,7 @@ downloadFileFromNetwork("http://example.com/file", new Callback() {
 ```
 
 #### 定义bean
+
 ```java
 package com.jkweilai.spring.bean;
 
@@ -400,6 +403,7 @@ bean的id和class属性：
 + **<font style="color:#E8323C;">class属性：用来指定要创建的java对象的类名，这个类名必须是全限定类名（带包名）。</font>**
 
 #### 编写测试程序
+
 ```java
 package com.jkweilai.spring.test;
 
@@ -427,6 +431,7 @@ public class SpringTest {
 
 ### 第一个Spring程序详细剖析
 #### bean标签的id属性可以重复吗？
+
 ```java
 package com.jkweilai.spring.bean;
 
@@ -449,6 +454,7 @@ public class Vip {
 **<font style="color:#E8323C;">通过测试得出：在spring的配置文件中id是不能重名。</font>**
 
 #### 底层是怎么创建对象的，是通过反射机制调用无参数构造方法吗？
+
 ```java
 package com.jkweilai.spring.bean;
 
@@ -498,6 +504,7 @@ Object obj = clazz.newInstance();
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663829973365-59ca2f4c-4d81-471f-8e4c-aa272f8c2b81.png)
 
 #### spring配置文件的名字必须叫做beans.xml吗？
+
 ```java
 ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
 ```
@@ -546,6 +553,7 @@ public class SpringTest {
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663830614508-d00ecc07-5b51-4d2d-bc1d-8f2cb4f0c785.png)
 
 #### 在配置文件中配置的类必须是自定义的吗，可以使用JDK中的类吗，例如：java.util.Date？
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -571,11 +579,13 @@ public class SpringTest {
 通过测试得知，当id不存在的时候，会出现异常。
 
 #### getBean()方法返回的类型是Object，如果访问子类的特有属性和方法时，还需要向下转型，有其它办法可以解决这个问题吗？
+
 ```java
 User user = applicationContext.getBean("userBean", User.class);
 ```
 
 #### ClassPathXmlApplicationContext是从类路径中加载配置文件，如果没有在类路径当中，又应该如何加载配置文件呢？
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -596,6 +606,7 @@ System.out.println(vip);
 这种方式较少用。一般都是将配置文件放到类路径当中，这样可移植性更强。
 
 #### ApplicationContext的超级父接口BeanFactory。
+
 ```java
 BeanFactory beanFactory = new ClassPathXmlApplicationContext("spring.xml");
 Object vipBean = beanFactory.getBean("vipBean");
@@ -847,7 +858,7 @@ public class UserService {
 
 **<font style="color:#E8323C;">总结：set注入的核心实现原理：通过反射机制调用set方法来给属性赋值，让两个对象之间产生关系。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 #### 构造注入
 核心原理：通过调用构造方法来给属性赋值。
@@ -896,7 +907,7 @@ public void testConstructorDI(){
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703541233-f144603f-0a7c-4efc-be49-7e4cb31ee9f0.png)
 
-**<font style="color:#E8323C;"></font>**
+****
 
 **<font style="color:#E8323C;">如果构造方法有两个参数：</font>**
 
@@ -938,7 +949,7 @@ spring配置文件：
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703565658-98132ed3-4e4c-4524-9633-89ecbb517c76.png)
 
-**<font style="color:#E8323C;"></font>**
+****
 
 **<font style="color:#E8323C;">不使用参数下标，使用参数的名字可以吗？</font>**
 
@@ -975,7 +986,7 @@ spring配置文件：
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
 
-**<font style="color:#E8323C;"></font>**
+****
 
 **<font style="color:#E8323C;">配置文件中构造方法参数的类型顺序和构造方法参数的类型顺序不一致呢？</font>**
 
@@ -1125,7 +1136,7 @@ public void testSimpleType(){
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703886349-7e587def-2b4f-4abf-aff0-6c0f41011328.png)
 
-**<font style="color:#E8323C;"></font>**
+****
 
 **<font style="color:#E8323C;">需要特别注意：如果给简单类型赋值，使用value属性或value标签。而不是ref。</font>**
 
@@ -1257,9 +1268,10 @@ public void testDataSource(){
 
 你学会了吗？
 
-**<font style="color:#E8323C;"></font>**
+****
 
 #### 级联属性赋值（了解）
+
 ```java
 public class Clazz {
     private String name;
@@ -1356,7 +1368,7 @@ public void testCascade(){
 + **<font style="color:#E8323C;">在spring配置文件中，如上，注意顺序。</font>**
 + **<font style="color:#E8323C;">在spring配置文件中，clazz属性必须提供getter方法。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 #### 注入数组
 **当数组中的元素是简单类型**：
@@ -1502,7 +1514,7 @@ public void testArray(){
 + **<font style="color:#E8323C;">如果数组中是简单类型，使用value标签。</font>**
 + **<font style="color:#E8323C;">如果数组中是非简单类型，使用ref标签。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 #### 注入List集合
 List集合：有序可重复
@@ -1555,7 +1567,7 @@ public void testCollection(){
 
 **<font style="color:#F5222D;">注意：注入List集合的时候使用list标签，如果List集合中是简单类型使用value标签，反之使用ref标签。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 #### 注入Set集合
 Set集合：无序不可重复
@@ -1607,9 +1619,10 @@ public class People {
 + **<font style="color:#F5222D;">使用&lt;set&gt;标签</font>**
 + **<font style="color:#F5222D;">set集合中元素是简单类型的使用value标签，反之使用ref标签。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 #### 注入Map集合
+
 ```java
 public class People {
     // 一个人有多个住址
@@ -1654,7 +1667,7 @@ public class People {
 + **<font style="color:#F5222D;">如果key是简单类型，使用 key 属性，反之使用 key-ref 属性。</font>**
 + **<font style="color:#F5222D;">如果value是简单类型，使用 value 属性，反之使用 value-ref 属性。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 #### 注入Properties
 java.util.Properties继承java.util.Hashtable，所以Properties也是一个Map集合。
@@ -1704,7 +1717,7 @@ public class People {
 
 + **<font style="color:#F5222D;">使用&lt;props&gt;标签嵌套&lt;prop&gt;标签完成。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 #### 注入null和空字符串
 注入空字符串使用：&lt;value/&gt; 或者 value=""
@@ -2009,7 +2022,7 @@ public void testC(){
 
 **<font style="color:#F5222D;">注意：不管是p命名空间还是c命名空间，注入的时候都可以注入简单类型以及非简单类型。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 ### util命名空间
 使用util命名空间可以让**<font style="color:#F5222D;">配置复用</font>**。
@@ -2102,6 +2115,7 @@ Spring还可以完成自动化的注入，自动化注入又被称为自动装�
 **<font style="color:#DF2A3F;">基于 XML 的自动装配底层都是基于 </font>****`setter`****<font style="color:#DF2A3F;">方法，因此要求必须提供 </font>****`setter`****<font style="color:#DF2A3F;">方法。</font>**
 
 #### 根据名称自动装配
+
 ```java
 public class UserDao {
 
@@ -2208,6 +2222,7 @@ public class UserService {
 例如：setAge() 对应的名字是age，setPassword()对应的名字是password，setEmail()对应的名字是email。
 
 #### 根据类型自动装配
+
 ```java
 public class AccountDao {
     public void insert(){
@@ -2744,13 +2759,13 @@ public class Client {
 + 缺点1：工厂类集中了所有产品的创造逻辑，形成一个无所不知的全能类，有人把它叫做上帝类。显然工厂类非常关键，不能出问题，一旦出问题，整个系统瘫痪。
 + 缺点2：不符合OCP开闭原则，在进行系统扩展时，需要修改工厂类。
 
-**<font style="color:#E8323C;"></font>**
+****
 
 **<font style="color:#E8323C;">Spring中的BeanFactory 是简单工厂模式吗？</font>**
 
 **<font style="color:#E8323C;">从最表层的“根据名字拿对象”的功能来看，BeanFactory 的 getBean(String name) 方法扮演了类似简单工厂的角色。但从本质和实现上来看，BeanFactory 是一个功能极其丰富的 IoC容器，它包含并远远超越了简单工厂的功能。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ### 工厂方法模式
 工厂方法模式既保留了简单工厂模式的优点，同时又解决了简单工厂模式的缺点。
@@ -2922,6 +2937,7 @@ public class Client {
 客户端只需要选择一次工厂，后续所有组件自动配套，**绝不会混搭**。
 
 #### 完整代码结构
+
 ```plain
 com.jkweilai.product.button
     ├── Button (抽象产品)
@@ -3359,7 +3375,7 @@ public void testFactoryBean(){
 
 **<font style="color:#E8323C;">FactoryBean在Spring中是一个接口。被称为“工厂Bean”。“工厂Bean”是一种特殊的Bean。所有的“工厂Bean”都是用来</font>****<font style="color:#117CEE;">协助Spring</font>****<font style="color:#E8323C;">框架来创建其他Bean对象的。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ### BeanFactory和FactoryBean的区别
 #### BeanFactory
@@ -5646,9 +5662,10 @@ Spring的AOP使用的动态代理是：JDK动态代理 + CGLIB动态代理技术
 + **<font style="color:#E8323C;">第二：代码易维护。</font>**
 + **<font style="color:#E8323C;">第三：使开发者更关注业务逻辑。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ### AOP的七大术语
+
 ```java
 public class UserService{
     public void do1(){
@@ -6730,6 +6747,7 @@ public void testSecurity(){
 
 ### 具体实现
 #### 第一步：准备数据库表
+
 ```sql
 DROP TABLE IF EXISTS `t_act`;
 CREATE TABLE `t_act`  (
@@ -6744,6 +6762,7 @@ INSERT INTO `t_act` VALUES (2, 'act-002', 0.00);
 ```
 
 #### 第二步：IDEA中创建一个模块，并引入依赖
+
 ```xml
 <dependencies>
     <!--spring context-->
@@ -6800,6 +6819,7 @@ INSERT INTO `t_act` VALUES (2, 'act-002', 0.00);
 `com.jkweilai.bank.service.impl`
 
 #### 第四步：编写 entity
+
 ```java
 package com.jkweilai.bank.entity;
 
@@ -6817,6 +6837,7 @@ public class Account {
 ```
 
 #### 第五步：编写mapper接口
+
 ```java
 package com.jkweilai.bank.mapper;
 
@@ -6986,6 +7007,7 @@ jdbc.password=123456
 ```
 
 #### 第十步：编写测试程序，并添加事务，进行测试
+
 ```java
 package com.jkweilai.spring.test;
 
@@ -7196,7 +7218,7 @@ spring配置文件有多个，并且可以在spring的核心配置文件中使�
 
 **<font style="color:#E8323C;">丢了1万。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ### Spring对事务的支持
 #### Spring实现事务的两种方式
@@ -7511,9 +7533,10 @@ public class IsolationService2 {
 
 ```
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ##### 只读事务
+
 ```java
 @Transactional(readOnly = true)
 ```
@@ -7692,7 +7715,7 @@ public class CircularDependencyTest {
 
 **<font style="color:#E8323C;">通过测试得知：在singleton + set注入的情况下，循环依赖是没有问题的。Spring可以解决这个问题。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ### **<font style="color:#F5222D;">prototype下的set注入的循环依赖有问题</font>**
 我们再来测试一下：prototype+set注入的方式下，循环依赖会不会出现问题？
@@ -7831,11 +7854,11 @@ Caused by: org.springframework.beans.factory.**<font style="color:#F5222D;">Bean
 
 **<font style="color:#F5222D;">主要原因是因为通过构造方法注入导致的：因为构造方法注入会导致</font>****<font style="color:#722ED1;">实例化对象的过程</font>****<font style="color:#F5222D;">和</font>****<font style="color:#722ED1;">对象属性赋值的过程</font>****<font style="color:#F5222D;">没有分离开，必须在一起完成导致的。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 **<font style="color:#2F8EF4;">为什么 Spring 建议使用构造器注入？因为它在启动时可以快速发现循环依赖。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 ### **<font style="color:#F5222D;">Spring解决循环依赖的机理</font>**
 面试题：Spring 是如何解决单例 Setter/字段注入的循环依赖的？
@@ -8031,7 +8054,7 @@ Spring 使用装饰器来增强 Bean 的功能，如属性访问、类型转换�
 
 **<font style="color:#F5222D;">Spring中类名中带有：Decorator和Wrapper单词的类，都是装饰器模式。</font>**
 
-**<font style="color:#F5222D;"></font>**
+****
 
 ### 观察者模式
 #### 什么是观察者模式

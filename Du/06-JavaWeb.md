@@ -65,6 +65,7 @@ CS（Client/Server，客户端/服务器）结构是一种传统的应用程序�
 一个标准的 **URL（统一资源定位符）** 由多个部分组成，用于精确标识网络上的资源位置。
 
 #### URL 的完整格式
+
 ```plain
   https://www.example.com:8080/path/to/page
   \___/   \_____________/ \__/ \_________/ 
@@ -426,6 +427,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 以下页面是 AI 生成的：
 
 #### index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -534,6 +536,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586465281-223139ae-3c01-4cc3-ba03-2ea0fdfe80f7.png)
 
 #### list.html
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -708,6 +711,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586494827-70c8787e-63b1-484d-bc79-cd587da8c540.png)
 
 #### add.html
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -834,6 +838,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586528955-99b3b234-2ae0-4f94-ad39-b3704155b488.png)
 
 #### edit.html
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -980,6 +985,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586582014-ffd506fa-4c47-41a6-aaf0-b9768768eb87.png)
 
 #### detail.html
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -1765,6 +1771,7 @@ response.setContentType("text/html;charset=UTF-8");
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748911994986-fe9bc878-f3db-4fd8-8df1-0ce33086aa7a.png)
 
 ### 编写 DeptListServlet
+
 ```java
 package com.jkweilai.servlet;
 
@@ -1852,6 +1859,7 @@ public class DeptListServlet implements Servlet{
 编译后，将编译后的字节码拷贝到 `WEB-INF/classes`目录下，这里不再赘述。
 
 ### 编写 web.xml
+
 ```xml
 <servlet>
   <servlet-name>dListServlet</servlet-name>
@@ -2434,6 +2442,7 @@ public class Client {
 + **具体实现类(Concrete Class)**：继承缺省适配器，只实现感兴趣的方法
 
 #### 示例代码
+
 ```java
 // 目标接口 - 定义了很多方法
 interface ServiceInterface {
@@ -2852,6 +2861,7 @@ public class FileUploadServlet extends GenericServlet {
 执行结果和之前一样。
 
 #### 获取 Servlet 名字
+
 ```java
 String getServletName();
 ```
@@ -2880,6 +2890,7 @@ out.println("<h1>" + servletName + "</h1>");
 运行效果和之前相同。
 
 #### 获取 ServletContext 对象
+
 ```java
 ServletContext getServletContext();
 ```
@@ -3271,6 +3282,7 @@ public class LogServlet extends GenericServlet {
     - 可以有多个具体子类，每个子类提供不同的实现
 
 #### 代码示例
+
 ```java
 // 抽象类
 // 游戏模板
@@ -5123,6 +5135,7 @@ public class CommonCodeFilter implements Filter {
 3. 过滤器链（如 Web 框架中的中间件处理 HTTP 请求）。
 
 #### 简单代码示例
+
 ```java
 // 抽象处理者
 abstract class Handler {
@@ -5251,6 +5264,7 @@ Thymeleaf 是一个用于 Web 和独立环境的**现代 Java 模板引擎**，�
 + **PDF/Excel导出**：通过模板生成结构化文档（如Apache POI + Thymeleaf）。
 
 ### Thymeleaf 处理流程
+
 ```html
 <!-- 模板文件 index.html -->
 <html>
@@ -5335,6 +5349,7 @@ public class ThymeleafInitializer implements ServletContextListener {
 ```
 
 #### 编写 Servlet
+
 ```java
 package com.jkweilai.thymeleaf.servlets;
 
@@ -5443,6 +5458,7 @@ thymeleaf 添加日志框架 `logback`。这样 thymeleaf 运行出错时会自�
 
 ### Thymeleaf 的必要语法
 #### **基础模板结构（必须掌握）**
+
 ```html
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">  <!-- 启用Thymeleaf命名空间 -->
@@ -5461,6 +5477,7 @@ thymeleaf 添加日志框架 `logback`。这样 thymeleaf 运行出错时会自�
 + 静态内容作为默认值（直接打开HTML文件可预览）
 
 #### **变量表达式（90%场景使用）**
+
 ```html
 <div th:text="${user.name}">用户名默认值</div>  <!-- 即使是一段HTML代码，也只是当做普通文本处理，转义，防止XSS攻击 -->
 <div th:utext="${htmlContent}">HTML内容</div>  <!-- 对HTML代码解释执行，不转义，存在XSS攻击风险，谨慎使用 -->
@@ -5539,6 +5556,7 @@ thymeleaf 的模板文件中是这样写的：
 这样就可以访问了。
 
 #### **循环遍历（列表渲染）**
+
 ```html
 <ul>
     <li th:each="item : ${items}" th:text="${item.name}">商品示例</li>
@@ -5559,6 +5577,7 @@ thymeleaf 的模板文件中是这样写的：
 **<font style="color:#DF2A3F;">管道符内的内容会被视为一个整体，Thymeleaf 会自动将其拼接成一个字符串，无需手动加引号或 + 连接。</font>**
 
 #### **链接与路径（URL生成）**
+
 ```html
 <a th:href="@{/user/details(id=${userId})}">用户详情</a>
 ```
@@ -5569,6 +5588,7 @@ thymeleaf 的模板文件中是这样写的：
 + 支持参数：`@{/path(param1=${val1}, param2=${val2})}`
 
 #### **表单绑定（重点！）**
+
 ```html
 <form th:action="@{/save}" th:object="${user}" method="post">
     <input type="text" id="username" name="username" th:value="*{username}" placeholder="用户名">
@@ -5582,6 +5602,7 @@ thymeleaf 的模板文件中是这样写的：
 + `th:value="*{属性名}"`
 
 #### **片段复用（布局优化）**
+
 ```html
 <!-- 定义片段 -->
 <div th:fragment="header">
@@ -5600,6 +5621,7 @@ thymeleaf 的模板文件中是这样写的：
 + `th:replace` 直接替换当前标签
 
 #### **实用工具函数（选学）**
+
 ```html
 <p th:text="${#strings.toUpperCase(user.name)}"></p>  <!-- 字符串大写 -->
 <p th:text="${#dates.format(now, 'yyyy-MM-dd')}"></p>  <!-- 日期格式化 -->
@@ -5646,6 +5668,7 @@ thymeleaf 的模板文件中是这样写的：
 ```
 
 ### Thymeleaf 的内联 JavaScript 语法
+
 ```html
 <!-- script脚本中使用Thymeleaf语法需要在script标签上添加 th:inline="javascript" -->
 <script th:inline="javascript">
@@ -5677,6 +5700,7 @@ Servlet 负责核心业务的处理，将处理完成的数据收集起来。交
 这里将 `logback`的 jar 包一并引进来了。
 
 #### 监听器初始化引擎模板
+
 ```java
 package com.jkweilai.dept.listeners;
 
@@ -7024,6 +7048,7 @@ public class LogoutServlet extends HttpServlet {
 
 #### 在JavaWeb中创建和响应Cookie
 ##### 创建Cookie
+
 ```java
 // 创建一个名为"username"，值为"john"的Cookie
 Cookie cookie = new Cookie("username", "john");
@@ -7032,6 +7057,7 @@ Cookie cookie = new Cookie("username", "john");
 cookie 的 name 和 value 要求必须是 String 类型。
 
 ##### 设置Cookie属性
+
 ```java
 // 设置过期时间（秒），不设置则默认为会话Cookie（浏览器关闭即删除）
 cookie.setMaxAge(60 * 60 * 24 * 7); // 一周后过期
@@ -7057,11 +7083,13 @@ cookie.setHttpOnly(true);
 ```
 
 ##### 响应Cookie到客户端
+
 ```java
 response.addCookie(cookie);
 ```
 
 #### 服务器端获取客户端提交的 Cookie
+
 ```java
 // 从请求中获取所有Cookie
 Cookie[] cookies = request.getCookies();
@@ -7318,6 +7346,7 @@ Token是一种代表用户身份和权限的凭证，它是在用户成功登录
 + **存 Token**：相当于使用一次性密码锁，钥匙可随时更换，即使被拿到也很快失效。
 
 ##### Token 的生成算法
+
 ```java
 package com.jkweilai.dept.utils;
 
@@ -7379,6 +7408,7 @@ byte[] data2 = Base64.getDecoder().decode(s); // 结果是：{97,98,99,100}
 
 #### 用 Token 实现“记住我”功能
 ##### Token 表的设计
+
 ```sql
 CREATE TABLE `user_remember_tokens` (
   `id` bigint NOT NULL AUTO_INCREMENT,
@@ -7964,6 +7994,7 @@ com.jkweilai.dept
 5. 这个项目中涉及到全局异常的处理。
 
 #### 数据库表和数据的准备
+
 ```sql
 drop table if exists t_act;
 
@@ -8004,6 +8035,7 @@ select * from t_tran;
 
 #### DeepSeek 生成前端页面
 ##### 转账页面
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -8195,6 +8227,7 @@ select * from t_tran;
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749783989569-ad3bf2f5-40df-464e-83d9-d586d28d6872.png)
 
 ##### 转账成功页面
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -8337,6 +8370,7 @@ select * from t_tran;
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749784155028-338b8c19-eb43-44e3-92bb-d191969038ee.png)
 
 ##### 转账失败页面
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -8541,6 +8575,7 @@ private static final Logger logger = LoggerFactory.getLogger(当前类的类名.
 | **ERROR** | 系统出Bug了 | 需要立即处理 | 空指针异常、数据库连不上、第三方接口超时 |
 
 ##### 自定义数据库访问异常
+
 ```java
 package com.jkweilai.bank.common.exception;
 
@@ -8572,6 +8607,7 @@ public class DataAccessException extends RuntimeException {
 ```
 
 ##### 自定义业务异常
+
 ```java
 package com.jkweilai.bank.common.exception;
 
@@ -8682,6 +8718,7 @@ public class GlobalExceptionHandler extends HttpServlet {
 ```
 
 ##### 配置全局异常处理器 web.xml
+
 ```xml
 <error-page>
     <exception-type>java.lang.Throwable</exception-type>
@@ -8988,6 +9025,7 @@ public interface AccountDao {
 ```
 
 ##### 编写 AccountDao 接口的实现类
+
 ```java
 package com.jkweilai.bank.dao.impl;
 
@@ -9071,6 +9109,7 @@ public interface TranDao {
 ```
 
 ##### 编写 TranDao 接口的实现类
+
 ```java
 package com.jkweilai.bank.dao.impl;
 
@@ -9116,6 +9155,7 @@ public class TranDaoImpl implements TranDao {
 
 #### 编写 Service
 ##### 交易号生成工具
+
 ```java
 package com.jkweilai.bank.common.util;
 

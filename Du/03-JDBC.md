@@ -27,7 +27,7 @@ Java中接口的作用主要有以下几个方面：
 
 总的来说，Java中的接口可以让我们通过规范来编写更加标准和灵活的代码，使得代码易于维护和扩展，并通过多态的特性来提高代码的重用性和可读性。**<font style="color:#DF2A3F;">Java接口在使用场景中，一定是存在两个角色的，一个是接口的调用者，一个是接口的实现者，接口的出现让调用者和实现者解耦合了。</font>**
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 ### 编写程序模拟JDBC接口
 **<font style="color:#DF2A3F;">接口的制定者</font>**：SUN公司负责制定的
@@ -731,6 +731,7 @@ public class JDBCTest01 {
 + 关闭的时候调用close()方法，该方法有异常需要处理，建议分别对齐try...catch...进行异常捕获。如果只编写一个try...catch...进行一块捕获，在关闭过程中，如果某个关闭失败，会影响下一个资源的关闭。
 
 #### 代码如何实现
+
 ```java
 import java.sql.Driver;
 import java.sql.DriverManager;
@@ -939,7 +940,7 @@ public class JDBCTest03 {
 
 **<font style="color:#DF2A3F;">注意：虽然大部分情况下不需要进行手动注册驱动了，但在实际的开发中有些数据库驱动程序不支持自动发现功能，仍然需要手动注册。所以建议大家还是别省略了。</font>**
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
@@ -3072,6 +3073,7 @@ select * from t_act;
 ```
 
 ### 实现转账功能
+
 ```java
 package com.test.jdbc;
 
@@ -3289,6 +3291,7 @@ public class JDBCTest20 {
 ```
 
 ## 在MySQL中创建存储过程
+
 ```sql
 create procedure mypro(in n int, out sum int)
 begin 
@@ -3306,6 +3309,7 @@ end;
 以上存储过程完成的功能是：0 到 n 的偶数求和。
 
 ## 使用JDBC代码调用存储过程
+
 ```java
 package com.test.jdbc;
 
@@ -3438,6 +3442,7 @@ conn.close();
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据库表的准备
+
 ```sql
 drop table if exists t_employee;
 
@@ -4106,6 +4111,7 @@ public class EmployeeDao {
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## BaseDao的封装
+
 ```java
 package com.test.jdbc.dao;
 

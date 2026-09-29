@@ -598,6 +598,7 @@ select ename, sal * 12 yearsal from emp;
 + 通过以上测试，得知as可以省略，可以使用空格代替as，但如果别名中有空格呢？
 
 #### 别名中有空格
+
 ```sql
 select ename, sal * 12 year sal from emp;
 ```
@@ -1297,7 +1298,7 @@ D组or和in的执行时间： or的执行时间为：6min 17s     in的执行�
 
 **<font style="color:#117CEE;">简单记住一句话：对于有主键或有索引的前提下，in 和 or 效率没区别。对于没有主键或没有索引的列来说，in 效率高，or 效率低。【</font>****<font style="color:#DF2A3F;">但 in 只能用于同一列，or 可以使用在不同列上。</font>****<font style="color:#117CEE;">】</font>**
 
-**<font style="color:#117CEE;"></font>**
+****
 
 **原因如下：**
 
@@ -1475,7 +1476,7 @@ select ename,sal from emp where job = 'MANAGER' order by sal asc;
 
 **<font style="color:#E8323C;">通过这个例子主要是想告诉大家：where先执行，order by语句是最后执行的。</font>**
 
-**<font style="color:#E8323C;"></font>**
+****
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
@@ -1535,6 +1536,7 @@ select ename, distinct job from emp;
 
 ### 字符串相关
 #### 转大写upper和ucase
+
 ```sql
 # 查询所有员工名字，以大写形式展现
 select upper(ename) as ename from emp;
@@ -1628,6 +1630,7 @@ select ename, sal from emp where sal > 3000 || sal < 900;
 mysql中可以使用+进行字符串的拼接吗？不可以，在mysql中+只作加法运算，在进行加法运算时，会将加号两边的数据尽最大的努力转换成数字再求和，如果无法转换成数字，最终运算结果通通是0
 
 #### 去除字符串前后空白trim
+
 ```sql
 select concat(trim('    abc    '), 'def');
 ```
@@ -2083,7 +2086,7 @@ select deptno,max(sal) from emp group by deptno;
 select deptno,job,avg(sal) from emp group by deptno,job;
 ```
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 **<font style="color:#DF2A3F;">当select语句中有group by的话，select后面只能跟分组函数或参加分组的字段</font>**
 
@@ -2436,6 +2439,7 @@ select t.*,s.grade from (select deptno, avg(sal) avgsal from emp group by deptno
 ![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677477892811-ef9b366b-82be-4407-86f1-8dfa81492d8c.png)
 
 ### select后面使用子查询
+
 ```sql
 select e.ename,(select d.dname from dept d where e.deptno = d.deptno) as dname from emp e;
 ```
@@ -3261,6 +3265,7 @@ SELECT JSON_KEYS('{"a":1, "b":2}');  -- ["a", "b"]
 
 ## 增删改表结构DDL
 ### 创建一个学生表
+
 ```sql
 create table t_student(
   no bigint,
@@ -3270,32 +3275,38 @@ create table t_student(
 ```
 
 ### 查看建表语句
+
 ```sql
 show create table 表名;
 ```
 
 ### 修改表名
+
 ```sql
 alter table 表名 rename 新表名;
 ```
 
 ### 新增字段
+
 ```sql
 alter table 表名 add 字段名 数据类型;
 ```
 
 ### 修改字段名
+
 ```sql
 alter table 表名 change 旧字段名 新字段名 数据类型;
 ```
 
 ### 修改字段数据类型
+
 ```sql
 -- column 关键字可以省略，也可以带着。
 alter table 表名 modify column 字段名 数据类型;
 ```
 
 ### 删除字段
+
 ```sql
 alter table 表名 drop 字段名;
 ```
@@ -3383,6 +3394,7 @@ create table t_stu(
 name字段不能为空。插入数据时如果没有给name指定值，则报错。
 
 ### 检查约束
+
 ```sql
 create table t_stu(
   no int,
@@ -3977,7 +3989,7 @@ set global transaction isolation level repeatable read;
 
 通过以上测试得知：**<font style="color:#DF2A3F;">当事务隔离级别设置为可重复读，MySQL会尽最大努力避免幻读问题，但这种隔离级别无法完全避免幻读问题。</font>**
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
@@ -4303,6 +4315,7 @@ alter user 'java2'@'%' identified by '456';
 以上是MySQL8版本以后修改用户密码的方式。
 
 ### 修改用户名
+
 ```sql
 rename user '原始用户名'@'localhost' to '新用户名'@'localhost';
 rename user '原始用户名'@'localhost' to '新用户名'@'%';
@@ -4314,6 +4327,7 @@ rename user 'java11'@'localhost' to 'java123'@'%';
 flush privileges;
 
 ### 删除用户
+
 ```sql
 drop user 'java123'@'localhost';
 drop user 'java2'@'%';
@@ -4712,6 +4726,7 @@ MySQL行转列又叫做**<font style="color:#DF2A3F;">数据透视</font>**。�
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 使用case when+group by完成
+
 ```sql
 drop table if exists t_student;
 create table t_student(

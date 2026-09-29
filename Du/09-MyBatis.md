@@ -295,6 +295,7 @@ InputStream is = Resources.getResourceAsStream("mybatis-config.xml");
 ```
 
 ### 第一个比较完整的代码写法
+
 ```java
 package com.jkweilai.mybatis;
 
@@ -1109,6 +1110,7 @@ public class ConfigurationTest {
 
 ### dataSource
 #### 测试POOLED和UNPOOLED
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE configuration
@@ -1465,6 +1467,7 @@ jdbc.password=root
 ```
 
 #### 第二步：前端页面index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1495,6 +1498,7 @@ jdbc.password=root
 + com.jkweilai.bank.utils：**<font style="color:#E8323C;">将之前编写的SqlSessionUtil工具类拷贝到该包下。</font>**
 
 #### 第四步：定义pojo类：Account
+
 ```java
 package com.jkweilai.bank.pojo;
 
@@ -1616,6 +1620,7 @@ public class AccountDaoImpl implements AccountDao {
 ```
 
 #### 第六步：AccountDaoImpl中编写了mybatis代码，需要编写SQL映射文件了
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
@@ -1633,6 +1638,7 @@ public class AccountDaoImpl implements AccountDao {
 ```
 
 #### 第七步：编写AccountService接口以及AccountServiceImpl
+
 ```java
 package com.jkweilai.bank.exception;
 
@@ -1725,6 +1731,7 @@ public class AccountServiceImpl implements AccountService {
 ```
 
 #### 第八步：编写AccountController
+
 ```java
 package com.jkweilai.bank.web.controller;
 
@@ -2308,6 +2315,7 @@ public void testSelectAllByTableName(){
 需求：查询奔驰系列的汽车。【只要品牌brand中含有奔驰两个字的都查询出来。】
 
 #### 第一种：concat函数
+
 ```xml
 <select id="selectLikeByBrand" resultType="Car">
   select
@@ -2324,6 +2332,7 @@ public void testSelectAllByTableName(){
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660804562331-8febb980-24d8-4e18-8e4b-6416f28aa251.png)
 
 #### 第二种：双引号方式
+
 ```xml
 <select id="selectLikeByBrand" resultType="Car">
   select
@@ -2372,6 +2381,7 @@ resultType属性用来指定查询结果集的封装类型，这个名字太长�
 在mybatis-config.xml文件中使用typeAliases标签来起别名，包括两种方式：
 
 #### 第一种方式：typeAlias
+
 ```xml
 <typeAliases>
   <typeAlias type="com.jkweilai.mybatis.pojo.Car" alias="Car"/>
@@ -2398,6 +2408,7 @@ resultType属性用来指定查询结果集的封装类型，这个名字太长�
 package也可以配置多个的。
 
 #### 在SQL映射文件中用一下
+
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
@@ -3237,6 +3248,7 @@ public void testSelectAllRetMap(){
 + 第三种方式：开启驼峰命名自动映射（配置settings）
 
 #### 使用resultMap进行结果映射
+
 ```java
 /**
  * 查询所有Car，使用resultMap进行结果映射
@@ -3880,6 +3892,7 @@ public void testDeleteBatchByForeach2(){
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660899667194-f150bf6b-b54f-432a-8455-4c819bac0c58.png)
 
 #### 批量添加
+
 ```java
 /**
 * 批量添加，使用foreach标签
@@ -4339,6 +4352,7 @@ public class Clazz {
 + 第二种方式：分步查询
 
 #### 第一种方式：collection
+
 ```java
 package com.jkweilai.mybatis.mapper;
 
@@ -4678,6 +4692,7 @@ public void testSelectById2() throws Exception{
 打包方式：jar
 
 #### 第二步：在pom中添加逆向工程插件
+
 ```xml
 <!--定制构建过程-->
 <build>
@@ -4781,6 +4796,7 @@ public void testSelectById2() throws Exception{
 + mybatis-config.xml
 
 #### 第二步：编写测试程序
+
 ```java
 package com.jkweilai.mybatis.test;
 
@@ -4964,6 +4980,7 @@ public class PageTest {
 使用PageHelper插件进行分页，更加的便捷。
 
 #### 第一步：引入依赖
+
 ```xml
 <dependency>
   <groupId>com.github.pagehelper</groupId>
@@ -4982,6 +4999,7 @@ typeAliases标签下面进行配置：
 ```
 
 #### 第三步：编写Java代码
+
 ```java
 List<Car> selectAll();
 ```
@@ -5067,6 +5085,7 @@ pojo：com.jkweilai.mybatis.pojo.Car
 mapper接口：com.jkweilai.mybatis.mapper.CarMapper
 
 ### @Insert
+
 ```java
 package com.jkweilai.mybatis.mapper;
 
@@ -5109,6 +5128,7 @@ public class AnnotationTest {
 ```
 
 ### @Delete
+
 ```java
 @Delete("delete from t_car where id = #{id}")
 int deleteById(Long id);
@@ -5127,6 +5147,7 @@ public void testDelete() throws Exception{
 ```
 
 ### @Update
+
 ```java
 @Update("update t_car set car_num=#{carNum},brand=#{brand},guide_price=#{guidePrice},produce_time=#{produceTime},car_type=#{carType} where id=#{id}")
 int update(Car car);
@@ -5146,6 +5167,7 @@ public void testUpdate() throws Exception{
 ```
 
 ### @Select
+
 ```java
 @Select("select * from t_car where id = #{id}")
 @Results({

@@ -281,6 +281,7 @@ class Mp01ApplicationTests {
 + IdType.NONE：无特定生成策略，如果全局配置中有 IdType 相关的配置，则会跟随全局配置。
 
 #### @TableField
+
 ```sql
 drop table if exists t_customer;
 create table t_customer(
@@ -580,6 +581,7 @@ public interface CarMapper extends BaseMapper<Car> {
 mp不仅提供了持久层的代码，还提供了service层的代码。
 
 ### 自己写的service层代码
+
 ```java
 package com.jkweilai.mp.service;
 
@@ -921,6 +923,7 @@ public class CarServiceImpl extends ServiceImpl<CarDao, Car> implements CarServi
 ```
 
 #### 编写dto
+
 ```java
 package com.jkweilai.mp.dto;
 
@@ -955,6 +958,7 @@ public class CarDTO {
 ```
 
 #### 编写vo
+
 ```java
 package com.jkweilai.mp.vo;
 
@@ -1470,6 +1474,7 @@ public class WeiXiuServiceImpl extends ServiceImpl<WeiXiuMapper, WeiXiu> impleme
 接下来我们就使用Db来实现这样的需求：给定汽车的id，查询汽车的同时，再将汽车关联的维修记录也查出来。
 
 #### 编写`WeiXiu`这个实体类
+
 ```java
 package com.jkweilai.carmgtsys.model.po;
 
@@ -1493,6 +1498,7 @@ public class WeiXiu {
 ```
 
 #### 编写`WeiXiuMapper`
+
 ```java
 package com.jkweilai.carmgtsys.mapper;
 
@@ -1504,6 +1510,7 @@ public interface WeiXiuMapper extends BaseMapper<WeiXiu> {
 ```
 
 #### 编写`WeiXiuVO`
+
 ```java
 package com.jkweilai.carmgtsys.model.vo;
 
@@ -1528,6 +1535,7 @@ public class WeiXiuVO {
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744427707462-cc4ff4a5-17ba-4ff9-8f03-7e0aa1106ed5.png)
 
 #### `CarController`中添加业务接口
+
 ```java
 @Operation(summary = "查询车辆信息以及该车辆的维修记录",
         description = "根据车辆id查询汽车信息，并且将该车辆的维修记录全部查询出来",
@@ -1539,6 +1547,7 @@ public CarVO queryCarAndWeiXiuById(@PathVariable("id") Long id){
 ```
 
 #### `CarServiceImpl`编写业务方法
+
 ```java
 @Override
 public CarVO queryCarAndWeiXiuById(Long id) {
@@ -1783,6 +1792,7 @@ MP 给我们提供了很多 json 处理器，springboot 默认集成的是 jacks
 
 ### 使用 json 处理器
 #### 第一步：编写 json 对应的实体
+
 ```java
 package com.jkweilai.mp.entity;
 
@@ -1918,6 +1928,7 @@ public class MyBatisConfig {
 ```
 
 ### 编写分页查询的代码
+
 ```java
 @Test
 void testPage(){

@@ -166,6 +166,11 @@ def font_pass(lines, stats):
                     stats['font_solo_close'] += 1
                     continue
                 i0, s0, e0, st0 = stack.pop()
+                # 紧邻空对（<font ...></font> 无内容）→ 整体删除
+                if i0 == i and e0 == s:
+                    ops_by_line[i].append((s0, e, ''))
+                    stats['font_empty_removed'] += 1
+                    continue
                 if is_bg_light_style(st0):
                     ops_by_line[i0].append((s0, e0, BT))
                     ops_by_line[i].append((s, e, BT))
@@ -209,6 +214,37 @@ def rebuild_span(seg):
     return delim + inner3 + delim
 
 
+def fix_heading_fence(lines, stats):
+    """Obsidian 严格模式下：标题行紧跟代码块 fence 会导致代码块不被识别。
+    在标题行与 fence 行之间插入空行。"""
+    out = []
+    in_fence = False
+    fs_char = None
+    fs_len = 0
+    prev_heading = False
+    for line in lines:
+        if in_fence:
+            out.append(line)
+            if re.match(r'^\s{0,3}' + re.escape(fs_char) + '{' + str(fs_len) + r',}\s*$', line):
+                in_fence = False
+            prev_heading = False
+            continue
+        m = FENCE_RE.match(line)
+        if m:
+            if prev_heading:
+                out.append('')
+                stats['heading_fence_fixed'] += 1
+            in_fence = True
+            fs_char = m.group(2)[0]
+            fs_len = len(m.group(2))
+            out.append(line)
+            prev_heading = False
+            continue
+        prev_heading = bool(HEADING_RE.match(line))
+        out.append(line)
+    return out
+
+
 def process_doc(text, diag):
     lines = text.split('\n')
     font_ops = font_pass(lines, diag)
@@ -237,6 +273,13 @@ def process_doc(text, diag):
             blank_run += 1
             if blank_run <= 1:
                 out.append(line)
+            continue
+        # 语雀空样式残留行（独立 "``" / "**``**"）→ 清空为空白
+        if re.fullmatch(r'(?:\*\*)?`{2}(?:\*\*)?', line.strip()):
+            blank_run += 1
+            if blank_run <= 1:
+                out.append('')
+            diag['empty_span_line_removed'] += 1
             continue
         blank_run = 0
 
@@ -317,7 +360,7 @@ def process_doc(text, diag):
             line = '#' + line
             diag['headings'] += 1
         out.append(line)
-    return '\n'.join(out)
+    return '\n'.join(fix_heading_fence(out, diag))
 
 
 def main():
@@ -333,6 +376,10 @@ def main():
             sc = data['sourcecode'].strip('\n')
             diag = Counter()
             body = process_doc(sc, diag).strip('\n')
+            # 特判修复：个别语雀导出残留（多余反引号导致字面显示）
+            if '`ctrl+``组合键' in body:
+                body = body.replace('`ctrl+``组合键', '`ctrl+`组合键')
+                diag['bt_ctrl_fixed'] = 1
             parts.append('# ' + title + '\n\n' + body)
             totals.update(diag)
             log_lines.append('=' * 70)

@@ -424,6 +424,7 @@ public class FirstController {
 **<font style="color:#DF2A3F;">&lt;load-on-startup&gt;1&lt;/load-on-startup&gt;建议加上，这样可以提高用户第一次访问的效率。表示在web服务器启动时初始化DispatcherServlet。</font>**
 
 #### 编写IndexController
+
 ```java
 package com.jkweilai.springmvc.controller;
 
@@ -1034,7 +1035,7 @@ public String testMethod(){
 + `TRACE：服务器响应输出客户端的 HTTP 请求，主要用于调试和测试。`
 + `CONNECT：建立网络连接，通常用于加密 SSL/TLS 连接。`
 
-``
+
 
 `注意：`
 
@@ -1045,7 +1046,7 @@ public String testMethod(){
 5. `使用form表单，设置method="post"，发送post请求`
 6. **`使用form表单，设置method="put/delete/head"，发送get请求。（针对这种情况，可以测试一下）`**
 
-``
+
 
 `将index.html中登录表单的提交方式method设置为put：`
 
@@ -1273,6 +1274,7 @@ public String testHeaders(){
 
 ### 准备工作
 #### 创建UserController
+
 ```java
 package com.jkweilai.springmvc.controller;
 
@@ -1289,6 +1291,7 @@ public class UserController {
 ```
 
 #### 提供一个注册页面
+
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
@@ -2247,6 +2250,7 @@ public class RequestScopeTestController {
 这种方式当然可以，用SpringMVC框架，不建议使用原生Servlet API。
 
 #### 使用Model接口
+
 ```java
 @RequestMapping("/testModel")
 public String testModel(Model model){
@@ -2257,6 +2261,7 @@ public String testModel(Model model){
 ```
 
 #### 使用Map接口
+
 ```java
 @RequestMapping("/testMap")
 public String testMap(Map<String, Object> map){
@@ -2267,6 +2272,7 @@ public String testMap(Map<String, Object> map){
 ```
 
 #### 使用ModelMap类
+
 ```java
 @RequestMapping("/testModelMap")
 public String testModelMap(ModelMap modelMap){
@@ -2363,6 +2369,7 @@ public ModelAndView testModelAndView(){
 2. 使用SessionAttributes注解
 
 #### 使用原生Servlet API
+
 ```java
 @Controller
 public class SessionScopeTestController {
@@ -3066,6 +3073,7 @@ RESTful对URL的约束和规范的核心是：**<font style="color:#DF2A3F;">通
 RESTful规范中规定，如果要查询数据，需要发送GET请求。
 
 #### 根据id查询(GET /api/user/1)
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -3163,6 +3171,7 @@ public class UserController {
 启动服务器，测试：http://localhost:8080/springmvc
 
 #### 查询所有(GET /api/user)
+
 ```html
 <!--查询所有-->
 <a th:href="@{/api/user}">查询所有</a><br>
@@ -3270,6 +3279,7 @@ HiddenHttpMethodFilter是Spring MVC框架提供的，专门用于RESTful编程�
 文件包括：user.css、user_index.html、user_list.html、user_add.html、user_edit.html。代码如下：
 
 #### user.css
+
 ```css
 .header {
   background-color: #f2f2f2;
@@ -3387,6 +3397,7 @@ a {
 ```
 
 #### user_index.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -3407,6 +3418,7 @@ a {
 ```
 
 #### user_list.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -3460,6 +3472,7 @@ a {
 ```
 
 #### user_add.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -3491,6 +3504,7 @@ a {
 ```
 
 #### user_edit.html
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -3526,6 +3540,7 @@ a {
 打包方式 `war`
 
 #### 引入相关依赖
+
 ```xml
 <dependencies>
     <!--Spring MVC依赖-->
@@ -3564,6 +3579,7 @@ a {
 ```
 
 #### 添加web支持，配置web.xml文件
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
@@ -3627,6 +3643,7 @@ a {
 + 再配置 HiddenHttpMethodFilter
 
 #### 配置springmvc.xml文件
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
@@ -4755,6 +4772,7 @@ public class FileController {
 **<font style="color:#DF2A3F;">建议：上传文件时，文件起名采用UUID。以防文件覆盖。</font>**
 
 ### 文件下载
+
 ```html
 <!--文件下载-->
 <a th:href="@{/download}">文件下载</a>
@@ -4830,6 +4848,7 @@ DefaultHandlerExceptionResolver 是默认的异常处理器。
 + 通过注解
 
 #### 配置文件方式
+
 ```xml
 <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
     <!--配置优先级，确保走自定义的异常处理器，不走默认的异常处理器-->
@@ -4864,6 +4883,7 @@ DefaultHandlerExceptionResolver 是默认的异常处理器。
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711684183329-eb0e9b03-4d1d-442e-9d6b-22384e3bd776.png)
 
 #### 注解方式
+
 ```java
 @ControllerAdvice
 public class ExceptionController {
@@ -5129,6 +5149,7 @@ Spring MVC的拦截器作用是在请求到达控制器之前或之后进行拦�
 
 #### 拦截器部分源码分析
 ##### 方法执行顺序的源码分析
+
 ```java
 public class DispatcherServlet extends FrameworkServlet {
     protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -5156,6 +5177,7 @@ public class DispatcherServlet extends FrameworkServlet {
 ```
 
 ##### 拦截与放行的源码分析
+
 ```java
 public class DispatcherServlet extends FrameworkServlet {
     protected void doDispatch(HttpServletRequest request, HttpServletResponse response) throws Exception {
@@ -5225,6 +5247,7 @@ public class HandlerExecutionChain {
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711680479220-91b54971-fc52-47b6-a711-4425dfa1617a.png)
 
 ##### 如果其中一个拦截器preHandle返回false
+
 ```xml
 <mvc:interceptors>
     <ref bean="interceptor1"/>
@@ -5679,6 +5702,7 @@ public class SpringConfig {
 重点注意事项：SpringMVC 的配置类需要实现一个固定的接口 `**WebMvcConfigurer**`
 
 #### 开启注解驱动及扫描 controller
+
 ```java
 package com.jkweilai.springmvc.config;
 
@@ -5702,6 +5726,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 使用了 `@EnableWebMvc`，你的类**必须实现 ****`WebMvcConfigurer`**** 接口**来配置静态资源处理，否则所有静态资源（CSS、JS、图片）都无法访问。
 
 #### 视图解析器
+
 ```java
 // 配置Thymeleaf视图解析器
 @Bean
@@ -5732,6 +5757,7 @@ public SpringResourceTemplateResolver templateResolver() {
 ```
 
 #### 配置静态资源
+
 ```java
 // 静态资源配置
 @Override
@@ -5743,6 +5769,7 @@ public void addResourceHandlers(ResourceHandlerRegistry registry) {
 ```
 
 #### 配置 view-controller
+
 ```java
 // 配置视图控制器（对于没有业务的Controller可以直接配置，不需要写）
 @Override
@@ -5881,6 +5908,7 @@ public class TestController {
 我们在前面学习 Spring 的时候，已经实现了 Spring+MyBatis 的全注解方式开发，我们将当时的配置拿过来就行了。
 
 ### 第一步：引入 SSM 依赖
+
 ```xml
 <dependencies>
     <!--springmvc依赖-->

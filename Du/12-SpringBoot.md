@@ -94,6 +94,7 @@ Spring Boot4 要求JDK最低版本是17，建议 JDK 21
 可以看到spring mvc被引入了，tomcat服务器也被引入了。
 
 ### 第七步：编写Spring Boot主入口程序
+
 ```java
 package com.jkweilai.springboot;
 
@@ -110,6 +111,7 @@ public class MyApplication {
 ```
 
 ### 第八步：编写controller
+
 ```java
 package com.jkweilai.springboot.controller;
 
@@ -287,6 +289,7 @@ Spring Initializr：[https://start.spring.io](https://start.spring.io)
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728643539990-d4e9061c-1e9e-4b3c-a21a-b2604f165f5b.png)
 
 #### 脚手架生成的pom.xml文件
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -425,7 +428,7 @@ Spring Initializr：[https://start.spring.io](https://start.spring.io)
 + 属性设置：每个子模块都需要单独设置通用的属性，如项目编码、Java 版本等。
 + 构建配置：每个子模块的构建配置需要单独维护，难以保证一致性。
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 ### 原理揭晓
 通过源码来分析一下：
@@ -793,6 +796,7 @@ public class UserServiceImpl implements UserService {
 ```
 
 #### 直接在入口程序中调用service
+
 ```java
 @SpringBootApplication
 public class Sb306TestApplication {
@@ -843,6 +847,7 @@ public class Sb306TestApplication {
 总的来说，`@SpringBootTest` 为你的测试提供了尽可能接近实际运行时环境的条件，这对于验证应用程序的行为非常有用。
 
 #### 注入service并调用
+
 ```java
 @SpringBootTest
 class Sb306TestApplicationTests {
@@ -1133,7 +1138,7 @@ myapp:
 
 + --- 这个符号下面的配置可以认为是一个独立的yaml文件。便于庞大文件的阅读。
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 #### application.yml
 Spring Boot框架同时支持`properties`和`yaml`。
@@ -1793,7 +1798,7 @@ vips:
 
 提醒：记得入口程序使用`@ConfigurationPropertiesScan(basePackages = "com.jkweilai.sb307externalconfig.bean")进行标注。`
 
-``
+
 
 `编写测试程序，执行结果如下：`
 
@@ -2150,6 +2155,7 @@ Spring Boot的AOP编程和Spring框架中AOP编程的唯一区别是：引入依
 ```
 
 #### 编写service并提供方法
+
 ```java
 package com.jkweilai.aop.service;
 
@@ -2188,6 +2194,7 @@ public class OrderServiceImpl implements OrderService {
 ```
 
 #### 编写切面
+
 ```java
 package com.jkweilai.aop;
 
@@ -2236,6 +2243,7 @@ public class LogAspect {
 ```
 
 #### 测试
+
 ```java
 package com.jkweilai.aop;
 
@@ -2850,7 +2858,7 @@ public class com.jkweilai.lomboktest.entity.User {
 + 用于生成 toString 和 equals/hashCode 方法。
 + **<font style="color:#DF2A3F;">这两个注解都有</font>****`exclude`****`属性，通过这个属性可以定制toString、hashCode、equals方法。`**
 
-**``**
+****
 
 ### 使用 Lombok
 #### 添加依赖
@@ -3215,6 +3223,7 @@ mybatis.configuration.map-underscore-to-camel-case=true
 ```
 
 ### 编写测试程序
+
 ```java
 package com.jkweilai.springboot;
 
@@ -4014,6 +4023,7 @@ protected AutoConfigurationEntry getAutoConfigurationEntry(AnnotationMetadata an
 ```
 
 #### 获取注解属性
+
 ```java
 AnnotationAttributes attributes = getAttributes(annotationMetadata);
 ```
@@ -4035,6 +4045,7 @@ attributes = {
 ```
 
 #### 获取候选配置
+
 ```java
 List<String> configurations = getCandidateConfigurations(annotationMetadata, attributes);
 ```
@@ -4042,6 +4053,7 @@ List<String> configurations = getCandidateConfigurations(annotationMetadata, att
 **作用**：从 `META-INF/spring/org.springframework.boot.autoconfigure.AutoConfiguration.imports` 文件加载所有自动配置类。
 
 #### 去重
+
 ```java
 configurations = removeDuplicates(configurations);
 ```
@@ -4049,6 +4061,7 @@ configurations = removeDuplicates(configurations);
 **作用**：确保配置类不重复。理论上不会重复，但多个 jar 包就不一定了。
 
 #### 获取排除项
+
 ```java
 Set<String> exclusions = getExclusions(annotationMetadata, attributes);
 ```
@@ -4056,6 +4069,7 @@ Set<String> exclusions = getExclusions(annotationMetadata, attributes);
 **作用**：收集所有要排除的配置类。（这里的排除只是排除掉程序员在编码阶段指定的要排除的类，并不是通过条件注解进行过滤。）
 
 #### 检查排除项
+
 ```java
 checkExcludedClasses(configurations, exclusions);
 ```
@@ -4063,6 +4077,7 @@ checkExcludedClasses(configurations, exclusions);
 **作用**：验证用户排除的类确实是自动配置类（防止排除错误）。
 
 #### 排除
+
 ```java
 configurations.removeAll(exclusions);
 ```
@@ -4070,6 +4085,7 @@ configurations.removeAll(exclusions);
 **作用**：从候选列表中移除被排除的配置类。（仍然是排除程序员指定要排除的配置类。并不是经过条件注解进行过滤。）
 
 #### <font style="color:#DF2A3F;">条件过滤（最核心的一步）</font>
+
 ```java
 configurations = getConfigurationClassFilter().filter(configurations);
 ```
@@ -4077,6 +4093,7 @@ configurations = getConfigurationClassFilter().filter(configurations);
 **作用**：使用 `@Conditional` 系列注解进行智能过滤。
 
 #### 触发事件（这个对于我们来说不重要）
+
 ```java
 fireAutoConfigurationImportEvents(configurations, exclusions);
 ```
@@ -4348,6 +4365,7 @@ boolean[] match = filter.match(candidates, this.autoConfigurationMetadata);
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### WebMvc自动配置是否生效的条件
+
 ```java
 // 先加载这几个类，然后再加载WebMvcAutoConfiguration
 @AutoConfiguration(after = { DispatcherServletAutoConfiguration.class, TaskExecutionAutoConfiguration.class,ValidationAutoConfiguration.class })
@@ -4367,6 +4385,7 @@ public class WebMvcAutoConfiguration {}
 
 ### WebMvc自动配置生效后引入了两个Filter Bean
 #### 引入了`HiddenHttpMethodFilter Bean`
+
 ```java
 @Bean
 @ConditionalOnMissingBean(HiddenHttpMethodFilter.class)
@@ -4379,6 +4398,7 @@ public OrderedHiddenHttpMethodFilter hiddenHttpMethodFilter() {
 提供对浏览器表单支持PUT、DELETE等HTTP方法的兼容处理
 
 #### 引入了`FormContentFilter Bean`
+
 ```java
 @Bean
 @ConditionalOnMissingBean(FormContentFilter.class)
@@ -4483,7 +4503,7 @@ public interface WebMvcConfigurer {
 
 原因是因为：`EnableWebMvcConfiguration`是`WebMvcAutoConfiguration`类的内部类。在`WebMvcAutoConfiguration`进行加载的时候，`EnableWebMvcConfiguration`这个内部类还没有加载。因此这个时候在容器中还不存在`WebMvcConfigurationSupport`的Bean，所以`WebMvcAutoConfiguration`仍然会生效。
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 **<font style="color:#DF2A3F;">注意区分：WebMvcAutoConfiguration的两个内部类：</font>**
 
@@ -5752,6 +5772,7 @@ server.tomcat.basedir=.
 
 ### 关闭logo图标
 #### 配置方式
+
 ```properties
 spring.main.banner-mode=off
 ```
@@ -5798,6 +5819,7 @@ new SpringApplicationBuilder()
 官网地址：[https://pagehelper.github.io/](https://pagehelper.github.io/)
 
 ### 引入依赖
+
 ```xml
 <dependency>
     <groupId>com.github.pagehelper</groupId>
@@ -5807,6 +5829,7 @@ new SpringApplicationBuilder()
 ```
 
 ### 编写代码
+
 ```java
 @RestController
 public class VipController {
@@ -5832,6 +5855,7 @@ public class VipController {
 对于前后端分离的系统来说，为了降低沟通成本，我们有必要给前端系统开发人员返回统一格式的JSON数据。多数开发团队一般都会封装一个`R`对象来解决统一响应格式的问题。
 
 ### 封装R对象
+
 ```java
 @NoArgsConstructor
 @AllArgsConstructor
@@ -6180,6 +6204,7 @@ logging.level.root=TRACE
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731729214172-ae5c8ba3-c73e-40c6-a450-7511953a1402.png)
 
 ### 丰富启动日志（了解）
+
 ```properties
 debug=true
 ```
@@ -6191,6 +6216,7 @@ debug=true
 **仅作用于框架启动阶段**，启动完成后不再生效。
 
 ### 日志的粗细粒度
+
 ```properties
 logging.level.root=WARN                     # 全局默认WARN
 logging.level.com.jkweilai.service=INFO     # 明确指定service包为INFO
@@ -6236,6 +6262,7 @@ logging:
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765190559645-fb05639a-972a-45be-9041-a83502619933.png)
 
 ### 日志输出到文件
+
 ```properties
 logging.file.name=./log/my.log
 ```
@@ -6537,7 +6564,7 @@ ZoneId.getAvailableZoneIds().forEach(System.out::println);
 + <font style="color:#DF2A3F;">Asia/Chongqing</font>
 + <font style="color:#DF2A3F;">Asia/Shanghai</font>
 
-<font style="color:#DF2A3F;"></font>
+
 
 **如何使用：zone 一般在使用 cron 表达式的时候才能看出效果。**
 
@@ -6736,6 +6763,7 @@ public class AsyncConfig {
 ```
 
 #### 编写异步方法
+
 ```java
 package com.jkweilai.demo.async;
 
@@ -6763,6 +6791,7 @@ public class AsyncService {
 ```
 
 #### 编写测试程序
+
 ```java
 package com.jkweilai.demo;
 
@@ -6875,6 +6904,7 @@ Spring Boot 自动集成了 Bean Validation 标准规范（JSR 380）及其参�
 
 ### 在 SpringBoot 中的使用
 #### 第一步：引入启动器
+
 ```xml
 <dependency>
     <groupId>org.springframework.boot</groupId>
@@ -7005,6 +7035,7 @@ public class GlobalExceptionHandler {
 **总结一句话：Swagger 是实现 OpenAPI 规范的工具集**
 
 #### 不用 Swagger 之前
+
 ```plain
 🟥 问题1：文档手工维护
 程序员写代码 -> 手动写Word文档 -> 之后修改代码后经常忘记同步更新word文档 -> 文档过时
@@ -7019,6 +7050,7 @@ public class GlobalExceptionHandler {
 ```
 
 #### 用 Swagger 之后
+
 ```plain
 🟢 解决1：代码即文档
 程序员编写代码的时候写几个注解 -> 自动实时生成在线API文档 -> 实时同步
@@ -7173,6 +7205,7 @@ public class Knife4jConfig {
 ```
 
 #### 创建实体类
+
 ```java
 package com.jkweilai.demo.entity;
 
@@ -7253,6 +7286,7 @@ public class User {
 ```
 
 #### 创建响应封装类
+
 ```java
 package com.jkweilai.demo.common;
 
@@ -7316,6 +7350,7 @@ public class Result<T> {
 ```
 
 #### 创建Service层接口
+
 ```java
 package com.jkweilai.demo.service;
 
@@ -7358,6 +7393,7 @@ public interface UserService {
 ```
 
 #### Service 实现类
+
 ```java
 package com.jkweilai.demo.service.impl;
 
@@ -7489,6 +7525,7 @@ public class UserServiceImpl implements UserService {
 ```
 
 #### 创建Controller层
+
 ```java
 package com.jkweilai.demo.controller;
 
@@ -7578,6 +7615,7 @@ public class UserController {
 ```
 
 #### 创建全局异常处理器
+
 ```java
 package com.jkweilai.demo.handler;
 
@@ -7682,6 +7720,7 @@ public class GlobalExceptionHandler {
 ```
 
 #### 创建主启动类
+
 ```java
 package com.jkweilai.demo;
 

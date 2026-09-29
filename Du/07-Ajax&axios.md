@@ -89,6 +89,7 @@ const xhr = new XMLHttpRequest();
 功能描述：用户在注册页面上输入用户名 ，失去焦点后发送 AJAX 请求，验证用户名是否可用。
 
 #### 准备页面
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -501,6 +502,7 @@ Promise 就像一个"承诺"，表示一个将来会完成（或失败）的操�
 **<font style="color:#2F4BDA;">对于我们之前编写的 XHR 发送 AJAX 请求，大家可以试想一下，如果继续使用这种编码风格，在请求 1 成功响应后继续发送请求 2，在请求 2 成功响应后继续发送请求 3，会不会出现回调地狱问题！！！！</font>**
 
 ### Promise 基本代码
+
 ```javascript
 // 创建并立即返回一个Promise
 // new Promise()是调用构造函数
@@ -907,6 +909,7 @@ fetch('check', {
 ```
 
 #### 发送 POST 请求以 FormData 格式提交
+
 ```javascript
 // 创建URLSearchParams对象并添加参数
 const formData = new URLSearchParams();
@@ -938,6 +941,7 @@ fetch('check', {
 ```
 
 #### 将以上代码改造为 async 和 await
+
 ```java
 // 注意：以下代码所在的函数上添加：async
 // 创建URLSearchParams对象并添加参数
@@ -974,6 +978,7 @@ try{
 ```
 
 ### 发送 GET 请求
+
 ```javascript
 axios.get('check', {
   // 这个参数将被自动追加到url后面，格式为 url?name=value
@@ -1024,6 +1029,7 @@ axios.get('check', {
 
 ### 发送 POST 请求
 #### 以表单方式提交数据
+
 ```javascript
 axios.post('check', `username=${username}`, {
   headers: {
@@ -1084,6 +1090,7 @@ axios.post('check', {username: username}, {
 ```
 
 #### 提交图片数据
+
 ```html
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -1240,6 +1247,7 @@ BOM 编程中的 history.pushState()方法可以模拟历史记录，并且修�
 
 ### 实现无刷新路由
 #### 前端代码
+
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -1297,6 +1305,7 @@ BOM 编程中的 history.pushState()方法可以模拟历史记录，并且修�
 ```
 
 #### 后端代码
+
 ```java
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;

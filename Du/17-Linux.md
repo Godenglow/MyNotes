@@ -553,7 +553,7 @@ vim（Vi Improved）是在vi基础上进行了改进和扩展的一个版本，�
 
 <font style="color:#DF2A3F;">注意：vi编辑器打开的文件如果不存在，则自动新建。</font>
 
-<font style="color:#DF2A3F;"></font>
+
 
 ### vi编辑器常用命令
 dd：删除光标所在行
@@ -597,6 +597,7 @@ su 用户名
 
 ### echo命令
 #### 输出字符串
+
 ```shell
 echo "Hello, world!"
 ```
@@ -606,6 +607,7 @@ echo "Hello, world!"
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797373172-418e1376-70f4-46ca-b834-e4c0d0024106.png)
 
 #### 输出变量
+
 ```shell
 name="John"
 echo "My name is $name"
@@ -616,6 +618,7 @@ echo "My name is $name"
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797529679-cb34c68d-7577-43de-9b3a-1860a6c7bc9c.png)
 
 #### 输出多行
+
 ```shell
 echo "line 1
 line 2
@@ -627,6 +630,7 @@ line 3"
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797624949-b7e6b313-2768-4c40-9306-50a127368623.png)
 
 #### 输出特殊字符
+
 ```shell
 echo -e "Line 1\nLine 2\tTable"
 ```
@@ -1029,6 +1033,7 @@ curl -H "User-Agent: Mozilla/5.0" www.example.com
 开发人员使用 `netstat` 最常用的几种用法如下：
 
 #### 查看所有连接
+
 ```bash
 # 查看所有活动的网络连接
 netstat -tunlp
@@ -1043,6 +1048,7 @@ netstat -tunlp
 + `-p`：显示进程信息（需要 sudo）
 
 #### 检查服务是否启动
+
 ```bash
 # 查看服务监听端口
 netstat -tlnp | grep -E "(3306|5432|6379|27017)"  # 数据库端口
@@ -1064,12 +1070,14 @@ netstat -tlnp | grep -E "(3306|5432|6379|27017)"  # 数据库端口
 **`TIME_WAIT`****连接已关闭，但系统在“延迟释放端口”。大量的 ****`TIME_WAIT`**** 会耗尽系统的可用端口号，导致无法建立新的网络连接**
 
 #### 排查"端口已被占用"错误
+
 ```bash
 # 查找哪个进程占用了 8080 端口
 sudo netstat -tunlp | grep :8080
 ```
 
 #### 诊断连接问题
+
 ```bash
 # 查看所有 ESTABLISHED 连接
 netstat -nat | grep ESTABLISHED
@@ -1652,6 +1660,7 @@ groupadd -g 101 dev2
 其中101是dev2这个组的组号。
 
 #### 用户组的修改
+
 ```shell
 groupmod -g 102 dev2
 ```
@@ -1662,6 +1671,7 @@ groupmod -n dev3 dev2
 ```
 
 #### 用户组的删除
+
 ```shell
 # 删除用户组dev3
 groupdel dev3
@@ -1701,6 +1711,7 @@ groupdel dev3
 添加lisi用户，该用户的主目录/usr/lisi，所属主组dev（开发组），附加组test（测试组）
 
 #### 设置密码
+
 ```shell
 passwd lisi
 ```
@@ -1766,6 +1777,7 @@ usermod -U zhangsan
 ```
 
 #### 删除用户
+
 ```shell
 userdel -r zhangsan
 ```
@@ -2520,6 +2532,7 @@ sudo shutdown -h now
 6. **记下这个新MAC地址**（非常重要！）
 
 ### 配置克隆机
+
 ```shell
 # 获取root权限
 sudo -i
@@ -2873,7 +2886,7 @@ done
 + <font style="color:#DF2A3F;">$((j+1))，如果j是5的话，结果就会返回6 （注意，使用这个运算符的时候，括号里面不能有空格）</font>
 + <font style="color:#DF2A3F;">$(echo "hello world")，会将"hello world"打印，然后再将"hello world"字符串返回。</font>
 
-<font style="color:#DF2A3F;"></font>
+
 
 案例：
 

@@ -542,6 +542,7 @@ mvn clean install
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1747832547485-f45caceb-188f-4394-9e6c-0f430cc6e5c2.png)
 
 #### 添加junit5依赖
+
 ```xml
 <dependency>
     <groupId>org.junit.jupiter</groupId>
@@ -556,6 +557,7 @@ mvn clean install
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1747833017584-934a0bf8-c31e-4c62-a155-7db36126edd4.png)<font style="color:#DF2A3F;"> </font>
 
 #### 编写Java程序
+
 ```java
 package com.jkweilai;
 
@@ -573,6 +575,7 @@ public class Hello {
 ```
 
 #### 编写测试程序
+
 ```java
 package com.jkweilai;
 
@@ -613,6 +616,7 @@ public class HelloTest {
 **<font style="color:#DF2A3F;">对于当前 IDEA 版本来说，经过测试，这个目录的名字必须是 </font>****`webapp`****<font style="color:#DF2A3F;">才能识别。</font>**
 
 ##### 提供web.xml配置
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
@@ -648,6 +652,7 @@ public class HelloTest {
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1743648194644-d3078213-fea2-4df5-8505-0159f191d639.png)
 
 ##### 修改web.xml（可选）
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
@@ -658,6 +663,7 @@ public class HelloTest {
 ```
 
 ##### 添加servlet依赖
+
 ```xml
 <dependency>
     <groupId>jakarta.servlet</groupId>
@@ -668,6 +674,7 @@ public class HelloTest {
 ```
 
 #### 编写Servlet并部署项目到Tomcat
+
 ```java
 package com.jkweilai.servlet;
 
@@ -1602,6 +1609,7 @@ Maven 在设计时，借鉴了 Java 面向对象中的继承思想，提出了 P
 | reporting | 包括项目的报告输出目录配置、报告插件配置等 |
 
 ### 父工程示例
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -1674,6 +1682,7 @@ Maven 在设计时，借鉴了 Java 面向对象中的继承思想，提出了 P
 ```
 
 ### 子工程示例
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
@@ -1923,6 +1932,7 @@ Nexus默认内置了许多仓库，这些仓库被分为三大类，每种类型
 ```
 
 ##### 设置`<mirror>`标签
+
 ```xml
 <mirror>
   <id>nexus-jkweilai</id>

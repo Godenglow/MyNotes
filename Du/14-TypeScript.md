@@ -13,6 +13,7 @@ TypeScript 是**微软开发**的一种开源编程语言，它是 JavaScript �
 JavaScript 的困扰不仅限于以下提到的 4 个。
 
 ### 不清不楚的数据类型
+
 ```javascript
 let hello = 'hello';
 hello();
@@ -21,6 +22,7 @@ hello();
 语法错误，即使放到 IDE 中，IDE 也不会提示错误。
 
 ### 有漏洞的逻辑
+
 ```javascript
 let result = Math.floor(Math.random() * 100) % 2 ? '奇数' : '偶数';
 if(result !== '奇数'){
@@ -33,6 +35,7 @@ if(result !== '奇数'){
 有逻辑漏洞，即使放到 IDE 中，IDE 也不会提示错误。
 
 ### 访问不存在的属性
+
 ```javascript
 const user = {
     username: 'jack',
@@ -45,6 +48,7 @@ console.log(user.heigth);
 语法错误，即使放到 IDE 中，IDE 也不会提示错误。
 
 ### 低级的拼写错误
+
 ```javascript
 const message = 'hello typescript!';
 console.log(mesage);
@@ -262,6 +266,7 @@ console.log(dayjs().format("YYYY-MM-DD HH:mm:ss"));
 
 ### 命令行编译和运行
 #### 创建 ts 文件并编写代码
+
 ```typescript
 const user = {
     username: '张三',
@@ -271,6 +276,7 @@ console.log(`我叫${user.username}，今年${user.age}岁了！`);
 ```
 
 #### 使用 Node.js 提供的 npm 安装 tsc
+
 ```bash
 npm install -g typescript
 ```
@@ -360,6 +366,7 @@ tsconfig.json 文件内容：
 **<font style="color:#DF2A3F;">注意：本课程要求将 </font>****`target`****<font style="color:#DF2A3F;">设置为 </font>****`es6`****<font style="color:#DF2A3F;">，将 </font>****`module`****<font style="color:#DF2A3F;">设置为 </font>****`es2015`****<font style="color:#DF2A3F;">。</font>**
 
 #### tsc --watch
+
 ```bash
 tsc --watch
 ```
@@ -403,6 +410,7 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 类型声明语法
+
 ```typescript
 // 类型声明
 let username: string; // 冒号和类型之间建议添加一个空格，这也是代码规范中要求的。
@@ -425,6 +433,7 @@ console.log(username, age, gender ? '男': '女');
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751439197094-ba37e708-fc95-482d-98c1-ce5af4032010.png)
 
 ### 函数参数类型限定
+
 ```typescript
 // 函数定义，并且指定参数类型
 function sum(a: number, b: number){
@@ -444,6 +453,7 @@ console.log(result);
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751439328671-0eff5603-6740-450c-87cb-59db20b363e3.png)
 
 ### 函数返回值类型限定
+
 ```javascript
 // 函数定义，并且指定参数类型，指定返回值类型
 function sum(a: number, b: number): number{
@@ -466,6 +476,7 @@ console.log(strResult);
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751439537824-9ff0dbb6-d2b3-4cc4-9362-2797f50824af.png)
 
 ### 函数参数个数限定
+
 ```javascript
 function sum(a: number, b: number){
     return a + b;
@@ -516,6 +527,7 @@ isTrue = false;  // 错误
 
 ### 基础类型推断
 #### 变量初始化推断
+
 ```typescript
 let num = 42;       // 推断为 number 类型
 //num = '10'; // 报错
@@ -543,6 +555,7 @@ let userCode: UserCode = '101';
 2. **typeof** 运算符如果出现在“**值位置（值位置编译后不会消失）**”，则属于 `JavaScript`中的运算符。它的作用是在运行阶段动态获取某个值的类型。
 
 #### 函数返回值推断
+
 ```typescript
 function add(a: number, b: number) {
   return a + b; // 返回值自动推断为 number
@@ -553,6 +566,7 @@ function add(a: number, b: number) {
 
 ### 上下文类型推断
 #### 事件回调参数推断
+
 ```typescript
 let button = document.createElement('button');
 // TypeScript 知道 e 是 PointerEvent 类型
@@ -564,6 +578,7 @@ button.addEventListener("click", e => {
 ```
 
 #### 对象字面量推断
+
 ```typescript
 let person = {
   name: "Alice",
@@ -1074,6 +1089,7 @@ person = {
 ```
 
 #### 声明函数类型
+
 ```typescript
 // 自定义函数类型
 // 注意：以下这个箭头不是箭头函数。是一种ts自定义函数类型的一种语法。
@@ -1096,6 +1112,7 @@ myFunction = (k, f) => k + f;
 ```
 
 #### 声明数组类型
+
 ```typescript
 // 字符串数组
 let arr1: string[];
@@ -1148,6 +1165,7 @@ let userStatus = 1; // 1表示活跃，2表示禁用，3表示删除
 4. 缺乏类型检查 - 可以赋任意数值，编译器不会警告
 
 #### 使用枚举后
+
 ```typescript
 enum UserStatus {
   Active = 1,
@@ -1469,6 +1487,7 @@ let logFun: LogFun = function(){
 ```
 
 ### ts 中类的定义和继承
+
 ```typescript
 // 类的定义
 class Person {
@@ -1739,6 +1758,7 @@ fish.move();
 接口是一种**定义结构**的方式，主要作用是为**类**、**对象**、**函数**等规定**一种契约**，这样可以确保代码的**一致性**和**类型安全**，但要注意接口**只能定义格式**，**不能包含任何实现**。
 
 #### 定义类结构
+
 ```typescript
 // 接口
 interface PersonInterface {
@@ -1789,6 +1809,7 @@ user.shopping();
 ```
 
 #### 定义函数结构
+
 ```typescript
 // 函数类型接口（和普通接口不一样）
 interface SumInterface {
@@ -1826,6 +1847,7 @@ let c: BInterface = {
 ```
 
 #### 接口自动合并
+
 ```typescript
 // 接口
 interface UserInterface{
@@ -1851,6 +1873,7 @@ let user: UserInterface = {
 
 ### type 和 interface 的区别
 #### type 和 interface 都可以定义对象结构
+
 ```typescript
 // type定义对象结构
 type UserType = {
@@ -2586,6 +2609,7 @@ person.introduce();
 **<font style="color:#DF2A3F;">注意：方法装饰器在类定义时执行，而不是在方法调用时执行。</font>**
 
 #### 记录日志
+
 ```typescript
 // originalMethod 参数是目标方法
 // context 是装饰器上下文对象
@@ -2633,6 +2657,7 @@ c.shopping();
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751944305220-2338f72e-539c-4391-92bb-01c4fe6cb6c2.png)
 
 #### 权限控制
+
 ```typescript
 // 权限控制装饰器：只有管理员才能执行删除操作
 function AdminOnly(originalMethod: Function, context: ClassMethodDecoratorContext){
@@ -2708,6 +2733,7 @@ searchService.search('手机');
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751945440951-e534d018-02b4-46ab-9f86-7fb939fbaf4b.png)
 
 #### 参数验证
+
 ```typescript
 // 装饰器工厂
 function validateParams(...validators: Function[]) {
@@ -2758,6 +2784,7 @@ userService.createUser('lucy', '30');
 2. **只能影响初始值**：通过返回的初始化函数可以修改属性初始值
 
 #### 属性装饰器影响初始值
+
 ```typescript
 // 属性装饰器
 function Uppercase(value: undefined,context: ClassFieldDecoratorContext) {
@@ -2780,6 +2807,7 @@ console.log(user.name);
 
 ### 访问器装饰器（了解）
 #### 基础语法
+
 ```typescript
 // 访问器装饰器
 // 关键点：只有被accessor关键字修饰的属性才可以使用这种装饰器哦。

@@ -227,6 +227,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 3. 通知：`**ElNotification**`
 
 ### 使用提示框
+
 ```vue
 <template>
     <el-button @click="openMsg">消息</el-button>
@@ -300,6 +301,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 水平导航
+
 ```vue
 <template>
     <h3>水平导航</h3>
@@ -340,6 +342,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766064624719-39fed3ca-14cb-4d4f-8873-1914f901fe5a.png)
 
 ### 水平导航自定义样式
+
 ```vue
 <template>
     <h3>水平导航</h3>
@@ -431,6 +434,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ```
 
 ### 垂直导航
+
 ```vue
 <template>
     <h3>垂直导航</h3>
@@ -468,6 +472,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766064932562-5e3e86e9-749c-4b8f-9871-6ba67a3f3668.png)
 
 ### 菜单项也可以用图标
+
 ```vue
 <template>
     <h3>垂直导航</h3>
@@ -512,6 +517,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766065023173-cb377900-6a17-46e9-b843-aecda71dc6fe.png)
 
 ### 默认展开
+
 ```vue
 <template>
     <h3>垂直导航</h3>
@@ -555,6 +561,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ```
 
 ### 面包屑
+
 ```vue
 <template>
     <h3>面包屑</h3>
@@ -574,6 +581,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752897676067-b0632db0-fc3d-47d4-acfb-e7a1b1b85490.png)
 
 ### 下拉菜单
+
 ```vue
 <template>
     <h3>下拉菜单</h3>
@@ -618,6 +626,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 标签页
+
 ```vue
 <template>
     <h3>标签页</h3>
@@ -651,6 +660,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752907403997-8a4f2033-e8c7-462b-8fbc-233f1c58db51.png)
 
 ### 动态标签页
+
 ```vue
 <template>
     <h3>动态标签页</h3>
@@ -930,6 +940,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 默认的日期选择器
+
 ```vue
 <template>
     <h3>日期选择器</h3>

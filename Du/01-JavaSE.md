@@ -1056,6 +1056,7 @@ public class MyClass {
 作用域的不同主要是因为声明在不同位置的变量具有不同的生命周期。所谓的生命周期是：从内存开辟到内存释放。
 
 ##### Java的就近原则
+
 ```java
 public class MyClass {
     
@@ -2206,6 +2207,7 @@ public class KeyInput {
 ```
 
 ##### 解读字节码指令
+
 ```java
 public class ReadClass{
     public static void main(String[] args){
@@ -4095,6 +4097,7 @@ Student s2 = new Student();
 封装通过限制外部对对象内部的直接访问和修改，保证了数据的安全性，并提高了代码的可维护性和可复用性。
 
 ### 不使用封装存在的问题
+
 ```java
 package com.jkweilai.p05;
 
@@ -4306,6 +4309,7 @@ public class CodeExeOrder {
 ```
 
 ### 代码示例
+
 ```java
 package com.jkweilai.p06;
 
@@ -4513,6 +4517,7 @@ public class PersonTest {
     3. 作用是：代码复用。
 
 ### this 的使用
+
 ```java
 package com.jkweilai.p07;
 
@@ -4589,6 +4594,7 @@ public class CustomerTest {
 ```
 
 ### this()的使用
+
 ```java
 package com.jkweilai.p07;
 
@@ -5421,6 +5427,7 @@ if(a instanceof Cat c){
 ```
 
 #### 代码示例
+
 ```java
 package com.jkweilai.p12;
 
@@ -5802,6 +5809,7 @@ public class Test {
 8. 在Java语言中只要new对象，Object的无参数构造方法一定会执行。
 
 ### 初步理解 super
+
 ```java
 /*
     1. super关键字和this关键字对比来学习。
@@ -5822,6 +5830,7 @@ public class SuperTest01 {
 ```
 
 ### super 不能出现在静态上下文
+
 ```java
 /*
     super不能使用在静态上下文中
@@ -5846,6 +5855,7 @@ class T {
 ```
 
 ### "super."何时不能省略
+
 ```java
 /*
     super. 大部分情况下是可以省略的。什么时候必须使用 "super."
@@ -5889,6 +5899,7 @@ class Cat extends Animal {
 ```
 
 ### "super."在开发中的应用
+
 ```java
 // super. 在实际开发中的应用。
 public class SuperTest04 {
@@ -5920,6 +5931,7 @@ class Teacher extends Worker {
 ```
 
 ### super()语法
+
 ```java
 /*
     1. 当一个构造方法第一行，既没有编写 this(实参) 语法，又没有编写 super(实参) 语法。第一行系统会自动调用：super();
@@ -6033,6 +6045,7 @@ class Student extends Person {
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758971483380-752767d4-f803-4384-8f7e-c61b31b0f15e.png)
 
 ### 以下程序的报错原因
+
 ```java
 package com.jkweilai.p15;
 
@@ -6052,6 +6065,7 @@ public class B extends A {
 报错原因是：B 类中虽然没有编写任何构造方法，但系统会自动提供一个无参数构造方法，并且该无参数构造方法第一行会自动调用 `super();`【调用 A 类的无参数构造方法】，而由于 A 类中手动定义了一个有参数的构造方法，导致 A 类中无参数构造方法不存在，因此报错。因此在实际开发中，定义 Java 类时，建议将无参数构造方法显示的定义出来。
 
 ### super(实参)在开发中的应用
+
 ```java
 package com.jkweilai.p15;
 
@@ -6336,6 +6350,7 @@ public class CodeExeOrder {
 7. abstract关键字不能和private，final，static关键字共存。
 
 ### 抽象类代码演示
+
 ```java
 package com.jkweilai.p17;
 
@@ -7532,6 +7547,7 @@ for(int i = 1; i < n; i *= 2) {
 同理，如果每趟循环执行完毕后，循环变量都放大3倍，那么时间复杂度就为：O(log**₃**n) 。
 
 #### 线性阶 O(n)
+
 ```java
 int n = 100;
 for(int i = 0; i < n; i++) {
@@ -7542,6 +7558,7 @@ for(int i = 0; i < n; i++) {
 在上述代码中，for循环会执行n趟，因此它消耗的时间是随着n的变化而变化的，因此这类代码都可以用O(n)来表示它的时间复杂度。
 
 #### 线性对数阶 O(nlog₂n)
+
 ```java
 int n = 100;
 for(int i = 1; i <= n; i++) {
@@ -7554,6 +7571,7 @@ for(int i = 1; i <= n; i++) {
 线性对数阶O(nlog₂n) 其实非常容易理解，将时间复杂度为O(log₂n)的代码循环n遍的话，那么它的时间复杂度就是n*O(log₂n)，也就是了O(nlog₂n)。
 
 #### 平方阶 O(n**²**)
+
 ```java
 int n = 100;
 for(int i = 1; i <= n; i++) {
@@ -7677,6 +7695,7 @@ class Bird extends Animal {
 相邻两个元素做比较大小，如果前一个元素大于后一个元素，则交换位置。
 
 #### 升序排序代码
+
 ```java
 import java.util.Arrays;
 
@@ -7764,6 +7783,7 @@ public class Test01 {
 在未排序的序列中，把未排序第一个元素和未排序的最小元素交换位置。
 
 #### 升序排序代码
+
 ```java
 import java.util.Arrays;
 public class SelectTest {
@@ -7810,6 +7830,7 @@ public class SelectTest {
 线性查找，优点是查找数组无需有序；其缺点是查找的次数多，效率低下。
 
 #### 代码实现
+
 ```java
 public class Test04 {
 	public static void main(String[] args) {
@@ -7859,6 +7880,7 @@ public class Test04 {
 在以上的操作中，我们不停的更改min和max的值，如果发生min大于max的情况，则证明查找的元素不存在，那么返回-1（表示找不到）即可！
 
 #### 代码实现
+
 ```java
 public class Test04 {
 	public static void main(String[] args) {
@@ -9791,6 +9813,7 @@ String s2 = s.intern(); // 将字符串 “abcd”放入字符串常量池并返
 ```
 
 #### 去除前后空白
+
 ```java
 // 去除字符串前后空白（支持所有的编码形式的空白，可以将全角空格去除，\u3000 是全角空格，Java11新增）
 String strip(); 
@@ -9998,6 +10021,7 @@ String s = "a" + "b";
 
 ### String类方法练习
 #### 获取指定字符串中大写字母、小写字母、数字的个数
+
 ```java
 public static void method(String str) {
 	// 1.保存大写字母、小写字母和数字的个数
@@ -10027,6 +10051,7 @@ public static void method(String str) {
 ```
 
 #### 判断字符串中指定某一个字符在字符串中出现的次数
+
 ```java
 public static int method(String str, char ch) {
 	// 保存出现的次数
@@ -10064,6 +10089,7 @@ public static int method(String str, char ch) {
 ```
 
 #### 模拟trim()方法的实现，忽略字符串中前后的空格
+
 ```java
 public static String method(String str) {
 	// 开始索引和结束索引
@@ -12950,6 +12976,7 @@ public class ArraysSupport {
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 获取元素方法
+
 ```java
 public class ArrayList<E> {
     public E get(int index) {
@@ -12976,6 +13003,7 @@ public class Preconditions {
 ```
 
 #### 修改元素方法
+
 ```java
 public class ArrayList<E> {
     public E set(int index, E element) {
@@ -12993,6 +13021,7 @@ public class ArrayList<E> {
 ```
 
 #### 插入元素方法
+
 ```java
 public class ArrayList<E> {
     public void add(int index, E element) {
@@ -13020,6 +13049,7 @@ public class ArrayList<E> {
 ```
 
 #### 删除元素方法
+
 ```java
 public class ArrayList<E> {
     
@@ -13171,6 +13201,7 @@ LinkedList集合的特点为：查询效率低，增删效率高，线程不安�
 | E peekLast(); | 获取双链表末尾的元素，如果没有元素则返回null |
 
 #### 节点类的分析
+
 ```java
 public class LinkedList<E> {
     // 节点类是静态内部类
@@ -13193,6 +13224,7 @@ public class LinkedList<E> {
 ```
 
 #### 属性分析
+
 ```java
 public class LinkedList<E> {
     // 记录集合中元素的个数
@@ -13212,6 +13244,7 @@ public class LinkedList<E> {
 ```
 
 #### 添加元素方法
+
 ```java
 public class LinkedList<E>{
     // 添加元素
@@ -13244,6 +13277,7 @@ public class LinkedList<E>{
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 获取元素方法
+
 ```java
 public class LinkedList<E> {
     
@@ -13277,6 +13311,7 @@ public class LinkedList<E> {
 ```
 
 #### 修改元素方法
+
 ```java
 public class LinkedList<E> {
     public E set(int index, E element) {
@@ -13295,6 +13330,7 @@ public class LinkedList<E> {
 ```
 
 #### 插入元素方法
+
 ```java
 public class LinkedList<E> {
      public void add(int index, E element) {
@@ -13332,6 +13368,7 @@ public class LinkedList<E> {
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 删除元素方法
+
 ```java
 public class LinkedList<E> {
     public E remove(int index) {
@@ -13409,6 +13446,7 @@ Vector集合和ArrayList集合的用法几乎一模一样，底层都是采用�
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### Vector类演示
+
 ```java
 public class Test {
 	public static void main(String[] args) {
@@ -13836,7 +13874,7 @@ public class Test01 {
 
 **<font style="color:#DF2A3F;">作业：用数组模拟栈数据结构。（经常出现的面试题）</font>**
 
-**<font style="color:#DF2A3F;"></font>**
+****
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
@@ -14104,6 +14142,7 @@ key:cc value:333
 **<font style="color:#DF2A3F;">注释中写到：初始化容量永远都是 2 的整数幂。</font>**
 
 ##### 构造方法分析
+
 ```java
 public HashMap() {
     this.loadFactor = DEFAULT_LOAD_FACTOR; // all other fields defaulted
@@ -14235,6 +14274,7 @@ final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
 ```
 
 ##### get 方法分析
+
 ```java
 final Node<K,V> getNode(Object key) {
     Node<K,V>[] tab; Node<K,V> first, e; int n, hash; K k;
@@ -17230,6 +17270,7 @@ bw.flush(); // 不能忘！
 3. **没有 autoFlush 参数的不支持自动刷新。**
 
 #### 常用方法
+
 ```java
 // 支持各种类型输出，底层会自动转换为字符串，不需要程序员来手动转换。
 void print(T type);
@@ -18256,6 +18297,7 @@ class FlyingDog
 
 ### 实战实现
 #### 第一步：定义动物接口
+
 ```java
 // 动物接口
 public interface Animal {
@@ -18265,6 +18307,7 @@ public interface Animal {
 ```
 
 #### 第二步：实现基础动物
+
 ```java
 // 猫
 public class Cat implements Animal {
@@ -18307,6 +18350,7 @@ public class Bird implements Animal {
 ```
 
 #### 第三步：创建能力装饰器基类
+
 ```java
 // 能力装饰器基类
 public abstract class AbilityDecorator implements Animal {
@@ -18398,6 +18442,7 @@ public class ClimbingAbility extends AbilityDecorator {
 ```
 
 ### 客户端使用：自由组合能力
+
 ```java
 public class AnimalDemo {
     public static void main(String[] args) {
@@ -18503,6 +18548,7 @@ dragonCat.breatheFire();
 功能扩展直接实现接口不就行了吗？比如有 3 个功能扩展，那定义 3 个接口就可以了吧？想有 2 个功能实现 2 个接口，想有 3 个功能实现 3 个接口不就行了吗？为什么还弄一个装饰器模式？
 
 #### 直接实现接口
+
 ```java
 // 能力接口
 interface Flyable { void fly(); }
@@ -18575,6 +18621,7 @@ Animal basicCat = new Cat();  // 回到基础猫
 
 #### 什么时候用哪种方案？
 ##### 用接口实现的场景：
+
 ```java
 // 动物的本质特性，不会改变
 interface Mammal {}      // 哺乳动物
@@ -18586,6 +18633,7 @@ class Cat implements Mammal, Carnivore {
 ```
 
 ##### 用装饰器的场景：
+
 ```java
 // 动物的临时能力、装备、状态
 Animal cat = new Cat();
@@ -20940,6 +20988,7 @@ public class Test02 {
 
 ## 单例模式：从线程不安全到线程安全
 ### 线程不安全的单例模式
+
 ```java
 package test;
 
@@ -20990,6 +21039,7 @@ class MyRunnable implements Runnable {
 
 ### 线程安全的单例模式演进
 #### 方法1：同步方法（效率较低）
+
 ```java
 package test;
 
@@ -21041,6 +21091,7 @@ class MyRunnable implements Runnable {
 + ❌ 每次获取实例都要加锁，性能较差
 
 #### 方法2：双重检查锁定（DCL）
+
 ```java
 package test;
 
@@ -21088,6 +21139,7 @@ s = new Singleton();
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 方法3：静态内部类（推荐使用）
+
 ```java
 package test;
 
@@ -21114,6 +21166,7 @@ public class Singleton {
 + JVM 在类加载时是线程安全的
 
 #### 方法4：枚举单例（最佳实践）
+
 ```java
 package test;
 
@@ -21214,6 +21267,7 @@ Java 概念中的"**线程本地缓存**"就是对应这些 CPU 缓存。
 + 自愿承担：可能出 bug，但换来了极致性能
 
 #### 没有 volatile 时
+
 ```java
 public class Test {
     static int i = 0;  // 不加 volatile
@@ -21246,6 +21300,7 @@ public class Test {
 **不使用 volatile 关键字时：线程读和写变量时，只读写本地缓存。**
 
 #### 添加 volatile 时
+
 ```java
 public class Test {
     static volatile int i = 0;
@@ -26456,6 +26511,7 @@ System.out.println(result);
 ```
 
 #### 创建 Optional 对象
+
 ```java
 // 1.1 创建包含非null值的Optional
 Optional<String> name = Optional.of("张三"); // 如果为null会立即抛异常
@@ -26468,6 +26524,7 @@ Optional<String> empty = Optional.empty();
 ```
 
 #### 检查值是否存在
+
 ```java
 Optional<User> userOpt = findUserById(1);
 
@@ -26484,6 +26541,7 @@ userOpt.ifPresentOrElse(
 ```
 
 #### 获取值（安全方式）
+
 ```java
 Optional<String> nameOpt = Optional.ofNullable(getName());
 
@@ -26501,6 +26559,7 @@ String name4 = nameOpt.orElseThrow(); // 抛NoSuchElementException
 ```
 
 #### 转换和过滤
+
 ```java
 Optional<User> userOpt = findUserById(1);
 
@@ -26549,6 +26608,7 @@ calendar.set(2023, 11, 25); // 实际是12月，反人类设计
 + **Period**：日期间隔（年、月、日）
 
 ### 创建日期时间对象
+
 ```java
 // 获取当前
 LocalDate today = LocalDate.now();
@@ -26566,6 +26626,7 @@ LocalDateTime datetime = LocalDateTime.parse("2023-12-25T14:30:00");
 ```
 
 ### 日期计算和调整（最常用！）
+
 ```java
 // 加减操作
 
@@ -26613,6 +26674,7 @@ LocalDate nextWorkDay = today.with(temporal -> {
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 日期比较和判断
+
 ```java
 // 比较
 
@@ -26639,6 +26701,7 @@ boolean isWeekend = today.getDayOfWeek() == DayOfWeek.SATURDAY
 ```
 
 ### 日期信息获取
+
 ```java
 // 获取日期组成部分
 int year = today.getYear();
@@ -26652,6 +26715,7 @@ int minute = nowTime.getMinute();
 ```
 
 ### 格式化（日常开发必备）
+
 ```java
 // 日期 -> 字符串
 
@@ -26672,6 +26736,7 @@ LocalDateTime parsed = LocalDateTime.parse("2023-12-25 14:30:00",
 ```
 
 ### 时区处理（国际化系统必备）
+
 ```java
 // 时区转换
 
@@ -26693,6 +26758,7 @@ Set<String> zoneIds = ZoneId.getAvailableZoneIds();
 ```
 
 ### 时间间隔计算
+
 ```java
 // 两个时间点之间的间隔（精确到纳秒的时间差）
 
@@ -26719,6 +26785,7 @@ int months = period.getMonths();
 ```
 
 ### 与旧Date互操作（兼容老代码）
+
 ```java
 // Date -> LocalDateTime
 Date oldDate = new Date();

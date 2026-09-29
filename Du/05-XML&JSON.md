@@ -18,6 +18,7 @@ XML（eXtensible Markup Language，可扩展标记语言）是一种用于存储
 + **广泛支持**：几乎所有编程语言都提供XML处理工具
 
 ### 基本语法规则
+
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rootElement>
@@ -72,6 +73,7 @@ DTD（Document Type Definition）是XML文档的一种模式定义方式，它�
 3. 定义元素的子元素及出现顺序
 
 #### 内嵌DTD的XML文档示例
+
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE 书店 [
@@ -137,6 +139,7 @@ XSD（XML Schema Definition）是比DTD更强大、更灵活的XML模式定义�
 5. 支持更复杂的约束
 
 #### 基础XSD示例（books.xsd）
+
 ```xml
 <?xml version="1.0"?>
 
@@ -177,6 +180,7 @@ XSD（XML Schema Definition）是比DTD更强大、更灵活的XML模式定义�
 ```
 
 #### 引用XSD的XML示例
+
 ```xml
 <?xml version="1.0"?>
 <!-- noNamespaceSchemaLocation 告诉XML解析器去哪里找校验文件-->
@@ -251,6 +255,7 @@ XSLT（Extensible Stylesheet Language Transformations）是一种用于将 XML �
 
 ### 简单 XSLT 示例
 #### 输入 XML (books.xml)
+
 ```xml
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="transform.xsl"?>
@@ -269,6 +274,7 @@ XSLT（Extensible Stylesheet Language Transformations）是一种用于将 XML �
 ```
 
 #### XSLT 样式表 (transform.xsl)
+
 ```xml
 <?xml version="1.0"?>
 <xsl:stylesheet version="1.0" 
@@ -304,6 +310,7 @@ XSLT（Extensible Stylesheet Language Transformations）是一种用于将 XML �
 ```
 
 #### 转换后的 HTML 输出
+
 ```html
 <html>
   <head>
@@ -834,6 +841,7 @@ JAXB(Java Architecture for XML Binding)是最常用的XML绑定技术。
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750134722987-0653b614-a51e-44bb-93ce-ddf48c6cb8d5.png)
 
 ### Java 对象转换为 XML
+
 ```java
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.Marshaller;
@@ -901,6 +909,7 @@ class User{
 ```
 
 ### XML 转换为 Java 对象
+
 ```java
 import jakarta.xml.bind.JAXBContext;
 import jakarta.xml.bind.Unmarshaller;
@@ -967,6 +976,7 @@ JSON支持的数据类型：
 + null
 
 ### JSON 示例
+
 ```json
 {
   "name": "张三",
@@ -1053,6 +1063,7 @@ JSON由于其简洁性和易用性，已成为现代Web开发中最流行的数�
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JavaScript 对象转换为 JSON
+
 ```javascript
 const myObject = {
   name: "张三",
@@ -1068,6 +1079,7 @@ console.log(jsonString);
 ```
 
 ### JSON 转换为 JavaScript 对象
+
 ```javascript
 const jsonString = '{"name":"张三","age":30,"city":"北京"}';
 
@@ -1170,6 +1182,7 @@ Jackson 库解析 JSON 需要引入以下 jar 包：
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750140919534-f431c117-12f9-44de-87ab-91f99aa8dc8b.png)
 
 #### 实体类的定义
+
 ```java
 package com.laodu.jackson;
 
@@ -1204,6 +1217,7 @@ public class Address {
 ```
 
 #### Java 对象转换为 JSON
+
 ```java
 package com.laodu.jackson;
 
@@ -1237,6 +1251,7 @@ public class JavaToJsonExample {
 ```
 
 #### JSON 转换为 Java 对象
+
 ```java
 package com.laodu.jackson;
 
