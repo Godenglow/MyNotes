@@ -1,0 +1,124 @@
+======================================================================
+[01-JavaSE] 第01章 初识Java
+  font_keep_color=19 | font_solo_open=0 | headings=40
+======================================================================
+[01-JavaSE] 第02章 Java基础语法
+  font_delete_dark=10 | font_keep_color=48 | font_solo_open=0 | headings=126 | kept=20
+======================================================================
+[01-JavaSE] 第03章 IntelliJ IDEA的使用
+  font_solo_open=0 | headings=20
+======================================================================
+[01-JavaSE] 第04章 面向对象
+  font_delete_dark=32 | font_keep_color=16 | font_solo_open=0 | headings=81 | span_rebuilt=8
+======================================================================
+[01-JavaSE] 第05章 数组
+  font_delete_dark=131 | font_keep_color=6 | font_solo_open=0 | headings=97 | span_rebuilt=17
+======================================================================
+[01-JavaSE] 第06章 异常处理
+  font_delete_dark=3 | font_solo_open=0 | headings=23 | span_rebuilt=1
+======================================================================
+[01-JavaSE] 第07章 常用类
+  font_keep_color=2 | font_solo_open=0 | headings=89
+======================================================================
+[01-JavaSE] 第08章 泛型和比较器
+  escaped=3 | font_delete_dark=34 | font_keep_color=7 | font_solo_open=0 | headings=27 | span_rebuilt=16
+======================================================================
+[01-JavaSE] 第09章 数据结构和集合
+  escaped=12 | font_delete_dark=170 | font_keep_color=30 | font_solo_open=0 | font_to_code=1 | headings=109 | span_rebuilt=23
+======================================================================
+[01-JavaSE] 第10章 Java I/O
+  font_delete_dark=149 | font_keep_color=11 | font_solo_open=0 | headings=127 | span_rebuilt=29
+======================================================================
+[01-JavaSE] 第11章 多线程
+  escaped=3 | font_delete_dark=177 | font_keep_color=15 | font_solo_open=0 | headings=94 | span_rebuilt=28
+======================================================================
+[01-JavaSE] 第12章 反射机制
+  escaped=2 | font_delete_dark=26 | font_keep_color=4 | font_solo_open=0 | headings=56 | span_rebuilt=4
+======================================================================
+[01-JavaSE] 第13章 注解
+  font_delete_dark=22 | font_solo_open=0 | headings=24 | span_rebuilt=2
+======================================================================
+[01-JavaSE] 第14章 网络编程
+  font_delete_dark=193 | font_keep_color=9 | font_solo_open=0 | headings=41 | kept=2 | span_rebuilt=4
+======================================================================
+[01-JavaSE] 第15章 Lambda表达式
+  escaped=3 | font_delete_dark=47 | font_keep_color=4 | font_solo_open=0 | headings=24 | span_rebuilt=5
+======================================================================
+[01-JavaSE] 第16章 Stream API
+  escaped=18 | font_delete_dark=2 | font_keep_color=2 | font_solo_open=0 | headings=26
+======================================================================
+[01-JavaSE] 第17章 Java新特性
+  escaped=2 | font_delete_dark=48 | font_keep_color=6 | font_solo_open=0 | headings=48 | span_rebuilt=5
+  ==> D:/MyNotes/Du\01-JavaSE.md
+======================================================================
+[02-MySQL] MySQL
+  font_delete_dark=207 | font_keep_color=74 | font_solo_open=0 | headings=255 | span_rebuilt=26
+  ==> D:/MyNotes/Du\02-MySQL.md
+======================================================================
+[03-JDBC] JDBC
+  font_delete_dark=23 | font_keep_color=37 | font_solo_open=0 | font_to_code=1 | headings=97 | span_rebuilt=22
+  ==> D:/MyNotes/Du\03-JDBC.md
+======================================================================
+[04-Web前端] HTML5
+  comments=1 | escaped=78 | font_delete_dark=76 | font_keep_color=15 | font_solo_open=0 | headings=137 | span_rebuilt=6
+======================================================================
+[04-Web前端] CSS3
+  escaped=2 | font_delete_dark=140 | font_keep_color=15 | font_solo_open=0 | headings=97 | span_rebuilt=54
+======================================================================
+[04-Web前端] JavaScript（ES6）
+  font_delete_dark=428 | font_keep_color=90 | font_solo_open=0 | font_to_code=2 | headings=339 | span_rebuilt=187
+  ==> D:/MyNotes/Du\04-Web前端.md
+======================================================================
+[05-XML&JSON] XML&JSON
+  font_delete_dark=149 | font_keep_color=3 | font_solo_open=0 | font_to_code=1 | headings=71 | span_rebuilt=36
+  ==> D:/MyNotes/Du\05-XML&JSON.md
+======================================================================
+[06-JavaWeb] Servlet&Thymeleaf
+  escaped=2 | font_delete_dark=640 | font_keep_color=70 | font_solo_open=0 | font_to_code=3 | headings=390 | span_rebuilt=90
+  ==> D:/MyNotes/Du\06-JavaWeb.md
+======================================================================
+[07-Ajax&axios] AJAX&Axios
+  font_delete_dark=153 | font_keep_color=55 | font_solo_open=0 | headings=62 | span_rebuilt=31
+  ==> D:/MyNotes/Du\07-Ajax&axios.md
+======================================================================
+[08-Maven] Maven&Nexus
+  comments=1 | escaped=13 | font_delete_dark=147 | font_keep_color=35 | font_solo_open=0 | font_to_code=4 | headings=130 | span_rebuilt=33
+  ==> D:/MyNotes/Du\08-Maven.md
+======================================================================
+[09-MyBatis] MyBatis
+  escaped=9 | font_delete_dark=77 | font_keep_color=65 | font_solo_open=0 | headings=135 | span_rebuilt=11
+  ==> D:/MyNotes/Du\09-MyBatis.md
+======================================================================
+[10-Spring] Spring
+  escaped=8 | font_delete_dark=333 | font_keep_color=208 | font_solo_open=0 | headings=174 | span_rebuilt=60
+  ==> D:/MyNotes/Du\10-Spring.md
+======================================================================
+[11-SpringMVC] SpringMVC
+  escaped=6 | font_delete_dark=270 | font_keep_color=83 | font_solo_open=0 | font_to_code=50 | headings=182 | span_rebuilt=68
+  ==> D:/MyNotes/Du\11-SpringMVC.md
+======================================================================
+[12-SpringBoot] Spring Boot
+  escaped=1 | font_delete_dark=442 | font_keep_color=128 | font_solo_open=0 | font_to_code=22 | headings=311 | span_rebuilt=112
+  ==> D:/MyNotes/Du\12-SpringBoot.md
+======================================================================
+[13-MyBatis-Plus] MyBatis-Plus
+  escaped=2 | font_delete_dark=8 | font_keep_color=25 | font_solo_open=0 | font_to_code=4 | headings=64 | span_rebuilt=10
+  ==> D:/MyNotes/Du\13-MyBatis-Plus.md
+======================================================================
+[14-TypeScript] TypeScript
+  font_delete_dark=170 | font_keep_color=51 | font_solo_open=0 | headings=115 | span_rebuilt=73
+  ==> D:/MyNotes/Du\14-TypeScript.md
+======================================================================
+[15-Vue3] Vue3
+  escaped=1 | font_delete_dark=251 | font_keep_color=58 | font_solo_open=0 | font_to_code=1 | headings=228 | span_rebuilt=99
+  ==> D:/MyNotes/Du\15-Vue3.md
+======================================================================
+[16-ElementPlus] Element Plus
+  font_delete_dark=4 | font_keep_color=3 | font_solo_open=0 | headings=34 | span_rebuilt=2
+  ==> D:/MyNotes/Du\16-ElementPlus.md
+======================================================================
+[17-Linux] Linux
+  font_delete_dark=327 | font_keep_color=40 | font_solo_open=0 | font_to_code=6 | headings=153 | span_rebuilt=43
+  ==> D:/MyNotes/Du\17-Linux.md
+======================================================================
+TOTAL: comments=2 | escaped=165 | font_delete_dark=4889 | font_keep_color=1234 | font_solo_open=0 | font_to_code=95 | headings=4026 | kept=22 | span_rebuilt=1105
