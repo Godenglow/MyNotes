@@ -1,0 +1,1262 @@
+[
+ {
+  "file": "01-JavaSE.md",
+  "ln": 1294,
+  "final": "**负数的原码运算规则：<font style=\"color:#DF2A3F;\">将绝对值转换为二进制后，最高位改为1。</font>**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 4052,
+  "final": "    1. 存栈帧，栈帧中有局部变量表（**存<font style=\"color:#DF2A3F;\">局部变量</font>**）、操作数栈等。"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 4063,
+  "final": "    2. HotSpot JDK8 及之后，方法区的实现叫做元空间（**Metaspace**），使用**系统本地内存**，避免 OOM。**此时的<font style=\"color:#DF2A3F;\">静态变量</font>是在堆中的。(HotSpot JDK8 及之后<font style=\"color:#DF2A3F;\">静态变量、字符串常量池</font>都是在堆中)**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 5102,
+  "final": "**Java只支持单继承，一个类只能<font style=\"color:#DF2A3F;\">直接</font>继承一个类。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 5104,
+  "final": "**Java不支持多继承，但支持<font style=\"color:#DF2A3F;\">多重</font>继承（多层继承）。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 6183,
+  "final": "    2. 准备：为静态变量赋默认值。**不过这里有一个特殊情况：如果静态变量同时被 `final` 修饰（即常量），且类型是基本类型或 `String`，则在准备阶段就直接赋值为代码中指定的值（比如 `static final int a = 100;`，在准备阶段就是 `100`，而不是 `0`）**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 6185,
+  "final": "3. **初始化：赋初始值（类加载的最后一步），这个阶段会执行类构造器 `<clinit>()`**。这个构造器会收集："
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 7326,
+  "final": "**<font style=\"color:#DF2A3F;\">逻辑结构</font>是数据元素之间的“抽象关系”，而<font style=\"color:#DF2A3F;\">物理结构</font>是这种关系在计算机内存中的“具体实现”。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 7364,
+  "final": "**一种<font style=\"color:#DF2A3F;\">逻辑结构</font>可以用不同的<font style=\"color:#DF2A3F;\">物理结构</font>来实现。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 12670,
+  "final": "它的核心是：在创建泛型对象时，**可以省略构造器后尖括号 **`<>`** 中的具体类型参数**，编译器会根据上下文自动推断。"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 13538,
+  "final": "+ **`\"B\"` 就这样被神奇地跳过了！** 这就是数据不一致和不可预知的行为。"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 13798,
+  "final": "**在 Java 的 **`LinkedList`** 中：**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 16986,
+  "final": "**InputStreamReader（专门负责解码）：将字节输入流（InputStream）按指定字符集<font style=\"color:#DF2A3F;\">解码</font>为字符输入流（Reader）。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 16988,
+  "final": "**OutputStreamWriter（专门负责编码）: 将字符输出流（Writer）按指定字符集<font style=\"color:#DF2A3F;\">编码</font>为字节输出流（OutputStream）。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 16990,
+  "final": "**以上这两个<font style=\"color:#DF2A3F;\">转换流</font>都属于<font style=\"color:#DF2A3F;\">字符流</font>。它们都是为字符专门设计的。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 17269,
+  "final": "2. **只有调用构造方法时，传递了 autoFlush 为 true 时，<font style=\"color:#DF2A3F;\">每遇到换行符时就会自动刷新一次</font>。（没有遇到换行符就不会自动刷新）**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 17370,
+  "final": "1. **`println()` 系列方法**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 17375,
+  "final": "2. **`printf()`** **和** **`format()`** **方法**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 21336,
+  "final": "**只有用 **`volatile`、`synchronized`、`AtomicXXX`** 或 **`Lock`** 时，才会保证立即同步到主内存；普通变量的同步时机完全不确定，由 JVM 决定。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 21339,
+  "final": "**`AtomicInteger` 是用 `volatile` 加 CAS（乐观锁）实现的线程安全整数，保证原子操作和可见性，比 `synchronized` 性能更好。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 21594,
+  "final": "将虚拟机常量池内的符号引用（常量名）替换为直接引用（地址）的过程（**在IDEA安装Jclasslib插件查看:一个查看Java字节码的IDE工具，可以看做是 javap -c 命令的升级版**）。通过 jclasslib 插件看不到这个替换的过程，可以看到符号引用都有哪些。"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 21598,
+  "final": "**符号引用**：我要调用 Math 类的 abs()方法。**符号引用就是代码里写的“名字”和“描述信息”，在编译成 **`.class`** 文件后被记录在常量池里，等待运行时再解析成真正的内存地址。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 21600,
+  "final": "**直接引用**：直接通过 Math.abs()方法的地址定位到方法，不再找了。**在屏幕上直接看到的那些带 **`#`** 号索引的条目，几乎全都是“符号引用”；而“直接引用”是 JVM 运行时才产生的，在工具里是看不到的。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 23676,
+  "final": "**<font style=\"color:#DF2A3F;\">HTTP 协议是一种有连接</font><font style=\"color:#2F8EF4;\">无状态</font><font style=\"color:#DF2A3F;\">的协议。</font>**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 23702,
+  "final": "**三次握手和四次挥手正是TCP协议的核心机制，分别用于可靠地<font style=\"color:#DF2A3F;\">建立</font>和<font style=\"color:#DF2A3F;\">断开</font>连接。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 23707,
+  "final": "**SYN：Synchronize Sequence Numbers（同步序列号），建立连接的信号。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 24144,
+  "final": "**简单来说：在 JDK 1.8 及以后版本中，Lambda 表达式就是<font style=\"color:#DF2A3F;\">函数式接口</font>的<font style=\"color:#DF2A3F;\">实例</font>。只要一个接口是函数式接口，就可以使用 Lambda 表达式来实现它。**"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 24520,
+  "final": "当我们使用 Lambda 表达式时，如果方法体中的内容**仅仅是调用一个已存在的方法（并且<font style=\"color:#DF2A3F;\">函数式接口中方法的返回值和方法的参数  与  内部调用方法的返回值和方法的参数相同</font>时）**，而没有其他任何逻辑操作，这种情况下就可以使用**方法引用**来进一步简化代码。"
+ },
+ {
+  "file": "01-JavaSE.md",
+  "ln": 25908,
+  "final": "**<font style=\"color:#DF2A3F;\">使用try-with-resource来自动关闭资源，则需要关闭资源的对象对应的类就必须实现java.lang.AutoCloseable接口，该接口中提供了一个close()的抽象方法，而自动关闭资源默认调用的就是实现于java.lang.AutoCloseable接口中的close()方法。</font><font style=\"color:#117CEE;\">而且 try 后面小括号中的变量无法在 catch 分支中使用，try 后面大括号执行结束之后，资源就立即关闭了。</font>**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 1299,
+  "final": "**<font style=\"color:#117CEE;\">简单记住一句话：对于有主键或有索引的前提下，in 和 or 效率没区别。对于没有主键或没有索引的列来说，in 效率高，or 效率低。【</font><font style=\"color:#DF2A3F;\">但 in 只能用于同一列，or 可以使用在不同列上。</font><font style=\"color:#117CEE;\">】</font>**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 3105,
+  "final": "**varchar(m)：VARCHAR 最大允许 65,535 <font style=\"color:#DF2A3F;\">字节</font>**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 3671,
+  "final": "**因为删除主表数据时，会把关联的子表数据锁住，这个锁是一个间隙锁，比如要删除的是主表 `id=100`的数据，那么对于子表来说，凡是和 `id=100`相关的数据都无法插入，以防产生孤儿数据。**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 3716,
+  "final": "**索引是一种用于快速定位数据的排序数据结构（<font style=\"color:#DF2A3F;\">如 B+ 树</font>），作用是大幅提升查询速度，但会<font style=\"color:#DF2A3F;\">占用额外存储空间</font>并<font style=\"color:#DF2A3F;\">降低写入性能</font>。**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 3823,
+  "final": "5. **mysql 创建表时，都可以给表指定存储引擎，不同的存储引擎会导致<font style=\"color:#DF2A3F;\">表</font>组织数据的方式不同。只有当存储引擎是 InnoDB 时，才支持事务。**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 4054,
+  "final": "**在 RR 隔离级别下，开启事务之后，执行第一条 DQL 语句时，会立即生成针对当前<font style=\"color:#DF2A3F;\">整个数据库实例（不是单张表，也不是几行数据，是当前的整个数据库实例）</font>的快照。快照不是将整个数据库实例复制一份，快照在内存中对应一个<font style=\"color:#DF2A3F;\">轻量级的一致性视图 ReadView</font>。**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 4161,
+  "final": "**大概总结一下当前讲义中的<font style=\"color:#DF2A3F;\">锁</font>：**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 4174,
+  "final": "**`FOR UPDATE` 是行级排他锁，但前提是查询条件用到的字段上有索引（主键、唯一索引、普通索引都可以）。如果没有索引或索引失效，会退化为表级锁**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 4178,
+  "final": "**`FOR UPDATE` 在 RR 级别下默认加 Next-Key Lock（间隙锁 + 记录锁）来防止幻读，在 RC 级别下只加记录锁。**"
+ },
+ {
+  "file": "02-MySQL.md",
+  "ln": 4627,
+  "final": "+ **Order表主键修改**：将`order_id`单独作为主键无法满足“一个订单包含多种图书”，应改为**复合主键`(order_id, book_id)`**。"
+ },
+ {
+  "file": "03-JDBC.md",
+  "ln": 2894,
+  "final": "**<font style=\"color:#DF2A3F;\">注意：启用批处理需要在URL后面添加这个的参数：</font>`rewriteBatchedStatements=true`**"
+ },
+ {
+  "file": "03-JDBC.md",
+  "ln": 3827,
+  "final": "+ **什么时候需要加 `scanner.nextLine()`？**"
+ },
+ {
+  "file": "03-JDBC.md",
+  "ln": 3828,
+  "final": "    - **当 `nextInt()` / `nextDouble()` / `next()` 后面跟着的是 `nextLine()` 时，中间必须加一个 `nextLine()` 吃掉遗留的换行符。当用户输入 `123`并回车，实际上输入的内容是 `123\\n`，`nextInt()`方法只能读取到 `123`，因此在缓冲区还会残留一个 `\\n`，如果此时紧接着调用 `nextLine()`方法，该方法只会吃掉缓存中残留的换行符，返回一个空字符串。**"
+ },
+ {
+  "file": "03-JDBC.md",
+  "ln": 3830,
+  "final": "    - **当 `nextInt()` / `nextDouble()` / `next()` 后面跟着的还是 `nextInt()` / `nextDouble()` / `next()` 时，不需要。因为 `nextXxx()`方法在执行时会自动跳过它前面的空白和换行符。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 1210,
+  "final": "1. **HTML 规范要求 `<tfoot>` 必须放在 `<tbody>` 前（但渲染时显示在底部）。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 2384,
+  "final": "**<font style=\"color:#DF2A3F;\">:nth-child(n) 选择父元素下第n个子元素（无视元素类型），而 </font><font style=\"color:#2F4BDA;\">:nth-of-type(n) </font><font style=\"color:#DF2A3F;\">选择父元素下同类型元素的第n个（仅匹配指定类型的元素）。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 2681,
+  "final": "**`opacity`<font style=\"color:#DF2A3F;\">样式应用在某个元素上之后，例如应用在 div 元素上，则作用于 div 以及 div 中所有的子元素。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 2910,
+  "final": "**`margin` 设置元素外部（边框外）与其他元素之间的间距**，用于控制元素之间的相对位置。"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 2912,
+  "final": "**`padding` 设置元素内部（内容区与边框之间）的内间距**，用于控制内容距离边框的远近。"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3215,
+  "final": "**`display: none` 不会\"脱离文档流\"，而是直接从渲染树中移除。脱离文档流：元素还在页面上，只是不占原来的位置。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3225,
+  "final": "**`float: left;` 是相对于最近的块级父容器的内容区向左侧进行浮动。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3227,
+  "final": "**`float: right;` 是相对于最近的块级父容器的内容区向右侧进行浮动。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3950,
+  "final": "2. **`click`<font style=\"color:#DF2A3F;\">是事件，</font>`onclick`<font style=\"color:#DF2A3F;\">是事件句柄。事件句柄可作为HTML标签的属性形式存在。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3951,
+  "final": "3. **<font style=\"color:#DF2A3F;\">在事件句柄中注册回调函数。例如</font>`onclick=\"sayHello()\"`<font style=\"color:#DF2A3F;\">，其中</font>`sayHello()`<font style=\"color:#DF2A3F;\">就是回调函数。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3952,
+  "final": "4. **<font style=\"color:#DF2A3F;\">原理：页面加载的时候，当加载到该HTML标签时，完成回调函数与事件的绑定（注册）。后续当用户点击该按钮时，发生</font>`click`<font style=\"color:#DF2A3F;\">事件，浏览器负责调用回调函数。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 3953,
+  "final": "5. **<font style=\"color:#DF2A3F;\">弹窗代码：</font>`window.alert('Hello JavaScript')`<font style=\"color:#DF2A3F;\">，其中</font>`window`<font style=\"color:#DF2A3F;\">是JS内置对象，代表当前浏览器窗口，</font>`alert`<font style=\"color:#DF2A3F;\">是</font>`window`<font style=\"color:#DF2A3F;\">对象的方法，功能是弹出警告框。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 4038,
+  "final": "+ ✅ **`async` 脚本：下载完js文件就执行，<font style=\"color:#DF2A3F;\">不保证DOM是否就绪</font>**，适合独立任务。"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 4634,
+  "final": "在 **严格模式（`'use strict'`）** 下，直接给未声明的变量赋值会抛出 `ReferenceError`"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 4806,
+  "final": "| **`this`绑定** | 动态绑定（由调用者决定） | 动态绑定（由调用者决定） | 静态绑定（继承外层作用域的 **`this`**） |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 4808,
+  "final": "| **`arguments`对象 | 可用 `arguments`访问参数<br/>arguments[0]、arguments[1] 语法。 | 可用 `arguments`访问参数 | 无 `arguments`** |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 4903,
+  "final": "JS 中对象的**继承**是通过**原型链**实现的（**原型链**：**<font style=\"color:#DF2A3F;\">原型对象</font>串起来的一根链条**）。"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5451,
+  "final": "+ `******` 指数（ES2016）【比如2的3次方，可以使用`**2 ** 3**`来计算。以前是版本是调用`**Math.pow(2, 3)**`函数】"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5473,
+  "final": "+ **`??=`<font style=\"color:#DF2A3F;\"> 逻辑空赋值（ES2021） </font>`x = x ?? y;`<font style=\"color:#DF2A3F;\">含义是：如果</font>`x`<font style=\"color:#DF2A3F;\">是</font>`null`<font style=\"color:#DF2A3F;\">或者</font>`undefined`<font style=\"color:#DF2A3F;\">，就把</font>`y`<font style=\"color:#DF2A3F;\">赋值给</font>`x`<font style=\"color:#DF2A3F;\">。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5476,
+  "final": "+ **`==`<font style=\"color:#DF2A3F;\"> 等于</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5477,
+  "final": "+ **`===`<font style=\"color:#DF2A3F;\"> 严格等于（既比较值又比较数据类型，开发中建议使用严格等于。）</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5478,
+  "final": "+ **`!=`<font style=\"color:#DF2A3F;\"> 不等于</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5479,
+  "final": "+ **`!==`<font style=\"color:#DF2A3F;\"> 严格不等于</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5489,
+  "final": "+ **`??`<font style=\"color:#DF2A3F;\"> 空值合并（ES2020）</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5726,
+  "final": "**如果 getName 是一个函数并且存在则正常执行。反之立即返回`undefined`，而不会抛出错误。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5879,
+  "final": "**`Symbol.iterator` 就是一个内置的 Symbol 值。它是一个变量，存着一个 Symbol 值。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 5885,
+  "final": "**怎么能够知道这个对象是否能够被 `for..of`遍历？**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6085,
+  "final": "**<font style=\"color:#DF2A3F;\">ES6+新语法：</font>`try...catch`<font style=\"color:#DF2A3F;\"> 可选的绑定 (ES2019)</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6223,
+  "final": "| **`encodeURIComponent(str)`** | **<font style=\"color:#DF2A3F;\">适合编码 URI 的</font><font style=\"color:#2F8EF4;\">参数值</font><font style=\"color:#DF2A3F;\">。</font>** | **`encodeURIComponent(\"?x=abc&y=def\") → \"%3Fx%3Dabc%26y%3Ddef\"`** |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6224,
+  "final": "| **`decodeURIComponent(encodedStr)`** | **<font style=\"color:#DF2A3F;\">适合解码 URI 的</font><font style=\"color:#2F8EF4;\">参数值</font><font style=\"color:#DF2A3F;\">。</font>** | **`decodeURIComponent(\"%3Fx%3Dabc%26y%3Ddef\") → \"?x=abc&y=def\"`** |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6508,
+  "final": "`call()` 立即调用函数，并<font style=\"color:#DF2A3F;\">临时改变函数内部的 </font>`this`<font style=\"color:#DF2A3F;\"> 指向（具体指向谁，主要看 call 方法的第一个参数传谁，传张三，函数内部的 this 就是张三。）</font>，还可以传递参数（逗号分隔）。"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6549,
+  "final": "1. <font style=\"color:#DF2A3F;\">永久固定</font> `this`：防止函数内部的 `this` 乱跑。  "
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6985,
+  "final": "| **`<a>`点击** | 跳转到 **`href`** | **`e.preventDefault()`** |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 6986,
+  "final": "| **`<form>`提交** | 发送数据并刷新页面 | **`e.preventDefault()`** |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 7026,
+  "final": "**`dispatchEvent()`<font style=\"color:#DF2A3F;\"> 只会触发事件监听器，但不会执行与事件关联的浏览器默认行为</font>**<font style=\"color:#DF2A3F;\">。</font>"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 7176,
+  "final": "|  | 0 到 n 次 |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 7312,
+  "final": "| **`test()`** | **`boolean`** | 快速验证字符串是否匹配模式 | `/\\d+/.test(\"abc123\")`→ **`true``只要字符串中含有数字结构就是 true`**<br/>`/^\\d+$/.test(\"abc123\")`→ **`false``要求字符串整体都是数字`** |"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 8439,
+  "final": "+ **同一域名下的任何页面都可以访问全部localStorage（不同域名下不允许）**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 8996,
+  "final": "**<font style=\"color:#DF2A3F;\">原型对象的作用：</font><font style=\"color:#DF2A3F;\">原型对象用于共享属性和方法。所有通过该构造函数创建的实例都会继承原型对象上的成员。</font>**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 9488,
+  "final": "当使用 Symbol 值作为对象属性的键时，需要用 中括号 `[]` 括起来，这是因为 Symbol 是一种 唯一且不可变 的数据类型，不能直接作为字符串键使用。这种语法 不是数组，而是 计算属性名 的语法。"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 9516,
+  "final": "**JS 中对象支持 **`for...of`** 循环、**可以使用 **展开运算符（**`...`**）**、**解构赋值等语法，它们都依赖 **`**Symbol.iterator**`**。**"
+ },
+ {
+  "file": "04-Web前端.md",
+  "ln": 9622,
+  "final": "**<font style=\"color:#DF2A3F;\">只有知道</font>`sym`<font style=\"color:#DF2A3F;\">这个名字的人才能通过</font>`obj[sym]`<font style=\"color:#DF2A3F;\">再次访问到该属性，因此Symbol语法可以模拟私有属性（不是真正的私有，只是隐藏）</font>**"
+ },
+ {
+  "file": "05-XML&JSON.md",
+  "ln": 447,
+  "final": "**JDBC 和 JAXP 都是基于 SPI 机制实现的。什么是 SPI 机制？Service Provider Interface 服务提供商接口**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 1758,
+  "final": "**`response.setCharacterEncoding(\"UTF-8\");`<font style=\"color:#DF2A3F;\">和 HTML 中的 </font>`<meta charset=\"UTF-8\">`<font style=\"color:#DF2A3F;\">有什么区别？</font>**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 2125,
+  "final": "**<font style=\"color:#DF2A3F;\">提示：GET 和 POST 请求提交数据时的格式都是 </font>`name=value&name=value&name=value...`<font style=\"color:#DF2A3F;\">。只是提交数据的位置不同，GET 在请求行上提交数据。POST 在请求体中提交数据。</font>**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 3895,
+  "final": "**<font style=\"color:#DF2A3F;\">说明：</font>`contextPath`<font style=\"color:#DF2A3F;\"> 是通过 </font>`String contextPath = request.getContextPath();`<font style=\"color:#DF2A3F;\">获取的。前端发送请求时以 </font>`/`<font style=\"color:#DF2A3F;\">开头，添加项目名，项目名不要写死 </font>`/dept`<font style=\"color:#DF2A3F;\">，应该通过这行代码动态获取。</font>**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 4644,
+  "final": "    4. 因此，用户只是点击了 <font style=\"color:#DF2A3F;\">一次</font> 保存操作，但浏览器一共是发送了<font style=\"color:#DF2A3F;\">两次</font>请求。"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 4923,
+  "final": "在Servlet中，**Filter（过滤器）是一种<font style=\"color:#DF2A3F;\">可重用</font>的组件，用于在请求到达Servlet或响应返回客户端之前拦截并处理**HTTP请求和响应。它允许开发者在不修改核心业务逻辑的情况下，对Web应用的请求/响应流程进行统一处理。"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 4926,
+  "final": "1. **<font style=\"color:#DF2A3F;\">预处理</font>请求（Pre-processing）**  "
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 4928,
+  "final": "2. **<font style=\"color:#DF2A3F;\">后处理</font>响应（Post-processing）**  "
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 5055,
+  "final": "注意：**<font style=\"color:#DF2A3F;\">在 </font>`web.xml`<font style=\"color:#DF2A3F;\">文件中同时配置了 Servlet 和 Filter，用户发送的请求路径同时满足 Servlet 和 Filter 时，Filter 优先级高，先执行</font>**。"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 5653,
+  "final": "1. **`WebContext` 显式设置的变量（`ctx.setVariable(\"message\", \"WebContext message\")`**）"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 5654,
+  "final": "2. **`HttpServletRequest` 属性（`request.setAttribute(\"message\", \"request message\")`**）"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 5659,
+  "final": "1. **`HttpSession` 属性（`session.setAttribute(\"message\", \"session message\")`**），从 session 中取值需要这样写：`${session.message}`"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 5660,
+  "final": "2. **`ServletContext` 全局属性（`servletContext.setAttribute(\"message\", \"application message\")`**），从 application 中取值需要这样写：`${application.message}`"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 5662,
+  "final": "4. **`th:with`** **局部变量**（仅限当前作用域）"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 6000,
+  "final": "1. 以上代码中，把 css 样式单独提取出来放到 `css/list.css`文件中了，因此以上代码添加链接外部 css 样式文件。**<font style=\"color:#DF2A3F;\">css 文件不能放到 </font>`WEB-INF`<font style=\"color:#DF2A3F;\">目录下</font>**。"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 7406,
+  "final": "+ **`getEncoder()`** 使用标准 Base64 字符集（`A-Z a-z 0-9 + /`），编码后可能包含 **`+`、`/`** 和 **`=`，不适合直接放 URL；**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 7407,
+  "final": "+ **`getUrlEncoder()` 使用 URL 安全字符集（`A-Z a-z 0-9 - _`），把 `+` 替换为 `-`，`/` 替换为 `_`，且通常配合 `withoutPadding()` 去掉 `=`，适合放在 URL 或 HTTP Header 中传输。**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 9652,
+  "final": "+ 在 `Servlet`程序中可以通过 `System.out.charset()`<font style=\"color:#DF2A3F;\">方法</font>来获取 Tomcat 容器的标准输出流的字符编码方式，结果是 GBK。"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 9661,
+  "final": "**另外，在这种环境下标准错误流通常也需要设置一下，不然在出现的异常中异常的描述信息是中文的话也会乱码，可以通过 `System.err.charset()``代码来查看标准错误流的字符编码方式，它应该也是 GBK。因此也需要在 ``vm options``中进行配置：``-Dstderr.encoding=UTF-8`**"
+ },
+ {
+  "file": "07-Ajax&axios.md",
+  "ln": 80,
+  "final": "| **<font style=\"color:#117CEE;\">readyState</font>** | 保存 XMLHttpRequest 的状态：<br/>**<font style=\"color:#DF2A3F;\">0：</font>`XMLHttpRequest`<font style=\"color:#DF2A3F;\"> 对象已创建，但尚未调用 </font>`open()`<font style=\"color:#DF2A3F;\"> 方法。</font>**<br/>**<font style=\"color:#DF2A3F;\">1：</font><font style=\"color:#DF2A3F;\">已调用 </font>`open()`<font style=\"color:#DF2A3F;\"> 方法，但尚未调用 </font>`send()`<font style=\"color:#DF2A3F;\"> 方法。</font>**<br/>**<font style=\"color:#DF2A3F;\">2：</font><font style=\"color:#DF2A3F;\">已调用 </font>`send()`<font style=\"color:#DF2A3F;\"> 方法，且服务器返回了响应头和状态码。</font><font style=\"color:#DF2A3F;\"> </font>**<br/>**<font style=\"color:#DF2A3F;\">3：</font><font style=\"color:#DF2A3F;\">正在接收服务器返回的响应体数据（可能处于传输过程中）</font>**<br/>**<font style=\"color:#DF2A3F;\">4：整个请求/响应过程已全部完成（无论成功或失败）</font>** |"
+ },
+ {
+  "file": "07-Ajax&axios.md",
+  "ln": 400,
+  "final": "1. 以上代码中的 `encodeURIComponent`是对提交的数据进行编码，防止请求提交的数据到服务器端无法正常获取。（**<font style=\"color:#DF2A3F;\">假设用户填写的用户名是 </font>`lucy&age=20`<font style=\"color:#DF2A3F;\">，在服务器端获取时，用户名只能获取到 </font>`lucy`<font style=\"color:#DF2A3F;\">，因此需要对数据进行编码，这样 </font>`lucy&age=20`<font style=\"color:#DF2A3F;\">才能被当做一个完整的用户名。</font>**）"
+ },
+ {
+  "file": "07-Ajax&axios.md",
+  "ln": 460,
+  "final": "回调地狱(<font style=\"color:#DF2A3F;\">Callback Hell</font>)就像是你让一群人帮你做事，但每个人都要等前一个人做完才能开始，结果形成了一连串的\"等TA做完后，你再...\"的嵌套关系。"
+ },
+ {
+  "file": "07-Ajax&axios.md",
+  "ln": 723,
+  "final": "**示例：以下两种写法是<font style=\"color:#DF2A3F;\">等效</font>的。**"
+ },
+ {
+  "file": "07-Ajax&axios.md",
+  "ln": 762,
+  "final": "+ `**await**`**出现会暂停 **`**async**`** 函数的执行**"
+ },
+ {
+  "file": "07-Ajax&axios.md",
+  "ln": 1674,
+  "final": "**Vite 项目（`vite.config.js`）**"
+ },
+ {
+  "file": "08-Maven.md",
+  "ln": 47,
+  "final": "如下图所示：包括蓝、黄两个部分分别对应着[依赖关系](https://www.zhihu.com/search?q=%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2811089619%7D)和<font style=\"color:#ECAA04;\">项目构建</font>两大核心功能。"
+ },
+ {
+  "file": "08-Maven.md",
+  "ln": 241,
+  "final": "| `clean` | 清理构建产物 | `pre-clean` → `clean` → `post-clean`<br/>+ `pre-clean`： **大扫除之前**的准备工作。（很少用，比如发个通知说“我要开始删了！”）<br/>+ `clean`： **核心阶段**，就是**动手删除** **`target`** **文件夹**。<br/>+ `post-clean`： **大扫除之后**的收尾工作。（很少用，比如记录一下“我删完了”） |"
+ },
+ {
+  "file": "08-Maven.md",
+  "ln": 616,
+  "final": "**<font style=\"color:#DF2A3F;\">对于当前 IDEA 版本来说，经过测试，这个目录的名字必须是 </font>`webapp`<font style=\"color:#DF2A3F;\">才能识别。</font>**"
+ },
+ {
+  "file": "09-MyBatis.md",
+  "ln": 687,
+  "final": "**<font style=\"color:#DF2A3F;\">直接告诉大家一个结论：</font>`#{}`<font style=\"color:#DF2A3F;\">里写什么？</font>**"
+ },
+ {
+  "file": "09-MyBatis.md",
+  "ln": 1316,
+  "final": "**<font style=\"color:#DF2A3F;\">重点注意事项：以上test目录需要在resources目录下新建，默认情况下在java目录下的xml文件将不会编译到</font>`target/classes`<font style=\"color:#DF2A3F;\">目录下，除非pom.xml做一些配置，例如：</font>**"
+ },
+ {
+  "file": "09-MyBatis.md",
+  "ln": 1369,
+  "final": "**+ bank**"
+ },
+ {
+  "file": "09-MyBatis.md",
+  "ln": 2924,
+  "final": "注意：**<font style=\"color:#E8323C;\">使用mybatis</font><font style=\"color:#E8323C;\">3.4.2之前的版本时：要用#{0}和#{1}这种形式。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 2115,
+  "final": "**<font style=\"color:#DF2A3F;\">基于 XML 的自动装配底层都是基于 </font>`setter`<font style=\"color:#DF2A3F;\">方法，因此要求必须提供 </font>`setter`<font style=\"color:#DF2A3F;\">方法。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 3154,
+  "final": "| **特性 |  | 说明** |"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 3376,
+  "final": "**<font style=\"color:#E8323C;\">FactoryBean在Spring中是一个接口。被称为“工厂Bean”。“工厂Bean”是一种特殊的Bean。所有的“工厂Bean”都是用来</font><font style=\"color:#117CEE;\">协助Spring</font><font style=\"color:#E8323C;\">框架来创建其他Bean对象的。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 3519,
+  "final": "Bean生命周期的管理，可以参考Spring的源码：**<font style=\"color:#F5222D;\">AbstractAutowireCapableBeanFactory类的doCreateBean()方法</font>。**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 4901,
+  "final": "**西游记场景**：八戒和高小姐的故事。八戒要强抢民女高翠兰。悟空得知此事之后怎么做的？悟空幻化成高小姐的模样。代替高小姐与八戒会面。其中八戒是客户端程序。悟空是代理类。高小姐是目标类。那天夜里，在八戒眼里，眼前的就是高小姐，对于八戒来说，他是不知道眼前的高小姐是悟空幻化的，在他内心里这就是高小姐。所以悟空代替高小姐和八戒亲了嘴儿。这是非常典型的代理模式实现的保护机制。**<font style=\"color:#E8323C;\">代理模式中有一个非常重要的特点：对于客户端程序来说，使用代理对象时就像在使用目标对象一样。</font>【在程序中，目标需要被保护时】**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 5941,
+  "final": "**`<aop:aspectj-autoproxy proxy-target-class=\"true\"/>`<font style=\"color:#E8323C;\"> 开启自动代理之后，凡是带有@Aspect注解的bean都会生成代理对象。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 5943,
+  "final": "**`proxy-target-class=\"true\"`<font style=\"color:#E8323C;\"> 表示采用cglib动态代理。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 5945,
+  "final": "**`proxy-target-class=\"false\"`<font style=\"color:#E8323C;\"> 表示采用jdk动态代理。默认值是false。即使写成false，当没有接口的时候，也会自动选择cglib生成代理类。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 7228,
+  "final": "    - **基于注解方式（<font style=\"color:#DF2A3F;\">掌握这种方式</font>）**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 7358,
+  "final": "+ REQUIRES_NEW：**<font style=\"color:#E8323C;\">【不管有没有，直接开启一个新事务，开启的新事务和之前的事务不存在嵌套关系，之前事务被挂起，</font>挂起就是把当前事务暂停，等新事务完成后，再恢复继续执行，两者是完全独立的（回滚互不影响）<font style=\"color:#E8323C;\">】</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 7369,
+  "final": "可以编写程序测试一下传播行为：**<font style=\"color:#DF2A3F;\">需要分成两个类来进行测试，在一个类中测不出来，主要原因是Spring的事务管理是基于AOP代理的，而在同一个类内部的方法调用不会经过事务拦截器（不会经过代理）。</font><font style=\"color:#117CEE;\">本类中的 A 调用 B，一切以 A 的事务状态为准</font><font style=\"color:#DF2A3F;\">（或者说：B 的事务注解在本类内部调用时完全失效）。可以在上面银行账户转账的 </font>`AccountService`<font style=\"color:#DF2A3F;\">中添加一个方法 </font>`transfer2()`<font style=\"color:#DF2A3F;\">，该方法上不添加 </font>`@Transactional`<font style=\"color:#DF2A3F;\">注解，让它调用 </font>`transfer()`<font style=\"color:#DF2A3F;\">方法，然后再测试类中调用 </font>`transfer2()`<font style=\"color:#DF2A3F;\">方法，你会发现即使</font>`transfer()`<font style=\"color:#DF2A3F;\">方法上有 </font>`@Transactional`<font style=\"color:#DF2A3F;\">注解，事务也是无效的，因为 </font>`transfer2()`<font style=\"color:#DF2A3F;\">上没有事务。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 7855,
+  "final": "**<font style=\"color:#F5222D;\">主要原因是因为通过构造方法注入导致的：因为构造方法注入会导致</font><font style=\"color:#722ED1;\">实例化对象的过程</font><font style=\"color:#F5222D;\">和</font><font style=\"color:#722ED1;\">对象属性赋值的过程</font><font style=\"color:#F5222D;\">没有分离开，必须在一起完成导致的。</font>**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 7970,
+  "final": "**因为 Spring 要支持 AOP（比如** **`@Transactional`）。**"
+ },
+ {
+  "file": "10-Spring.md",
+  "ln": 7980,
+  "final": "+ 等 A 初始化完生成开始生成代理对象，**B 手里的 A 还是原始的，导致事务失效（<font style=\"color:#DF2A3F;\">B 手里应该持久 A 的代理对象就没事了</font>）**。"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 653,
+  "final": "+ 如果**两个路径都有** **`/`**：`/user` + `/detail` = `/user/detail`"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 654,
+  "final": "+ 如果**方法路径没有** **`/`**：`/user` + `detail` = `/user/detail`"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 655,
+  "final": "+ 如果**类路径没有** **`/`**：`user` + `/detail` = `/user/detail`"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 656,
+  "final": "+ 如果**两个都没有 `/`**：`user` + `detail` = `/user/detail`"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 730,
+  "final": "**value是可以用来匹配路径的，路径支持模糊匹配，我们把这种模糊匹配称之为<font style=\"color:#DF2A3F;\">Ant风格</font>。关于路径中的通配符包括：**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 733,
+  "final": "+ `*****`，代表0到N个任意字符，但不包含 `**/**`"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 734,
+  "final": "+ `**/****`**，代表0到N个任意字符，包含 **`**/**`**，<font style=\"color:#DF2A3F;\">springmvc6.2.10 版本测试结果： </font>**`/`**<font style=\"color:#DF2A3F;\">只能出现在路径的末尾。</font>**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 1510,
+  "final": "2. **但有一个前提：你需要在pom.xml文件中指定编译参数'-parameter'，这个配置让 Maven 在编译 Java 代码时，把方法的参数名（如 username、password）保留到编译后的 .class 文件中，这样 Spring 框架就能通过反射获取参数名。<font style=\"color:#DF2A3F;\">SpringBoot 项目默认自带这个配置，不需要手动配置。</font>**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 1551,
+  "final": "**不加 `@RequestParam` 注解的参数，默认不是必须的，匹配不到就赋 `null`，不会报 400。**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 2538,
+  "final": "    - **<font style=\"color:#DF2A3F;\">编写类实现ViewResolver接口，实现resolveViewName方法， </font>在这个方法中根据逻辑视图名创建并配置对应的View对象。**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 3057,
+  "final": "RESTful对URL的约束和规范的核心是：**<font style=\"color:#DF2A3F;\">通过采用</font>`不同的请求方式`<font style=\"color:#DF2A3F;\">+ </font>`URL`<font style=\"color:#DF2A3F;\">来确定WEB服务中的资源。</font>**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 3213,
+  "final": "**<font style=\"color:#DF2A3F;\">第二步：在发送POST请求的时候，提交这样的数据：</font>`_method=PUT`**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 3267,
+  "final": "**<font style=\"color:#DF2A3F;\">重点注意事项：CharacterEncodingFilter和</font>`HiddenHttpMethodFilter的顺序`**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 4219,
+  "final": "**在响应阶段：（<font style=\"color:#DF2A3F;\">使用@ResponseBody 来启用消息转换器</font>）**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 4231,
+  "final": "**在请求阶段：（<font style=\"color:#DF2A3F;\">@RequestBody 来启用消息转换器</font>）**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 4454,
+  "final": "**`@RequestBody`<font style=\"color:#DF2A3F;\">只处理请求体（Request Body）中的数据（不负责请求行！）</font>**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 4570,
+  "final": "**经过测试，以上代码 `**User user**` 不能添加 `**@RequestBody**`注解。因为请求的内容类型是 `**application/x-www-form-urlencoded**`，它是不走消息转换器的，走的`ServletRequestDataBinder`<font style=\"color:#601BDE;\">（数据绑定器）</font>**"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 5726,
+  "final": "使用了 `@EnableWebMvc`，你的类**必须实现 **`WebMvcConfigurer`** 接口**来配置静态资源处理，否则所有静态资源（CSS、JS、图片）都无法访问。"
+ },
+ {
+  "file": "11-SpringMVC.md",
+  "ln": 6220,
+  "final": "**<font style=\"color:#DF2A3F;\">另外，大家再思考一下，虽然以上 SSM 框架集成时使用了全注解的开发方式，方便了不少，但搭建过程仍然很繁琐，还是要编写大量的配置，例如我们编写了 web.xml 的配置 </font>`WebConfig`<font style=\"color:#DF2A3F;\">，Spring 的配置 </font>`SpringConfig`<font style=\"color:#DF2A3F;\">，SpringMVC 的配置</font>`SpringMvcConfig implements WebMvcConfigurer`<font style=\"color:#DF2A3F;\">，包括 SSM 集成时，依赖也是我们自己手动引入的，手动引入依赖难免存在依赖版本兼容的问题。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 71,
+  "final": "**<font style=\"color:#DF2A3F;\">思考：使用 springboot 框架为什么和之前框架感觉不一样，以前我们学习框架的的时候，用它就引入它的依赖，但 springboot 这里是继承方式，而不是直接引入它的依赖。为什么呢？这就要看你之前的 Maven 继承有没有学好。想必这个父项目的 </font>`packaging`<font style=\"color:#DF2A3F;\">打包方式为 </font>`pom`<font style=\"color:#DF2A3F;\">，并且这个父项目中应该有 </font>`<dependencyManagement>`<font style=\"color:#DF2A3F;\">标签来统一管理依赖的版本、</font>`properties`<font style=\"color:#DF2A3F;\">标签集中管理版本号。想起来了吗？</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 506,
+  "final": "**<font style=\"color:#DF2A3F;\">启动器 starter 引入时，会引入具体依赖的。</font>`<dependencyManagement>`<font style=\"color:#DF2A3F;\">只声明/锁定依赖的版本，但它不会引入具体的依赖。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 545,
+  "final": "    2. 什么是 BOM？**如果一个POM文件中主要包含`dependencyManagement`，并且被设计为供其他项目`import`使用，那么它就可以被称为BOM。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 548,
+  "final": "            2. **主要/唯一内容是`dependencyManagement`** - 定义版本"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 549,
+  "final": "            3. **很少或没有`<dependencies>`** - 不直接引入依赖"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 550,
+  "final": "            4. **被其他项目`import`** - 设计目的就是被引用"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 568,
+  "final": "4. ✅ 即使启动器写错版本（**程序员手滑写错了**），**最终以BOM为准（<font style=\"color:#DF2A3F;\">那为什么启动器中的依赖还要指定具体版本，干脆全部继承 BOM 得了：不行，因为这样启动器就不能单独使用了，启动器脱离了 SpringBoot，仍然可以单独使用。</font>）**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 911,
+  "final": "    1. **<font style=\"color:#DF2A3F;\">注意：如果没有找到</font>`application.properties`<font style=\"color:#DF2A3F;\">会继续找</font>`application.yml`<font style=\"color:#DF2A3F;\">，如果这两个都没有找到，才会进入以下位置查找，以此类推。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1042,
+  "final": "**<font style=\"color:#DF2A3F;\">另外，使用 </font>`@Value`<font style=\"color:#DF2A3F;\">注解也可以读取系统的环境变量，例如 windows 系统有一个环境变量 </font>`APP_KEY`<font style=\"color:#DF2A3F;\">，那么使用 </font>`@Value(\"${APP_KEY}\")`<font style=\"color:#DF2A3F;\">是可以读取到的。但配置文件 </font>`APP_KEY`<font style=\"color:#DF2A3F;\">之后，一定要重启 windows 系统才行。 </font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1052,
+  "final": "**<font style=\"color:#DF2A3F;\">YAML文件的扩展名可以是</font>`.yaml`<font style=\"color:#DF2A3F;\">或</font>`.yml`<font style=\"color:#DF2A3F;\">。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1146,
+  "final": "**<font style=\"color:#DF2A3F;\">强调：在同一个目录下同时存在</font>`application.properties`<font style=\"color:#DF2A3F;\">和</font>`application.yml`<font style=\"color:#DF2A3F;\">时，SpringBoot优先解析</font>`application.properties`<font style=\"color:#DF2A3F;\">文件。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1402,
+  "final": "**true：当前配置类生成代理对象，虽然效率低，可以保证配置类中的 bean 是单例。【<font style=\"color:#DF2A3F;\">如果类中有@Bean 标注的方法，建议使用 true，反之 false</font>】**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1596,
+  "final": "1. **之前的代码是这样写的： `**@Component**`+**`**@ConfigurationProperties(prefix = \"app\")**`"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1598,
+  "final": "3. **有了以下这两个注解（任意一个都行，<font style=\"color:#DF2A3F;\">建议</font>写到主入口类上），**`**@Component**`**/**`**@Configuration**`**可以省略了【@ConfigurationProperties 不能省】：**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 1600,
+  "final": "    2. **@`ConfigurationPropertiesScan(basePackages=\"\")`**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 2069,
+  "final": "**<font style=\"color:#DF2A3F;\">SpringBoot框架在启动的时候会将系统配置，环境信息全部封装到</font>`Environment`<font style=\"color:#DF2A3F;\">对象中，如果要获取这些环境信息，可以调用</font>`Environment`<font style=\"color:#DF2A3F;\">接口的方法。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 2854,
+  "final": "+ **<font style=\"color:#DF2A3F;\">如果没有</font>`final`<font style=\"color:#DF2A3F;\">的实例变量，则自动生成无参数构造方法。</font>**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 2859,
+  "final": "+ **<font style=\"color:#DF2A3F;\">这两个注解都有</font>`exclude``属性，通过这个属性可以定制toString、hashCode、equals方法。`**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 3845,
+  "final": "假设我们来实现这样一个功能：如果IoC容器当中<font style=\"color:#DF2A3F;\">存在</font>`A`<font style=\"color:#DF2A3F;\">Bean</font>，就创建`B`Bean，代码如下："
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 3864,
+  "final": "如果IoC容器当中<font style=\"color:#DF2A3F;\">不存在</font>`A`<font style=\"color:#DF2A3F;\">Bean</font>，就创建`B`Bean，代码如下："
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4215,
+  "final": "**<font style=\"color:#DF2A3F;\">思考：</font>为什么要把 914 个条件放到一个属性文件中？这些条件不应该都在自动配置类上吗？直接通过反射读取 156 个配置类动态获取配置类上的条件不行吗？答案是：不行，原因是效率太低。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4355,
+  "final": "    - **“转换器”负责把传进来的字符串（如`\"123\"`）转成Java对象（如`Integer`）；“格式化器”负责把Java对象（如`Date`）转成特定格式的字符串（如`\"2026-07-16\"`）展示给前端看。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4420,
+  "final": "3. **<font style=\"color:#DF2A3F;\">想修改默认配置：在 application.yml 文件中配置 </font>`spring.mvc`<font style=\"color:#DF2A3F;\">、</font>`spring.web`**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4421,
+  "final": "4. **<font style=\"color:#DF2A3F;\">想对默认配置进行扩展，例如添加拦截器：编写类实现</font>`WebMvcConfigurer`<font style=\"color:#DF2A3F;\">接口+</font>`@Configuration`**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4513,
+  "final": "**总结：`Adapter` 提供基础配置，并通过 `@Import` 把 `EnableWebMvcConfiguration` 拉进来提供高级配置，两者共同组成 SpringBoot 的默认 MVC 配置。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4520,
+  "final": "webjars 是：**将前端资源（如jQuery、Bootstrap）打包成Java的JAR包，通过Maven依赖管理，像引入Java库一样引入前端库，<font style=\"color:#DF2A3F;\">现代开发中很少这样用，了解即可</font>。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4526,
+  "final": "2. **当请求路径是 `**/webjars/****`格式时，会去 `**/META-INF/resources/webjars/**`目录下找静态资源。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4527,
+  "final": "3. **当请求路径是 `**/****`格式时（优先匹配控制器，如果匹配不到控制器，才会...），会去 `**{ \"classpath:/META-INF/resources/\",\"classpath:/resources/\", \"classpath:/static/\", \"classpath:/public/\" }**`目录下找。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4622,
+  "final": "**当请求路径是[http://localhost:8080/](http://localhost:8080/)，根据控制器方法优先原则，会先去找合适的控制器方法，如果没有合适的控制器方法，静态资源处理才会生效，则自动去类路径下的以下4个位置查找：**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4656,
+  "final": "    -  假设配置为 3600 秒，则在 1 小时内浏览器都走缓存。（**<font style=\"color:#DF2A3F;\">这 1 小时内，浏览器压根不会和服务器交互，因为这 1 小时内的缓存叫做</font><font style=\"color:#2F4BDA;\">强</font><font style=\"color:#DF2A3F;\">缓存</font>**）"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4657,
+  "final": "    - 可以通过`application.properties`的来修改默认的过期时间，例如：`spring.web.resources.cache.period=3600`或者`spring.web.resources.cache.period=1h`，或者通过 `spring.web.resources.cache.cachecontrol.max-age=3600`也可以（**它是<font style=\"color:#DF2A3F;\">较新</font>的一种写法**）。"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4990,
+  "final": "**<font style=\"color:#DF2A3F;\">?</font>\t匹配任意单个字符**。"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4992,
+  "final": "<font style=\"color:#DF2A3F;\">[]</font>\t匹配指定范围内的单个字符。"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 4994,
+  "final": "<font style=\"color:#DF2A3F;\">{}</font>\t路径变量，用于提取路径的一部分作为参数。示例：/users/{userId} 匹配 /users/123，提取 userId=123。"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 6230,
+  "final": "**日志组让多个包/类的日志级别可以<font style=\"color:#DF2A3F;\">统一设置和批量修改</font>，避免重复配置，提升管理效率。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 6248,
+  "final": "**`web` 日志组：记录了 Spring MVC/WebFlux 框架处理 HTTP 请求、响应及内部组件的全链路调试信息**，是排查 Web 层问题的核心工具。"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 6416,
+  "final": "所有定时任务共用**同一个线程**，一个任务执行时，其他任务只能等，哪怕到了触发时间也得排队。**想改成多线程**，加个配置就行：**默认单线程，多个任务会互相阻塞；配个 **`TaskScheduler`** 线程池就能并发跑。**"
+ },
+ {
+  "file": "12-SpringBoot.md",
+  "ln": 7134,
+  "final": "使用Spring Initializr创建项目（**<font style=\"color:#DF2A3F;\">重点注意事项：以下功能基于 SpringBoot </font>`3.3.6 版本，其他版本可能有兼容问题 `**），选择以下依赖："
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 138,
+  "final": "**`BaseMapper`<font style=\"color:#DF2A3F;\">已经将CRUD相关的方法全部实现了，该类中有大量的 insert、delete、update、select 等方法。</font>**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 233,
+  "final": "**然后通过反射机制获取**`**Car**`**类的类名以及字段名，遵循`约定大于配置`的方式完成了**`**实体类**`**与**`**表**`**的对应，约定如下：**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 271,
+  "final": "+ IdType.ASSIGN_ID：雪花算法生成分布式ID（**默认策略**），主键的类型可以是 Long、Integer、String。这是mp自己提供的，底层调用了`IdentifierGenerator`接口的`nextId()`方法，实现类是`DefaultIdentifierGenerator`，雪花算法实现的（**雪花算法是一种分布式ID生成算法，通过组合<font style=\"color:#DF2A3F;\">时间戳、机器ID和序列号</font>生成全局唯一、趋势递增的64位ID。占 8 个字节，<font style=\"color:#DF2A3F;\">时钟回拨</font>或<font style=\"color:#DF2A3F;\">机器 ID 全局不唯一</font>可能会导致 id 重复，但概率较低**）。"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 273,
+  "final": "**<font style=\"color:#DF2A3F;\">需要注意的是：当你使用这种方式时，即使主键是 </font>`auto_increment`<font style=\"color:#DF2A3F;\">，仍然会采用雪花算法生成 ID。</font>**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 360,
+  "final": "**<font style=\"color:#DF2A3F;\">注意：MP 中提供的</font>`QueryWrapper`<font style=\"color:#DF2A3F;\"> 与 </font>`LambdaQueryWrapper`<font style=\"color:#DF2A3F;\">适合于单表查询，如果多表连接查询建议大家使用 MyBatis 原生配置文件。当然，MP 也可以实现多表连接查询，只是代码会变的很难维护、很难阅读。官方最佳实践是：采用 MP 做单表查询。</font>**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 886,
+  "final": "**<font style=\"color:#DF2A3F;\">在SpringBoot入口程序上添加</font>`@MapperScan`<font style=\"color:#DF2A3F;\">扫描</font>**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 1205,
+  "final": "**<font style=\"color:#DF2A3F;\">查询操作如果参数不多，RESTful 接口应设计为 get 请求，请求在请求行上提交，以下代码中 </font>`@ParameterObject`<font style=\"color:#DF2A3F;\">是 swagger 的注解，和 SpringMVC 无关。使用这个注解，swagger 在生成文档的时候，会将 </font>`CarQuery`<font style=\"color:#DF2A3F;\">对象的属性拆开在文档中显示。</font>**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 1409,
+  "final": "**<font style=\"color:#DF2A3F;\">静态工具类 Db 中的方法一般比 IService 接口中的方法多一个</font>`Class`<font style=\"color:#DF2A3F;\">参数。这是因为 IService 接口可以通过泛型来指定类型，而静态工具类 Db 是无法指定泛型的。</font>**"
+ },
+ {
+  "file": "13-MyBatis-Plus.md",
+  "ln": 1765,
+  "final": "**<font style=\"color:#DF2A3F;\">重点注意事项</font>：当添加了 `**@JsonValue**`注解之后，前端系统提交 JSON 给 DTO 对象时，JSON 字符串中的 `**status**`需要使用中文：`**\"status\":\"在售\"**`，这样才能解决新增时的报错问题。**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 99,
+  "final": "    - **<font style=\"color:#DF2A3F;\">TypeScript 引入了编译阶段，</font>`tsc`<font style=\"color:#DF2A3F;\">是 </font>`ts`<font style=\"color:#DF2A3F;\">的编译器，</font>`tsc`<font style=\"color:#DF2A3F;\"> 在编译报错后，</font><font style=\"color:#117CEE;\">默认</font><font style=\"color:#DF2A3F;\">情况下依然会正常生成 </font>`.js`<font style=\"color:#DF2A3F;\"> 文件</font>**<font style=\"color:#DF2A3F;\">。</font>"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 223,
+  "final": "**<font style=\"color:#DF2A3F;\">疑问？</font>浏览器能够运行 javascript 代码，是因为浏览器内置了 node.js 吗？不是的，它们是两个完全不同的运行方式。浏览器是一个沙盒环境，安全性限制严格，浏览器是无法访问文件系统、进程等操作系统资源的。**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 252,
+  "final": "2. 复制安装命令：`npm i dayjs`**<font style=\"color:#DF2A3F;\">（注意：安装时当前目录会自动生成 </font>`node_modules`<font style=\"color:#DF2A3F;\">目录，下载的依赖就存在这个目录下，另外在</font>`node_modules`<font style=\"color:#DF2A3F;\">目录之外生成了两个文件 :</font>`package.json`<font style=\"color:#DF2A3F;\">和 </font>`package-lock.json`<font style=\"color:#DF2A3F;\">，其中 </font>`package.json`<font style=\"color:#DF2A3F;\">文件中描述了当前项目中引入了哪些依赖以及依赖的版本范围，例如下图中的 </font>`^1.11.19`<font style=\"color:#DF2A3F;\">表示此项目允许的依赖版本为 </font>`1.x.x`<font style=\"color:#DF2A3F;\">，</font>`package-lock.json`<font style=\"color:#DF2A3F;\">中描述了当前项目使用该依赖时具体引入的精确版本。npm 在执行 </font>`npm install`<font style=\"color:#DF2A3F;\">时，先找 </font>`package-lock.json`<font style=\"color:#DF2A3F;\">文件，如果有精确版本号就安装精确版本号的，如果没有则找 </font>`package.json`<font style=\"color:#DF2A3F;\">计算出兼容版本号，自动联网下载安装）</font>**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 328,
+  "final": "1. **创建** **`tsconfig.json`**  "
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 361,
+  "final": "| **`\"module\": \"es2015\"`** | 指定模块系统（如 **`commonjs`**、**`es2015`**等）。<br/>**`commonjs`:**<br/>导出的语法：module.exports = { ... }<br/>导入的语法：const lib = require('lib')<br/>**`es2015`:**<br/>导出的语法：export const func = () => {}<br/>导入的语法：import { func } from 'lib'<br/>未来趋势（ES 标准） |"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 364,
+  "final": "| **`\"rootDir\": \"./src\"` | 指定 TypeScript 源文件目录（默认是注释掉的，需手动取消注释）。<br/>设置 outDir 和 rootDir 后，执行 `tsc`命令会直接将编译的结果输出 `./dist`目录下。注意：使用 `tsc` 命令时后面不要写具体的 `ts`文件名。** |"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 366,
+  "final": "**<font style=\"color:#DF2A3F;\">注意：本课程要求将 </font>`target`<font style=\"color:#DF2A3F;\">设置为 </font>`es6`<font style=\"color:#DF2A3F;\">，将 </font>`module`<font style=\"color:#DF2A3F;\">设置为 </font>`es2015`<font style=\"color:#DF2A3F;\">。</font>**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 382,
+  "final": "注意：`tsc --watch 具体目录或文件`通过这种语法可以监控某些具体的目录或具体的文件。"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 526,
+  "final": "**TypeScript 根据你写的值、上下文和内置的类型定义，自动推导出变量和参数最精确的类型，让你不用每次都手动写<font style=\"color:#DF2A3F;\">类型注解</font>。**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 554,
+  "final": "    1. **类型位置就是所有“写在 **`:`、`<>`、`type`、`interface`、`extends`** 这些 TS 语法结构里，且编译成 JS 后会完全消失”的代码区域。**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 727,
+  "final": "**unkown 可以理解为一个类型安全的 any，<font style=\"color:#DF2A3F;\">适用于：它将来是一个具体的类型，但是声明变量的时候还不确定类型时使用它</font>**"
+ },
+ {
+  "file": "14-TypeScript.md",
+  "ln": 2072,
+  "final": "**<font style=\"color:#DF2A3F;\">注意：以下所有文件放到同一个目录中，另外将 </font>`tsconfig.json`<font style=\"color:#DF2A3F;\">配置文件中的 </font>`\"noEmitOnError\": false,`<font style=\"color:#DF2A3F;\">设置为 false：有语法错误也编译。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 6,
+  "final": "1. Vue 3 是当前最新的主要版本，是一个用于构建用户界面的渐进式 JavaScript 框架（你可以从简单的页面交互开始，按需逐步引入更复杂的特性和工具，最终构建完整的现代化应用），由尤雨溪（Evan You）和团队开发。"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 151,
+  "final": "**下载并执行 **`create-vue`** 脚手架，通过脚手架立即创建项目。<font style=\"color:#DF2A3F;\">注意：</font>`create-vue`<font style=\"color:#DF2A3F;\">是 vite 提供的脚手架，它并不是 vite。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 361,
+  "final": "**<font style=\"color:#DF2A3F;\">注意哦：最新版的 Vite+create-vue 脚手架创建的 Vue 项目自带 </font>`DevTools`<font style=\"color:#DF2A3F;\">，无需额外安装了。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 579,
+  "final": "**<font style=\"color:#DF2A3F;\">也可以安装一个插件，让以上两个 </font>`script`<font style=\"color:#DF2A3F;\">合并成一个 </font>`script`<font style=\"color:#DF2A3F;\">：</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 791,
+  "final": "+ **`ref` 本身是“单向”的（数据→视图），它只负责数据变化时更新页面；要实现“双向”（视图→数据），需要在 ref 基础之上配合 `v-model` 才行。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 792,
+  "final": "+ **`ref`也可以应用在对象上，应用在对象上时，需要 `.value`来获取对象，然后再 `.`的方式访问属性。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 800,
+  "final": "4. `**reactive()**`**只能应用在<font style=\"color:#DF2A3F;\">对象/数组</font>上，不能应用在<font style=\"color:#DF2A3F;\">原始类型</font>上。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 801,
+  "final": "+ **`reactive` 本身也是“单向”的（数据→视图），它只负责数据变化时更新页面；要实现“双向”（视图→数据），需要在 `reactive` 基础之上配合 `v-model` 才行。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 884,
+  "final": "**<font style=\"color:#DF2A3F;\">注意：</font>`reactive`<font style=\"color:#DF2A3F;\">无法处理基本类型数据的响应式，只能处理</font><font style=\"color:#117CEE;\">对象/数组</font><font style=\"color:#DF2A3F;\">类型的数据。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 904,
+  "final": "**`v-bind`<font style=\"color:#DF2A3F;\"> 的值是 JavaScript 表达式，所以可以直接写变量名或简单表达式。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 1148,
+  "final": "    - **`public` 目录的文件“原封不动”复制到打包目录**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 1149,
+  "final": "    - **`public` 放“固定不变”的文件（如 favicon.ico）**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 1151,
+  "final": "    - **`src/assets` 目录的文件会经过 Vite 编译优化（加哈希、压缩等）**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 1152,
+  "final": "    - **`src/assets` 放“需要被代码引用”的项目图片/样式。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 1548,
+  "final": "**`toRefs` 函数将一个响应式对象（reactive 对象）转换为一个新对象，新对象的每个属性都是 ref 的，虽然是新对象，但是该新对象的每个 ref 属性仍然连接到原始响应式对象。主要用途：解构时保持响应性**。"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 2290,
+  "final": "**<font style=\"color:#DF2A3F;\">重点：监视 reactive 定义的对象数据时，默认开启深度监视，通过 </font>`deep: false`<font style=\"color:#DF2A3F;\">可以将深度监视关闭。关闭深度监视后，对象的顶层属性仍然能监视到，非顶层属性无法监视到。如果你只需要监视对象的顶层属性，建议关闭深度监视，这样能够提高效率。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 2629,
+  "final": "**<font style=\"color:#DF2A3F;\">另外 </font>`ref`<font style=\"color:#DF2A3F;\">属性还可以完成一个重要的任务：子组件向父组件传递数据。并且当子组件向父组件暴露响应式数据时，在父组件中是可以修改这个响应式数据的。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 2698,
+  "final": "**每个 **`ref`** 在组件实例化时，都会创建独立的 DOM 引用，通过组件实例的作用域隔离，同名 **`ref`** 互不干扰。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 2702,
+  "final": "**另外需要特别注意的是：<font style=\"color:#DF2A3F;\">只有在页面渲染之后，脚本中的</font>`myDiv`<font style=\"color:#DF2A3F;\">才会有值。渲染前脚本中的 </font>`myDiv`<font style=\"color:#DF2A3F;\">是 undefined。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 2748,
+  "final": "**<font style=\"color:#DF2A3F;\">通过以上的代码我们就可以在父组件中获取到子组件的实例了。</font>`personInstance`<font style=\"color:#DF2A3F;\">就是子组件对象。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 2833,
+  "final": "**`props` 的核心作用：父组件 → 子组件单向传递数据**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 3842,
+  "final": "**<font style=\"color:#DF2A3F;\">重点注意事项：现代的企业级项目中，一般组件要放到 </font>`components`<font style=\"color:#DF2A3F;\">目录下，路由组件要放到 </font>`views/pages`<font style=\"color:#DF2A3F;\">目录下。另外路由组件的文件名建议以 </font>`View`<font style=\"color:#DF2A3F;\">结尾，大家尽量遵循这个规范。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 4144,
+  "final": "**缺点：后期项目上线，需要服务器端配合处理路径问题，否则刷新会有 404 的错误。（浏览器刷新时会把 `/about` 路径发给服务器，但服务器上根本没有这个文件，所以返回 404**）"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 4624,
+  "final": "1. **<font style=\"color:#DF2A3F;\">如果使用 params 参数，</font>`:to`<font style=\"color:#DF2A3F;\">后面的对象的属性中不能使用 path，必须使用 name。</font>**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 4892,
+  "final": "**<font style=\"color:#DF2A3F;\">Pinia 和 Hooks 代码很像，他们的区别如下：</font>Pinia 管理的是\"跨组件共享的状态\"，Hooks 封装的是\"可复用的逻辑\"。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 6119,
+  "final": "2. **`**mitt（微型事件总线）**`：微型事件总线，超轻量级（仅 200 bytes），专为 Vue 3 或现代 JS 设计。无依赖，支持 TypeScript。Vue 3 中替代 Event Bus 的首选方案。**"
+ },
+ {
+  "file": "15-Vue3.md",
+  "ln": 7212,
+  "final": "`toRaw`可以获取响应式对象对应的原始对象。使用场景：在需要将响应式对象传递给非 Vue 的库或外部系统时，使用 `toRaw`可以确保它们收到的是普通对象。**`toRaw`<font style=\"color:#DF2A3F;\">只能作用于 </font>`reactive`<font style=\"color:#DF2A3F;\">的对象，对 </font>`ref`<font style=\"color:#DF2A3F;\">无效。</font>**"
+ },
+ {
+  "file": "16-ElementPlus.md",
+  "ln": 1383,
+  "final": "**按需导入是指<font style=\"color:#DF2A3F;\">只导入</font>项目中实际用到的组件，而不是导入整个 Element Plus 库，这样可以显著减小打包体积。**"
+ },
+ {
+  "file": "16-ElementPlus.md",
+  "ln": 1447,
+  "final": "3. 使用图标时，前缀需要添加：`i-ep-`或 `IEp`或 `iEp`（`i-ep-` 是 `unplugin-icons` 的约定前缀。固定写法，不过可以修改以上的配置来设置前缀）"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 189,
+  "final": "**类似于MobaXterm 软件很多，例如：**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 401,
+  "final": "| **特性** | **`which`命令** | **`whereis`命令** |"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 404,
+  "final": "| **搜索范围** | 当前用户的 **`$PATH`环境变量** | 预定义的**系统目录** (如 `/bin`, `/usr/bin`, `/usr/share/man`等) |"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 406,
+  "final": "| **关键机制** | 模拟Shell的命令查找过程，**严格遵循`$PATH`的顺序**。 | 在固定目录中**快速检索**，**不关心`$PATH`**<br/>**顺序**。 |"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 410,
+  "final": "**日常使用和问题诊断，用 `which`：当你关心“我现在输入这个命令，到底运行的是谁？**”时，`which` 是唯一能给你准确答案的命令。"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 414,
+  "final": "**了解程序安装情况，用 `whereis`：当你想知道“这个程序在系统里都安装了哪些相关文件？**”（比如，你想删除一个软件的所有部分）时，`whereis` 能提供更全面的信息。"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 707,
+  "final": "| **特性** | **标准输入重定向 (`<`)** | **内嵌文档语法 (`<<`)，特殊形式的输入重定向** |"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 1066,
+  "final": "`**LISTEN**`**表示服务正在监听端口，等待连接**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 1068,
+  "final": "**`ESTABLISHED`连接已建立，正在传输数据**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 1070,
+  "final": "**`TIME_WAIT`连接已关闭，但系统在“延迟释放端口”。大量的 **`TIME_WAIT`** 会耗尽系统的可用端口号，导致无法建立新的网络连接**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 1813,
+  "final": "这个命令只是**把 **`/java`** 目录及其所有内容的所属组改为 **`dev`** 组**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 1901,
+  "final": "**<font style=\"color:#DF2A3F;\">注意：不要有空格，</font>`chmod g+w, o+w Hello.java`<font style=\"color:#DF2A3F;\">这个是不行的。有空格不行。</font>**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 2213,
+  "final": "总的来说，dnf命令是yum命令的升级版本，它在性能、依赖关系处理和可用插件等方面都更加优秀。**<font style=\"color:#DF2A3F;\">在较新版的操作系统中使用 </font>`yum`<font style=\"color:#DF2A3F;\">命令时底层会自动转换为 </font>`dnf`<font style=\"color:#DF2A3F;\">命令。</font>**"
+ },
+ {
+  "file": "17-Linux.md",
+  "ln": 2266,
+  "final": "**<font style=\"color:#DF2A3F;\">标注：我这里设置的密码是：</font>`abC_123456`**"
+ }
+]

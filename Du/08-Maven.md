@@ -44,7 +44,7 @@ Maven 是目前最流行的自动化构建工具，对于生产环境下多框�
 #### 依赖管理
 对jar包的统一管理，Maven提供中央仓库，私服，本地仓库解决jar包的依赖和相关依赖的下载。
 
-如下图所示：包括蓝、黄两个部分分别对应着[**依赖关系**](https://www.zhihu.com/search?q=%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2811089619%7D)**和****<font style="color:#ECAA04;">项目构建</font>**两大核心功能。
+如下图所示：包括蓝、黄两个部分分别对应着[依赖关系](https://www.zhihu.com/search?q=%E4%BE%9D%E8%B5%96%E5%85%B3%E7%B3%BB&search_source=Entity&hybrid_search_source=Entity&hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A2811089619%7D)和<font style="color:#ECAA04;">项目构建</font>两大核心功能。
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/42995594/1710167507407-a3db57eb-0be4-45df-b304-a170351d10b5.png)
 
@@ -238,7 +238,7 @@ Maven 提供三个核心生命周期，每个生命周期包含多个阶段：
 | **生命周期** | **用途** | **关键阶段（顺序执行）** |
 | --- | --- | --- |
 | `default` | 项目构建和部署的完整过程 | `validate` → `compile` → `test` → `package` → `verify` → `install` → `deploy`<br/>+ `validate`： 看看这个项目的“身份证”（基本信息）全不全，配置对不对。<br/>+ `compile`： 编译项目的源代码。<br/>+ `test`： 执行程序员编写的所有单元测试。<br/>+ `package`： 将编译后的代码打包，如 JAR、WAR。<br/>+ `verify`： 对打包后的内容进行全面检查。确保质量没问题。<br/>+ `install`： 将打包好的构件安装到**本地仓库**，这样就可以作为其他本地项目的依赖了。<br/>+ `deploy`： 将最终的构件复制到**私服（如果你们搭建了私服的话）**，和其他开发者共享。<br/>**<font style="color:#DF2A3F;">注意：某阶段执行时，前面所有的阶段会全部执行一遍。</font>** |
-| `clean` | 清理构建产物 | `pre-clean` → `clean` → `post-clean`<br/>+ `pre-clean`： **大扫除之前**的准备工作。（很少用，比如发个通知说“我要开始删了！”）<br/>+ `clean`： **核心阶段**，就是**动手删除**** ****`target`**** ****文件夹**。<br/>+ `post-clean`： **大扫除之后**的收尾工作。（很少用，比如记录一下“我删完了”） |
+| `clean` | 清理构建产物 | `pre-clean` → `clean` → `post-clean`<br/>+ `pre-clean`： **大扫除之前**的准备工作。（很少用，比如发个通知说“我要开始删了！”）<br/>+ `clean`： **核心阶段**，就是**动手删除** **`target`** **文件夹**。<br/>+ `post-clean`： **大扫除之后**的收尾工作。（很少用，比如记录一下“我删完了”） |
 | `site` | 生成文档和报告（本质上就是执行 javadoc 命令） | `pre-site` → `site` → `post-site` → `site-deploy`<br/>site 就是给你的项目自动创建一个“产品说明书网站”。<br/>+ `pre-site`： **建网站之前**的准备工作。（很少用）<br/>+ `site`： **核心阶段**，就是**动手生成那个“说明书网站”**。生成的文件都在 `target/site` 文件夹里。你可以直接用浏览器打开 `target/site/index.html` 来查看。<br/>+ `post-site`： **建网站之后**的收尾工作。（很少用）<br/>+ `site-deploy`： **把网站发布上网**，把这个“说明书网站”上传到一台服务器上，这样大家通过一个网址就能访问了，不用每个人自己本地生成。<br/>在 pom.xml 文件中配置这个<br/>  &lt;distributionManagement&gt;<br/>    &lt;!-- 配置站点部署的服务器地址 --&gt;<br/>    &lt;site&gt;<br/>      &lt;id&gt;my-website-server&lt;/id&gt;<br/>      &lt;url&gt;scp://webhost.mycompany.com/www/docs/myproject/&lt;/url&gt;<br/>    &lt;/site&gt;<br/>  &lt;/distributionManagement&gt; |
 
 #### 插件与生命周期的绑定
@@ -613,7 +613,7 @@ public class HelloTest {
 ##### 手动创建目录
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1743641669034-54fee17e-439f-4086-a421-2cc16fd914c8.png)
 
-**<font style="color:#DF2A3F;">对于当前 IDEA 版本来说，经过测试，这个目录的名字必须是 </font>****`webapp`****<font style="color:#DF2A3F;">才能识别。</font>**
+**<font style="color:#DF2A3F;">对于当前 IDEA 版本来说，经过测试，这个目录的名字必须是 </font>`webapp`<font style="color:#DF2A3F;">才能识别。</font>**
 
 ##### 提供web.xml配置
 

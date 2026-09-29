@@ -1380,7 +1380,7 @@ const fetchData = () => {
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753019836276-471cec71-85ab-4860-92aa-72137168a931.png)
 
 ## 按需导入+自动导入
-**按需导入是指****<font style="color:#DF2A3F;">只导入</font>****项目中实际用到的组件，而不是导入整个 Element Plus 库，这样可以显著减小打包体积。**
+**按需导入是指<font style="color:#DF2A3F;">只导入</font>项目中实际用到的组件，而不是导入整个 Element Plus 库，这样可以显著减小打包体积。**
 
 **<font style="color:#DF2A3F;">另外，以下我们也设置了自动导入，这样在开发中也不需要手动编写 import 语句了。</font>**
 
@@ -1444,7 +1444,7 @@ export default defineConfig({
 
 ```
 
-3. 使用图标时，前缀需要添加：`i-ep-`或 `IEp`或 `iEp`（**`i-ep-`**** 是 ****`unplugin-icons`**** 的约定前缀。**固定写法，不过可以修改以上的配置来设置前缀）
+3. 使用图标时，前缀需要添加：`i-ep-`或 `IEp`或 `iEp`（`i-ep-` 是 `unplugin-icons` 的约定前缀。固定写法，不过可以修改以上的配置来设置前缀）
 
 ```vue
 <template>

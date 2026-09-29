@@ -96,7 +96,7 @@ obj.undefinedMethod();       // 方法不存在
 
 + JavaScript=**动态类型**（运行时检查）+**弱类型**（允许隐式转换，例如：`let result = "10" - 5;`）
 + TypeScript=**静态类型**（编译时检查）+**弱类型**（运行时依然允许隐式转换）
-    - **<font style="color:#DF2A3F;">TypeScript 引入了编译阶段，</font>****`tsc`****<font style="color:#DF2A3F;">是 </font>****`ts`****<font style="color:#DF2A3F;">的编译器，</font>****`tsc`****<font style="color:#DF2A3F;"> 在编译报错后，</font>****<font style="color:#117CEE;">默认</font>****<font style="color:#DF2A3F;">情况下依然会正常生成 </font>****`.js`****<font style="color:#DF2A3F;"> 文件</font>**<font style="color:#DF2A3F;">。</font>
+    - **<font style="color:#DF2A3F;">TypeScript 引入了编译阶段，</font>`tsc`<font style="color:#DF2A3F;">是 </font>`ts`<font style="color:#DF2A3F;">的编译器，</font>`tsc`<font style="color:#DF2A3F;"> 在编译报错后，</font><font style="color:#117CEE;">默认</font><font style="color:#DF2A3F;">情况下依然会正常生成 </font>`.js`<font style="color:#DF2A3F;"> 文件</font>**<font style="color:#DF2A3F;">。</font>
 + Java=**静态类型**（编译时检查）+**强类型**（不允许隐式转换）
 
 
@@ -220,7 +220,7 @@ npm install <包名>       # 本地安装（当前项目）
 npm install -g <包名>    # 全局安装（整个系统）
 ```
 
-**<font style="color:#DF2A3F;">疑问？</font>****浏览器能够运行 javascript 代码，是因为浏览器内置了 node.js 吗？不是的，它们是两个完全不同的运行方式。浏览器是一个沙盒环境，安全性限制严格，浏览器是无法访问文件系统、进程等操作系统资源的。**
+**<font style="color:#DF2A3F;">疑问？</font>浏览器能够运行 javascript 代码，是因为浏览器内置了 node.js 吗？不是的，它们是两个完全不同的运行方式。浏览器是一个沙盒环境，安全性限制严格，浏览器是无法访问文件系统、进程等操作系统资源的。**
 
 从 [**Node.js 官网**](https://nodejs.org/zh-cn) 下载 LTS 版本（推荐），默认安装会自动配置 npm。安装时会自动 "Add to PATH"（确保环境变量被添加）。
 
@@ -249,7 +249,7 @@ npm install -g <包名>    # 全局安装（整个系统）
 **实际场景**：你想找一个日期格式化工具
 
 1. 访问 [<font style="color:rgb(59, 130, 246);">npmjs.com</font>](https://www.npmjs.com/) → 搜索 dayjs。
-2. 复制安装命令：`npm i dayjs`**<font style="color:#DF2A3F;">（注意：安装时当前目录会自动生成 </font>****`node_modules`****<font style="color:#DF2A3F;">目录，下载的依赖就存在这个目录下，另外在</font>****`node_modules`****<font style="color:#DF2A3F;">目录之外生成了两个文件 :</font>****`package.json`****<font style="color:#DF2A3F;">和 </font>****`package-lock.json`****<font style="color:#DF2A3F;">，其中 </font>****`package.json`****<font style="color:#DF2A3F;">文件中描述了当前项目中引入了哪些依赖以及依赖的版本范围，例如下图中的 </font>****`^1.11.19`****<font style="color:#DF2A3F;">表示此项目允许的依赖版本为 </font>****`1.x.x`****<font style="color:#DF2A3F;">，</font>****`package-lock.json`****<font style="color:#DF2A3F;">中描述了当前项目使用该依赖时具体引入的精确版本。npm 在执行 </font>****`npm install`****<font style="color:#DF2A3F;">时，先找 </font>****`package-lock.json`****<font style="color:#DF2A3F;">文件，如果有精确版本号就安装精确版本号的，如果没有则找 </font>****`package.json`****<font style="color:#DF2A3F;">计算出兼容版本号，自动联网下载安装）</font>**
+2. 复制安装命令：`npm i dayjs`**<font style="color:#DF2A3F;">（注意：安装时当前目录会自动生成 </font>`node_modules`<font style="color:#DF2A3F;">目录，下载的依赖就存在这个目录下，另外在</font>`node_modules`<font style="color:#DF2A3F;">目录之外生成了两个文件 :</font>`package.json`<font style="color:#DF2A3F;">和 </font>`package-lock.json`<font style="color:#DF2A3F;">，其中 </font>`package.json`<font style="color:#DF2A3F;">文件中描述了当前项目中引入了哪些依赖以及依赖的版本范围，例如下图中的 </font>`^1.11.19`<font style="color:#DF2A3F;">表示此项目允许的依赖版本为 </font>`1.x.x`<font style="color:#DF2A3F;">，</font>`package-lock.json`<font style="color:#DF2A3F;">中描述了当前项目使用该依赖时具体引入的精确版本。npm 在执行 </font>`npm install`<font style="color:#DF2A3F;">时，先找 </font>`package-lock.json`<font style="color:#DF2A3F;">文件，如果有精确版本号就安装精确版本号的，如果没有则找 </font>`package.json`<font style="color:#DF2A3F;">计算出兼容版本号，自动联网下载安装）</font>**
 3. 在 js 代码中使用：
 
 ```javascript
@@ -325,7 +325,7 @@ node hello.js
 
 **作用：**
 
-1. **创建**** ****`tsconfig.json`**  
+1. **创建** **`tsconfig.json`**  
 在当前目录生成一个默认的 TypeScript 配置文件，用于定义编译选项、文件包含规则等。
 2. **初始化 TypeScript 项目**  
 标记当前目录为 TypeScript 项目的根目录，后续的 **`tsc`** 命令会依据该文件的配置进行编译。
@@ -358,12 +358,12 @@ tsconfig.json 文件内容：
 | **配置项** | **作用** |
 | --- | --- |
 | **`"target": "es6"`** | 编译后的 JavaScript 目标版本（如 es5、es6、es2015 等）。 |
-| **`"module": "es2015"`** | 指定模块系统（如 **`commonjs`**、**`es2015`**等）。<br/>**`commonjs`****:**<br/>导出的语法：module.exports = { ... }<br/>导入的语法：const lib = require('lib')<br/>**`es2015`****:**<br/>导出的语法：export const func = () => {}<br/>导入的语法：import { func } from 'lib'<br/>未来趋势（ES 标准） |
+| **`"module": "es2015"`** | 指定模块系统（如 **`commonjs`**、**`es2015`**等）。<br/>**`commonjs`:**<br/>导出的语法：module.exports = { ... }<br/>导入的语法：const lib = require('lib')<br/>**`es2015`:**<br/>导出的语法：export const func = () => {}<br/>导入的语法：import { func } from 'lib'<br/>未来趋势（ES 标准） |
 | **`"strict": true`** | 启用所有严格类型检查（推荐开启）。 |
 | **`"outDir": "./dist"`** | 指定编译后的 JS 文件输出目录（默认是注释掉的，需手动取消注释）。 |
-| **`"rootDir": "./src"`** | 指定 TypeScript 源文件目录（默认是注释掉的，需手动取消注释）。<br/>**设置 outDir 和 rootDir 后，执行 ****`tsc`****命令会直接将编译的结果输出 ****`./dist`****目录下。注意：使用 ****`tsc`**** 命令时后面不要写具体的 ****`ts`****文件名。** |
+| **`"rootDir": "./src"` | 指定 TypeScript 源文件目录（默认是注释掉的，需手动取消注释）。<br/>设置 outDir 和 rootDir 后，执行 `tsc`命令会直接将编译的结果输出 `./dist`目录下。注意：使用 `tsc` 命令时后面不要写具体的 `ts`文件名。** |
 
-**<font style="color:#DF2A3F;">注意：本课程要求将 </font>****`target`****<font style="color:#DF2A3F;">设置为 </font>****`es6`****<font style="color:#DF2A3F;">，将 </font>****`module`****<font style="color:#DF2A3F;">设置为 </font>****`es2015`****<font style="color:#DF2A3F;">。</font>**
+**<font style="color:#DF2A3F;">注意：本课程要求将 </font>`target`<font style="color:#DF2A3F;">设置为 </font>`es6`<font style="color:#DF2A3F;">，将 </font>`module`<font style="color:#DF2A3F;">设置为 </font>`es2015`<font style="color:#DF2A3F;">。</font>**
 
 #### tsc --watch
 
@@ -379,7 +379,7 @@ tsc --watch
 
 
 
-**注意：****`tsc --watch 具体目录或文件`**通过这种语法可以监控某些具体的目录或具体的文件。
+注意：`tsc --watch 具体目录或文件`通过这种语法可以监控某些具体的目录或具体的文件。
 
 
 
@@ -523,7 +523,7 @@ isTrue = false;  // 错误
 ## 类型自动推断
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
-**TypeScript 根据你写的值、上下文和内置的类型定义，自动推导出变量和参数最精确的类型，让你不用每次都手动写****<font style="color:#DF2A3F;">类型注解</font>****。**
+**TypeScript 根据你写的值、上下文和内置的类型定义，自动推导出变量和参数最精确的类型，让你不用每次都手动写<font style="color:#DF2A3F;">类型注解</font>。**
 
 ### 基础类型推断
 #### 变量初始化推断
@@ -551,7 +551,7 @@ let userCode: UserCode = '101';
 **关于 typeof 运算符：**
 
 1. **typeof **运算符如果出现在“**类型位置（凡是编译后都会消失的位置都是类型位置）**”，则属于 `TypeScript`中的运算符。它的作用是做类型查询。属于编译阶段的运算符，运行阶段不起作用。可以通过查看编译后生成的 js 文件来验证这一点。
-    1. **类型位置就是所有“写在 ****`:`****、****`<>`****、****`type`****、****`interface`****、****`extends`**** 这些 TS 语法结构里，且编译成 JS 后会完全消失”的代码区域。**
+    1. **类型位置就是所有“写在 **`:`、`<>`、`type`、`interface`、`extends`** 这些 TS 语法结构里，且编译成 JS 后会完全消失”的代码区域。**
 2. **typeof** 运算符如果出现在“**值位置（值位置编译后不会消失）**”，则属于 `JavaScript`中的运算符。它的作用是在运行阶段动态获取某个值的类型。
 
 #### 函数返回值推断
@@ -724,7 +724,7 @@ console.log(a); // 而且这里的输出结果是 jack
 ### ts 特殊类型之 unknown
 unknown 的含义是：未知类型。
 
-**unkown 可以理解为一个类型安全的 any，****<font style="color:#DF2A3F;">适用于：它将来是一个具体的类型，但是声明变量的时候还不确定类型时使用它</font>**
+**unkown 可以理解为一个类型安全的 any，<font style="color:#DF2A3F;">适用于：它将来是一个具体的类型，但是声明变量的时候还不确定类型时使用它</font>**
 
 ```typescript
 let a: unknown;
@@ -2069,7 +2069,7 @@ student.detail();
 
 **类型定义文件**是 ts 中的一种特殊文件，通常以 `.d.ts`作为扩展名，作用是为现有的 javascript 代码提供类型信息，让 ts 能够在使用这些 javascript 库或模块时进行类型检查和提示。
 
-**<font style="color:#DF2A3F;">注意：以下所有文件放到同一个目录中，另外将 </font>****`tsconfig.json`****<font style="color:#DF2A3F;">配置文件中的 </font>****`"noEmitOnError": false,`****<font style="color:#DF2A3F;">设置为 false：有语法错误也编译。</font>**
+**<font style="color:#DF2A3F;">注意：以下所有文件放到同一个目录中，另外将 </font>`tsconfig.json`<font style="color:#DF2A3F;">配置文件中的 </font>`"noEmitOnError": false,`<font style="color:#DF2A3F;">设置为 false：有语法错误也编译。</font>**
 
 ### ts 中引入 js 文件
 ts 中可以引入 js 文件。示例如下：

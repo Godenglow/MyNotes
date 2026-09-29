@@ -1755,7 +1755,7 @@ response.setContentType("text/html;charset=UTF-8");
 
 **注意：这行代码必须出现在 **`**PrintWriter out = response.getWriter();**`**之前才能解决乱码问题。**
 
-**`response.setCharacterEncoding("UTF-8");`****<font style="color:#DF2A3F;">和 HTML 中的 </font>****`<meta charset="UTF-8">`****<font style="color:#DF2A3F;">有什么区别？</font>**
+**`response.setCharacterEncoding("UTF-8");`<font style="color:#DF2A3F;">和 HTML 中的 </font>`<meta charset="UTF-8">`<font style="color:#DF2A3F;">有什么区别？</font>**
 
 + 前者：设置Servlet输出流的字符编码方式，影响**`PrintWriter`**如何将Java字符串转换为字节序列，是服务器端的行为，发生在内容发送到客户端之前，会自动设置**`Content-Type`**响应头的charset部分，例如：**`Content-Type: text/html;charset=UTF-8`**这是最根本的编码设置，决定了数据在传输时的实际编码。
 + 后者：是HTML文档内部的编码声明，浏览器在解析HTML时会参考这个提示，当HTTP响应头没有指定charset时，浏览器会查找meta标签，如果HTTP头已指定charset，meta标签通常会被忽略。
@@ -2093,10 +2093,10 @@ Set-Cookie: session_id=abc123; HttpOnly; SameSite=Strict
 
 + **状态行**：  
     - **状态码**：  
-        * **`200 OK`****<font style="color:#DF2A3F;">：成功。  </font>**
-        * **`404 Not Found`****<font style="color:#DF2A3F;">：资源不存在。  </font>**
-        * **`405`****<font style="color:#DF2A3F;">：请求方式和服务器端的处理方式不一致。（例如：前端请求方式为 POST，服务器端处理方式是 GET，则发生 405 错误。）</font>**
-        * **`500 Internal Server Error`****<font style="color:#DF2A3F;">：服务器错误。</font>**
+        * **`200 OK`<font style="color:#DF2A3F;">：成功。  </font>**
+        * **`404 Not Found`<font style="color:#DF2A3F;">：资源不存在。  </font>**
+        * **`405`<font style="color:#DF2A3F;">：请求方式和服务器端的处理方式不一致。（例如：前端请求方式为 POST，服务器端处理方式是 GET，则发生 405 错误。）</font>**
+        * **`500 Internal Server Error`<font style="color:#DF2A3F;">：服务器错误。</font>**
 + **响应头部**：  
     - `Content-Type`：响应体类型（如`text/html`、`application/json`）。  
     - `Content-Length`：响应体大小（字节）。  
@@ -2122,7 +2122,7 @@ Set-Cookie: session_id=abc123; HttpOnly; SameSite=Strict
 
 
 
-**<font style="color:#DF2A3F;">提示：GET 和 POST 请求提交数据时的格式都是 </font>****`name=value&name=value&name=value...`****<font style="color:#DF2A3F;">。只是提交数据的位置不同，GET 在请求行上提交数据。POST 在请求体中提交数据。</font>**
+**<font style="color:#DF2A3F;">提示：GET 和 POST 请求提交数据时的格式都是 </font>`name=value&name=value&name=value...`<font style="color:#DF2A3F;">。只是提交数据的位置不同，GET 在请求行上提交数据。POST 在请求体中提交数据。</font>**
 
 #### 如何选择
 + **用GET**：  
@@ -3892,7 +3892,7 @@ String json = """
 out.print("        <a href='" + contextPath + "/detail?deptno=" + deptno + "' class='action-btn view-btn'>查看</a>");
 ```
 
-**<font style="color:#DF2A3F;">说明：</font>****`contextPath`****<font style="color:#DF2A3F;"> 是通过 </font>****`String contextPath = request.getContextPath();`****<font style="color:#DF2A3F;">获取的。前端发送请求时以 </font>****`/`****<font style="color:#DF2A3F;">开头，添加项目名，项目名不要写死 </font>****`/dept`****<font style="color:#DF2A3F;">，应该通过这行代码动态获取。</font>**
+**<font style="color:#DF2A3F;">说明：</font>`contextPath`<font style="color:#DF2A3F;"> 是通过 </font>`String contextPath = request.getContextPath();`<font style="color:#DF2A3F;">获取的。前端发送请求时以 </font>`/`<font style="color:#DF2A3F;">开头，添加项目名，项目名不要写死 </font>`/dept`<font style="color:#DF2A3F;">，应该通过这行代码动态获取。</font>**
 
 启动服务器测试，点击查看按钮，出现以下 404 错误是正常的，因为 Servlet 还没写，重点看浏览器地址栏上的请求地址是否正确：
 
@@ -4641,7 +4641,7 @@ response.sendRedirect("/dept/list");
     1. 点击保存时发送了** 第一次 **请求：`http://ip:port/dept/save`，执行 `DeptSaveServlet`
     2. 执行保存逻辑后，`DeptSaveServlet` 执行了重定向的代码：`response.sendRedirect("/dept/list");`
     3. `response` 对象将 `/dept/list`路径响应给浏览器，浏览器又自发的向服务器发送** 第二次 **请求：`http://ip:port/dept/list`
-    4. 因此，用户只是点击了 **<font style="color:#DF2A3F;">一次</font>**** **保存操作，但浏览器一共是发送了**<font style="color:#DF2A3F;">两次</font>**请求。
+    4. 因此，用户只是点击了 <font style="color:#DF2A3F;">一次</font> 保存操作，但浏览器一共是发送了<font style="color:#DF2A3F;">两次</font>请求。
     5. 并且浏览器地址栏上的地址最终会显示第二次请求的路径，因此重定向会导致浏览器地址栏上的地址发生改变。（也就是说，发送的是 `/dept/save` 路径，显示的是`/dept/list`路径。）
 5. 怎么测试重定向是两次请求呢？
     1. 可以使用 request 域来测试，因为 request 域只能保留同一次请求中的数据，如果是两次请求，request 域是无法共享数据的。测试两次请求的代码如下：
@@ -4920,12 +4920,12 @@ public class MyServletContextListener implements ServletContextListener {
 ## 过滤器 Filter
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
-在Servlet中，**Filter（过滤器）是一种****<font style="color:#DF2A3F;">可重用</font>****的组件，用于在请求到达Servlet或响应返回客户端之前拦截并处理**HTTP请求和响应。它允许开发者在不修改核心业务逻辑的情况下，对Web应用的请求/响应流程进行统一处理。
+在Servlet中，**Filter（过滤器）是一种<font style="color:#DF2A3F;">可重用</font>的组件，用于在请求到达Servlet或响应返回客户端之前拦截并处理**HTTP请求和响应。它允许开发者在不修改核心业务逻辑的情况下，对Web应用的请求/响应流程进行统一处理。
 
 ### Filter的核心作用
-1. **<font style="color:#DF2A3F;">预处理</font>****请求（Pre-processing）**  
+1. **<font style="color:#DF2A3F;">预处理</font>请求（Pre-processing）**  
     - 在请求到达目标Servlet之前，对请求进行修改或检查（如参数编码、权限验证、日志记录等）。
-2. **<font style="color:#DF2A3F;">后处理</font>****响应（Post-processing）**  
+2. **<font style="color:#DF2A3F;">后处理</font>响应（Post-processing）**  
     - 在响应返回客户端之前，对响应内容进行加工（如压缩响应数据、设置HTTP头、过滤敏感信息等）。
 3. **<font style="color:#DF2A3F;">拦截请求或响应</font>**  
     - 根据条件决定是否将请求/响应继续传递到链中的下一个组件（如未登录时直接重定向到登录页）。
@@ -5052,7 +5052,7 @@ public class CommonCodeFilter implements Filter {
 </filter-mapping>
 ```
 
-注意：**<font style="color:#DF2A3F;">在 </font>****`web.xml`****<font style="color:#DF2A3F;">文件中同时配置了 Servlet 和 Filter，用户发送的请求路径同时满足 Servlet 和 Filter 时，Filter 优先级高，先执行</font>**。
+注意：**<font style="color:#DF2A3F;">在 </font>`web.xml`<font style="color:#DF2A3F;">文件中同时配置了 Servlet 和 Filter，用户发送的请求路径同时满足 Servlet 和 Filter 时，Filter 优先级高，先执行</font>**。
 
 启动服务器，打开浏览器，先后输入以下 URL，观察控制台输出：
 
@@ -5650,16 +5650,16 @@ thymeleaf 的模板文件中是这样写的：
 ### Thymeleaf 变量查找顺序
 当 **`${message}`** 被解析时，Thymeleaf 会按以下顺序查找：
 
-1. **`WebContext`**** 显式设置的变量**（**`ctx.setVariable("message", "WebContext message")`**）
-2. **`HttpServletRequest`**** 属性**（**`request.setAttribute("message", "request message")`**）
+1. **`WebContext` 显式设置的变量（`ctx.setVariable("message", "WebContext message")`**）
+2. **`HttpServletRequest` 属性（`request.setAttribute("message", "request message")`**）
 
 同名变量时，高优先级的会覆盖低优先级的。
 
 ### Thymeleaf 的其他取值
-1. **`HttpSession`**** 属性**（**`session.setAttribute("message", "session message")`**），从 session 中取值需要这样写：`${session.message}`
-2. **`ServletContext`**** 全局属性**（**`servletContext.setAttribute("message", "application message")`**），从 application 中取值需要这样写：`${application.message}`
+1. **`HttpSession` 属性（`session.setAttribute("message", "session message")`**），从 session 中取值需要这样写：`${session.message}`
+2. **`ServletContext` 全局属性（`servletContext.setAttribute("message", "application message")`**），从 application 中取值需要这样写：`${application.message}`
 3. **请求参数**（**`request.getParameter("message")`**），从查询参数中取值需要这样写：`${param.message}`
-4. **`th:with`**** ****局部变量**（仅限当前作用域）
+4. **`th:with`** **局部变量**（仅限当前作用域）
 
 ```html
 <div th:with="message='Local Message'">
@@ -5997,7 +5997,7 @@ Thymeleaf 的模板页面`**WEB-INF/templates/list.html**`来负责数据展示�
 
 注意：
 
-1. 以上代码中，把 css 样式单独提取出来放到 `css/list.css`文件中了，因此以上代码添加链接外部 css 样式文件。**<font style="color:#DF2A3F;">css 文件不能放到 </font>****`WEB-INF`****<font style="color:#DF2A3F;">目录下</font>**。
+1. 以上代码中，把 css 样式单独提取出来放到 `css/list.css`文件中了，因此以上代码添加链接外部 css 样式文件。**<font style="color:#DF2A3F;">css 文件不能放到 </font>`WEB-INF`<font style="color:#DF2A3F;">目录下</font>**。
 2. 当前页面中的 查看、修改、删除 等超链接的路径已经修改完毕，请参照以上代码。
 
 ### 跳转到添加部门页面
@@ -7403,8 +7403,8 @@ byte[] data2 = Base64.getDecoder().decode(s); // 结果是：{97,98,99,100}
 
 **Base64 编码时：**`**getEncoder()**`**和 **`**getUrlEncoder()**`**的区别**
 
-+ **`getEncoder()`**** 使用标准 Base64 字符集（****`A-Z a-z 0-9 + /`****），编码后可能包含 ****`+`****、****`/`**** 和 ****`=`****，不适合直接放 URL；**
-+ **`getUrlEncoder()`**** 使用 URL 安全字符集（****`A-Z a-z 0-9 - _`****），把 ****`+`**** 替换为 ****`-`****，****`/`**** 替换为 ****`_`****，且通常配合 ****`withoutPadding()`**** 去掉 ****`=`****，适合放在 URL 或 HTTP Header 中传输。**
++ **`getEncoder()`** 使用标准 Base64 字符集（`A-Z a-z 0-9 + /`），编码后可能包含 **`+`、`/`** 和 **`=`，不适合直接放 URL；**
++ **`getUrlEncoder()` 使用 URL 安全字符集（`A-Z a-z 0-9 - _`），把 `+` 替换为 `-`，`/` 替换为 `_`，且通常配合 `withoutPadding()` 去掉 `=`，适合放在 URL 或 HTTP Header 中传输。**
 
 #### 用 Token 实现“记住我”功能
 ##### Token 表的设计
@@ -9649,7 +9649,7 @@ MVC（Model-View-Controller）是一种软件架构模式，它将应用程序�
 
 + 根本原因：Tomcat容器的标准输出流(System.out)编码与IDEA控制台显示编码不一致。
 + 具体来说：Tomcat的System.out默认使用GBK编码输出，IDEA控制台期望接收UTF-8编码的文本，编码不匹配导致中文显示为乱码。
-+ 在 `Servlet`程序中可以通过 **`System.out.charset()`****<font style="color:#DF2A3F;">方法</font>**来获取 Tomcat 容器的标准输出流的字符编码方式，结果是 GBK。
++ 在 `Servlet`程序中可以通过 `System.out.charset()`<font style="color:#DF2A3F;">方法</font>来获取 Tomcat 容器的标准输出流的字符编码方式，结果是 GBK。
 + **但需要注意的是**：脱离了 Tomcat 服务器之后，自己编写一个 main 方法，`System.out.charset()`方法获取的标准输出流的字符编码方式为 `UTF-8`。因此自己写的 main 方法输出中文不会存在问题。导致以上乱码的根本原因是 `Tomcat`服务器中的 `System.out`标准输出流采用的是和操作系统一致的 GBK。
 
 
@@ -9658,7 +9658,7 @@ MVC（Model-View-Controller）是一种软件架构模式，它将应用程序�
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1762937114583-cb3378ea-1d25-4a48-a6d3-d45eec9c0167.png)
 
-**另外，在这种环境下标准错误流通常也需要设置一下，不然在出现的异常中异常的描述信息是中文的话也会乱码，可以通过 ****`System.err.charset()`****`代码来查看标准错误流的字符编码方式，它应该也是 GBK。因此也需要在 `****`vm options`****`中进行配置：`****`-Dstderr.encoding=UTF-8`**
+**另外，在这种环境下标准错误流通常也需要设置一下，不然在出现的异常中异常的描述信息是中文的话也会乱码，可以通过 `System.err.charset()``代码来查看标准错误流的字符编码方式，它应该也是 GBK。因此也需要在 ``vm options``中进行配置：``-Dstderr.encoding=UTF-8`**
 
 ## 附录：HTTP状态信息
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)

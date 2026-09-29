@@ -1291,7 +1291,7 @@ byte（字节）是计算机存储和处理数据的基本单位，通常由8个
 127的原码为01111111，其反码和补码均与原码相同。
 
 ##### 负数的原码反码补码
-**负数的原码运算规则：****<font style="color:#DF2A3F;">将绝对值转换为二进制后，最高位改为1。</font>**
+**负数的原码运算规则：<font style="color:#DF2A3F;">将绝对值转换为二进制后，最高位改为1。</font>**
 
 -5的原码：10000101
 
@@ -4049,7 +4049,7 @@ Student s2 = new Student();
 1. JVM 是一套规范，**规范中规定的**主要内存空间有：虚拟机栈（VM Stack）、堆（Heap）、方法区（Method Area）等。这是逻辑名称，不是物理存储。
 2. 实现 JVM 规范的代表是：Oracle 的 HotSpot。（**它是最主流、最广泛使用的 JVM 实现**）
 3. 虚拟机栈中主要存什么？
-    1. 存栈帧，栈帧中有局部变量表（**存****<font style="color:#DF2A3F;">局部变量</font>**）、操作数栈等。
+    1. 存栈帧，栈帧中有局部变量表（**存<font style="color:#DF2A3F;">局部变量</font>**）、操作数栈等。
 4. 堆中主要存什么？
     1. new 出来的对象都在堆内存当中。
     2. **<font style="color:#DF2A3F;">实例变量</font>**在对象内部。
@@ -4060,7 +4060,7 @@ Student s2 = new Student();
     4. **运行时常量池**等。
 6. 方法区的具体实现有哪些？
     1. HotSpot JDK7 及之前，方法区的实现叫做永久代（**PermGen**），使用** JVM 的内存**，容易出现 OOM。**此时的静态变量是在永久代中的。**
-    2. HotSpot JDK8 及之后，方法区的实现叫做元空间（**Metaspace**），使用**系统本地内存**，避免 OOM。**此时的****<font style="color:#DF2A3F;">静态变量</font>****是在堆中的。(HotSpot JDK8 及之后****<font style="color:#DF2A3F;">静态变量、字符串常量池</font>****都是在堆中)**
+    2. HotSpot JDK8 及之后，方法区的实现叫做元空间（**Metaspace**），使用**系统本地内存**，避免 OOM。**此时的<font style="color:#DF2A3F;">静态变量</font>是在堆中的。(HotSpot JDK8 及之后<font style="color:#DF2A3F;">静态变量、字符串常量池</font>都是在堆中)**
 7. new运算符会在JVM的堆内存中分配空间用来存储实例变量。new分配的空间就是**Java对象**。
 8. 在JVM中对象创建后会有对应的内存地址，将内存地址赋值给一个变量，这个变量被称为**引用**。
 9. Java中的GC主要针对的是JVM的堆内存，当然，GC 也会对方法区进行垃圾回收（FullGC 的时候才会对方法区进行垃圾回收）。
@@ -5099,9 +5099,9 @@ public class Singleton {
 1. A类称为：父类、超类、基类、superclass
 2. B类称为：子类、派生类、subclass
 
-**Java只支持单继承，一个类只能****<font style="color:#DF2A3F;">直接</font>****继承一个类。**
+**Java只支持单继承，一个类只能<font style="color:#DF2A3F;">直接</font>继承一个类。**
 
-**Java不支持多继承，但支持****<font style="color:#DF2A3F;">多重</font>****继承（多层继承）。**
+**Java不支持多继承，但支持<font style="color:#DF2A3F;">多重</font>继承（多层继承）。**
 
 **子类继承父类后，除私有的不支持继承、构造方法不支持继承。其它的全部会继承。**
 
@@ -6180,9 +6180,9 @@ public class SuperTest {
 1. **加载：**将 class 字节码文件加载到内存，静态变量内存未分配。
 2. **链接：**链接又包括三个阶段
     1. 验证：对类的字节码进行验证，确保它符合 Java 语言规范和安全规范。
-    2. 准备：为静态变量赋默认值。**不过这里有一个特殊情况：****如果静态变量同时被 ****`final`**** 修饰（即常量），且类型是基本类型或 ****`String`****，则在准备阶段就直接赋值为代码中指定的值（比如 ****`static final int a = 100;`****，在准备阶段就是 ****`100`****，而不是 ****`0`****）**
+    2. 准备：为静态变量赋默认值。**不过这里有一个特殊情况：如果静态变量同时被 `final` 修饰（即常量），且类型是基本类型或 `String`，则在准备阶段就直接赋值为代码中指定的值（比如 `static final int a = 100;`，在准备阶段就是 `100`，而不是 `0`）**
     3. 解析：将符号引用转换为直接引用，也就是将类名、字段名等符号引用转换为直接地址。
-3. **初始化：**赋初始值（类加载的最后一步），这个阶段会执行**类构造器 ****`<clinit>()`**。这个构造器会收集：
+3. **初始化：赋初始值（类加载的最后一步），这个阶段会执行类构造器 `<clinit>()`**。这个构造器会收集：
     1. 所有静态变量的**赋值语句**（`static int b = 5;`）。
     2. 所有**静态代码块** `static { ... }` 中的代码。
 
@@ -7323,7 +7323,7 @@ public class StringArrayExample {
 
 按照不同的视角和目的，数据结构分为**逻辑结构**和**物理结构**。
 
-**<font style="color:#DF2A3F;">逻辑结构</font>****是数据元素之间的“抽象关系”，而****<font style="color:#DF2A3F;">物理结构</font>****是这种关系在计算机内存中的“具体实现”。**
+**<font style="color:#DF2A3F;">逻辑结构</font>是数据元素之间的“抽象关系”，而<font style="color:#DF2A3F;">物理结构</font>是这种关系在计算机内存中的“具体实现”。**
 
 ### 逻辑结构 - “思考的模型”
 逻辑结构关注的是数据对象中数据元素之间的**相互关系**，与数据的存储无关。它就像建筑的蓝图，定义了房间之间的布局关系（哪个是客厅，哪个是卧室，它们如何连通），但不管墙是用砖头还是木头建的。
@@ -7361,7 +7361,7 @@ public class StringArrayExample {
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759144931231-d343931c-9aa7-45a8-b9ef-c7f0ad5c9d02.png)
 
 ### 核心关系与总结
-**一种****<font style="color:#DF2A3F;">逻辑结构</font>****可以用不同的****<font style="color:#DF2A3F;">物理结构</font>****来实现。**
+**一种<font style="color:#DF2A3F;">逻辑结构</font>可以用不同的<font style="color:#DF2A3F;">物理结构</font>来实现。**
 
 + 例如，“线性结构”这种逻辑模型，既可以用 **数组（顺序存储）** 来实现，也可以用 **链表（链式存储）** 来实现。
 
@@ -12667,7 +12667,7 @@ public class Test {
 
 Java 的“钻石表达式”语法是一种在创建泛型对象时简化代码的语法糖，它是在 **JDK 7** 中引入的
 
-它的核心是：在创建泛型对象时，**可以省略构造器后尖括号 ****`<>`**** 中的具体类型参数**，编译器会根据上下文自动推断。
+它的核心是：在创建泛型对象时，**可以省略构造器后尖括号 **`<>`** 中的具体类型参数**，编译器会根据上下文自动推断。
 
 ```java
 import java.util.ArrayList;
@@ -13535,7 +13535,7 @@ public static void main(String[] args) {
 + 迭代器内部认为下一个要访问的元素是 `"B"`（索引1）。
 + 此时，你通过 `list.remove("A")` 删除了 `"A"`。集合为了保持紧凑，会将 `"B"` 和 `"C"` 前移，数组变为 `["B", "C"]`。
 + 当迭代器下一次调用 `next()` 时，它仍然去访问索引1的位置，结果拿到的是 `"C"`。
-+ **`"B"`**** 就这样被神奇地跳过了！** 这就是数据不一致和不可预知的行为。
++ **`"B"` 就这样被神奇地跳过了！** 这就是数据不一致和不可预知的行为。
 
 
 
@@ -13795,7 +13795,7 @@ public static void main(String[] args) {
 
 
 
-**在 Java 的 ****`LinkedList`**** 中：**
+**在 Java 的 **`LinkedList`** 中：**
 
 + `offer(E e)`：将元素**添加到链表末尾**（返回 `true`）
 + `poll()`：**取出并删除**链表头节点（队列为空时返回 `null`）
@@ -16983,11 +16983,11 @@ public class BufferedCharDemo {
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 转换流
-**InputStreamReader（专门负责解码）：将字节输入流（InputStream）按指定字符集****<font style="color:#DF2A3F;">解码</font>****为字符输入流（Reader）。**
+**InputStreamReader（专门负责解码）：将字节输入流（InputStream）按指定字符集<font style="color:#DF2A3F;">解码</font>为字符输入流（Reader）。**
 
-**OutputStreamWriter（专门负责编码）: 将字符输出流（Writer）按指定字符集****<font style="color:#DF2A3F;">编码</font>****为字节输出流（OutputStream）。**
+**OutputStreamWriter（专门负责编码）: 将字符输出流（Writer）按指定字符集<font style="color:#DF2A3F;">编码</font>为字节输出流（OutputStream）。**
 
-**以上这两个****<font style="color:#DF2A3F;">转换流</font>****都属于****<font style="color:#DF2A3F;">字符流</font>****。它们都是为字符专门设计的。**
+**以上这两个<font style="color:#DF2A3F;">转换流</font>都属于<font style="color:#DF2A3F;">字符流</font>。它们都是为字符专门设计的。**
 
 ### 转换流概述
 #### 编码引出的问题
@@ -17266,7 +17266,7 @@ bw.flush(); // 不能忘！
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760274406697-df972c79-aed4-4376-a811-e53767a61797.png)
 
 1. **可以看到 PrintStream 是一个处理流。对节点流 OutputStream 进行了功能增强。**
-2. **只有调用构造方法时，传递了 autoFlush 为 true 时，****<font style="color:#DF2A3F;">每遇到换行符时就会自动刷新一次</font>****。（没有遇到换行符就不会自动刷新）**
+2. **只有调用构造方法时，传递了 autoFlush 为 true 时，<font style="color:#DF2A3F;">每遇到换行符时就会自动刷新一次</font>。（没有遇到换行符就不会自动刷新）**
 3. **没有 autoFlush 参数的不支持自动刷新。**
 
 #### 常用方法
@@ -17367,12 +17367,12 @@ public class PrintWriterDemo {
 
 **另外 PrintWriter 也是自动刷新，在创建 PrintWriter 对象时，通过构造方法 **`**autoFlush**`** 指定自动刷新。当执行以下方法时会自动刷新：**
 
-1. **`println()`**** 系列方法**
+1. **`println()` 系列方法**
     - `println()`
     - `println(String x)`
     - `println(int x)`
     - `println(boolean x)` 等所有重载版本
-2. **`printf()`**** ****和**** ****`format()`**** ****方法**
+2. **`printf()`** **和** **`format()`** **方法**
     - 当格式化输出时会自动刷新
     - `printf()`和 `format()`方法都是格式化输出，它俩完全一样，因为 `printf()`底层就是 `format()`实现的。
 
@@ -21333,10 +21333,10 @@ public class Test {
 **添加 volatile 之后，线程读写变量时，直接走主内存。**
 
 #### 什么情况下变量会同步到主内存
-**只有用 ****`volatile`****、****`synchronized`****、****`AtomicXXX`**** 或 ****`Lock`**** 时，才会保证立即同步到主内存；普通变量的同步时机完全不确定，由 JVM 决定。**
+**只有用 **`volatile`、`synchronized`、`AtomicXXX`** 或 **`Lock`** 时，才会保证立即同步到主内存；普通变量的同步时机完全不确定，由 JVM 决定。**
 
 #### 关于 AtomicInteger
-**`AtomicInteger`**** 是用 ****`volatile`**** 加 CAS（乐观锁）实现的线程安全整数，保证原子操作和可见性，比 ****`synchronized`**** 性能更好。**
+**`AtomicInteger` 是用 `volatile` 加 CAS（乐观锁）实现的线程安全整数，保证原子操作和可见性，比 `synchronized` 性能更好。**
 
 ```java
 import java.util.concurrent.atomic.AtomicInteger;
@@ -21591,13 +21591,13 @@ System.out.println(clazz04.hashCode()); // 输出：1163157884
 正式为静态变量在方法区中开辟存储空间并设置默认值。这里“通常情况”是设置静态变量的默认值，比如我们定义了public static int value = 11，那么value变量在准备阶段设置的初始值就是0，而不是11（初始化阶段才会显示赋值）。特殊情况：比如给value变量加上了final 关键字public static final int value = 11，那么准备阶段value的值就被赋值为11。
 
 ##### 解析（Resolve）
-将虚拟机常量池内的符号引用（常量名）替换为直接引用（地址）的过程（**在IDEA安装Jclasslib插件查看:****一个查看Java字节码的IDE工具，可以看做是 javap -c 命令的升级版**）。通过 jclasslib 插件看不到这个替换的过程，可以看到符号引用都有哪些。
+将虚拟机常量池内的符号引用（常量名）替换为直接引用（地址）的过程（**在IDEA安装Jclasslib插件查看:一个查看Java字节码的IDE工具，可以看做是 javap -c 命令的升级版**）。通过 jclasslib 插件看不到这个替换的过程，可以看到符号引用都有哪些。
 
 ![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1779075950901-f333b380-229d-46fd-b5e5-7116d6afce83.png)
 
-**符号引用**：我要调用 Math 类的 abs()方法。**符号引用就是代码里写的“名字”和“描述信息”，在编译成 ****`.class`**** 文件后被记录在常量池里，等待运行时再解析成真正的内存地址。**
+**符号引用**：我要调用 Math 类的 abs()方法。**符号引用就是代码里写的“名字”和“描述信息”，在编译成 **`.class`** 文件后被记录在常量池里，等待运行时再解析成真正的内存地址。**
 
-**直接引用**：直接通过 Math.abs()方法的地址定位到方法，不再找了。**在屏幕上直接看到的那些带 ****`#`**** 号索引的条目，几乎全都是“符号引用”；而“直接引用”是 JVM 运行时才产生的，在工具里是看不到的。**
+**直接引用**：直接通过 Math.abs()方法的地址定位到方法，不再找了。**在屏幕上直接看到的那些带 **`#`** 号索引的条目，几乎全都是“符号引用”；而“直接引用”是 JVM 运行时才产生的，在工具里是看不到的。**
 
 #### 初始化（initialization）
 在类加载的**初始化阶段**，**<font style="color:#DF2A3F;">JVM 会执行</font>**编译期生成的 `<clinit>()` 方法（**类构造器，负责初始化类本身**）。（静态变量显示初始化赋值+静态代码块执行）
@@ -23673,7 +23673,7 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 
 传输完毕，需释放已建立的连接，开销大，速度慢，适用于文件传输、邮件等。
 
-**<font style="color:#DF2A3F;">HTTP 协议是一种有连接</font>****<font style="color:#2F8EF4;">无状态</font>****<font style="color:#DF2A3F;">的协议。</font>**
+**<font style="color:#DF2A3F;">HTTP 协议是一种有连接</font><font style="color:#2F8EF4;">无状态</font><font style="color:#DF2A3F;">的协议。</font>**
 
 #### UDP协议
 采用数据报（UDP 数据报中包含 **要发送的数据**、**源端口** 和 **目的端口**）的方式来传输，无需建立连接，类似于发短信。
@@ -23699,12 +23699,12 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 三次握手和四次挥手
-**三次握手和四次挥手正是TCP协议的核心机制，分别用于可靠地****<font style="color:#DF2A3F;">建立</font>****和****<font style="color:#DF2A3F;">断开</font>****连接。**
+**三次握手和四次挥手正是TCP协议的核心机制，分别用于可靠地<font style="color:#DF2A3F;">建立</font>和<font style="color:#DF2A3F;">断开</font>连接。**
 
 + **三次握手** → **打电话时的确认过程** (“喂，听得到吗？” “听得到，你呢？” “我也听得到，开始说吧。”) 确保**连接畅通，可以开始通信**。
 + **四次挥手** → **挂电话时的道别过程** (“我说完了，要挂了。” “好的，我知道你说完了。” “那我这边也挂了。” “好的，再见。”) 确保**数据已传完，双方同意断开**。
 
-**SYN：****Synchronize Sequence Numbers（同步序列号），建立连接的信号。**
+**SYN：Synchronize Sequence Numbers（同步序列号），建立连接的信号。**
 
 **FIN:  Finish(结束)，关闭连接的信号。**
 
@@ -24141,7 +24141,7 @@ Java自诞生以来一直以“一切皆对象”为核心理念，面向对象�
 
 在函数式编程语言中，**函数被视为“一等公民”——可以像普通变量一样被传递、赋值和操作。**在 Java 中，Lambda 表达式本质上是函数式接口的一个具体实例，而不是一个独立的函数。因此，Lambda 表达式必须依附于函数式接口（即只有一个抽象方法的接口）存在。
 
-**简单来说：在 JDK 1.8 及以后版本中，Lambda 表达式就是****<font style="color:#DF2A3F;">函数式接口</font>****的****<font style="color:#DF2A3F;">实例</font>****。只要一个接口是函数式接口，就可以使用 Lambda 表达式来实现它。**
+**简单来说：在 JDK 1.8 及以后版本中，Lambda 表达式就是<font style="color:#DF2A3F;">函数式接口</font>的<font style="color:#DF2A3F;">实例</font>。只要一个接口是函数式接口，就可以使用 Lambda 表达式来实现它。**
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
@@ -24517,7 +24517,7 @@ public class Test01 {
 
 ## Lambda表达式的方法引用
 ### 方法引用的概述
-当我们使用 Lambda 表达式时，如果方法体中的内容**仅仅是调用一个已存在的方法（并且****<font style="color:#DF2A3F;">函数式接口中方法的返回值和方法的参数  与  内部调用方法的返回值和方法的参数相同</font>****时）**，而没有其他任何逻辑操作，这种情况下就可以使用**方法引用**来进一步简化代码。
+当我们使用 Lambda 表达式时，如果方法体中的内容**仅仅是调用一个已存在的方法（并且<font style="color:#DF2A3F;">函数式接口中方法的返回值和方法的参数  与  内部调用方法的返回值和方法的参数相同</font>时）**，而没有其他任何逻辑操作，这种情况下就可以使用**方法引用**来进一步简化代码。
 
 方法引用可以看作是 Lambda 表达式的一种更简洁的替代形式。
 
@@ -25905,7 +25905,7 @@ try(/*实例化需要关闭资源的对象或引用需要关闭资源的对象*/
 }
 ```
 
-**<font style="color:#DF2A3F;">使用try-with-resource来自动关闭资源，则需要关闭资源的对象对应的类就必须实现java.lang.AutoCloseable接口，该接口中提供了一个close()的抽象方法，而自动关闭资源默认调用的就是实现于java.lang.AutoCloseable接口中的close()方法。</font>****<font style="color:#117CEE;">而且 try 后面小括号中的变量无法在 catch 分支中使用，try 后面大括号执行结束之后，资源就立即关闭了。</font>**
+**<font style="color:#DF2A3F;">使用try-with-resource来自动关闭资源，则需要关闭资源的对象对应的类就必须实现java.lang.AutoCloseable接口，该接口中提供了一个close()的抽象方法，而自动关闭资源默认调用的就是实现于java.lang.AutoCloseable接口中的close()方法。</font><font style="color:#117CEE;">而且 try 后面小括号中的变量无法在 catch 分支中使用，try 后面大括号执行结束之后，资源就立即关闭了。</font>**
 
 因为FileInputStream类和FileOutputStream类都属于java.lang.AutoCloseable接口的实现类，因此此处文件拷贝的操作就可以使用try-with-resource来自动关闭资源。
 

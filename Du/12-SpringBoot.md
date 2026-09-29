@@ -68,7 +68,7 @@ Spring Boot4 要求JDK最低版本是17，建议 JDK 21
 
 我们开发的每一个 SpringBoot 项目其实可以看做是 SpringBoot 项目下的子项目。
 
-**<font style="color:#DF2A3F;">思考：使用 springboot 框架为什么和之前框架感觉不一样，以前我们学习框架的的时候，用它就引入它的依赖，但 springboot 这里是继承方式，而不是直接引入它的依赖。为什么呢？这就要看你之前的 Maven 继承有没有学好。想必这个父项目的 </font>****`packaging`****<font style="color:#DF2A3F;">打包方式为 </font>****`pom`****<font style="color:#DF2A3F;">，并且这个父项目中应该有 </font>****`<dependencyManagement>`****<font style="color:#DF2A3F;">标签来统一管理依赖的版本、</font>****`properties`****<font style="color:#DF2A3F;">标签集中管理版本号。想起来了吗？</font>**
+**<font style="color:#DF2A3F;">思考：使用 springboot 框架为什么和之前框架感觉不一样，以前我们学习框架的的时候，用它就引入它的依赖，但 springboot 这里是继承方式，而不是直接引入它的依赖。为什么呢？这就要看你之前的 Maven 继承有没有学好。想必这个父项目的 </font>`packaging`<font style="color:#DF2A3F;">打包方式为 </font>`pom`<font style="color:#DF2A3F;">，并且这个父项目中应该有 </font>`<dependencyManagement>`<font style="color:#DF2A3F;">标签来统一管理依赖的版本、</font>`properties`<font style="color:#DF2A3F;">标签集中管理版本号。想起来了吗？</font>**
 
 ### 第六步：添加Spring Boot的web starter
 **如果要做 web 开发，引入 web 开发场景，只需要添加一个 web 启动器，相关的依赖和默认的配置就有了。**
@@ -503,7 +503,7 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 
 如果你想做web开发，只需要引入web启动器。web启动器会自动引入web开发所需要的子依赖。
 
-**<font style="color:#DF2A3F;">启动器 starter 引入时，会引入具体依赖的。</font>****`<dependencyManagement>`****<font style="color:#DF2A3F;">只声明/锁定依赖的版本，但它不会引入具体的依赖。</font>**
+**<font style="color:#DF2A3F;">启动器 starter 引入时，会引入具体依赖的。</font>`<dependencyManagement>`<font style="color:#DF2A3F;">只声明/锁定依赖的版本，但它不会引入具体的依赖。</font>**
 
 **<font style="color:#DF2A3F;">引入一个启动器，就是引入这个开发场景下对应的一套依赖。</font>**
 
@@ -542,12 +542,12 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 4. 当然，一个启动器，可以关联依赖其他启动器。不要把它想的太高端，就把一个启动器当做一个依赖就行了。和引入 mysql 驱动没啥区别。
 5. 启动器中的子依赖的每一个版本是人工管理的，这个怎么理解？
     1. 启动器的开发人员在指定该启动器**子依赖**的版本时，参照 SpringBoot 的 BOM（物料清单（Bill of Materials））。
-    2. 什么是 BOM？**如果一个POM文件中主要包含****`dependencyManagement`****，并且被设计为供其他项目****`import`****使用，那么它就可以被称为BOM。**
+    2. 什么是 BOM？**如果一个POM文件中主要包含`dependencyManagement`，并且被设计为供其他项目`import`使用，那么它就可以被称为BOM。**
         1. 一个真正的BOM应该具备：
             1. **`<packaging>pom</packaging>`** - 声明这是一个POM类型项目
-            2. **主要/唯一内容是****`dependencyManagement`** - 定义版本
-            3. **很少或没有****`<dependencies>`** - 不直接引入依赖
-            4. **被其他项目****`import`** - 设计目的就是被引用
+            2. **主要/唯一内容是`dependencyManagement`** - 定义版本
+            3. **很少或没有`<dependencies>`** - 不直接引入依赖
+            4. **被其他项目`import`** - 设计目的就是被引用
     3. SpringBoot 的 BOM 是：`spring-boot-dependencies-3.5.8.pom`
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764856415812-4fe0aa55-158d-4d13-8cc3-6b39aba3a347.png)
@@ -565,7 +565,7 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 1. ✅ 我们的项目继承Spring Boot父项目，决定使用哪个大版本，例如（3.5.8）
 2. ✅ 引入启动器时**不写版本**，自动使用父项目定义的版本（因此启动器使用的也是 3.5.8）
 3. ✅ 启动器内部依赖的版本**应该**按BOM标准写（程序员编写启动器的子依赖时，自己写，但要参考 SpringBoot 的 BOM，和它一样。）
-4. ✅ 即使启动器写错版本（**程序员手滑写错了**），**最终以BOM为准（****<font style="color:#DF2A3F;">那为什么启动器中的依赖还要指定具体版本，干脆全部继承 BOM 得了：不行，因为这样启动器就不能单独使用了，启动器脱离了 SpringBoot，仍然可以单独使用。</font>****）**
+4. ✅ 即使启动器写错版本（**程序员手滑写错了**），**最终以BOM为准（<font style="color:#DF2A3F;">那为什么启动器中的依赖还要指定具体版本，干脆全部继承 BOM 得了：不行，因为这样启动器就不能单独使用了，启动器脱离了 SpringBoot，仍然可以单独使用。</font>）**
 
 这就是Spring Boot保证版本一致性的核心机制。
 
@@ -908,7 +908,7 @@ SpringBoot支持多种外部化配置方式，包括但不限于：
 Spring Boot 框架在启动时会尝试从以下位置加载 `application.properties` 配置文件：
 
 1. `**file:./config/**`：首先在Spring Boot 当前工作目录下的 `config` 文件夹中查找。
-    1. **<font style="color:#DF2A3F;">注意：如果没有找到</font>****`application.properties`****<font style="color:#DF2A3F;">会继续找</font>****`application.yml`****<font style="color:#DF2A3F;">，如果这两个都没有找到，才会进入以下位置查找，以此类推。</font>**
+    1. **<font style="color:#DF2A3F;">注意：如果没有找到</font>`application.properties`<font style="color:#DF2A3F;">会继续找</font>`application.yml`<font style="color:#DF2A3F;">，如果这两个都没有找到，才会进入以下位置查找，以此类推。</font>**
 2. `**file:./**`：如果在当前工作目录下`config`目录中找不到时，再从当前工作目录中查找。
 3. `**classpath:/config/**`： 如果从工作目录中找不到，会从类路径中找，先从类路径的 `/config/` 目录下寻找配置文件。
 4. `**classpath:/**`：如果在 `/config/` 下没有找到，它会在类路径的根目录下查找。
@@ -1039,7 +1039,7 @@ myapp.password=888888
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729648891492-48293951-3910-4180-8ace-c2741dc0b378.png)
 
-**<font style="color:#DF2A3F;">另外，使用 </font>****`@Value`****<font style="color:#DF2A3F;">注解也可以读取系统的环境变量，例如 windows 系统有一个环境变量 </font>****`APP_KEY`****<font style="color:#DF2A3F;">，那么使用 </font>****`@Value("${APP_KEY}")`****<font style="color:#DF2A3F;">是可以读取到的。但配置文件 </font>****`APP_KEY`****<font style="color:#DF2A3F;">之后，一定要重启 windows 系统才行。 </font>**
+**<font style="color:#DF2A3F;">另外，使用 </font>`@Value`<font style="color:#DF2A3F;">注解也可以读取系统的环境变量，例如 windows 系统有一个环境变量 </font>`APP_KEY`<font style="color:#DF2A3F;">，那么使用 </font>`@Value("${APP_KEY}")`<font style="color:#DF2A3F;">是可以读取到的。但配置文件 </font>`APP_KEY`<font style="color:#DF2A3F;">之后，一定要重启 windows 系统才行。 </font>**
 
 ### YAML
 #### YAML概述
@@ -1049,7 +1049,7 @@ SpringBoot采用**集中式**配置管理，所有的配置都编写到一个配
 
 YAML（YAML Ain't Markup Language）是一种人类可读的数据序列化格式，它通常用于配置文件，在各种编程语言中作为一种存储或传输数据的方式。YAML的设计目标是易于阅读和编写，同时保持足够的表达能力来表示复杂的数据结构。
 
-**<font style="color:#DF2A3F;">YAML文件的扩展名可以是</font>****`.yaml`****<font style="color:#DF2A3F;">或</font>****`.yml`****<font style="color:#DF2A3F;">。</font>**
+**<font style="color:#DF2A3F;">YAML文件的扩展名可以是</font>`.yaml`<font style="color:#DF2A3F;">或</font>`.yml`<font style="color:#DF2A3F;">。</font>**
 
 #### 常见的数据存储和交换格式
 `properties`、`XML`、`JSON`、`YAML`这几种格式确实是用来存储和交换数据的常见方式，但它们各有特点和适用场景：
@@ -1143,7 +1143,7 @@ myapp:
 #### application.yml
 Spring Boot框架同时支持`properties`和`yaml`。
 
-**<font style="color:#DF2A3F;">强调：在同一个目录下同时存在</font>****`application.properties`****<font style="color:#DF2A3F;">和</font>****`application.yml`****<font style="color:#DF2A3F;">时，SpringBoot优先解析</font>****`application.properties`****<font style="color:#DF2A3F;">文件。</font>**
+**<font style="color:#DF2A3F;">强调：在同一个目录下同时存在</font>`application.properties`<font style="color:#DF2A3F;">和</font>`application.yml`<font style="color:#DF2A3F;">时，SpringBoot优先解析</font>`application.properties`<font style="color:#DF2A3F;">文件。</font>**
 
 在`resources/config`目录下新建`application.yml`文件，进行如下配置：
 
@@ -1399,7 +1399,7 @@ public class AppBean {
 2. **使用 **`**@Configuration**`**注解后，输出对象的地址是一个代理对象地址（使用@Component 不会生成代理对象），生成代理对象效率较低，可以添加 **`**proxyBeanMethods = false**`**属性不生成代理对象。**
 3. `**proxyBeanMethods = false**`**和 **`**proxyBeanMethods = true**`**的区别：**
 
-**true：当前配置类生成代理对象，虽然效率低，可以保证配置类中的 bean 是单例。【****<font style="color:#DF2A3F;">如果类中有@Bean 标注的方法，建议使用 true，反之 false</font>****】**
+**true：当前配置类生成代理对象，虽然效率低，可以保证配置类中的 bean 是单例。【<font style="color:#DF2A3F;">如果类中有@Bean 标注的方法，建议使用 true，反之 false</font>】**
 
 **false：当前配置类不生成代理对象，虽然效率高，不保证配置类中的 bean 是单例。**
 
@@ -1593,11 +1593,11 @@ public class Address {
 #### `@EnableConfigurationProperties与@ConfigurationPropertiesScan`
 **<font style="color:#DF2A3F;">知识点列表：</font>**
 
-1. **之前的代码是这样写的：**** **`**@Component**`**+**`**@ConfigurationProperties(prefix = "app")**`
+1. **之前的代码是这样写的： `**@Component**`+**`**@ConfigurationProperties(prefix = "app")**`
 2. **或者是这样写的： **`**@Configuration**`**+**`**@ConfigurationProperties(prefix = "app")**`
-3. **有了以下这两个注解（任意一个都行，****<font style="color:#DF2A3F;">建议</font>****写到主入口类上），**`**@Component**`**/**`**@Configuration**`**可以省略了【@ConfigurationProperties 不能省】：**
+3. **有了以下这两个注解（任意一个都行，<font style="color:#DF2A3F;">建议</font>写到主入口类上），**`**@Component**`**/**`**@Configuration**`**可以省略了【@ConfigurationProperties 不能省】：**
     1. **@EnableConfigurationProperties(Bean.class)**
-    2. **@****`ConfigurationPropertiesScan(basePackages="")`**
+    2. **@`ConfigurationPropertiesScan(basePackages="")`**
 
 将`AppBean`纳入IoC容器的管理，之前我们说了两种方式：第一种是使用`@Component`，第二种是使用`@Configuration`。SpringBoot其实还提供了另外两种方式：
 
@@ -2066,7 +2066,7 @@ class Sb307ExternalConfigApplicationTests {
 2. `**Environment**`**封装了什么信息？**
 3. **在程序可以直接注入**`**Environment**`**对象，然后调用相关方法来获取各种配置信息。**
 
-**<font style="color:#DF2A3F;">SpringBoot框架在启动的时候会将系统配置，环境信息全部封装到</font>****`Environment`****<font style="color:#DF2A3F;">对象中，如果要获取这些环境信息，可以调用</font>****`Environment`****<font style="color:#DF2A3F;">接口的方法。</font>**
+**<font style="color:#DF2A3F;">SpringBoot框架在启动的时候会将系统配置，环境信息全部封装到</font>`Environment`<font style="color:#DF2A3F;">对象中，如果要获取这些环境信息，可以调用</font>`Environment`<font style="color:#DF2A3F;">接口的方法。</font>**
 
 在Spring Boot中，`Environment`接口提供了访问应用程序环境信息的方法，比如活动配置文件、系统环境变量、命令行参数等。`Environment`接口由Spring框架提供，Spring Boot应用程序通常会使用Spring提供的实现类`AbstractEnvironment`及其子类来实现具体的环境功能。
 
@@ -2851,12 +2851,12 @@ public class com.jkweilai.lomboktest.entity.User {
 **@RequiredArgsConstructor**：
 
 + 生成包含所有被 `final` 修饰符修饰的实例变量的构造方法。
-+ **<font style="color:#DF2A3F;">如果没有</font>****`final`****<font style="color:#DF2A3F;">的实例变量，则自动生成无参数构造方法。</font>**
++ **<font style="color:#DF2A3F;">如果没有</font>`final`<font style="color:#DF2A3F;">的实例变量，则自动生成无参数构造方法。</font>**
 
 **@ToString** / **@EqualsAndHashCode**：
 
 + 用于生成 toString 和 equals/hashCode 方法。
-+ **<font style="color:#DF2A3F;">这两个注解都有</font>****`exclude`****`属性，通过这个属性可以定制toString、hashCode、equals方法。`**
++ **<font style="color:#DF2A3F;">这两个注解都有</font>`exclude``属性，通过这个属性可以定制toString、hashCode、equals方法。`**
 
 ****
 
@@ -3842,7 +3842,7 @@ Spring Boot框架中的@ConditionalOnXxx系列注解属于条件注解（Conditi
 
 使用这些注解可以帮助开发者根据不同的运行环境或配置来灵活地控制Bean的创建，从而实现更智能、更自动化的配置过程。这对于构建可插拔的模块化系统特别有用，因为可以根据实际需求选择性地启用或禁用某些功能。
 
-假设我们来实现这样一个功能：如果IoC容器当中**<font style="color:#DF2A3F;">存在</font>****`A`****<font style="color:#DF2A3F;">Bean</font>**，就创建`B`Bean，代码如下：
+假设我们来实现这样一个功能：如果IoC容器当中<font style="color:#DF2A3F;">存在</font>`A`<font style="color:#DF2A3F;">Bean</font>，就创建`B`Bean，代码如下：
 
 ```java
 @Configuration
@@ -3861,7 +3861,7 @@ public class AppConfig {
 }
 ```
 
-如果IoC容器当中**<font style="color:#DF2A3F;">不存在</font>****`A`****<font style="color:#DF2A3F;">Bean</font>**，就创建`B`Bean，代码如下：
+如果IoC容器当中<font style="color:#DF2A3F;">不存在</font>`A`<font style="color:#DF2A3F;">Bean</font>，就创建`B`Bean，代码如下：
 
 ```java
 @Configuration
@@ -4212,7 +4212,7 @@ boolean[] match = filter.match(candidates, this.autoConfigurationMetadata);
 
 ****
 
-**<font style="color:#DF2A3F;">思考：</font>****为什么要把 914 个条件放到一个属性文件中？这些条件不应该都在自动配置类上吗？直接通过反射读取 156 个配置类动态获取配置类上的条件不行吗？答案是：不行，原因是效率太低。**
+**<font style="color:#DF2A3F;">思考：</font>为什么要把 914 个条件放到一个属性文件中？这些条件不应该都在自动配置类上吗？直接通过反射读取 156 个配置类动态获取配置类上的条件不行吗？答案是：不行，原因是效率太低。**
 
 ## Web 中的核心配置类概述
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
@@ -4352,7 +4352,7 @@ boolean[] match = filter.match(candidates, this.autoConfigurationMetadata);
 ### 数据绑定初始化
 + **自动使用 ConfigurableWebBindingInitializer Bean。**
     - 用它来指定默认使用哪个转换器，默认使用哪个格式化器。在这个类当中都已经配好了。
-    - **“转换器”负责把传进来的字符串（如****`"123"`****）转成Java对象（如****`Integer`****）；“格式化器”负责把Java对象（如****`Date`****）转成特定格式的字符串（如****`"2026-07-16"`****）展示给前端看。**
+    - **“转换器”负责把传进来的字符串（如`"123"`）转成Java对象（如`Integer`）；“格式化器”负责把Java对象（如`Date`）转成特定格式的字符串（如`"2026-07-16"`）展示给前端看。**
 
 ### 自定义配置说明
 + 自己想完全控制 Spring MVC，使用 `@EnableWebMvc`+`@Configuration`，自己写一个配置类。（**<font style="color:#DF2A3F;">不推荐！！！</font>**）
@@ -4417,8 +4417,8 @@ public OrderedFormContentFilter formContentFilter() {
 
 1. `**WebMvcAutoConfiguration**`**类中的静态内部类**`**WebMvcAutoConfigurationAdapter**`**实现了WebMvcConfigurer 接口。**
 2. **这个接口的实现我们之前写过，在 SpringMVC 全注解开发时写过。因此 SpringBoot 对 MVC 的默认配置都在这个内部类中。**
-3. **<font style="color:#DF2A3F;">想修改默认配置：在 application.yml 文件中配置 </font>****`spring.mvc`****<font style="color:#DF2A3F;">、</font>****`spring.web`**
-4. **<font style="color:#DF2A3F;">想对默认配置进行扩展，例如添加拦截器：编写类实现</font>****`WebMvcConfigurer`****<font style="color:#DF2A3F;">接口+</font>****`@Configuration`**
+3. **<font style="color:#DF2A3F;">想修改默认配置：在 application.yml 文件中配置 </font>`spring.mvc`<font style="color:#DF2A3F;">、</font>`spring.web`**
+4. **<font style="color:#DF2A3F;">想对默认配置进行扩展，例如添加拦截器：编写类实现</font>`WebMvcConfigurer`<font style="color:#DF2A3F;">接口+</font>`@Configuration`**
 
 在SpringBoot框架的`WebMvcAutoConfiguration`类中提供了一个内部类：`WebMvcAutoConfigurationAdapter`
 
@@ -4510,21 +4510,21 @@ public interface WebMvcConfigurer {
 + `WebMvcAutoConfigurationAdapter`作用是：**基础配置**：静态资源、视图解析器、格式化器、消息代码解析器。
 + `EnableWebMvcConfiguration`作用是：**高级配置**：`RequestMappingHandlerMapping`、`HandlerAdapter`、`Validator`、`WelcomePage` 等核心 MVC 组件。
 
-**总结：****`Adapter`**** 提供基础配置，并通过 ****`@Import`**** 把 ****`EnableWebMvcConfiguration`**** 拉进来提供高级配置，两者共同组成 SpringBoot 的默认 MVC 配置。**
+**总结：`Adapter` 提供基础配置，并通过 `@Import` 把 `EnableWebMvcConfiguration` 拉进来提供高级配置，两者共同组成 SpringBoot 的默认 MVC 配置。**
 
 ## 自动配置中的静态资源处理
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 web站点中的静态资源指的是：js、css、图片、webjars 等。
 
-webjars 是：**将前端资源（如jQuery、Bootstrap）打包成Java的JAR包，通过Maven依赖管理，像引入Java库一样引入前端库，****<font style="color:#DF2A3F;">现代开发中很少这样用，了解即可</font>****。**
+webjars 是：**将前端资源（如jQuery、Bootstrap）打包成Java的JAR包，通过Maven依赖管理，像引入Java库一样引入前端库，<font style="color:#DF2A3F;">现代开发中很少这样用，了解即可</font>。**
 
 ### 静态资源处理源码分析
 **<font style="color:#DF2A3F;">知识点清单：</font>**
 
 1. **通过spring.web.resources.add-mappings=false 可以关闭默认的静态资源配置。**
-2. **当请求路径是 **`**/webjars/****`**格式时，会去 **`**/META-INF/resources/webjars/**`**目录下找静态资源。**
-3. **当请求路径是 **`**/****`**格式时（优先匹配控制器，如果匹配不到控制器，才会...），会去 **`**{ "classpath:/META-INF/resources/","classpath:/resources/", "classpath:/static/", "classpath:/public/" }**`**目录下找。**
+2. **当请求路径是 `**/webjars/****`格式时，会去 `**/META-INF/resources/webjars/**`目录下找静态资源。**
+3. **当请求路径是 `**/****`格式时（优先匹配控制器，如果匹配不到控制器，才会...），会去 `**{ "classpath:/META-INF/resources/","classpath:/resources/", "classpath:/static/", "classpath:/public/" }**`目录下找。**
 4. **通过 **`**spring.mvc.static-path-pattern=...**`**配置 URL，通过 **`**spring.web.resources.static-locations=...,...,...,...**`**配置物理路径。**
 
 关于**SpringBoot对静态资源处理的默认配置**，查看`WebMvcAutoConfigurationAdapter`源码，核心源码如下：
@@ -4619,7 +4619,7 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 ### 关于普通静态资源处理
 **<font style="color:#DF2A3F;">知识点清单：</font>**
 
-**当请求路径是**[**http://localhost:8080/****](http://localhost:8080/**)**，根据控制器方法优先原则，会先去找合适的控制器方法，如果没有合适的控制器方法，静态资源处理才会生效，则自动去类路径下的以下4个位置查找：**
+**当请求路径是[http://localhost:8080/](http://localhost:8080/)，根据控制器方法优先原则，会先去找合适的控制器方法，如果没有合适的控制器方法，静态资源处理才会生效，则自动去类路径下的以下4个位置查找：**
 
 + **classpath:/META-INF/resources/**
 + **classpath:/resources/**
@@ -4653,8 +4653,8 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 
 + **registration.setCachePeriod(getSeconds(this.resourceProperties.getCache().getPeriod()));**
     - 设置缓存的过期时间，默认配置是 null。不设置缓存时间，由浏览器自己决定。
-    -  假设配置为 3600 秒，则在 1 小时内浏览器都走缓存。（**<font style="color:#DF2A3F;">这 1 小时内，浏览器压根不会和服务器交互，因为这 1 小时内的缓存叫做</font>****<font style="color:#2F4BDA;">强</font>****<font style="color:#DF2A3F;">缓存</font>**）
-    - 可以通过`application.properties`的来修改默认的过期时间，例如：`spring.web.resources.cache.period=3600`或者`spring.web.resources.cache.period=1h`，或者通过 `spring.web.resources.cache.cachecontrol.max-age=3600`也可以（**它是****<font style="color:#DF2A3F;">较新</font>****的一种写法**）。
+    -  假设配置为 3600 秒，则在 1 小时内浏览器都走缓存。（**<font style="color:#DF2A3F;">这 1 小时内，浏览器压根不会和服务器交互，因为这 1 小时内的缓存叫做</font><font style="color:#2F4BDA;">强</font><font style="color:#DF2A3F;">缓存</font>**）
+    - 可以通过`application.properties`的来修改默认的过期时间，例如：`spring.web.resources.cache.period=3600`或者`spring.web.resources.cache.period=1h`，或者通过 `spring.web.resources.cache.cachecontrol.max-age=3600`也可以（**它是<font style="color:#DF2A3F;">较新</font>的一种写法**）。
 + **registration.setCacheControl(this.resourceProperties.getCache().getCachecontrol().toHttpCacheControl());**
     - 设置静态资源的 Cache-Control HTTP 响应头，告诉浏览器如何去缓存这些资源。
     - `Cache-Control` HTTP 响应头   是HTTP响应协议的一部分内容。如下图：
@@ -4987,11 +4987,11 @@ public class WebConfig2 {
 
 **<font style="color:#DF2A3F;">**</font>**	匹配任意数量的目录层级，只能出现在路径末尾。
 
-**<font style="color:#DF2A3F;">?</font>****	**匹配**任意单个字符**。
+**<font style="color:#DF2A3F;">?</font>	匹配任意单个字符**。
 
-**<font style="color:#DF2A3F;">[]</font>****	**匹配指定范围内的单个字符。
+<font style="color:#DF2A3F;">[]</font>	匹配指定范围内的单个字符。
 
-**<font style="color:#DF2A3F;">{}</font>****	**路径变量，用于提取路径的一部分作为参数。示例：/users/{userId} 匹配 /users/123，提取 userId=123。
+<font style="color:#DF2A3F;">{}</font>	路径变量，用于提取路径的一部分作为参数。示例：/users/{userId} 匹配 /users/123，提取 userId=123。
 
 ```java
 @GetMapping("/{path:[a-z]+}/a?/*.do/**")
@@ -6227,7 +6227,7 @@ logging.level.com.jkweilai.service.OrderService=DEBUG # 明确指定该类的日
 
 ### 日志的分组
 #### 日志组的定义和使用
-**日志组让多个包/类的日志级别可以****<font style="color:#DF2A3F;">统一设置和批量修改</font>****，避免重复配置，提升管理效率。**
+**日志组让多个包/类的日志级别可以<font style="color:#DF2A3F;">统一设置和批量修改</font>，避免重复配置，提升管理效率。**
 
 ```properties
 # 组的定义，组名 mybusiness
@@ -6245,7 +6245,7 @@ logging.level.mybusiness=DEBUG
 
 `**sql**`**日志组**：统一配置 **JDBC Template** 和 **Hibernate** 这类与数据库交互的底层框架的日志，**它与 MyBatis 完全无关**
 
-**`web`**** 日志组：**记录了 **Spring MVC/WebFlux 框架处理 HTTP 请求、响应及内部组件的全链路调试信息**，是排查 Web 层问题的核心工具。
+**`web` 日志组：记录了 Spring MVC/WebFlux 框架处理 HTTP 请求、响应及内部组件的全链路调试信息**，是排查 Web 层问题的核心工具。
 
 
 
@@ -6413,7 +6413,7 @@ public class MyTask {
 
 ```
 
-所有定时任务共用**同一个线程**，一个任务执行时，其他任务只能等，哪怕到了触发时间也得排队。**想改成多线程**，加个配置就行：**默认单线程，多个任务会互相阻塞；配个 ****`TaskScheduler`**** 线程池就能并发跑。**
+所有定时任务共用**同一个线程**，一个任务执行时，其他任务只能等，哪怕到了触发时间也得排队。**想改成多线程**，加个配置就行：**默认单线程，多个任务会互相阻塞；配个 **`TaskScheduler`** 线程池就能并发跑。**
 
 ```java
 @Configuration
@@ -7131,7 +7131,7 @@ public R<UserDTO> createUser(@Valid @RequestBody UserDTO dto) {
 
 ### SpringBoot 项目中使用 Knife4j
 #### 创建SpringBoot项目
-使用Spring Initializr创建项目（**<font style="color:#DF2A3F;">重点注意事项：以下功能基于 SpringBoot </font>****`3.3.6 版本，其他版本可能有兼容问题 `**），选择以下依赖：
+使用Spring Initializr创建项目（**<font style="color:#DF2A3F;">重点注意事项：以下功能基于 SpringBoot </font>`3.3.6 版本，其他版本可能有兼容问题 `**），选择以下依赖：
 
 + Spring Web
 + Lombok

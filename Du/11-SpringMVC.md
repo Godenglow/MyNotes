@@ -650,10 +650,10 @@ public class ProductController {
 
 **<font style="color:#DF2A3F;">对于路径组合来说，以下写法都行：</font>**
 
-+ 如果**两个路径都有**** ****`/`**：`/user` + `/detail` = `/user/detail`
-+ 如果**方法路径没有**** ****`/`**：`/user` + `detail` = `/user/detail`
-+ 如果**类路径没有**** ****`/`**：`user` + `/detail` = `/user/detail`
-+ 如果**两个都没有 ****`/`**：`user` + `detail` = `/user/detail`
++ 如果**两个路径都有** **`/`**：`/user` + `/detail` = `/user/detail`
++ 如果**方法路径没有** **`/`**：`/user` + `detail` = `/user/detail`
++ 如果**类路径没有** **`/`**：`user` + `/detail` = `/user/detail`
++ 如果**两个都没有 `/`**：`user` + `detail` = `/user/detail`
 
 ### RequestMapping注解的value属性
 #### value属性的使用
@@ -727,11 +727,11 @@ public class RequestMappingTestController {
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710380880908-39caa3a2-020d-4f4b-821d-9a14ab6cfb03.png)
 
 #### value 支持模糊匹配
-**value是可以用来匹配路径的，路径支持模糊匹配，我们把这种模糊匹配称之为****<font style="color:#DF2A3F;">Ant风格</font>****。关于路径中的通配符包括：**
+**value是可以用来匹配路径的，路径支持模糊匹配，我们把这种模糊匹配称之为<font style="color:#DF2A3F;">Ant风格</font>。关于路径中的通配符包括：**
 
 + `**?**`**，代表任意一个字符**
-+ `*****`**，代表0到N个任意字符，但不包含 **`**/**`
-+ `**/****`**，代表0到N个任意字符，包含 **`**/**`**，****<font style="color:#DF2A3F;">springmvc6.2.10 版本测试结果： </font>**`/`**<font style="color:#DF2A3F;">只能出现在路径的末尾。</font>**
++ `*****`，代表0到N个任意字符，但不包含 `**/**`
++ `**/****`**，代表0到N个任意字符，包含 **`**/**`**，<font style="color:#DF2A3F;">springmvc6.2.10 版本测试结果： </font>**`/`**<font style="color:#DF2A3F;">只能出现在路径的末尾。</font>**
     - **这样会报错：**`**/user/**/detail**`
     - **如果这样写：**`**/user/x**y/detail**`**，虽然表面上看用了 **`******`**，但实质上还是用了一个 **`*****`**。因为这种方式不支持 **`**/**`**。**
     - **这样编写是正确的：**`**/user/detail/****`
@@ -1507,7 +1507,7 @@ defaultValue属性用来设置形参的默认值，当`没有提供对应的请�
 **知识点列表：**
 
 1. **@RequestParam 这个注解是可以省略的，如果方法形参的名字和提交数据时的name相同，则 @RequestParam 可以省略。**
-2. **但有一个前提：你需要在pom.xml文件中指定编译参数'-parameter'，这个配置让 Maven 在编译 Java 代码时，把方法的参数名（如 username、password）保留到编译后的 .class 文件中，这样 Spring 框架就能通过反射获取参数名。****<font style="color:#DF2A3F;">SpringBoot 项目默认自带这个配置，不需要手动配置。</font>**
+2. **但有一个前提：你需要在pom.xml文件中指定编译参数'-parameter'，这个配置让 Maven 在编译 Java 代码时，把方法的参数名（如 username、password）保留到编译后的 .class 文件中，这样 Spring 框架就能通过反射获取参数名。<font style="color:#DF2A3F;">SpringBoot 项目默认自带这个配置，不需要手动配置。</font>**
 3. **形参名必须和提交数据的 name 一致。如果不一致，则形参值为 null。**
 4. **如果前端提交的数组，后端也可以用 String 来接收，不一定使用数组。**
 
@@ -1548,7 +1548,7 @@ public String register(String username, String password, String sex, String[] ho
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710428682813-4c2440c7-0500-4d02-a66a-7a3852ebd981.png)
 
-**不加 ****`@RequestParam`**** 注解的参数，默认不是必须的，匹配不到就赋 ****`null`****，不会报 400。**
+**不加 `@RequestParam` 注解的参数，默认不是必须的，匹配不到就赋 `null`，不会报 400。**
 
 另外，还有一点，对于提交的hobby数据，也可以采用String来接收，不一定使用数组方式：
 
@@ -2535,7 +2535,7 @@ Spring MVC支持的常见视图包括：
 
 + **<font style="color:#DF2A3F;">实现视图的核心类和接口包括：DispatcherServlet、ViewResolver、View、</font>**ViewResolverRegistry
 + **<font style="color:#DF2A3F;">如果你想定制自己的视图组件：</font>**
-    - **<font style="color:#DF2A3F;">编写类实现ViewResolver接口，实现resolveViewName方法， </font>****在这个方法中根据逻辑视图名创建并配置对应的View对象。**
+    - **<font style="color:#DF2A3F;">编写类实现ViewResolver接口，实现resolveViewName方法， </font>在这个方法中根据逻辑视图名创建并配置对应的View对象。**
     - **<font style="color:#DF2A3F;">编写类实现View接口，实现render方法，在该方法中将模板语言转换成HTML代码，并将HTML代码响应到浏览器。</font>**
 
 #### 实现视图机制的原理描述
@@ -3054,7 +3054,7 @@ REST对URL的约束是这样的：
 + 传统的URL：get请求，/springmvc/deleteUserById?id=1
 + REST风格的URL：<font style="color:#DF2A3F;">delete请求</font>, /springmvc/user/1
 
-RESTful对URL的约束和规范的核心是：**<font style="color:#DF2A3F;">通过采用</font>****`不同的请求方式`****<font style="color:#DF2A3F;">+ </font>****`URL`****<font style="color:#DF2A3F;">来确定WEB服务中的资源。</font>**
+RESTful对URL的约束和规范的核心是：**<font style="color:#DF2A3F;">通过采用</font>`不同的请求方式`<font style="color:#DF2A3F;">+ </font>`URL`<font style="color:#DF2A3F;">来确定WEB服务中的资源。</font>**
 
 ### RESTful风格与传统方式对比
 传统的 URL 与 RESTful URL 的区别是传统的 URL 是基于方法名进行资源访问和操作，而 RESTful URL 是基于资源的结构和状态进行操作的。下面是一张表格，展示两者之间的具体区别：
@@ -3210,7 +3210,7 @@ RESTful规范中规定，如果要进行保存操作，需要发送PUT请求。
 
 **<font style="color:#DF2A3F;">第一步：首先你必须是一个POST请求。</font>**
 
-**<font style="color:#DF2A3F;">第二步：在发送POST请求的时候，提交这样的数据：</font>****`_method=PUT`**
+**<font style="color:#DF2A3F;">第二步：在发送POST请求的时候，提交这样的数据：</font>`_method=PUT`**
 
 **<font style="color:#DF2A3F;">第三步：在web.xml文件配置SpringMVC提供的过滤器：HiddenHttpMethodFilter</font>**
 
@@ -3264,7 +3264,7 @@ HiddenHttpMethodFilter是Spring MVC框架提供的，专门用于RESTful编程�
 
 这样method就从POST变成了：PUT/DELETE/PATCH。
 
-**<font style="color:#DF2A3F;">重点注意事项：CharacterEncodingFilter和</font>****`HiddenHttpMethodFilter的顺序`**
+**<font style="color:#DF2A3F;">重点注意事项：CharacterEncodingFilter和</font>`HiddenHttpMethodFilter的顺序`**
 
 细心的同学应该注意到了，在`HiddenHttpMethodFilter源码中有这样一行代码：`
 
@@ -4216,7 +4216,7 @@ public void deleteById(Long id){
 ### 怎么指定使用哪个 HTTP 消息转换器
 在程序当中通过编写不同的注解，来选择不同的 HTTP 消息转换器。
 
-**在响应阶段：（****<font style="color:#DF2A3F;">使用@ResponseBody 来启用消息转换器</font>****）**
+**在响应阶段：（<font style="color:#DF2A3F;">使用@ResponseBody 来启用消息转换器</font>）**
 
 1. 使用 `@ResponseBody`注解来启用`StringHttpMessageConverter`和`MappingJackson2HttpMessageConverter`
 2. 当使用 `@ResponseBody`并且 `Controller#method()`返回一个**普通的字符串**时：`StringHttpMessageConverter`启用。它会把字符串直接写入响应体，假设方法返回 `hello`字符串，最终浏览器页面上就显示一个 `hello` 字符串。
@@ -4228,7 +4228,7 @@ public void deleteById(Long id){
     1. ModelAndView 机制。
     2. 消息转换器机制【需要添加 `@ResponseBody` 启用】。
 
-**在请求阶段：（****<font style="color:#DF2A3F;">@RequestBody 来启用消息转换器</font>****）**
+**在请求阶段：（<font style="color:#DF2A3F;">@RequestBody 来启用消息转换器</font>）**
 
 1. 当请求头的 `Content-Type: application/json`，并且 `Controller#method()`方法的参数上使用了 `@RequestBody`，那么前端提交的 JSON 字符串将被转换成 Java 对象，底层使用的消息转换器是：`MappingJackson2HttpMessageConverter`
 2. 当请求头的 `Content-Type`是 `text/plain`，并且 `Controller#method()`方法的参数上使用了 `@RequestBody`，后端会使用`StringHttpMessageConverter`
@@ -4451,7 +4451,7 @@ public class ResponseBodyController {
 
 `@RequestBody`这个注解使用在**方法的形参上**，**不可省略**，一旦使用了这个注解，表示请求阶段走**消息转换器机制**。如果没有这个注解一定会走 web data binder 机制。
 
-**`@RequestBody`****<font style="color:#DF2A3F;">只处理请求体（Request Body）中的数据（不负责请求行！）</font>**
+**`@RequestBody`<font style="color:#DF2A3F;">只处理请求体（Request Body）中的数据（不负责请求行！）</font>**
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764669597129-7308113b-2153-4a11-a0e6-f4f9add26571.png)
 
@@ -4567,7 +4567,7 @@ public class UserController {
 }
 ```
 
-**经过测试，以上代码 **`**User user**`** 不能添加 **`**@RequestBody**`**注解。因为请求的内容类型是 **`**application/x-www-form-urlencoded**`**，它是不走消息转换器的，走的****`ServletRequestDataBinder`****<font style="color:#601BDE;">（数据绑定器）</font>**
+**经过测试，以上代码 `**User user**` 不能添加 `**@RequestBody**`注解。因为请求的内容类型是 `**application/x-www-form-urlencoded**`，它是不走消息转换器的，走的`ServletRequestDataBinder`<font style="color:#601BDE;">（数据绑定器）</font>**
 
 ### RequestEntity
 RequestEntity不是一个注解，是一个普通的类。这个类的实例封装了整个请求协议：**包括请求行、请求头、请求体所有信息**。
@@ -5723,7 +5723,7 @@ public class SpringMvcConfig implements WebMvcConfigurer {
 
 ```
 
-使用了 `@EnableWebMvc`，你的类**必须实现 ****`WebMvcConfigurer`**** 接口**来配置静态资源处理，否则所有静态资源（CSS、JS、图片）都无法访问。
+使用了 `@EnableWebMvc`，你的类**必须实现 **`WebMvcConfigurer`** 接口**来配置静态资源处理，否则所有静态资源（CSS、JS、图片）都无法访问。
 
 #### 视图解析器
 
@@ -6217,7 +6217,7 @@ public class UserController {
 
 到此，SpringMVC 的课程就结束了。
 
-**<font style="color:#DF2A3F;">另外，大家再思考一下，虽然以上 SSM 框架集成时使用了全注解的开发方式，方便了不少，但搭建过程仍然很繁琐，还是要编写大量的配置，例如我们编写了 web.xml 的配置 </font>****`WebConfig`****<font style="color:#DF2A3F;">，Spring 的配置 </font>****`SpringConfig`****<font style="color:#DF2A3F;">，SpringMVC 的配置</font>****`SpringMvcConfig implements WebMvcConfigurer`****<font style="color:#DF2A3F;">，包括 SSM 集成时，依赖也是我们自己手动引入的，手动引入依赖难免存在依赖版本兼容的问题。</font>**
+**<font style="color:#DF2A3F;">另外，大家再思考一下，虽然以上 SSM 框架集成时使用了全注解的开发方式，方便了不少，但搭建过程仍然很繁琐，还是要编写大量的配置，例如我们编写了 web.xml 的配置 </font>`WebConfig`<font style="color:#DF2A3F;">，Spring 的配置 </font>`SpringConfig`<font style="color:#DF2A3F;">，SpringMVC 的配置</font>`SpringMvcConfig implements WebMvcConfigurer`<font style="color:#DF2A3F;">，包括 SSM 集成时，依赖也是我们自己手动引入的，手动引入依赖难免存在依赖版本兼容的问题。</font>**
 
 **<font style="color:#DF2A3F;">有没有人写一个开源项目，能够帮我们自动引入一套完全兼容的 SSM 依赖，能不能帮我们写好默认的 Spring 配置，默认的 SpringMVC 的配置，默认的 Web 配置，这样我们直接使用 Maven 的继承机制，继承这个开源项目，立即就可以开始写项目的业务代码了，不需要我们在环境搭建方面浪费太多的时间。</font>**
 

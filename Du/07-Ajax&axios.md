@@ -77,7 +77,7 @@ const xhr = new XMLHttpRequest();
 | **<font style="color:#DF2A3F;">onload</font>** | 请求成功完成时触发。但这个响应的结果可能是 200，可能是 404，也可能是 500 等。只要这一次请求完整的结束了，不管报错不报错，onload 会触发。 |
 | **<font style="color:#DF2A3F;">onerror</font>** | onerror 只在网络层面的请求失败时触发（如无法连接服务器、DNS解析失败、CORS错误等），而不会在HTTP状态码错误（如404、500）时触发。 |
 | ontimeout | 请求超时时触发，需要先设置超时时间：xhr.timeout = 5000; // 5 秒超时<br/>超时后请求会自动终止，触发ontimeout后不会再触发onload或onerror |
-| **<font style="color:#117CEE;">readyState</font>** | 保存 XMLHttpRequest 的状态：<br/>**<font style="color:#DF2A3F;">0：</font>****`XMLHttpRequest`****<font style="color:#DF2A3F;"> 对象已创建，但尚未调用 </font>****`open()`****<font style="color:#DF2A3F;"> 方法。</font>**<br/>**<font style="color:#DF2A3F;">1：</font>****<font style="color:#DF2A3F;">已调用 </font>****`open()`****<font style="color:#DF2A3F;"> 方法，但尚未调用 </font>****`send()`****<font style="color:#DF2A3F;"> 方法。</font>**<br/>**<font style="color:#DF2A3F;">2：</font>****<font style="color:#DF2A3F;">已调用 </font>****`send()`****<font style="color:#DF2A3F;"> 方法，且服务器返回了响应头和状态码。</font>****<font style="color:#DF2A3F;"> </font>**<br/>**<font style="color:#DF2A3F;">3：</font>****<font style="color:#DF2A3F;">正在接收服务器返回的响应体数据（可能处于传输过程中）</font>**<br/>**<font style="color:#DF2A3F;">4：整个请求/响应过程已全部完成（无论成功或失败）</font>** |
+| **<font style="color:#117CEE;">readyState</font>** | 保存 XMLHttpRequest 的状态：<br/>**<font style="color:#DF2A3F;">0：</font>`XMLHttpRequest`<font style="color:#DF2A3F;"> 对象已创建，但尚未调用 </font>`open()`<font style="color:#DF2A3F;"> 方法。</font>**<br/>**<font style="color:#DF2A3F;">1：</font><font style="color:#DF2A3F;">已调用 </font>`open()`<font style="color:#DF2A3F;"> 方法，但尚未调用 </font>`send()`<font style="color:#DF2A3F;"> 方法。</font>**<br/>**<font style="color:#DF2A3F;">2：</font><font style="color:#DF2A3F;">已调用 </font>`send()`<font style="color:#DF2A3F;"> 方法，且服务器返回了响应头和状态码。</font><font style="color:#DF2A3F;"> </font>**<br/>**<font style="color:#DF2A3F;">3：</font><font style="color:#DF2A3F;">正在接收服务器返回的响应体数据（可能处于传输过程中）</font>**<br/>**<font style="color:#DF2A3F;">4：整个请求/响应过程已全部完成（无论成功或失败）</font>** |
 | **<font style="color:#DF2A3F;">responseText</font>** | 以字符串返回响应数据 |
 | responseXML | 以 XML 数据返回响应数据 |
 | **<font style="color:#DF2A3F;">status</font>** | 返回请求的状态号<br/>200: "OK"<br/>403: "Forbidden"<br/>404: "Not Found"<br/>500："服务器内部错误" |
@@ -397,7 +397,7 @@ xhr.send();
 
 注意：
 
-1. 以上代码中的 `encodeURIComponent`是对提交的数据进行编码，防止请求提交的数据到服务器端无法正常获取。（**<font style="color:#DF2A3F;">假设用户填写的用户名是 </font>****`lucy&age=20`****<font style="color:#DF2A3F;">，在服务器端获取时，用户名只能获取到 </font>****`lucy`****<font style="color:#DF2A3F;">，因此需要对数据进行编码，这样 </font>****`lucy&age=20`****<font style="color:#DF2A3F;">才能被当做一个完整的用户名。</font>**）
+1. 以上代码中的 `encodeURIComponent`是对提交的数据进行编码，防止请求提交的数据到服务器端无法正常获取。（**<font style="color:#DF2A3F;">假设用户填写的用户名是 </font>`lucy&age=20`<font style="color:#DF2A3F;">，在服务器端获取时，用户名只能获取到 </font>`lucy`<font style="color:#DF2A3F;">，因此需要对数据进行编码，这样 </font>`lucy&age=20`<font style="color:#DF2A3F;">才能被当做一个完整的用户名。</font>**）
 2. 以上代码中 `Date.now()`是给 URL 后面添加时间戳，解决 GET 请求缓存问题。（旧版浏览器可能存在 GET 缓存问题。）
 
 ### XHR 发送 POST 请求
@@ -457,7 +457,7 @@ Promise 就像一个"承诺"，表示一个将来会完成（或失败）的操�
 ### 为什么需要 Promise
 使用 Promise 可以对"回调地狱"（多层嵌套的回调函数）代码进行封装，对外提供一种优雅的编码风格。（变相解决回调地狱问题）
 
-**回调地狱(****<font style="color:#DF2A3F;">Callback Hell</font>****)**就像是你让一群人帮你做事，但每个人都要等前一个人做完才能开始，结果形成了一连串的"等TA做完后，你再..."的嵌套关系。
+回调地狱(<font style="color:#DF2A3F;">Callback Hell</font>)就像是你让一群人帮你做事，但每个人都要等前一个人做完才能开始，结果形成了一连串的"等TA做完后，你再..."的嵌套关系。
 
 **举个生活例子：**
 
@@ -720,7 +720,7 @@ async 和 await 是 JavaScript 的语法，属于 ECMAScript **<font style="colo
     - 如果函数内返回普通值（如 `return 42`），它会被自动包装成 `Promise.resolve(42)`。【实际上就是一个 Promise 对象，Promise 对象包装的值是 42】
     - 如果函数内抛出错误（如 `throw new Error(...)`），它会被包装成 `Promise.reject(error)`。【实际上就是一个 Promise 对象，Promise 对象的值是 error 对象】
 
-**示例：以下两种写法是****<font style="color:#DF2A3F;">等效</font>****的。**
+**示例：以下两种写法是<font style="color:#DF2A3F;">等效</font>的。**
 
 ```javascript
 let num = 100;
@@ -759,7 +759,7 @@ fetchData().then(result => {
 **功能：**
 
 + `**await**`** 只能在 **`**async**`** 函数内部使用。**
-+ `**await**`**出现会****暂停 **`**async**`** 函数的执行**
++ `**await**`**出现会暂停 **`**async**`** 函数的执行**
 + `**await**`**关键字后面通常是一个 **`**Promise**`
 + `**await**`**会等 **`**Promise**`**的完成，只有 **`**await**`**后面的 **`**Promise**`**完成后，**`**async**`**函数才能继续往下执行。**
 + `**await**`**后面的 **`**Promise**`**执行成功后，**`**await**`**会返回成功的值。**
@@ -1671,7 +1671,7 @@ server {
 #### 方案四：开发环境代理（开发）
 这是通过前端构建工具（如 Vite 或 Webpack）的开发服务器实现的 本地请求转发，**<font style="color:#DF2A3F;">仅在开发阶段生效</font>**，与生产环境的 Nginx/CORS 是分离的。
 
-**Vite 项目（****`vite.config.js`****）**
+**Vite 项目（`vite.config.js`）**
 
 ```javascript
 export default defineConfig({

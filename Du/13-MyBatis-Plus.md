@@ -135,7 +135,7 @@ public interface CarMapper extends BaseMapper<Car> {
 }
 ```
 
-**`BaseMapper`****<font style="color:#DF2A3F;">已经将CRUD相关的方法全部实现了，该类中有大量的 insert、delete、update、select 等方法。</font>**
+**`BaseMapper`<font style="color:#DF2A3F;">已经将CRUD相关的方法全部实现了，该类中有大量的 insert、delete、update、select 等方法。</font>**
 
 第五步：Spring Boot主入口程序添加 Mapper扫描
 
@@ -230,7 +230,7 @@ class Mp01ApplicationTests {
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744271376349-0b925a4a-98d3-4dac-b8a4-a54b4c4f9675.png)
 
-**然后通过反射机制获取**`**Car**`**类的类名以及字段名，遵循****`约定大于配置`****的方式完成了**`**实体类**`**与**`**表**`**的对应，约定如下：**
+**然后通过反射机制获取**`**Car**`**类的类名以及字段名，遵循`约定大于配置`的方式完成了**`**实体类**`**与**`**表**`**的对应，约定如下：**
 
 + **类名驼峰转下划线作为表名，例如：类名**`**UserInfo**`**，对应的表名**`**user_info**`
 + **自动将名字为**`**id**`**的字段作为主键**
@@ -268,9 +268,9 @@ class Mp01ApplicationTests {
 **主键生成策略：**
 
 + IdType.AUTO：数据库自增，这种方式需要在 MySQL 建表时指定 `auto_increment`，**不指定会失败**。
-+ IdType.ASSIGN_ID：雪花算法生成分布式ID（**默认策略**），主键的类型可以是 Long、Integer、String。这是mp自己提供的，底层调用了`IdentifierGenerator`接口的`nextId()`方法，实现类是`DefaultIdentifierGenerator`，雪花算法实现的（**雪花算法是一种分布式ID生成算法，通过组合****<font style="color:#DF2A3F;">时间戳、机器ID和序列号</font>****生成全局唯一、趋势递增的64位ID。占 8 个字节，****<font style="color:#DF2A3F;">时钟回拨</font>****或****<font style="color:#DF2A3F;">机器 ID 全局不唯一</font>****可能会导致 id 重复，但概率较低**）。
++ IdType.ASSIGN_ID：雪花算法生成分布式ID（**默认策略**），主键的类型可以是 Long、Integer、String。这是mp自己提供的，底层调用了`IdentifierGenerator`接口的`nextId()`方法，实现类是`DefaultIdentifierGenerator`，雪花算法实现的（**雪花算法是一种分布式ID生成算法，通过组合<font style="color:#DF2A3F;">时间戳、机器ID和序列号</font>生成全局唯一、趋势递增的64位ID。占 8 个字节，<font style="color:#DF2A3F;">时钟回拨</font>或<font style="color:#DF2A3F;">机器 ID 全局不唯一</font>可能会导致 id 重复，但概率较低**）。
 
-**<font style="color:#DF2A3F;">需要注意的是：当你使用这种方式时，即使主键是 </font>****`auto_increment`****<font style="color:#DF2A3F;">，仍然会采用雪花算法生成 ID。</font>**
+**<font style="color:#DF2A3F;">需要注意的是：当你使用这种方式时，即使主键是 </font>`auto_increment`<font style="color:#DF2A3F;">，仍然会采用雪花算法生成 ID。</font>**
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744273213286-e4f3cf01-59ec-46e6-a9ab-2019f8e5e8ec.png)
 
@@ -357,7 +357,7 @@ mp默认生成的CRUD的SQL语句，都是基于主键id的，例如：deleteByI
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744287684456-1fc1448b-0e13-46f7-b4a4-0789213abc40.png)
 
 ### QueryWrapper的使用
-**<font style="color:#DF2A3F;">注意：MP 中提供的</font>****`QueryWrapper`****<font style="color:#DF2A3F;"> 与 </font>****`LambdaQueryWrapper`****<font style="color:#DF2A3F;">适合于单表查询，如果多表连接查询建议大家使用 MyBatis 原生配置文件。当然，MP 也可以实现多表连接查询，只是代码会变的很难维护、很难阅读。官方最佳实践是：采用 MP 做单表查询。</font>**
+**<font style="color:#DF2A3F;">注意：MP 中提供的</font>`QueryWrapper`<font style="color:#DF2A3F;"> 与 </font>`LambdaQueryWrapper`<font style="color:#DF2A3F;">适合于单表查询，如果多表连接查询建议大家使用 MyBatis 原生配置文件。当然，MP 也可以实现多表连接查询，只是代码会变的很难维护、很难阅读。官方最佳实践是：采用 MP 做单表查询。</font>**
 
 #### 案例1
 查询出汽车品牌中带有 '宝' 的，厂商指导价大于20万的，要求查询 id、car_num、brand、guide_price 字段。
@@ -883,7 +883,7 @@ public interface CarDao extends BaseMapper<Car> {
 
 ```
 
-**<font style="color:#DF2A3F;">在SpringBoot入口程序上添加</font>****`@MapperScan`****<font style="color:#DF2A3F;">扫描</font>**
+**<font style="color:#DF2A3F;">在SpringBoot入口程序上添加</font>`@MapperScan`<font style="color:#DF2A3F;">扫描</font>**
 
 `@MapperScan("com.jkweilai.mp.dao")`
 
@@ -1202,7 +1202,7 @@ public class CarQuery {
 
 在`CarController`中提供`queryByMultiCondition`方法：
 
-**<font style="color:#DF2A3F;">查询操作如果参数不多，RESTful 接口应设计为 get 请求，请求在请求行上提交，以下代码中 </font>****`@ParameterObject`****<font style="color:#DF2A3F;">是 swagger 的注解，和 SpringMVC 无关。使用这个注解，swagger 在生成文档的时候，会将 </font>****`CarQuery`****<font style="color:#DF2A3F;">对象的属性拆开在文档中显示。</font>**
+**<font style="color:#DF2A3F;">查询操作如果参数不多，RESTful 接口应设计为 get 请求，请求在请求行上提交，以下代码中 </font>`@ParameterObject`<font style="color:#DF2A3F;">是 swagger 的注解，和 SpringMVC 无关。使用这个注解，swagger 在生成文档的时候，会将 </font>`CarQuery`<font style="color:#DF2A3F;">对象的属性拆开在文档中显示。</font>**
 
 ```java
 @GetMapping("/cars/conditions")
@@ -1406,7 +1406,7 @@ void testSaveBatch() {
 
 可以看到以上的方法基本上都是`IService`接口中的方法。
 
-**<font style="color:#DF2A3F;">静态工具类 Db 中的方法一般比 IService 接口中的方法多一个</font>****`Class`****<font style="color:#DF2A3F;">参数。这是因为 IService 接口可以通过泛型来指定类型，而静态工具类 Db 是无法指定泛型的。</font>**
+**<font style="color:#DF2A3F;">静态工具类 Db 中的方法一般比 IService 接口中的方法多一个</font>`Class`<font style="color:#DF2A3F;">参数。这是因为 IService 接口可以通过泛型来指定类型，而静态工具类 Db 是无法指定泛型的。</font>**
 
 ### 什么情况下需要Db
 既然方法一样，为什么还要再提供一个静态工具类Db呢？
@@ -1762,7 +1762,7 @@ mybatis-plus:
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744443329927-170a622c-392f-4bf7-b012-7b670a481277.png)
 
-**<font style="color:#DF2A3F;">重点注意事项</font>****：当添加了 **`**@JsonValue**`**注解之后，前端系统提交 JSON 给 DTO 对象时，JSON 字符串中的 **`**status**`**需要使用中文：**`**"status":"在售"**`**，这样才能解决新增时的报错问题。**
+**<font style="color:#DF2A3F;">重点注意事项</font>：当添加了 `**@JsonValue**`注解之后，前端系统提交 JSON 给 DTO 对象时，JSON 字符串中的 `**status**`需要使用中文：`**"status":"在售"**`，这样才能解决新增时的报错问题。**
 
 ## json 处理器
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)

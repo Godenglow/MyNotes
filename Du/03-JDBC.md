@@ -2891,7 +2891,7 @@ public class NoBatchTest {
 ### 使用批处理
 使用批处理，向 t_product 表中插入一万条商品信息，并记录耗时！
 
-**<font style="color:#DF2A3F;">注意：启用批处理需要在URL后面添加这个的参数：</font>****`rewriteBatchedStatements=true`**
+**<font style="color:#DF2A3F;">注意：启用批处理需要在URL后面添加这个的参数：</font>`rewriteBatchedStatements=true`**
 
 ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708249622292-576aa82d-5874-4013-a9b4-d94c00cef0ce.png)
 
@@ -3824,10 +3824,10 @@ public class EmployeeSystem {
 
 + **首先你要知道 **`**nextLine()**`**方法是干啥的？**
     - **该方法的作用是为了读取一个完整的行，例如用户输入 **`**abc**`**回车，实际上用户输入的是 **`**abc\n**`**，那么 **`**nextLine()**`**方法可以将 **`**abc\n**`**都读取到，读到了一个完整行。**
-+ **什么时候需要加 ****`scanner.nextLine()`****？**
-    - **当 ****`nextInt()`**** / ****`nextDouble()`**** / ****`next()`**** 后面跟着的是 ****`nextLine()`**** 时，中间必须加一个 ****`nextLine()`**** 吃掉遗留的换行符。当用户输入 ****`123`****并回车，实际上输入的内容是 ****`123\n`****，****`nextInt()`****方法只能读取到 ****`123`****，因此在缓冲区还会残留一个 ****`\n`****，如果此时紧接着调用 ****`nextLine()`****方法，该方法只会吃掉缓存中残留的换行符，返回一个空字符串。**
++ **什么时候需要加 `scanner.nextLine()`？**
+    - **当 `nextInt()` / `nextDouble()` / `next()` 后面跟着的是 `nextLine()` 时，中间必须加一个 `nextLine()` 吃掉遗留的换行符。当用户输入 `123`并回车，实际上输入的内容是 `123\n`，`nextInt()`方法只能读取到 `123`，因此在缓冲区还会残留一个 `\n`，如果此时紧接着调用 `nextLine()`方法，该方法只会吃掉缓存中残留的换行符，返回一个空字符串。**
 + **什么时候不需要？**
-    - **当 ****`nextInt()`**** / ****`nextDouble()`**** / ****`next()`**** 后面跟着的还是 ****`nextInt()`**** / ****`nextDouble()`**** / ****`next()`**** 时，不需要。因为 ****`nextXxx()`****方法在执行时会自动跳过它前面的空白和换行符。**
+    - **当 `nextInt()` / `nextDouble()` / `next()` 后面跟着的还是 `nextInt()` / `nextDouble()` / `next()` 时，不需要。因为 `nextXxx()`方法在执行时会自动跳过它前面的空白和换行符。**
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 

@@ -1207,7 +1207,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1746799925355-86d33bde-1d9d-4637-9716-0385d85e65fc.png)
 
 #### 注意事项
-1. ****HTML 规范要求 `<tfoot>` 必须放在 `<tbody>` 前（但渲染时显示在底部）。
+1. **HTML 规范要求 `<tfoot>` 必须放在 `<tbody>` 前（但渲染时显示在底部）。**
 2. 如果表格简单，可以省略 `<thead>`/`<tfoot>`，仅用 `<tbody>`。
 
 ![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
@@ -2381,7 +2381,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 </html>
 ```
 
-**<font style="color:#DF2A3F;">:nth-child(n) 选择父元素下第n个子元素（无视元素类型），而 </font>****<font style="color:#2F4BDA;">:nth-of-type(n) </font>****<font style="color:#DF2A3F;">选择父元素下同类型元素的第n个（仅匹配指定类型的元素）。</font>**
+**<font style="color:#DF2A3F;">:nth-child(n) 选择父元素下第n个子元素（无视元素类型），而 </font><font style="color:#2F4BDA;">:nth-of-type(n) </font><font style="color:#DF2A3F;">选择父元素下同类型元素的第n个（仅匹配指定类型的元素）。</font>**
 
 ##### `:not(selector)`（反选）
 + **作用**：排除匹配 `selector` 的元素。  
@@ -2678,7 +2678,7 @@ opacity 用来设置透明度，默认值为1，1为不透明，0为完全透明
 
 `p{ opacity: 0;}` 隐藏一个元素 ，**完全不显示，但是会占空间**，只是看不到。
 
-**`opacity`****<font style="color:#DF2A3F;">样式应用在某个元素上之后，例如应用在 div 元素上，则作用于 div 以及 div 中所有的子元素。</font>**
+**`opacity`<font style="color:#DF2A3F;">样式应用在某个元素上之后，例如应用在 div 元素上，则作用于 div 以及 div 中所有的子元素。</font>**
 
 #### font字体设置
 | **属性名** | **作用** | **参数说明** |
@@ -2907,9 +2907,9 @@ overflow 属性规定当内容溢出元素框时发生的事情。
 ```
 
 ### 外边距与内边距
-**`margin`**** 设置元素**外部**（边框外）与其他元素之间的间距**，用于控制元素之间的相对位置。
+**`margin` 设置元素外部（边框外）与其他元素之间的间距**，用于控制元素之间的相对位置。
 
-**`padding`**** 设置元素**内部**（内容区与边框之间）的内间距**，用于控制内容距离边框的远近。
+**`padding` 设置元素内部（内容区与边框之间）的内间距**，用于控制内容距离边框的远近。
 
 ```html
 <!doctype html>
@@ -3212,7 +3212,7 @@ list-style-type，列表样式，类型属性值可以为：
 + 元素仍然占据原来的空间位置
 + 只是视觉上发生偏移
 
-**`display: none`**** 不会"脱离文档流"，而是直接从渲染树中移除。脱离文档流：元素还在页面上，只是不占原来的位置。**
+**`display: none` 不会"脱离文档流"，而是直接从渲染树中移除。脱离文档流：元素还在页面上，只是不占原来的位置。**
 
 ****
 
@@ -3222,9 +3222,9 @@ list-style-type，列表样式，类型属性值可以为：
 #### float 布局初体验
 下面代码体验一下用 float 和不用 float 的区别：
 
-**`float: left;`**** 是相对于最近的块级父容器的内容区向左侧进行浮动。**
+**`float: left;` 是相对于最近的块级父容器的内容区向左侧进行浮动。**
 
-**`float: right;`**** 是相对于最近的块级父容器的内容区向右侧进行浮动。**
+**`float: right;` 是相对于最近的块级父容器的内容区向右侧进行浮动。**
 
 ```html
 <!DOCTYPE html>
@@ -3947,10 +3947,10 @@ JavaScript = ECMAScript(核心) + DOM(文档操作) + BOM(浏览器交互)
 **<font style="color:#DF2A3F;">知识点：</font>**
 
 1. **<font style="color:#DF2A3F;">JavaScript 是一种基于事件驱动（Event-Driven）的编程语言。</font>**
-2. **`click`****<font style="color:#DF2A3F;">是事件，</font>****`onclick`****<font style="color:#DF2A3F;">是事件句柄。事件句柄可作为HTML标签的属性形式存在。</font>**
-3. **<font style="color:#DF2A3F;">在事件句柄中注册回调函数。例如</font>****`onclick="sayHello()"`****<font style="color:#DF2A3F;">，其中</font>****`sayHello()`****<font style="color:#DF2A3F;">就是回调函数。</font>**
-4. **<font style="color:#DF2A3F;">原理：页面加载的时候，当加载到该HTML标签时，完成回调函数与事件的绑定（注册）。后续当用户点击该按钮时，发生</font>****`click`****<font style="color:#DF2A3F;">事件，浏览器负责调用回调函数。</font>**
-5. **<font style="color:#DF2A3F;">弹窗代码：</font>****`window.alert('Hello JavaScript')`****<font style="color:#DF2A3F;">，其中</font>****`window`****<font style="color:#DF2A3F;">是JS内置对象，代表当前浏览器窗口，</font>****`alert`****<font style="color:#DF2A3F;">是</font>****`window`****<font style="color:#DF2A3F;">对象的方法，功能是弹出警告框。</font>**
+2. **`click`<font style="color:#DF2A3F;">是事件，</font>`onclick`<font style="color:#DF2A3F;">是事件句柄。事件句柄可作为HTML标签的属性形式存在。</font>**
+3. **<font style="color:#DF2A3F;">在事件句柄中注册回调函数。例如</font>`onclick="sayHello()"`<font style="color:#DF2A3F;">，其中</font>`sayHello()`<font style="color:#DF2A3F;">就是回调函数。</font>**
+4. **<font style="color:#DF2A3F;">原理：页面加载的时候，当加载到该HTML标签时，完成回调函数与事件的绑定（注册）。后续当用户点击该按钮时，发生</font>`click`<font style="color:#DF2A3F;">事件，浏览器负责调用回调函数。</font>**
+5. **<font style="color:#DF2A3F;">弹窗代码：</font>`window.alert('Hello JavaScript')`<font style="color:#DF2A3F;">，其中</font>`window`<font style="color:#DF2A3F;">是JS内置对象，代表当前浏览器窗口，</font>`alert`<font style="color:#DF2A3F;">是</font>`window`<font style="color:#DF2A3F;">对象的方法，功能是弹出警告框。</font>**
 
 ### 内联方式（Inline Script）
    直接在HTML文件中使用`<script>`标签包裹JavaScript代码：
@@ -4035,7 +4035,7 @@ DOM 构建完成 → (开始执行 defer 脚本) → (所有 defer 脚本执行�
 <script src="script2.js" async></script>
 ```
 
-+ ✅ **`async`**** 脚本**：下载完js文件就执行，**<font style="color:#DF2A3F;">不保证DOM是否就绪</font>**，适合独立任务。
++ ✅ **`async` 脚本：下载完js文件就执行，<font style="color:#DF2A3F;">不保证DOM是否就绪</font>**，适合独立任务。
 + ✅ 什么是异步加载：不保证先执行`script1.js`再执行`script2.js`。谁先下载完，谁先执行。
 
 ## node 环境下执行 js 代码
@@ -4631,7 +4631,7 @@ console.log(value); // 输出"全局"
 </script>
 ```
 
-在 **严格模式（****`'use strict'`****）** 下，直接给未声明的变量赋值会抛出 `ReferenceError`
+在 **严格模式（`'use strict'`）** 下，直接给未声明的变量赋值会抛出 `ReferenceError`
 
 ```html
 <script>
@@ -4803,9 +4803,9 @@ const greet = name => `Hello, ${name}!`;
 | --- | --- | --- | --- |
 | **语法** | **`function fn() { ... }`** | **`const fn = function() { ... }`** | **`const fn = () => { ... }`** |
 | **提升** | 整个函数提升，可先调用后定义 | 需先定义后调用 | 需先定义后调用 |
-| **`this`****绑定** | 动态绑定（由调用者决定） | 动态绑定（由调用者决定） | 静态绑定（继承外层作用域的 **`this`**） |
+| **`this`绑定** | 动态绑定（由调用者决定） | 动态绑定（由调用者决定） | 静态绑定（继承外层作用域的 **`this`**） |
 | **构造函数** | 可当做构造函数来调用 | 可当做构造函数来调用 | <font style="color:#DF2A3F;">不可</font>当做构造函数来调用（**`new`**会报错） |
-| **`arguments`****对象** | 可用 **`arguments`**访问参数<br/>arguments[0]、arguments[1] 语法。 | 可用 **`arguments`**访问参数 | 无 **`arguments`** |
+| **`arguments`对象 | 可用 `arguments`访问参数<br/>arguments[0]、arguments[1] 语法。 | 可用 `arguments`访问参数 | 无 `arguments`** |
 | **隐式返回** | 如果要返回数据，必须显式编写 **`return`** | 如果要返回数据，必须显式编写 **`return`** | 函数体中只有一条 return 语句时，return 可以省略 |
 | **函数名称** | 有函数名 | 可有可无，匿名时名字默认继承变量名 | 匿名，名字默认继承变量名 |
 | **重新赋值** | 可重新赋值 | 可重新赋值，const 修饰后不可重新赋值 | 可重新赋值，const 修饰后不可重新赋值 |
@@ -4900,7 +4900,7 @@ const person = new Person('Bob');
 #### 函数对象上的 prototype
 任何一个**函数对象**上都有 prototype 属性。**普通对象**上没有 `prototype`属性。
 
-JS 中对象的**继承**是通过**原型链**实现的（**原型链**：**<font style="color:#DF2A3F;">原型对象</font>****串起来的一根链条**）。
+JS 中对象的**继承**是通过**原型链**实现的（**原型链**：**<font style="color:#DF2A3F;">原型对象</font>串起来的一根链条**）。
 
 假设现在有一个**构造函数** `User`【User 是一个函数对象】，通过它可以创建 `User`类型的实例，例如 `let u = new Uesr();`，其中 u 就是一个实例。通过 `User.prototype`可以获取到 `u`对象的**原型对象**（你可以暂且理解为 u 对象的**父类对象**），当然，我们通过 `u.__proto__`也可以获取到 `u`对象的**原型对象**。那如果我在 `u`对象的原型对象（**父类对象**）上扩展一些方法或属性，会怎么样呢？答案是：因为在父类对象上扩展的，所以**所有的 **`**User**`**类型的实例**都能扩展了这些方法和属性。
 
@@ -5448,7 +5448,7 @@ JavaScript 运算符可以分为以下几大类：
 + `*` 乘法
 + `/` 除法
 + `%` 取模（余数）
-+ `******`** 指数（ES2016）【比如2的3次方，可以使用**`**2 ** 3**`**来计算。以前是版本是调用**`**Math.pow(2, 3)**`**函数】**
++ `******` 指数（ES2016）【比如2的3次方，可以使用`**2 ** 3**`来计算。以前是版本是调用`**Math.pow(2, 3)**`函数】
 + `++` 递增
 + `--` 递减
 + `+` 一元正号
@@ -5470,13 +5470,13 @@ JavaScript 运算符可以分为以下几大类：
 + `^=` 按位异或赋值
 + `&&=` 逻辑与赋值（ES2021）
 + `||=` 逻辑或赋值（ES2021）
-+ **`??=`****<font style="color:#DF2A3F;"> 逻辑空赋值（ES2021） </font>****`x = x ?? y;`****<font style="color:#DF2A3F;">含义是：如果</font>****`x`****<font style="color:#DF2A3F;">是</font>****`null`****<font style="color:#DF2A3F;">或者</font>****`undefined`****<font style="color:#DF2A3F;">，就把</font>****`y`****<font style="color:#DF2A3F;">赋值给</font>****`x`****<font style="color:#DF2A3F;">。</font>**
++ **`??=`<font style="color:#DF2A3F;"> 逻辑空赋值（ES2021） </font>`x = x ?? y;`<font style="color:#DF2A3F;">含义是：如果</font>`x`<font style="color:#DF2A3F;">是</font>`null`<font style="color:#DF2A3F;">或者</font>`undefined`<font style="color:#DF2A3F;">，就把</font>`y`<font style="color:#DF2A3F;">赋值给</font>`x`<font style="color:#DF2A3F;">。</font>**
 
 ### 比较运算符
-+ **`==`****<font style="color:#DF2A3F;"> 等于</font>**
-+ **`===`****<font style="color:#DF2A3F;"> 严格等于（既比较值又比较数据类型，开发中建议使用严格等于。）</font>**
-+ **`!=`****<font style="color:#DF2A3F;"> 不等于</font>**
-+ **`!==`****<font style="color:#DF2A3F;"> 严格不等于</font>**
++ **`==`<font style="color:#DF2A3F;"> 等于</font>**
++ **`===`<font style="color:#DF2A3F;"> 严格等于（既比较值又比较数据类型，开发中建议使用严格等于。）</font>**
++ **`!=`<font style="color:#DF2A3F;"> 不等于</font>**
++ **`!==`<font style="color:#DF2A3F;"> 严格不等于</font>**
 + `>` 大于
 + `<` 小于
 + `>=` 大于等于
@@ -5486,7 +5486,7 @@ JavaScript 运算符可以分为以下几大类：
 + `&&` 逻辑与
 + `||` 逻辑或
 + `!` 逻辑非
-+ **`??`****<font style="color:#DF2A3F;"> 空值合并（ES2020）</font>**
++ **`??`<font style="color:#DF2A3F;"> 空值合并（ES2020）</font>**
 
 ```javascript
 const result = a ?? b;
@@ -5723,7 +5723,7 @@ const name = user.getName?.();
 console.log(name);
 ```
 
-**如果 getName 是一个函数并且存在则正常执行。反之立即返回****`undefined`****，而不会抛出错误。**
+**如果 getName 是一个函数并且存在则正常执行。反之立即返回`undefined`，而不会抛出错误。**
 
 ### 其他运算符
 + `new` 创建实例
@@ -5876,13 +5876,13 @@ user[methodName]();
 ```
 
 ##### 关于 Symbol.iterator
-**`Symbol.iterator`**** 就是一个内置的 Symbol 值。它是一个变量，存着一个 Symbol 值。**
+**`Symbol.iterator` 就是一个内置的 Symbol 值。它是一个变量，存着一个 Symbol 值。**
 
 **它被作为一个约定好的名字**，让 JS 知道：你这个对象怎么被 `for...of` 遍历。
 
 
 
-**怎么能够知道这个对象是否能够被 ****`for..of`****遍历？**
+**怎么能够知道这个对象是否能够被 `for..of`遍历？**
 
 `typeof obj[Symbol.iterator] === 'function'`，如果是 true 则表示该对象是可迭代对象，可以被 `for..of`遍历。
 
@@ -6082,7 +6082,7 @@ try {
 }
 ```
 
-**<font style="color:#DF2A3F;">ES6+新语法：</font>****`try...catch`****<font style="color:#DF2A3F;"> 可选的绑定 (ES2019)</font>**
+**<font style="color:#DF2A3F;">ES6+新语法：</font>`try...catch`<font style="color:#DF2A3F;"> 可选的绑定 (ES2019)</font>**
 
 ```javascript
 try {
@@ -6220,8 +6220,8 @@ JavaScript中所有URI编码/解码函数都固定采用UTF-8字符集
 | --- | --- | --- |
 | `encodeURI(uri)` | 比较适合编码 URI 的路径部分（不含参数） | `encodeURI("https://测试.com")` |
 | `decodeURI(encodedURI)` | 比较适合解码 URI 的路径部分（不含参数） | `decodeURI("https://%E6%B5%8B%E8%AF%95.com")` |
-| **`encodeURIComponent(str)`** | **<font style="color:#DF2A3F;">适合编码 URI 的</font>****<font style="color:#2F8EF4;">参数值</font>****<font style="color:#DF2A3F;">。</font>** | **`encodeURIComponent("?x=abc&y=def") → "%3Fx%3Dabc%26y%3Ddef"`** |
-| **`decodeURIComponent(encodedStr)`** | **<font style="color:#DF2A3F;">适合解码 URI 的</font>****<font style="color:#2F8EF4;">参数值</font>****<font style="color:#DF2A3F;">。</font>** | **`decodeURIComponent("%3Fx%3Dabc%26y%3Ddef") → "?x=abc&y=def"`** |
+| **`encodeURIComponent(str)`** | **<font style="color:#DF2A3F;">适合编码 URI 的</font><font style="color:#2F8EF4;">参数值</font><font style="color:#DF2A3F;">。</font>** | **`encodeURIComponent("?x=abc&y=def") → "%3Fx%3Dabc%26y%3Ddef"`** |
+| **`decodeURIComponent(encodedStr)`** | **<font style="color:#DF2A3F;">适合解码 URI 的</font><font style="color:#2F8EF4;">参数值</font><font style="color:#DF2A3F;">。</font>** | **`decodeURIComponent("%3Fx%3Dabc%26y%3Ddef") → "?x=abc&y=def"`** |
 
 #### 其他 ECMAScript 全局函数
 | **函数** | **作用** | **示例** |
@@ -6505,7 +6505,7 @@ for (const value of map.values()) {
 
 #### call
 **作用**：  
-`call()` 立即调用函数，并**<font style="color:#DF2A3F;">临时改变函数内部的 </font>****`this`****<font style="color:#DF2A3F;"> 指向（具体指向谁，主要看 call 方法的第一个参数传谁，传张三，函数内部的 this 就是张三。）</font>**，还可以传递参数（逗号分隔）。
+`call()` 立即调用函数，并<font style="color:#DF2A3F;">临时改变函数内部的 </font>`this`<font style="color:#DF2A3F;"> 指向（具体指向谁，主要看 call 方法的第一个参数传谁，传张三，函数内部的 this 就是张三。）</font>，还可以传递参数（逗号分隔）。
 
 **实际用途**：
 
@@ -6546,7 +6546,7 @@ user.printInfo.call(anotherUser);
 #### bind
 **用 **`bind`** 优化函数的两种场景**：
 
-1. **<font style="color:#DF2A3F;">永久固定</font>**** **`this`：防止函数内部的 `this` 乱跑。  
+1. <font style="color:#DF2A3F;">永久固定</font> `this`：防止函数内部的 `this` 乱跑。  
 2. **固定参数**：减少重复传相同的值。
 
 场景：一个“发送日志”的函数，需要固定绑定到 `logger` 对象，且日志级别永远是 `"INFO"`。
@@ -6982,8 +6982,8 @@ document.getElementById('parent').addEventListener('click', function(event) {
 
 | **元素/事件** | **默认行为** | **如何阻止？** |
 | --- | --- | --- |
-| **`<a>`****点击** | 跳转到 **`href`** | **`e.preventDefault()`** |
-| **`<form>`****提交** | 发送数据并刷新页面 | **`e.preventDefault()`** |
+| **`<a>`点击** | 跳转到 **`href`** | **`e.preventDefault()`** |
+| **`<form>`提交** | 发送数据并刷新页面 | **`e.preventDefault()`** |
 | **右键菜单** | 显示浏览器默认菜单 | **`e.preventDefault()`** |
 | **键盘回车** | 触发表单提交 | **`e.preventDefault()`** |
 | **鼠标滚轮** | 滚动页面 | **`e.preventDefault()`** |
@@ -7023,7 +7023,7 @@ document.getElementById('parent').addEventListener('click', function(event) {
 #### 使用 dispatchEvent 派发事件
 这是最标准的方式，也是现代开发中推荐的。因为这种方式可以更加精确的控制事件。
 
-**`dispatchEvent()`****<font style="color:#DF2A3F;"> 只会触发事件监听器，但不会执行与事件关联的浏览器默认行为</font>**<font style="color:#DF2A3F;">。</font>
+**`dispatchEvent()`<font style="color:#DF2A3F;"> 只会触发事件监听器，但不会执行与事件关联的浏览器默认行为</font>**<font style="color:#DF2A3F;">。</font>
 
 ##### 派发事件
 
@@ -7173,7 +7173,7 @@ document.getElementById('parent').addEventListener('click', function(event) {
 正则表达式中使用 `\`完成字符转义。例如：`\.`表示普通的 `.`字符。
 
 #### 重复次数
-| ***** | 0 到 n 次 |
+|  | 0 到 n 次 |
 | --- | --- |
 | **+** | 1 到 n 次 |
 | **?** | 0 或 1 次 |
@@ -7309,7 +7309,7 @@ str.match(/^a\d/gm);  // ["a1", "a2", "a3"]
 #### 正则表达式对象的常用方法
 | **方法** | **返回值** | **使用场景** | **示例** |
 | --- | --- | --- | --- |
-| **`test()`** | **`boolean`** | 快速验证字符串是否匹配模式 | `/\d+/.test("abc123")`→ **`true`****`只要字符串中含有数字结构就是 true`**<br/>`/^\d+$/.test("abc123")`→ **`false`****`要求字符串整体都是数字`** |
+| **`test()`** | **`boolean`** | 快速验证字符串是否匹配模式 | `/\d+/.test("abc123")`→ **`true``只要字符串中含有数字结构就是 true`**<br/>`/^\d+$/.test("abc123")`→ **`false``要求字符串整体都是数字`** |
 | **`exec()`** | **`Array`**或 **`null`** | 提取匹配细节（位置等信息）<br/>注意：<br/>**<font style="color:#DF2A3F;">let regExp = /\d+/g;</font>**<br/>**<font style="color:#DF2A3F;">regExp.exec('123x456y789')</font>**<br/>**<font style="color:#DF2A3F;">regExp.exec('123x456y789')</font>**<br/>**<font style="color:#DF2A3F;">regExp.exec('123x456y789')</font>**<br/>**<font style="color:#DF2A3F;">第一次调用 exec，结果是 123</font>**<br/>**<font style="color:#DF2A3F;">第二次调用 exec，结果是 456</font>**<br/>**<font style="color:#DF2A3F;">第三次调用 exec，结果是 789</font>**<br/>**<font style="color:#DF2A3F;">第四次调用 exec，结果是 null</font>**<br/>**<font style="color:#DF2A3F;">如果要将字符串中所有的数字都找到，可以编写一个循环，但正则要添加 g 标志。</font>** | `**/\d+/g.exec('123x456y789')**`→ ['123', index: 0, input: '123x456y789', groups: undefined] |
 | **`toString()/source`** | **`string`** | 获取正则表达式的字符串表示 | **`/abc/gi.toString()`**→ **`"/abc/gi"`**<br/>**`/abc/gi.source`**→ **`"abc"`** |
 
@@ -8436,7 +8436,7 @@ http://hacker.com/steal?cookie=sessionId=abc123; userId=456
 
 **特点：**
 
-+ ****同一域名下的任何页面都可以访问全部localStorage（不同域名下不允许）
++ **同一域名下的任何页面都可以访问全部localStorage（不同域名下不允许）**
 + 数据不会自动随HTTP请求发送到服务器（**Cookie 会随着请求的发送自动提交给服务器**）
 + 只有浏览器中的JavaScript可以访问，服务器无法直接访问
 + 容量大，通常5-10MB，远大于cookie的4KB
@@ -8993,7 +8993,7 @@ console.log(john.__proto__ === Person.prototype); // true
 console.log(Person.prototype === Object.getPrototypeOf(john)); // true
 ```
 
-**<font style="color:#DF2A3F;">原型对象的作用：</font>****<font style="color:#DF2A3F;">原型对象用于共享属性和方法。所有通过该构造函数创建的实例都会继承原型对象上的成员。</font>**
+**<font style="color:#DF2A3F;">原型对象的作用：</font><font style="color:#DF2A3F;">原型对象用于共享属性和方法。所有通过该构造函数创建的实例都会继承原型对象上的成员。</font>**
 
 ### `prototype` 的作用
 #### 实现继承
@@ -9485,7 +9485,7 @@ console.log(sym2 === sym3); // false
 注意，`Symbol("id")`是绝对独一无二的，在同一个程序中，假设出现两次，则代表两个不同的值。
 
 ### 用作对象属性
-当使用 **Symbol 值作为对象属性的键**时，需要用 **中括号 ****`[]`** 括起来，这是因为 Symbol 是一种 **唯一且不可变** 的数据类型，不能直接作为字符串键使用。这种语法 **不是数组**，而是 **计算属性名 **的语法。
+当使用 Symbol 值作为对象属性的键时，需要用 中括号 `[]` 括起来，这是因为 Symbol 是一种 唯一且不可变 的数据类型，不能直接作为字符串键使用。这种语法 不是数组，而是 计算属性名 的语法。
 
 ```javascript
 const user = {
@@ -9513,7 +9513,7 @@ JavaScript 提供了一系列 **内置 Symbol**，用于控制对象的内部行
 常用的包括三个：`Symbol.iterator`、`Symbol.toStringTag`、`Symbol.toPrimitive`
 
 #### Symbol.iterator
-**JS 中对象支持 ****`for...of`**** 循环、**可以使用 **展开运算符（**`...`**）**、**解构赋值等语法，它们都依赖 **`**Symbol.iterator**`**。**
+**JS 中对象支持 **`for...of`** 循环、**可以使用 **展开运算符（**`...`**）**、**解构赋值等语法，它们都依赖 **`**Symbol.iterator**`**。**
 
 **可迭代对象包括：Array、String、Set、Map 等。**许多 JavaScript API（如 `Array.from()`、`new Set()`）要求传入的数据是 **可迭代的**：
 
@@ -9619,7 +9619,7 @@ const obj = { [sym]: "value" };
 console.log(Object.getOwnPropertySymbols(obj)); // [Symbol(key)]
 ```
 
-**<font style="color:#DF2A3F;">只有知道</font>****`sym`****<font style="color:#DF2A3F;">这个名字的人才能通过</font>****`obj[sym]`****<font style="color:#DF2A3F;">再次访问到该属性，因此Symbol语法可以模拟私有属性（不是真正的私有，只是隐藏）</font>**
+**<font style="color:#DF2A3F;">只有知道</font>`sym`<font style="color:#DF2A3F;">这个名字的人才能通过</font>`obj[sym]`<font style="color:#DF2A3F;">再次访问到该属性，因此Symbol语法可以模拟私有属性（不是真正的私有，只是隐藏）</font>**
 
 ### 跨模块共享 Symbol
 **`Symbol.for()`** 会先检查全局注册表，如果已存在相同描述的 Symbol，则直接返回它；否则新建一个并注册：

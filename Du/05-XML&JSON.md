@@ -444,7 +444,7 @@ XML解析主要有以下三种方式：DOM 解析、SAX 解析、StAX 解析
 **SQL**（查询语法）**DOM/SAX/StAX**（解析方式）
 
 ### SPI 机制
-**JDBC 和 JAXP 都是基于 SPI 机制实现的。什么是 SPI 机制？****Service Provider Interface 服务提供商接口**
+**JDBC 和 JAXP 都是基于 SPI 机制实现的。什么是 SPI 机制？Service Provider Interface 服务提供商接口**
 
 + SPI 是 Java 的一种“自动发现”机制：标准制定者定义接口，第三方接口的实现者在 `META-INF/services/` 下配置好实现类路径，Java 就能自动加载它。
 

@@ -1,0 +1,30 @@
+[
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 2096,
+  "orig": "        * **`200 OK`****<font style=\"color:#DF2A3F;\">：成功。  </font>**",
+  "norm": "        * **`200 OK`<font style=\"color:#DF2A3F;\">：成功。  </font>**",
+  "col": "        * **`200 OK`<font style=\"color:#DF2A3F;\">：成功。  </font>**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 2097,
+  "orig": "        * **`404 Not Found`****<font style=\"color:#DF2A3F;\">：资源不存在。  </font>**",
+  "norm": "        * **`404 Not Found`<font style=\"color:#DF2A3F;\">：资源不存在。  </font>**",
+  "col": "        * **`404 Not Found`<font style=\"color:#DF2A3F;\">：资源不存在。  </font>**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 2098,
+  "orig": "        * **`405`****<font style=\"color:#DF2A3F;\">：请求方式和服务器端的处理方式不一致。（例如：前端请求方式为 POST，服务器端处理方式是 GET，则发生 405 错误。）</font>**",
+  "norm": "        * **`405`<font style=\"color:#DF2A3F;\">：请求方式和服务器端的处理方式不一致。（例如：前端请求方式为 POST，服务器端处理方式是 GET，则发生 405 错误。）</font>**",
+  "col": "        * **`405`<font style=\"color:#DF2A3F;\">：请求方式和服务器端的处理方式不一致。（例如：前端请求方式为 POST，服务器端处理方式是 GET，则发生 405 错误。）</font>**"
+ },
+ {
+  "file": "06-JavaWeb.md",
+  "ln": 2099,
+  "orig": "        * **`500 Internal Server Error`****<font style=\"color:#DF2A3F;\">：服务器错误。</font>**",
+  "norm": "        * **`500 Internal Server Error`<font style=\"color:#DF2A3F;\">：服务器错误。</font>**",
+  "col": "        * **`500 Internal Server Error`<font style=\"color:#DF2A3F;\">：服务器错误。</font>**"
+ }
+]

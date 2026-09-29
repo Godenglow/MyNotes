@@ -2112,7 +2112,7 @@ public void testUtil(){
 ### 基于XML的自动装配
 Spring还可以完成自动化的注入，自动化注入又被称为自动装配。它可以根据**<font style="color:#E8323C;">名字</font>**进行自动装配，也可以根据**<font style="color:#E8323C;">类型</font>**进行自动装配。
 
-**<font style="color:#DF2A3F;">基于 XML 的自动装配底层都是基于 </font>****`setter`****<font style="color:#DF2A3F;">方法，因此要求必须提供 </font>****`setter`****<font style="color:#DF2A3F;">方法。</font>**
+**<font style="color:#DF2A3F;">基于 XML 的自动装配底层都是基于 </font>`setter`<font style="color:#DF2A3F;">方法，因此要求必须提供 </font>`setter`<font style="color:#DF2A3F;">方法。</font>**
 
 #### 根据名称自动装配
 
@@ -3151,7 +3151,7 @@ public class Client {
 ```
 
 #### 抽象工厂的核心要点总结
-| **特性** | **** | **说明** |
+| **特性 |  | 说明** |
 | --- | --- | --- |
 | **产品族一致性** | ✅ | `WindowsFactory` 保证所有组件都是 Windows 风格，绝不混搭 |
 | **换工厂即换整套风格** | ✅ | 只需把 `new WindowsFactory()` 换成 `new MacFactory()`，整套 UI 风格全变 |
@@ -3373,7 +3373,7 @@ public void testFactoryBean(){
 
 ![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763775964052-66cd25d3-f271-4f66-b4e7-459bc827bd2e.png)
 
-**<font style="color:#E8323C;">FactoryBean在Spring中是一个接口。被称为“工厂Bean”。“工厂Bean”是一种特殊的Bean。所有的“工厂Bean”都是用来</font>****<font style="color:#117CEE;">协助Spring</font>****<font style="color:#E8323C;">框架来创建其他Bean对象的。</font>**
+**<font style="color:#E8323C;">FactoryBean在Spring中是一个接口。被称为“工厂Bean”。“工厂Bean”是一种特殊的Bean。所有的“工厂Bean”都是用来</font><font style="color:#117CEE;">协助Spring</font><font style="color:#E8323C;">框架来创建其他Bean对象的。</font>**
 
 ****
 
@@ -3516,7 +3516,7 @@ Bean对象的销毁前后调用什么方法？
 任何一个生命周期都是基于回调机制的。（提前写好回调函数，到了这个时刻就会调用对应的回调函数。）
 
 ### Bean的生命周期之5步
-Bean生命周期的管理，可以参考Spring的源码：**<font style="color:#F5222D;">AbstractAutowireCapableBeanFactory类的doCreateBean()方法</font>****。**
+Bean生命周期的管理，可以参考Spring的源码：**<font style="color:#F5222D;">AbstractAutowireCapableBeanFactory类的doCreateBean()方法</font>。**
 
 Bean生命周期可以粗略的划分为五大步：
 
@@ -4898,7 +4898,7 @@ public void testNoXml(){
 
 **生活场景2**：你刚到北京，要租房子，可以自己找，也可以找链家帮你找。其中链家是代理类，你是目标类。你们两个都有共同的行为：找房子。不过链家除了满足你找房子，另外会收取一些费用的。(现实生活中的房产中介)【<font style="color:#DF2A3F;">在程序中，功能需要增强时。</font>】
 
-**西游记场景**：八戒和高小姐的故事。八戒要强抢民女高翠兰。悟空得知此事之后怎么做的？悟空幻化成高小姐的模样。代替高小姐与八戒会面。其中八戒是客户端程序。悟空是代理类。高小姐是目标类。那天夜里，在八戒眼里，眼前的就是高小姐，对于八戒来说，他是不知道眼前的高小姐是悟空幻化的，在他内心里这就是高小姐。所以悟空代替高小姐和八戒亲了嘴儿。这是非常典型的代理模式实现的保护机制。**<font style="color:#E8323C;">代理模式中有一个非常重要的特点：对于客户端程序来说，使用代理对象时就像在使用目标对象一样。</font>****【在程序中，目标需要被保护时】**
+**西游记场景**：八戒和高小姐的故事。八戒要强抢民女高翠兰。悟空得知此事之后怎么做的？悟空幻化成高小姐的模样。代替高小姐与八戒会面。其中八戒是客户端程序。悟空是代理类。高小姐是目标类。那天夜里，在八戒眼里，眼前的就是高小姐，对于八戒来说，他是不知道眼前的高小姐是悟空幻化的，在他内心里这就是高小姐。所以悟空代替高小姐和八戒亲了嘴儿。这是非常典型的代理模式实现的保护机制。**<font style="color:#E8323C;">代理模式中有一个非常重要的特点：对于客户端程序来说，使用代理对象时就像在使用目标对象一样。</font>【在程序中，目标需要被保护时】**
 
 **业务场景**：系统中有A、B、C三个模块，使用这些模块的前提是需要用户登录，也就是说在A模块中要编写判断登录的代码，B模块中也要编写，C模块中还要编写，这些判断登录的代码反复出现，显然代码没有得到复用，可以为A、B、C三个模块提供一个代理，在代理当中写一次登录判断即可。代理的逻辑是：请求来了之后，判断用户是否登录了，如果已经登录了，则执行对应的目标，如果没有登录则跳转到登录页面。【在程序中，目标不但受到保护，并且代码也得到了复用。】
 
@@ -5938,11 +5938,11 @@ public class MyAspect {
 </beans>
 ```
 
-**`<aop:aspectj-autoproxy proxy-target-class="true"/>`****<font style="color:#E8323C;"> 开启自动代理之后，凡是带有@Aspect注解的bean都会生成代理对象。</font>**
+**`<aop:aspectj-autoproxy proxy-target-class="true"/>`<font style="color:#E8323C;"> 开启自动代理之后，凡是带有@Aspect注解的bean都会生成代理对象。</font>**
 
-**`proxy-target-class="true"`****<font style="color:#E8323C;"> 表示采用cglib动态代理。</font>**
+**`proxy-target-class="true"`<font style="color:#E8323C;"> 表示采用cglib动态代理。</font>**
 
-**`proxy-target-class="false"`****<font style="color:#E8323C;"> 表示采用jdk动态代理。默认值是false。即使写成false，当没有接口的时候，也会自动选择cglib生成代理类。</font>**
+**`proxy-target-class="false"`<font style="color:#E8323C;"> 表示采用jdk动态代理。默认值是false。即使写成false，当没有接口的时候，也会自动选择cglib生成代理类。</font>**
 
 测试程序：
 
@@ -7225,7 +7225,7 @@ spring配置文件有多个，并且可以在spring的核心配置文件中使�
 + 编程式事务
     - 通过编写代码的方式来实现事务的管理。
 + 声明式事务
-    - **基于注解方式（****<font style="color:#DF2A3F;">掌握这种方式</font>****）**
+    - **基于注解方式（<font style="color:#DF2A3F;">掌握这种方式</font>）**
     - 基于XML配置方式
 
 #### Spring事务管理API
@@ -7355,7 +7355,7 @@ public class AccountServiceImpl implements AccountService {
 + REQUIRED：支持当前事务，如果不存在就新建一个(默认)**<font style="color:#E8323C;">【有就加入，没有就新建】</font>**
 + SUPPORTS：支持当前事务，如果当前没有事务，就以非事务方式执行**<font style="color:#E8323C;">【有就加入，没有就不管了】</font>**
 + MANDATORY：必须运行在一个事务中，如果当前没有事务正在发生，将抛出一个异常**<font style="color:#E8323C;">【有就加入，没有就抛异常】</font>**
-+ REQUIRES_NEW：**<font style="color:#E8323C;">【不管有没有，直接开启一个新事务，开启的新事务和之前的事务不存在嵌套关系，之前事务被挂起，</font>****挂起就是把当前事务暂停，等新事务完成后，再恢复继续执行，两者是完全独立的（回滚互不影响）****<font style="color:#E8323C;">】</font>**
++ REQUIRES_NEW：**<font style="color:#E8323C;">【不管有没有，直接开启一个新事务，开启的新事务和之前的事务不存在嵌套关系，之前事务被挂起，</font>挂起就是把当前事务暂停，等新事务完成后，再恢复继续执行，两者是完全独立的（回滚互不影响）<font style="color:#E8323C;">】</font>**
 + NOT_SUPPORTED：以非事务方式运行，如果有事务存在，挂起当前事务**<font style="color:#E8323C;">【不支持事务，存在就挂起】</font>**
 + NEVER：以非事务方式运行，如果有事务存在，抛出异常**<font style="color:#E8323C;">【不支持事务，存在就抛异常】</font>**
 + NESTED：如果当前正有一个事务在进行中，则该方法应当运行在一个嵌套式事务中。被嵌套的事务可以独立于外层事务进行提交或回滚。如果外层事务不存在，行为就像REQUIRED一样。**<font style="color:#E8323C;">【当前有事务的话，就在这个事务里再嵌套一个基于保存点的依赖子事务，嵌套的事务可以独立的提交和回滚。当前没有事务就和REQUIRED一样。嵌套事务的特点是：外层回滚会导致内层回滚】</font>**
@@ -7366,7 +7366,7 @@ public class AccountServiceImpl implements AccountService {
 @Transactional(propagation = Propagation.REQUIRED)
 ```
 
-可以编写程序测试一下传播行为：**<font style="color:#DF2A3F;">需要分成两个类来进行测试，在一个类中测不出来，主要原因是Spring的事务管理是基于AOP代理的，而在同一个类内部的方法调用不会经过事务拦截器（不会经过代理）。</font>****<font style="color:#117CEE;">本类中的 A 调用 B，一切以 A 的事务状态为准</font>****<font style="color:#DF2A3F;">（或者说：B 的事务注解在本类内部调用时完全失效）。可以在上面银行账户转账的 </font>****`AccountService`****<font style="color:#DF2A3F;">中添加一个方法 </font>****`transfer2()`****<font style="color:#DF2A3F;">，该方法上不添加 </font>****`@Transactional`****<font style="color:#DF2A3F;">注解，让它调用 </font>****`transfer()`****<font style="color:#DF2A3F;">方法，然后再测试类中调用 </font>****`transfer2()`****<font style="color:#DF2A3F;">方法，你会发现即使</font>****`transfer()`****<font style="color:#DF2A3F;">方法上有 </font>****`@Transactional`****<font style="color:#DF2A3F;">注解，事务也是无效的，因为 </font>****`transfer2()`****<font style="color:#DF2A3F;">上没有事务。</font>**
+可以编写程序测试一下传播行为：**<font style="color:#DF2A3F;">需要分成两个类来进行测试，在一个类中测不出来，主要原因是Spring的事务管理是基于AOP代理的，而在同一个类内部的方法调用不会经过事务拦截器（不会经过代理）。</font><font style="color:#117CEE;">本类中的 A 调用 B，一切以 A 的事务状态为准</font><font style="color:#DF2A3F;">（或者说：B 的事务注解在本类内部调用时完全失效）。可以在上面银行账户转账的 </font>`AccountService`<font style="color:#DF2A3F;">中添加一个方法 </font>`transfer2()`<font style="color:#DF2A3F;">，该方法上不添加 </font>`@Transactional`<font style="color:#DF2A3F;">注解，让它调用 </font>`transfer()`<font style="color:#DF2A3F;">方法，然后再测试类中调用 </font>`transfer2()`<font style="color:#DF2A3F;">方法，你会发现即使</font>`transfer()`<font style="color:#DF2A3F;">方法上有 </font>`@Transactional`<font style="color:#DF2A3F;">注解，事务也是无效的，因为 </font>`transfer2()`<font style="color:#DF2A3F;">上没有事务。</font>**
 
 ```java
 @Transactional(propagation = Propagation.REQUIRED)
@@ -7852,7 +7852,7 @@ Caused by: org.springframework.beans.factory.**<font style="color:#F5222D;">Bean
 
 为什么呢？
 
-**<font style="color:#F5222D;">主要原因是因为通过构造方法注入导致的：因为构造方法注入会导致</font>****<font style="color:#722ED1;">实例化对象的过程</font>****<font style="color:#F5222D;">和</font>****<font style="color:#722ED1;">对象属性赋值的过程</font>****<font style="color:#F5222D;">没有分离开，必须在一起完成导致的。</font>**
+**<font style="color:#F5222D;">主要原因是因为通过构造方法注入导致的：因为构造方法注入会导致</font><font style="color:#722ED1;">实例化对象的过程</font><font style="color:#F5222D;">和</font><font style="color:#722ED1;">对象属性赋值的过程</font><font style="color:#F5222D;">没有分离开，必须在一起完成导致的。</font>**
 
 ****
 
@@ -7967,7 +7967,7 @@ public class B {
 
 **为什么偏要添加一个三级缓存？**
 
-**因为 Spring 要支持 AOP（比如**** ****`@Transactional`****）。**
+**因为 Spring 要支持 AOP（比如** **`@Transactional`）。**
 
 在 Spring 中，**<font style="color:#DF2A3F;">代理对象不是在实例化时生成的，而是在“初始化后”才能生成代理对象的</font>**<font style="color:#DF2A3F;">。</font>
 
@@ -7977,7 +7977,7 @@ public class B {
 + 在步骤 4 中，B 需要注入 A。
 + 但此时 A 还在“填充属性”阶段，**还没走到“初始化后”生成代理的那一步**。
 + 如果二级缓存里存的是**原始对象 A**，B 拿到的就是原始对象，不是代理对象。
-+ 等 A 初始化完生成开始生成代理对象，**B 手里的 A 还是原始的，导致事务失效（****<font style="color:#DF2A3F;">B 手里应该持久 A 的代理对象就没事了</font>****）**。
++ 等 A 初始化完生成开始生成代理对象，**B 手里的 A 还是原始的，导致事务失效（<font style="color:#DF2A3F;">B 手里应该持久 A 的代理对象就没事了</font>）**。
 
 
 

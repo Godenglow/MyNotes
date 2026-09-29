@@ -684,7 +684,7 @@ public void testInsertCarByPOJO(){
 
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668224378-2070e0f4-8252-4978-8204-bb247d172152.png)
 
-**<font style="color:#DF2A3F;">直接告诉大家一个结论：</font>****`#{}`****<font style="color:#DF2A3F;">里写什么？</font>**
+**<font style="color:#DF2A3F;">直接告诉大家一个结论：</font>`#{}`<font style="color:#DF2A3F;">里写什么？</font>**
 
 + 假如我们写的是 `#{name}`，那么 mybatis 会先调用 `getName()`方法来获取数据，如果没有 `getName()`方法，则去对象中找有没有 `name`字段，如果有 `name`字段，则直接获取该字段的值。如果没有 `getName()`方法，类中也没有 `name`字段，最终会报错。
 
@@ -1313,7 +1313,7 @@ mapper标签用来指定SQL映射文件的路径，包含多种指定方式，�
 </mappers>
 ```
 
-**<font style="color:#DF2A3F;">重点注意事项：以上test目录需要在resources目录下新建，默认情况下在java目录下的xml文件将不会编译到</font>****`target/classes`****<font style="color:#DF2A3F;">目录下，除非pom.xml做一些配置，例如：</font>**
+**<font style="color:#DF2A3F;">重点注意事项：以上test目录需要在resources目录下新建，默认情况下在java目录下的xml文件将不会编译到</font>`target/classes`<font style="color:#DF2A3F;">目录下，除非pom.xml做一些配置，例如：</font>**
 
 ```xml
 <build>
@@ -1366,7 +1366,7 @@ mapper标签用来指定SQL映射文件的路径，包含多种指定方式，�
 
 **WEB应用的名称：**
 
-+ bank****
+**+ bank**
 
 ### 需求描述
 ![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660274775552-da896b17-09dd-455a-899e-eb4f36fc0ced.png)
@@ -2921,7 +2921,7 @@ map.put("param2", sex);
 // 其本质就是#{map集合的key}
 ```
 
-注意：**<font style="color:#E8323C;">使用mybatis</font>****<font style="color:#E8323C;">3.4.2之前的版本时：要用#{0}和#{1}这种形式。</font>**
+注意：**<font style="color:#E8323C;">使用mybatis</font><font style="color:#E8323C;">3.4.2之前的版本时：要用#{0}和#{1}这种形式。</font>**
 
 ### @Param注解（命名参数）
 可以不用arg0 arg1 param1 param2吗？这个map集合的key我们自定义可以吗？当然可以。使用@Param注解即可。这样可以增强可读性。
