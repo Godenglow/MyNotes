@@ -1,0 +1,14 @@
+{
+  "ok": false,
+  "identity": "user",
+  "error": {
+    "type": "authorization",
+    "subtype": "permission_denied",
+    "code": 131006,
+    "message": "user lacks permission for the requested resource",
+    "hint": "check the resource owner has granted access to this user\nThe current user or app/bot identity lacks access to the target wiki space or node. This is resource access, not app scope authorization. Do not retry the same request, reauthorize, or switch identity as trial and error; ask the resource owner or wiki administrator to grant read access, or use an accessible resource.",
+    "log_id": "20260928224948888FD5E8BB70583D6952",
+    "troubleshooter": "排查建议查看(Troubleshooting suggestions): https://open.feishu.cn/search?from=openapi&log_id=20260928224948888FD5E8BB70583D6952&code=131006&method_id=6976461983962267649",
+    "identity": "user"
+  }
+}
