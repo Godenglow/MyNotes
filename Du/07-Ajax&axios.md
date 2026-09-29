@@ -1,7 +1,7 @@
 # AJAX&Axios
 
 ## 传统请求及缺点
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 如何发送传统请求
 1. 直接在浏览器地址栏上输入URL。
@@ -21,10 +21,10 @@
 
 以下是传统请求示意图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1651892686086-550b184d-3c77-44d5-879c-d81630de1efd.png)
+![](assets/1651892686086-550b184d-3c77-44d5-879c-d81630de1efd.png)
 
 ## 初识 AJAX
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### AJAX 概述
 1. AJAX：<font style="color:#E8323C;">A</font>synchronous <font style="color:#E8323C;">J</font>avascript <font style="color:#E8323C;">A</font>nd <font style="color:#E8323C;">X</font>ML（异步的 JavaScript 和 XML）
@@ -39,7 +39,7 @@
 
 以下是 AJAX 请求示意图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1651892721562-fc94479f-932b-4a6f-87ff-85cb12067bb4.png)
+![](assets/1651892721562-fc94479f-932b-4a6f-87ff-85cb12067bb4.png)
 
 ### AJAX 的实现方式
 + **传统方式**：XMLHttpRequest (XHR)
@@ -47,7 +47,7 @@
 + **第三方库方式**：Axios 等
 
 ## XHR 实现 AJAX
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### XMLHttpRequest 概述
 1. 浏览器原生 API，1999 年 IE5 引入。
@@ -260,9 +260,9 @@ const xhr = new XMLHttpRequest();
 
 页面效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750209811297-4cbeb3cc-71a9-4672-9425-cd20dda9027a.png)
+![](assets/1750209811297-4cbeb3cc-71a9-4672-9425-cd20dda9027a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750209825223-5a0189f6-3d34-4482-ab3b-d0ee0e8fa7e2.png)
+![](assets/1750209825223-5a0189f6-3d34-4482-ab3b-d0ee0e8fa7e2.png)
 
 #### 准备数据库表
 创建 `t_user`表，准备几条数据：
@@ -284,7 +284,7 @@ INSERT INTO `t_user` VALUES (2, 'test');
 SET FOREIGN_KEY_CHECKS = 1;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750211064304-5655b731-2f8c-4aad-b431-b73e85e8ab31.png)
+![](assets/1750211064304-5655b731-2f8c-4aad-b431-b73e85e8ab31.png)
 
 #### 编写后端 Servlet
 编写后端 Servlet 程序，连接数据库，验证用户名是否存在，如果存在表示用户名不可用返回：`{"success":false}`，如果不存在表示用户名可用返回：`{"success":true}`
@@ -362,7 +362,7 @@ public class CheckUsernameServlet extends HttpServlet {
 #### 发送 GET 请求
 将之前编写的页面中的以下代码注释掉：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750212594949-3986de9c-0e66-45a2-8b24-81efbf3836d2.png)
+![](assets/1750212594949-3986de9c-0e66-45a2-8b24-81efbf3836d2.png)
 
 然后在注释掉的代码位置上编写使用 xhr 发送 ajax get 请求的代码，如下：
 
@@ -441,7 +441,7 @@ xhr.send(`username=${encodeURIComponent(username)}`);
 ```
 
 ## Promise 编程风格
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 `Promise`的学习可以参考官方文档：[**MDN Web Docs**](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 
@@ -463,7 +463,7 @@ Promise 就像一个"承诺"，表示一个将来会完成（或失败）的操�
 
 想象你要做一顿饭，步骤是：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750229406279-59a2f8e6-10a0-4fdc-a74a-d3cac4800902.png)
+![](assets/1750229406279-59a2f8e6-10a0-4fdc-a74a-d3cac4800902.png)
 
 用回调函数写出来就是这样：
 
@@ -806,7 +806,7 @@ checkAndSaveUser(username);
 到此为止，Promise 编程风格就说完了。
 
 ## Fetch API 实现 AJAX
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在之前的课程中，`fetch`函数是我们自己定义的，实际上在 2015 年的时候，浏览器提供了一套原生的 API，称为 Fetch API，基于 Promise 实现的，也就是说 2015 年之后，浏览器内置了 `fetch`函数，可以直接使用。
 
@@ -969,7 +969,7 @@ try{
 ```
 
 ## Axios 实现 AJAX
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 第三方库，底层基于 Promise+XHR 封装，并不是对 Fetch API 的封装，比 Fetch API 好用。使用它需要引入 `axios.js`库文件。使用国内 CDN 加速引入：
 
@@ -1156,7 +1156,7 @@ checkUsername(username);
 ```
 
 ## pushState()+AJAX 实现无刷新路由
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是路由
 路由（Routing） 的本质是 根据 URL 的变化，匹配对应的内容或逻辑。
@@ -1345,7 +1345,7 @@ public class PageServlet extends HttpServlet {
 注意：后面的 Vue 框架中已经将无刷新路由实现了，以上所讲是它的实现原理。
 
 ## AJAX跨域问题
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 跨域
 + 跨域是指从一个域名的网页去请求另一个域名的资源。比如从百度(https://baidu.com)页面去请求京东(https://www.jd.com)的资源。
@@ -1372,11 +1372,11 @@ public class PageServlet extends HttpServlet {
 ### 复现AJAX跨域问题
 + 部署两个tomcat服务器，1号服务器和2号服务器，两个服务器设置的端口不同，1号服务器如下所示：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1654049493291-95fc4c8c-881b-477e-83c9-5506c4488297.png)
+![](assets/1654049493291-95fc4c8c-881b-477e-83c9-5506c4488297.png)
 
 + 2号服务器如下所示，注意端口是不同的：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1654049601618-483007b4-8493-45e5-b27b-c5812c7d14d8.png)
+![](assets/1654049601618-483007b4-8493-45e5-b27b-c5812c7d14d8.png)
 
 + 访问两台服务器的地址如下：
     - 1号服务器：http://localhost:8080
@@ -1437,11 +1437,11 @@ public class HelloServlet extends HttpServlet {
 + a应用部署到1号服务器，b应用部署到2号服务器，将1号和2号服务器都启动。
 + 服务器启动成功后，打开浏览器，在地址栏上输入请求地址：http://localhost:8080/a/index.html
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1655278866144-5cdc939d-369b-4970-9e12-b52bbe9ec3c4.png)
+![](assets/1655278866144-5cdc939d-369b-4970-9e12-b52bbe9ec3c4.png)
 
 + F12，打开谷歌浏览器的控制台窗口，然后点击上图中的按钮，发送ajax请求，结果如下图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1655278984925-ead6c98a-dfad-45cf-83d4-4b0556283612.png)
+![](assets/1655278984925-ead6c98a-dfad-45cf-83d4-4b0556283612.png)
 
 报错了，错误信息中描述了：从 `http://localhost:8080` 上访问 `http://localhost:8081/b/hello` 被同源策略阻止：请求的资源上不存在“Access Control Allow Origin”标头。这就是ajax跨域问题。
 
@@ -1503,11 +1503,11 @@ public class HelloServlet extends HttpServlet {
 
 + 将a应用部署到1号服务器，将b应用部署到2号服务器，将两台服务器都启动起来，打开浏览器，输入地址：http://localhost:8080/a/index.html，如下图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1655283835672-ba311028-ae93-4ca1-9291-0bc9e4c1ed32.png)
+![](assets/1655283835672-ba311028-ae93-4ca1-9291-0bc9e4c1ed32.png)
 
 + 点击上图的按钮，发送ajax请求，结果如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1655284013139-78c8c9d5-7b9f-4bc0-bb09-dd498fe91091.png)
+![](assets/1655284013139-78c8c9d5-7b9f-4bc0-bb09-dd498fe91091.png)
 
 **对于 SpringBoot 项目来说可以做以下的全局配置**：
 
@@ -1526,7 +1526,7 @@ public class CorsConfig implements WebMvcConfigurer {
 #### 方案二：后端 HttpClient 代理（生产/开发）
 这种方式主要是通过后端java程序来完成跨域访问。因为跨域的限制只针对XMLHttpRequest对象，java程序是可以跨域访问的，原理如下图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1655476145124-153a35c4-f336-4342-a35f-d4e90fb122a9.png)
+![](assets/1655476145124-153a35c4-f336-4342-a35f-d4e90fb122a9.png)
 
 **<font style="color:#E8323C;">核心原理：a站点中的按钮无法直接发送ajax请求访问b站点中的TargetServlet，但是可以发送ajax请求访问当前站点中的ProxyServlet，将它当作一个代理，然后通过代理发送get/post请求访问b站点中的TargetServlet。</font>**
 
@@ -1536,7 +1536,7 @@ public class CorsConfig implements WebMvcConfigurer {
 
 首选需要引入 httpclient 的 jar 包：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750401194695-8febc260-5a0a-418f-bd3e-d4c32d842c4f.png)
+![](assets/1750401194695-8febc260-5a0a-418f-bd3e-d4c32d842c4f.png)
 
 使用 httpclient 发送 get 请求：
 
@@ -1711,7 +1711,7 @@ Vite把数据返回给浏览器
 | 后端 HttpClient 代理 | 生产/开发 | 后端代码 | 是 |
 
 ## 作业
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 实现省市联动效果
 页面给大家：
@@ -2022,7 +2022,7 @@ Vite把数据返回给浏览器
 
 最终效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750389964707-b6d8b7ef-21cd-4881-bc85-808b9e7cdca2.png)
+![](assets/1750389964707-b6d8b7ef-21cd-4881-bc85-808b9e7cdca2.png)
 
 ### 实现搜索联想自动补全效果
 前端页面给大家：
@@ -2338,4 +2338,4 @@ Vite把数据返回给浏览器
 
 最终效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750390450511-b06da9a2-d4d4-4573-8aee-78d49256b14a.png)
+![](assets/1750390450511-b06da9a2-d4d4-4573-8aee-78d49256b14a.png)

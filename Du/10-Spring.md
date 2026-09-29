@@ -1,7 +1,7 @@
 # Spring
 
 ## 软件开发原则
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 阅读以下代码：
 
@@ -113,7 +113,7 @@ public class UserServiceImpl implements UserService {
 ### OCP开闭原则
 这样一来就违背了开闭原则OCP。开闭原则是这样说的：在软件开发过程中应当对扩展开放，对修改关闭。也就是说，如果在进行功能扩展的时候，添加额外的类是没问题的，但因为功能扩展而修改之前运行正常的程序，这是忌讳的，不被允许的。因为一旦修改之前运行正常的程序，就会导致项目整体要进行全方位的重新测试。这是相当麻烦的过程。导致以上问题的主要原因是：代码和代码之间的耦合度太高。如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663658802926-4c783887-3bd3-4a35-b32a-b2cd57d0061c.png)
+![](assets/1663658802926-4c783887-3bd3-4a35-b32a-b2cd57d0061c.png)
 
 可以很明显的看出，**<font style="color:#E8323C;">上层</font>**是依赖**<font style="color:#E8323C;">下层</font>**的。UserController依赖UserServiceImpl，而UserServiceImpl依赖UserDaoImplForMySQL，这样就会导致**<font style="color:#E8323C;">下面只要改动</font>**，**<font style="color:#E8323C;">上面必然会受牵连（跟着也会改）</font>**，所谓牵一发而动全身。这样也就同时违背了另一个开发原则：依赖倒置原则。
 
@@ -122,11 +122,11 @@ public class UserServiceImpl implements UserService {
 
 你可能会说，上面的代码已经面向接口编程了呀：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663663167652-73de3acd-61de-4f32-8a78-6c7698e910d3.png)
+![](assets/1663663167652-73de3acd-61de-4f32-8a78-6c7698e910d3.png)
 
 确实已经面向接口编程了，但对象的创建是：new UserDaoImplForOracle()显然并没有完全面向接口编程，还是使用到了具体的接口实现类。什么叫做完全面向接口编程？什么叫做完全符合依赖倒置原则呢？请看以下代码：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663663356201-4e57a395-503b-41ec-b98a-c3cd38f9279a.png)
+![](assets/1663663356201-4e57a395-503b-41ec-b98a-c3cd38f9279a.png)
 
 如果代码是这样编写的，才算是完全面向接口编程，才符合依赖倒置原则。那你可能会问，这样userDao是null，在执行的时候就会出现空指针异常呀。你说的有道理，确实是这样的，所以我们要解决这个问题。解决空指针异常的问题，其实就是解决两个核心的问题：
 
@@ -139,7 +139,7 @@ public class UserServiceImpl implements UserService {
 
 在Spring框架中，它可以帮助我们new对象，并且它还可以将new出来的对象赋到属性上。换句话说，Spring框架可以帮助我们创建对象，并且可以帮助我们维护对象和对象之间的关系。比如：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663664672011-b1f5c534-5c8b-412b-adb3-f7c60a3ab359.png)
+![](assets/1663664672011-b1f5c534-5c8b-412b-adb3-f7c60a3ab359.png)
 
 Spring可以new出来UserDaoImplForMySQL对象，也可以new出来UserDaoImplForOracle对象，并且还可以让new出来的dao对象和service对象产生关系（产生关系其实本质上就是给属性赋值）。
 
@@ -197,10 +197,10 @@ void makeBirdFly(Bird bird) {
 ```
 
 ## Spring概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Spring简介
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663722326376-02a67b9e-f80f-4717-ac33-1253723135f3.png)
+![](assets/1663722326376-02a67b9e-f80f-4717-ac33-1253723135f3.png)
 
 来自百度百科
 
@@ -216,21 +216,21 @@ void makeBirdFly(Bird bird) {
 ****
 
 ### Spring 的 7 个模块
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643561157-765b31eb-9766-4a14-948b-315a09fec552.png)
+![](assets/1763643561157-765b31eb-9766-4a14-948b-315a09fec552.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643650645-a4daae43-075d-4bc7-87dd-1e12c8edf581.png)
+![](assets/1763643650645-a4daae43-075d-4bc7-87dd-1e12c8edf581.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643697234-10890100-6dd7-4c70-9d40-4132b2d641ed.png)
+![](assets/1763643697234-10890100-6dd7-4c70-9d40-4132b2d641ed.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643800797-f4c8ef1b-3f81-448c-a403-0ee8f07b6e45.png)
+![](assets/1763643800797-f4c8ef1b-3f81-448c-a403-0ee8f07b6e45.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643838115-953e83de-1182-4e92-ad81-04d15a4b65cd.png)
+![](assets/1763643838115-953e83de-1182-4e92-ad81-04d15a4b65cd.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643872341-82bca2fa-e2df-49a1-b2f8-8875bf1a9c3f.png)
+![](assets/1763643872341-82bca2fa-e2df-49a1-b2f8-8875bf1a9c3f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643893472-6532f10a-d928-4d4b-a72e-95fca870596d.png)
+![](assets/1763643893472-6532f10a-d928-4d4b-a72e-95fca870596d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763643919695-920d67f8-1824-46ed-a266-a72a78f933af.png)
+![](assets/1763643919695-920d67f8-1824-46ed-a266-a72a78f933af.png)
 
 **背压就是：当下游消费者处理速度跟不上上游生产者时，下游主动向上游喊"慢点发，我处理不过来"，上游收到信号后减慢发送速度的一种流量控制机制。**
 
@@ -305,17 +305,17 @@ downloadFileFromNetwork("http://example.com/file", new Callback() {
 6. **强大测试支持**：专为测试而生，轻松模拟完整Spring环境进行单元测试和集成测试。
 
 ## Spring的入门程序
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Spring 的官方地址
 官网地址：[https://spring.io/](https://spring.io/)，从这里你可以找到官方指南。
 
 打开Spring官网后，可以看到Spring Framework，以及通过Spring Framework衍生的其它框架：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663749081947-b895cb4e-b7f6-4120-a1fe-a14651044847.png)
+![](assets/1663749081947-b895cb4e-b7f6-4120-a1fe-a14651044847.png)
 
 ### Spring的jar文件
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763645880150-75b14f50-e64f-4260-8267-12050cfb0de5.png)
+![](assets/1763645880150-75b14f50-e64f-4260-8267-12050cfb0de5.png)
 
 以上是 Spring Framework 的 jar 包，可以看到有 20+个。以前的开发是需要下载这些 jar 包的，需要什么功能就下载对应的 jar 包，放到项目当中，现在有 Maven，方便多了，不需要下载 jar 包了。只需要引入 GAV 坐标即可。
 
@@ -357,7 +357,7 @@ downloadFileFromNetwork("http://example.com/file", new Callback() {
 
 当加入spring context的依赖之后，会关联引入其他依赖：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763649527180-d0d3dc0c-3b6a-428c-92a1-2c579820ba1c.png)
+![](assets/1763649527180-d0d3dc0c-3b6a-428c-92a1-2c579820ba1c.png)
 
 #### 添加junit5依赖
 
@@ -382,7 +382,7 @@ public class User {
 #### 编写spring的配置文件
 beans.xml。<font style="color:#E8323C;">该文件放在类的根路径下</font>。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663816617460-ee35243c-fddc-4771-af28-0017f8af2ab5.png)
+![](assets/1663816617460-ee35243c-fddc-4771-af28-0017f8af2ab5.png)
 
 配置文件中进行bean的配置。
 
@@ -427,7 +427,7 @@ public class SpringTest {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763650025240-e128f903-3ae4-4ee8-8b78-6b28565bf228.png)
+![](assets/1763650025240-e128f903-3ae4-4ee8-8b78-6b28565bf228.png)
 
 ### 第一个Spring程序详细剖析
 #### bean标签的id属性可以重复吗？
@@ -501,7 +501,7 @@ Object obj = clazz.newInstance();
 **提示：set 注入的时候底层会调用无参数构造方法。构造注入的时候没有无参数构造方法也行。**
 
 #### 把创建好的对象存储到一个什么样的数据结构当中了呢？
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663829973365-59ca2f4c-4d81-471f-8e4c-aa272f8c2b81.png)
+![](assets/1663829973365-59ca2f4c-4d81-471f-8e4c-aa272f8c2b81.png)
 
 #### spring配置文件的名字必须叫做beans.xml吗？
 
@@ -550,7 +550,7 @@ public class SpringTest {
 
 通过测试得知，spring的配置文件可以有多个，在ClassPathXmlApplicationContext构造方法的参数上传递文件路径即可。这是为什么呢？通过源码可以看到：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663830614508-d00ecc07-5b51-4d2d-bc1d-8f2cb4f0c785.png)
+![](assets/1663830614508-d00ecc07-5b51-4d2d-bc1d-8f2cb4f0c785.png)
 
 #### 在配置文件中配置的类必须是自定义的吗，可以使用JDK中的类吗，例如：java.util.Date？
 
@@ -570,11 +570,11 @@ public class SpringTest {
 通过测试得知，在spring配置文件中配置的bean可以任意类，只要这个类不是抽象的，并且提供了无参数构造方法。
 
 #### getBean()方法调用时，如果指定的id不存在会怎样？
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1663831841228-eda809d8-3e51-4b08-913c-76ff78efae1f.png)
+![](assets/1663831841228-eda809d8-3e51-4b08-913c-76ff78efae1f.png)
 
 运行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763650804850-03cc33c1-dcf0-40eb-b07a-d816d6dad4b8.png)
+![](assets/1763650804850-03cc33c1-dcf0-40eb-b07a-d816d6dad4b8.png)
 
 通过测试得知，当id不存在的时候，会出现异常。
 
@@ -698,7 +698,7 @@ logger.info("我是一条日志消息");
 ```
 
 ## Spring对IoC的实现
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### IoC 控制反转
 + 控制反转是一种思想。
@@ -789,7 +789,7 @@ public class DITest {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703270197-41c911da-b886-43e5-9412-e31e91cdbb2b.png)
+![](assets/1763703270197-41c911da-b886-43e5-9412-e31e91cdbb2b.png)
 
 重点内容是，什么原理：
 
@@ -811,7 +811,7 @@ public class DITest {
 
 **可以把set方法注释掉，再测试一下**：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718228299-478ab23d-ebde-4f03-867e-fe4a91bf8d3c.png)
+![](assets/1763718228299-478ab23d-ebde-4f03-867e-fe4a91bf8d3c.png)
 
 通过测试得知，底层实际上调用了setUserDao()方法。所以需要确保这个方法的存在。
 
@@ -837,7 +837,7 @@ public class UserService {
 
 运行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703431816-e00a0a7f-80e6-41c6-851a-484a6e0fc93a.png)
+![](assets/1763703431816-e00a0a7f-80e6-41c6-851a-484a6e0fc93a.png)
 
 通过测试看到程序仍然可以正常执行，说明property标签的name是：setUserDao()方法名演变得到的。演变的规律是：
 
@@ -905,7 +905,7 @@ public void testConstructorDI(){
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703541233-f144603f-0a7c-4efc-be49-7e4cb31ee9f0.png)
+![](assets/1763703541233-f144603f-0a7c-4efc-be49-7e4cb31ee9f0.png)
 
 ****
 
@@ -947,7 +947,7 @@ spring配置文件：
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703565658-98132ed3-4e4c-4524-9633-89ecbb517c76.png)
+![](assets/1763703565658-98132ed3-4e4c-4524-9633-89ecbb517c76.png)
 
 ****
 
@@ -967,7 +967,7 @@ spring配置文件：
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
+![](assets/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
 
 **<font style="color:#E8323C;">不指定参数下标，不指定参数名字，可以吗？</font>**
 
@@ -984,7 +984,7 @@ spring配置文件：
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
+![](assets/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
 
 ****
 
@@ -1004,7 +1004,7 @@ spring配置文件：
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
+![](assets/1763703580933-9558d7db-975e-4289-969b-d910c1b3d3ee.png)
 
 通过测试得知，通过构造方法注入的时候：
 
@@ -1050,7 +1050,7 @@ public void testInnerBean(){
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703724923-3d6fe488-4cc4-464a-9fb4-46737d190786.png)
+![](assets/1763703724923-3d6fe488-4cc4-464a-9fb4-46737d190786.png)
 
 这种方式作为了解。
 
@@ -1134,7 +1134,7 @@ public void testSimpleType(){
 
 第四步：运行测试程序
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703886349-7e587def-2b4f-4abf-aff0-6c0f41011328.png)
+![](assets/1763703886349-7e587def-2b4f-4abf-aff0-6c0f41011328.png)
 
 ****
 
@@ -1142,11 +1142,11 @@ public void testSimpleType(){
 
 简单类型包括哪些呢？可以通过Spring的源码来分析一下：BeanUtils类、ClassUtils类：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1726729479656-34799374-2f4a-4d05-a2ce-89defea2ad21.png)
+![](assets/1726729479656-34799374-2f4a-4d05-a2ce-89defea2ad21.png)
 
 简单类型包括：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1726729370217-81b396a1-bf0b-4459-9b15-2c1e77c37093.png)
+![](assets/1726729370217-81b396a1-bf0b-4459-9b15-2c1e77c37093.png)
 
 **经典案例：给数据源的属性注入值：**
 
@@ -1264,7 +1264,7 @@ public void testDataSource(){
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763703988968-74f61c13-64c3-4af9-aa3f-0124482b808d.png)
+![](assets/1763703988968-74f61c13-64c3-4af9-aa3f-0124482b808d.png)
 
 你学会了吗？
 
@@ -1361,7 +1361,7 @@ public void testCascade(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763704075496-763dcaba-4244-4d90-8b1b-a2b6c8148730.png)
+![](assets/1763704075496-763dcaba-4244-4d90-8b1b-a2b6c8148730.png)
 
 **<font style="color:#E8323C;">要点：</font>**
 
@@ -1507,7 +1507,7 @@ public void testArray(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717431738-ef375752-075c-43bd-bf25-d62f957e52f2.png)
+![](assets/1763717431738-ef375752-075c-43bd-bf25-d62f957e52f2.png)
 
 **<font style="color:#E8323C;">要点：</font>**
 
@@ -1563,7 +1563,7 @@ public void testCollection(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717474219-f00a5de9-fe99-401d-8540-0dfb59671bb2.png)
+![](assets/1763717474219-f00a5de9-fe99-401d-8540-0dfb59671bb2.png)
 
 **<font style="color:#F5222D;">注意：注入List集合的时候使用list标签，如果List集合中是简单类型使用value标签，反之使用ref标签。</font>**
 
@@ -1612,7 +1612,7 @@ public class People {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717525860-5898bf62-8e74-438d-afee-979fb446ff0f.png)
+![](assets/1763717525860-5898bf62-8e74-438d-afee-979fb446ff0f.png)
 
 **<font style="color:#F5222D;">要点：</font>**
 
@@ -1711,7 +1711,7 @@ public class People {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717687274-17ec7c70-16b4-4a1a-b67b-d252ccfef797.png)
+![](assets/1763717687274-17ec7c70-16b4-4a1a-b67b-d252ccfef797.png)
 
 **<font style="color:#F5222D;">要点：</font>**
 
@@ -1773,7 +1773,7 @@ public void testNull(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717731445-35c6fea4-2f21-4450-b29c-2111f2ce1d7a.png)
+![](assets/1763717731445-35c6fea4-2f21-4450-b29c-2111f2ce1d7a.png)
 
 + 怎么注入null呢？
 
@@ -1792,7 +1792,7 @@ public void testNull(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717749034-ffa72b1d-fb17-4b6d-8f2c-d6b88208bae1.png)
+![](assets/1763717749034-ffa72b1d-fb17-4b6d-8f2c-d6b88208bae1.png)
 
 第二种方式：使用&lt;null/&gt;
 
@@ -1813,14 +1813,14 @@ public void testNull(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717759124-7724e7c6-92ba-4ae8-b3e1-d9cd847c712e.png)
+![](assets/1763717759124-7724e7c6-92ba-4ae8-b3e1-d9cd847c712e.png)
 
 #### 注入的值中含有特殊符号
 XML中有5个特殊字符，分别是：`<``>``'``"``&`
 
 以上5个特殊符号在XML中会被特殊对待，会被当做XML语法的一部分进行解析，如果这些特殊符号直接出现在注入的字符串当中，会报错。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718169577-c2150391-6ada-4ba4-8d78-ed66ce8db5f4.png)
+![](assets/1763718169577-c2150391-6ada-4ba4-8d78-ed66ce8db5f4.png)
 
 解决方案包括两种：
 
@@ -1874,7 +1874,7 @@ public void testSpecial(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717850747-fe3fa73b-806c-4ae2-ab0f-06e5359075e6.png)
+![](assets/1763717850747-fe3fa73b-806c-4ae2-ab0f-06e5359075e6.png)
 
 我们再来使用CDATA方式：
 
@@ -1891,7 +1891,7 @@ public void testSpecial(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763717882333-4ff84443-b20b-499b-bf88-bc489e189fe1.png)
+![](assets/1763717882333-4ff84443-b20b-499b-bf88-bc489e189fe1.png)
 
 ### p命名空间注入
 目的：简化配置。
@@ -1948,11 +1948,11 @@ public void testP(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718009839-ade48dfb-1431-4f10-a994-4ab8374ef367.png)
+![](assets/1763718009839-ade48dfb-1431-4f10-a994-4ab8374ef367.png)
 
 把setter方法去掉：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718119042-3c78856d-6f8b-4b23-8559-51d174a399f9.png)
+![](assets/1763718119042-3c78856d-6f8b-4b23-8559-51d174a399f9.png)
 
 所以p命名空间实际上是对set注入的简化。
 
@@ -2012,11 +2012,11 @@ public void testC(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718096636-e9af0497-bb5a-4341-bf38-eabde32ba060.png)
+![](assets/1763718096636-e9af0497-bb5a-4341-bf38-eabde32ba060.png)
 
 把构造方法注释掉：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718138114-98841768-357f-4408-aef7-7c57107cdb3e.png)
+![](assets/1763718138114-98841768-357f-4408-aef7-7c57107cdb3e.png)
 
 所以，c命名空间是依靠构造方法的。
 
@@ -2029,7 +2029,7 @@ public void testC(){
 
 使用util命名空间的前提是：在spring配置文件头部添加配置信息。如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665218059794-30411b76-a22c-4339-ab60-acad8f02ab28.png)
+![](assets/1665218059794-30411b76-a22c-4339-ab60-acad8f02ab28.png)
 
 ```java
 public class MyDataSource1 {
@@ -2107,7 +2107,7 @@ public void testUtil(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718455643-7d9355ac-8556-47fe-ab67-1e2349d580e2.png)
+![](assets/1763718455643-7d9355ac-8556-47fe-ab67-1e2349d580e2.png)
 
 ### 基于XML的自动装配
 Spring还可以完成自动化的注入，自动化注入又被称为自动装配。它可以根据**<font style="color:#E8323C;">名字</font>**进行自动装配，也可以根据**<font style="color:#E8323C;">类型</font>**进行自动装配。
@@ -2167,7 +2167,7 @@ public void testAutowireByName(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718549628-c1b58d51-d746-4d9e-aeb0-c8c5ee1f0a59.png)
+![](assets/1763718549628-c1b58d51-d746-4d9e-aeb0-c8c5ee1f0a59.png)
 
 我们来测试一下，byName装配是和属性名有关还是和set方法名有关系：
 
@@ -2194,7 +2194,7 @@ public class UserService {
 
 在执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718582395-53105c38-4844-412e-bcba-cc52e90013ab.png)
+![](assets/1763718582395-53105c38-4844-412e-bcba-cc52e90013ab.png)
 
 通过测试得知，aaa属性并没有赋值成功。也就是并没有装配成功。
 
@@ -2215,7 +2215,7 @@ public class UserService {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718621703-01a7eaa0-f0cb-44c1-80f6-d113eb52eb86.png)
+![](assets/1763718621703-01a7eaa0-f0cb-44c1-80f6-d113eb52eb86.png)
 
 这说明，如果根据名称装配(byName)，底层会调用set方法进行注入。
 
@@ -2272,11 +2272,11 @@ public void testAutowireByType(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718680599-8c83ff07-8541-4638-9607-6b2a2585c4c3.png)
+![](assets/1763718680599-8c83ff07-8541-4638-9607-6b2a2585c4c3.png)
 
 我们把UserService中的set方法注释掉，再执行：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718687238-6eb11940-af46-4b9f-81cd-7715d0605040.png)
+![](assets/1763718687238-6eb11940-af46-4b9f-81cd-7715d0605040.png)
 
 **<font style="color:#DF2A3F;">可以看到无论是byName还是byType，在装配的时候都是基于set方法的。所以set方法是必须要提供的。</font>**提供构造方法是不行的，大家可以测试一下。这里就不再赘述。
 
@@ -2298,7 +2298,7 @@ public void testAutowireByType(){
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718715528-42fe5699-776e-4cd1-b4d2-6bc55d8590be.png)
+![](assets/1763718715528-42fe5699-776e-4cd1-b4d2-6bc55d8590be.png)
 
 测试结果说明了，当byType进行自动装配的时候，配置文件中某种类型的Bean必须是唯一的，不能出现多个。
 
@@ -2401,7 +2401,7 @@ public void testProperties(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718790927-1686291f-2da2-4f2b-a8b5-e22901e90044.png)
+![](assets/1763718790927-1686291f-2da2-4f2b-a8b5-e22901e90044.png)
 
 **<font style="color:#DF2A3F;">这里有一个坑。</font>**配置文件中用户名是 `root`，但是取出来的是 `Adminitrator`。什么原因？
 
@@ -2444,7 +2444,7 @@ jdbc.password=root123
 ```
 
 ## Bean的作用域
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### singleton
 默认情况下，Spring的IoC容器创建的Bean对象是单例的。来测试一下：
@@ -2481,7 +2481,7 @@ public void testScope(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763718986453-86ca83e3-8bbf-4c45-8699-e2ae7bbcc988.png)
+![](assets/1763718986453-86ca83e3-8bbf-4c45-8699-e2ae7bbcc988.png)
 
 通过测试得知：Spring的IoC容器中，默认情况下，Bean对象是单例的。
 
@@ -2507,7 +2507,7 @@ public void testScope(){
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763719064958-d248764f-59d7-4d41-b509-1d18b2e5191b.png)
+![](assets/1763719064958-d248764f-59d7-4d41-b509-1d18b2e5191b.png)
 
 通过测试得知，默认情况下，Bean对象的创建是在初始化Spring上下文的时候就完成的。
 
@@ -2540,7 +2540,7 @@ public void testScope(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763719105263-11ce286c-1d5b-492c-8e36-fd21400b3b17.png)
+![](assets/1763719105263-11ce286c-1d5b-492c-8e36-fd21400b3b17.png)
 
 我们可以把测试代码中的getBean()方法所在行代码注释掉：
 
@@ -2553,7 +2553,7 @@ public void testScope(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763719118424-ee74b420-f5a9-40af-86b6-e095da0924e6.png)
+![](assets/1763719118424-ee74b420-f5a9-40af-86b6-e095da0924e6.png)
 
 可以看到这一次在初始化Spring上下文的时候，并没有创建Bean对象。
 
@@ -2585,7 +2585,7 @@ public void testScope(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763719172933-83153245-ab36-4656-8fd4-4168e85edbd0.png)
+![](assets/1763719172933-83153245-ab36-4656-8fd4-4168e85edbd0.png)
 
 通过测试得知，没有指定scope属性时，默认是singleton单例的。
 
@@ -2601,7 +2601,7 @@ public void testScope(){
 + 自定义scope：几乎用不上，感兴趣的可以研究。
 
 ## GoF之工厂模式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 + 设计模式：一种可以被重复利用的解决方案。
 + GoF（Gang of Four），中文名——四人组。
@@ -2748,7 +2748,7 @@ public class Client {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763719728644-ec17cbc9-9c3b-4b51-9e33-8b80cdf138fd.png)
+![](assets/1763719728644-ec17cbc9-9c3b-4b51-9e33-8b80cdf138fd.png)
 
 **简单工厂模式的优点：**
 
@@ -2855,7 +2855,7 @@ public class Client {
 
 执行客户端程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763720058823-fc661399-c5fb-4d44-acb3-5f6102989891.png)
+![](assets/1763720058823-fc661399-c5fb-4d44-acb3-5f6102989891.png)
 
 如果想扩展一个新的产品，只要新增一个产品类，再新增一个该产品对应的工厂即可，例如新增：匕首
 
@@ -2902,7 +2902,7 @@ public class Client {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763720094112-317c5f56-b197-4ea4-8138-e4a4af4e661a.png)
+![](assets/1763720094112-317c5f56-b197-4ea4-8138-e4a4af4e661a.png)
 
 我们可以看到在进行功能扩展的时候，不需要修改之前的源代码，显然工厂方法模式符合OCP原则。
 
@@ -3160,7 +3160,7 @@ public class Client {
 | **类爆炸** | ⚠️ | 2 个产品等级 × 2 个产品族 = 4 个产品类 + 2 个工厂类，尚可接受；若产品等级和产品族都增多，类数量急剧膨胀 |
 
 ## Bean的实例化方式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 Spring为Bean提供了多种实例化方式，通常包括4种方式。（也就是说在Spring中为Bean对象的创建准备了多种方案，目的是：更加灵活）
 
@@ -3259,7 +3259,7 @@ public void testSimpleFactory(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763720944420-97b46ad8-ca40-4071-90b3-7297a2664440.png)
+![](assets/1763720944420-97b46ad8-ca40-4071-90b3-7297a2664440.png)
 
 ### 通过factory-bean实例化
 这种方式本质上是：通过工厂方法模式进行实例化。
@@ -3307,7 +3307,7 @@ public void testSelfFactoryBean(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763722184748-17b7c7b6-3b55-455c-beaa-27e7fef64918.png)
+![](assets/1763722184748-17b7c7b6-3b55-455c-beaa-27e7fef64918.png)
 
 ### 通过FactoryBean接口实例化
 以上的第三种方式中，factory-bean是我们自定义的，factory-method也是我们自己定义的。
@@ -3371,7 +3371,7 @@ public void testFactoryBean(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763775964052-66cd25d3-f271-4f66-b4e7-459bc827bd2e.png)
+![](assets/1763775964052-66cd25d3-f271-4f66-b4e7-459bc827bd2e.png)
 
 **<font style="color:#E8323C;">FactoryBean在Spring中是一个接口。被称为“工厂Bean”。“工厂Bean”是一种特殊的Bean。所有的“工厂Bean”都是用来</font><font style="color:#117CEE;">协助Spring</font><font style="color:#E8323C;">框架来创建其他Bean对象的。</font>**
 
@@ -3429,7 +3429,7 @@ public void testDate(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763779641428-c59bda56-3e06-4b9e-9942-f5952880c7e9.png)
+![](assets/1763779641428-c59bda56-3e06-4b9e-9942-f5952880c7e9.png)
 
 如果把日期格式修改一下：
 
@@ -3441,7 +3441,7 @@ public void testDate(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665383871708-89cd2ac9-6d31-40fc-a4a8-27d27cd35ad2.png)
+![](assets/1665383871708-89cd2ac9-6d31-40fc-a4a8-27d27cd35ad2.png)
 
 这种情况下，我们就可以使用FactoryBean来完成这个骚操作。
 
@@ -3486,10 +3486,10 @@ public class DateFactoryBean implements FactoryBean<Date> {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763779706597-06ce0ec2-17e5-4c8e-9e04-da407da067cc.png)
+![](assets/1763779706597-06ce0ec2-17e5-4c8e-9e04-da407da067cc.png)
 
 ## Bean的生命周期
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是Bean的生命周期
 Spring其实就是一个管理Bean对象的工厂。它负责对象的创建，对象的销毁等。
@@ -3526,7 +3526,7 @@ Bean生命周期可以粗略的划分为五大步：
 + 第四步：使用Bean
 + 第五步：销毁Bean
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665388735200-444405f6-283d-4b3a-8cdf-8c3e01743618.png)
+![](assets/1665388735200-444405f6-283d-4b3a-8cdf-8c3e01743618.png)
 
 编写测试程序：
 
@@ -3584,7 +3584,7 @@ public class BeanLifecycleTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763779901212-2d884ee4-3595-431e-9069-52bd00213814.png)
+![](assets/1763779901212-2d884ee4-3595-431e-9069-52bd00213814.png)
 
 需要注意的：
 
@@ -3625,16 +3625,16 @@ public class LogBeanPostProcessor implements BeanPostProcessor {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763780009201-436ef7c3-8bc0-44ad-a368-fcfe4de77b54.png)
+![](assets/1763780009201-436ef7c3-8bc0-44ad-a368-fcfe4de77b54.png)
 
 如果加上Bean后处理器的话，Bean的生命周期就是7步了：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665393936765-0ea5dcdd-859a-4ac5-9407-f06022c498b9.png)
+![](assets/1665393936765-0ea5dcdd-859a-4ac5-9407-f06022c498b9.png)
 
 ### Bean生命周期之10步
 如果根据源码跟踪，可以划分更细粒度的步骤，10步：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665394697870-15de433a-8d50-4b31-9b75-b2ca7090c1c6.png)
+![](assets/1665394697870-15de433a-8d50-4b31-9b75-b2ca7090c1c6.png)
 
 上图中检查Bean是否实现了Aware的相关接口是什么意思？
 
@@ -3722,7 +3722,7 @@ public class LogBeanPostProcessor implements BeanPostProcessor {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763780194137-98ac319c-369a-4fa1-a83f-4789887ccb22.png)
+![](assets/1763780194137-98ac319c-369a-4fa1-a83f-4789887ccb22.png)
 
 **<font style="color:#F5222D;">通过测试可以看出来：</font>**
 
@@ -3866,7 +3866,7 @@ Spring 根据Bean的作用域来选择管理方式。
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763780370388-000f1c5f-eb90-4d6c-be76-ac5e39231729.png)
+![](assets/1763780370388-000f1c5f-eb90-4d6c-be76-ac5e39231729.png)
 
 通过测试一目了然。只执行了前8步，第9和10都没有执行。
 
@@ -3902,10 +3902,10 @@ public class RegisterBeanTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763780413264-6a23ba14-d5ea-493f-a3da-1c458c62ecbb.png)
+![](assets/1763780413264-6a23ba14-d5ea-493f-a3da-1c458c62ecbb.png)
 
 ## Spring IoC注解式开发
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 声明Bean的注解
 负责声明Bean的注解，常见的包括四个：
@@ -4047,7 +4047,7 @@ public class AnnotationTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804203105-01de403b-0c38-49b2-b97a-539b080ff2ce.png)
+![](assets/1763804203105-01de403b-0c38-49b2-b97a-539b080ff2ce.png)
 
 **<font style="color:#E8323C;">如果注解的属性名是value，那么value是可以省略的。</font>**
 
@@ -4072,7 +4072,7 @@ public class AnnotationTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804235969-ee73d66b-b32a-45e1-bd5a-14be1d80c299.png)
+![](assets/1763804235969-ee73d66b-b32a-45e1-bd5a-14be1d80c299.png)
 
 **<font style="color:#E8323C;">如果把value属性彻底去掉，spring会为 Bean自动取名吗？会的。并且默认名字的规律是：Bean类名首字母小写。</font>**
 
@@ -4100,7 +4100,7 @@ public class AnnotationTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804278652-8433e88b-d875-44b4-b035-8088bc3849a3.png)
+![](assets/1763804278652-8433e88b-d875-44b4-b035-8088bc3849a3.png)
 
 我们将Component注解换成其它三个注解，看看是否可以用：
 
@@ -4113,7 +4113,7 @@ public class BankDao {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804296741-fd026e58-9034-448f-8c7f-29d26316ba8d.png)
+![](assets/1763804296741-fd026e58-9034-448f-8c7f-29d26316ba8d.png)
 
 剩下的两个注解大家可以测试一下。
 
@@ -4164,7 +4164,7 @@ public class AnnotationTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804341646-5c51361e-bd26-4f3b-b86e-af784a6051f5.png)
+![](assets/1763804341646-5c51361e-bd26-4f3b-b86e-af784a6051f5.png)
 
 我们再来看看，指定共同的父包行不行：
 
@@ -4181,7 +4181,7 @@ public class AnnotationTest {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804354597-61388add-ec5c-4121-88b2-273cfafd7a12.png)
+![](assets/1763804354597-61388add-ec5c-4121-88b2-273cfafd7a12.png)
 
 ### 选择性实例化Bean
 假设在某个包下有很多Bean，有的Bean上标注了Component，有的标注了Controller，有的标注了Service，有的标注了Repository，现在由于某种特殊业务的需要，只允许其中所有的Controller参与Bean管理，其他的都不实例化。这应该怎么办呢？
@@ -4263,7 +4263,7 @@ public void testChoose(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804449496-e4d1f7c3-436d-4f66-baff-b698715d56bf.png)
+![](assets/1763804449496-e4d1f7c3-436d-4f66-baff-b698715d56bf.png)
 
 也可以将use-default-filters设置为true（不写就是true），并且采用exclude-filter方式排除哪些注解标注的Bean不参与实例化：
 
@@ -4277,7 +4277,7 @@ public void testChoose(){
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804479326-d90316fa-ca13-4a1e-b50d-f69afe8bd63e.png)
+![](assets/1763804479326-d90316fa-ca13-4a1e-b50d-f69afe8bd63e.png)
 
 ### 负责注入的注解
 @Component @Controller @Service @Repository 这四个注解是用来声明Bean的，声明后这些Bean将被实例化。接下来我们看一下，如何给Bean的属性赋值。给Bean属性赋值需要用到这些注解：
@@ -4333,7 +4333,7 @@ public void testValue(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804917630-cc7f0031-f604-4fc9-aab3-80642ab35aa9.png)
+![](assets/1763804917630-cc7f0031-f604-4fc9-aab3-80642ab35aa9.png)
 
 通过以上代码可以发现，我们并没有给属性提供setter方法，但仍然可以完成属性赋值。
 
@@ -4370,7 +4370,7 @@ public class User {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804943343-e101a0a8-fbce-4e33-be2f-05a95c64f7a6.png)
+![](assets/1763804943343-e101a0a8-fbce-4e33-be2f-05a95c64f7a6.png)
 
 通过测试可以得知，@Value注解可以直接使用在属性上，也可以使用在setter方法上。都是可以的。都可以完成属性的赋值。
 
@@ -4404,7 +4404,7 @@ public class User {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763804995156-d949008f-37c3-4c67-8e6c-691963c4dca5.png)
+![](assets/1763804995156-d949008f-37c3-4c67-8e6c-691963c4dca5.png)
 
 通过测试得知：@Value注解可以出现在属性上、setter方法上、以及构造方法的形参上。可见Spring给我们提供了多样化的注入。太灵活了。
 
@@ -4497,7 +4497,7 @@ public void testAutowired(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805114065-6361a6f4-61c9-474b-9ae9-ef0ed63f6865.png)
+![](assets/1763805114065-6361a6f4-61c9-474b-9ae9-ef0ed63f6865.png)
 
 以上构造方法和setter方法都没有提供，经过测试，仍然可以注入成功。
 
@@ -4523,7 +4523,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805143555-f1d1626f-416f-4812-87b2-c347277c2399.png)
+![](assets/1763805143555-f1d1626f-416f-4812-87b2-c347277c2399.png)
 
 **<font style="color:#722ED1;">我们再来看看能不能出现在构造方法上：</font>**
 
@@ -4547,7 +4547,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805158158-1864aedd-717b-4cbc-a174-1b8cf56b0907.png)
+![](assets/1763805158158-1864aedd-717b-4cbc-a174-1b8cf56b0907.png)
 
 **<font style="color:#722ED1;">再来看看，这个注解能不能只标注在构造方法的形参上：</font>**
 
@@ -4570,7 +4570,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805183577-c0a54642-14c1-45aa-98a7-2353dc7c0dc9.png)
+![](assets/1763805183577-c0a54642-14c1-45aa-98a7-2353dc7c0dc9.png)
 
 **<font style="color:#722ED1;">还有更劲爆的，当有参数的构造方法只有一个时，@Autowired注解可以省略。</font>**
 
@@ -4593,7 +4593,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805219740-0dd5b10c-b852-4a76-9d3d-72913af93ffc.png)
+![](assets/1763805219740-0dd5b10c-b852-4a76-9d3d-72913af93ffc.png)
 
 **<font style="color:#722ED1;">当然，如果有多个构造方法，@Autowired肯定是不能省略的。</font>**
 
@@ -4620,7 +4620,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805250282-dae28d2e-04b3-450c-bfb9-c3cd14458593.png)
+![](assets/1763805250282-dae28d2e-04b3-450c-bfb9-c3cd14458593.png)
 
 到此为止，我们已经清楚@Autowired注解可以出现在哪些位置了。
 
@@ -4639,7 +4639,7 @@ public class UserDaoForOracle implements UserDao{
 
 当你写完这个新的实现类之后，此时IDEA工具已经提示错误信息了：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805295378-ca25b98c-bab2-4d28-b7bb-190ea894aa40.png)
+![](assets/1763805295378-ca25b98c-bab2-4d28-b7bb-190ea894aa40.png)
 
 错误信息中说：不能装配，UserDao这个Bean的数量大于1.
 
@@ -4678,7 +4678,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805339010-607a6347-00c3-40f2-8e95-826b07e2641f.png)
+![](assets/1763805339010-607a6347-00c3-40f2-8e95-826b07e2641f.png)
 
 总结：
 
@@ -4710,7 +4710,7 @@ public class UserService {
 
 @Resource注解的源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665565515435-2ad5614a-8572-4c6f-80c1-efa236dbe35f.png)
+![](assets/1665565515435-2ad5614a-8572-4c6f-80c1-efa236dbe35f.png)
 
 测试一下：
 
@@ -4739,7 +4739,7 @@ public class UserService {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805703043-58f861ec-79ca-409e-bc92-b731277c6dd3.png)
+![](assets/1763805703043-58f861ec-79ca-409e-bc92-b731277c6dd3.png)
 
 **我们把UserDaoForOracle的名字xyz修改为userDao，让这个Bean的名字和UserService类中的UserDao属性名一致：**
 
@@ -4770,7 +4770,7 @@ public class UserService {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805728365-2326f7c4-ecf6-440e-a6f7-e6dd40eb914b.png)
+![](assets/1763805728365-2326f7c4-ecf6-440e-a6f7-e6dd40eb914b.png)
 
 通过测试得知，当@Resource注解使用时没有指定name的时候，还是根据name进行查找，这个name是属性名。
 
@@ -4792,7 +4792,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805768831-da788b4d-49b5-4dd0-a444-e2b0bed95b37.png)
+![](assets/1763805768831-da788b4d-49b5-4dd0-a444-e2b0bed95b37.png)
 
 根据异常信息得知：显然当通过name找不到的时候，自然会启动byType进行注入。以上的错误是因为UserDao接口下有两个实现类导致的。所以根据类型注入就会报错。
 
@@ -4820,7 +4820,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805795181-a8d504f6-ae7f-4ed0-af53-d42600cc3a52.png)
+![](assets/1763805795181-a8d504f6-ae7f-4ed0-af53-d42600cc3a52.png)
 
 当然，也可以指定name：
 
@@ -4844,7 +4844,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763805810622-0e5e2cb0-7aa9-45b6-bf56-f35c991e7ed4.png)
+![](assets/1763805810622-0e5e2cb0-7aa9-45b6-bf56-f35c991e7ed4.png)
 
 一句话总结@Resource注解：默认byName注入，没有指定name时把属性名当做name，根据name找不到时，才会byType注入。byType注入时，某种类型的Bean只能有一个。
 
@@ -4891,7 +4891,7 @@ public void testNoXml(){
 3. `@Bean`
 
 ## GoF之代理模式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对代理模式的理解
 **生活场景1**：牛村的牛二看上了隔壁村小花，牛二不好意思直接找小花，于是牛二找来了媒婆王妈妈。这里面就有一个非常典型的代理模式。牛二不能和小花直接对接，只能找一个中间人。其中王妈妈是代理类，牛二是目标类。王妈妈代替牛二和小花先见个面。（现实生活中的婚介所）【<font style="color:#DF2A3F;">在程序中，对象A和对象B无法直接交互时。</font>】
@@ -4914,7 +4914,7 @@ public void testNoXml(){
 
 代理模式的类图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665651817094-af9ecbad-24ae-4c11-9fa2-efe46653df25.png)
+![](assets/1665651817094-af9ecbad-24ae-4c11-9fa2-efe46653df25.png)
 
 代理模式在代码实现上，包括两种形式：
 
@@ -5157,7 +5157,7 @@ public class Client {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763899986560-1ffb9314-4127-4514-9e6e-b8427fc725b5.png)
+![](assets/1763899986560-1ffb9314-4127-4514-9e6e-b8427fc725b5.png)
 
 以上就是代理模式中的静态代理，其中OrderService接口是代理类和目标类的共同接口。OrderServiceImpl是目标类。OrderServiceProxy是代理类。
 
@@ -5398,7 +5398,7 @@ public class Client {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763900041906-2f1f20aa-9f0a-4a22-8fb8-8c92a5cb4063.png)
+![](assets/1763900041906-2f1f20aa-9f0a-4a22-8fb8-8c92a5cb4063.png)
 
 学到这里可能会感觉有点懵，折腾半天，到最后这不是还得写一个接口的实现类吗？没省劲儿呀？
 
@@ -5412,7 +5412,7 @@ public class Client {
 
 不过我们看以下这个代码确实有点繁琐，对于客户端来说，用起来不方便：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665716434406-4e092df4-b1a7-4d16-bbc1-1f134b8f51f7.png)
+![](assets/1665716434406-4e092df4-b1a7-4d16-bbc1-1f134b8f51f7.png)
 
 我们可以提供一个工具类：ProxyUtil，封装一个方法：
 
@@ -5461,7 +5461,7 @@ public class Client {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763900073143-1738ce13-7f3d-4452-92bb-1d89797c4637.png)
+![](assets/1763900073143-1738ce13-7f3d-4452-92bb-1d89797c4637.png)
 
 #### CGLIB动态代理
 CGLIB既可以代理接口，又可以代理类。底层采用继承的方式实现。所以被代理的目标类不能使用final修饰。
@@ -5616,17 +5616,17 @@ public class Client {
 
 对于高版本的JDK，如果使用CGLIB，需要在启动项中添加两个启动参数：**<font style="color:#DF2A3F;">（下图第一个红色框需要点击 Modify options来 Add vm options才能显示）</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764241276991-95dffe8b-56b2-49e6-85c3-4a0568d4016a.png)
+![](assets/1764241276991-95dffe8b-56b2-49e6-85c3-4a0568d4016a.png)
 
 + `--add-opens java.base/java.lang=ALL-UNNAMED`
 + `--add-opens java.base/sun.net.util=ALL-UNNAMED`
 
 **执行结果：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763900217070-16caaae5-163f-49f4-97dc-74b9f02338cf.png)
+![](assets/1763900217070-16caaae5-163f-49f4-97dc-74b9f02338cf.png)
 
 ## 面向切面编程AOP
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 IoC使软件组件松耦合。AOP让你能够捕捉系统中经常使用的功能，把它转化成组件。
 
@@ -5652,7 +5652,7 @@ Spring的AOP使用的动态代理是：JDK动态代理 + CGLIB动态代理技术
 
 请看下图，可以帮助你快速理解AOP的思想：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665732609757-d8ae52ba-915e-49cf-9ef4-c7bcada0d601.png)
+![](assets/1665732609757-d8ae52ba-915e-49cf-9ef4-c7bcada0d601.png)
 
 **<font style="color:#E8323C;">用一句话总结AOP：将与核心业务无关的代码独立的抽取出来，形成一个独立的组件，然后以横向交叉的方式应用到业务流程当中的过程被称为AOP。</font>**
 
@@ -5967,7 +5967,7 @@ public class AOPTest {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665843923087-e1116f09-2470-46cb-b21a-1526f62cab50.png)
+![](assets/1665843923087-e1116f09-2470-46cb-b21a-1526f62cab50.png)
 
 #### 全注解式开发AOP
 就是编写一个类，在这个类上面使用大量注解来代替spring的配置文件，spring配置文件消失了，如下：
@@ -6094,7 +6094,7 @@ public class AOPTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1727354763970-e62d8306-982e-4d23-881d-802a4213f2d3.png)
+![](assets/1727354763970-e62d8306-982e-4d23-881d-802a4213f2d3.png)
 
 通过上面的执行结果就可以判断他们的执行顺序了，这里不再赘述。
 
@@ -6120,7 +6120,7 @@ public class OrderService {
 
 再次执行测试程序，结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1727354892988-43f912b5-9d3d-4ae4-b5ee-640a69d7359c.png)
+![](assets/1727354892988-43f912b5-9d3d-4ae4-b5ee-640a69d7359c.png)
 
 通过测试得知，当发生异常之后，后置通知也会执行。
 
@@ -6226,11 +6226,11 @@ public class MyAspect {
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1727355165649-0a4443b6-5ac5-4f38-a23f-756af6585dbc.png)
+![](assets/1727355165649-0a4443b6-5ac5-4f38-a23f-756af6585dbc.png)
 
 通过修改@Order注解的整数值来切换顺序，执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1727355225994-ecb4fbe1-2611-477b-a319-d64a5a897153.png)
+![](assets/1727355225994-ecb4fbe1-2611-477b-a319-d64a5a897153.png)
 
 #### 优化使用切点表达式
 观看以下代码中的切点表达式：
@@ -6588,7 +6588,7 @@ public class AOPTest2 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763900978755-59d9c5ec-850c-40b3-8d90-98163a7d2429.png)
+![](assets/1763900978755-59d9c5ec-850c-40b3-8d90-98163a7d2429.png)
 
 通过测试可以看到，所有的业务方法都添加了事务控制的代码。
 
@@ -6696,10 +6696,10 @@ public void testSecurity(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763901002972-6212a72e-2316-44ba-80a2-9c2817a277df.png)
+![](assets/1763901002972-6212a72e-2316-44ba-80a2-9c2817a277df.png)
 
 ## Spring集成MyBatis
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 实现步骤
 + 第一步：准备数据库表
@@ -7171,7 +7171,7 @@ spring配置文件有多个，并且可以在spring的核心配置文件中使�
 **<font style="color:#F5222D;">注意：在实际开发中，service单独配置到一个文件中，dao单独配置到一个文件中，然后在核心配置文件中引入，养成好习惯。</font>**
 
 ## Spring对事务的支持
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 事务概述
 + 什么是事务
@@ -7194,27 +7194,27 @@ spring配置文件有多个，并且可以在spring的核心配置文件中使�
 
 采用三层架构搭建：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749727730298-3fbf26a7-40a4-4ee2-bd8b-6ed01adec552.png)
+![](assets/1749727730298-3fbf26a7-40a4-4ee2-bd8b-6ed01adec552.png)
 
 #### 没有异常时
 模块名：spring-013-tx-bank（将之前spring和mybatis集成的代码完全拷贝到当前模块中。）
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763901498342-1c544b5d-7f7c-4d3e-8b80-3fab3d9d7824.png)
+![](assets/1763901498342-1c544b5d-7f7c-4d3e-8b80-3fab3d9d7824.png)
 
 数据变化：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666497727323-b2ca34c9-99c6-4b23-8d3b-8dbe3009d3e9.png)
+![](assets/1666497727323-b2ca34c9-99c6-4b23-8d3b-8dbe3009d3e9.png)
 
 #### 模拟异常后
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763901514771-99a5964c-e344-4ed6-b879-649b329fffd4.png)
+![](assets/1763901514771-99a5964c-e344-4ed6-b879-649b329fffd4.png)
 
 数据库表中数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666497824308-bdd8f11f-8f99-4195-81c4-c37721627f4c.png)
+![](assets/1666497824308-bdd8f11f-8f99-4195-81c4-c37721627f4c.png)
 
 **<font style="color:#E8323C;">丢了1万。</font>**
 
@@ -7231,7 +7231,7 @@ spring配置文件有多个，并且可以在spring的核心配置文件中使�
 #### Spring事务管理API
 Spring对事务的管理底层实现方式是基于AOP实现的。采用AOP的方式进行了封装。所以Spring专门针对事务开发了一套API，API的核心接口如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666504216275-1b6a9ac4-6958-4cdf-9323-7a79a08d059d.png)
+![](assets/1666504216275-1b6a9ac4-6958-4cdf-9323-7a79a08d059d.png)
 
 PlatformTransactionManager接口：spring事务管理器的核心接口。在**<font style="color:#E8323C;">Spring</font>**中它有两个实现：
 
@@ -7316,21 +7316,21 @@ public class AccountServiceImpl implements AccountService {
 
 当前数据库表中的数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666505321919-85dd9adb-bceb-49ef-826f-5a3ddf7699a0.png)
+![](assets/1666505321919-85dd9adb-bceb-49ef-826f-5a3ddf7699a0.png)
 
 执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763901573349-937ac896-28c4-41a6-b719-d2f1c0f6a8d9.png)
+![](assets/1763901573349-937ac896-28c4-41a6-b719-d2f1c0f6a8d9.png)
 
 虽然出现异常了，再次查看数据库表中数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666505321919-85dd9adb-bceb-49ef-826f-5a3ddf7699a0.png)
+![](assets/1666505321919-85dd9adb-bceb-49ef-826f-5a3ddf7699a0.png)
 
 通过测试，发现数据没有变化，事务起作用了。
 
 #### 事务属性
 ##### 事务属性包括哪些
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666506552984-8a4f9d42-73ba-4ded-853d-564d27340db5.png)
+![](assets/1666506552984-8a4f9d42-73ba-4ded-853d-564d27340db5.png)
 
 事务中的重点属性：
 
@@ -7348,7 +7348,7 @@ public class AccountServiceImpl implements AccountService {
 
 事务传播行为在spring框架中被定义为枚举类型：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666505960049-06173489-15fc-4d16-94f3-1a9025f85d8c.png)
+![](assets/1666505960049-06173489-15fc-4d16-94f3-1a9025f85d8c.png)
 
 一共有七种传播行为：
 
@@ -7405,7 +7405,7 @@ public void save(Account act) {
 
 隔离级别在spring中以枚举类型存在：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666508609641-2c838566-7334-4cf1-b452-0fed9aaebf3d.png)
+![](assets/1666508609641-2c838566-7334-4cf1-b452-0fed9aaebf3d.png)
 
 ```java
 @Transactional(isolation = Isolation.READ_COMMITTED)
@@ -7593,14 +7593,14 @@ public class IsolationService2 {
 + `noRollbackFor` 用于 **缩小** 回滚的异常范围。
 
 ## **<font style="color:#F5222D;">Bean的循环依赖问题</font>**
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### **<font style="color:#F5222D;">什么是Bean的循环依赖</font>**
 A对象中有B属性。B对象中有A属性。这就是循环依赖。我依赖你，你也依赖我。
 
 比如：丈夫类Husband，妻子类Wife。Husband中有Wife的引用。Wife中有Husband的引用。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665452274046-82594b87-2974-4e08-a6ab-2218d001d14f.png)
+![](assets/1665452274046-82594b87-2974-4e08-a6ab-2218d001d14f.png)
 
 ```java
 public class Husband {
@@ -7711,7 +7711,7 @@ public class CircularDependencyTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763786197531-47f4054d-19e8-4364-93e8-f7d366cdd880.png)
+![](assets/1763786197531-47f4054d-19e8-4364-93e8-f7d366cdd880.png)
 
 **<font style="color:#E8323C;">通过测试得知：在singleton + set注入的情况下，循环依赖是没有问题的。Spring可以解决这个问题。</font>**
 
@@ -7866,7 +7866,7 @@ Caused by: org.springframework.beans.factory.**<font style="color:#F5222D;">Bean
 **<font style="color:#DF2A3F;">Spring通过  三级缓存+提前曝光  来解决单例 Setter/字段注入的循环依赖。</font>**
 
 #### **<font style="color:#F5222D;">三个缓存</font>**
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1665456331018-18c45ae3-fa4c-4cd8-aabf-d9bace567693.png)
+![](assets/1665456331018-18c45ae3-fa4c-4cd8-aabf-d9bace567693.png)
 
 | **缓存级别** | **名称** | **存储内容** | **作用** |
 | --- | --- | --- | --- |
@@ -8022,7 +8022,7 @@ public class B {
 假设 A 中有 B，B 中有 A， 如果只有两级缓存，又正好 A 需要创建代理对象时，底层会导致 B 对象持有的 A 是原始对象而非代理对象。最终导致代理失效。引入三级缓存，三级缓存中存储的是 ObjectFactory 工厂对象，工厂对象创建 A 时，会判断 A 是否需要创建代理，不需要等到初始化之后，这样最终 B 对象持有是 A 对象的代理对象，代理不会失效。
 
 ## Spring中的八大模式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 简单工厂模式
 获取 bean 的时候可以通过简单工厂模式（静态工厂模式）来获取；
@@ -8033,7 +8033,7 @@ FactoryBean是典型的工厂方法模式。在配置文件中通过factory-meth
 ### 单例模式
 Spring用的是双重判断加锁的单例模式。请看下面代码，我们之前讲解Bean的循环依赖的时候见过：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666663352271-4ba8d737-1e32-4f0e-b01a-aa305ad3abea.png)
+![](assets/1666663352271-4ba8d737-1e32-4f0e-b01a-aa305ad3abea.png)
 
 ### 代理模式
 Spring的AOP就是使用了动态代理实现的。

@@ -1,17 +1,17 @@
 # Spring Boot
 
 ## 认识Spring Boot
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 我们来看看官方是如何介绍的：
 
 [https://docs.spring.io/spring-boot/index.html](https://docs.spring.io/spring-boot/index.html)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728875326069-8146a95b-569b-4338-8d28-696fcb647ec8.png)
+![](assets/1728875326069-8146a95b-569b-4338-8d28-696fcb647ec8.png)
 
 翻译：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728893860338-bce86e2c-719d-49fe-9932-419fe1e50fb1.png)
+![](assets/1728893860338-bce86e2c-719d-49fe-9932-419fe1e50fb1.png)
 
 Spring Boot倡导`**约定优于配置**`，将`**简化开发**`发挥到极致。使用Spring Boot框架可以快速构建Spring应用，再也不需要`大量的繁琐的`的各种配置。Spring Boot框架设计的目标是：程序员关注业务逻辑就行了，环境方面的事儿交给Spring Boot就行。
 
@@ -30,7 +30,7 @@ Spring Boot的开箱即用和约定优于配置：
 + 约定优于配置：“约定优于配置”（Convention Over Configuration, CoC）是一种软件设计哲学，核心思想是通过提供一组合理的默认行为来减少配置的数量，从而简化开发流程。
 
 ## First Spring Boot
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 需求：在浏览器上输入请求路径 http://localhost:8080/hello，在浏览器上显示 HelloWorld!
 
@@ -39,21 +39,21 @@ Spring Boot的开箱即用和约定优于配置：
 ### 第一步：创建一个空的工程，并设置JDK版本21
 Spring Boot4 要求JDK最低版本是17，建议 JDK 21
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783852103361-30a77597-3b4a-40d1-b56b-a39541628ebf.png)
+![](assets/1783852103361-30a77597-3b4a-40d1-b56b-a39541628ebf.png)
 
 ### 第二步：设置maven
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783852136750-00230b6b-c09c-4046-a11d-99e23cffda29.png)
+![](assets/1783852136750-00230b6b-c09c-4046-a11d-99e23cffda29.png)
 
 ### 第三步：创建一个Maven模块 springboot-001
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783852184032-d9d556cb-1cd0-46f7-8eb5-34fda95ef492.png)
+![](assets/1783852184032-d9d556cb-1cd0-46f7-8eb5-34fda95ef492.png)
 
 ### 第四步：打开Spring Boot官方文档，按照文档一步一步进行
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783852343783-fc947c69-fee7-4ce0-ac93-9c7412f314e4.png)
+![](assets/1783852343783-fc947c69-fee7-4ce0-ac93-9c7412f314e4.png)
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783852442999-b82a4eda-e252-4aae-9e82-614bf76d6b67.png)
+![](assets/1783852442999-b82a4eda-e252-4aae-9e82-614bf76d6b67.png)
 
 ### 第五步：要使用Spring Boot，需要继承这个开源项目。从官方指导文档中复制以下内容：
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783852482042-12da82ee-57c1-48c1-965d-e67d9fd0b625.png)
+![](assets/1783852482042-12da82ee-57c1-48c1-965d-e67d9fd0b625.png)
 
 ```xml
 <!--继承Spring Boot4.1.0开源项目-->
@@ -73,7 +73,7 @@ Spring Boot4 要求JDK最低版本是17，建议 JDK 21
 ### 第六步：添加Spring Boot的web starter
 **如果要做 web 开发，引入 web 开发场景，只需要添加一个 web 启动器，相关的依赖和默认的配置就有了。**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1726112199621-1d90cda6-1bb5-4c66-ac9f-b0f2bedb87b3.png)
+![](assets/1726112199621-1d90cda6-1bb5-4c66-ac9f-b0f2bedb87b3.png)
 
 在parent下立即添加如下配置，让Spring Boot项目具备开发web应用的依赖：
 
@@ -89,7 +89,7 @@ Spring Boot4 要求JDK最低版本是17，建议 JDK 21
 
 关联的依赖也被引入进来，如下：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783853553527-318ec72e-9dd3-433f-a81a-dceab9d50369.png)
+![](assets/1783853553527-318ec72e-9dd3-433f-a81a-dceab9d50369.png)
 
 可以看到spring mvc被引入了，tomcat服务器也被引入了。
 
@@ -130,20 +130,20 @@ public class HelloController {
 ```
 
 ### 第九步：运行main方法就是启动web容器
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783853855401-7c485888-89b6-4887-8c3c-ee2f63db1965.png)
+![](assets/1783853855401-7c485888-89b6-4887-8c3c-ee2f63db1965.png)
 
 ### 第十步：打开浏览器访问
 [http://localhost:8080/hello](http://localhost:8080/hello)
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783853870775-29cce1dc-25a8-4b9f-a91d-4e09ba961047.png)
+![](assets/1783853870775-29cce1dc-25a8-4b9f-a91d-4e09ba961047.png)
 
 ## 便捷的部署方式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 打jar包运行
 Spring Boot提供了打包插件，可以将Spring Boot项目打包为**<font style="color:#DF2A3F;">可执行 jar 包</font>**。Web服务器（Tomcat）也会连同一块打入jar包中。只要电脑上安装了Java的运行环境（JDK），就可以启动Spring Boot项目。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854055735-fdc7a73e-f731-4036-81ca-26de49a21ea8.png)
+![](assets/1783854055735-fdc7a73e-f731-4036-81ca-26de49a21ea8.png)
 
 根据官方文档指导，使用打包功能需要引入以下的插件：
 
@@ -160,19 +160,19 @@ Spring Boot提供了打包插件，可以将Spring Boot项目打包为**<font st
 
 执行打包命令，生成可执行jar包：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854202933-4c864188-1574-4fa5-933c-6b0f5b46a185.png)
+![](assets/1783854202933-4c864188-1574-4fa5-933c-6b0f5b46a185.png)
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854185544-a91535dd-0fbd-43d3-908e-963476ef7775.png)
+![](assets/1783854185544-a91535dd-0fbd-43d3-908e-963476ef7775.png)
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854228912-fc55737a-59c0-4e8d-96b9-d67f91f01d58.png)
+![](assets/1783854228912-fc55737a-59c0-4e8d-96b9-d67f91f01d58.png)
 
 单独的将这个 jar 包可以拷贝到任何位置运行，通过`java -jar springboot-001-1.0-SNAPSHOT.jar`命令来启动 Spring Boot 项目：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854288999-e9256843-1821-43f9-939e-4bdc583f0433.png)
+![](assets/1783854288999-e9256843-1821-43f9-939e-4bdc583f0433.png)
 
 **打开浏览器访问：**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854313044-426d5482-9ef9-40df-81c3-3981e4cc8a91.png)
+![](assets/1783854313044-426d5482-9ef9-40df-81c3-3981e4cc8a91.png)
 
 另外，Spring Boot框架为我们提供了非常灵活的配置，在可执行jar包的同级目录下新建配置文件：application.properties，并配置以下信息：
 
@@ -182,7 +182,7 @@ server.port=8888
 
 重新启动服务器，然后使用新的端口号访问：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1783854459960-88c0848f-f6cd-4569-a72f-7f7eb6823663.png)
+![](assets/1783854459960-88c0848f-f6cd-4569-a72f-7f7eb6823663.png)
 
 ### SpringBoot的jar包和普通jar包的区别
 Spring Boot 打包成的 JAR 文件与传统的 Java 应用程序中的 JAR 文件相比确实有一些显著的区别，主要体现在`依赖管理`和`可执行性`上。
@@ -201,14 +201,14 @@ Spring Boot 的这些特性使得部署和运行变得更加简单和方便，�
 
 SpringBoot的可执行jar包目录结构：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729577060207-7c7bbf86-12ee-4ea4-9f0a-fb2d44d5774c.png)
+![](assets/1729577060207-7c7bbf86-12ee-4ea4-9f0a-fb2d44d5774c.png)
 
 普通jar包的目录结构：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729576629470-76daa653-7d27-4e33-a1c1-05191c529e6a.png)
+![](assets/1729576629470-76daa653-7d27-4e33-a1c1-05191c529e6a.png)
 
 ## Spring Boot脚手架
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是脚手架
 #### 软件开发中的脚手架
@@ -265,28 +265,28 @@ Visual Studio Code 社区提供了多个插件，如 Spring Boot Extension Pack�
 #### 使用官方脚手架生成Spring Boot项目
 Spring Initializr：[https://start.spring.io](https://start.spring.io)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764849320501-e61a3471-b6b5-4e64-be6d-d1ed3840a325.png)
+![](assets/1764849320501-e61a3471-b6b5-4e64-be6d-d1ed3840a325.png)
 
 点击“GENERATE”后，生成zip压缩包：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728609413133-c4914cdd-0c38-4c71-ab86-7ba13e3c4dd8.png)
+![](assets/1728609413133-c4914cdd-0c38-4c71-ab86-7ba13e3c4dd8.png)
 
 将其解压后的目录结构是一个标准的maven 工程：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728609603462-7f1dd559-7b10-4200-9503-08d76df40ebe.png)
+![](assets/1728609603462-7f1dd559-7b10-4200-9503-08d76df40ebe.png)
 
 #### 将项目放到IDEA当中
 接下来将其导入到IDEA当中：直接将解压后的`sb3-02-use-spring-initializr`拷贝到我们新建的空工程`SpringBoot`下，如图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728636406330-1f5945e3-d3d7-4c2c-b9e8-dea3be89ccbf.png)
+![](assets/1728636406330-1f5945e3-d3d7-4c2c-b9e8-dea3be89ccbf.png)
 
 打开IDEA工具，你会看到如下图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728637409850-6f7b13f1-b98d-4b11-9f17-ba5fac3112f3.png)
+![](assets/1728637409850-6f7b13f1-b98d-4b11-9f17-ba5fac3112f3.png)
 
 注意：如果`pom.xml`文件的图标颜色不是蓝色，而是橘色，需要在`pom.xml`文件上右键，选择：add as maven project。这样`pom.xml`文件的图标就会变为蓝色了。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728643539990-d4e9061c-1e9e-4b3c-a21a-b2604f165f5b.png)
+![](assets/1728643539990-d4e9061c-1e9e-4b3c-a21a-b2604f165f5b.png)
 
 #### 脚手架生成的pom.xml文件
 
@@ -351,34 +351,34 @@ Spring Initializr：[https://start.spring.io](https://start.spring.io)
 可以看到脚手架生成的`pom.xml`文件的内容和我们手动创建Spring Boot项目的`pom.xml`文件是一样的。
 
 #### 脚手架生成的Spring Boot项目的结构
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764849763329-254ba947-63ce-492a-a5c3-2ebaf9e30762.png)
+![](assets/1764849763329-254ba947-63ce-492a-a5c3-2ebaf9e30762.png)
 
 请仔细阅读上图来学习Spring Boot项目结构。
 
 #### 编写controller并测试
 新建controller包，并新建HelloController类，如下图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764850088811-df79e223-3ce4-45a0-abb6-551ecb03d1e6.png)
+![](assets/1764850088811-df79e223-3ce4-45a0-abb6-551ecb03d1e6.png)
 
 **<font style="color:#DF2A3F;">重点：默认情况下，SpringBoot项目只扫描主入口程序所在目录以及子目录，因此创建的Controller类要求放在主入口程序的同级目录下或子目录下。其他位置默认情况下扫描不到。</font>**
 
 启动应用并访问：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728644098279-12a20878-eb1f-4203-b051-d01b95f79c21.png)
+![](assets/1728644098279-12a20878-eb1f-4203-b051-d01b95f79c21.png)
 
 ### 使用IDEA工具的脚手架插件
  IDEA工具自带了Spring Boot脚手架的插件，使用它会更加的方便，让我们来操作一下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764850264085-fef23e31-9422-487c-b978-bcc84c110bf7.png)
+![](assets/1764850264085-fef23e31-9422-487c-b978-bcc84c110bf7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764850311614-a10e39bc-7c91-45e4-b0f5-1478b5c0f8c9.png)
+![](assets/1764850311614-a10e39bc-7c91-45e4-b0f5-1478b5c0f8c9.png)
 
 编写控制器，启动服务器测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1728716401724-8808d893-408c-4b1e-9e14-70d96ff461fe.png) 
+![](assets/1728716401724-8808d893-408c-4b1e-9e14-70d96ff461fe.png) 
 
 ## 为何以继承方式引入SpringBoot
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 提出疑问
 以前我们在开发项目时，需要什么，引入对应的依赖就行，比如我们需要连接mysql数据，则引入mysql驱动的依赖，如下：
@@ -433,11 +433,11 @@ Spring Initializr：[https://start.spring.io](https://start.spring.io)
 ### 原理揭晓
 通过源码来分析一下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729322787542-83e28268-e350-4a0d-878d-b14d556588d8.png)
+![](assets/1729322787542-83e28268-e350-4a0d-878d-b14d556588d8.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729322856005-03b2b68d-b933-4fd2-ad79-dd7c98b3c47f.png)
+![](assets/1729322856005-03b2b68d-b933-4fd2-ad79-dd7c98b3c47f.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729322894485-d1bbdc9e-b225-4aa7-aee1-05b357e56777.png)
+![](assets/1729322894485-d1bbdc9e-b225-4aa7-aee1-05b357e56777.png)
 
 通过上图源码可以看到Spring Boot预先对开发中需要用到的依赖进行了版本的统一管理。我们需要和SpringBoot框架共享这个构建配置。因此官方推荐使用继承的方式引入SpringBoot框架。
 
@@ -480,7 +480,7 @@ Spring Boot 框架的一个重要特性就是简化了项目依赖管理。它�
 </dependency>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729325886312-d3c4456c-5703-4982-9fc6-d3cd652ed1b9.png)
+![](assets/1729325886312-d3c4456c-5703-4982-9fc6-d3cd652ed1b9.png)
 
 这样做就是不采用SpringBoot指定版本的依赖：
 
@@ -492,10 +492,10 @@ Spring Boot 框架的一个重要特性就是简化了项目依赖管理。它�
 </dependency>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729325956226-6f579f96-4e12-4c6b-99bc-dab8c044b9d4.png)
+![](assets/1729325956226-6f579f96-4e12-4c6b-99bc-dab8c044b9d4.png)
 
 ## Starter-启动器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在 Spring Boot 中，启动器（Starter）本质上是一个简化依赖管理的概念。
 
@@ -528,7 +528,7 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 
 当你添加这个依赖时，Spring Boot 会处理所有必要的细节，包括添加 Spring MVC 和 Tomcat 作为嵌入式 Servlet 容器，并且根据类路径上的内容进行适当的自动配置。如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729327501374-2bf74e3a-cbc8-4c66-b206-dd38fec8a251.png)
+![](assets/1729327501374-2bf74e3a-cbc8-4c66-b206-dd38fec8a251.png)
 
 这就是 Spring Boot 启动器的基本实现原理，它简化了依赖管理，让开发者能够更专注于业务逻辑的实现。
 
@@ -537,7 +537,7 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 2. 在非 SpringBoot 项目中也可以使用。在普通的 Spring 项目中也可以使用启动器。
 3. 启动器是独立的 Maven 项目，**<font style="color:#DF2A3F;">它没有继承 springboot</font>**。每个启动器中的子依赖的版本都是启动器自己管理的（自己管理的意思是：程序员人工管理的，人工保证依赖的版本）。但启动器本身的版本是由 springboot 项目管理的。可以通过下图看到每个启动器管理自己子依赖版本。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764854194840-c0179cd0-1f0a-456f-be29-72da44212570.png)
+![](assets/1764854194840-c0179cd0-1f0a-456f-be29-72da44212570.png)
 
 4. 当然，一个启动器，可以关联依赖其他启动器。不要把它想的太高端，就把一个启动器当做一个依赖就行了。和引入 mysql 驱动没啥区别。
 5. 启动器中的子依赖的每一个版本是人工管理的，这个怎么理解？
@@ -550,13 +550,13 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
             4. **被其他项目`import`** - 设计目的就是被引用
     3. SpringBoot 的 BOM 是：`spring-boot-dependencies-3.5.8.pom`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764856415812-4fe0aa55-158d-4d13-8cc3-6b39aba3a347.png)
+![](assets/1764856415812-4fe0aa55-158d-4d13-8cc3-6b39aba3a347.png)
 
     4. 启动器开发者是如何进行人工管理子依赖版本的？
         1. 比如启动器的开发人员正在开发的 web 启动器的版本是：`spring-boot-starter-web-3.5.8`
         2. 那么他们就会去 `spring-boot-dependencies-3.5.8.pom`中找子依赖的版本。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764857180195-efc3654a-5132-4995-8139-a065cb58caec.png)
+![](assets/1764857180195-efc3654a-5132-4995-8139-a065cb58caec.png)
 
 6. 启动器中子依赖的版本如果和 SpringBoot 的 BOM 中的依赖版本不一致，**<font style="color:#DF2A3F;">以 BOM 中的版本为准</font>**。
 7. 启动器中子依赖不一定在 SpringBoot 的 BOM 中都存在！！
@@ -584,33 +584,33 @@ Spring Boot 的启动器本质上就是一组预定义的依赖集合，它们�
 #### 官方提供的启动器
 启动器命名特点：spring-boot-starter-*
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729328350698-5231f924-4ae0-447b-a1af-f2c25e4f8440.png)
+![](assets/1729328350698-5231f924-4ae0-447b-a1af-f2c25e4f8440.png)
 
 #### 非官方的启动器
 启动器命名特点：*-spring-boot-starter
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729328504925-f0aa6730-ee7f-4a1d-85f9-3d2c9075318f.png)
+![](assets/1729328504925-f0aa6730-ee7f-4a1d-85f9-3d2c9075318f.png)
 
 ## Spring Boot核心注解
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 创建一个新的模块，来学习Spring Boot核心注解：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729564104331-5d4976ae-092d-405e-a94b-e69daaae31e6.png)
+![](assets/1729564104331-5d4976ae-092d-405e-a94b-e69daaae31e6.png)
 
 只加入web启动器。
 
 ### @SpringBootApplication注解
 Spring Boot的主入口程序被`@SpringBootApplication`注解标注，可见这个注解的重要性，查看它的源码：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729563192417-c03008ef-81f9-4741-ad09-42d49a4b2cc9.png)
+![](assets/1729563192417-c03008ef-81f9-4741-ad09-42d49a4b2cc9.png)
 
 可以看出这个注解属于`组合注解`。拥有`@SpringBootConfiguration`、`@EnableAutoConfiguration`、`@ComponentScan`的功能。
 
 ### @SpringBootConfiguration注解
 @SpringBootConfiguration注解的源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729563436496-752f56df-52aa-404b-bf83-c122a06f1312.png)
+![](assets/1729563436496-752f56df-52aa-404b-bf83-c122a06f1312.png)
 
 可以看到这个注解的被`@Configuration`标注，说明`主入口`程序是一个配置类。也就是说主入口中的方法可以被`@Bean`注解标注，被`@Bean`注解的标注的方法会被Spring容器自动调用，并且将该方法的返回对象纳入IoC容器的管理。测试一下：
 
@@ -633,7 +633,7 @@ public class Sb305CoreApplication {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729564458157-1d953623-9405-4577-8fa4-ed955038be77.png)
+![](assets/1729564458157-1d953623-9405-4577-8fa4-ed955038be77.png)
 
 通过测试我们也认证了这一点：`SpringBoot主入口类实际上就是一个配置类`。
 
@@ -720,7 +720,7 @@ spring.datasource.password=123456
 因此被`@SpringBootApplication`注解标注之后，会启动组件扫描功能，扫描的包是`主入口程序所在包及子包`，因此如果一个bean要纳入IoC容器的管理则必须放到主入口程序所在包及子包下。放到主入口程序所在包之外的话，扫描不到。测试一下：
 
 #### 扫描到
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764858589593-bb48fb45-9a27-4e14-9f48-a52218db3661.png)
+![](assets/1764858589593-bb48fb45-9a27-4e14-9f48-a52218db3661.png)
 
 `HelloController`代码如下：
 
@@ -736,10 +736,10 @@ public class HelloController {
 
 启动服务器测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729566015788-bfbce42f-90b2-48cf-b583-4490db6da625.png)
+![](assets/1729566015788-bfbce42f-90b2-48cf-b583-4490db6da625.png)
 
 #### 扫描不到
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764858605501-aa8f51c9-f79c-4957-a569-6f61242b5710.png)
+![](assets/1764858605501-aa8f51c9-f79c-4957-a569-6f61242b5710.png)
 
 可以看到`UserController`没有在`sb305core`包下。
 
@@ -757,7 +757,7 @@ public class UserController {
 
 启动服务器测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729566187896-1d4053bd-d5da-4fd4-a243-ebd80388ac17.png)
+![](assets/1729566187896-1d4053bd-d5da-4fd4-a243-ebd80388ac17.png)
 
 通过测试得知`UserController`没有被纳入IoC容器的管理。
 
@@ -769,16 +769,16 @@ public class UserController {
 `@SpringBootApplication(scanBasePackages = "com")`
 
 ## Spring Boot的单元测试
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 不使用单元测试怎么调用service
 #### 创建模块
 使用脚手架创建sb3-06-test模块，不添加任何启动器：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764858731937-5eeb3907-ce7b-4144-8ef0-ab6893b79e81.png)
+![](assets/1764858731937-5eeb3907-ce7b-4144-8ef0-ab6893b79e81.png)
 
 #### 编写service
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764858745928-2be537af-fd1c-4ddd-8392-e49fd0579dd9.png)
+![](assets/1764858745928-2be537af-fd1c-4ddd-8392-e49fd0579dd9.png)
 
 ```java
 package com.jkweilai.sb306test.service.impl;
@@ -810,7 +810,7 @@ public class Sb306TestApplication {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729581624703-aa5dfd5f-1a61-48a9-bce3-9d3d615913e5.png)
+![](assets/1729581624703-aa5dfd5f-1a61-48a9-bce3-9d3d615913e5.png)
 
 这种方式就是手动获取Spring上下文对象`ConfigurableApplicationContext`，然后调用getBean方法从Spring容器中获取service对象，然后调用方法。
 
@@ -820,7 +820,7 @@ public class Sb306TestApplication {
 
 在使用脚手架创建Spring Boot项目时，为我们生成了单元测试类，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764858829335-de2fae33-630c-4d81-8a34-071382d88988.png)
+![](assets/1764858829335-de2fae33-630c-4d81-8a34-071382d88988.png)
 
 当然，如果要使用单元测试，需要引入单元测试启动器，如果使用脚手架创建SpringBoot项目，这个test启动器会自动引入：
 
@@ -865,10 +865,10 @@ class Sb306TestApplicationTests {
 
 测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729582782987-88067365-fba6-4240-b704-b2f710a96647.png)
+![](assets/1729582782987-88067365-fba6-4240-b704-b2f710a96647.png)
 
 ## 外部化配置
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是外部化配置
 外部化配置是指：将`配置信息`存储在`应用程序代码`之外的地方（不把配置打到 jar 包/war 包中，就是外部化配置）。这样`配置信息`可以独立于代码进行管理。这样方便了配置的修改，并且修改后不需要重新编译代码，也不需要重新部署项目。
@@ -945,7 +945,7 @@ java -jar sb3-01-first-web-1.0-SNAPSHOT.jar --spring.config.location=file:///E:\
 
 使用脚手架创建SpringBoot项目，不添加任何启动器：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729589121331-13dc38dc-a34f-413f-963d-d1833df9686d.png)
+![](assets/1729589121331-13dc38dc-a34f-413f-963d-d1833df9686d.png)
 
 在`resources/application.properties`文件中进行如下配置：
 
@@ -993,7 +993,7 @@ class Sb307ExternalConfigApplicationTests {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729648496732-56988017-05c1-4d2c-9d72-6b88bca91656.png)
+![](assets/1729648496732-56988017-05c1-4d2c-9d72-6b88bca91656.png)
 
 使用@Value注解时也可以指定默认值，当指定默认值时，如果配置文件中没有指定配置值，则采用默认值。
 
@@ -1024,7 +1024,7 @@ public class UserService {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729648777588-90155042-3924-4126-b610-3e201ced970a.png)
+![](assets/1729648777588-90155042-3924-4126-b610-3e201ced970a.png)
 
 当然，如果配置文件进行了相关的配置，则不会采用默认值，修改配置文件`application.properties`：
 
@@ -1037,7 +1037,7 @@ myapp.password=888888
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729648891492-48293951-3910-4180-8ace-c2741dc0b378.png)
+![](assets/1729648891492-48293951-3910-4180-8ace-c2741dc0b378.png)
 
 **<font style="color:#DF2A3F;">另外，使用 </font>`@Value`<font style="color:#DF2A3F;">注解也可以读取系统的环境变量，例如 windows 系统有一个环境变量 </font>`APP_KEY`<font style="color:#DF2A3F;">，那么使用 </font>`@Value("${APP_KEY}")`<font style="color:#DF2A3F;">是可以读取到的。但配置文件 </font>`APP_KEY`<font style="color:#DF2A3F;">之后，一定要重启 windows 系统才行。 </font>**
 
@@ -1126,13 +1126,13 @@ myapp:
 
 + `|`      将文本写到这个符号的下层，会自动保留格式。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764911738962-23784ede-1206-4272-aa19-93950ba84bdb.png)
+![](assets/1764911738962-23784ede-1206-4272-aa19-93950ba84bdb.png)
 
 **第三：**换行变空格
 
 + `>`     将文本写到这个符号的下层，内容中换行会自动变成空格。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764911715905-473c2f95-77ee-4c93-8871-d7a951af446f.png)
+![](assets/1764911715905-473c2f95-77ee-4c93-8871-d7a951af446f.png)
 
 **第四：**文档切割
 
@@ -1157,11 +1157,11 @@ myapp:
 
 一定要把`resources/config`目录下`application.properties`名字修改为`application2.properties`，这样Spring Boot才会解析`resources/config/application.yml`。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729654743068-a014695d-b7ea-42fe-91f8-0ea230bcb7d3.png)
+![](assets/1729654743068-a014695d-b7ea-42fe-91f8-0ea230bcb7d3.png)
 
 运行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729654822036-0c4b5c28-1c39-41c7-9321-03225aa3ec7a.png)
+![](assets/1729654822036-0c4b5c28-1c39-41c7-9321-03225aa3ec7a.png)
 
 ### 配置文件合并
 一个项目中所有的配置全部编写到`application.properties`文件中，会导致配置臃肿，不易维护，有时我们会将配置编写到不同的文件中，例如：`application-mysql.properties`专门配置mysql的信息，`application-redis.properties`专门配置redis的信息，最终将两个配置文件合并到一个配置文件中。
@@ -1215,7 +1215,7 @@ public class UserServiceMulti {
 
 运行测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729662602259-3ebb69e9-600a-4b5e-9536-30814ce5d19d.png)
+![](assets/1729662602259-3ebb69e9-600a-4b5e-9536-30814ce5d19d.png)
 
 #### yaml文件
 `application-mysql.yml`
@@ -1249,7 +1249,7 @@ spring:
 
 运行测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729663359961-e28ba636-6675-4e87-86a3-375859017754.png)
+![](assets/1729663359961-e28ba636-6675-4e87-86a3-375859017754.png)
 
 ### 多环境切换
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1378,7 +1378,7 @@ public class AppBean {
 
 1. 被绑定的bean，需要使用`@ConfigurationProperties(prefix = "app")`注解进行标注，prefix用来指定前缀，哪个是前缀，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729667789270-8c85788b-8b00-4d17-bbab-5f87b9a68103.png)
+![](assets/1729667789270-8c85788b-8b00-4d17-bbab-5f87b9a68103.png)
 
 配置文件中的`name`、`age`、`email`要和bean对象的属性名`name`、`age`、`email`对应上。（属性名相同）
 
@@ -1390,7 +1390,7 @@ public class AppBean {
 
 编写测试程序，将bean对象输出，结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729668174305-f203b7f0-9ed2-435a-8c89-0f385cc6f50b.png)
+![](assets/1729668174305-f203b7f0-9ed2-435a-8c89-0f385cc6f50b.png)
 
 #### @Configuration注解
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1436,11 +1436,11 @@ public class AppBean {
 
 运行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729671038234-ecf76053-a6d2-4100-8942-cf246e71397c.png)
+![](assets/1729671038234-ecf76053-a6d2-4100-8942-cf246e71397c.png)
 
 我们把这个Bean对象的类名打印一下看看：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764859292118-89926acf-071e-4220-9193-463bf5c1567a.png)
+![](assets/1764859292118-89926acf-071e-4220-9193-463bf5c1567a.png)
 
 可以发现底层实际上创建了`AppBean`的代理对象`AppBean$$SpringCGLIB`。
 
@@ -1459,7 +1459,7 @@ public class AppBean {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764859318989-b191024f-a0ba-45ef-98bd-6456a84bf8a9.png)
+![](assets/1764859318989-b191024f-a0ba-45ef-98bd-6456a84bf8a9.png)
 
 #### 绑定嵌套bean
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1588,7 +1588,7 @@ public class Address {
 
 执行测试程序，结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764859348029-b1a2b1e9-a275-45fa-bb84-9fe4b1684dc1.png)
+![](assets/1764859348029-b1a2b1e9-a275-45fa-bb84-9fe4b1684dc1.png)
 
 #### `@EnableConfigurationProperties与@ConfigurationPropertiesScan`
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1630,7 +1630,7 @@ public class Sb307ExternalConfigApplication {
 
 运行测试程序，执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764859369700-e1ff53bb-cca8-4613-b8ac-50cf12bab692.png)
+![](assets/1764859369700-e1ff53bb-cca8-4613-b8ac-50cf12bab692.png)
 
 #### 将配置赋值到Bean的Map/List/Array属性上
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1802,7 +1802,7 @@ vips:
 
 `编写测试程序，执行结果如下：`
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729680626317-8b45a7b3-9117-47da-ac28-f153ac4d3d49.png)
+![](assets/1729680626317-8b45a7b3-9117-47da-ac28-f153ac4d3d49.png)
 
 #### 将配置绑定到第三方对象
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1895,7 +1895,7 @@ public class ApplicationConfig {
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729674936611-e86b3cad-c910-4f00-bb9f-8d5f976f8d94.png)
+![](assets/1729674936611-e86b3cad-c910-4f00-bb9f-8d5f976f8d94.png)
 
 #### 指定数据来源
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -1974,7 +1974,7 @@ public class Group {
 
 编写测试程序，测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729681829431-7e25af75-4618-410a-a5c7-d377c53683d9.png)
+![](assets/1729681829431-7e25af75-4618-410a-a5c7-d377c53683d9.png)
 
 ### @ImportResource注解
 **<font style="color:#DF2A3F;">知识点列表：</font>**
@@ -2055,7 +2055,7 @@ class Sb307ExternalConfigApplicationTests {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729683600179-80efe94a-9aca-4959-a6ee-af938bb4fc61.png)
+![](assets/1729683600179-80efe94a-9aca-4959-a6ee-af938bb4fc61.png)
 
 因此，项目中如果有类似于Spring的这种xml配置文件，要想纳入IoC容器管理，需要在入口类上使用`@ImportResource("classpath:applicationContext.xml")`注解即可。
 
@@ -2111,7 +2111,7 @@ public class SomeBean {
 通过这种方式，你可以根据环境的不同灵活地配置你的应用程序。`Environment`是一个非常有用的工具，它可以帮助你管理各种类型的配置信息，并根据不同的运行时条件做出相应的调整。
 
 ## Spring Boot中如何进行AOP的开发
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Spring Boot AOP概述
 Spring Boot的AOP编程和Spring框架中AOP编程的唯一区别是：引入依赖的方式不同。其他内容完全一样。Spring Boot中AOP编程需要引入aop启动器：
@@ -2124,7 +2124,7 @@ Spring Boot的AOP编程和Spring框架中AOP编程的唯一区别是：引入依
 </dependency>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729734178510-707a3d64-caf6-407d-ba2b-9633f218c0ed.png)
+![](assets/1729734178510-707a3d64-caf6-407d-ba2b-9633f218c0ed.png)
 
 可以看到，当引入`aop启动器`之后，会引入`aop依赖`和`aspectj依赖`。
 
@@ -2270,31 +2270,31 @@ class Sb308AopApplicationTests {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729740697956-e1295869-318a-4a47-b9e4-84c05ad3a9dd.png)
+![](assets/1729740697956-e1295869-318a-4a47-b9e4-84c05ad3a9dd.png)
 
 **注意：在 springboot 中启用了 AOP 的自动配置，也就是说：**`**@EnableAspectJAutoProxy**`**注解是自动启用的。该注解有 proxyTargetClass 属性，默认为 false（JDK动态代理），但 Spring Boot 的自动配置会通过 **`**spring.aop.proxy-target-class**`** 属性将其覆盖为 true，所以实际使用的是CGLIB代理。**
 
 ## 整合持久层框架MyBatis
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 准备数据库表及数据
 创建数据库：springboot
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729050319150-d942131f-2eb9-4baa-870f-3d15f4cd7479.png)
+![](assets/1729050319150-d942131f-2eb9-4baa-870f-3d15f4cd7479.png)
 
 使用IDEA工具自带的mysql插件来完成表的创建和数据的准备：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729050185616-731cbd39-267f-45e1-81f3-1f07d621c514.png)
+![](assets/1729050185616-731cbd39-267f-45e1-81f3-1f07d621c514.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729050390076-57de6c2a-36c7-402f-8bc3-e4e4cb0d50f3.png)
+![](assets/1729050390076-57de6c2a-36c7-402f-8bc3-e4e4cb0d50f3.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729050451224-c17b4676-0020-418d-80f9-f24738427fc6.png)
+![](assets/1729050451224-c17b4676-0020-418d-80f9-f24738427fc6.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729051111940-4a591196-a5d9-48c2-83b7-94d858595561.png)
+![](assets/1729051111940-4a591196-a5d9-48c2-83b7-94d858595561.png)
 
 表创建成功后，为表准备数据，如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729051234644-3deae02b-9aec-4017-8dbc-5f3337c5c179.png)
+![](assets/1729051234644-3deae02b-9aec-4017-8dbc-5f3337c5c179.png)
 
 **或者直接执行 SQL 脚本：**
 
@@ -2314,11 +2314,11 @@ select * from t_vip;
 ### 创建SpringBoot项目
 使用脚手架创建Spring Boot项目
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764859671173-a0a919e2-3fbf-4d5c-9ca7-d6f6d844011f.png)
+![](assets/1764859671173-a0a919e2-3fbf-4d5c-9ca7-d6f6d844011f.png)
 
 引入mysql驱动以及mybatis的启动器
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729049442355-3e02c359-f9a7-4afb-93ec-0a314475c882.png)
+![](assets/1729049442355-3e02c359-f9a7-4afb-93ec-0a314475c882.png)
 
 依赖如下：
 
@@ -2499,21 +2499,21 @@ public interface VipMapper {
 
 安装`MyBatisX`插件，该插件可以根据我们编写的`VipMapper`接口自动生成mapper的XML配置文件。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729132285817-67182b8c-487e-4ef5-b061-da4b12174489.png)
+![](assets/1729132285817-67182b8c-487e-4ef5-b061-da4b12174489.png)
 
 然后在`VipMapper`接口上：alt+enter
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764860020514-4b4abe00-5f98-4e8b-aa21-d642310a0b8e.png)
+![](assets/1764860020514-4b4abe00-5f98-4e8b-aa21-d642310a0b8e.png)
 
 生成`mapper of xml`：需要选择一个生成的位置
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729132515796-a056a2c3-e464-4c6e-bf8c-c1a876e36b80.png)
+![](assets/1729132515796-a056a2c3-e464-4c6e-bf8c-c1a876e36b80.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729132546447-714f679f-9b8c-4482-9e8d-d1c7e525a3c5.png)
+![](assets/1729132546447-714f679f-9b8c-4482-9e8d-d1c7e525a3c5.png)
 
 接下来，你会看到Mapper接口中方法报错了，可以在错误的位置上使用`alt+enter`，选择`Generate statement`：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729132763164-68d5a9b0-76ea-43fb-b89d-01050e82c4e6.png)
+![](assets/1729132763164-68d5a9b0-76ea-43fb-b89d-01050e82c4e6.png)
 
 这个时候在mapper的xml配置文件中便生成了对应的配置。
 
@@ -2544,7 +2544,7 @@ public interface VipMapper {
 ### 添加Mapper的扫描
 在Spring Boot的入口程序上添加如下的注解，来完成`VipMapper`接口的扫描：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764860078496-72abb68d-2a4d-46a2-be4f-0a36d78e8ab9.png)
+![](assets/1764860078496-72abb68d-2a4d-46a2-be4f-0a36d78e8ab9.png)
 
 ### 告诉MyBatis框架MapperXML文件的位置
 在`application.properties`配置文件中进行如下配置：
@@ -2589,17 +2589,17 @@ public class Sb305SpringbootMybatisApplication {
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729135284617-032c08b9-07f8-4d73-ba82-4529aac1f2fb.png)
+![](assets/1729135284617-032c08b9-07f8-4d73-ba82-4529aac1f2fb.png)
 
 测试结果中可以看到`cardNumber`属性没有赋值成功，原因是：表中的字段名叫做`card_number`，和实体类`Vip`的属性名`cardNumber`对应不上。解决办法两个：
 
 + **第一种方式：查询语句使用as关键字起别名，让查询结果列名和实体类的属性名对应上。**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764860129838-4fc2cced-d930-4e2a-970d-004512e69628.png)
+![](assets/1764860129838-4fc2cced-d930-4e2a-970d-004512e69628.png)
 
 再次测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729135540950-be358277-5da0-4c5d-868f-075cd2ed8ea0.png)
+![](assets/1729135540950-be358277-5da0-4c5d-868f-075cd2ed8ea0.png)
 
 + **第二种方式：通过配置自动映射**
 
@@ -2617,11 +2617,11 @@ map-underscore-to-camel-case 这个配置项的作用就是在查询结果映射
 
 mapper的xml文件中的sql语句仍然使用`*`的方式：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764860151877-f791d6db-6e8d-4535-ab36-81cb31c71b06.png)
+![](assets/1764860151877-f791d6db-6e8d-4535-ab36-81cb31c71b06.png)
 
 测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729135946867-e2f2fda6-25fe-430c-af38-0831056571c9.png)
+![](assets/1729135946867-e2f2fda6-25fe-430c-af38-0831056571c9.png)
 
 ### 测试其他方法是否正常
 测试程序如下：
@@ -2676,7 +2676,7 @@ public class Sb305SpringbootMybatisApplication {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729136373779-97569876-0b74-4774-b306-a6bbc838462e.png)
+![](assets/1729136373779-97569876-0b74-4774-b306-a6bbc838462e.png)
 
 到此为止，我们已经完成了Spring Boot整合MyBatis的操作。
 
@@ -2710,7 +2710,7 @@ logging.level.com.jkweilai.demo.mapper=DEBUG
 2. **Lombok 只在编译阶段起作用，因此不影响程序的执行效率。**
 3. **可以通过查看字节码，看看 Lombok 都帮我们生成了什么。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 Lombok 是一个 Java 库，它可以通过注解的方式减少 Java 代码中的样板代码。Lombok 自动为你生成构造函数、getter、setter、equals、hashCode、toString 方法等，从而避免了手动编写这些重复性的代码。这不仅减少了出错的机会，还让代码看起来更加简洁。
 
@@ -2908,7 +2908,7 @@ public class Test {
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729148006400-a32df299-5efe-49b7-82e4-34a7a23b4b88.png)
+![](assets/1729148006400-a32df299-5efe-49b7-82e4-34a7a23b4b88.png)
 
 **以下的注解可以自行测试：**
 
@@ -2971,7 +2971,7 @@ public class CustomerTest {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729219457643-9a89e6b4-bc3c-4a3a-b456-462574324d7d.png)
+![](assets/1729219457643-9a89e6b4-bc3c-4a3a-b456-462574324d7d.png)
 
 可以查看一下字节码，你会发现，@Value注解的作用只会生成：全参数构造方法、getter方法、hashCode、equals、toString方法。（没有setter方法。）
 
@@ -3059,7 +3059,7 @@ public class Person {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764939369776-ceb92250-25a2-4511-b955-7dc78218af2d.png)
+![](assets/1764939369776-ceb92250-25a2-4511-b955-7dc78218af2d.png)
 
 #### @Builder
 `@Builder`注解可以帮我们生成建造者模式的代码。
@@ -3099,7 +3099,7 @@ public class Person {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764939437424-40cb14ff-af28-459d-8674-bef1b04ac985.png)
+![](assets/1764939437424-40cb14ff-af28-459d-8674-bef1b04ac985.png)
 
 #### @Singular
 @Singular注解是辅助@Builder注解的。
@@ -3141,7 +3141,7 @@ public class Person {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764939641595-91256ba4-3e6c-44b2-bbfd-329c66c58785.png)
+![](assets/1764939641595-91256ba4-3e6c-44b2-bbfd-329c66c58785.png)
 
 #### @Slf4j
 `@Slf4j`注解可以帮助我们在类中生成一个专门记录日志的常量：`log`。我们直接用就行，很方便。
@@ -3175,38 +3175,38 @@ public class LombokLog {
 ```
 
 ## MyBatis逆向生成
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 MyBatis逆向工程：使用IDEA插件可以根据数据库表的设计逆向生成MyBatis的Mapper接口 与 MapperXML文件。
 
 ### 安装插件`free mybatis tools`
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729234849712-989025f9-e324-45c0-a126-48ea9186582b.png)
+![](assets/1729234849712-989025f9-e324-45c0-a126-48ea9186582b.png)
 
 ### 在IDEA中配置数据源
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729234975933-38892ecf-5c92-4626-904b-223426f8f026.png)
+![](assets/1729234975933-38892ecf-5c92-4626-904b-223426f8f026.png)
 
 ### 创建数据库，创建表，准备数据
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729235029429-c3c14165-a775-45e5-a4b8-d9ca303c4a95.png)
+![](assets/1729235029429-c3c14165-a775-45e5-a4b8-d9ca303c4a95.png)
 
 ### 使用脚手架创建SpringBoot项目
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764860374189-0473287e-b071-4f15-a30a-39f3cd29f95b.png)
+![](assets/1764860374189-0473287e-b071-4f15-a30a-39f3cd29f95b.png)
 
 添加依赖：mybatis依赖、mysql驱动、Lombok库
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729235310734-659b79b7-df95-4157-b405-9c0c316f754b.png)
+![](assets/1729235310734-659b79b7-df95-4157-b405-9c0c316f754b.png)
 
 ### 生成MyBatis代码放到SpringBoot项目中
 在表上右键：Mybatis-Generator
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729235071633-a4d6bd7a-dc80-45c3-bc52-31dfee5789bf.png)
+![](assets/1729235071633-a4d6bd7a-dc80-45c3-bc52-31dfee5789bf.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729235692907-6637331b-7b98-41d0-9ca2-47ed44c9bab0.png)
+![](assets/1729235692907-6637331b-7b98-41d0-9ca2-47ed44c9bab0.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764940615491-c49e1478-68ec-4ae7-b7ca-7d340bb750e9.png)
+![](assets/1764940615491-c49e1478-68ec-4ae7-b7ca-7d340bb750e9.png)
 
 代码生成后，如果在IDEA中看不到，这样做（重新从硬盘加载）：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729235782802-6c83273c-0b14-405f-a1c8-793fc80c9123.png)
+![](assets/1729235782802-6c83273c-0b14-405f-a1c8-793fc80c9123.png)
 
 ### 编写mybatis相关配置
 application.properties属性文件的配置：
@@ -3265,18 +3265,18 @@ public class Sb306SpringbootMybatisGeneratorApplication {
 到此，Spring Boot整合MyBatis结束！
 
 ## 整合SpringMVC（SSM整合）
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 SSM整合：Spring + SpringMVC + MyBatis
 
 Spring Boot项目本身就是基于Spring框架实现的。因此SSM整合时，只需要在整合MyBatis框架之后，引入`web启动器`即可完成SSM整合。
 
 ### 使用脚手架创建SpringBoot项目
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764860440431-1b1d9d22-9df1-4188-9a14-60dc1e5d47af.png)
+![](assets/1764860440431-1b1d9d22-9df1-4188-9a14-60dc1e5d47af.png)
 
 添加依赖：web启动器、mybatis启动器、mysql驱动依赖、lombok依赖
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729239349172-b9c47742-c09f-4f5b-8422-35a7a9dbab72.png)
+![](assets/1729239349172-b9c47742-c09f-4f5b-8422-35a7a9dbab72.png)
 
 ### 使用`free mybatis tool`插件逆向生成MyBatis代码
 将`springboot`数据库中的`t_vip`表逆向生成mybatis代码。这里不再赘述。
@@ -3394,16 +3394,16 @@ public class VipController {
 ### 启动服务器测试
 执行SpringBoot项目主入口的main方法，启动Tomcat服务器：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729242182367-079ee0e1-acaa-42f3-970e-c7ff410b336c.png)
+![](assets/1729242182367-079ee0e1-acaa-42f3-970e-c7ff410b336c.png)
 
 打开浏览器访问：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1729242269867-255b4446-4fae-4788-beb6-fc395155ed61.png)
+![](assets/1729242269867-255b4446-4fae-4788-beb6-fc395155ed61.png)
 
 到此为止，SSM框架就集成完毕了，通过这个集成也可以感觉到SpringBoot简化了SSM三大框架的集成。
 
 ## 自动配置概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 体验自动配置
 Spring Boot 框架的两大核心特性可以概括为“启动器”（Starter）和“自动配置”（Auto-configuration）。
@@ -3771,7 +3771,7 @@ SpringBoot提供了非常多的自动配置类，有的是`web`相关的自动�
 
 `spring-boot-starter`又关联引入了`spring-boot-autoconfigure`。所有的自动配置类都在这里。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731059980138-654ed368-bfc2-42f5-afd5-045d2b2c5762.png)
+![](assets/1731059980138-654ed368-bfc2-42f5-afd5-045d2b2c5762.png)
 
 **<font style="color:#DF2A3F;">注意：这个 jar 包中包含了官方提供的所有自动配置类。除了官方提供的自动配置类，第三方启动器中也包含自己的自动配置类。</font>**
 
@@ -3822,7 +3822,7 @@ public class ThymeleafProperties {}
 
 SpringBoot官方文档当中也有指导，告诉你都有哪些`属性类`，告诉你在`application.properties`中都可以配置哪些东西。默认值都是什么：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731113798084-cbfc2b35-6a1d-42c2-9aec-4ab59806f87d.png)
+![](assets/1731113798084-cbfc2b35-6a1d-42c2-9aec-4ab59806f87d.png)
 
 ### SpringBoot框架提供的条件注解
 如何做到按需加载的，依靠SpringBoot框架中的条件注解来实现的。
@@ -3896,7 +3896,7 @@ public class MyConfig {
 以上程序自行测试！
 
 ## 自动配置实现原理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 自动配置类的三个来源
 1. 以前配置是写在 XML 文件中的，现在的配置都是配置类。一个配置类对应一套配置。springboot 通过加载配置类来加载该配置。
@@ -3912,7 +3912,7 @@ public class MyConfig {
 6. **不管来源是哪个，位置都是一样的**，这是一种约定，都是从 jar 包的 `META-INF/spring`目录下的 `org.springframework.boot.autoconfigure.AutoConfiguration.imports`文件中加载自动配置类。
 
 ### 加载机制：合并所有来源
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764984821891-fe81ca97-fdc3-49e6-8478-20635b149524.png)
+![](assets/1764984821891-fe81ca97-fdc3-49e6-8478-20635b149524.png)
 
 ### SpringBoot 官方提供了 150 多个自动配置类
 1. 当我们导入`spring-boot-starter-web`【web启动器】
@@ -3920,20 +3920,20 @@ public class MyConfig {
 3. 核心启动器导入之后，关联导入了一个jar包：`spring-boot-autoconfigure`
     1. 注意：这个jar包中存放的是springboot框架**<font style="color:#DF2A3F;">官方支持的自动配置类</font>**。如下图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731120167649-5b43660e-d911-4af1-b609-7ba357483cbb.png)
+![](assets/1731120167649-5b43660e-d911-4af1-b609-7ba357483cbb.png)
 
     2. 官方支持的自动配置类有多少个呢，可以通过下图位置查看：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731120316690-38e92299-860c-4f52-8e90-93773af32190.png)
+![](assets/1731120316690-38e92299-860c-4f52-8e90-93773af32190.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731120338604-18c536ab-a98f-4ba7-adf3-10f47f02056d.png)
+![](assets/1731120338604-18c536ab-a98f-4ba7-adf3-10f47f02056d.png)
 
 得知`springBoot.3.5`这个版本共`152`个自动配置类。自动配置类的命名规则是`XxxxAutoConfiguration`。
 
 **<font style="color:#DF2A3F;">提示：哪个自动配置类生效，就代表哪个配置文件生效，那么对应的技术就完成了整合，就可以进行对应技术的开发。</font>**
 
 ### 自动配置实现原理
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764985417738-3e5a53b6-eaec-4801-8fbc-37f2d95f40de.png)
+![](assets/1764985417738-3e5a53b6-eaec-4801-8fbc-37f2d95f40de.png)
 
 ### 加载 150 多个自动配置类的源码分析
 #### 重要的注解
@@ -4215,12 +4215,12 @@ boolean[] match = filter.match(candidates, this.autoConfigurationMetadata);
 **<font style="color:#DF2A3F;">思考：</font>为什么要把 914 个条件放到一个属性文件中？这些条件不应该都在自动配置类上吗？直接通过反射读取 156 个配置类动态获取配置类上的条件不行吗？答案是：不行，原因是效率太低。**
 
 ## Web 中的核心配置类概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 共 27 个自动配置类
 **如果是 web 开发，最终会留下 27 个自动配置类：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765028276659-f02e9956-37a7-4f5f-8f1c-443808c3a385.png)
+![](assets/1765028276659-f02e9956-37a7-4f5f-8f1c-443808c3a385.png)
 
 **分别是：**
 
@@ -4312,11 +4312,11 @@ boolean[] match = filter.match(candidates, this.autoConfigurationMetadata);
 + **配置**：`server.ssl.*`
 
 ## Web自动配置都默认配置了什么
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **查看官方文档：**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731383415638-90d102e9-1fd0-4f31-9736-9e3bef3936d3.png)
+![](assets/1731383415638-90d102e9-1fd0-4f31-9736-9e3bef3936d3.png)
 
 **翻译如下：**
 
@@ -4362,7 +4362,7 @@ boolean[] match = filter.match(candidates, this.autoConfigurationMetadata);
     - **如果 springboot 中没有提供对应的配置，你想扩展怎么办？编写类实现**`**WebMvcConfigurer**`**接口+**`**@Configuration**`** 类，重写对应的方法。**
 
 ## `WebMvcAutoConfiguration 源码解释`
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### WebMvc自动配置是否生效的条件
 
@@ -4422,7 +4422,7 @@ public OrderedFormContentFilter formContentFilter() {
 
 在SpringBoot框架的`WebMvcAutoConfiguration`类中提供了一个内部类：`WebMvcAutoConfigurationAdapter`
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730345630650-62e11666-3e95-4c64-9787-c0b18d083c91.png)
+![](assets/1730345630650-62e11666-3e95-4c64-9787-c0b18d083c91.png)
 
 SpringBoot在这个类`WebMvcAutoConfigurationAdapter`中进行了一系列的Spring MVC相关配置。
 
@@ -4473,13 +4473,13 @@ public interface WebMvcConfigurer {
 
 如果想要改变这些默认配置，应该怎么办呢？看源码：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730353008999-076f3b3f-2a0b-4936-a9f2-5d6cfe88b346.png)
+![](assets/1730353008999-076f3b3f-2a0b-4936-a9f2-5d6cfe88b346.png)
 
 可以看到，该类上有一个注解`@EnableConfigurationProperties({ WebMvcProperties.class, WebProperties.class })`，该注解负责启用配置属性。会将配置文件`application.properties`或`application.yml`中的配置传递到该类中。因此可以通过`application.properties`或`application.yml`配置文件来改变Spring Boot对SpringMVC的默认配置。`WebMvcProperties`和`WebProperties`源码如下： 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730354494823-2adf83a4-aa2a-4fed-a5df-66b156de15c5.png)
+![](assets/1730354494823-2adf83a4-aa2a-4fed-a5df-66b156de15c5.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730354507221-6424a72a-0728-478b-92eb-e52d3d5a6f38.png)
+![](assets/1730354507221-6424a72a-0728-478b-92eb-e52d3d5a6f38.png)
 
 通过以上源码得知要改变SpringBoot对SpringMVC的默认配置，需要在配置文件中使用以下前缀的配置：
 
@@ -4489,13 +4489,13 @@ public interface WebMvcConfigurer {
 ### 一个小小的疑惑
 我们来看一下`WebMvcAutoConfiguration`的生效条件：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730424986145-0d76b7da-06c5-4942-a5f2-3e55f0249c89.png)
+![](assets/1730424986145-0d76b7da-06c5-4942-a5f2-3e55f0249c89.png)
 
 上图红框内表示，要求Spring容器中缺失`WebMvcConfigurationSupport`这个Bean，`WebMvcAutoConfiguration`才会生效。
 
 但是我们来看一下`EnableWebMvcConfiguration`的继承结构：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730425120392-dda2febe-d932-452c-9599-6df5859a2062.png)
+![](assets/1730425120392-dda2febe-d932-452c-9599-6df5859a2062.png)
 
 很明显，`EnableWebMvcConfiguration`就是一个`WebMvcConfigurationSupport`这样的Bean。
 
@@ -4513,7 +4513,7 @@ public interface WebMvcConfigurer {
 **总结：`Adapter` 提供基础配置，并通过 `@Import` 把 `EnableWebMvcConfiguration` 拉进来提供高级配置，两者共同组成 SpringBoot 的默认 MVC 配置。**
 
 ## 自动配置中的静态资源处理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 web站点中的静态资源指的是：js、css、图片、webjars 等。
 
@@ -4529,7 +4529,7 @@ webjars 是：**将前端资源（如jQuery、Bootstrap）打包成Java的JAR包
 
 关于**SpringBoot对静态资源处理的默认配置**，查看`WebMvcAutoConfigurationAdapter`源码，核心源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730356581883-80169fed-c487-4b68-a1f2-70ef95d6c9a6.png)
+![](assets/1730356581883-80169fed-c487-4b68-a1f2-70ef95d6c9a6.png)
 
 对以上源码进行解释：
 
@@ -4584,7 +4584,7 @@ WebJars 是一种将常用的前端库（如 jQuery、Bootstrap、Font Awesome �
 
 WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364165294-a000b7b4-9fdb-4c40-99f5-c47f2f25ad9e.png)
+![](assets/1730364165294-a000b7b4-9fdb-4c40-99f5-c47f2f25ad9e.png)
 
 在官网上可以找到某个webjars的maven依赖，将依赖加入到SpringBoot项目中，例如我们添加vue的依赖：
 
@@ -4598,11 +4598,11 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 
 如下图表示加入成功：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364253405-dc6801f0-6122-49eb-9e77-36ef92668f5b.png)
+![](assets/1730364253405-dc6801f0-6122-49eb-9e77-36ef92668f5b.png)
 
 在jar包列表中也可以看到：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364333436-43d60b44-fb7b-454d-b586-f948930ea146.png)
+![](assets/1730364333436-43d60b44-fb7b-454d-b586-f948930ea146.png)
 
 在SpringBoot中，对WebJars的默认访问规则是：当请求路径是`/webjars/**`，则会去`classpath:/META-INF/resources/webjars/`找。
 
@@ -4610,11 +4610,11 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 
 启动服务器，打开浏览器，访问，测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364535656-fd9fb574-ce9d-4278-96a4-7d71207e1446.png)
+![](assets/1730364535656-fd9fb574-ce9d-4278-96a4-7d71207e1446.png)
 
 和IDEA中的文件对比一下，完全一样则表示测试成功：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364567084-7ac48323-e220-4e10-a4b6-dc5a30ab6955.png)
+![](assets/1730364567084-7ac48323-e220-4e10-a4b6-dc5a30ab6955.png)
 
 ### 关于普通静态资源处理
 **<font style="color:#DF2A3F;">知识点清单：</font>**
@@ -4628,26 +4628,26 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 
 我们可以在项目中分别创建以上4个目录，在4个目录当中放入静态资源，例如4张图片：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364803886-d7b87794-d9b4-45ef-b5c2-3f2e4175675c.png)
+![](assets/1730364803886-d7b87794-d9b4-45ef-b5c2-3f2e4175675c.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730364994809-b6cfb675-1518-4a77-acbd-d8dfa5f4c638.png)
+![](assets/1730364994809-b6cfb675-1518-4a77-acbd-d8dfa5f4c638.png)
 
 然后启动服务器，打开浏览器，访问，测试是否可以正常访问图片：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730365066712-a89265e6-eb88-4306-b95b-bc85d2e72f9d.png)
+![](assets/1730365066712-a89265e6-eb88-4306-b95b-bc85d2e72f9d.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730365080259-ad76485e-b65e-4660-9a70-8cfbc4497383.png)
+![](assets/1730365080259-ad76485e-b65e-4660-9a70-8cfbc4497383.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730365090833-de32f7cc-a61c-4896-b151-4851c8d10bc2.png)
+![](assets/1730365090833-de32f7cc-a61c-4896-b151-4851c8d10bc2.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730365102733-3c375cf4-4bd2-4888-8090-b222a15907d3.png)
+![](assets/1730365102733-3c375cf4-4bd2-4888-8090-b222a15907d3.png)
 
 ### 关于静态资源缓存处理
 **什么是静态资源缓存，谁缓存，有什么用？**
 
 静态资源缓存指的是浏览器的缓存行为，浏览器可以将静态资源（js、css、图片、声音、视频）缓存到浏览器中，只要下一次用户访问同样的静态资源直接从缓存中取，不再从服务器中获取，可以降低服务器的压力，提高用户的体验。而这个缓存策略可以在服务器端程序中进行设置，SpringBoot对静态资源缓存的默认策略就是以下这三行代码：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730365697951-98a6687d-dc95-49fe-bf63-6afac28ac62b.png)
+![](assets/1730365697951-98a6687d-dc95-49fe-bf63-6afac28ac62b.png)
 
 **以上三行代码的解释如下：**
 
@@ -4659,7 +4659,7 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
     - 设置静态资源的 Cache-Control HTTP 响应头，告诉浏览器如何去缓存这些资源。
     - `Cache-Control` HTTP 响应头   是HTTP响应协议的一部分内容。如下图：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730367060571-fb49d8ba-39d5-4a04-9c6b-cbce0add9283.png)
+![](assets/1730367060571-fb49d8ba-39d5-4a04-9c6b-cbce0add9283.png)
 
     - 常见的 Cache-Control 指令包括：
         * **max-age=&lt;seconds&gt;**：资源在指定秒数内被视为新鲜，浏览器直接使用**<font style="color:#DF2A3F;">强</font>**缓存，无需请求服务器（**<font style="color:#DF2A3F;">压根不会和服务器交互</font>**）。
@@ -4679,13 +4679,13 @@ WebJars官网：[https://www.webjars.org/](https://www.webjars.org/)
 ### 静态资源缓存测试
 根据之前源码分析，得知`静态资源缓存`相关的配置应该使用`spring.web.resources.cache`：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730429586708-40337969-1725-4459-879b-2299ab2a4405.png)
+![](assets/1730429586708-40337969-1725-4459-879b-2299ab2a4405.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730429704722-ad0a5409-038f-48f1-9986-809c24f82369.png)
+![](assets/1730429704722-ad0a5409-038f-48f1-9986-809c24f82369.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730429724705-e10888fe-f2aa-4b87-9581-e2641c3e30fd.png)
+![](assets/1730429724705-e10888fe-f2aa-4b87-9581-e2641c3e30fd.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730429747795-51fcc7b3-9dc6-49e3-8cbf-647cfff03b09.png)
+![](assets/1730429747795-51fcc7b3-9dc6-49e3-8cbf-647cfff03b09.png)
 
 在`application.properties`文件中对缓存进行如下的配置：
 
@@ -4703,21 +4703,21 @@ spring.web.resources.add-mappings=true
 
 注意：`cachecontrol.max-age`配置的话，`period`会被覆盖。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730430084806-2086f0b6-646a-4e6a-a39c-8fa8dba74be0.png)
+![](assets/1730430084806-2086f0b6-646a-4e6a-a39c-8fa8dba74be0.png)
 
 启动服务器测试：看看是否在20秒内走缓存，20秒之后是不是就不走缓存了！！！
 
 第一次访问：请求服务器
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730430573829-f3ac9ce5-fe18-4de9-85b8-4489c3799d74.png)
+![](assets/1730430573829-f3ac9ce5-fe18-4de9-85b8-4489c3799d74.png)
 
 第二次访问：20秒内**<font style="color:#DF2A3F;">开启一个新的浏览器窗口</font>**，再次访问，发现走了缓存
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730430633080-eb7ae6d1-fb6a-4bcd-beb4-e5df47d9fdf7.png)
+![](assets/1730430633080-eb7ae6d1-fb6a-4bcd-beb4-e5df47d9fdf7.png)
 
 第三次访问：20秒后**<font style="color:#DF2A3F;">开启一个新的浏览器窗口</font>**，再次访问，发现重新请求服务器
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730430687390-dc5d00f4-9b08-43cd-9ffc-b538dd4f1fb6.png)
+![](assets/1730430687390-dc5d00f4-9b08-43cd-9ffc-b538dd4f1fb6.png)
 
 提示，为什么显示`304`，这是因为这个配置：`spring.web.resources.cache.use-last-modified=true`，浏览器发送了一次验证请求，发现静态资源没有发生变化，最终还是会走缓存的。
 
@@ -4730,23 +4730,23 @@ spring.web.resources.add-mappings=true
 
 测试一下，在`classpath:/static/`目录下新建`index.html`页面：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730422047114-993504b3-e8b2-4570-a789-53d1427bb0be.png)
+![](assets/1730422047114-993504b3-e8b2-4570-a789-53d1427bb0be.png)
 
 启动服务器，测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730422096295-c5fedb9e-df71-4cac-9a24-f2d6da9b071f.png)
+![](assets/1730422096295-c5fedb9e-df71-4cac-9a24-f2d6da9b071f.png)
 
 如果同时在4个静态资源路径下都提供`index.html`，哪个页面会被当做欢迎页呢？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730422239619-ba967027-498c-4f90-a139-c1565c91328d.png)
+![](assets/1730422239619-ba967027-498c-4f90-a139-c1565c91328d.png)
 
 启动服务器，测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730422275754-3b1e145f-f34b-4eac-ae6f-0187eb852282.png)
+![](assets/1730422275754-3b1e145f-f34b-4eac-ae6f-0187eb852282.png)
 
 原因是什么呢？这是因为`classpath:/META-INF/resources/`是数组的首元素，因此先从这个路径下找欢迎页。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730422431137-93db3613-613e-434b-b7b8-c9f1af68636c.png)
+![](assets/1730422431137-93db3613-613e-434b-b7b8-c9f1af68636c.png)
 
 ### favorite icon
 favicon（也称为“收藏夹图标”或“网站图标”）是大多数现代网页浏览器的默认行为之一。当用户访问一个网站时，浏览器通常会尝试从该网站的根目录下载名为 favicon.ico 的文件，并将其用作标签页的图标。
@@ -4755,7 +4755,7 @@ favicon（也称为“收藏夹图标”或“网站图标”）是大多数现�
 
 Spring Boot项目中`favicon.ico`文件应该放在哪里呢？Spring Boot官方是这样说明的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730427556830-9ba1ca93-5b91-477c-af0f-af51ee850b31.png)
+![](assets/1730427556830-9ba1ca93-5b91-477c-af0f-af51ee850b31.png)
 
 这段话翻译为：
 
@@ -4765,18 +4765,18 @@ Spring Boot项目中`favicon.ico`文件应该放在哪里呢？Spring Boot官方
 
 web站点没有提供`favicon.ico`时：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730427725460-6c4062dc-df53-495c-8709-431dd38f2337.png)
+![](assets/1730427725460-6c4062dc-df53-495c-8709-431dd38f2337.png)
 
 我们在[https://www.iconfont.cn/](https://www.iconfont.cn/) （阿里巴巴提供的图标库）上随便找一个图标，然后将图片名字命名为`favicon.ico`，然后将其放到SpringBoot项目的静态资源路径下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730427919469-60975be4-d0d3-43ba-8435-98d9da427282.png)
+![](assets/1730427919469-60975be4-d0d3-43ba-8435-98d9da427282.png)
 
 启动服务器测试：记住（ctrl + F5强行刷新一下，避免影响测试效果）
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730428251364-894a09fe-92fb-408c-89d0-42d8e27b222b.png)
+![](assets/1730428251364-894a09fe-92fb-408c-89d0-42d8e27b222b.png)
 
 ## Web 的手动配置(静态资源处理)
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **手动配置 web 包括两种方式：**
 
@@ -4806,19 +4806,19 @@ spring.web.resources.static-locations=classpath:/static1/,classpath:/static2/
 
 **访问静态资源测试结果如下：**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730433000967-37e76b55-5715-4387-a135-5daacd53a755.png)
+![](assets/1730433000967-37e76b55-5715-4387-a135-5daacd53a755.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730433110267-b2f84e91-6b95-48d3-88d6-acff3dca26cc.png)
+![](assets/1730433110267-b2f84e91-6b95-48d3-88d6-acff3dca26cc.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730433134598-5ac4583f-e7c1-4a8e-a3bb-77e2a3a33ac7.png)
+![](assets/1730433134598-5ac4583f-e7c1-4a8e-a3bb-77e2a3a33ac7.png)
 
 如果访问`dog2.jpg`，就无法访问了：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730433508569-ce398096-8cae-42e3-b6a2-5fe94e2a007a.png)
+![](assets/1730433508569-ce398096-8cae-42e3-b6a2-5fe94e2a007a.png)
 
 但是，存储在`classpath:/META-INF/resources/`目录下的`dog1.jpg`仍然是可以访问的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730433537233-e7fe1330-22d3-4b36-8c43-bbdc9a578f99.png)
+![](assets/1730433537233-e7fe1330-22d3-4b36-8c43-bbdc9a578f99.png)
 
 因此，存储在`classpath:/META-INF/resources/`位置的静态资源会被默认加载，不受手动配置的影响。
 
@@ -4851,19 +4851,19 @@ public class WebConfig implements WebMvcConfigurer {
 
 注意：将`application.properties`文件中之前的所有配置全部注释掉。让其恢复到最原始的默认配置。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730444156893-d646065e-96dc-449c-a8cc-eff70e23594c.png)
+![](assets/1730444156893-d646065e-96dc-449c-a8cc-eff70e23594c.png)
 
 启动服务器进行测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730444208880-ca582b52-a68f-4918-9ead-f342c5ebbf38.png)
+![](assets/1730444208880-ca582b52-a68f-4918-9ead-f342c5ebbf38.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730444226844-d1e40613-8c6c-43a5-95a1-1c0d34d101bb.png)
+![](assets/1730444226844-d1e40613-8c6c-43a5-95a1-1c0d34d101bb.png)
 
 通过测试，我们的配置是生效的。
 
 我们再来看看，默认的配置是否还生效？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730444289901-3304e315-67e2-4d6c-93b8-0db5f48a24a7.png)
+![](assets/1730444289901-3304e315-67e2-4d6c-93b8-0db5f48a24a7.png)
 
 我们可以看到，Spring Boot对Spring MVC的默认自动配置是生效的。
 
@@ -4899,11 +4899,11 @@ public class WebConfig2 {
 
 测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730444971338-0aca22a6-ff00-4644-9e21-2d08765b62e4.png)
+![](assets/1730444971338-0aca22a6-ff00-4644-9e21-2d08765b62e4.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730444986018-554aeccd-a0fd-43d2-9b92-7846fea2415c.png)
+![](assets/1730444986018-554aeccd-a0fd-43d2-9b92-7846fea2415c.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730445003557-89783ce1-fdf7-4b22-873b-0fafdc07ecd2.png)
+![](assets/1730445003557-89783ce1-fdf7-4b22-873b-0fafdc07ecd2.png)
 
 通过了测试，并且以上代码也是在原有配置基础上进行扩展。
 
@@ -4969,12 +4969,12 @@ public class WebConfig2 {
 
 启动服务器，打开浏览器，发送请求[http://localhost:8080/static/dog5.jpg](http://localhost:8080/static/dog5.jpg)，后台执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730445490551-7c8fbe3f-a792-4307-8c46-21a365e0b25d.png)
+![](assets/1730445490551-7c8fbe3f-a792-4307-8c46-21a365e0b25d.png)
 
 这说明拦截器生效。
 
 ## web请求的路径匹配
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在 SpringBoot 的 web 应用中，web 的请求路径仍然支持模糊匹配，默认支持两种主要的路径匹配策略：
 
@@ -5002,10 +5002,10 @@ public String path(HttpServletRequest request, @PathVariable String path){
 
 启动服务器测试，可用：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730472772231-d18e628f-1b62-4757-9299-eaa604344ce6.png)
+![](assets/1730472772231-d18e628f-1b62-4757-9299-eaa604344ce6.png)
 
 ## 内容协商
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对内容协商的理解
 内容协商机制是指服务器根据客户端的请求来决定返回资源的最佳表示形式。
@@ -5102,9 +5102,9 @@ public class User {
 
 **测试：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765110123829-ecd2c8ca-4445-43f4-96c0-2ce8eba59f8d.png)
+![](assets/1765110123829-ecd2c8ca-4445-43f4-96c0-2ce8eba59f8d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765110157978-4af936e5-611a-4725-8d55-12d22ef090b1.png)
+![](assets/1765110157978-4af936e5-611a-4725-8d55-12d22ef090b1.png)
 
 #### 通过请求参数（如 `format`）
 接下来我们使用请求参数的方式，`SpringBoot优先考虑的不是通过请求参数format方式`。如何优先考虑使用`format`方式呢？做如下配置：
@@ -5116,9 +5116,9 @@ spring.mvc.contentnegotiation.favor-parameter=true
 
 测试：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765110575841-9db9f89d-a913-4802-963c-244df980dd33.png)
+![](assets/1765110575841-9db9f89d-a913-4802-963c-244df980dd33.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765110605566-dd3c535b-61b5-4006-b875-0cadaae5a06e.png)
+![](assets/1765110605566-dd3c535b-61b5-4006-b875-0cadaae5a06e.png)
 
 可以看到，现在SpringBoot已经优先考虑使用`请求参数format`方式了。
 
@@ -5131,7 +5131,7 @@ spring.mvc.contentnegotiation.parameter-name=type
 
 再次测试：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765110658054-dd06e2f5-da84-4909-bb69-444445f3726a.png)
+![](assets/1765110658054-dd06e2f5-da84-4909-bb69-444445f3726a.png)
 
 ### HTTP 消息转换器
 #### HttpMessageConverter的理解
@@ -5148,7 +5148,7 @@ WebMvcAutoConfiguration.EnableWebMvcConfiguration extends **DelegatingWebMvcConf
 
 通过断点调试，可以发现默认支持6个HttpMessageConverter，如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730774897755-ad87ddc8-4700-40e4-baee-a28d94000e7a.png)
+![](assets/1730774897755-ad87ddc8-4700-40e4-baee-a28d94000e7a.png)
 
 **这6个**`**HttpMessageConverter**`**作用如下：**
 
@@ -5163,9 +5163,9 @@ WebMvcAutoConfiguration.EnableWebMvcConfiguration extends **DelegatingWebMvcConf
 
 另外，通过以下源码，也可以看到SpringBoot是根据类路径中是否存在某个类，而决定是否添加对应的消息转换器的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730775823305-dfc2b0c5-6ca1-4e8f-902b-506e3d86246d.png)
+![](assets/1730775823305-dfc2b0c5-6ca1-4e8f-902b-506e3d86246d.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730775878229-960b3144-1727-4467-899a-6bd16f6bc965.png)
+![](assets/1730775878229-960b3144-1727-4467-899a-6bd16f6bc965.png)
 
 因此，我们只要引入相关的依赖，让类路径存在某个类，则对应的消息转换器就会被加载。
 
@@ -5210,7 +5210,7 @@ public class Jackson2YamlTest {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730778662876-bf7851a4-1e8e-4d64-9584-443fd71cef7e.png)
+![](assets/1730778662876-bf7851a4-1e8e-4d64-9584-443fd71cef7e.png)
 
 #### 第二步：新增一种媒体类型yaml
 默认支持xml和json两种媒体类型，要支持yaml格式的，需要新增一个yaml媒体类型，在springboot的配置文件中进行如下配置：
@@ -5294,10 +5294,10 @@ public class WebConfig implements WebMvcConfigurer {
 
 启动服务器并测试：http://localhost:8080/detail?type=yaml
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730783005228-fe11e134-539e-4291-a12a-f2f83f9b9705.png)
+![](assets/1730783005228-fe11e134-539e-4291-a12a-f2f83f9b9705.png)
 
 ## SpringBoot整合Thymeleaf
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 传统web应用和前后端分离
 如果你是做前后端分离的项目，这一章节的内容将用不上。
@@ -5306,11 +5306,11 @@ public class WebConfig implements WebMvcConfigurer {
 
 传统的WEB应用（非前后端分离）：浏览器页面上展示成什么效果，后端服务器说了算，这是传统web应用最大的特点。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730789733440-1dc2d749-19c5-4363-b35d-bf6e6008265c.png)
+![](assets/1730789733440-1dc2d749-19c5-4363-b35d-bf6e6008265c.png)
 
 前后端分离的应用：前端是一个独立的系统，后端也是一个独立的系统，后端系统不再负责页面的渲染，后端系统只负责给前端系统提供开放的API接口，后端系统只负责数据的收集，然后将数据以JSON/XML等格式响应给前端系统。前端系统拿到接口返回的数据后，将数据填充到页面上。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730790760614-212e3911-eb37-4dca-88a4-eca6ecd26dba.png)
+![](assets/1730790760614-212e3911-eb37-4dca-88a4-eca6ecd26dba.png)
 
 前后端分离的好处：
 
@@ -5384,7 +5384,7 @@ public class HelloController {
 
 启动服务器，测试地址为：http://localhost:8080/h
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1730792132534-7b9358f0-98ff-43dc-8624-1717683b15aa.png)
+![](assets/1730792132534-7b9358f0-98ff-43dc-8624-1717683b15aa.png)
 
 ### 将路径直接映射到视图
 **<font style="color:#DF2A3F;">在springboot中如何实现：直接将请求路径映射到特定的视图，而不需要编写controller？</font>**
@@ -5413,7 +5413,7 @@ public class WebMvcConfig implements WebMvcConfigurer {
 **前提：**你需要将 `a.html`放到 `classpath:/templates/`目录下。
 
 ## 异常处理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在controller层如果程序出现了异常，并且这个异常未被捕获，springboot提供的异常处理机制将生效。
 
@@ -5429,9 +5429,9 @@ springboot会根据请求头的Accept字段来决定错误的响应格式。
 
 这种机制的好处就是：客户端设备自适应，提高用户的体验。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731424148788-8a9c52cc-7683-479a-a8b8-9075d779bc4e.png)
+![](assets/1731424148788-8a9c52cc-7683-479a-a8b8-9075d779bc4e.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731424190201-4c9b9781-08ae-48f7-8b4a-9956b3b700d7.png)
+![](assets/1731424190201-4c9b9781-08ae-48f7-8b4a-9956b3b700d7.png)
 
 ### SpringMVC的错误处理方案
 **<font style="color:#DF2A3F;">重点：SpringMVC 错误处理方案优先级较高，SpringMVC 错误没有处理的，SpringBoot 处理方案会自动启动。</font>**
@@ -5569,7 +5569,7 @@ server.error.include-message=always
 3. 建议提供`classpath:/templates/error.html`来处理通用错误。
 
 ## 国际化（了解）
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在Spring Boot中实现国际化（i18n）是一个常见的需求，它允许应用程序根据用户的语言和地区偏好显示不同的文本。
 
@@ -5619,18 +5619,18 @@ welcome.message=Bienvenue dans notre application !
 
 **测试1：浏览器默认的语言环境是中文时**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731511421500-651602c6-6dac-418c-9d1e-77c7ae40f463.png)
+![](assets/1731511421500-651602c6-6dac-418c-9d1e-77c7ae40f463.png)
 
 **测试2：将浏览器默认语言环境修改为法文**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731512808484-d61096e2-4d1d-446c-a26f-33c1505d76e4.png)
+![](assets/1731512808484-d61096e2-4d1d-446c-a26f-33c1505d76e4.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731512824927-f649b549-0add-4450-9dc3-9e2a4331c025.png)
+![](assets/1731512824927-f649b549-0add-4450-9dc3-9e2a4331c025.png)
 
 ### 国际化实现原理
 做国际化的自动配置类是：`MessageSourceAutoConfiguration`
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731513242246-ac4e59e3-a1e9-45c3-a346-41ae1b41f658.png)
+![](assets/1731513242246-ac4e59e3-a1e9-45c3-a346-41ae1b41f658.png)
 
 通过以上源码得知，国际化对应的配置前缀是：`spring.message`
 
@@ -5667,7 +5667,7 @@ public class MyController {
 ```
 
 ## 定制web容器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### web服务器切换为jetty
 springboot默认嵌入的web服务器是Tomcat，如何切换到jetty服务器？
@@ -5699,30 +5699,30 @@ springboot默认嵌入的web服务器是Tomcat，如何切换到jetty服务器�
 ### web服务器切换原理
 从哪里可以看出springboot是直接将tomcat服务器嵌入到应用中的呢？看这个类：`ServletWebServerFactoryAutoConfiguration`
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731572949358-481582b6-0e79-4f4c-b556-b1ec3c13882c.png)
+![](assets/1731572949358-481582b6-0e79-4f4c-b556-b1ec3c13882c.png)
 
 以上代码显示嵌入的是3个服务器。但并不是都生效，我们来看一下生效条件：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731573044414-b1cb4767-de21-4897-9d38-36e6382a8581.png)
+![](assets/1731573044414-b1cb4767-de21-4897-9d38-36e6382a8581.png)
 
 生效条件是，看类路径当中是否有对应服务器相关的类，如果有则生效。`spring-boot-web-starter`这个web启动器引入的时候，大家都知道，它间接引入的是tomcat服务器的jar包。因此默认Tomcat服务器被嵌入。如果想要切换web服务器，将tomcat相关jar包排除掉，引入jetty的jar包之后，jetty服务器就会生效，这就是切换web服务器的原理。
 
 ### web服务器优化
 通过以下源码得知，web服务器的相关配置和`ServerProperties`有关系：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731573299936-414ae5c8-87a8-4810-b448-ac1b67f3cfb2.png)
+![](assets/1731573299936-414ae5c8-87a8-4810-b448-ac1b67f3cfb2.png)
 
 查看`ServerProperties`源码：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731573337370-7d40853c-9c5a-4750-a40d-cf00d1528fb4.png)
+![](assets/1731573337370-7d40853c-9c5a-4750-a40d-cf00d1528fb4.png)
 
 得知web服务器的配置都是以`server`开头的。
 
 那么如果要配置tomcat服务器怎么办？要配置jetty服务器怎么办？请看一下源码
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731573416792-229c5dbb-4a42-4037-934d-bd004bc46a7d.png)
+![](assets/1731573416792-229c5dbb-4a42-4037-934d-bd004bc46a7d.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731573452454-a150e6b1-6fa0-411c-b2a5-063f5b03be6b.png)
+![](assets/1731573452454-a150e6b1-6fa0-411c-b2a5-063f5b03be6b.png)
 
 通过以上源码得知，如果要对tomcat服务器进行配置，前缀为：`server.tomcat`
 
@@ -5768,7 +5768,7 @@ server.tomcat.basedir=.
 ```
 
 ## logo设置（了解）
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 关闭logo图标
 #### 配置方式
@@ -5814,7 +5814,7 @@ new SpringApplicationBuilder()
 获取图标粘贴到`banner.txt`文件中运行程序即可。
 
 ## PageHelper整合
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 官网地址：[https://pagehelper.github.io/](https://pagehelper.github.io/)
 
@@ -5850,7 +5850,7 @@ public class VipController {
 ```
 
 ## web层响应结果封装
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 对于前后端分离的系统来说，为了降低沟通成本，我们有必要给前端系统开发人员返回统一格式的JSON数据。多数开发团队一般都会封装一个`R`对象来解决统一响应格式的问题。
 
@@ -5999,7 +5999,7 @@ public class R<T> {
 ```
 
 ## 事务管理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 SpringBoot中的事务管理仍然使用的Spring框架中的事务管理机制，在代码实现上更为简单了。不需要手动配置事务管理器，SpringBoot自动配置完成了。我们只需要使用`@Transactional`注解标注需要控制事务的方法即可。以下代码是在SpringBoot框架中进行的事务控制：
 
@@ -6035,7 +6035,7 @@ public class AccountServiceImpl implements AccountService {
 我们只需要在需要控制事务的方法上，或者类上，使用`@Transactional`注解进行标注即可。然后事务的特性和之前Spring中是完全相同的。最重要的是其他的配置我们一律是不需要的。
 
 ## SpringBoot打war包
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 第一步：将打包方式设置为war
 
@@ -6097,7 +6097,7 @@ public class SpringBoot24TransactionApplication extends SpringBootServletInitial
 第六步：配置tomcat环境，将war包放入到webapps目录下，启动tomcat服务器，并访问。
 
 ## SpringBoot的日志处理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 日志概述
 日志记录是关键的软件实践，用于捕捉运行时信息、警告和错误等数据，帮助开发、测试和运维人员理解应用行为、定位问题及优化性能。
@@ -6178,7 +6178,7 @@ public class TestApplication {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731728106979-3b61f113-9257-42b6-8c82-543d7914a0ce.png)
+![](assets/1731728106979-3b61f113-9257-42b6-8c82-543d7914a0ce.png)
 
 可以看到默认情况下，SpringBoot默认的日志隔离级别是INFO，因此：INFO，WARN，ERROR三个级别的日志都会打印。
 
@@ -6191,7 +6191,7 @@ logging.level.root=DEBUG
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731729136927-1440a2bf-8b96-49c1-9d78-aa9f270a7deb.png)
+![](assets/1731729136927-1440a2bf-8b96-49c1-9d78-aa9f270a7deb.png)
 
 更改为最低级别，会打印所有日志信息：
 
@@ -6201,7 +6201,7 @@ logging.level.root=TRACE
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1731729214172-ae5c8ba3-c73e-40c6-a450-7511953a1402.png)
+![](assets/1731729214172-ae5c8ba3-c73e-40c6-a450-7511953a1402.png)
 
 ### 丰富启动日志（了解）
 
@@ -6259,7 +6259,7 @@ logging:
 ```
 
 #### 日志的查找优先级
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765190559645-fb05639a-972a-45be-9041-a83502619933.png)
+![](assets/1765190559645-fb05639a-972a-45be-9041-a83502619933.png)
 
 ### 日志输出到文件
 
@@ -6290,7 +6290,7 @@ logging.logback.rollingpolicy.file-name-pattern=${LOG_FILE}.%d{yyyy-MM-dd}.%i.gz
 ```
 
 ## Spring Task 定时任务
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 定时任务技术概述
 Spring Task 是 Spring 框架内置的轻量级定时任务工具，配置简单，适合中小型项目或对定时任务需求不复杂的场景，Spring Boot 的自动配置进一步简化了使用。
@@ -6635,7 +6635,7 @@ cron 表达式由**六个**或**七个**字段组成，每个字段之间用**<f
 ```
 
 ## SpringBoot 异步方法
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 异步方法的作用
 **异步方法的作用是将耗时操作放到后台线程执行，避免阻塞主线程，提高系统吞吐量和响应速度。**
@@ -6818,7 +6818,7 @@ class SpringAsyncApplicationTests {
 
 执行效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765200075661-99116326-9d77-44b7-91a3-a3fba8c413d7.png)
+![](assets/1765200075661-99116326-9d77-44b7-91a3-a3fba8c413d7.png)
 
 ### 定时任务结合异步方法
 默认情况下定时任务是单线程处理，如果你需要定时任务在执行时不需要等待上一个任务的完成，提高定时任务的执行效率，可以让定时任务结合异步方法，将这个定时任务设置为异步执行的定时任务。
@@ -6853,7 +6853,7 @@ public class MyTask {
 4. **生产环境一定要配置合理的线程池参数和拒绝策略**
 
 ## Bean Validation
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是 Bean Validation
 **Bean Validation** 是一个 Java 规范，使用注解的方式对 Java Bean 进行声明式验证，**是 Jakarta EE 的一部分**。
@@ -6898,7 +6898,7 @@ public class User {
 | `@Digits(integer,fraction)` | 数字位数限制，integer 设置整数部分的数字个数，fraction 设置小数部分的数字个数。 |
 
 ### SpringBoot 与 Bean Validation 关系
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765202022187-c728ee2d-a913-4945-baf9-a8baeb642bfb.png)
+![](assets/1765202022187-c728ee2d-a913-4945-baf9-a8baeb642bfb.png)
 
 Spring Boot 自动集成了 Bean Validation 标准规范（JSR 380）及其参考实现 Hibernate Validator，使开发者能通过 `@Valid` 等注解便捷使用验证功能，但 Bean Validation 本身是独立于 Spring 技术标准的。
 
@@ -7013,9 +7013,9 @@ public class GlobalExceptionHandler {
 #### 第五步：测试
 使用 Apipost 工具进行测试：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765204305570-d7c94609-cf45-4b93-9336-4d38ff74abc4.png)
+![](assets/1765204305570-d7c94609-cf45-4b93-9336-4d38ff74abc4.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765204332077-3e38db14-5417-4a40-96cb-7c7b981d2d78.png)
+![](assets/1765204332077-3e38db14-5417-4a40-96cb-7c7b981d2d78.png)
 
 ## Swagger
 ### 认识 Swagger
@@ -7742,16 +7742,16 @@ public class MyApplication {
 ### 将 OpenAPI 导入 Apipost
 **第一步：新建并导入项目**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765324954473-07089f27-0d74-4db5-a780-25aaea32266e.png)
+![](assets/1765324954473-07089f27-0d74-4db5-a780-25aaea32266e.png)
 
 **第二步：填写 OpenAPI 地址：**[**http://localhost:8080/v3/api-docs**](http://localhost:8080/v3/api-docs)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765325002844-8e3f9967-6efc-4f1f-81ad-dfa0aa48fdb6.png)
+![](assets/1765325002844-8e3f9967-6efc-4f1f-81ad-dfa0aa48fdb6.png)
 
 **第三步：设置 Apipost 基础 URL**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765325058771-ad0e5500-93ff-4b00-9070-88918f8a88a7.png)
+![](assets/1765325058771-ad0e5500-93ff-4b00-9070-88918f8a88a7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765325087214-d58b4f60-56a8-4716-9daf-3e16c0077156.png)
+![](assets/1765325087214-d58b4f60-56a8-4716-9daf-3e16c0077156.png)
 
 然后就可以在 Apipost 中进行接口的测试工作了。

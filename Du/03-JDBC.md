@@ -1,6 +1,6 @@
 # JDBC
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是JDBC
 JDBC（Java DataBase Connectivity）就是Java数据库连接，说白了就是用Java语言来操作数据库。原来我们操作数据库是在控制台使用SQL语句来操作数据库，JDBC是用Java语言向数据库发送SQL语句。
@@ -8,13 +8,13 @@ JDBC（Java DataBase Connectivity）就是Java数据库连接，说白了就是�
 ## JDBC原理
 早期SUN公司的天才们想编写一套可以连接天下所有数据库的API，但是当他们刚刚开始时就发现这是不可完成的任务，因为各个厂商的数据库服务器差异太大了。后来SUN开始与数据库厂商们讨论，最终得出的结论是，由SUN提供一套访问数据库的规范（就是一组接口），并提供连接数据库的协议标准，然后各个数据库厂商会遵循SUN的规范提供一套访问自己公司数据库服务器的API。SUN提供的规范命名为JDBC，而各个厂商提供的，遵循了JDBC规范的，可以访问自己数据库的API被称之为驱动！
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760950127479-9b7564be-f04d-455b-a9bc-3e1737d881c4.png)
+![](assets/1760950127479-9b7564be-f04d-455b-a9bc-3e1737d881c4.png)
 
 JDBC是接口，而JDBC驱动才是接口的实现，没有驱动无法完成数据库连接！每个数据库厂商都有自己的驱动，用来连接自己公司的数据库。
 
 当然还有第三方公司专门为某一数据库提供驱动，这样的驱动往往不是开源免费的！
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 模拟JDBC接口
 ### 接口在开发中的作用
@@ -118,7 +118,7 @@ public class Client{
 
 最终通过修改jdbc.properties配置文件即可做到数据库的切换。这样就完全做到了调用者和实现者的解耦合。调用者不需要关心实现者，实现者也不需要关心调用者。双方都是面向接口编程。这就是JDBC的本质：它就是一套接口。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 配置CLASSPATH
 经过上面内容的讲解，大家应该知道JDBC开发有三个角色的参与：
@@ -134,45 +134,45 @@ JDBC接口在JDK中。对应的包是：**<font style="color:#DF2A3F;">java.sql.
 
 JDBC API帮助文档就在JDK的帮助文档当中。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701939712048-f4487a29-3eb7-494f-b7c0-b72c6c0c03ad.png)
+![](assets/1701939712048-f4487a29-3eb7-494f-b7c0-b72c6c0c03ad.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701939824373-e1c98bbf-cc6a-44c0-95b6-d2c3a0ecbf52.png)
+![](assets/1701939824373-e1c98bbf-cc6a-44c0-95b6-d2c3a0ecbf52.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 驱动在哪
 驱动是JDBC接口的实现类，这些实现类是各大数据库厂家自己实现的，所以这些实现类的就需要去数据库厂商相关的网站上下载了。通常这些实现类被全部放到一个xxx.jar包中。下面演示一下mysql的驱动如何下载【下载mysql的驱动jar包】：
 
 打开页面：[https://dev.mysql.com/downloads/connector/j/](https://dev.mysql.com/downloads/connector/j/)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701940874635-9b10510f-2f00-4b7e-9b35-36425eaa9457.png)
+![](assets/1701940874635-9b10510f-2f00-4b7e-9b35-36425eaa9457.png)
 
 下载后：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701940923947-24cc167c-8fc4-4afa-92fd-9fab33ab6226.png)
+![](assets/1701940923947-24cc167c-8fc4-4afa-92fd-9fab33ab6226.png)
 
 解压：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701940961500-9a610263-604c-4001-9020-98151a6bfc99.png)
+![](assets/1701940961500-9a610263-604c-4001-9020-98151a6bfc99.png)
 
 上图中的“mysql-connector-j-8.2.0.jar”就是mysql数据库的驱动，8.2.0这个版本适用于目前最新版本的mysql数据库。可以使用解压工具打开这个jar包，看看里面是什么？
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701941060668-654b02a2-956a-4765-87be-8be10997ce0a.png)
+![](assets/1701941060668-654b02a2-956a-4765-87be-8be10997ce0a.png)
 
 可以看到这个jar包中都是xxx.class文件，这就是JDBC接口的实现类。这个jar包就是连接mysql数据库的驱动。如果是oracle的驱动就需要去oracle的官网下载了。这里不再赘述。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 如果使用文本编辑器开发
 如果使用文本编辑器开发，不使用集成开发环境的话，以上的jar包就需要手动配置到环境变量CLASSPATH当中，配置如下：
 
 如果jar包放在这里：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701941355365-9101c03a-7016-463c-8860-f6cc41745553.png)
+![](assets/1701941355365-9101c03a-7016-463c-8860-f6cc41745553.png)
 
 就需要这样配置环境变量CLASSPATH：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1701941302115-b531f7d3-3a17-487e-a3fe-7168e4022d40.png)
+![](assets/1701941302115-b531f7d3-3a17-487e-a3fe-7168e4022d40.png)
 
 注意配置路径中的当前路径“.”是不能省略的。
 
@@ -202,7 +202,7 @@ JDBC编程的步骤是很固定的，通常包含以下六步：
     - 释放资源可以避免资源的浪费。在 JDBC 编程中，每次使用完 Connection、Statement、ResultSet 等资源后，都需要显式地调用对应的 close() 方法来释放资源，避免资源的浪费。
     - 释放资源可以避免出现内存泄露问题。在 Java 中，当一个对象不再被引用时，会被 JVM 的垃圾回收机制进行回收。但是在 JDBC 编程中，如果不显式地释放资源，那么这些资源就不会被 JVM 的垃圾回收机制自动回收，从而导致内存泄露问题。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据的准备
 使用PowerDesigner设计用户表t_user。
@@ -219,74 +219,74 @@ Navicat for MySQL 是一款常用的 MySQL 数据库管理工具，提供了丰�
 ### PowerDesigner工具的安装
 双击安装包：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030113007-3188761c-a3d6-43af-a7b2-b57285c5c59a.png)
+![](assets/1702030113007-3188761c-a3d6-43af-a7b2-b57285c5c59a.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702029876181-f1cae0c3-56a7-4925-add3-c2cac74f64bf.png)
+![](assets/1702029876181-f1cae0c3-56a7-4925-add3-c2cac74f64bf.png)
 
 欢迎页：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702029889827-2e2c12d2-0ef0-400a-8a97-a4e094846227.png)
+![](assets/1702029889827-2e2c12d2-0ef0-400a-8a97-a4e094846227.png)
 
 选择试用15天：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702029931270-dd2984c0-7154-4681-aeb7-daff6743770b.png)
+![](assets/1702029931270-dd2984c0-7154-4681-aeb7-daff6743770b.png)
 
 选择香港，以及接受：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702029963307-ce94dc0e-631e-4fdd-bfab-cee55e430f2c.png)
+![](assets/1702029963307-ce94dc0e-631e-4fdd-bfab-cee55e430f2c.png)
 
 设置安装位置：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702029981376-3f82d441-4b51-4ca0-9183-cb7b8853369b.png)
+![](assets/1702029981376-3f82d441-4b51-4ca0-9183-cb7b8853369b.png)
 
 选择你要安装的（默认就行）：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702029994216-fa2e7123-ebb3-4e24-8a54-f70136665809.png)
+![](assets/1702029994216-fa2e7123-ebb3-4e24-8a54-f70136665809.png)
 
 选择要安装的用户配置文件（默认即可）：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030015551-fb222d28-373c-4620-8cb7-119a796c73b6.png)
+![](assets/1702030015551-fb222d28-373c-4620-8cb7-119a796c73b6.png)
 
 添加图标：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030025893-0f3ccf82-2edf-4693-b40d-cdbd9b067808.png)
+![](assets/1702030025893-0f3ccf82-2edf-4693-b40d-cdbd9b067808.png)
 
 安装概览信息：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030036757-b9429e96-81b1-4dcd-93d5-9eb30d61f24e.png)
+![](assets/1702030036757-b9429e96-81b1-4dcd-93d5-9eb30d61f24e.png)
 
 安装中：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030046163-e5983393-f38e-4c56-93cb-8e0da0a5cb0a.png)
+![](assets/1702030046163-e5983393-f38e-4c56-93cb-8e0da0a5cb0a.png)
 
 安装完成：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030092155-4ca5bf85-47ed-4398-98a5-864761106ce3.png)
+![](assets/1702030092155-4ca5bf85-47ed-4398-98a5-864761106ce3.png)
 
 如何破解？看到这个文件了吗？
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030298080-4c0ab7e6-b191-4778-95ae-bd7a23bf4276.png)
+![](assets/1702030298080-4c0ab7e6-b191-4778-95ae-bd7a23bf4276.png)
 
 把这个文件拷贝到这个安装目录当中：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030371606-59034062-2a4d-46c5-80f2-9704563052b7.png)
+![](assets/1702030371606-59034062-2a4d-46c5-80f2-9704563052b7.png)
 
 会自动提醒你替换：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702030421073-75504dc7-d035-488c-ba8d-7442f32f00d9.png)
+![](assets/1702030421073-75504dc7-d035-488c-ba8d-7442f32f00d9.png)
 
 替换即可完成破解！！！！
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 使用PowerDesigner进行物理数据建模
 打开PowerDesigner：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702352345350-1c1441c3-560f-4485-ba11-aff5522c7d42.png)
+![](assets/1702352345350-1c1441c3-560f-4485-ba11-aff5522c7d42.png)
 
 点击“Create Model...”来创建PDM（Physical Data Model，物理数据模型）：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702352495755-cdb4ac5b-cdf4-408f-b87c-6f08208eadb8.png)
+![](assets/1702352495755-cdb4ac5b-cdf4-408f-b87c-6f08208eadb8.png)
 
 **<font style="color:#DF2A3F;">什么是物理数据模型PDM？</font>**
 
@@ -294,29 +294,29 @@ Navicat for MySQL 是一款常用的 MySQL 数据库管理工具，提供了丰�
 
 创建完成后是这样的：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702352840475-faf7c39e-6a3e-4d72-872b-1de849baf668.png)
+![](assets/1702352840475-faf7c39e-6a3e-4d72-872b-1de849baf668.png)
 
 注意：右侧的小格子是可以放大和缩小的。看着像是很大的一张网。在每个格子当中可以容纳多个表。并且在这张网上可以清晰的看到表与表的关系。（一对多，一对一，多对多等。）
 
 记得保存，ctrl+s保存时会生成一个xxx.pdm文件，以后如果要修改设计，双击这个xxx.pdm文件即可打开，进行编辑：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702353117948-32a0da6b-393c-4282-a2b0-d2e893d7d04b.png)
+![](assets/1702353117948-32a0da6b-393c-4282-a2b0-d2e893d7d04b.png)
 
 保存后的文件：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702353151163-22027c70-a1cc-463a-835e-30b23631ddf6.png)
+![](assets/1702353151163-22027c70-a1cc-463a-835e-30b23631ddf6.png)
 
 开始进行表的设计，这里不搞那么复杂，先创建一张表即可：t_user，用户表：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702353507900-d3538143-07a6-4a08-b69e-4d7c23f1d6e3.png)
+![](assets/1702353507900-d3538143-07a6-4a08-b69e-4d7c23f1d6e3.png)
 
 双击后，弹出设计窗口：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702353664176-dbbccc05-2711-4e31-b6fc-4cf6238bacea.png)
+![](assets/1702353664176-dbbccc05-2711-4e31-b6fc-4cf6238bacea.png)
 
 设计表名：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702354144428-887e8efb-c136-42e4-90de-4ec26815ab6f.png)
+![](assets/1702354144428-887e8efb-c136-42e4-90de-4ec26815ab6f.png)
 
 注意：
 
@@ -326,18 +326,18 @@ Navicat for MySQL 是一款常用的 MySQL 数据库管理工具，提供了丰�
 
 设计字段：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702356255883-27bed5c1-8cb5-41ed-ac06-d2a479327a93.png)
+![](assets/1702356255883-27bed5c1-8cb5-41ed-ac06-d2a479327a93.png)
 
 把每个字段设计好，包括：字段名，数据类型，长度，约束等。
 
 设计完成后：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702356365447-df18d670-da99-40f0-b80f-95918bdf20f6.png)
+![](assets/1702356365447-df18d670-da99-40f0-b80f-95918bdf20f6.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 使用PowerDesigner导出建表语句
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702356449130-0ab2e139-0029-4db4-a89d-c4d46ca800e4.png)
+![](assets/1702356449130-0ab2e139-0029-4db4-a89d-c4d46ca800e4.png)
 
 ```sql
 drop table if exists t_user;
@@ -364,29 +364,29 @@ alter table t_user comment '用户表存储用户信息。';
 #### 建库
 使用Navicat for MySQL创建一个MySQL数据库，起名：jdbc
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702356898211-79878d20-d32a-4764-b2d9-fa7de3c24053.png)
+![](assets/1702356898211-79878d20-d32a-4764-b2d9-fa7de3c24053.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702356942314-e5cb2d8a-3e9c-46b4-91b6-6ab59e7fbb0a.png)
+![](assets/1702356942314-e5cb2d8a-3e9c-46b4-91b6-6ab59e7fbb0a.png)
 
 #### 建表
 执行jdbc.sql脚本：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702357035951-94877536-4153-4399-a6ae-9672bf97e062.png)
+![](assets/1702357035951-94877536-4153-4399-a6ae-9672bf97e062.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702357083312-51eff97d-6686-4559-b15b-5069e5ed60ba.png)
+![](assets/1702357083312-51eff97d-6686-4559-b15b-5069e5ed60ba.png)
 
 最终创建的表：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702357196196-5a9db89b-b896-4bf0-88bb-c4d5aabd411b.png)
+![](assets/1702357196196-5a9db89b-b896-4bf0-88bb-c4d5aabd411b.png)
 
 #### 插入数据
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702357446508-4d4cdf35-d996-4fa2-b823-afe81b1e9c50.png)
+![](assets/1702357446508-4d4cdf35-d996-4fa2-b823-afe81b1e9c50.png)
 
 注意：这里我将主键设置为了自增：auto_increment。其实这个也可以在PowerDesigner中设计时指定自增：勾选上它即可。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702357560943-84503c36-4205-42bc-b488-6cca2f4dd16c.png)
+![](assets/1702357560943-84503c36-4205-42bc-b488-6cca2f4dd16c.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JDBC完成新增操作
 新增操作就是让数据库执行insert语句。通过这个操作来学习一下JDBC编程的每一步。<font style="color:#DF2A3F;">刚开始编写JDBC代码的时候，建议使用文本编辑器，先不借助任何IDE。</font>
@@ -399,7 +399,7 @@ alter table t_user comment '用户表存储用户信息。';
 
 API帮助文档：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702375429683-7a25727f-4615-45f1-a56c-fd02eea60dd2.png)
+![](assets/1702375429683-7a25727f-4615-45f1-a56c-fd02eea60dd2.png)
 
 代码如下：
 
@@ -433,7 +433,7 @@ public class JDBCTest01 {
 #### 代码实现
 API帮助文档：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702375535525-fad3b7e2-b7f5-4079-a2e1-31c597ae8165.png)
+![](assets/1702375535525-fad3b7e2-b7f5-4079-a2e1-31c597ae8165.png)
 
 代码如下：
 
@@ -466,7 +466,7 @@ public class JDBCTest01 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702372789612-ac3b38a8-6f6d-44f2-8024-ccab0bac9380.png)
+![](assets/1702372789612-ac3b38a8-6f6d-44f2-8024-ccab0bac9380.png)
 
 看到以上的输出结果，表示数据库已经连接成功了。
 
@@ -489,7 +489,7 @@ URL 在互联网中广泛应用，比如在浏览器中输入 URL 来访问网�
 
 总之，URL 是互联网上所有资源的唯一识别标识，是互联网通信的基础和核心技术之一。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### JDBC连接MySQL时的URL格式
 JDBC URL 是在使用 JDBC 连接数据库时的一个 URL 字符串，它用来标识要连接的数据库的位置、认证信息和其他配置参数等。JDBC URL 的格式可以因数据库类型而异，但通常包括以下几个部分：
@@ -562,14 +562,14 @@ jdbc:mysql://localhost:3306/mydatabase?user=myusername&password=mypassword&serve
 jdbc:mysql://localhost:3306/jdbc?useUnicode=true&serverTimezone=Asia/Shanghai&useSSL=true&characterEncoding=utf-8
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JDBC编程第三步：获取数据库操作对象
 数据库操作对象是这个接口：java.sql.Statement。这个对象负责将SQL语句发送给数据库服务器，服务器接收到SQL后进行编译，然后执行SQL。
 
 API帮助文档如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702441460073-15a0cb32-b979-442c-900b-ec3109722750.png)
+![](assets/1702441460073-15a0cb32-b979-442c-900b-ec3109722750.png)
 
 获取数据库操作对象代码如下：
 
@@ -605,7 +605,7 @@ public class JDBCTest01 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702440942574-861f279e-3244-4834-98a3-491d913949f6.png)
+![](assets/1702440942574-861f279e-3244-4834-98a3-491d913949f6.png)
 
 同样可以看到：java.sql.Statement接口在MySQL驱动中的实现类是：com.mysql.cj.jdbc.StatementImpl。不过我们同样是不需要关心这个具体的实现类。因为后续的代码仍然是面向Statement接口写代码的。
 
@@ -647,16 +647,16 @@ public class JDBCTest01 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702441181097-76775506-0d8a-4c6b-a077-4feaf637c82a.png)
+![](assets/1702441181097-76775506-0d8a-4c6b-a077-4feaf637c82a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JDBC编程第四步：执行SQL
 当获取到Statement对象后，调用这个接口中的相关方法即可执行SQL语句。
 
 API帮助文档如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702441577751-223506b2-73c9-47ee-a614-4b95fe555df3.png)
+![](assets/1702441577751-223506b2-73c9-47ee-a614-4b95fe555df3.png)
 
 **<font style="color:#DF2A3F;">该方法的参数是一个SQL语句，只要将insert语句传递过来即可。当执行executeUpdate(sql)方法时，JDBC会将sql语句发送给数据库服务器，数据库服务器对SQL语句进行编译，然后执行SQL。</font>**
 
@@ -703,13 +703,13 @@ public class JDBCTest01 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702441948716-d8c4638f-5d7a-4d26-b3d0-a2ed4872e6a4.png)
+![](assets/1702441948716-d8c4638f-5d7a-4d26-b3d0-a2ed4872e6a4.png)
 
 数据库表变化了：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702441971625-ba842802-4881-48ab-a4f3-17acc229d9c2.png)
+![](assets/1702441971625-ba842802-4881-48ab-a4f3-17acc229d9c2.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JDBC编程第六步：释放资源
 第五步去哪里了？第五步是处理查询结果集，以上操作不是select语句，所以第五步直接跳过，直接先看一下第六步释放资源。【后面学习查询语句的时候，再详细看第五步】
@@ -785,7 +785,7 @@ public class JDBCTest01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 注册驱动的常用方式
 上面在注册驱动的时候，执行了这样的代码：
@@ -808,11 +808,11 @@ Class.forName("com.mysql.cj.jdbc.Driver");
 
 实现原理是什么？找一下`com.mysql.cj.jdbc.Driver`的源码：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702447203245-d68ebbe5-7d00-486c-be09-77ffa75c3407.png)
+![](assets/1702447203245-d68ebbe5-7d00-486c-be09-77ffa75c3407.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702447277996-c1526d49-f502-4925-8042-0d4edff0370d.png)
+![](assets/1702447277996-c1526d49-f502-4925-8042-0d4edff0370d.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702447333885-23189b4e-5767-4dba-ae21-bdc543241db6.png)
+![](assets/1702447333885-23189b4e-5767-4dba-ae21-bdc543241db6.png)
 
 通过源码不难发现，在`com.mysql.cj.jdbc.Driver`类中有一个静态代码块，在这个静态代码块中调用了`java.sql.DriverManager.registerDriver(new Driver());`完成了驱动的注册。而`Class.forName("com.mysql.cj.jdbc.Driver");`代码的作用就是让`com.mysql.cj.jdbc.Driver`类完成加载，执行它的静态代码块。
 
@@ -871,13 +871,13 @@ public class JDBCTest02 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702448305879-6a1fe86a-6da8-4127-8e6d-5dafeeffa94f.png)
+![](assets/1702448305879-6a1fe86a-6da8-4127-8e6d-5dafeeffa94f.png)
 
 数据库表中数据也新增了：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702448335558-06ceaaf7-6b10-4fca-a9c1-0d9f81281f48.png)
+![](assets/1702448335558-06ceaaf7-6b10-4fca-a9c1-0d9f81281f48.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JDBC 4.0后不用手动注册驱动（了解）
 从JDBC 4.0（**<font style="color:#DF2A3F;">也就是Java6</font>**）版本开始，驱动的注册不需要再手动完成，由系统自动完成。
@@ -932,17 +932,17 @@ public class JDBCTest03 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702448395728-8b99a1d5-eb2d-4541-b140-dbaf03d12e4c.png)
+![](assets/1702448395728-8b99a1d5-eb2d-4541-b140-dbaf03d12e4c.png)
 
 数据库表中数据也添加了一条：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702448423567-a2526811-994b-496a-bd61-7ba47dfda8cb.png)
+![](assets/1702448423567-a2526811-994b-496a-bd61-7ba47dfda8cb.png)
 
 **<font style="color:#DF2A3F;">注意：虽然大部分情况下不需要进行手动注册驱动了，但在实际的开发中有些数据库驱动程序不支持自动发现功能，仍然需要手动注册。所以建议大家还是别省略了。</font>**
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 动态配置连接数据库的信息
 为了程序的通用性，为了切换数据库的时候不需要修改Java程序，为了符合OCP开闭原则，建议将连接数据库的信息配置到属性文件中，例如：
@@ -1015,15 +1015,15 @@ public class JDBCTest04 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702448811161-f8f9d0fc-025b-48a9-b9fa-a38d96b7b168.png)
+![](assets/1702448811161-f8f9d0fc-025b-48a9-b9fa-a38d96b7b168.png)
 
 数据库表中也会新增一条记录：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702448831135-374bee91-f770-40aa-ba3b-eb35ded23435.png)
+![](assets/1702448831135-374bee91-f770-40aa-ba3b-eb35ded23435.png)
 
 以后要连接其他数据库，只要修改属性文件中的配置即可。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 获取连接的其他方式（了解）
 上面我们讲到了第一种获取连接的方式：
@@ -1034,7 +1034,7 @@ Connection conn = DriverManager.getConnection(url, user, password);
 
 除了以上的这种方式之外，还有两种方式，通过API帮助文档可以看到：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702453145756-8174de75-a789-4030-b496-8b7fd700afb6.png)
+![](assets/1702453145756-8174de75-a789-4030-b496-8b7fd700afb6.png)
 
 ### getConnection(String url)
 这种方式参数只有一个url，那用户名和密码放在哪里呢？可以放到url当中，代码如下：
@@ -1065,7 +1065,7 @@ public class JDBCTest05 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702455014436-0f8654ab-8919-444f-a5b3-03b8c11736ae.png)
+![](assets/1702455014436-0f8654ab-8919-444f-a5b3-03b8c11736ae.png)
 
 ### getConnection(String url, Properties info)
 这种方式有两个参数，一个是url，一个是Properties对象。
@@ -1111,11 +1111,11 @@ public class JDBCTest06 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702455362524-bc4e9ffa-ca7d-433a-af73-01cf76d556a0.png)
+![](assets/1702455362524-bc4e9ffa-ca7d-433a-af73-01cf76d556a0.png)
 
 以上这两种方式作为了解，不是重点。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JDBC完成修改操作
 修改操作就是执行update语句。仍然调用Statement接口的executeUpdate(sql)方法即可。
@@ -1124,7 +1124,7 @@ public class JDBCTest06 {
 
 修改前的数据：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702456282356-5938ff92-a0ea-46d6-96f1-684c3fb29364.png)
+![](assets/1702456282356-5938ff92-a0ea-46d6-96f1-684c3fb29364.png)
 
 代码如下：
 
@@ -1187,13 +1187,13 @@ public class JDBCTest07 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702456438297-48fcead2-99e0-4bd8-9e65-8cc911eb529b.png)
+![](assets/1702456438297-48fcead2-99e0-4bd8-9e65-8cc911eb529b.png)
 
 更新后的数据：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702456454268-27e23605-5b36-4bb5-80b1-deb74ef1d5ac.png)
+![](assets/1702456454268-27e23605-5b36-4bb5-80b1-deb74ef1d5ac.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JDBC完成删除操作
 删除操作就是执行delete语句。仍然调用Statement接口的executeUpdate(sql)方法即可。
@@ -1202,7 +1202,7 @@ public class JDBCTest07 {
 
 删除前的数据：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702456454268-27e23605-5b36-4bb5-80b1-deb74ef1d5ac.png)
+![](assets/1702456454268-27e23605-5b36-4bb5-80b1-deb74ef1d5ac.png)
 
 代码如下：
 
@@ -1265,13 +1265,13 @@ public class JDBCTest08 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702456658043-1b44cb18-1150-4768-8296-737c4181f4d4.png)
+![](assets/1702456658043-1b44cb18-1150-4768-8296-737c4181f4d4.png)
 
 删除后的数据：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702456673845-d64ca45a-a540-4813-a223-5be1db975764.png)
+![](assets/1702456673845-d64ca45a-a540-4813-a223-5be1db975764.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JDBC的查询操作
 ResultSet 是 JDBC （Java 数据库连接） API 提供的接口，它用于表示 SQL 查询的结果集。ResultSet 对象中包含了查询结果的所有行，可以通过 next() 方法逐行地获取并处理每一行的数据。它最常用于执行 SELECT 语句查询出来的结果集。
@@ -1298,7 +1298,7 @@ select id,name,password,realname,gender,tel from t_user;
 
 要查询的数据如下图：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702536722789-fc5bbe25-598a-4619-b5b0-2dc1871da569.png)
+![](assets/1702536722789-fc5bbe25-598a-4619-b5b0-2dc1871da569.png)
 
 代码如下（<font style="color:#DF2A3F;">重点关注第4步 第5步 第6步</font>）：
 
@@ -1380,7 +1380,7 @@ public class JDBCTest09 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702537178277-7ea8b4eb-1088-45cb-9493-18fe44b90287.png)
+![](assets/1702537178277-7ea8b4eb-1088-45cb-9493-18fe44b90287.png)
 
 代码解读：
 
@@ -1413,7 +1413,7 @@ while(rs.next()){
 + **<font style="color:#DF2A3F;">while循环体当中的代码是处理当前游标指向的这一行的数据。（注意：是处理的一行数据）</font>**
 + **<font style="color:#DF2A3F;">rs.getString(int columnIndex) 其中 int columnIndex 是查询结果的列下标，列下标从1开始，以1递增。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702538306701-4341b895-f91b-4501-af67-4746b6327884.png)
+![](assets/1702538306701-4341b895-f91b-4501-af67-4746b6327884.png)
 
 + **<font style="color:#DF2A3F;">rs.getString(...) 方法在执行时，不管底层数据库中的数据类型是什么，统一以字符串String类型来获取。</font>**
 
@@ -1446,7 +1446,7 @@ if(conn != null){
 
 ResultSet最终也是需要关闭的。**<font style="color:#DF2A3F;">先关闭ResultSet，再关闭Statement，最后关闭Connection</font>**。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 通过列名获取数据（以String类型获取）
 获取当前行的数据，不仅可以通过列下标获取，还可以通过查询结果的列名来获取，通常这种方式是被推荐的，因为可读性好。
@@ -1459,11 +1459,11 @@ select id, name as username, realname from t_user;
 
 执行结果是：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702539677907-26c84361-6874-421b-a612-dd754f7fb8f3.png)
+![](assets/1702539677907-26c84361-6874-421b-a612-dd754f7fb8f3.png)
 
 我们可以按照查询结果的列名来获取数据：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702540371842-53a5c738-db3b-4040-aa0a-cd6dc9b9bb22.png)
+![](assets/1702540371842-53a5c738-db3b-4040-aa0a-cd6dc9b9bb22.png)
 
 **<font style="color:#DF2A3F;">注意：是根据查询结果的列名，而不是表中的列名。以上查询的时候将字段name起别名username了，所以要根据username来获取，而不能再根据name来获取了。</font>**
 
@@ -1542,24 +1542,24 @@ public class JDBCTest10 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702540580699-757667a3-887c-4468-8a0e-fe29ea6d6674.png)
+![](assets/1702540580699-757667a3-887c-4468-8a0e-fe29ea6d6674.png)
 
 如果将上面代码中`rs.getString("username")`修改为`rs.getString("name")`，执行就会出现以下错误：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702540685314-fa65fdea-6aad-4781-99fa-c007955b5b3f.png)
+![](assets/1702540685314-fa65fdea-6aad-4781-99fa-c007955b5b3f.png)
 
 提示name列是不存在的。所以一定是根据查询结果中的列名来获取，而不是表中原始的列名。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 以指定的类型获取数据
 前面的程序可以看到，不管数据库表中是什么数据类型，都以String类型返回。当然，也能以指定类型返回。
 
 使用PowerDesigner再设计一张商品表：t_product，使用Navicat for MySQL工具准备数据如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702541223024-4e5acb77-ef8b-4437-ba3d-10c02ba0999b.png)
+![](assets/1702541223024-4e5acb77-ef8b-4437-ba3d-10c02ba0999b.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702541500905-f5e0a70b-19b0-4469-97db-68e414f92984.png)
+![](assets/1702541500905-f5e0a70b-19b0-4469-97db-68e414f92984.png)
 
 id以long类型获取，name以String类型获取，price以double类型获取，create_time以java.sql.Date类型获取，代码如下：
 
@@ -1640,9 +1640,9 @@ public class JDBCTest11 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702541874721-10c9a4f2-370f-4ce4-985e-6cf8da2e3ffb.png)
+![](assets/1702541874721-10c9a4f2-370f-4ce4-985e-6cf8da2e3ffb.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 获取结果集的元数据信息（了解）
 ResultSetMetaData 是一个接口，用于描述 ResultSet 中的元数据信息，即查询结果集的结构信息，例如查询结果集中包含了哪些列，每个列的数据类型、长度、标识符等。
@@ -1725,11 +1725,11 @@ public class JDBCTest12 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702542217121-d413b4dc-1bf2-45ca-80c8-551d2a3705b8.png)
+![](assets/1702542217121-d413b4dc-1bf2-45ca-80c8-551d2a3705b8.png)
 
 在上面的代码中，我们首先创建了一个 Statement 对象，然后执行了一条 SQL 查询语句，生成了一个 ResultSet 对象。接下来，我们通过 ResultSet 对象的 getMetaData() 方法获取了 ResultSetMetaData 对象，进而获取了查询结果中列的信息并进行输出。需要注意的是，在进行列信息的获取时，列的编号从 1 开始计算。该示例代码将获取查询结果集中所有列名、数据类型以及长度等信息。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 获取新增行的主键值
 有很多表的主键字段值都是自增的，在某些特殊的业务环境下，当我们插入了新数据后，希望能够获取到这条新数据的主键值，应该如何获取呢？
@@ -1813,62 +1813,62 @@ public class JDBCTest13 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702543846750-ba186e76-04fa-4ef1-8d57-7fc40598c02e.png)
+![](assets/1702543846750-ba186e76-04fa-4ef1-8d57-7fc40598c02e.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702543887747-8bfa21c9-e7b4-49c9-8dec-dbca00a645a7.png)
+![](assets/1702543887747-8bfa21c9-e7b4-49c9-8dec-dbca00a645a7.png)
 
 以上代码中，我们将 Statement.RETURN_GENERATED_KEYS 传递给 executeUpdate() 方法，以指定需要获取插入的主键值。然后，通过调用 Statement 对象的 getGeneratedKeys() 方法获取包含插入的主键值的 ResultSet 对象，通过 ResultSet 对象获取主键值。需要注意的是，在使用 Statement 对象的 getGeneratedKeys() 方法获取自动生成的主键值时，主键值的获取方式具有一定的差异，需要根据不同的数据库种类和版本来进行调整。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 使用IDEA工具编写JDBC程序
 ### 创建空的工程并设置JDK
 创建一个空的工程：mypro
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892512796-0fb0ad4b-70cd-4d6b-89f1-49979a51206c.png)
+![](assets/1702892512796-0fb0ad4b-70cd-4d6b-89f1-49979a51206c.png)
 
 工程结构：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702891589679-f9b4b346-a814-41cd-9f22-002668a1eed7.png)
+![](assets/1702891589679-f9b4b346-a814-41cd-9f22-002668a1eed7.png)
 
 设置JDK以及编译器版本：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892572186-0d582f69-f12a-4de2-bb95-129857c2d1e4.png)
+![](assets/1702892572186-0d582f69-f12a-4de2-bb95-129857c2d1e4.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建一个模块
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892712096-c8781789-2ea6-485e-8c43-9902923e7f48.png)
+![](assets/1702892712096-c8781789-2ea6-485e-8c43-9902923e7f48.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892635936-a0bd4576-c3ab-46d3-aa4f-83a5f93900c2.png)
+![](assets/1702892635936-a0bd4576-c3ab-46d3-aa4f-83a5f93900c2.png)
 
 ### 将驱动加入到CLASSPATH
 在模块jdbc下创建一个目录：lib
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892792110-ddd13f59-bb68-4c4f-b3bc-83bf2bcbc49c.png)
+![](assets/1702892792110-ddd13f59-bb68-4c4f-b3bc-83bf2bcbc49c.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892805707-188d0436-dff6-4ed8-a1d5-f7d8168a8226.png)
+![](assets/1702892805707-188d0436-dff6-4ed8-a1d5-f7d8168a8226.png)
 
 将mysql的驱动jar包拷贝到lib目录当中：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892848869-f45f725d-576b-464c-94c3-0383f27cf9d2.png)
+![](assets/1702892848869-f45f725d-576b-464c-94c3-0383f27cf9d2.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892860859-06a0d6a9-9877-4a59-9a31-ef5ba8d10fdd.png)
+![](assets/1702892860859-06a0d6a9-9877-4a59-9a31-ef5ba8d10fdd.png)
 
 将jar包加入到classpath：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702892903594-755ad190-065b-449e-ac8c-ed8a1afa76c0.png)
+![](assets/1702892903594-755ad190-065b-449e-ac8c-ed8a1afa76c0.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702893616221-646481b5-e342-4a65-8be3-584c4eaa858a.png)
+![](assets/1702893616221-646481b5-e342-4a65-8be3-584c4eaa858a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 编写JDBC程序
 新建软件包：com.test.jdbc
 
 新建JDBCTest01类：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702893035873-744a58aa-cca9-47a3-9258-f2c319695a7f.png)
+![](assets/1702893035873-744a58aa-cca9-47a3-9258-f2c319695a7f.png)
 
 在JDBCTest01类中编写main方法，main方法中编写JDBC代码：
 
@@ -1956,9 +1956,9 @@ password=123456
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702893658315-fbe8119e-9ab0-40ba-99f1-9d5b68e8866b.png)
+![](assets/1702893658315-fbe8119e-9ab0-40ba-99f1-9d5b68e8866b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## SQL注入问题
 SQL注入问题说的是：用户输入的信息中含有SQL语句关键字，和程序中的SQL语句进行字符串拼接，导致程序中的SQL语句改变了原意。（SQL注入问题是一种系统安全问题）
@@ -2057,15 +2057,15 @@ public class JDBCTest02 {
 
 如果用户名和密码正确的话，执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702976483919-52a9ff26-1ded-4a07-bcc8-d2846f17a045.png)
+![](assets/1702976483919-52a9ff26-1ded-4a07-bcc8-d2846f17a045.png)
 
 如果用户名不存在或者密码错误的话，执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702976532157-a3d29aad-a0e8-44c9-9571-63cc3052fe5b.png)
+![](assets/1702976532157-a3d29aad-a0e8-44c9-9571-63cc3052fe5b.png)
 
 接下来，见证奇迹的时刻，当我分别输入以下的用户名和密码时，系统被攻破了：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702976830213-7483fb5c-6c7c-466c-b7c4-a2feb26b12bb.png)
+![](assets/1702976830213-7483fb5c-6c7c-466c-b7c4-a2feb26b12bb.png)
 
 这种现象就叫做：SQL注入。为什么会发生以上的事儿呢？原因是：用户提供的信息中有SQL语句关键字，并且和底层的SQL字符串进行了拼接，变成了一个全新的SQL语句。
 
@@ -2083,11 +2083,11 @@ select realname from t_user where name = 'aaa' and password = 'bbb' or '1'='1';
 
 我们可以执行一下这条SQL，看看结果是什么？
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702977070115-c06f8f95-d42f-43e7-9b69-53eac3b155b2.png)
+![](assets/1702977070115-c06f8f95-d42f-43e7-9b69-53eac3b155b2.png)
 
 把所有结果全部查到了，这是因为 '1'='1' 是恒成立的，并且使用的是 or 运算符，所以 or 前面的条件等于是没有的。这样就会把所有数据全部查到。而在程序中的判断逻辑是只要结果集中有数据，则表示登录成功。所以以上的输入方式最终的结果就是登录成功。你设想一下，如果这个系统是一个高级别保密系统，只有登录成功的人才有权限，那么这个系统是不是极其危险了。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 解决SQL注入问题
 导致SQL注入的根本原因是什么？只有找到真正的原因，问题才能得到解决。
@@ -2184,15 +2184,15 @@ public class JDBCTest03 {
 
 用户名和密码正确的话，执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702978597923-7cce7d0a-6a79-43a5-b9f3-a8ce2e4785e6.png)
+![](assets/1702978597923-7cce7d0a-6a79-43a5-b9f3-a8ce2e4785e6.png)
 
 用户名和密码错误的话，执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702978634050-b50580fc-f9ce-48ec-9200-425ea078782c.png)
+![](assets/1702978634050-b50580fc-f9ce-48ec-9200-425ea078782c.png)
 
 尝试SQL注入，看看还能不能？
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1702978663699-a5c38388-b4f5-43b6-8d00-3e56fdb77178.png)
+![](assets/1702978663699-a5c38388-b4f5-43b6-8d00-3e56fdb77178.png)
 
 通过测试得知，SQL注入问题已经解决了。**<font style="color:#DF2A3F;">根本原因是：bbb' or '1'='1 这个字符串中虽然含有SQL语句的关键字，但是只会被当做普通的值传到SQL语句中，并没有参与SQL语句的编译</font>**。
 
@@ -2216,7 +2216,7 @@ public class JDBCTest03 {
 + PreparedStatement会做类型检查，是类型安全的；
 + Statement适用于处理静态的SQL语句，而PreparedStatement适用于处理在运行时动态生成的SQL语句。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## PreparedStatement的使用
 ### 新增操作
@@ -2310,9 +2310,9 @@ public class JDBCTest04 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708238667879-fe0a662a-f9e8-4933-afd0-5290856c21fd.png)
+![](assets/1708238667879-fe0a662a-f9e8-4933-afd0-5290856c21fd.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 修改操作
 需求：将员工编号为8888的员工，姓名修改为李四，岗位修改为产品经理，月薪修改为5000.0，其他不变。
@@ -2381,9 +2381,9 @@ public class JDBCTest05 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708239544671-626c918f-fd56-4cfa-8aa2-df1976979414.png)
+![](assets/1708239544671-626c918f-fd56-4cfa-8aa2-df1976979414.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 删除操作
 需求：将员工编号为8888的删除。
@@ -2449,9 +2449,9 @@ public class JDBCTest06 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708240126660-979bd865-6e83-41c7-9724-68c247209e9e.png)
+![](assets/1708240126660-979bd865-6e83-41c7-9724-68c247209e9e.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 模糊查询
 需求：查询员工名字中第二个字母是 O 的。
@@ -2523,7 +2523,7 @@ public class JDBCTest07 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708240400162-5eb57d8c-e52c-4780-9ec2-88f117377328.png)
+![](assets/1708240400162-5eb57d8c-e52c-4780-9ec2-88f117377328.png)
 
 通过这个例子主要告诉大家，程序不能这样写：
 
@@ -2534,7 +2534,7 @@ pstmt.setString(1, "O");
 
 由于占位符 ? 被单引号包裹，因此这个占位符是无效的。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 分页查询
 对于MySQL来说，通用的分页SQL语句：
@@ -2625,9 +2625,9 @@ public class JDBCTest08 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708241685820-a51b06ef-5b38-4e64-806c-0c1b86fe1fab.png)
+![](assets/1708241685820-a51b06ef-5b38-4e64-806c-0c1b86fe1fab.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### blob数据的插入和读取（了解）
 准备一张表：t_img，两个字段，一个id主键，一个img。
@@ -2646,7 +2646,7 @@ UNSIGNED：表示无符号整数。
 
 准备一张图片：
 
-![](https://cdn.nlark.com/yuque/0/2024/jpeg/21376908/1708242724736-094b007d-d418-4c4d-9a21-b12f20176daf.jpeg)
+![](assets/1708242724736-094b007d-d418-4c4d-9a21-b12f20176daf.jpeg)
 
 需求1：向t_img 表中插入一张图片。
 
@@ -2719,7 +2719,7 @@ public class JDBCTest09 {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708243266510-6d057b29-ab51-49d2-839b-322dae79a50e.png)
+![](assets/1708243266510-6d057b29-ab51-49d2-839b-322dae79a50e.png)
 
 需求2：从t_img 表中读取一张图片。（从数据库中读取一张图片保存到本地。）
 
@@ -2803,7 +2803,7 @@ public class JDBCTest10 {
 
 执行完毕之后，查看一下图片大小是否和原图片相同，打开看看是否可以正常显示。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JDBC批处理操作
 准备一张商品表：t_product
@@ -2884,16 +2884,16 @@ public class NoBatchTest {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708249553654-263146be-a485-4313-831f-892a776abd1d.png)
+![](assets/1708249553654-263146be-a485-4313-831f-892a776abd1d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 使用批处理
 使用批处理，向 t_product 表中插入一万条商品信息，并记录耗时！
 
 **<font style="color:#DF2A3F;">注意：启用批处理需要在URL后面添加这个的参数：</font>`rewriteBatchedStatements=true`**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708249622292-576aa82d-5874-4013-a9b4-d94c00cef0ce.png)
+![](assets/1708249622292-576aa82d-5874-4013-a9b4-d94c00cef0ce.png)
 
 ```java
 package com.test.jdbc;
@@ -2959,14 +2959,14 @@ public class BatchTest {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1708249131242-0bf6746b-86f7-4bc9-966b-00d22994e177.png)
+![](assets/1708249131242-0bf6746b-86f7-4bc9-966b-00d22994e177.png)
 
 在进行大数据量插入时，批处理为什么可以提高程序的执行效率？
 
 1.  减少了网络通信次数：JDBC 批处理会将多个 SQL 语句一次性发送给服务器，减少了客户端和服务器之间的通信次数，从而提高了数据写入的速度，特别是对于远程服务器而言，优化效果更为显著。 
 2.  减少了数据库操作次数：JDBC 批处理会将多个 SQL 语句合并成一条 SQL 语句进行执行，从而减少了数据库操作的次数，减轻了数据库的负担，大大提高了数据写入的速度。  
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## DbUtils工具类的封装
 JDBC编程六步中，很多代码是重复出现的，可以为这些代码封装一个工具类。让JDBC代码变的更简洁。
@@ -3047,7 +3047,7 @@ public class DbUtils {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是事务
 事务是一个完整的业务，在这个业务中需要多条DML语句共同联合才能完成，而事务可以保证多条DML语句同时成功或者同时失败，从而保证数据的安全。例如A账户向B账户转账一万，A账户减去一万(update)和B账户加上一万(update)，必须同时成功或者同时失败，才能保证数据是正确的。
@@ -3056,9 +3056,9 @@ public class DbUtils {
 ### 表和数据的准备
 t_act表：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712906363176-935497e0-164e-4dd7-9c0d-a461fec09668.png)
+![](assets/1712906363176-935497e0-164e-4dd7-9c0d-a461fec09668.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712906313124-77170d5b-9a14-4973-a063-2404228e0c60.png)
+![](assets/1712906313124-77170d5b-9a14-4973-a063-2404228e0c60.png)
 
 ```sql
 drop table if exists t_act;
@@ -3129,40 +3129,40 @@ public class JDBCTest19 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712911942800-db916080-94e4-4b32-be09-ce7b4b21287d.png)
+![](assets/1712911942800-db916080-94e4-4b32-be09-ce7b4b21287d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JDBC事务默认是自动提交的
 JDBC事务默认情况下是自动提交的，所谓的自动提交是指：只要执行一条DML语句则自动提交一次。测试一下，在以下代码位置添加断点：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712912172123-b229ef63-3755-4993-84f4-2e303874c710.png)
+![](assets/1712912172123-b229ef63-3755-4993-84f4-2e303874c710.png)
 
 让代码执行到断点处：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712912197579-f0e09df6-2183-4ace-addf-a2c7d3d9c5f7.png)
+![](assets/1712912197579-f0e09df6-2183-4ace-addf-a2c7d3d9c5f7.png)
 
 让程序停在此处，看看数据库表中的数据是否发生变化：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712912226628-a32ded77-a2fe-4788-b5b5-3e2083b0926e.png)
+![](assets/1712912226628-a32ded77-a2fe-4788-b5b5-3e2083b0926e.png)
 
 可以看到，整个转账的业务还没有执行完毕，act-001 账户的余额已经被修改为 30000了，为什么修改为 30000了，因为JDBC事务默认情况下是自动提交，只要执行一条DML语句则自动提交一次。这种自动提交是极其危险的。如果在此时程序发生了异常，act-002账户的余额未成功更新，则钱会丢失一万。我们可以测试一下：测试前先将数据恢复到起初的时候
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712912419988-1a2030f1-6603-47a8-9d25-224f767322ea.png)
+![](assets/1712912419988-1a2030f1-6603-47a8-9d25-224f767322ea.png)
 
 在以下代码位置，让其发生异常：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712912470809-0f61ba45-3562-4531-8fa9-d1d5efba0b81.png)
+![](assets/1712912470809-0f61ba45-3562-4531-8fa9-d1d5efba0b81.png)
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760950988734-b3c25fcc-0ba8-4fca-981f-0f4b2b53d567.png)
+![](assets/1760950988734-b3c25fcc-0ba8-4fca-981f-0f4b2b53d567.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712912515925-d895e1d5-14c1-4858-8fe0-eab02faa8100.png)
+![](assets/1712912515925-d895e1d5-14c1-4858-8fe0-eab02faa8100.png)
 
 经过测试得知，丢失了一万元。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 添加事务控制
 如何解决以上问题，分三步：
@@ -3241,27 +3241,27 @@ public class JDBCTest19 {
 
 将数据恢复如初：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712913009901-fda0cf51-2d89-4aed-907c-92803e51370a.png)
+![](assets/1712913009901-fda0cf51-2d89-4aed-907c-92803e51370a.png)
 
 执行程序，仍然会出现异常：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760951016097-cf55dbe7-f0c6-419a-bbf2-b1d0a28f65ac.png)
+![](assets/1760951016097-cf55dbe7-f0c6-419a-bbf2-b1d0a28f65ac.png)
 
 但是数据库表中的数据是安全的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712913054649-53befbcc-2748-433c-9f27-6c2dca4a1bd6.png)
+![](assets/1712913054649-53befbcc-2748-433c-9f27-6c2dca4a1bd6.png)
 
 当程序不出现异常时：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712913078723-158ff1de-43b9-4ae0-b1c5-68dc011ec2c7.png)
+![](assets/1712913078723-158ff1de-43b9-4ae0-b1c5-68dc011ec2c7.png)
 
 数据库表中的数据也是正确的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712913097670-fd86b9a8-dab3-4bab-b5b5-ccfff28e1cba.png)
+![](assets/1712913097670-fd86b9a8-dab3-4bab-b5b5-ccfff28e1cba.png)
 
 这样就采用了JDBC事务解决了数据安全的问题。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 设置JDBC事务隔离级别
 对于 MySQL 数据库来说，通常不需要设置事务隔离级别，因为默认的可重复读基本上可以满足大部分的业务需求。如果需要完全避免幻读问题，可以设置事务的隔离级别，在JDBC程序中应该如何设置事务的隔离级别呢？代码如下：
@@ -3356,7 +3356,7 @@ public class JDBCTest21 {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1712915314800-457530dc-85bd-4592-b0e7-595349fb92cb.png)
+![](assets/1712915314800-457530dc-85bd-4592-b0e7-595349fb92cb.png)
 
 程序解说：
 
@@ -3439,7 +3439,7 @@ conn.close();
 
 上述代码中，可以根据实际情况适当修改存储过程名、参数传递方式、参数类型等内容。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据库表的准备
 
@@ -3466,26 +3466,26 @@ commit;
 select * from t_employee;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713071562929-40bc3b9b-59e0-4447-a6d2-ee9a402112d7.png)
+![](assets/1713071562929-40bc3b9b-59e0-4447-a6d2-ee9a402112d7.png)
 
 ## 实现效果
 ### 查看员工列表
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780239984435-07b42877-65c3-4835-a19b-af848aafd3bb.png)
+![](assets/1780239984435-07b42877-65c3-4835-a19b-af848aafd3bb.png)
 
 ### 查看员工详情
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780240017712-26b28b3d-afa7-4c36-a6fe-e911dac6986b.png)
+![](assets/1780240017712-26b28b3d-afa7-4c36-a6fe-e911dac6986b.png)
 
 ### 新增员工
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780240071690-f31e11df-9d0d-41c8-8e3b-a5c94c988c95.png)
+![](assets/1780240071690-f31e11df-9d0d-41c8-8e3b-a5c94c988c95.png)
 
 ### 修改员工
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780240182934-f0dcc2f4-48a2-41e8-b098-fefabc146998.png)
+![](assets/1780240182934-f0dcc2f4-48a2-41e8-b098-fefabc146998.png)
 
 ### 删除员工
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780240226257-13dd2edb-24ca-4c6b-86ee-c24429890133.png)
+![](assets/1780240226257-13dd2edb-24ca-4c6b-86ee-c24429890133.png)
 
 ### 退出系统
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780240243363-1212e013-7a7c-434b-bfea-162d7c7de415.png)
+![](assets/1780240243363-1212e013-7a7c-434b-bfea-162d7c7de415.png)
 
 ## 参考代码
 可以将以下代码作为参考，完善的实现了员工信息管理：
@@ -3829,7 +3829,7 @@ public class EmployeeSystem {
 + **什么时候不需要？**
     - **当 `nextInt()` / `nextDouble()` / `next()` 后面跟着的还是 `nextInt()` / `nextDouble()` / `next()` 时，不需要。因为 `nextXxx()`方法在执行时会自动跳过它前面的空白和换行符。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是DAO
 DAO是：Data Access Object，翻译为：数据访问对象。
@@ -3937,7 +3937,7 @@ public class Employee {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 定义EmployeeDao
 定义五个方法，分别完成五个功能：新增，修改，删除，查看一个，查看所有。
@@ -4108,7 +4108,7 @@ public class EmployeeDao {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## BaseDao的封装
 
@@ -4251,7 +4251,7 @@ public class BaseDao {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 连接池的理解
 ### 不使用连接池有啥问题
@@ -4309,7 +4309,7 @@ Connection对象是重量级对象，创建Connection对象就是建立两个进
     1. 2015年诞生
     2. BoneCP是一款Java语言下的高性能连接池，于2015年由Dominik Gruntz在GitHub上发布。BoneCP具有分布式事务、连接空闲检查、SQL语句跟踪和性能分析、特定类型的连接池等特点。BoneCP连接池适用于大型应用系统和高并发的负载场景
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 连接池的使用
 ### Druid的使用
@@ -4319,7 +4319,7 @@ Connection对象是重量级对象，创建Connection对象就是建立两个进
 
 **第一步：引入Druid的jar包**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713164785681-0fdb049c-2a06-40e4-83cd-bfc876d8b696.png)
+![](assets/1713164785681-0fdb049c-2a06-40e4-83cd-bfc876d8b696.png)
 
 jar 包在 Maven 的中央仓库中有提供：[https://repo1.maven.org/maven2/com/alibaba/druid/](https://repo1.maven.org/maven2/com/alibaba/druid/)
 
@@ -4353,14 +4353,14 @@ Connection conn = dataSource.getConnection();
 
 仍然调用Connection的close()方法，但是这个close()方法并不是真正的关闭连接，只是将连接归还到连接池，让其称为空闲连接对象。这样其他线程可以继续使用该空闲连接。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### HikariCP的使用
 Spring Boot 框架默认使用的就是这个连接池。
 
 **第一步：引入jar包**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1761575984591-fa65fd12-0433-44b5-891c-7e3ac1aab3ae.png)
+![](assets/1761575984591-fa65fd12-0433-44b5-891c-7e3ac1aab3ae.png)
 
 jar 包的 Maven 中央仓库地址：[https://repo1.maven.org/maven2/com/zaxxer/HikariCP/](https://repo1.maven.org/maven2/com/zaxxer/HikariCP/)
 

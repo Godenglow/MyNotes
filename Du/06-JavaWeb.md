@@ -1,7 +1,7 @@
 # Servlet&Thymeleaf
 
 ## BS与CS系统结构解析
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是BS结构
 BS（Browser/Server，浏览器/服务器）结构是一种基于Web的应用程序架构模式。在这种模式下，用户通过浏览器（如Chrome、Firefox等）访问应用程序，而业务逻辑和数据存储则集中在服务器端。
@@ -59,7 +59,7 @@ CS（Client/Server，客户端/服务器）结构是一种传统的应用程序�
 **Web3 就是"可读可写+可拥有"的互联网**——你的数据、数字资产归你自己所有，不依赖任何中心化平台（比如微信、淘宝）。
 
 ## BS 结构通信原理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### URL
 一个标准的 **URL（统一资源定位符）** 由多个部分组成，用于精确标识网络上的资源位置。
@@ -145,7 +145,7 @@ CS（Client/Server，客户端/服务器）结构是一种传统的应用程序�
 | **URI** | 以上两者的统称（URL 和 URN 都可以叫做 URI） | 标识一个资源的任何方式 |  |
 
 ## JavaEE 概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 JavaEE（Java Platform, Enterprise Edition）是Sun Microsystems（后被Oracle收购）推出的企业级Java平台，现演变为**Jakarta EE**。
 
@@ -188,16 +188,16 @@ JavaEE包含以下关键规范（不同版本略有增减）：
 ### Jakarta EE 10 API 帮助文档
 主站点：[https://jakarta.ee/](https://jakarta.ee/)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748517409207-2a63a763-250c-4865-a198-45ebdfd839b7.png)
+![](assets/1748517409207-2a63a763-250c-4865-a198-45ebdfd839b7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748517430492-f15eb52f-d438-4f09-a05c-936999b2fc38.png)
+![](assets/1748517430492-f15eb52f-d438-4f09-a05c-936999b2fc38.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748517450193-caa56071-c089-4a6e-bd68-a6952689c741.png)
+![](assets/1748517450193-caa56071-c089-4a6e-bd68-a6952689c741.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748517469779-84ab0fdf-559f-41a4-b726-4b4543fb56df.png)
+![](assets/1748517469779-84ab0fdf-559f-41a4-b726-4b4543fb56df.png)
 
 ## Tomcat 服务器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Web 服务器&应用服务器
 #### Web Server
@@ -247,7 +247,7 @@ JavaEE包含以下关键规范（不同版本略有增减）：
 #### 名字和 logo
 **Tomcat**的名字源自开发者James Duncan Davidson养的公猫（Tom）。象征敏捷（轻量级）和独立（自己可以照顾自己）。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748567225421-74a22c12-f8de-48ba-be0f-7b5f80010eb2.png)
+![](assets/1748567225421-74a22c12-f8de-48ba-be0f-7b5f80010eb2.png)
 
 #### 核心功能
 + **Servlet/JSP容器**：实现Java EE（现Jakarta EE）的Servlet、JSP规范，支持动态Web应用。
@@ -284,26 +284,26 @@ JavaEE包含以下关键规范（不同版本略有增减）：
 ### Tomcat 下载
 Apache 软件基金会官网地址：[https://apache.org/](https://apache.org/)，该页面底部找到 Tomcat
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748569878538-1fdd4748-b1c4-487b-bbb9-0b829f3b7484.png)
+![](assets/1748569878538-1fdd4748-b1c4-487b-bbb9-0b829f3b7484.png)
 
 或者直接输入 Tomcat 的官网地址：[https://tomcat.apache.org/](https://tomcat.apache.org/) （是 apache 软件基金会官网的子域名，大家可以记住这个子域名的特点。）
 
 `Maven`也是 Apache 的子项目，它的官网地址是：[https://maven.apache.org/](https://maven.apache.org/)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748570146789-0b484b5b-e364-4a71-b08a-a10ef6583b90.png)
+![](assets/1748570146789-0b484b5b-e364-4a71-b08a-a10ef6583b90.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748570270716-5ab64525-228a-4487-8742-eb3b3455ad2a.png)
+![](assets/1748570270716-5ab64525-228a-4487-8742-eb3b3455ad2a.png)
 
 我们这里把 Tomcat 服务器以及 Tomcat 服务器的源码全部下载下来：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748570460182-4151c19a-05e3-4be0-a893-fb4c3c006ca2.png)
+![](assets/1748570460182-4151c19a-05e3-4be0-a893-fb4c3c006ca2.png)
 
 ### Tomcat 安装
-解压就是安装，直接将![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748570595795-0e188c7e-c198-4a79-b68d-da7c16568f4b.png)解压到没有中文的路径中，我这里解压到 `C 盘 `的根目录下。
+解压就是安装，直接将![](assets/1748570595795-0e188c7e-c198-4a79-b68d-da7c16568f4b.png)解压到没有中文的路径中，我这里解压到 `C 盘 `的根目录下。
 
 打开 Tomcat 服务器的根目录，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748570701192-239a8725-acac-4a51-be96-92ff3a30fa1a.png)
+![](assets/1748570701192-239a8725-acac-4a51-be96-92ff3a30fa1a.png)
 
 ### Tomcat 目录介绍
 #### `bin`（Binary）
@@ -345,13 +345,13 @@ Tomcat 服务器是纯 Java 语言实现的。
 
 启动 Tomcat 服务器时，需要执行 `bin`目录下的 `startup.bat`**<font style="color:#DF2A3F;">（bat 文件是 windows 批处理文件，可批量执行 dos 命令）</font>**，用文本编辑器打开 `startup.bat`文件，可以搜索`CATALINA_HOME`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748572180318-c7997c9d-ccb7-4dca-ba8b-ee1c59df8bb3.png)
+![](assets/1748572180318-c7997c9d-ccb7-4dca-ba8b-ee1c59df8bb3.png)
 
 在 windows 环境中，取环境变量值的语法是 **`%变量名%`**，因此 `CATALINA_HOME`这个环境变量是**<font style="color:#DF2A3F;">必须要配置的</font>**，如果没有配置会导致 Tomcat 服务器启动失败。
 
 并且通过以上命令可以看出：当我们执行 `startup.bat`的时候，会自动去找 `catalina.bat`文件。我们再使用文本编辑器将 `catalina.bat`打开，可以搜索 `JAVA_HOME`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748572466662-737f4d52-821a-47c8-8668-691c333b9c81.png)
+![](assets/1748572466662-737f4d52-821a-47c8-8668-691c333b9c81.png)
 
 通过以上内容可以看出 `JAVA_HOME`环境变量也是必须配置的，如果不配置则无法启动 Tomcat。
 
@@ -369,21 +369,21 @@ Tomcat 服务器是纯 Java 语言实现的，启动 Tomcat 服务器实质上�
 #### JAVA_HOME 配置
 此电脑-->右键-->属性-->高级系统设置-->环境变量
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748572849994-6616f6bb-ff9f-4741-b60f-86128be4e9d8.png)
+![](assets/1748572849994-6616f6bb-ff9f-4741-b60f-86128be4e9d8.png)
 
 #### CATALINA_HOME 配置
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748572890094-eb822abf-2301-4c97-bd1b-314eaa892bc5.png)
+![](assets/1748572890094-eb822abf-2301-4c97-bd1b-314eaa892bc5.png)
 
 #### PATH 配置
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748572944980-ef5c63e0-9be8-4315-84f9-a732d1682e56.png)
+![](assets/1748572944980-ef5c63e0-9be8-4315-84f9-a732d1682e56.png)
 
 ### Tomcat 启动和关闭
 #### 启动
 windows 环境中执行 startup.bat 来启动 Tomcat：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748573362686-0b7c325b-80df-4559-a4e3-6246167156b1.png)
+![](assets/1748573362686-0b7c325b-80df-4559-a4e3-6246167156b1.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748573317395-c624e5dd-af6d-4cd1-994a-a42e46ee7e45.png)
+![](assets/1748573317395-c624e5dd-af6d-4cd1-994a-a42e46ee7e45.png)
 
 以上的控制台窗口中会显示 Tomcat 服务器运行过程中打印的日志信息。
 
@@ -392,34 +392,34 @@ windows 环境中执行 startup.bat 来启动 Tomcat：
 #### 关闭
 windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748573450532-cca507ec-3890-4072-a524-5c155eb3fe5d.png)
+![](assets/1748573450532-cca507ec-3890-4072-a524-5c155eb3fe5d.png)
 
 执行该命令后，之前的控制台窗口会关闭，Tomcat 服务器退出。
 
 日志信息乱码可以通过修改配置文件来解决，打开 `CATALINA_HOME/conf/logging.properties`，将 `UTF-8`修改为 `GBK`，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748573620144-c767747f-edc4-49b9-937a-6093d98fe117.png)
+![](assets/1748573620144-c767747f-edc4-49b9-937a-6093d98fe117.png)
 
 重新启动 Tomcat，查看控制台，乱码已解决：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748573657112-0d08445a-6a83-48d9-b91c-3d2d52e0cdf8.png)
+![](assets/1748573657112-0d08445a-6a83-48d9-b91c-3d2d52e0cdf8.png)
 
 #### 测试
 打开浏览器，在浏览器地址栏上输入：http://localhost:8080，你将看到以下页面：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748574057820-cb1da0a9-2cf1-4d76-b5a7-cc1795b64e5c.png)
+![](assets/1748574057820-cb1da0a9-2cf1-4d76-b5a7-cc1795b64e5c.png)
 
 提醒：`127.0.0.1` 和 `localhost` 都表示本机。
 
 ## 开发静态网站
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建项目
 在任意位置创建目录 `dept`。
 
 `dept`就是项目名，该项目主要完成部门的维护。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748577163761-d9b80e56-bdbf-4bd9-a19d-deb7269a55bd.png)
+![](assets/1748577163761-d9b80e56-bdbf-4bd9-a19d-deb7269a55bd.png)
 
 ### 开发静态网页
 在 `dept`目录下新建 `index.html`、`list.html`、`add.html`、`edit.html`、`detail.html`
@@ -533,7 +533,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586465281-223139ae-3c01-4cc3-ba03-2ea0fdfe80f7.png)
+![](assets/1748586465281-223139ae-3c01-4cc3-ba03-2ea0fdfe80f7.png)
 
 #### list.html
 
@@ -708,7 +708,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586494827-70c8787e-63b1-484d-bc79-cd587da8c540.png)
+![](assets/1748586494827-70c8787e-63b1-484d-bc79-cd587da8c540.png)
 
 #### add.html
 
@@ -835,7 +835,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586528955-99b3b234-2ae0-4f94-ad39-b3704155b488.png)
+![](assets/1748586528955-99b3b234-2ae0-4f94-ad39-b3704155b488.png)
 
 #### edit.html
 
@@ -982,7 +982,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586582014-ffd506fa-4c47-41a6-aaf0-b9768768eb87.png)
+![](assets/1748586582014-ffd506fa-4c47-41a6-aaf0-b9768768eb87.png)
 
 #### detail.html
 
@@ -1112,12 +1112,12 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586611938-24c82e35-f1d6-408f-b59d-7df40d3b9986.png)
+![](assets/1748586611938-24c82e35-f1d6-408f-b59d-7df40d3b9986.png)
 
 ### 部署项目
 部署就是将开发的项目拷贝到 `CATALINA_HOME/webapps`目录下，将 `dept`目录拷贝到该目录下。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748586755670-1d70ae94-0e65-4740-8b01-b1f3bbae18a0.png)
+![](assets/1748586755670-1d70ae94-0e65-4740-8b01-b1f3bbae18a0.png)
 
 ### 启动 Tomcat 打开浏览器访问
 访问地址分别如下：
@@ -1316,16 +1316,16 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 + **第二个问题**：这些页面目前都是静态的，我们怎么能让页面变成动态网页，这里所说的动态网页不是说页面中有 flash 动画，指的是页面中的数据是动态的，假设数据库表中有 10 条记录，则部门列表页面显示 10 个部门信息。如果有 100 条则页面也显示 100 条。这就需要编写 Java 程序了，让 Java 程序去连接数据库，动态查询数据就搞定了，那么这个服务器端的 Java 程序通常被我们称为 Servlet。（Servlet：Server Applet 表示服务器端的 Java 小程序。）
 
 ## 深入理解 Servlet
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### BS 系统涉及的角色与协议
 **<font style="color:#DF2A3F;">详细图：</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748698438324-7379061b-2b64-4a15-b633-8be0a994a1d3.png)
+![](assets/1748698438324-7379061b-2b64-4a15-b633-8be0a994a1d3.png)
 
 **<font style="color:#DF2A3F;">简略图：</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748591918933-62254fe4-fd52-4fd3-a83f-76da1d33a44e.png)
+![](assets/1748591918933-62254fe4-fd52-4fd3-a83f-76da1d33a44e.png)
 
 ****
 
@@ -1356,7 +1356,7 @@ windows 环境中执行 shutdown.bat 来关闭 Tomcat：
 
 **创建一个目录用来存储代码：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748699596162-cbf178a8-a0e7-42ea-a3b1-ff6cba0d8d79.png)
+![](assets/1748699596162-cbf178a8-a0e7-42ea-a3b1-ff6cba0d8d79.png)
 
 #### 制定 Servlet 规范
 Servlet 规范中规范了很多东西，我们这里只编写一个 `Servlet`接口即可。`Tomcat 服务器开发者 `和 `Web 应用开发者 `都面向该接口编程，才可以做到解耦合。
@@ -1443,33 +1443,33 @@ public class Bootstrap{
 #### 测试
 编译以上程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748702315777-7936f7fa-32cd-403a-a846-fcf8b5599942.png)
+![](assets/1748702315777-7936f7fa-32cd-403a-a846-fcf8b5599942.png)
 
 如果编译时提示字符集的问题，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748701998763-6cb2db7b-d815-4df8-9edd-909bb2f2341b.png)
+![](assets/1748701998763-6cb2db7b-d815-4df8-9edd-909bb2f2341b.png)
 
 这是因为 EditPlus 编辑器默认的字符编码方式为 ANSI。将 EditPlus 的字符编码方式修改为 UTF-8，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748702089356-864b0c5b-7dfc-4086-a418-10dfe3616ca4.png)
+![](assets/1748702089356-864b0c5b-7dfc-4086-a418-10dfe3616ca4.png)
 
 然后将我们之前编写的每个文件的字符集修改为 UTF-8：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748702135913-59347664-6e4b-4db8-b437-7aaa6c896b2a.png)
+![](assets/1748702135913-59347664-6e4b-4db8-b437-7aaa6c896b2a.png)
 
 操作完成后一定要重新保存文件哦。
 
 再次编译，结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748702266074-0389b564-f7f8-422d-8f07-92d90cb80ff9.png)
+![](assets/1748702266074-0389b564-f7f8-422d-8f07-92d90cb80ff9.png)
 
 运行 Bootstrap 类，启动 Tomcat 服务器，开始接收用户的请求：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748702391882-77e32431-ee75-41d8-8203-e817347ac75f.png)
+![](assets/1748702391882-77e32431-ee75-41d8-8203-e817347ac75f.png)
 
 发送`/login`请求，再发送 `/del`请求，观察 Tomcat 服务器是否可以调用到对应的 Servlet：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748702414510-153c54cf-be8c-419d-ac86-664cbc2c92d8.png)
+![](assets/1748702414510-153c54cf-be8c-419d-ac86-664cbc2c92d8.png)
 
 ### Servlet 规范规定了什么
 只有遵守了 Servlet 规范，web 应用才能够运行在不同的符合规范的 web 服务器中。你需要永远记住这句话。
@@ -1527,7 +1527,7 @@ Servlet 规范中规定了 web 应用的配置文件不能随意编写，因为 
 ```
 
 ## 开发第一个 Servlet
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建项目的标准目录
 在任意位置创建一个目录 `web01`，作为项目的根目录。然后在该目录下按照以下目录结构创建：
@@ -1538,16 +1538,16 @@ web01
                |-------classes
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748836276684-d803e6f4-99f6-4fc8-a3c9-aa068c136d22.png)
+![](assets/1748836276684-d803e6f4-99f6-4fc8-a3c9-aa068c136d22.png)
 
 ### 编写 Servlet
 在任意位置创建 `HelloServlet.java`。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748836351532-1d762a67-85fb-4eb3-8fef-56acde86de6c.png)
+![](assets/1748836351532-1d762a67-85fb-4eb3-8fef-56acde86de6c.png)
 
 任何 `Servlet`都必须实现 `jakarta.servlet.Servlet`接口，该接口中有哪些方法呢？参考帮助文档：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748836574181-7a44e911-ae3f-4929-8f87-32fee8d27e76.png)
+![](assets/1748836574181-7a44e911-ae3f-4929-8f87-32fee8d27e76.png)
 
 编写 `HelloServlet`实现该接口中所有方法：
 
@@ -1591,24 +1591,24 @@ public class HelloServlet implements Servlet{
 ### 编译 Servlet
 配置环境变量 CLASSPATH：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748851199928-24bbe6f8-3ca5-436c-a219-db299087ac4e.png)
+![](assets/1748851199928-24bbe6f8-3ca5-436c-a219-db299087ac4e.png)
 
 思考，为什么要配置 CLASSPATH 环境变量，另外环境变量中为什么要添加一个 `.`
 
 编译：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748851547556-4d470879-eb8d-4228-aea7-c2c83b7a77ce.png)
+![](assets/1748851547556-4d470879-eb8d-4228-aea7-c2c83b7a77ce.png)
 
 以上编译命令表示：编译当前目录下的 `HelloServlet.java`文件，将编译之后的程序放到当前目录下。
 
 编译之后生成了：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748851646239-23c3bf7b-d3c3-4580-9c74-571389271ba2.png)
+![](assets/1748851646239-23c3bf7b-d3c3-4580-9c74-571389271ba2.png)
 
 ### 编译后拷贝到 classes 目录
 将以上编译之后的结果拷贝到 `WEB-INF/classes`目录下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748851963150-40b6f755-d0be-45f3-a817-11af3dafa2af.png)
+![](assets/1748851963150-40b6f755-d0be-45f3-a817-11af3dafa2af.png)
 
 ### 编写 web.xml 配置
 Tomcat 服务器 webapps 目录下自带了几个项目，这些项目当中都有 `web.xml`，可以从这里拷贝样例文件。
@@ -1645,16 +1645,16 @@ Tomcat 服务器 webapps 目录下自带了几个项目，这些项目当中都�
 ### 部署项目到 Tomcat
 将 `web01`目录拷贝到 `CATALINA_HOME/webapps`目录下，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748852918795-fe55d6b3-11a6-4624-a5fa-2d900c205fce.png)
+![](assets/1748852918795-fe55d6b3-11a6-4624-a5fa-2d900c205fce.png)
 
 ### 启动 Tomcat 打开浏览器访问
 浏览器上的结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748853060622-88e484b5-f2ac-4a24-87bd-7dffe9f91a9a.png)
+![](assets/1748853060622-88e484b5-f2ac-4a24-87bd-7dffe9f91a9a.png)
 
 控制台的结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748853138208-1a55b30a-d716-4af6-abf5-b7f83284f206.png)
+![](assets/1748853138208-1a55b30a-d716-4af6-abf5-b7f83284f206.png)
 
 ### 使用超链接发送请求
 在上面测试时，浏览器地址栏上直接输入的地址是：`http://localhost:8080/web01/hello`，也可以采用用户点击超链接的方式发送请求。在 `web01`目录下新建 `index.html`。然后编写如下代码：
@@ -1677,25 +1677,25 @@ Tomcat 服务器 webapps 目录下自带了几个项目，这些项目当中都�
 
 将 `index.html`文件部署到 Tomcat 服务器的 `web01`项目下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748859001290-77a54198-d123-44b9-8120-4c839a1cf16a.png)
+![](assets/1748859001290-77a54198-d123-44b9-8120-4c839a1cf16a.png)
 
 **再次启动服务器测试**
 
 启动 Tomcat 服务器，然后打开浏览器在地址栏上输入：`http://localhost:8080/web01/index.html`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748859103460-3f57709a-1ef9-4f4a-aea0-26364de5e1d3.png)
+![](assets/1748859103460-3f57709a-1ef9-4f4a-aea0-26364de5e1d3.png)
 
 点击以上两个超链接发送请求，结果都是：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748859138773-9c0f1e2b-2fec-4cb1-8d97-4e32bb449099.png)
+![](assets/1748859138773-9c0f1e2b-2fec-4cb1-8d97-4e32bb449099.png)
 
 **将 index.html 放到 WEB-INF 目录下测试**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748859250198-96529326-6d70-419d-9943-1c26131411d9.png)
+![](assets/1748859250198-96529326-6d70-419d-9943-1c26131411d9.png)
 
 启动服务器，打开浏览器，输入地址：`http://localhost:8080/web01/WEB-INF/index.html`，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748859309266-480d57e4-e5f1-498f-8557-a1306d9ea7c6.png)
+![](assets/1748859309266-480d57e4-e5f1-498f-8557-a1306d9ea7c6.png)
 
 通过测试得知，放在 WEB-INF 目录下的资源是受保护的。
 
@@ -1716,7 +1716,7 @@ public void service(ServletRequest request,ServletResponse response)
 
 运行效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748859785380-65dcda4d-636c-4795-a329-acade8134963.png)
+![](assets/1748859785380-65dcda4d-636c-4795-a329-acade8134963.png)
 
 发现响应中文的时候出现了乱码问题，编写以下代码来解决响应时的中文乱码问题：
 
@@ -1738,7 +1738,7 @@ public void service(ServletRequest request,ServletResponse response)
 
 重新编译、重新部署、重启服务器访问：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748860098856-21253950-c8e3-49a0-ba03-49da074c50a6.png)
+![](assets/1748860098856-21253950-c8e3-49a0-ba03-49da074c50a6.png)
 
 中文乱码问题就解决了。另外，以上解决中文乱码的两行代码：
 
@@ -1761,14 +1761,14 @@ response.setContentType("text/html;charset=UTF-8");
 + 后者：是HTML文档内部的编码声明，浏览器在解析HTML时会参考这个提示，当HTTP响应头没有指定charset时，浏览器会查找meta标签，如果HTTP头已指定charset，meta标签通常会被忽略。
 
 ## Servlet 连接数据库
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 继续在 `web01`项目中实现连接数据库的效果。实现功能：以列表形式显示部门名称。
 
 ### 添加 mysql 驱动
 在 `WEB-INF`目录下新建 `lib`目录，将 `mysql.jar`驱动放到 `lib`目录中。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748911994986-fe9bc878-f3db-4fd8-8df1-0ce33086aa7a.png)
+![](assets/1748911994986-fe9bc878-f3db-4fd8-8df1-0ce33086aa7a.png)
 
 ### 编写 DeptListServlet
 
@@ -1882,55 +1882,55 @@ public class DeptListServlet implements Servlet{
 ### 部署测试
 将项目部署到 Tomcat 的 webapps 目录下，启动 Tomcat 服务器，打开浏览器输入地址：http://localhost:8080/web01/index.html
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748912894420-6557f035-2495-4439-821d-8ccf778fae53.png)
+![](assets/1748912894420-6557f035-2495-4439-821d-8ccf778fae53.png)
 
 点击部门列表超链接发送请求：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748912917558-644e7f88-c10f-4aa1-b75d-74d341eb00b5.png)
+![](assets/1748912917558-644e7f88-c10f-4aa1-b75d-74d341eb00b5.png)
 
 ## IDEA 开发 Servlet
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建空项目
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748913446753-c21964d5-0b72-4e48-b350-6bf20e3c6e40.png)
+![](assets/1748913446753-c21964d5-0b72-4e48-b350-6bf20e3c6e40.png)
 
 设置空项目的 JDK 版本：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748913502974-8d899685-e3be-4f44-8a3d-f9e8e63c30b4.png)
+![](assets/1748913502974-8d899685-e3be-4f44-8a3d-f9e8e63c30b4.png)
 
 ### 创建普通 java 模块
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748913558492-74e52755-cc21-49b4-b4c5-c17afbd13769.png)
+![](assets/1748913558492-74e52755-cc21-49b4-b4c5-c17afbd13769.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748913583573-6e2f8ac5-ffc3-4ae1-b31e-6b7530d34e1e.png)
+![](assets/1748913583573-6e2f8ac5-ffc3-4ae1-b31e-6b7530d34e1e.png)
 
 ### 创建 web 目录作为 webapproot
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748913709042-03821308-47fa-41ae-829e-e7f4d5aa521e.png)
+![](assets/1748913709042-03821308-47fa-41ae-829e-e7f4d5aa521e.png)
 
 ### 添加 web 支持
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748914364625-5f2c75ee-3639-48f3-bca0-5e86753c8b06.png)
+![](assets/1748914364625-5f2c75ee-3639-48f3-bca0-5e86753c8b06.png)
 
 添加 `web.xml`文件时，选择 `6.0`版本。
 
 ### 添加 Artifact（构件）
 Artifact 是构件的意思，通常指代** 可部署的输出文件**。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748914057428-fbd16feb-2246-4004-b23b-bb6abf369172.png)
+![](assets/1748914057428-fbd16feb-2246-4004-b23b-bb6abf369172.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748914077270-7e67a197-1bef-4fef-b2fc-a885b912d7ac.png)
+![](assets/1748914077270-7e67a197-1bef-4fef-b2fc-a885b912d7ac.png)
 
 ### 将 servlet-api.jar 添加到 classpath 中
 注意，这个 jar 包只是起到一个编译阶段的作用（只是让我们在 IDEA 中编写的 Servlet 程序能够正常编译），因此这个 jar 包不需要放到 `WEB-INF/lib`目录中。因为 `WEB-INF/lib`目录下的 jar 包是在运行阶段起作用的，Tomcat 服务器运行时 `servlet-api.jar` 已经在 `CATALINA_HOME/lib`目录下了。
 
 在 `web01`模块下随意创建一个目录，例如 `lib`，然后将 `servlet-api.jar`拷贝到该目录下，然后 右键-->Add as Library...
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748914910543-fc6dcee0-621d-4a91-aa78-2d623a5ec4e7.png)
+![](assets/1748914910543-fc6dcee0-621d-4a91-aa78-2d623a5ec4e7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748914926007-4f215335-359f-492e-9c46-6be98e9e02b6.png)
+![](assets/1748914926007-4f215335-359f-492e-9c46-6be98e9e02b6.png)
 
 ### 添加数据库驱动
 在 `WEB-INF`目录下新建 `lib`目录，将 mysql 驱动 jar 包拷贝到该目录下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915011637-3a8d4316-3331-4d59-8be3-cb1f949978e4.png)
+![](assets/1748915011637-3a8d4316-3331-4d59-8be3-cb1f949978e4.png)
 
 这个 jar 包是在运行阶段起作用的，编译阶段不需要。
 
@@ -1955,27 +1955,27 @@ Artifact 是构件的意思，通常指代** 可部署的输出文件**。
 ```
 
 ### IDEA 配置 Tomcat
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915210485-e44e85af-eec1-44dd-9b72-885e46550159.png)
+![](assets/1748915210485-e44e85af-eec1-44dd-9b72-885e46550159.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915242384-45f0abe4-6ffe-43e6-b582-642159598d0a.png)
+![](assets/1748915242384-45f0abe4-6ffe-43e6-b582-642159598d0a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915305459-ce611048-6200-402e-ae99-b69815d03ad4.png)
+![](assets/1748915305459-ce611048-6200-402e-ae99-b69815d03ad4.png)
 
 ### 部署构件到 Tomcat
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915349507-cd12b852-21db-4040-8179-c7a4b457c28b.png)
+![](assets/1748915349507-cd12b852-21db-4040-8179-c7a4b457c28b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915490221-5a8b3878-1261-4d52-bb3b-1fee2a75c13e.png)
+![](assets/1748915490221-5a8b3878-1261-4d52-bb3b-1fee2a75c13e.png)
 
 **上图当中的 **`**On 'Update' action**`**是指定什么的？**
 
 + **它是用来：当你手动触发“更新”操作时，IDEA 应该对正在运行的 Tomcat 应用执行什么动作**。
 + 怎么手动触发“更新”操作？当我们修改了项目代码之后，需要更新应用，代码才能生效，通过 `ctrl + F10`可以手动触发应用更新。或者点击下图面板上的刷新按钮，也能够触发应用更新
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1781698872476-7cf1beb4-8e5c-4a46-841a-b317ab00c0ba.png)
+![](assets/1781698872476-7cf1beb4-8e5c-4a46-841a-b317ab00c0ba.png)
 
 + 执行的动作包括：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1781698657430-24f27894-ee21-45e6-a6ac-a4b22280ba77.png)
+![](assets/1781698657430-24f27894-ee21-45e6-a6ac-a4b22280ba77.png)
 
 `Update resources`表示仅更新静态资源。
 
@@ -1991,22 +1991,22 @@ Artifact 是构件的意思，通常指代** 可部署的输出文件**。
 + 一般建议设置为 `Do nothing`，除非你电脑的配置很好。
 
 ### 启动 Tomcat 测试
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915526682-0318b4f6-1809-4c59-b52c-6caa7388a274.png)
+![](assets/1748915526682-0318b4f6-1809-4c59-b52c-6caa7388a274.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915631683-fb55615b-edcd-4aa2-b736-412dd7d35e37.png)
+![](assets/1748915631683-fb55615b-edcd-4aa2-b736-412dd7d35e37.png)
 
 启动成功，但控制台有中文乱码，这是因为**当前版本的 IDEA 控制台的默认字符编码方式为 UTF-8（看下图可以查看控制台的字符编码方式）**，需要将 `CATALINA_HOME/conf/logging.properties`文件中之前的修改的 `GBK`，再次改回 `UTF-8`即可：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1781698200956-4e667db7-66d2-421e-a65d-0da9b447cc6a.png)
+![](assets/1781698200956-4e667db7-66d2-421e-a65d-0da9b447cc6a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915727373-7b572fd1-07cc-4e9a-83cf-2fcc58db9c2f.png)
+![](assets/1748915727373-7b572fd1-07cc-4e9a-83cf-2fcc58db9c2f.png)
 
 打开浏览器访问：http://localhost:8080/web01/list
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748915896203-1f751a25-2e85-4251-a00d-ad9c8581e2c7.png)
+![](assets/1748915896203-1f751a25-2e85-4251-a00d-ad9c8581e2c7.png)
 
 ## HTTP协议
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是HTTP协议
 **HTTP（HyperText Transfer Protocol，超文本传输协议）** 是一种用于分布式、协作式超媒体信息系统的应用层协议。它是万维网（WWW）数据通信的基础，基于**客户端-服务器模型**，通过请求-响应模式工作。  
@@ -2209,7 +2209,7 @@ System.out.println(decoded);
 ```
 
 ## Servlet 对象生命周期
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 生命周期及管理者
 Servlet 生命周期指的是：Servlet 对象从创建到最终被销毁的整个过程。
@@ -2280,19 +2280,19 @@ public class LifecycleServlet implements Servlet {
 
 启动服务器发送第一次请求：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748921304328-aa2f9970-a54a-4095-9f16-dc942e9eab28.png)
+![](assets/1748921304328-aa2f9970-a54a-4095-9f16-dc942e9eab28.png)
 
 发送第二次请求：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748921328623-e24233f5-fa17-4a9e-bb73-5f004ed085c0.png)
+![](assets/1748921328623-e24233f5-fa17-4a9e-bb73-5f004ed085c0.png)
 
 发送第三次请求：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748921357434-87553243-2a57-406c-bed5-88263892fa38.png)
+![](assets/1748921357434-87553243-2a57-406c-bed5-88263892fa38.png)
 
 最后关闭 Tomcat 服务器：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748921453106-d37e4ac4-f5d5-4f5a-ab40-e2e487f0bf4b.png)
+![](assets/1748921453106-d37e4ac4-f5d5-4f5a-ab40-e2e487f0bf4b.png)
 
 ### 根据测试总结生命周期
 1. 默认情况下，在服务器启动的时候并不会创建 Servlet 对象。当用户发送第一次请求时，Servlet 对象才会被创建。
@@ -2352,12 +2352,12 @@ destroy 方法只会被调用一次，该方法没有任何参数。该方法被
 
 启动服务器，查看控制台输出：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748931153917-fa192a4b-c8f4-44cb-9fca-cc1387db3b8d.png)
+![](assets/1748931153917-fa192a4b-c8f4-44cb-9fca-cc1387db3b8d.png)
 
 可以看到，服务器启动的时候会调用 `LifecycleServlet`的无参数构造方法，完成 Servlet 对象的实例化。
 
 ## GenericServlet
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 适配器设计模式
 在GoF（Gang of Four）提出的23种经典设计模式中，**适配器模式(Adapter Pattern)**是**结构型模式**的一种。
@@ -2638,12 +2638,12 @@ public class WelcomeServlet extends GenericServlet {
 
 启动服务器，打开浏览器，输入 URL：http://localhost:8080/web01/wel
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748937624855-09f37e67-5dc8-4227-8d77-872897bd0019.png)
+![](assets/1748937624855-09f37e67-5dc8-4227-8d77-872897bd0019.png)
 
 可以看到，编写 Servlet 类更加的方便了。只需要继承 `GenericServlet`，重写 `service`方法即可。
 
 ## ServletConfig
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### ServletConfig 对象的实例化
 我们在学习 `GenericServlet`的时候，有两个 init 方法，一个是 `init(ServletConfig)`，另一个是 `init()`。
@@ -2728,7 +2728,7 @@ public class GenericServlet {
 ### ServletConfig 接口常用方法
 参考 `Jakarta EE 10`的 API 帮助文档。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748942339581-080b5545-db57-4cdd-86a7-6c37b0817f5d.png)
+![](assets/1748942339581-080b5545-db57-4cdd-86a7-6c37b0817f5d.png)
 
 #### 获取 Servlet 初始化参数
 获取初始化参数的配置信息，可以通过以下两个方法：
@@ -2797,7 +2797,7 @@ public class FileUploadServlet extends GenericServlet {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748942936246-2c844ed4-5ce9-4bd5-9579-02e5eeb39296.png)
+![](assets/1748942936246-2c844ed4-5ce9-4bd5-9579-02e5eeb39296.png)
 
 当然，我们也可以不获取 `ServletConfig`对象，直接调用 `Servlet`对象的 `getInitParameterNames()`和 `getInitParameter(name)`也是可以的，这是因为我们编写 Servlet 继承了 `GenericServlet`，在该类中提供了这两个方法，作为子类 Servlet 当然可以直接调用，请再次查看 GenericServlet 源码：
 
@@ -2877,7 +2877,7 @@ out.println("<h1>" + servletName + "</h1>");
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748949233575-eb3fed25-4c5f-48d0-b450-4431fc78a1de.png)
+![](assets/1748949233575-eb3fed25-4c5f-48d0-b450-4431fc78a1de.png)
 
 同样，在 `GenericServlet`中也提供了这样一个方法，可以在不获取 `ServletConfig`对象时直接获取 ServletName，代码如下：
 
@@ -2906,7 +2906,7 @@ out.print("<h1>ServletContext = " + application + "</h1>");
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1748949548947-5b9c0e12-620f-426d-9952-e892e443f504.png)
+![](assets/1748949548947-5b9c0e12-620f-426d-9952-e892e443f504.png)
 
 同样，在 `GenericServlet`类也提供了这样一个方法，因此在不获取 ServletConfig 对象的前提下，直接获取 ServletContext 对象也是可以的，代码如下：
 
@@ -2918,7 +2918,7 @@ out.print("<h1>ServletContext = " + application + "</h1>");
 运行结果和之前一样。
 
 ## ServletContext
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### ServletContext 是什么
 1. ServletContext 是 Servlet 规范中的一员。全接口名为：jakarta.servlet.ServletContext。
@@ -3055,7 +3055,7 @@ public class GetDataServlet extends GenericServlet {
 1. http://localhost:8080/web01/set
 2. http://localhost:8080/web01/get
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749001722511-1d7c8c6c-6a2d-4c6e-86f8-f3dc3e9ab025.png)
+![](assets/1749001722511-1d7c8c6c-6a2d-4c6e-86f8-f3dc3e9ab025.png)
 
 #### 获取上下文初始化参数
 `<init-param>`属于 Servlet 初始化参数，局部的。如果这个配置是某一个 Servlet 使用，可以使用这种方式。
@@ -3114,7 +3114,7 @@ public class ContextParamServlet extends GenericServlet {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749002412486-299e2586-d02f-4d61-826f-625baf9ac62a.png)
+![](assets/1749002412486-299e2586-d02f-4d61-826f-625baf9ac62a.png)
 
 #### 访问应用资源
 访问应用资源涉及到以下三个方法：
@@ -3177,7 +3177,7 @@ public class AccessAppResourceServlet extends GenericServlet {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749005709545-f3790b0e-7044-4d10-8eb9-0620219ff28c.png)
+![](assets/1749005709545-f3790b0e-7044-4d10-8eb9-0620219ff28c.png)
 
 #### 日志记录
 日志记录涉及到以下两个方法：
@@ -3251,7 +3251,7 @@ public class LogServlet extends GenericServlet {
 
 在控制台上查看日志（Tomcat 独立部署时，日志会输出到 **`logs/localhost.YYYY-MM-DD.log`** 和 **`catalina.out`**）：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749008736910-c2087620-42c4-4f17-8f37-5a1830a66393.png)
+![](assets/1749008736910-c2087620-42c4-4f17-8f37-5a1830a66393.png)
 
 ### Servlet、ServletConfig、ServletContext 关系
 1. 一个Web应用只有一个`ServletContext`（全局共享）
@@ -3259,7 +3259,7 @@ public class LogServlet extends GenericServlet {
 3. `Servlet`本身是处理请求的核心组件，它能通过`ServletConfig`获取`ServletContext`。
 
 ## HttpServlet
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 模板方法设计模式
 模板方法模式（Template Method Pattern）是GoF 23种设计模式中的一种** 行为型 **设计模式，它定义了一个操作中的算法骨架，而将一些步骤延迟到子类中实现。
@@ -3570,7 +3570,7 @@ public class MyHttpServlet extends HttpServlet {
 
 启动服务器，打开浏览器，在地址栏直接输入 URL，这种方式就是 get 请求：http://localhost:8080/web01/myhttp
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749020566918-59cc66f1-6574-4f10-8b94-9940c56aea93.png)
+![](assets/1749020566918-59cc66f1-6574-4f10-8b94-9940c56aea93.png)
 
 因此，要避免 405 错误，前后端处理方式要一致。
 
@@ -3582,7 +3582,7 @@ public class MyHttpServlet extends HttpServlet {
 3. 前端发送 post 请求，则重写 doPost 方法。
 
 ## 实现部门管理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在项目的开发过程中会融入新知识点的讲解，请务必注意新知识点的吸收。（**<font style="color:#DF2A3F;">以项目驱动教学。</font>**）
 
@@ -3861,7 +3861,7 @@ public class DeptListServlet extends HttpServlet {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749023316765-9d58231e-7472-4bf6-ac18-69146a386a84.png)
+![](assets/1749023316765-9d58231e-7472-4bf6-ac18-69146a386a84.png)
 
 **<font style="color:#DF2A3F;">Java 15 新特性：文本块</font>**
 
@@ -3884,7 +3884,7 @@ String json = """
 #### 添加请求路径
 在 DeptListServlet 类中找到查看按钮所在位置：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749023870252-a4318cce-18c7-437b-bc94-a3b8611079af.png)
+![](assets/1749023870252-a4318cce-18c7-437b-bc94-a3b8611079af.png)
 
 在 href 属性上添加请求路径，并且携带部门编号，代码修改为：
 
@@ -3896,7 +3896,7 @@ out.print("        <a href='" + contextPath + "/detail?deptno=" + deptno + "' cl
 
 启动服务器测试，点击查看按钮，出现以下 404 错误是正常的，因为 Servlet 还没写，重点看浏览器地址栏上的请求地址是否正确：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749024200525-c31167fb-324d-4127-a04c-99205d151a68.png)
+![](assets/1749024200525-c31167fb-324d-4127-a04c-99205d151a68.png)
 
 #### 显示部门详细信息
 编写 `DeptDetailServlet`，重写 `doGet`方法，连接数据库，根据部门编号查询部门信息，动态打印详情页：
@@ -4079,7 +4079,7 @@ public class DeptDetailServlet extends HttpServlet {
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749025994506-ce2e7413-c23b-4e83-a7f1-138b7001af4b.png)
+![](assets/1749025994506-ce2e7413-c23b-4e83-a7f1-138b7001af4b.png)
 
 **<font style="color:#DF2A3F;">重点内容：</font>**
 
@@ -4103,7 +4103,7 @@ String value = request.getParameter("name");
 
 DeptListServlet 中找到删除按钮：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749026829298-97cab244-2f26-4ada-a673-98d9b5520328.png)
+![](assets/1749026829298-97cab244-2f26-4ada-a673-98d9b5520328.png)
 
 添加删除的请求路径：
 
@@ -4375,13 +4375,13 @@ public class DeptEditServlet extends HttpServlet {
 
 运行效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749028828789-378c8320-abbc-4ccc-a406-7a71841cb4f0.png)
+![](assets/1749028828789-378c8320-abbc-4ccc-a406-7a71841cb4f0.png)
 
 ### 修改部门
 #### 提交表单
 在修改页面 （DeptEditServlet），点击保存更改，发送请求，提交 form 表单。部门编号不支持修改。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749031578308-0ec990fd-98d4-42d3-b417-457aa3d12e62.png)
+![](assets/1749031578308-0ec990fd-98d4-42d3-b417-457aa3d12e62.png)
 
 修改后的代码如下：
 
@@ -4486,7 +4486,7 @@ get 请求数据在请求行上提交，格式：uri?name=value&name=value
 
 如果 get 请求提交中文数据，在 Tomcat7 及之前的版本中通过 `request.getParameter("name")`取数据时也会出现中文乱码问题。怎么解决 get 请求乱码问题呢？修改 `conf/server.xml`配置文件：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749035321888-761af397-ea18-40e2-8d7d-ad2d560b9f2b.png)
+![](assets/1749035321888-761af397-ea18-40e2-8d7d-ad2d560b9f2b.png)
 
 在以上 `<Connector>` 标签中添加 `URIEncoding="UTF-8"`属性。
 
@@ -4494,27 +4494,27 @@ Tomcat8 之后的版本中 `URIEncoding`属性的默认值就是 UTF-8，因此 
 
 怎么能够知道 `<Connector>`标签都支持哪些属性呢？可以参照 Tomcat 内部帮助文档：`CATALINA_HOME/webapps/docs/config/http.html`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749035530854-627f9e3c-57df-491f-845a-a3915d8c9303.png)
+![](assets/1749035530854-627f9e3c-57df-491f-845a-a3915d8c9303.png)
 
 ### 添加部门
 #### 跳转到添加部门页面
 在部门列表页面点击添加部门按钮：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749035831501-cdecc603-bfa8-427a-b449-8a5ecc9b44a0.png)
+![](assets/1749035831501-cdecc603-bfa8-427a-b449-8a5ecc9b44a0.png)
 
 在 DeptListServlet 中找到这个按钮，设置超链接地址为：http://localhost:8080/dept/add.html
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749036126696-3b601ee6-7e01-4673-b287-2f216206ba47.png)
+![](assets/1749036126696-3b601ee6-7e01-4673-b287-2f216206ba47.png)
 
 大家可能在想，为什么跳转到添加部门页面不需要经过 Servlet？这是因为添加部门页面是一个纯静态页面。不需要动态网页技术。
 
 在项目的根下创建 `add.html`文件，将之前的 add.html 文件中的代码拷贝粘贴进来。测试效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749036189624-492b40a9-cbea-46b8-a865-b47d21a9f8d2.png)
+![](assets/1749036189624-492b40a9-cbea-46b8-a865-b47d21a9f8d2.png)
 
 将表单中的部门编号删除，因为部门编号可以在后台 Java 程序中动态生成。最终效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749036252161-b674a181-7428-41ec-9b0e-df55fc3f01dc.png)
+![](assets/1749036252161-b674a181-7428-41ec-9b0e-df55fc3f01dc.png)
 
 #### 设置 form 表单
 表单的 action 属性设置，method 设置，表单项的 name 设置等。
@@ -4603,7 +4603,7 @@ public class DeptSaveServlet extends HttpServlet {
 到此为止，我们已经完成了基本的 CRUD 操作。
 
 ## 转发与重定向
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **转发**和**重定向**是 Servlet 中完成资源跳转的重要手段。
 
@@ -4697,7 +4697,7 @@ public class BServlet extends HttpServlet {
 
 启动服务器，打开浏览器，输入地址：http://localhost:8080/web01/a，测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749180177611-1d19f677-4e2b-41db-b109-cf37490f589e.png)
+![](assets/1749180177611-1d19f677-4e2b-41db-b109-cf37490f589e.png)
 
 6. 重定向时无法重定向到 `WEB-INF`目录下受保护的资源，例如 `WEB-INF`目录下有一个文件：`a.html`，编写以下代码会出现 404 错误：
 
@@ -4769,7 +4769,7 @@ public class BServlet extends HttpServlet {
 
 浏览器地址栏上输入：`http://localhost:8080/web01/a`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749180945867-2f7f9bb4-c72c-4699-8467-ec51231c5507.png)
+![](assets/1749180945867-2f7f9bb4-c72c-4699-8467-ec51231c5507.png)
 
 2. 转发时路径不需要写项目名。
 3. 转发调用的是 request 对象的方法。
@@ -4838,7 +4838,7 @@ JavaWeb 开发中，任何一个 Web 服务器都会内置一个默认的 Servle
 **结论：尽量不要自定义默认 Servlet，也就是说定义资源时不要占用 **`**<url-pattern>/</url-pattern>**`**请求路径。**
 
 ## 监听器 Listener
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 Servlet 监听器是 Servlet 规范中的一部分，主要用于监听 Web 应用中的特定事件，当这些事件发生时执行预定义的操作。监听器提供了一种事件驱动的编程模型，允许开发者在应用生命周期的关键点插入自定义逻辑。
 
@@ -4915,10 +4915,10 @@ public class MyServletContextListener implements ServletContextListener {
 
 启动和关闭服务器，观察控制台输出结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749198649363-2c3d4952-dc36-4095-b5c7-a44987fc0a60.png)
+![](assets/1749198649363-2c3d4952-dc36-4095-b5c7-a44987fc0a60.png)
 
 ## 过滤器 Filter
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在Servlet中，**Filter（过滤器）是一种<font style="color:#DF2A3F;">可重用</font>的组件，用于在请求到达Servlet或响应返回客户端之前拦截并处理**HTTP请求和响应。它允许开发者在不修改核心业务逻辑的情况下，对Web应用的请求/响应流程进行统一处理。
 
@@ -4945,7 +4945,7 @@ public class MyServletContextListener implements ServletContextListener {
     - **拦截处理**：每次请求触发`doFilter()`方法。  
     - **销毁**：容器关闭时调用`destroy()`方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749200766259-74ea61ae-3dc5-42d4-a118-d3d90c79eff9.png)
+![](assets/1749200766259-74ea61ae-3dc5-42d4-a118-d3d90c79eff9.png)
 
 ### 使用 Filter
 #### 不使用 Filter 存在的问题
@@ -5058,11 +5058,11 @@ public class CommonCodeFilter implements Filter {
 
 [http://localhost:8080/web01/filter/target1](http://localhost:8080/web01/filter/target1)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749202075597-8428a0e4-0b67-4d60-b6a3-6ee46b087109.png)
+![](assets/1749202075597-8428a0e4-0b67-4d60-b6a3-6ee46b087109.png)
 
 [http://localhost:8080/web01/filter/target2](http://localhost:8080/web01/filter/target2)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749202087372-86918720-1ae7-42c1-81ea-df8dfb4340d3.png)
+![](assets/1749202087372-86918720-1ae7-42c1-81ea-df8dfb4340d3.png)
 
 可以看到过滤器起作用了。
 
@@ -5191,7 +5191,7 @@ public class Client {
     - **双向处理**：支持请求前/后的拦截（经典模式通常单向）。
 
 ## Thymeleaf
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 当前项目弊端
 1. **代码耦合性高，难以维护**
@@ -5293,11 +5293,11 @@ Thymeleaf 的处理步骤：
 #### 添加Thymeleaf 的 jar 包
 jar 包从 apache 提供的 maven 中央仓库中下载，地址：[https://repo.maven.apache.org/maven2/](https://repo.maven.apache.org/maven2/)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749174515843-8891104e-437f-48da-b2e5-2e4de6255140.png)
+![](assets/1749174515843-8891104e-437f-48da-b2e5-2e4de6255140.png)
 
 将 jar 包拷贝 `WEB-INF/lib`目录下，并且只需要将 `thymeleaf-3.1.3.RELEASE.jar`添加到 classpath 中：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749174554024-065bf737-bacd-4658-89cc-5854bf7865b6.png)
+![](assets/1749174554024-065bf737-bacd-4658-89cc-5854bf7865b6.png)
 
 #### 初始化模板引擎
 写一个 ServletContextListener 监听器，在服务器启动阶段，初始化 Thymeleaf 的模板引擎：
@@ -5419,7 +5419,7 @@ public class HelloServlet extends HttpServlet {
 1. 部署到Servlet容器（如Tomcat）
 2. 访问 `[http://localhost:8080/thymeleaf/hello](http://localhost:8080/thymeleaf/hello)`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749174930521-d81ae8ae-ac29-4aff-99ca-02d494a3dfc7.png)
+![](assets/1749174930521-d81ae8ae-ac29-4aff-99ca-02d494a3dfc7.png)
 
 #### thymeleaf 添加日志框架
 thymeleaf 添加日志框架 `logback`。这样 thymeleaf 运行出错时会自动打印日志信息。便于调试。
@@ -5429,7 +5429,7 @@ thymeleaf 添加日志框架 `logback`。这样 thymeleaf 运行出错时会自�
 
 首先我们需要引入 logback 的 jar 包，放到 WEB-INF/lib 目录下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749262730546-7dad2d21-8d4e-48c1-bb24-04d90c9fc46e.png)
+![](assets/1749262730546-7dad2d21-8d4e-48c1-bb24-04d90c9fc46e.png)
 
 ##### 添加 logback 日志框架的配置文件
 在类的根路径下新建 `logback.xml`，然后将配置以下内容：
@@ -5545,7 +5545,7 @@ thymeleaf 的模板文件中是这样写的：
 
 测试时出现了以下异常：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749263606372-517035b4-42c5-4cb7-93b2-b60741623b97.png)
+![](assets/1749263606372-517035b4-42c5-4cb7-93b2-b60741623b97.png)
 
 这个问题是因为我们使用了 `${user.isAdmin}`，thymeleaf 底层会去找 `user`对象的 `getIsAdmin()`方法，但是这个方法不存在而导致的。针对这个问题，有多种解决方案，最直接的方式是将模板文件中的代码修改一下，修改为：
 
@@ -5635,17 +5635,17 @@ thymeleaf 的模板文件中是这样写的：
 
 首页面点 `Docs`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749430716157-1d8f43d8-9e79-4136-b1e6-be3953abcf07.png)
+![](assets/1749430716157-1d8f43d8-9e79-4136-b1e6-be3953abcf07.png)
 
 `Read online`在线阅读，或者下载 `PDF`等：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749430945223-3d1a8798-23d4-4f32-8eb1-80a7ac8daa41.png)
+![](assets/1749430945223-3d1a8798-23d4-4f32-8eb1-80a7ac8daa41.png)
 
 在以下页面中搜索，例如搜索 `#strings`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749431050737-fa8745a2-c4d9-4d12-9302-7482ddc465ee.png)
+![](assets/1749431050737-fa8745a2-c4d9-4d12-9302-7482ddc465ee.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749431076783-d9c2301a-559d-4349-8ef7-ccfea8df7775.png)
+![](assets/1749431076783-d9c2301a-559d-4349-8ef7-ccfea8df7775.png)
 
 ### Thymeleaf 变量查找顺序
 当 **`${message}`** 被解析时，Thymeleaf 会按以下顺序查找：
@@ -5685,7 +5685,7 @@ thymeleaf 的模板文件中是这样写的：
 ```
 
 ## 改造部门管理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 Servlet + Thymeleaf 改造之前的部门管理系统。
 
@@ -5693,7 +5693,7 @@ Servlet 负责核心业务的处理，将处理完成的数据收集起来。交
 
 ### 整合 Thymeleaf
 #### 引入 Thymeleaf 的相关 jar 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749434490407-733b42d4-ff64-4ced-8851-cacbc09b7aa4.png)
+![](assets/1749434490407-733b42d4-ff64-4ced-8851-cacbc09b7aa4.png)
 
 然后将 `thymeleaf jar`放到 `classpath`中。
 
@@ -5749,7 +5749,7 @@ public class ThymeleafInitializer implements ServletContextListener {
 ```
 
 #### 创建 `templates`目录
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749434618247-f3ab0447-1156-4579-91ad-c941846f8fa0.png)
+![](assets/1749434618247-f3ab0447-1156-4579-91ad-c941846f8fa0.png)
 
 #### Thymeleaf 整合 logback
 类的根路径下新建 `logback.xml`文件，提供以下配置：
@@ -6001,15 +6001,15 @@ Thymeleaf 的模板页面`**WEB-INF/templates/list.html**`来负责数据展示�
 2. 当前页面中的 查看、修改、删除 等超链接的路径已经修改完毕，请参照以上代码。
 
 ### 跳转到添加部门页面
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749438317444-86cda57f-d450-4685-88af-cb5eaf3efee7.png)
+![](assets/1749438317444-86cda57f-d450-4685-88af-cb5eaf3efee7.png)
 
 在 `list.html`页面中找到上图的**添加部门**按钮。将请求路径修改为 `th:href="@{/view(template=add)}"`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749439109756-9e78e023-5dd9-40d5-b668-2a4ce8caad25.png)
+![](assets/1749439109756-9e78e023-5dd9-40d5-b668-2a4ce8caad25.png)
 
 该请求路径通过执行 `ThymeleafViewServlet` 来跳转到 `WEB-INF/templates/add.html`页面，因为 `add.html`页面中也需要使用 thymleaf 语法动态设置请求路径，因此需要将之前的 `add.html`移动到 `WEB-INF/templates`目录下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749438758834-763e7e48-dc3f-4077-82b5-32d5f8fca6d6.png)
+![](assets/1749438758834-763e7e48-dc3f-4077-82b5-32d5f8fca6d6.png)
 
 ### 添加部门
 添加部门页面 `add.html`代码如下：（记得把 css 单独提取出来）
@@ -6203,7 +6203,7 @@ public class DeptDetailServlet extends HttpServlet {
 ### 删除部门
 只需要将 `list.html`页面中 **删除** 按钮发送的请求路径：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749440444195-f8aa1c6f-3eb9-431a-9ba9-10fa8540d60d.png)
+![](assets/1749440444195-f8aa1c6f-3eb9-431a-9ba9-10fa8540d60d.png)
 
 其它代码不需要修改。
 
@@ -6351,12 +6351,12 @@ public class DeptUpdateServlet extends HttpServlet {
 到此为止，我们之前实现的所有功能，就使用 thymeleaf 完成了所有的改造。大家记得跑通之后，让页面中所有的操作按钮，全部能用。
 
 ## 会话管理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 项目存在的问题
 部门管理系统现在任何人都可以访问，只要知道请求路径，假设知道部门列表页面的请求路径 `http://localhost:8080/dept/list`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749450392879-651f3ccc-912e-447f-9bd5-ec503377281f.png)
+![](assets/1749450392879-651f3ccc-912e-447f-9bd5-ec503377281f.png)
 
 如果知道删除部门的请求路径 `http://localhost:8080/dept/delete?deptno=20`，这个部门将会删除。
 
@@ -6378,7 +6378,7 @@ public class DeptUpdateServlet extends HttpServlet {
 #### 用户表创建
 `t_user`表：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749453368431-dc296051-f4eb-4207-a9b4-29f1a8e81252.png)
+![](assets/1749453368431-dc296051-f4eb-4207-a9b4-29f1a8e81252.png)
 
 ```sql
 DROP TABLE IF EXISTS `t_user`;
@@ -6505,7 +6505,7 @@ public class Argon2PasswordUtil {
 
 提示：如果需要使用 Argon2 加密算法，需要引入相关的 java jar 包，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749454867679-ad1eccf2-bbaa-4018-b2e0-a12022b4df1a.png)
+![](assets/1749454867679-ad1eccf2-bbaa-4018-b2e0-a12022b4df1a.png)
 
 将这个 jar 包拷贝到 `WEB-INF/lib`目录下，并且将其添加到 classpath 当中。
 
@@ -6648,11 +6648,11 @@ public class LoginServlet extends HttpServlet {
 
 当登录失败时，页面显示的效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749515601938-27efefc2-7ea2-4efb-ad54-49c353d91b82.png)
+![](assets/1749515601938-27efefc2-7ea2-4efb-ad54-49c353d91b82.png)
 
 当登录成功时，会跳转到部门列表页面：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749515657512-aabcfec2-b91d-4f2f-bba3-66ecea8ffa91.png)
+![](assets/1749515657512-aabcfec2-b91d-4f2f-bba3-66ecea8ffa91.png)
 
 到此为止，登录功能基本的逻辑已经实现了。
 
@@ -6720,21 +6720,21 @@ HttpSession session = request.getSession(false);
 
 请求头：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749521891896-01187993-9e7b-43bf-aa47-467a2fe794e0.png)
+![](assets/1749521891896-01187993-9e7b-43bf-aa47-467a2fe794e0.png)
 
 响应头：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749521935384-77267fb4-55f9-43aa-aab0-07110bf82933.png)
+![](assets/1749521935384-77267fb4-55f9-43aa-aab0-07110bf82933.png)
 
 第二次发送请求时，客户端会携带 sessionId，因为客户端中已经存在 sessionId 了，服务器不会再生成新的 session 对象，进而不会生成新的 sessionId，因此响应报文中不应该存在 sessionId
 
 请求头：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749521974147-43eb3b46-c1e8-4573-ad40-dd27c2180e6c.png)
+![](assets/1749521974147-43eb3b46-c1e8-4573-ad40-dd27c2180e6c.png)
 
 响应头：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749521983614-28d4f20a-93af-483e-abf3-899fdc248481.png)
+![](assets/1749521983614-28d4f20a-93af-483e-abf3-899fdc248481.png)
 
 #### session 的主要用途
 1. **用户身份认证**：存储登录状态，记录用户是否已登录
@@ -6778,7 +6778,7 @@ session 一直停留在服务器中的问题：
 
 在 Tomcat 服务器中，默认情况下 session 的超时时间设置的是 30 分钟，在 `CATALINA_HOME/confi/web.xml`中有默认配置，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749521047119-4cc75f0b-4e60-4757-93df-6699ce0e8eb7.png)
+![](assets/1749521047119-4cc75f0b-4e60-4757-93df-6699ce0e8eb7.png)
 
 这是一个全局的配置，我们也可以在自己项目的 web.xml 文件中进行局部配置，局部优先生效。
 
@@ -6830,7 +6830,7 @@ public class SessionPersistenceListener implements HttpSessionListener {
 
 `LoginServlet`代码修改如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749522198381-d6ab2758-6d6b-4bd4-b6bd-204bc48bd7b2.png)
+![](assets/1749522198381-d6ab2758-6d6b-4bd4-b6bd-204bc48bd7b2.png)
 
 ### 登录验证过滤器
 怎么能让已经登录的用户才能访问部门列表页面？
@@ -6889,7 +6889,7 @@ public class CheckLoginFilter implements Filter {
 ### 关于 web 站点欢迎页
 在 `CATALINA_HOME/conf/web.xml`文件中对欢迎页进行了全局配置，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749524091859-be8f6d06-1f98-4ac9-b074-f9cc5132e215.png)
+![](assets/1749524091859-be8f6d06-1f98-4ac9-b074-f9cc5132e215.png)
 
 因此默认情况下，这几个页面被当做欢迎页。
 
@@ -6965,7 +6965,7 @@ public class CheckLoginFilter implements Filter {
 
 效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749525110958-94f1914a-070c-4cac-a5ad-8f7c872080b4.png)
+![](assets/1749525110958-94f1914a-070c-4cac-a5ad-8f7c872080b4.png)
 
 用户登录成功后，将用户名存储到 session 作用域中了，因此在 html 页面中使用 `${session.username}`取出当前登录的用户名，替换掉页面中的 `管理员`：
 
@@ -6975,7 +6975,7 @@ public class CheckLoginFilter implements Filter {
 
 最终效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749525457096-16dd2be4-c0ee-465a-aae7-a01bfb818c32.png)
+![](assets/1749525457096-16dd2be4-c0ee-465a-aae7-a01bfb818c32.png)
 
 ### 退出系统
 用户点击退出系统时，后端应该销毁 session。
@@ -7207,7 +7207,7 @@ public class LoginServlet extends HttpServlet {
 
 在 `LoginServlet`中添加的代码是：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749689769680-72e0f8df-7e65-41a3-adea-4bb11ad98430.png)
+![](assets/1749689769680-72e0f8df-7e65-41a3-adea-4bb11ad98430.png)
 
 ```java
 package com.jkweilai.dept.filters;
@@ -7259,7 +7259,7 @@ public class CheckLoginFilter implements Filter {
 
 `CheckLoginFilter`过滤器中添加的代码如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749690017973-06ecca62-c95f-4396-bc1d-824f27a6ab59.png)
+![](assets/1749690017973-06ecca62-c95f-4396-bc1d-824f27a6ab59.png)
 
 `IndexServlet`程序修改如下：
 
@@ -7443,7 +7443,7 @@ String userAgent = request.getHeader("User-Agent");
 String fingerprint = DigestUtils.sha256Hex(ip + userAgent + "salt");
 ```
 
-以上代码需要这个 jar 包：![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749699237786-870af075-9760-4644-aa7b-0543bbf1100a.png)，添加到 WEB-INF/lib 目录下，并且添加到 classpath 中。
+以上代码需要这个 jar 包：![](assets/1749699237786-870af075-9760-4644-aa7b-0543bbf1100a.png)，添加到 WEB-INF/lib 目录下，并且添加到 classpath 中。
 
 Apache Commons Codec 是一个用于编码和解码的Java库，提供常用的编码器如Base64、Hex、URL等
 
@@ -7809,7 +7809,7 @@ DELETE FROM user_remember_tokens WHERE expires_at < NOW() OR revoked = 1;
 + 重要操作（如支付）要求重新输入密码
 
 ## request 常用方法总结
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### ServletRequest 接口
 以下是 ServletRequest 接口中的方法：
@@ -7866,7 +7866,7 @@ HttpSession getSession();
 ```
 
 ## Servlet 线程安全问题
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Tomcat 线程池
 #### 什么是线程池
@@ -7913,12 +7913,12 @@ HttpSession getSession();
 4. 实际开发中不建议在 Servlet 中定义成员变量，尽量使用局部变量。如果使用成员变量，尽量不要做修改操作，如果做修改操作，需要使用线程同步机制保证数据的安全。
 
 ## 软件架构模式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 三层架构模式
 三层架构是一种常见的软件架构模式。它将应用程序划分为三个逻辑层次，每层有明确的职责：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749727730298-3fbf26a7-40a4-4ee2-bd8b-6ed01adec552.png)
+![](assets/1749727730298-3fbf26a7-40a4-4ee2-bd8b-6ed01adec552.png)
 
 #### 表示层(Presentation Layer)
 + **职责**：处理用户界面和用户交互
@@ -8029,9 +8029,9 @@ select * from t_act;
 select * from t_tran;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749784541016-ede604cb-55e0-4f99-91e5-32348f433dbb.png)
+![](assets/1749784541016-ede604cb-55e0-4f99-91e5-32348f433dbb.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749784579080-9a5840d0-832b-4e40-acb1-0f76ccea624b.png)
+![](assets/1749784579080-9a5840d0-832b-4e40-acb1-0f76ccea624b.png)
 
 #### DeepSeek 生成前端页面
 ##### 转账页面
@@ -8224,7 +8224,7 @@ select * from t_tran;
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749783989569-ad3bf2f5-40df-464e-83d9-d586d28d6872.png)
+![](assets/1749783989569-ad3bf2f5-40df-464e-83d9-d586d28d6872.png)
 
 ##### 转账成功页面
 
@@ -8367,7 +8367,7 @@ select * from t_tran;
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749784155028-338b8c19-eb43-44e3-92bb-d191969038ee.png)
+![](assets/1749784155028-338b8c19-eb43-44e3-92bb-d191969038ee.png)
 
 ##### 转账失败页面
 
@@ -8453,7 +8453,7 @@ select * from t_tran;
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749784033465-30698f73-5f79-4f1c-b10a-a73eddd95401.png)
+![](assets/1749784033465-30698f73-5f79-4f1c-b10a-a73eddd95401.png)
 
 #### 项目搭建及准备工作
 1. IDEA 中创建一个 java 模块：bank
@@ -8494,7 +8494,7 @@ public class IndexServlet extends HttpServlet {
 
 14. 配置欢迎页，达到的效果是访问 `http://localhost:8080/bank`时，显示转账页面。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749885780415-e9e517b9-c41d-4b2c-a9fd-3f59aeff30e1.png)
+![](assets/1749885780415-e9e517b9-c41d-4b2c-a9fd-3f59aeff30e1.png)
 
 #### 添加全局异常处理及日志记录
 ##### 日志记录
@@ -9366,18 +9366,18 @@ public class AccountController extends HttpServlet {
 #### 修改页面代码
 所有页面添加：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749862638029-eadc2ab5-486f-4494-9c71-f6d21c84b873.png)
+![](assets/1749862638029-eadc2ab5-486f-4494-9c71-f6d21c84b873.png)
 
 ##### index.html
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749862710376-fce5be45-58a5-4add-80c8-03b46b40525c.png)
+![](assets/1749862710376-fce5be45-58a5-4add-80c8-03b46b40525c.png)
 
 提醒：表单提交方式为 post 方式。
 
 ##### success.html
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749864719488-37300995-d632-40ec-9510-b1282d2d0e5f.png)
+![](assets/1749864719488-37300995-d632-40ec-9510-b1282d2d0e5f.png)
 
 ##### error.html
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749883647968-f34a7f78-715e-43e6-9aa9-39df94b335b3.png)
+![](assets/1749883647968-f34a7f78-715e-43e6-9aa9-39df94b335b3.png)
 
 #### 测试
 到此为止，已经实现了基本的转账逻辑。
@@ -9385,7 +9385,7 @@ public class AccountController extends HttpServlet {
 ### 事务问题
 1. 在更新转出账户和转入账户之间模拟异常，你会发现数据库中的钱丢了。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749883851146-f69089c0-c49a-49ae-aff3-e701ab3cfc40.png)
+![](assets/1749883851146-f69089c0-c49a-49ae-aff3-e701ab3cfc40.png)
 
 2. 什么原因导致钱丢了？
     1. 在 service 中多次使用 dao，而目前 dao 中任意一个方法只要执行一次就会开启一个新的连接对象，开启一个新的事务。导致 service 方法从开始执行到最终结束，是多个事务，而不是一个事务。
@@ -9478,9 +9478,9 @@ public class DbUtils {
 
 所有 DAO 中的方法结束时，不能关闭 Connection 对象：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749866466555-a6ab166c-7ef5-41b1-8c8e-746839a22dc8.png)
+![](assets/1749866466555-a6ab166c-7ef5-41b1-8c8e-746839a22dc8.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749866476191-24d4d8f3-11c7-4607-b3a9-839adeb2d038.png)
+![](assets/1749866476191-24d4d8f3-11c7-4607-b3a9-839adeb2d038.png)
 
 再次进行测试，你会发现，发生异常之后，数据安全了，事务得到了控制，如果不发生异常，则可以正常完成转账。
 
@@ -9618,7 +9618,7 @@ MVC（Model-View-Controller）是一种软件架构模式，它将应用程序�
 3. MVC的Model在三层架构中可能对应业务逻辑层+数据访问层
 
 ## 关于路径的总结及作业
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 1. 前端发送请求的路径：以 `/`开始，添加项目名。
 2. `web.xml`中 `<url-pattern>` 配置的路径：以 `/` 开始，不添加项目名。
@@ -9656,12 +9656,12 @@ MVC（Model-View-Controller）是一种软件架构模式，它将应用程序�
 
 **怎么解决？在 Tomcat 服务器的 **`**VM options**`**配置中添加这个配置：**`-Dstdout.encoding=UTF-8`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1762937114583-cb3378ea-1d25-4a48-a6d3-d45eec9c0167.png)
+![](assets/1762937114583-cb3378ea-1d25-4a48-a6d3-d45eec9c0167.png)
 
 **另外，在这种环境下标准错误流通常也需要设置一下，不然在出现的异常中异常的描述信息是中文的话也会乱码，可以通过 `System.err.charset()``代码来查看标准错误流的字符编码方式，它应该也是 GBK。因此也需要在 ``vm options``中进行配置：``-Dstderr.encoding=UTF-8`**
 
 ## 附录：HTTP状态信息
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 1xx: 信息
 | **消息** | **描述** |

@@ -1,6 +1,6 @@
 # 第01章 初识Java
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 本章内容概要
 + 计算机概述（了解）
@@ -20,21 +20,21 @@
 
 1.  中央处理器（CPU）：负责处理计算机的指令和数据，是计算机的核心部件。 （比如：1+2=3，1,2,3数据存储在内存中，3这个结果是CPU算出来的。）
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684479738774-e4a54c07-5ef1-470e-a0ee-59877d4d237d.png)
+![](assets/1684479738774-e4a54c07-5ef1-470e-a0ee-59877d4d237d.png)
 
 2.  内存：用于存储计算机正在运行的程序和数据，是计算机的临时存储器。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684479906743-907fe8cf-70f8-490c-a602-e3f63f586382.png) 
+![](assets/1684479906743-907fe8cf-70f8-490c-a602-e3f63f586382.png) 
 
 3.  硬盘：用于存储计算机的操作系统、程序和数据，是计算机的永久存储器。 
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684479961975-abec0371-4845-431e-a862-dfc8e83720c3.png)
+![](assets/1684479961975-abec0371-4845-431e-a862-dfc8e83720c3.png)
 
 4.  显示器：用于显示计算机处理的图像和文字。 
 5.  键盘和鼠标：用于输入指令和数据。 
 6.  主板：连接计算机各个硬件组件的中心部件。 
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684480080947-31bc4df4-3a6e-4fdd-b336-5143276ee714.png)
+![](assets/1684480080947-31bc4df4-3a6e-4fdd-b336-5143276ee714.png)
 
 7.  电源：提供电能给计算机各个部件。 
 
@@ -51,7 +51,7 @@
 
 这些部件共同工作，决定着计算机的性能和稳定性。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681126480-073f6fb1-65b8-4963-a43c-c9e038ed52e8.jpeg)
+![](assets/1757681126480-073f6fb1-65b8-4963-a43c-c9e038ed52e8.jpeg)
 
 #### 软件
 通常计算机软件可以分为**系统软件**和**应用软件**两类：
@@ -84,9 +84,9 @@
 
 硬件、系统软件、应用软件的关系
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684480660707-c02f64c1-009b-41d9-ab46-995292beb082.png)
+![](assets/1684480660707-c02f64c1-009b-41d9-ab46-995292beb082.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681136925-338ce2e5-8349-445a-9261-6d7105dd3cba.jpeg)
+![](assets/1757681136925-338ce2e5-8349-445a-9261-6d7105dd3cba.jpeg)
 
 ### 计算机语言概述（了解）
 #### 什么是计算机程序
@@ -139,12 +139,12 @@
 ### Java语言概述（了解）
 Java是一种面向对象的编程语言（<font style="color:#DF2A3F;">Java底层是C++语言实现的</font>），由Sun Microsystems公司于1995年推出。它是一种通用的、高级的、并发性强的、安全的、可移植的、解释性的、编译性的、动态的、跨平台的编程语言。Sun Microsystems公司于2010年1月被甲骨文（Oracle）公司以74亿美元的价格收购。甲骨文公司成为了Java语言的主要维护者和开发者之一。甲骨文公司官网地址：[http://www.oracle.com](http://www.oracle.com)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681146939-95e34f7b-d181-49ff-bf79-fd78db40f6e1.jpeg)
+![](assets/1757681146939-95e34f7b-d181-49ff-bf79-fd78db40f6e1.jpeg)
 
 #### Java之父
 Java之父：Java之父指的是詹姆斯·高斯林（James Gosling），他是Java编程语言的发明者之一。高斯林在20世纪80年代末和90年代初，与Sun Microsystems公司的一些工程师一起开发了Java语言。高斯林出生于加拿大，1983年获得了卡尔加里大学的计算机科学博士学位。之后，他加入了Sun Microsystems公司，开始从事编程语言方面的研究工作。在Sun公司，他领导了一支团队，致力于开发一种新的编程语言，这就是后来的Java语言。Java语言的设计初衷是为了解决跨平台编程的问题。在Java语言的设计中，高斯林和他的团队引入了许多新的概念和技术，如虚拟机、垃圾回收、面向对象编程等，这些技术极大地改进了编程语言的性能和可用性。高斯林在Java语言的发明和推广过程中，发挥了非常重要的作用。他不仅是Java语言的设计者之一，而且还是Java社区的重要领袖和推动者。他一直致力于推广Java技术，帮助Java社区不断发展壮大。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684484411484-f01d7e9b-1701-40e2-bbc4-c1c9462ac56e.png)
+![](assets/1684484411484-f01d7e9b-1701-40e2-bbc4-c1c9462ac56e.png)
 
 #### Java名字来历及logo标志
 Java的名字有一个有趣的历史背景。在1990年代初，SUN公司的研发团队正在开发一种新的软件平台，该平台可以在各种不同的计算机系统上运行，并且能够处理各种多媒体文件。这种平台最初被称为“Oak”，以纪念SUN公司的首席科学家James Gosling喜欢的一棵橡树。
@@ -153,7 +153,7 @@ Java的名字有一个有趣的历史背景。在1990年代初，SUN公司的研
 
 Java的logo同样也是一杯冒着热气的咖啡：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684484952727-0f464c0d-097c-450c-bf00-3ea532b03f9a.png)
+![](assets/1684484952727-0f464c0d-097c-450c-bf00-3ea532b03f9a.png)
 
 #### Java语言发展史
 Java语言的发展历程中的重要事件：
@@ -178,7 +178,7 @@ Java语言的发展历程中的重要事件：
 18. <font style="color:#DF2A3F;">2023 年 9 月：发布 JavaSE21 版本，这也是一个 LTS 版（Long-Term Support，长期支持版）</font>
 19. <font style="color:#DF2A3F;">2025年9月：发布JavaSE25版本，它也是一个LTS版本。</font>
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681154768-c4a9b6c1-190c-461d-a142-0da23fd35f58.jpeg)
+![](assets/1757681154768-c4a9b6c1-190c-461d-a142-0da23fd35f58.jpeg)
 
 #### Java的三大分支
 Java的三大分支：
@@ -208,10 +208,10 @@ Java语言的特点包括：
 
 总之，Java语言是一种强大的、易学的、安全的、跨平台的编程语言，它在企业级应用开发、Web应用开发、移动应用开发和嵌入式系统开发等领域都有广泛的应用。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681161591-5634ad1e-a790-40da-8125-381974007490.jpeg)
+![](assets/1757681161591-5634ad1e-a790-40da-8125-381974007490.jpeg)
 
 ### Java的加载与执行（理解）
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684555441572-1410145a-2783-4eb4-99c8-6a9a8e953c27.png)
+![](assets/1684555441572-1410145a-2783-4eb4-99c8-6a9a8e953c27.png)
 
 1. 包含两个阶段：编译阶段和运行阶段。
 2. 编译阶段和运行阶段可以在不同的操作系统上完成。
@@ -225,13 +225,13 @@ Java语言的特点包括：
 10. Java程序要想运行，必须有JVM才行。JVM怎么安装？只要安装了JRE，JRE中自带JVM。
 11. JDK、JRE、JVM分别是什么？它们的关系是？
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1684554172873-99561050-f5cc-429f-9d2f-7b188f6d82d3.jpeg)
+![](assets/1684554172873-99561050-f5cc-429f-9d2f-7b188f6d82d3.jpeg)
 
 + JDK（Java Development Kit）是Java开发工具包，包含了Java开发所需的所有工具和类库，包括JRE（Java Runtime Environment）和JVM（Java Virtual Machine）。
 + JRE（Java Runtime Environment）是Java运行时环境，包含了Java虚拟机和运行Java程序所需的类库等文件。
 + JVM（Java Virtual Machine）是Java虚拟机，是Java程序的运行环境，能够在各种平台上运行Java程序，它将Java字节码解释成本地机器码执行。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681168720-a82b410b-2bbe-4749-a27f-903a1d96ef68.jpeg)
+![](assets/1757681168720-a82b410b-2bbe-4749-a27f-903a1d96ef68.jpeg)
 
 ### 第一个Java程序（掌握）
 #### JDK下载和安装（windows）
@@ -271,36 +271,36 @@ Java语言的特点包括：
 
 打开命令行窗口，输入“java -version”命令，如果输出JDK17的版本信息，则安装成功。如果未能输出版本信息，则需要重新检查环境变量的设置是否正确。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681177017-ee872c21-608a-441e-bcdc-dfcf506abe50.jpeg)
+![](assets/1757681177017-ee872c21-608a-441e-bcdc-dfcf506abe50.jpeg)
 
 #### JDK下载和安装（macOS）
 以下是详细的步骤：
 
 1. 下载地址：[https://www.oracle.com/java/technologies/downloads/#jdk17-mac](https://www.oracle.com/java/technologies/downloads/#jdk17-mac)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592443947-d71e0db9-e335-4cd8-a665-eb9dda18fbdf.png)
+![](assets/1684592443947-d71e0db9-e335-4cd8-a665-eb9dda18fbdf.png)
 
 2. 下载后的dmg文件
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592481903-dc01e203-484a-4775-909d-df55974b02a0.png)
+![](assets/1684592481903-dc01e203-484a-4775-909d-df55974b02a0.png)
 
 3. 双击dmg安装包
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592490602-6b2417a7-53e0-4c5f-8f9c-ae6101b889a8.png)
+![](assets/1684592490602-6b2417a7-53e0-4c5f-8f9c-ae6101b889a8.png)
 
 4. 双击pkg文件后，一步一步安装即可
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592577210-fc4ac665-19fa-4906-a3ed-e2ce4004daaa.png)
+![](assets/1684592577210-fc4ac665-19fa-4906-a3ed-e2ce4004daaa.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592632674-008f3d31-6f00-40bd-bd7b-d4b5f29aca4c.png)
+![](assets/1684592632674-008f3d31-6f00-40bd-bd7b-d4b5f29aca4c.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592646074-2304e049-50a7-4bfd-acca-878180f32f16.png)
+![](assets/1684592646074-2304e049-50a7-4bfd-acca-878180f32f16.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592659261-a272abed-e1c0-45d4-8e65-a793a18908ea.png)
+![](assets/1684592659261-a272abed-e1c0-45d4-8e65-a793a18908ea.png)
 
 5. 安装完毕后，打开终端，输入java -version，然后输入javac -version，如下图显示表示安装成功了
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684592673881-10215487-6ebc-42ec-8cbe-502ab46d364c.png)
+![](assets/1684592673881-10215487-6ebc-42ec-8cbe-502ab46d364c.png)
 
 如果你的macOS上曾经安装过JDK其他版本，如果你想让系统默认使用你安装的最新的JDK17，你还需要按照以下步骤设置环境变量JAVA_HOME
 
@@ -345,7 +345,7 @@ echo $JAVA_HOME
 
 如果输出的路径与步骤2中复制的路径一致，则说明配置成功。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681188275-dc0f0c02-dc8c-48a8-b6bc-b2cb2e01ca66.jpeg)
+![](assets/1757681188275-dc0f0c02-dc8c-48a8-b6bc-b2cb2e01ca66.jpeg)
 
 #### JDK目录说明
 1.  <font style="color:#DF2A3F;">bin目录：包含JDK17的可执行文件，如java、javac、javadoc等。</font> 
@@ -395,7 +395,7 @@ javac [options] [source files]
 
 编译成功后会生成.class字节码文件。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681192323-5fd5bb7b-114a-433e-adab-2abe0b734cb1.jpeg)
+![](assets/1757681192323-5fd5bb7b-114a-433e-adab-2abe0b734cb1.jpeg)
 
 #### 运行第一个Java程序
 **<font style="color:#DF2A3F;">这里有一个非常重要的步骤：首先在DOS命令窗口中将路径切换到class文件所在位置。这一步非常关键。</font>**
@@ -431,7 +431,7 @@ Java中的注释是用于解释和说明代码的文本，它不会被编译器�
 
 总之，注释是程序设计中的重要工具，能够提高代码的可读性和可维护性，减少程序错误。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681205413-7656d173-7b84-4850-a4e9-1c0093a471e1.jpeg)
+![](assets/1757681205413-7656d173-7b84-4850-a4e9-1c0093a471e1.jpeg)
 
 #### 怎么写好注释
 写好注释需要一定的技巧和经验，以下是一些写好注释的技巧：
@@ -479,7 +479,7 @@ Java中有三种常见的注释写法：单行注释、多行注释和文档注�
 
 使用文档注释可以为代码编写清晰、易懂、规范的API文档，方便其他开发人员阅读和使用。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681210551-5a4dbae9-19f0-4ceb-a077-b59002cca37e.jpeg)
+![](assets/1757681210551-5a4dbae9-19f0-4ceb-a077-b59002cca37e.jpeg)
 
 #### javadoc命令
 有这样一段代码注释的程序：
@@ -517,7 +517,7 @@ javadoc -author -version -d doc HelloWorld.java
 3.  执行命令后，javadoc会在当前目录下生成一个名为“doc”的文件夹，其中包含了生成的API文档。 
 4.  打开“doc”文件夹，找到“index.html”文件，用浏览器打开即可查看生成的API文档。 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681214692-ed32ac0d-a870-4fbe-94e7-93278aaaeae5.jpeg)
+![](assets/1757681214692-ed32ac0d-a870-4fbe-94e7-93278aaaeae5.jpeg)
 
 #### 解释HelloWorld
 当我们学习一门新语言时，通常第一步就是编写一个简单的“Hello, World!”程序。这个程序的目的是打印出一条简单的问候语，以证明我们已经成功地安装了编程环境并能够编写并运行程序。
@@ -548,13 +548,13 @@ public class HelloWorld {
 3. public的类可以没有，有的话，只能有一个，并且public的类名要和源文件名保持一致
 4. 任何一个class中都可以有main方法，但对于一个软件来说，一般入口只有一个
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681219558-e8c301c0-2bce-43e7-8265-3dc5eff8bb8f.jpeg)
+![](assets/1757681219558-e8c301c0-2bce-43e7-8265-3dc5eff8bb8f.jpeg)
 
 ## 本章作业题
 ### 打印你的个人信息
 包括：姓名，年龄，性别，家庭住址，联系电话等
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684637049564-6c11d5f2-fe08-4500-9575-5b71363f70e0.png)
+![](assets/1684637049564-6c11d5f2-fe08-4500-9575-5b71363f70e0.png)
 
 ```java
 public class PersonalInfo {
@@ -569,7 +569,7 @@ public class PersonalInfo {
 ```
 
 ### 打印一个菱形
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684636621035-7e6464a5-e392-46b2-8406-52600372ce90.png)
+![](assets/1684636621035-7e6464a5-e392-46b2-8406-52600372ce90.png)
 
 ```java
 public class Diamond {
@@ -588,7 +588,7 @@ public class Diamond {
 ```
 
 ### 打印商品列表
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684636798285-0e19c2d8-d231-4028-afb0-fc0c7e6fd895.png)
+![](assets/1684636798285-0e19c2d8-d231-4028-afb0-fc0c7e6fd895.png)
 
 ```java
 public class ProductList {
@@ -603,7 +603,7 @@ public class ProductList {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681225816-a3728dfd-653a-4363-8216-7d167b05ace5.jpeg)
+![](assets/1757681225816-a3728dfd-653a-4363-8216-7d167b05ace5.jpeg)
 
 ## 本章面试题
 ### 你认为Java是解释型语言还是编译型语言？
@@ -654,7 +654,7 @@ Java字节码的优点是可以在不同平台上运行，而不需要重新编�
 17. public的类可以没有，但如果有，只能有一个，并且和源文件名一致
 18. 任何一个class中都可以有main方法，但对于一个软件来说，一般入口只有一个
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681233262-e3187975-50c0-493c-990c-099c12ee28ee.jpeg)
+![](assets/1757681233262-e3187975-50c0-493c-990c-099c12ee28ee.jpeg)
 
 # 第02章 Java基础语法
 
@@ -672,7 +672,7 @@ Java字节码的优点是可以在不同平台上运行，而不需要重新编�
 + 方法、方法重载、方法递归（掌握）
 + package 和 import（掌握）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 本章内容详解
 ### 标识符(掌握)
@@ -695,7 +695,7 @@ Java中的标识符可以标识以下内容：
 
 以上是Java中常见的标识符，其中变量、方法、类、接口、枚举、注解和常量都是Java中的关键元素，而包和类型参数则是Java中的辅助元素。类型名称则是指Java中的基本类型和引用类型的名称，例如int、String、Object等。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 标识符命名规则
 Java中合法的标识符需要满足以下要求：
@@ -722,7 +722,7 @@ Java中合法的标识符需要满足以下要求：
 3. my-name（中间包含横线）
 4. MyClassName!（包含非法字符）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 标识符命名规范
 1. 见名知意
@@ -749,7 +749,7 @@ Java中合法的标识符需要满足以下要求：
 12. $money
 13. 你好
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 关键字(理解)
 #### 什么是关键字
@@ -764,7 +764,7 @@ java中所有的关键字都是小写的。包括：
 
 abstract, assert, boolean, break, byte, case, catch, char, class, const, continue, default, do, double, else, enum, extends, final, finally, float, for, goto, if, implements, import, instanceof, int, interface, long, native, new, package, private, protected, public, return, short, static, strictfp, super, switch, synchronized, this, throw, throws, transient, try, void, volatile, while
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 字面量(理解)
 #### 什么是字面量
@@ -793,11 +793,11 @@ System.out.println(5 + "6" + 7);
 System.out.println(5 + (6 + "7")); // 添加小括号优先级较高
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 变量(掌握)
 #### 什么是变量
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684897164727-5661c7ec-3264-4520-a103-bb1cc8f859d7.png)
+![](assets/1684897164727-5661c7ec-3264-4520-a103-bb1cc8f859d7.png)
 
 变量可以看做是一个盒子，这个盒子可以存储数据。本质上，变量是内存当中的一块空间，这块空间有三要素（变量的三要素）：
 
@@ -835,11 +835,11 @@ age = "30";
 
 报错信息如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684894567835-e600a8cf-5e8f-4491-b402-cf9f8968acb4.png)
+![](assets/1684894567835-e600a8cf-5e8f-4491-b402-cf9f8968acb4.png)
 
 编译器找到等号右边的数据，发现是String类型，然后发现age这个盒子只能存储int类型，类型不匹配，表示这种int盒子不能存放String类型的数据。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 变量的作用
 有这样一个需求：请用你当前所学知识，分别计算100和111、222、666、888、999的和，你该怎么编写代码？
@@ -908,7 +908,7 @@ System.out.println(π * r3 * r3);
 
 因此变量的出现可以提高程序的可读性。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 变量的声明、赋值、访问
 ##### 变量的声明
@@ -960,7 +960,7 @@ age = "张三";
 int num = 200;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 变量的访问
 变量的访问不外乎包括两种情况：
@@ -989,7 +989,7 @@ int num2 = num1;
 int num3 = num1 + num2;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 变量的小细节
 1. 变量必须先声明，再赋值，才能访问。
@@ -1025,7 +1025,7 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 变量的作用域
 ##### 什么是变量作用域
@@ -1079,7 +1079,7 @@ Java中的变量可以按照作用域的不同划分为以下几类：
     1. 静态变量：使用static关键字定义的变量。 
     2. 实例变量：没有使用static关键字定义的变量。 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 二进制(掌握)
 计算机底层只能识别二进制。计算机底层只识别二进制是因为计算机内部的电子元件只能识别两种状态，即开和关，或者高电平和低电平。二进制正好可以用两种状态来表示数字和字符，因此成为了计算机最基本的表示方法。在计算机内部，所有的数据都被转化为二进制形式进行处理和存储。虽然计算机可以通过不同的编程语言和程序来处理不同的数据类型和格式，但最终都需要将其转化为二进制形式才能被计算机底层识别和处理。
@@ -1112,7 +1112,7 @@ Java中的变量可以按照作用域的不同划分为以下几类：
 
 所以27的二进制数为11011。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 二进制转换为十进制
 将二进制数每一位权值找出来，然后每个权值与对应二进制位相乘，最后将它们相加，即可得到十进制数。
@@ -1140,13 +1140,13 @@ Java中的变量可以按照作用域的不同划分为以下几类：
 + 111100
 + 011001
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 八进制与十六进制(了解)
 #### 什么是八进制
 八进制：满八进一。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684908204559-91d1813e-e0f3-4338-b649-20b8e8b7d34a.png)
+![](assets/1684908204559-91d1813e-e0f3-4338-b649-20b8e8b7d34a.png)
 
 #### 八进制与十进制的转换
 ##### 十进制转换为八进制
@@ -1172,12 +1172,12 @@ Java中的变量可以按照作用域的不同划分为以下几类：
 
 因此，八进制数 346 转换为十进制数为 230。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 什么是十六进制
 满十六进一。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684908662850-c5f95463-a51b-4c8e-842a-0e9365501b41.png)
+![](assets/1684908662850-c5f95463-a51b-4c8e-842a-0e9365501b41.png)
 
 #### 十六进制与十进制的转换
 ##### 十进制转换为十六进制
@@ -1206,7 +1206,7 @@ Java中的变量可以按照作用域的不同划分为以下几类：
 
 另一种简便的方法是，将十六进制数中的每一位转换为4位的二进制数，再将这些二进制数转换为十进制数，最后将各位的结果相加。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 二进制与十六进制的转换
 ##### 二进制转换为十六进制
@@ -1249,7 +1249,7 @@ Java中的变量可以按照作用域的不同划分为以下几类：
 
 A 对应的二进制数为 1010，F 对应的二进制数为 1111，因此 AF 对应的二进制数为 10101111。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 原码反码补码（掌握）
 #### byte与bit
@@ -1274,7 +1274,7 @@ byte（字节）是计算机存储和处理数据的基本单位，通常由8个
 
 在二进制当中，最高位表示符号位，0表示正数，1表示负数。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 正数的原码反码补码
 正数的原码、反码和补码都是相同的。
@@ -1302,7 +1302,7 @@ byte（字节）是计算机存储和处理数据的基本单位，通常由8个
 ##### -128的原码反码补码
 -128的原码为10000000，其反码为11111111，补码为10000000。注意，对于-128这个特殊的数，它的补码和原码相同。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 已知负数的补码怎么得到原码
 虽然计算机底层是采用补码的形式存储的，但最终显示给人类的时候是以原码的形式显示的。所以大家需要具备这个能力！！！
@@ -1317,7 +1317,7 @@ byte（字节）是计算机存储和处理数据的基本单位，通常由8个
 
 通过这个可以得出，对于一个字节来说，最大值127，最小值-128。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 数据类型(掌握)
 数据类型：决定了变量在内存中的空间大小。不同的数据类型，在内存中占用空间大小不同。
@@ -1395,7 +1395,7 @@ public class DefaultValue {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 整数型详解
 ##### 整数型字面量的四种表示形式
@@ -1439,10 +1439,10 @@ long z = 2147483648;
 long z = 2147483648L;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 自动类型转换
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1685069585779-fa67f45b-7462-4a35-a91f-ae398e79f432.jpeg)
+![](assets/1685069585779-fa67f45b-7462-4a35-a91f-ae398e79f432.jpeg)
 
 在Java中，对于基本数据类型来说，小容量是可以直接赋值给大容量的，这被称为自动类型转换。对于数字类型来说大小关系为：byte < short < int < long < float < double。
 
@@ -1459,7 +1459,7 @@ short f = e;        // 将byte类型自动转换为short类型
 
 需要注意的是，自动类型转换只适用于基本数据类型之间的转换。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 强制类型转换
 强制类型转换：Java中大容量是无法直接转换成小容量的。因为这种操作**<font style="color:#DF2A3F;">可能</font>**会导致精度损失，所以这种行为交给了程序员来决定，当然这种后果自然是程序员自己去承担。因此在代码中需要程序员自己亲手加上强制类型转换符，程序才能编译通过。
@@ -1486,7 +1486,7 @@ long类型的10对应的二进制：00000000 00000000 00000000 00000000 00000000
 
 因此，强制类型转换时，精度可能会损失，也可能不会损失，这要看具体的数据是否真正的超出了强转后的类型的取值范围。如下图：水可能溢出，也可能不会溢出，这要看真实存放的水有多少！！！
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1685070043987-1dc39f31-20a2-4ccd-98d5-a162fcb3f02f.jpeg)
+![](assets/1685070043987-1dc39f31-20a2-4ccd-98d5-a162fcb3f02f.jpeg)
 
 如果你理解了强制类型转换，那么下面这个程序的执行结果可以推算出来吗？
 
@@ -1502,7 +1502,7 @@ int类型的150的补码（150是正数：原码反码补码一样）：00000000
 
 因此int类型的150强转为byte类型之后，结果是-106
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 当整数字面量没有超出byte的范围
 在Java中有这样一个规定，当整数型字面量没有超出byte的范围：可以直接赋值给byte类型的变量。
@@ -1539,7 +1539,7 @@ int c = a / b;
 System.out.println(c); // 3
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 多种数据类型混合运算
 在Java中，多种数据类型混合运算时，各自先转换成容量最大的类型，再做运算。
@@ -1590,7 +1590,7 @@ byte x = (byte)a / b;
 
 这样还是编译报错，因为只是将a强转为byte了，b还是int。byte和int混合运算，结果还是int类型。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 浮点型详解
 浮点型类型包括：
@@ -1640,7 +1640,7 @@ double y = 123.34E-2; // 123.34 / 10的平方
 ##### 浮点型数据存储原理
 以单精度float为例：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1685082090577-59e58430-81f7-4ab9-bfa4-10f89e18639c.png)
+![](assets/1685082090577-59e58430-81f7-4ab9-bfa4-10f89e18639c.png)
 
 符号位：0表示整数。1表示负数。
 
@@ -1650,7 +1650,7 @@ double y = 123.34E-2; // 123.34 / 10的平方
 
 **<font style="color:#DF2A3F;">从浮点型数据存储原理上可以看到，二进制中的指数位决定了数字呈指数级增大。因此float虽然是4个字节，但却可以表示比long更大的数值。因此float容量比long的容量大。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 使用浮点数的注意事项
 计算机的二进制位有限，现实世界中有无限循环的数字，例如3.333333333333333333..........，因此计算机这种有限资源去存储无限数据是不可能的，所以浮点型数据在底层真实存储的时候都是采用近似值的方式存储的。尾数位越多精度越高。
@@ -1700,7 +1700,7 @@ if(z - 2.3 < 0.000001){
 
 因此：如果有浮点型数据参与运算得出了结果，不要拿着这个结果和另一个数据进行“==”相等比较。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 字符型详解
 char：字符型，占用2个字节。取值范围0~65535。和short（-32768~32767）所表示的个数相同。但char可以表示更大的整数。
@@ -1738,7 +1738,7 @@ char c = '\u0000'; // 赋给 c 一个空字符
 
 **<font style="color:#DF2A3F;">注意：空字符与空格字符完全是两码事。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 转义字符
 Java 中的转义字符是一些在字符串中具有特殊含义的字符序列，它们以反斜线（\）开始。以下是 Java 中的一些常用转义字符：
@@ -1824,7 +1824,7 @@ How are you?
 
 乱码是指在字符编码和解码的过程中，由于编码和解码所采用的字符集不一致，或者编码和解码所采用的字符集不支持某些字符，导致最终显示的字符与原始字符不一致。为了避免乱码的问题，我们需要统一使用一个字符集，并且在进行字符编码和解码时要保持一致。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 常见的字符编码
 常见的字符编码方式如下：
@@ -1899,7 +1899,7 @@ char c = '\u0041';
 
 网络上也有很多在线转码工具，可以自己找一下。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### char参与的运算
 Java中允许将一个整数赋值给char类型变量，但这个整数会被当做ASCII码值来处理，例如：
@@ -1956,7 +1956,7 @@ short num = b + s + c;
 
 这里有一个结论需要记住：byte short char混合运算时，各自会先转换成int再做运算。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 布尔型详解
 ##### 关于布尔型的值
@@ -1997,7 +1997,7 @@ if(gender){
 5. byte short char混合运算，各自先转换为int再做运算。
 6. 多种类型混合运算，各自先转换成容量最大的类型，再做运算。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 变量和数据类型的作业题
 1. 请定义合理的变量用来存储个人信息（姓名、年龄、性别、联系电话），并编写程序定义这些变量，给变量赋值，并打印输出。输出效果如下：
@@ -2029,7 +2029,7 @@ short s1 = 22;
 short x = b1 + s1;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 运算符(掌握)
 #### 运算符总览及优先级
@@ -2100,7 +2100,7 @@ short x = b1 + s1;
 
 注意，优先级高的运算符会比优先级低的先执行，如果有多个操作符在同一个表达式中，则按照优先级解析。**<font style="color:#DF2A3F;">在表达式中使用圆括号可以明确调整优先级</font>**。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 算术运算符
 ##### 算术运算符用法
@@ -2145,7 +2145,7 @@ y = -3;
 System.out.println(x % y); // 1
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 自增/自减
 以自增为例讲解，自减自行研究。
@@ -2184,7 +2184,7 @@ System.out.println("i = " + i); // 11
 System.out.println("k = " + k); // 10
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 接收用户键盘输入
 System.out.println()可以完成输出，怎么在控制台接收用户键盘输入呢？以下代码先照抄，后期学完面向对象就明白了：
@@ -2250,9 +2250,9 @@ istore_1指令：将操作数栈中顶部数据弹出，然后将该数据存放
 
 操作数栈用来存储方法执行中的操作数据，操作数栈是一个后进先出（LIFO）的数据结构，Java 虚拟机在执行指令时会将数据压入操作数栈中，然后再从栈中取出数据进行计算。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1685760980390-3ab8a654-05b8-465e-9c3b-90f3c0135765.png)
+![](assets/1685760980390-3ab8a654-05b8-465e-9c3b-90f3c0135765.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1685761033069-82771e65-bc70-410d-95cb-575e167239ce.png)
+![](assets/1685761033069-82771e65-bc70-410d-95cb-575e167239ce.png)
 
 ```java
 public class ReadClass{
@@ -2321,7 +2321,7 @@ public class ReadClass {
 
 iinc指令：将局部变量表中第1个位置数据加1
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 算术运算符相关作业题
 题目1：采用字节码解读的方式分析以下代码的区别
@@ -2380,7 +2380,7 @@ System.out.println(i);
 
 题目6：681分钟是多少个小时+多少分钟。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 关系运算符
 关系运算符又叫做比较运算符。包括：>、 >=、 <、 <=、 ==、 !=
@@ -2398,7 +2398,7 @@ System.out.println(a == b); // true
 System.out.println(a != b); // false
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 逻辑运算符
 逻辑运算符：&（逻辑与）、 |（逻辑或）、 !（逻辑非）、^（逻辑异或）、 &&（短路与）、 ||（短路或）
@@ -2419,7 +2419,7 @@ System.out.println(a != b); // false
 
 虽然短路与&&效率高于逻辑与&，但逻辑与&也有用武之地，具体看需求是怎样的。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 按位运算符
 ##### 按位运算符概述
@@ -2502,7 +2502,7 @@ b的二进制：11001000
 
 **<font style="color:#DF2A3F;">应用一下</font>**：按位异或可以实现简单的加密和解密。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1685686526533-b7d12ade-e4fb-4f37-a725-09a164ac1176.png)
+![](assets/1685686526533-b7d12ade-e4fb-4f37-a725-09a164ac1176.png)
 
 ##### 按位取反 ~
 将整数的二进制表示按位进行取反运算，即0变为1，1变为0
@@ -2565,7 +2565,7 @@ System.out.println(2 << 2);
 2. 任意一个数字经过无符号右移之后，最终结果一定是非负数（0或正整数）
 3. 无符号右移运算符对溢出进行截断。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 赋值运算符
 赋值运算符包括：
@@ -2629,7 +2629,7 @@ System.out.println("最大值为：" + max);
 
 总的来说，条件运算符在 Java 中的使用相对简单，能够减少代码重复和代码量，常用于简单的条件处理和表达式值的判断。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 运算符作业题
 1. 编写 Java 代码，输入一个半径值，计算圆的面积和周长，并输出结果。注意：圆的面积公式为 pi * r * r，周长公式为 pi * 2 * r，其中 pi 取 3.14。
@@ -2710,7 +2710,7 @@ public class LeapYear {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 控制语句(掌握)
 Java中的控制语句用于控制程序的执行流程，改变程序执行的次序。分为三大类：
@@ -2729,7 +2729,7 @@ Java中的控制语句用于控制程序的执行流程，改变程序执行的�
 
 控制语句在Java中具有非常重要的作用，可以根据执行条件来控制执行流程，提高代码的灵活性和可扩展性。通过使用控制语句，可以编写出更加高效、优雅和易于维护的代码。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 分支语句
 分支语句包括：
@@ -2752,7 +2752,7 @@ if (布尔表达式) {
 
 说明：if语句只有一个条件，当条件为真时，执行下面的代码块。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686123487086-4fe63396-533a-4c3e-8b16-70f88b630d8e.png)
+![](assets/1686123487086-4fe63396-533a-4c3e-8b16-70f88b630d8e.png)
 
 **练一练：**
 
@@ -2776,7 +2776,7 @@ if (布尔表达式) {
 
 说明：if-else语句有两个条件，当第一个条件为真时，执行if的代码块，否则执行else的代码块。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686123813957-cd0dc709-840c-4d27-9710-0537b11630a8.png)
+![](assets/1686123813957-cd0dc709-840c-4d27-9710-0537b11630a8.png)
 
 **练一练：**
 
@@ -2802,7 +2802,7 @@ if (布尔表达式 1) {
 
 说明：if-else if-else if语句有多个条件，依次判断每一个条件，当某个条件为真时，执行相应的代码块。如果所有条件都为假，则不执行任何分支。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686124880204-9b0c0e40-e74d-4339-83a2-70633ef4e9fa.png)
+![](assets/1686124880204-9b0c0e40-e74d-4339-83a2-70633ef4e9fa.png)
 
 4. if-else if-else if-else语句
 
@@ -2822,7 +2822,7 @@ if (布尔表达式 1) {
 
 说明：if-else if-else if-else语句有多个条件，依次判断每一个条件，当某个条件为真时，执行相应的代码块。如果所有条件都为假，则执行else代码块。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686125114083-1e94085c-e3d7-4796-804b-f4a76f4febb7.png)
+![](assets/1686125114083-1e94085c-e3d7-4796-804b-f4a76f4febb7.png)
 
 **练一练：**
 
@@ -2847,7 +2847,7 @@ if (布尔表达式 1) {
 + 对于以上第2种和第4种，这两种写法是可以保证一定会有一个分支执行的。因为这两种写法都有else分支。
 + 对于以上第1种和第3种，这两种写法可能会没有分支执行。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### switch语句
 switch语句又叫做：**<font style="color:#DF2A3F;">选择语句</font>**。
@@ -2875,7 +2875,7 @@ switch(expression) {
 
 switch语句执行原理如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686203407310-7f9ba1b9-cebc-42c3-9545-7b8030abc44c.png)
+![](assets/1686203407310-7f9ba1b9-cebc-42c3-9545-7b8030abc44c.png)
 
 **在使用 switch 语句时需要注意以下几点：**
 
@@ -2963,7 +2963,7 @@ switch(x){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 循环语句
 当某代码片段需要频繁多次执行时，可以采用循环语句。循环语句包括：for、while、do-while
@@ -3002,7 +3002,7 @@ for(初始化表达式; 布尔表达式; 更新表达式){
 
 执行原理：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686214924062-0c412879-ba9f-40c2-ac84-1f3e9fb27be7.png)
+![](assets/1686214924062-0c412879-ba9f-40c2-ac84-1f3e9fb27be7.png)
 
 说明：
 
@@ -3161,7 +3161,7 @@ class TwinPrimes {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### while循环
 语法格式：
@@ -3174,7 +3174,7 @@ while(布尔表达式){
 
 执行原理：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686282826740-78ebb78c-4497-42fb-8988-320c6be51c73.png)
+![](assets/1686282826740-78ebb78c-4497-42fb-8988-320c6be51c73.png)
 
 循环体执行次数：0 ~ N次。
 
@@ -3206,7 +3206,7 @@ while和for如何选择？
 2. 猜数字小游戏：程序生成 1~100 之间的一个随机数，要求用户猜这个数是多少，程序做出相应的提示，如果猜中了则输出恭喜信息，并记录猜的次数，如果猜错了可以提示用户再猜一次。使用 while 循环实现游戏的主体流程。
 3. 简单计算器：要求用户输入两个数字和一个运算符（加、减、乘、除），使用 while 循环计算并输出结果。如果用户输入的运算符不合法，可以提示用户重新输入。例如，输入 5 + 3，输出 8。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### do while循环
 语法格式：
@@ -3219,7 +3219,7 @@ do {
 
 执行原理：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686286341115-5682821d-568a-4289-99e6-dfc09a6f9a67.png)
+![](assets/1686286341115-5682821d-568a-4289-99e6-dfc09a6f9a67.png)
 
 循环体执行次数：1~N次。（和while循环的区别就在这里。）
 
@@ -3230,7 +3230,7 @@ do while循环比较适合的场景是：先执行一次，后判断的场景。
 1. 求平均数：要求用户输入一组数字，用 -1 表示输入结束，使用 do-while 循环计算这些数字的平均数并输出。要使用一个计数器来记录输入的数字个数，遇到 -1 则终止输入并计算平均数。
 2. 翻转数字：要求用户输入一个正整数并使用 do-while 循环从最低位开始逐个输出每一位数字，实现数字的翻转。例如输入数字 123，则输出 321。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 跳转语句
 跳转语句包括三个：
@@ -3254,7 +3254,7 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686287599466-93fe898e-c740-49e4-a0c2-5010088511ef.png)
+![](assets/1686287599466-93fe898e-c740-49e4-a0c2-5010088511ef.png)
 
 如果循环嵌套，它默认终止的是哪个循环？
 
@@ -3272,7 +3272,7 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686287712449-846caff9-3551-4ce4-9541-1716fae8cafd.png)
+![](assets/1686287712449-846caff9-3551-4ce4-9541-1716fae8cafd.png)
 
 通过测试得知：break语句默认终止的是离它最近的循环。（也就是说，默认终止的是当前循环）
 
@@ -3292,9 +3292,9 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686287842474-3d41633c-6758-451f-9b31-dcd030bf80f2.png)
+![](assets/1686287842474-3d41633c-6758-451f-9b31-dcd030bf80f2.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### continue
 可以通过continue和break的对比来学习continue语句。看以下两个程序：
@@ -3311,7 +3311,7 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686287599466-93fe898e-c740-49e4-a0c2-5010088511ef.png)
+![](assets/1686287599466-93fe898e-c740-49e4-a0c2-5010088511ef.png)
 
 ```java
 public static void main(String[] args){
@@ -3325,13 +3325,13 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686288024801-95977cea-240d-48ae-8a20-0ec465eaaf6a.png)
+![](assets/1686288024801-95977cea-240d-48ae-8a20-0ec465eaaf6a.png)
 
 通过测试得知：continue语句只是终止当前本次循环，直接进入下一次循环继续执行。
 
 continue语句也支持打标签的方式，例如：continue for1; 这里不再赘述，可以自行测试。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### return
 return也可以通过与break语句的对比来进行学习。请看以下两段代码：
@@ -3348,7 +3348,7 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686287599466-93fe898e-c740-49e4-a0c2-5010088511ef.png)
+![](assets/1686287599466-93fe898e-c740-49e4-a0c2-5010088511ef.png)
 
 ```java
 public static void main(String[] args){
@@ -3362,7 +3362,7 @@ public static void main(String[] args){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1686288481951-4805bcff-3c9e-43ee-bfda-fcec80076cc2.png)
+![](assets/1686288481951-4805bcff-3c9e-43ee-bfda-fcec80076cc2.png)
 
 可以清楚的看到，break与return根本不是一个级别的。return终止的是方法。
 
@@ -3389,7 +3389,7 @@ public class HanxinPointSoldiersSimple {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 方法(掌握)
 #### 方法的作用
@@ -3460,7 +3460,7 @@ Java中的方法具有以下作用：
 
 总之，方法是Java程序中非常重要的组成部分，它们可以提高程序代码的可读性、可维护性、可扩展性和重用性，从而帮助我们更好地实现自己的代码逻辑。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 方法的定义和调用
 语法格式：
@@ -3483,7 +3483,7 @@ Java中的方法具有以下作用：
     2. 实际参数列表：简称实参，实参和形参要一一对应，个数对应，数据类型对应。
 7. 调用方法，如果方法执行结束后有返回值，可以采用变量接收该返回值。当然，也可以选择不接收。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 方法执行时的内存变化
 方法只定义不调用是不会分配内存的，只是方法的字节码指令存储在元空间中。
@@ -3496,7 +3496,7 @@ Java中的方法具有以下作用：
 
 **Java8 的 JVM 内存结构：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758597438123-1cd291e4-7734-498f-b3ca-df42ce161d26.png)
+![](assets/1758597438123-1cd291e4-7734-498f-b3ca-df42ce161d26.png)
 
 代码如下：
 
@@ -3530,7 +3530,7 @@ public class MethodTest08{
 
 **方法执行时的内存变化：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758598689082-0c83f0ff-5a12-4270-b55a-cd6128a0c175.png)
+![](assets/1758598689082-0c83f0ff-5a12-4270-b55a-cd6128a0c175.png)
 
 **比较经典的面试题：**
 
@@ -3622,7 +3622,7 @@ public class RecursionTest01{
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758608511810-e0006d0e-c4b5-4732-a8b7-c338a81bdbc8.png)
+![](assets/1758608511810-e0006d0e-c4b5-4732-a8b7-c338a81bdbc8.png)
 
 使用递归计算 1-n 的求和：
 
@@ -3645,14 +3645,14 @@ public class RecursionTest02{
 
 以上代码的内存图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758609397186-2ae64dcf-a170-48d9-ab6f-63b71beda123.png)
+![](assets/1758609397186-2ae64dcf-a170-48d9-ab6f-63b71beda123.png)
 
 **练一练：**
 
 1. 使用递归计算 1~n 的求和。
 2. 使用递归计算n的阶乘。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### package 和 import
 #### package
@@ -3742,7 +3742,7 @@ public class ChickenProblemOptimized {
 
 # 第03章 IntelliJ IDEA的使用
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## IDEA的概述
 ### IDEA的介绍
@@ -3755,42 +3755,42 @@ IDEA 全称 IntelliJ IDEA，是java编程语言的集成开发环境。IntelliJ�
 ### IDEA的安装
 双击安装即可，一个是安装路径，需要修改的可以修改一下。快捷方式需要创建的可以创建一下。如下图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758603555608-5a13d6a5-0a14-4602-8c1d-326b73cddcf1.png)
+![](assets/1758603555608-5a13d6a5-0a14-4602-8c1d-326b73cddcf1.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### IDEA的激活
 1. 激活过程中，IDEA 工具保持关闭。
 
 2. 下载我分享给大家的激活包并解压【建议解压的目录中不要有中文，另外解压之后位置不要移动，也不要删除】
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604826551-d70586f2-448a-4c3c-bd0a-e84e6a193738.png)
+![](assets/1758604826551-d70586f2-448a-4c3c-bd0a-e84e6a193738.png)
 
 3. 打开 `scripts`目录，双击执行这个脚本
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604746583-5e6722b1-9e0c-4160-9185-a493108c8c7a.png)
+![](assets/1758604746583-5e6722b1-9e0c-4160-9185-a493108c8c7a.png)
 
 等一会，会弹窗，弹窗之后点击确定即可。
 
 4. 从这个目录下找 IDEA 的激活码，打开文件并复制激活码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604789523-eef7a154-af0b-4702-ba1e-ef4612b560f7.png)
+![](assets/1758604789523-eef7a154-af0b-4702-ba1e-ef4612b560f7.png)
 
 5. 打开 IDEA 工具，选择英文环境：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604547083-f7a2d35e-691d-4bc8-8a28-330de422cc30.png)
+![](assets/1758604547083-f7a2d35e-691d-4bc8-8a28-330de422cc30.png)
 
 6. 不分享
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604571533-3d256b53-10d8-4444-ac26-fe161a1d3042.png)
+![](assets/1758604571533-3d256b53-10d8-4444-ac26-fe161a1d3042.png)
 
 7. 点击左下角设置，选择如下图的 `Manage Subscriptions`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604675902-d8b946d0-35cd-4424-9a28-b574fb667b25.png)
+![](assets/1758604675902-d8b946d0-35cd-4424-9a28-b574fb667b25.png)
 
 8. 选择 `Active Code`，粘贴激活码，确定激活
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758604634660-07f1360c-2c24-4c56-a790-a3103f9c3f51.png)
+![](assets/1758604634660-07f1360c-2c24-4c56-a790-a3103f9c3f51.png)
 
 ## IDEA的基本使用
 ### 创建空项目和模块
@@ -3798,56 +3798,56 @@ IDEA 全称 IntelliJ IDEA，是java编程语言的集成开发环境。IntelliJ�
 
 IDEA安装破解完毕后，我们启动IDEA，则就呈现出以下的欢迎界面。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758605366594-da050a61-049f-42de-a1b8-bd538efa1250.png)
+![](assets/1758605366594-da050a61-049f-42de-a1b8-bd538efa1250.png)
 
 第二步：新建空项目（设置项目名和项目的存放位置）
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758605411728-96397a29-7df7-4962-9ec8-c384abb9fc74.png)
+![](assets/1758605411728-96397a29-7df7-4962-9ec8-c384abb9fc74.png)
 
 第三步：解释IDEA窗口
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758605564020-85bb5beb-6f70-4ad7-97be-9d158c4504c3.png)
+![](assets/1758605564020-85bb5beb-6f70-4ad7-97be-9d158c4504c3.png)
 
 第四步：设置项目的 JDK 版本和编译器版本
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758605721269-0dba74fd-cfd4-4f09-8414-3bf45fa5423d.png)
+![](assets/1758605721269-0dba74fd-cfd4-4f09-8414-3bf45fa5423d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758605828604-7f4ab715-4fc6-43cd-9340-9dcd86547ef3.png)
+![](assets/1758605828604-7f4ab715-4fc6-43cd-9340-9dcd86547ef3.png)
 
 第五步：新建模块 Module
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758605657085-5b1a9409-b0d2-4038-8d47-95bccc291939.png)
+![](assets/1758605657085-5b1a9409-b0d2-4038-8d47-95bccc291939.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606006399-5146089c-9768-42d0-a4c7-7fb41af94fd6.png)
+![](assets/1758606006399-5146089c-9768-42d0-a4c7-7fb41af94fd6.png)
 
 ### 设置字符编码方式
 统一设置为 UTF-8
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606148108-ed4195f3-7251-46a9-bc81-bcadb26a220f.png)
+![](assets/1758606148108-ed4195f3-7251-46a9-bc81-bcadb26a220f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606220074-5a28b860-2f00-495a-b2a5-fae82695b6f0.png)
+![](assets/1758606220074-5a28b860-2f00-495a-b2a5-fae82695b6f0.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建包（Package）
 选中src目录或某个包，然后鼠标右键选中New，接着选中Package，并给包进行命名。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606269236-41067e59-177d-414e-9db6-56dec6283161.png)
+![](assets/1758606269236-41067e59-177d-414e-9db6-56dec6283161.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606302343-df9a89d3-0353-4e77-84c0-35e254032944.png)
+![](assets/1758606302343-df9a89d3-0353-4e77-84c0-35e254032944.png)
 
 包名必须符合“标识符”的命名规则，还需符合“单词全部小写，多个单词之间以“.”连接，并且做到顶级域名倒着写”的命名规范。
 
 ### 创建类（Class）
 选中某个包，然后右键选中New，接着选中Java Class，最后给类进行命名。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606351020-9d9db9f4-0fd4-43fe-9929-3f15a3f1e083.png)
+![](assets/1758606351020-9d9db9f4-0fd4-43fe-9929-3f15a3f1e083.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606368548-814d3d79-8fca-4522-88b0-981813845883.png)
+![](assets/1758606368548-814d3d79-8fca-4522-88b0-981813845883.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606378999-201d0ccd-0872-406e-8be4-2c626d44a6d9.png)
+![](assets/1758606378999-201d0ccd-0872-406e-8be4-2c626d44a6d9.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## IDEA的编译和运行
 ### 使用IDEA编写程序
@@ -3857,38 +3857,38 @@ IDEA安装破解完毕后，我们启动IDEA，则就呈现出以下的欢迎界
 ### 使用IDEA编译程序
 IDEA 会自动保存，自动编译，编译之后会输出到 `out`目录下。在该目录下可以看到字节码文件。如果没有 out 目录的，可以运行一次程序就有了。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 使用IDEA运行程序 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606525627-7a52275b-0fd2-4da4-aa00-51e70aeebeda.png)
+![](assets/1758606525627-7a52275b-0fd2-4da4-aa00-51e70aeebeda.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## IDEA的常用设置
 ### 配置字体与大小
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606550372-bdb2199d-0169-4761-9374-ba71d31855a7.png)
+![](assets/1758606550372-bdb2199d-0169-4761-9374-ba71d31855a7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606573239-4cd46a47-f1fe-45e2-b526-1963c4e929b3.png)
+![](assets/1758606573239-4cd46a47-f1fe-45e2-b526-1963c4e929b3.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 配置主题风格
 选中导航栏的“File”，然后选中“Settings...”，最后按照下图所示来设置。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606630380-ffe7da0f-fcb4-48a7-9aa5-c792b018fa36.png)
+![](assets/1758606630380-ffe7da0f-fcb4-48a7-9aa5-c792b018fa36.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 设置注释的样式
 选中导航栏的“File”，然后选中“Settings...”，接着按照下图所示来设置。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758606810737-126c8ca8-a7e9-4f79-9e05-27ee38d28ff1.png)
+![](assets/1758606810737-126c8ca8-a7e9-4f79-9e05-27ee38d28ff1.png)
 
 单行注释和多行注释的字体颜色：068052
 
 文档注释字体（Text）颜色：3F5FBF
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## IDEA实用快捷键
 | **快捷键** | **功能说明** |
@@ -3928,7 +3928,7 @@ IDEA 会自动保存，自动编译，编译之后会输出到 `out`目录下。
 
 # 第04章 面向对象
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 面向对象概述
 ### 软件开发方法
@@ -3951,9 +3951,9 @@ IDEA 会自动保存，自动编译，编译之后会输出到 `out`目录下。
 5. 再例如装修房子：水电工对象，油漆工对象，瓦工对象，木工对象。每个对象都有自己的行为动作。最终完成装修。
 6. 面向对象开发方式耦合度低，扩展能力强。例如采用面向过程生产一台电脑，不会分CPU、内存和硬盘，它会按照电脑的工作流程一次成型。采用面向对象生产一台电脑，CPU是一个对象，内存条是一个对象，硬盘是一个对象，如果觉得硬盘容量小，后期是很容易更换的，这就是扩展性。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758106335158-cff42446-6a6c-41ee-8f17-5bbc325e6b46.png)
+![](assets/1758106335158-cff42446-6a6c-41ee-8f17-5bbc325e6b46.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 面向对象三大特征
 面向对象有三大特征：
@@ -3979,9 +3979,9 @@ IDEA 会自动保存，自动编译，编译之后会输出到 `out`目录下。
 5. 明星类中有一个属性**<font style="color:#DF2A3F;">姓名</font>**：String name;
 6. “刘德华对象”和“梁朝伟对象”由于是通过明星类造出来的，所以这两个都有name属性，但是值是不同的。因此这种属性被称为**<font style="color:#DF2A3F;">实例变量</font>**。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758106321522-ffaf3d8c-bac4-4937-a903-0c54786ecf0c.png)
+![](assets/1758106321522-ffaf3d8c-bac4-4937-a903-0c54786ecf0c.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 对象的创建和使用
 之前所讲的面向对象，使用 Java 语言完全可以实现，Java 语言就是站在完全面向对象的角度实现的。
@@ -4043,7 +4043,7 @@ Student s2 = new Student();
 
 定义一个宠物类，属性包括名字，出生日期，性别。有吃和跑的行为。再编写测试程序，创建宠物对象，访问宠物的属性，调用宠物吃和跑的方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对象的内存分析（对象与引用）
 1. JVM 是一套规范，**规范中规定的**主要内存空间有：虚拟机栈（VM Stack）、堆（Heap）、方法区（Method Area）等。这是逻辑名称，不是物理存储。
@@ -4078,7 +4078,7 @@ Student s2 = new Student();
     3. this存储在实例方法栈帧的局部变量表的0号槽位上。
 17. 假设 A 对象中有 B 对象的引用，要求能够画出内存图，通过内存图能够深刻理解对象的链式访问。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 封装
 ### 对封装的理解
@@ -4232,7 +4232,7 @@ public class UserTest {
 ### 自动生成 setter 和 getter
 IDEA 支持自动生成 setter 和 getter 方法，在需要生成方法的类体中使用 Alt+Insert，选择生成 setter and getter 并生成。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758703160098-b0514ded-c56f-4c4b-9a99-8f6ab5e95fb7.png)
+![](assets/1758703160098-b0514ded-c56f-4c4b-9a99-8f6ab5e95fb7.png)
 
 需要注意的是：对于布尔类型生成的 getter 方法名为：**isXxx()**;
 
@@ -4243,7 +4243,7 @@ IDEA 支持自动生成 setter 和 getter 方法，在需要生成方法的类�
 3. 定义一个员工类，包含属性：姓名、年龄、工资等。并对其中的工资进行封装，工资不得低于800元。另外定义一个raise方法用来涨薪，如果涨薪后的工资超过了10000元，则不再涨薪。
 4. 定义一个顾客类Customer，包括属性：姓名，生日，性别，联系电话等属性。对所有属性进行封装。然后提供一个购物的shopping()方法，再提供一个付款的pay()方法，在shopping()方法中购物，购物行为在结束前需要完成支付，因此在shopping()方法的最后调用pay()方法。**体会实例方法中调用实例方法**。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 构造方法
 构造方法又称为构造器（Constructor）。
@@ -4500,7 +4500,7 @@ public class PersonTest {
 2. 编写 Java 程序，模拟简单的计算器。定义名为 Number 的类，其中有两个int类型属性n1,n2，属性封装。编写构造方法为n1和n2赋初始值，再为该类定义 加(add)、减(sub)、乘(mul)、除(div)等实例方法，分别对两个属性执行加、减、乘、除的运算。在main方法中创建Number类的对象，调用各个方法，并显示计算结果。
 3. 定义一个网络用户类，要处理的信息有用户id、用户密码、 email地址。在建立类的实例时，把以上三个信息都作为构造方法的参数输入，其中用户id和用户密码是必须的，缺省的 email 地址是用户id加上字符串"@jkweilai.com"
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## this 关键字
 ### 语法规则
@@ -4695,7 +4695,7 @@ public class Chinese {
 
 以上代码的内存结构：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1776593697308-bfea029a-2e2c-4f99-b4fc-86b275701c66.png)
+![](assets/1776593697308-bfea029a-2e2c-4f99-b4fc-86b275701c66.png)
 
 因此，建议将 `country`定义为静态变量，静态变量在类加载时初始化，代码如下：
 
@@ -4903,7 +4903,7 @@ public class StaticTest04 {
 1. 当在方法体当中需要直接访问实例变量和实例方法时，方法必须定义为实例方法。
 2. 一般工具类中的方法都定义为静态方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JVM 体系结构
 ### JVM 是一套规范
@@ -4916,7 +4916,7 @@ public class StaticTest04 {
 
 **下图是从oracle官网上截取的Java虚拟机规范中的一部分。（大家也可以找一下oracle官方文档）**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758107114118-b3fe150f-b094-4cb9-a974-0f63ab9d20e2.png)
+![](assets/1758107114118-b3fe150f-b094-4cb9-a974-0f63ab9d20e2.png)
 
 **我们主要研究运行时数据区。运行时数据区包括6部分：**
 
@@ -4927,7 +4927,7 @@ public class StaticTest04 {
 5. Run-Time Constant Pool（运行时常量池）
 6. Native Method Stacks（本地方法栈）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JVM 规范中的运行时数据区
 1. The pc Register（程序计数器）【线程私有】：是一块较小的内存空间，此计数器记录的是正在执行的虚拟机字节码指令的地址；
@@ -4940,9 +4940,9 @@ public class StaticTest04 {
 总结：这些运行时数据区虽然在功能上有所区别，但在整个 Java 虚拟机启动时都需要被创建，并且在虚拟机运行期间始终存在，直到虚拟机停止运行时被销毁。同时，不同的 JVM 实现对运行时数据区的分配和管理方式也可能不同，会对性能和功能产生影响。
 
 ### JVM 体系结构图（规范）
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758107239260-bcfd21f7-1ccb-4f45-a546-70b8ae279368.png)
+![](assets/1758107239260-bcfd21f7-1ccb-4f45-a546-70b8ae279368.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JVM 规范的代表实现
 JVM规范的实现：HotSpot（Oracle JDK/Open JDK内部使用的JVM就是HotSpot）
@@ -4995,9 +4995,9 @@ JVM内存（Java 8+）
 2. 直接引用：程序在运行的时候，会将符号引用转换成直接引用。直接引入是地址。
 3. 字面量符号：指的是字面量的名字，而不是字面量本身。（就像电话和人的关系一样：电话是符号，人是真实存在的）
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1776594301519-2adc2a08-cec1-4b79-9dfe-6b05af533ca6.png)
+![](assets/1776594301519-2adc2a08-cec1-4b79-9dfe-6b05af533ca6.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 单例模式
 ### 设计模式概述
@@ -5022,7 +5022,7 @@ JVM内存（Java 8+）
 2. 结构型：通过设计和构建对象之间的关系，以达到更好的重用性、扩展性和灵活性
 3. 行为型：主要用于处理对象之间的算法和责任分配
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 单例模式
 单例模式（GoF23种设计模式之一，最简单的设计模式：如何保证某种类型的对象只创建一个）
@@ -5078,7 +5078,7 @@ public class Singleton {
 
 设计一个学生选课系统，有两个类，一个是学生类（Student），一个是课程类（Course）。学生类包含姓名、学号、已选课程三个属性，课程类包含课程名称、课程编号、所属学院、授课老师、课程学分五个属性。需要设计学生选课和退课的方法。再设计一个打印某学生具体的选课信息的方法。（一个学生只能选一门课。）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 继承
 **面向对象三大特征之一：继承**
@@ -5218,7 +5218,7 @@ public class ObjectTest {
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 方法覆盖
 **方法覆盖/override/方法重写/overwrite**
@@ -5376,7 +5376,7 @@ public class OverrideTest01 {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 多态
 ### 多态基础语法
@@ -5390,9 +5390,9 @@ public class OverrideTest01 {
     1. 父类型的引用可以转换为子类型的引用。但是需要加强制类型转换符。
 4. 无论是向上转型还是向下转型，前提条件是：两种类型之间必须存在继承关系。这样编译器才能编译通过。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758116661717-d48cbcf2-0b86-4d41-a4c2-937c4d47ef15.png)
+![](assets/1758116661717-d48cbcf2-0b86-4d41-a4c2-937c4d47ef15.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 什么是多态
 1. 父类型引用指向子类对象。Animal a = new Cat(); a.move();
@@ -5615,7 +5615,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 软件设计原则
 软件开发原则旨在引导软件行业的从业者在代码设计和开发过程中，遵循一些基本原则，以达到高质量、易维护、易扩展、安全性强等目标。软件开发原则与具体的编程语言无关的，属于软件设计方面的知识
@@ -5652,7 +5652,7 @@ public class Test01 {
 
 优先通过组合或聚合复用功能，而非继承。例如，使用Car类聚合Engine对象，而非继承Engine类，降低耦合度。‌
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 多态在开发中的作用
 尽量使用多态，面向抽象编程，不要面向具体编程。使用多态可以降低程序的耦合度，提高程序的扩展力。
@@ -5794,7 +5794,7 @@ public class Test {
     4. `CommissionedEmployee`类：通过继承`Employee`类，实现新的属性和方法，包括佣金比例和销售额，并重写父类的`getSalary()`方法，计算出按照销售额和佣金比例计算的工资。
     5. 在主方法中，实例化`HourlyEmployee`、`SalariedEmployee`和`CommissionedEmployee`对象，分别计算他们的工资并输出。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## super 关键字
 ### super 的基础语法规则
@@ -6010,7 +6010,7 @@ class Student extends Person {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758971158240-5a788dfd-2ff4-49d6-b38f-2a4a377db015.png)
+![](assets/1758971158240-5a788dfd-2ff4-49d6-b38f-2a4a377db015.png)
 
 以下代码对应的内存图：
 
@@ -6042,7 +6042,7 @@ class Student extends Person {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758971483380-752767d4-f803-4384-8f7e-c61b31b0f15e.png)
+![](assets/1758971483380-752767d4-f803-4384-8f7e-c61b31b0f15e.png)
 
 ### 以下程序的报错原因
 
@@ -6159,7 +6159,7 @@ public class SuperTest {
 
 以上代码对应的内存图如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1758971513932-dfeb0205-802f-466f-8742-3621e53433d3.png)
+![](assets/1758971513932-dfeb0205-802f-466f-8742-3621e53433d3.png)
 
 ## final 关键字
 ### final 关键字
@@ -6171,7 +6171,7 @@ public class SuperTest {
 6. final修饰的引用，一旦指向某个对象后，不能再指向其它对象。但指向的对象内部的数据是可以修改的。
 
 ### 类加载的三大阶段
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684555441572-1410145a-2783-4eb4-99c8-6a9a8e953c27.png)
+![](assets/1684555441572-1410145a-2783-4eb4-99c8-6a9a8e953c27.png)
 
 ****
 
@@ -6469,7 +6469,7 @@ public abstract class Customer {
 + 定义一个Rectangle类，继承Shape类，包含两个双精度类型实例变量width和height，以及一个构造方法，该构造方法使用super关键字调用父类Shape的构造方法，来初始化color和name。Rectangle类还实现了抽象方法area()，用于计算矩形的面积。
 + 在程序的main()方法中，创建一个Circle对象、一个Rectangle对象，并分别调用它们的display()方法，输出结果。调用area()方法输出面积。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 接口
 ### 接口的基础语法
@@ -6487,7 +6487,7 @@ public abstract class Customer {
 10. JDK9之后允许接口中定义私有的实例方法（为默认方法服务的）和私有的静态方法（为静态方法服务的）。
 11. 所有的接口隐式的继承Object。因此接口也可以调用Object类的相关方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 接口的作用
 1. 面向接口调用的称为：接口调用者
@@ -6577,7 +6577,7 @@ public class Computer{
 
 最终编写测试程序：创建汽车对象、自行车对象、轮船对象，分别调用 `startEngine()``move()``honk()`方法。感受抽象类和接口的区别！！！
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 类之间关系
 ### UML
@@ -6600,7 +6600,7 @@ UML图包括：
 
 常见的UML建模工具有：StarUML，Rational Rose等。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 类之间关系
 1. 泛化关系（is a）【继承关系】
@@ -6613,9 +6613,9 @@ UML图包括：
 6. 依赖关系（Dependency）  
 依赖关系是一种临时性的关系，当一个类使用另一个类的功能时，就会产生依赖关系。如果一个类的改变会影响到另一个类的功能，那么这两个类之间就存在依赖关系。依赖关系是一种较弱的关系，可以存在多个依赖于同一个类的对象。例如A类中使用了B类，但是B类作为A类的方法参数或者局部变量等。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759112299855-4c390c65-8dfa-4935-a328-a10ab3e0de92.png)
+![](assets/1759112299855-4c390c65-8dfa-4935-a328-a10ab3e0de92.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 访问控制权限
 | **访问权限修饰符** | | | | |
@@ -6636,7 +6636,7 @@ UML图包括：
 2. 类的访问权限只有两种：public和 缺省。
 3. 访问权限控制符不能修饰局部变量。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Object 类
 1. java.lang.Object是所有类的超类。java中所有类都实现了这个类中的方法。
@@ -6651,7 +6651,7 @@ UML图包括：
         1. protected修饰的只能在同一个包下或者子类中访问。
         2. 只有实现了Cloneable接口的对象才能被克隆。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 内部类
 1. 什么是内部类？
@@ -6672,7 +6672,7 @@ UML图包括：
 
 # 第05章 数组
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数组概述和特点
 ### 数组的概念
@@ -6748,7 +6748,7 @@ public static void main(String[] args) {
 1. 对数组执行赋值操作时，则赋值元素的类型必须和声明数组的类型保持一致。
 2. 创建一个数组时，必须指定数组长度，创建成功数组的大小就不可以改变了。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 数组的基本操作
 数组中的元素，我们可以通过索引（下标）来访问，索引的合法取值范围在[0, 数组长度-1]之间。根据索引操作数组元素的时候，如果索引值越界就会抛出数组索引越界异常（ArrayIndexOutOfBoundsException）。
@@ -6796,7 +6796,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 通过for循环遍历数组
 【示例】通过for循环遍历数组
@@ -6828,7 +6828,7 @@ public static void main(String[] args) {
 4. 布尔性（boolean）数组元素的默认值为 false。
 5. 引用数据类型（数组、字符串、类和接口等） 数组元素的默认值为null（空对象）。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数组常见操作
 ### 获取数组的最值
@@ -6893,7 +6893,7 @@ public static int search(int[] arr, int value) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 数组元素的反转
 需求：将数组元素反转，原数组{5, 12, 90, 18, 77, 76, 45, 28, 59, 72}，反转后为{72, 59, 28, 45, 76, 77, 18, 90, 12, 5}。
@@ -6937,7 +6937,7 @@ public static void reverseOrderArray(int[] arr) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数组知识点补充
 ### for-each循环遍历
@@ -6986,18 +6986,18 @@ public static void main(String[] args) {
 
 但是此时args[]并没有赋值，我们需要从控制台命令行进行赋值，就像这样：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691811890399-60f8a84f-a63d-43c0-b238-ba11b160ee5b.png)
+![](assets/1691811890399-60f8a84f-a63d-43c0-b238-ba11b160ee5b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 在IDEA使用String[] args参数
 在工具栏，选中“Edit Configurations...”
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759142488274-a800f383-0efa-401d-a06e-451976412009.png)
+![](assets/1759142488274-a800f383-0efa-401d-a06e-451976412009.png)
 
 出现以下窗口，在“Program arguments:”窗口中输入参数，最后点击Apply保存即可
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759142464183-671b329f-7708-45fc-a4f7-29f74b2ecf75.png)
+![](assets/1759142464183-671b329f-7708-45fc-a4f7-29f74b2ecf75.png)
 
 ### 方法的可变参数
 说明：适用于参数个数不确定，但类型确定的情况，在java中把可变参数当做数组处理。
@@ -7058,7 +7058,7 @@ public class Test {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Arrays工具类 
 Arrays用于操作数组工具类，里面定义了常见操作数组的静态方法。
@@ -7093,7 +7093,7 @@ boolean flag = Arrays.equals(arr1, arr2);
 System.out.println(flag); // 输出：false
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### sort排序
 public static void sort(Type[] arr) ，对数组中的内容进行升序排序。
@@ -7125,7 +7125,7 @@ index = Arrays.binarySearch(arr, 18);
 System.out.println(index);  // 输出：-11,证明没找到
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### fill填充数组
 public static void fill(Type[] a, Type val)，给数组填充指定内容。
@@ -7161,11 +7161,11 @@ System.out.println(Arrays.toString(newArr));   // 输出：[3, 4, 5]
 
 调用以上方法进行数组拷贝时，底层源码都调用了 `System.arraycopy()`方法，源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759142871346-c3b02564-e450-4602-b836-cd4314972ae9.png)
+![](assets/1759142871346-c3b02564-e450-4602-b836-cd4314972ae9.png)
 
 `System.arraycopy()`方法的源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759142899825-1497c6e7-b896-49e4-af46-f03e46dbef8c.png)
+![](assets/1759142899825-1497c6e7-b896-49e4-af46-f03e46dbef8c.png)
 
 可以看到底层是一个 native 方法。该方法有 5 个参数每个参数的含义是：
 
@@ -7175,7 +7175,7 @@ System.out.println(Arrays.toString(newArr));   // 输出：[3, 4, 5]
 4. destPos：目标数组的起始下标
 5. length：拷贝长度
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 二维数组
 ### 二维数组的定义
@@ -7218,7 +7218,7 @@ public class StringArrayExample {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 创建格式二，创建不定长二维数组
 语法格式：数据类型[][] 数组名 = new 数据类型[m][];
@@ -7303,9 +7303,9 @@ public class StringArrayExample {
 
 二维数组的内存图：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1777081126802-ccb35f0e-9630-4d4d-89e7-0d36cd9ed631.png)
+![](assets/1777081126802-ccb35f0e-9630-4d4d-89e7-0d36cd9ed631.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 酒店管理系统
 题目要求：
@@ -7316,7 +7316,7 @@ public class StringArrayExample {
 4. Hotel 类中提供三个方法：预定房间、退房、打印所有房间状态。
 5. 最后编写一个 main 方法，在 main 方法中打印项目使用说明，然后接收用户键盘输入，通过输入不同的数字来执行对应的功能。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759204268704-fc18af56-5d0b-466b-a5c3-47361ce5b151.png)
+![](assets/1759204268704-fc18af56-5d0b-466b-a5c3-47361ce5b151.png)
 
 ## 什么是数据结构
 数据结构是计算机中存储、组织数据的方式。
@@ -7339,9 +7339,9 @@ public class StringArrayExample {
 + **图形结构：** 数据元素之间存在**多对多**的复杂关系。
     - _例子：_ 地图上的城市交通网、社交网络中的好友关系。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691812863225-6b8ab99d-3d7f-4052-bda6-ee69cfdd2bb1.png)
+![](assets/1691812863225-6b8ab99d-3d7f-4052-bda6-ee69cfdd2bb1.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 物理结构 - “实现的载体”
 物理结构（也叫存储结构）关注的是逻辑结构在计算机内存中的**具体存储方式**。它就像按照蓝图实际建造房子时，选择用什么材料（砖、混凝土）和施工方法。
@@ -7352,13 +7352,13 @@ public class StringArrayExample {
     - _特点：_ 查询快（通过下标直接访问），增删慢（需要移动大量元素）。
     - _例子：_ **数组** 是典型的顺序存储。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691812987693-3aaf43d5-dddb-498f-8af7-d583de9fa201.png)
+![](assets/1691812987693-3aaf43d5-dddb-498f-8af7-d583de9fa201.png)
 
 + **链式存储结构：** 数据元素可以存储在任意位置，每个元素节点除了存储数据本身，还**存储一个或多个指针（地址）**，用来指向与其相关的其他元素。
     - _特点：_ 增删快（只需修改指针），查询慢（需要从头部开始遍历）。
     - _例子：_ **链表** 是典型的链式存储。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759144931231-d343931c-9aa7-45a8-b9ef-c7f0ad5c9d02.png)
+![](assets/1759144931231-d343931c-9aa7-45a8-b9ef-c7f0ad5c9d02.png)
 
 ### 核心关系与总结
 **一种<font style="color:#DF2A3F;">逻辑结构</font>可以用不同的<font style="color:#DF2A3F;">物理结构</font>来实现。**
@@ -7367,7 +7367,7 @@ public class StringArrayExample {
 
 设计程序时，我们首先根据问题需求选择最合适的**逻辑结构**（比如用树来组织数据），然后再根据性能要求（频繁查找还是频繁插入删除）选择最有效的**物理结构**（用数组还是链表来实现这棵树）。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是算法
 ### 算法的简介
@@ -7399,7 +7399,7 @@ public class StringArrayExample {
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 算法的时间复杂度
 ### 时间复杂度的计算
@@ -7441,7 +7441,7 @@ public class StringArrayExample {
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 时间复杂度计算公式
 **核心公式：**
@@ -7505,7 +7505,7 @@ public class StringArrayExample {
 | 时间频度 T(n) | 时间复杂度 O( ) | 通俗理解 |
 | :--- | :--- | :--- |
 | `T(n) = 5` | **O(1)** | 常数时间，与n无关 |
-| `T(n) = 2log₂n + 3` | **O(log n)** | 对数时间，增长很慢<br/>![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1777037697017-adbfb73c-679b-4cb1-b3b4-be16ab17cf5a.png) |
+| `T(n) = 2log₂n + 3` | **O(log n)** | 对数时间，增长很慢<br/>![](assets/1777037697017-adbfb73c-679b-4cb1-b3b4-be16ab17cf5a.png) |
 | `T(n) = 3n + 8` | **O(n)** | 线性时间，与n成正比 |
 | `T(n) = 2n² + 5n + 1` | **O(n²)** | 平方时间，n翻倍时间变4倍 |
 | `T(n) = 2ⁿ + n³` | **O(2ⁿ)** | 指数时间，增长极快 |
@@ -7516,7 +7516,7 @@ public class StringArrayExample {
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 常见的时间复杂度
 #### 常数阶 O(1)
@@ -7593,13 +7593,13 @@ for(int i = 1; i <= n; i++) {
 #### 常见的时间复杂度耗时比较
 算法的时间复杂度是衡量一个算法好坏的重要指标。一般情况下，随着规模n的增大，T(n)的增长较慢的算法为最优算法。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691813959940-65559fad-c58b-4810-a357-122e344bb5f2.png)
+![](assets/1691813959940-65559fad-c58b-4810-a357-122e344bb5f2.png)
 
 其中x轴代表n值，y轴代表T(n)值。T(n)值随着n的值的变化而变化，其中可以看出O(n!)和O(2**ⁿ**)随着n值的增大，它们的T(n)值上升幅度非常大，而O(logn)、O(n)、O(nlogn)、O(n**²**)随着n值的增大，T(n)值上升幅度相对较小。
 
 常用的时间复杂度按照耗费的时间从小到大依次是：O(1) < O(logn) < O(n) < O(nlogn) < O(n**²**) < O(n**³**) < O(2**ⁿ**) < O(n!)。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数组结构的特点
 ### 数组的核心特点
@@ -7654,7 +7654,7 @@ class Bird extends Animal {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 根据索引操作元素
 结论：根据索引查询和修改数组元素的效率非常高，属于所有数据结构效率最高的。
@@ -7667,11 +7667,11 @@ class Bird extends Animal {
 #### 通过索引操作元素的原理
 因为数组的存储空间是连续的，我们通过数组的“首地址+索引值”就能快速的找到索引对应元素的存储空间，从而就能对数组元素执行查询和修改的操作，因此根据索引查询和修改数组元素效率高。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691814106993-b4a2a6fc-2458-45d8-a916-87ae85a82eff.png)
+![](assets/1691814106993-b4a2a6fc-2458-45d8-a916-87ae85a82eff.png)
 
 索引操作数组原理：首地址 + 索引值 * 每个元素占用字节数。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 根据索引删除元素
 结论：根据索引删除元素的效率非常低，因为需要大量挪动数组元素。
@@ -7726,7 +7726,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 冒泡排序优化
 因为冒泡排序存在提前排序成功的可能，因此我们需要对以上冒泡排序算法进行优化，此处的优化思路使用了“假设法”来实现。
@@ -7776,7 +7776,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 选择排序算法
 #### 升序排序思路
@@ -7820,7 +7820,7 @@ public class SelectTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数组的查找算法
 ### 线性查找算法
@@ -7860,7 +7860,7 @@ public class Test04 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 二分查找算法
 #### 二分查找介绍
@@ -7930,7 +7930,7 @@ public class Test04 {
 
 思考：如果查找的元素在数组中存在多个，如何获得查找元素在数组中的所有索引值？
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## IDEA的debug调试
 ### debug调试的作用
@@ -7939,69 +7939,69 @@ public class Test04 {
 ### 开启debug调试
 第一步：在程序可能出现问题的位置打断点。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691981854840-ef0471fc-efa0-4b57-a462-07f4d5410254.png)
+![](assets/1691981854840-ef0471fc-efa0-4b57-a462-07f4d5410254.png)
 
 第二步：开启debug调试，常见的方式有如下三种。
 
 + 第一种方式：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759229688907-36d21e75-ccfd-4223-8ce7-68d280d9ade0.png)
+![](assets/1759229688907-36d21e75-ccfd-4223-8ce7-68d280d9ade0.png)
 
 + 第二种方式：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759229712991-d6ddb89d-f675-496f-9d44-0ca0a2e414ea.png)
+![](assets/1759229712991-d6ddb89d-f675-496f-9d44-0ca0a2e414ea.png)
 
 + 第三种方式：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759229733005-002c5282-1e5e-4b8c-b4e6-75e4fefc33a5.png)
+![](assets/1759229733005-002c5282-1e5e-4b8c-b4e6-75e4fefc33a5.png)
 
 第三步：debug 启动后，会有一个调试窗口
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759229621893-f92e21d1-8767-4af1-b5c8-017123c42cbf.png)
+![](assets/1759229621893-f92e21d1-8767-4af1-b5c8-017123c42cbf.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### debug按钮分析
 #### 第一组按钮
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759230063681-26af6149-64c7-48f8-b7e1-3aa9ca8eaf74.png)
+![](assets/1759230063681-26af6149-64c7-48f8-b7e1-3aa9ca8eaf74.png)
 
 #### 第二组按钮
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759230188583-59dddca2-befa-43f0-bcd3-7ffc31e5ef06.png)
+![](assets/1759230188583-59dddca2-befa-43f0-bcd3-7ffc31e5ef06.png)
 
 #### 添加监视和计算表达式
 添加监视后，可以监视某个变量值的变化，并且该监视不会随着程序执行而消失。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759230313323-8c2123f8-94f7-4e86-a226-3c0644b57404.png)
+![](assets/1759230313323-8c2123f8-94f7-4e86-a226-3c0644b57404.png)
 
 当然，程序运行到某个位置后，如果你临时需要使用某个变量参与某个数学表达式的运算，可以使用计算表达式：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759230672168-078244dc-962a-4742-82c5-ea5984fd6930.png)
+![](assets/1759230672168-078244dc-962a-4742-82c5-ea5984fd6930.png)
 
 #### 查看所有断点以及删除断点
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759230838417-283c84bd-cb55-4598-bdf7-ffe685a074be.png)
+![](assets/1759230838417-283c84bd-cb55-4598-bdf7-ffe685a074be.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 断点的条件设置
 通常，当我们在遍历一个比较大的集合或数组时，在循环内设置了一个断点，难道我们要一个一个去看变量的值？那肯定很累，说不定你还错过这个值得重新来一次。
 
 先要解决以上问题，就需要使用断点的条件设置。通过设置断点条件，在满足条件时，才停在断点处，否则直接运行。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759296627986-f2f8c183-a44a-4192-9931-ddd7c6bfb370.png)
+![](assets/1759296627986-f2f8c183-a44a-4192-9931-ddd7c6bfb370.png)
 
 ### 中断debug调试
 向数据库写入数据的时候，我们发现写入的数据有问题，也就意味着不想执行写入数据的流程，否则后续就要执行删除数据库数据的操作，那么该需求如何实现呢？在debug操作的时候，想要中断请求，也就是不执行剩下的流程，我们可以通过Force Return，即强制返回来避免后续的流程，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759230998394-ba7f408b-eafd-4fce-870d-a08874ae8a82.png)
+![](assets/1759230998394-ba7f408b-eafd-4fce-870d-a08874ae8a82.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 多线程的调试
 一般情况下我们调试的时候是在一个线程中的，一步一步往下走。但有时候你会发现在debug调试的时候，想发起另外一个请求是不行的。那是因为IDEA在debug时默认阻塞级别是ALL，会阻塞其它线程，只有在当前调试线程走完时才会走其它线程。我们可以在View Breakpoints里选择Thread，然后点击Make Default设置为默认选项，来解决该问题，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759231097995-48e0e95d-2cc9-43cb-ac13-ab7b345d9f01.png)
+![](assets/1759231097995-48e0e95d-2cc9-43cb-ac13-ab7b345d9f01.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 单元测试（JUnit5）
 ### 什么是单元测试
@@ -8012,27 +8012,27 @@ public class Test04 {
 
 JUnit5 的 jar 包下载地址：[https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/](https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232423387-c6280d29-661a-4786-8938-eae77b601d49.png)
+![](assets/1759232423387-c6280d29-661a-4786-8938-eae77b601d49.png)
 
 点击 `1.12.2`版本号，进入下载页：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232455535-9fdc50cb-4591-4105-91fb-7495640f694c.png)
+![](assets/1759232455535-9fdc50cb-4591-4105-91fb-7495640f694c.png)
 
 点击下载即可。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232510202-ba7d4512-0e0d-4ffe-9c23-2b7a655799b5.png)
+![](assets/1759232510202-ba7d4512-0e0d-4ffe-9c23-2b7a655799b5.png)
 
 下载完成后，我们需要在 IDEA 中，将 jar 包添加到 classpath 当中，按照下图方式操作：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232627821-b542db02-bfc8-431a-9854-c151f86c4fb7.png)
+![](assets/1759232627821-b542db02-bfc8-431a-9854-c151f86c4fb7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232656546-32c786f6-7c07-49ed-bf3b-b71946b6d04a.png)
+![](assets/1759232656546-32c786f6-7c07-49ed-bf3b-b71946b6d04a.png)
 
 将 jar 包拷贝到 `lib`目录下。然后在 jar 包上右键：`Add as Library...`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232715125-899e9e73-aced-4887-91c8-2b352d70d409.png)
+![](assets/1759232715125-899e9e73-aced-4887-91c8-2b352d70d409.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759232758239-9a16bf19-c379-4d7b-8617-7fcc8b09f0bd.png)
+![](assets/1759232758239-9a16bf19-c379-4d7b-8617-7fcc8b09f0bd.png)
 
 ### 编写测试用例
 假设我们现在编写好了这样一段代码，如下：
@@ -8112,11 +8112,11 @@ public void testXxx(){
 ### 单元测试方法中使用Scanner失效
 选中导航栏的“Help”，然后选中“Edit Custom VM Options...”，接着在“IDEA64.exe.vmoptions”文件中添加内容“-Deditable.java.test.console=true”，最后再重启IDEA即可解决。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1691982713731-911f15f2-ba2c-46ba-88b9-e2218e0910f3.png)
+![](assets/1691982713731-911f15f2-ba2c-46ba-88b9-e2218e0910f3.png)
 
 # 第06章 异常处理
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 异常概述
 ### 异常的引入
@@ -8154,7 +8154,7 @@ public static int getValue(int[] arr, int index) {
 
 那么我们还如何应对以上的异常情况呢？其实JAVA给我们提供了处理异常的机制，就是当程序出现错误，程序安全退出的机制。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 异常的概念
 实际开发中，异常从面向对象的角度考虑也是一类事物，我们可以向上抽取为异常类。这个异常类可以对一些不正常的现象进行描述，并封装为对象。
@@ -8177,11 +8177,11 @@ public class ExceptionTest {
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759234011485-7b8956af-6021-4ba1-a55e-580aa5b50e40.png)
+![](assets/1759234011485-7b8956af-6021-4ba1-a55e-580aa5b50e40.png)
 
 java是采用面向对象的方式来处理异常的。当程序出现问题时，就会创建异常类对象并抛出异常相关的信息（如异常出现的位置、原因等）。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 异常分类
 ### 异常体系
@@ -8191,9 +8191,9 @@ Thorwable类（表示可抛出）是所有异常和错误的超类，两个直�
 
 先来看看java中异常的体系结构图解：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759286851096-251aa57c-4607-4268-89f1-998942e33fb9.png)
+![](assets/1759286851096-251aa57c-4607-4268-89f1-998942e33fb9.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Throwable
 Throwable类是所有异常或错误的超类，它有两个子类：Error和Exception，分别表示错误和异常。其中异常Exception又分为运行时异常(RuntimeException)和编译时异常。
@@ -8215,7 +8215,7 @@ Error类是java所有错误类的父类，描述了java运行时系统内部错�
 
 所以错误是很难处理的，一般的开发人员（当然不是你）是无法处理这些错误的，我们在编程中，可以不去处理这类错误。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759234276914-a217f3d7-7ad6-4ca1-8c75-adbd97582dae.png)
+![](assets/1759234276914-a217f3d7-7ad6-4ca1-8c75-adbd97582dae.png)
 
 **以下是一些常见的Error案例：**
 
@@ -8262,7 +8262,7 @@ Exception in thread "main" java.lang.StackOverflowError
 	...
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Exception(异常)
 Exception类所有异常类的父类，其子类对应了各种各样可能出现的异常事件。Error是程序无法处理的错误，但是Exception是程序本身可以处理的异常，在程序中应当尽可能去处理这些异常。
@@ -8277,7 +8277,7 @@ Exception又分为两大类：
 1. UncheckedException 未检查异常（运行时异常）
 2. CheckedException 检查异常（编译时异常）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 运行时异常
 RuntimeException及其子类异常，都属于运行时期异常。例如：ClassCastException、NullPointerException、IndexOutOfBoundsException、ArithmeticException等。因为程序编译时异常不能被检查出，所以又称为不检查异常（UnCheckedException）。
@@ -8367,7 +8367,7 @@ public static void main(String[] args) {
 Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: Index -1 out of bounds for length 3
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 编译时异常
 Exception及其子类（不包含运行异常），统称为编译时异常。因为程序编译时异常可以被检查出，所以又称为检查异常（CheckedException）。
@@ -8390,7 +8390,7 @@ public class CheckedExceptionDemo {
 
 可以看看是不是编译报错了，具体报错信息也可以看一下。FileNotFoundException是一个编译时异常，必须在编写阶段进行预处理，不处理，编译器报错。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 异常处理
 ### 抛出异常(throw)
@@ -8441,7 +8441,7 @@ Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 索引不�
 	at com.jkweilai.exceprion.ExceptionDemo.main(ExceptionDemo.java:20)	
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 声明异常(throws)
 声明：将问题标识出来，报告给调用者。如果方法内通过throw 抛出了编译时异常，而没有捕获处理（稍后讲解该方式），那么必须通过throws关键字进行声明，让调用者去处理。
@@ -8524,7 +8524,7 @@ public class ThrowsExceptionDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 捕获异常(try-catch-finally)
 如果程序出现了异常，自己又解决不了，那么可以把异常声明出来（throws），报告给调用者，让调用者来做处理。
@@ -8638,7 +8638,7 @@ public class TryCatchDemo {
 
 注意:这种异常处理方式，要求多个 catch 中的异常不能相同，并且若 catch 中的多个异常之间有子父类异常的关系，那么子类异常要求在上面的 catch 处理，父类异常在下面的 catch 处理。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### try-catch-finally组合方式
 try-catch-finally组合：检测异常，并把捕捉到的异常传递给catch代码块处理，然后在finally中进行资源释放。
@@ -8746,7 +8746,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### try-finally组合方式
 try-finally 组合: 对代码进行异常检测，检测到异常后因为没有catch，所以一样会被默认 jvm 抛出。异常是没有捕获处理的。但是功能所开启资源需要进行关闭，所有finally只为关闭资源。
@@ -8775,7 +8775,7 @@ public static void main(String[] args) throws Exception {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 自定义异常
 ### 自定义异常格式
@@ -8848,7 +8848,7 @@ public class MyException {
 1. 继承Exception属于非运行时异常，如果没有对其异常进行捕获处理（try-catch），那么必须在方法上声明异常（throws），以便告知调用者进行捕获。
 2. 继承RuntimeException属于运行时异常，方法上不需要声明异常（throws ），调用者也可以不捕获异常（try-catch）。代码一旦抛出异常，那么程序就会挂掉，并有JVM把异常信息显示到日志窗口上，让调用者看到异常并修改代码。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 异常技能补充
 ### 方法重写中的异常
@@ -8889,7 +8889,7 @@ class Child extends Parent {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 关于异常链
 异常需要封装，但是仅仅封装还是不够的，还需要传递异常。一个系统的友好型的标识，友好的界面功能是一方面，另一方面就是系统出现非预期的情况的处理方式了。
@@ -8935,7 +8935,7 @@ public class ExceptionTest07 {
 
 # 第07章 常用类
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 基本数据类型包装类
 ### 包装类的概述
@@ -8960,20 +8960,20 @@ java是面向对象的语言，但不是“纯面向对象”，基本数据类�
 
 在这八个包装类中，除了Character和Boolean之外都是“数值型”，数值型是java.lang.Number的子类。Number类是抽象类，因此它的抽象方法，所有子类都需要提供实现。Number类提供了抽象方法：byteValue()、shortValue()、intValue()、longValue()、floatValue()、doubleValue()，意味着所有的数值型包装类都可以互相转型。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759294175923-da641466-e57c-4946-acad-3c5de2e222aa.png)
+![](assets/1759294175923-da641466-e57c-4946-acad-3c5de2e222aa.png)
 
 对于包装类说，这些类的用途主要包含两种：
 
 1. 包装类用于实现“基本数据类型”和“引用数据类型”之间的转换，这样就方便涉及到对象的操作，如Object[]、集合等的操作。
 2. 通过包装类的属性，可以获得整数型表示的最大值和最小值，通过包装类提供的方法，用于实现基本数据类型、包装类和字符串之间的相互转换。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 基本类型&包装类
 #### 基本类型转包装类
 我们可以通过包装类提供的构造方法，可以把基本类型或字符串类型转化为包装对象。下面以Integer构造方法API截图，其它包装类的构造方法基本相同。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759294332488-bb7439b9-edce-4171-9a6b-8f019be2bd2d.png)
+![](assets/1759294332488-bb7439b9-edce-4171-9a6b-8f019be2bd2d.png)
 
 【示例】实例化包装对象案例
 
@@ -9006,7 +9006,7 @@ Integer i2 = Integer.valueOf("123");
 
 在数值型的包装类中（排除Character和Boolean），“字符串内容的格式”必须和“包装类对象基本数据类型的格式”保持一致，否则抛出NumberFormatException异常。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 包装类转基本类型
 数值型包装类是java.lang.Number的子类，Number类提供了抽象方法：byteValue()、shortValue()、intValue()、longValue()、floatValue()、doubleValue()，意味着所有的数值型包装类都可以互相转型。
@@ -9039,7 +9039,7 @@ char cc = c.charValue();
 System.out.println("char:" + cc); // 输出：char:A
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 基本类型&字符串
 #### 字符串转基本类型
@@ -9071,7 +9071,7 @@ System.out.println(Integer.parseInt("123") + 77); // 输出：200
 
 在数值型的包装类中，“字符串内容的格式”必须和“包装类对象基本数据类型的格式”保持一致，否则抛出NumberFormatException异常。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 基本类型转字符串
 通过包装类中的静态方法，也就是toString()方法，就能把基本数据类型转化成字符串。
@@ -9101,7 +9101,7 @@ System.out.println(Character.toString('A') + "A"); // 输出："AA"
 
 思考：还有那些方式能把基本数据类型转化为字符串呢？
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 自动装箱拆箱（重点）
 自动装箱和拆箱就是将基本类型和包装类进行自动的互相转换。JDK1.5后，将自动装箱(autoboxing)和拆箱(unboxing)引入java中。
@@ -9135,7 +9135,7 @@ Integer integer = 100; // 自动装箱
 int num = integer; // 自动拆箱，等效于：int num = integer.intValue();
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 自动装箱缓存问题
 针对整数型的包装类，如果整数值在[-128, 127]之间时，那么触发自动装箱机制的时候，默认会从“缓冲池”中取出一个包装类对象并返回，而不会创建一个新的包装类对象并返回；如果整数值在[-128, 127]之外时，那么触发自动装箱机制的时候，则就会创建一个新的包装类对象并返回，而不会从“缓冲池”中取出一个包装类对象并返回。
@@ -9180,7 +9180,7 @@ int num = integer ;
 
 执行结果如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759294433356-a90d96ed-a36a-43c5-b77b-a60469e4fea6.png)
+![](assets/1759294433356-a90d96ed-a36a-43c5-b77b-a60469e4fea6.png)
 
 以上代码运行结果之所以会出现空指针异常，是因为该代码相当于：
 
@@ -9193,7 +9193,7 @@ int num = integer .intValue();
 
 null表示integer没有指向任何对象的实体，但作为对象名称是合法的(不管这个对象名称存是否指向了某个对象的实体)。由于实际上integer并没有指向任何对象的实体，所以也就不可能操作intValue()方法，否则就会抛出NullPointerException异常。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 整数进制转换（了解）
 #### 十进制转别的进制
@@ -9230,7 +9230,7 @@ System.out.println(Integer.parseInt("017", 8)); // 输出：15
 System.out.println(Integer.parseInt("2B", 16)); // 输出：43
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Java大数字运算（了解）
 #### BigInteger类
@@ -9305,7 +9305,7 @@ double d = subtractNum.doubleValue();
 System.out.println(d); // 输出：3.0
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### BigDecimal类
 float和double类型的主要设计目标是为了科学计算和工程计算，双精度浮点型变量double可以处理16位有效数，然而，它们没有提供完全精确的结果，所以不应该被用于要求精确结果的场合。
@@ -9392,13 +9392,13 @@ double d = addNum.intValue();
 System.out.println(d); // 输出：5.0
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## String类
 ### String类概述
 String类对象代表不可变的Unicode字符序列。什么叫做“不可变的对象”？指的是对象内部的成员变量的值无法再改变。我们打开String类的源码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759294489861-b77fbd0b-6e36-4193-85f3-6356948b79d1.png)
+![](assets/1759294489861-b77fbd0b-6e36-4193-85f3-6356948b79d1.png)
 
 我们发现字符串内容全部存储到value[]数组中，而且该数组是final类型，也就是常量(即只能被赋值一次)，这就是“不可变对象”的典型定义方式。
 
@@ -9498,7 +9498,7 @@ str1 和 str2 的创建方式有什么不同呢？
 1. str1创建，在内存中只有一个对象，这个对象在字符串常量池中。
 2. str2创建，在内存中有两个对象。一个new的对象在堆中，一个字符串本身对象，在字符串常量池中。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### String类查找方法
 #### 获取字符串长度
@@ -9558,7 +9558,7 @@ int index4 = str.indexOf("llo", 9);
 System.out.println("index:" + index4); // 输出：14
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### lastIndexOf方法
 通过lastIndexOf方法，获取字符&子字符串在指定字符串中最后一次出现的位置（从后往前查找）。lastIndexOf方法返回一个整数值，该整数值就是字符或子字符串在指定字符串中所在的位置，如果没有找到则返回-1。如果fromIndex是负数，则fromIndex被当作零，如果它比最大的字符位置索引还大，则它被当作最大的可能索引。
@@ -9626,7 +9626,7 @@ boolean flag = url.contains("jkweilai");
 System.out.println("flag:" + flag); // 输出：true
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### String类转换方法
 #### 字符串转数组
@@ -9673,7 +9673,7 @@ String lowerStr = upperStr.toLowerCase();
 System.out.println(lowerStr); // 输出："hello world"
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 忽略字符串前后空格
 使用trim()方法去掉字符串中首尾的空格。
@@ -9749,7 +9749,7 @@ System.out.println(str);
 2. concat方法参数只能是字符串类型，拼接时不会创建StringBuilder对象，拼接完成后返回一个新的String对象。拼接null会出现空指针异常。
 3. + 使用较多。如果进行大量字符串拼接，这两个都不合适。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### String类其他方法
 #### isEmpty方法
@@ -10017,7 +10017,7 @@ public static String getB(){
 String s = "a" + "b";
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### String类方法练习
 #### 获取指定字符串中大写字母、小写字母、数字的个数
@@ -10107,7 +10107,7 @@ public static String method(String str) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## StringBuffer类
 ### StringBuffer类概述
@@ -10125,7 +10125,7 @@ str = str + "世界";
 
 StringBuffer类是抽象类AbstractStringBuilder的子类，StringBuffer类代表可变的Unicode字符序列，是字符串变量。我们打开AbstractStringBuilder类的源码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759294535670-e9ada5df-f702-4843-852c-c2fa4274b90a.png)
+![](assets/1759294535670-e9ada5df-f702-4843-852c-c2fa4274b90a.png)
 
 从源码中可以看出，AbstractStringBuilder内部也是一个字符数组，但是这个字符数组没有用final修饰，那么意味着我们可以随时修改，所以我们又称StringBuffer为“可变字符序列”。因为StringBuffer类是对原字符串本身进行操作的，对字符串进行修改操作而不产生副本拷贝，效率较高。
 
@@ -10148,7 +10148,7 @@ StringBuffer sb2 = new StringBuffer(20);
 StringBuffer sb3 = new StringBuffer("hello world");
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### StringBuffer类常见方法
 #### 添加方法
@@ -10184,7 +10184,7 @@ sb.insert(12, true);
 System.out.println(sb); // 输出："heAAAll123o trueworld"
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 删除方法
 delete(int start, int end)方法，删除从start开始到end-1为止的一段字符序列。注意start的取值范围是0到length()之间，并且end应该大于等于start，否则抛出StringIndexOutOfBoundsException异常。调用该方法以后，可变字符串的内容也发生改变。
@@ -10221,7 +10221,7 @@ StringBuffer类的查找方法和String类中的方法和功能完全一致，�
 | lastIndexOf(String str) | 返回指定子字符串最右边出现的字符串内的索引 |
 | lastIndexOf(String str, int fromIndex) | 返回指定子字符串最后一次出现的字符串中的索引，从指定的索引开始 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 修改方法
 replace(int start, int end, String str)方法，用字符串str替换从start开始到end-1截止的字符。注意start的取值范围是0到length()之间，并且end应该大于等于start，否则抛出StringIndexOutOfBoundsException异常。调用该方法以后，可变字符串的内容也发生改变。
@@ -10275,7 +10275,7 @@ sb.setLength(3);
 System.out.println("内容：" + sb + " length:" + sb.length());
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 其它常见方法
 StringBuffer类的其他常见方法，这些方法和String类中的方法和功能完全一致。
@@ -10297,7 +10297,7 @@ StringBuffer类和StringBuilder类非常类似，都是继承自抽象类Abstrac
 
 目前，我们还没有涉及到线程与同步，知道结论 StringBuilder 比 StringBuffer 快即可。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 字符串的效率比较
 分别使用String、StringBuffer、StringBuilder进行10000次的字符串拼接操作，通过计算运行时间来分析执行的效率。
@@ -10349,18 +10349,18 @@ public class StringBuilderDemo {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759467252984-7567da51-17d6-46a8-950f-91f909b54221.png)
+![](assets/1759467252984-7567da51-17d6-46a8-950f-91f909b54221.png)
 
 StringBuffer和StringBuilder的运行效率几乎一致，这是因为二者都是对对象本身进行操作，不会生成新的字符串对象。二者的区别主要是StringBuffer是线程安全的，而StringBuilder是线程不安全的，所以StringBuilder的运行效率略高于StringBuffer。
 
 String是不可变的对象，每次对String进行操作的时候，都会生成一个新的对象（StringBuilder），占用大量内存空间，这会对系统的性能造成影响，执行效率最低。所以在平时编程的过程中，如果字符串需要经常改变，应该尽量避免使用String。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对象方法链式调用
 在我们日常开发中，会遇到调用一个方法后，返回一个对象的情况，这种设计允许用户连续的链式调用方法，从而实现按人的惯性思维进行快速开发，我们称之为链式语法。在我们学过的常用工具类中，StringBuffer类和StringBuilder类中的方法都是使用链式语法的典范，通过在方法添加return this的形式来实现方法的链式调用，我们打开StringBuilder的源码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759294671788-f38d08d6-8310-450e-a8f3-84883e1a80c9.png)
+![](assets/1759294671788-f38d08d6-8310-450e-a8f3-84883e1a80c9.png)
 
 从源码中我们可以看到，我们每次调用StringBuilder类中的insert方法，都会返回当前可变字符串对象，然后我们可以使用返回的对象继续调用方法，从而实现了方法链式调用。
 
@@ -10379,7 +10379,7 @@ System.out.println(sb);
 ### 时间处理类概述
 在计算机世界，我们把1970 年1月1日 00:00:00定为基准时间，每个度量单位是毫秒(1秒的千分之一)。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692158970197-dc5a5c14-b6a2-4cf3-9c25-bbbd30c7ae04.png)
+![](assets/1692158970197-dc5a5c14-b6a2-4cf3-9c25-bbbd30c7ae04.png)
 
 我们用long类型的变量来表示时间，从基准时间往前几亿年，往后几亿年都能表示。如果想获得现在时刻的“时刻数值”，可以使用：
 
@@ -10389,9 +10389,9 @@ long now = System.currentTimeMillis();
 
 这个“时刻数值”是所有时间类的核心值，年月日都是根据这个“数值”计算出来的。我们工作学习涉及的时间相关类有如下这些：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759295503785-05175d53-45cb-4b8d-855d-95aa96d5cf89.png)
+![](assets/1759295503785-05175d53-45cb-4b8d-855d-95aa96d5cf89.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Date时间类
 在标准Java类库中包含一个java.util.Date类，它的对象表示一个特定的瞬间，精确到毫秒。Date类从 JDK1.0开始就存在了，但因为它历史悠久，所以它的大部分构造器、方法都已经过时了，不再推荐使用了。
@@ -10439,7 +10439,7 @@ public int method(Date date1, Date date2) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### SimpleDateFormat类
 SimpleDateFormat类是抽象类DateFormat的子类，用于以区域设置敏感的方式格式化和解析日期。
@@ -10491,7 +10491,7 @@ String day = df.format(new Date());
 System.out.println("今天是今年的第" + day + "天");
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Calendar日历类  
 Calendar我们称之为“日历类”，通过Calendar类的实例不但能保存某个指定时间，并且还提供了日期相关的计算功能。正是因为Calendar类的出现，因此就替代了Date类中的很多方法。
@@ -10526,7 +10526,7 @@ Calendar类中的常见字段，本质上都是Calendar类中int类型的全局�
 + Calendar.MILLISECOND 获取毫秒
 + Calendar.DAY_OF_WEEK 获取星期几，1表示星期日，...，7表示星期六
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 获取的方法
 | **方法名** | **描述** |
@@ -10577,7 +10577,7 @@ Calendar calendar = Calendar.getInstance();
 calendar.set(2022, 4, 50);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 计算的方法
 | **方法名** | **描述** |
@@ -10635,7 +10635,7 @@ String format = sdf.format(date);
 System.out.println(format);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 工具类
 ### System类
@@ -10644,7 +10644,7 @@ System类我们称之为“系统工具类”，在System类中只存在“静�
 System类提供了标准输入流、标准输出流和标准错误输出流，也是Java中最底层的类。
 
 #### System类的属性
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759295554722-8c283f2a-a5ad-45ec-b6a1-fc4a6ddcff4e.png)
+![](assets/1759295554722-8c283f2a-a5ad-45ec-b6a1-fc4a6ddcff4e.png)
 
 #### System类的方法
 | **方法名** | **描述** |
@@ -10680,7 +10680,7 @@ public class TestSystem {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Math类 
 java.lang.Math类我们称之为“数学相关的工具类”，在Math类中只存在“静态属性”和“静态方法”，因此Math类就无需被实例化，那么Math类的构造方法使用了private关键字修饰。
@@ -10771,7 +10771,7 @@ int num2 = (int)(Math.random() * 10 + 1);
 
 另外 Java 中获取随机数还提供了一个随机数类：**java.util.Random**，获取随机数使用它更加方便。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### UUID类
 UUID是通用唯一识别码(Universally Unique Identifier)的缩写，是一种软件构建的标准，其目的是让分布式系统中的所有元素，都能有唯一的辨识信息，不需要通过中央控制端来做辨识信息的指定。它由一组32位数的16进制数字所构成。
@@ -10814,7 +10814,7 @@ public enum Season {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 枚举的底层
 enum的语法结构尽管和class的语法不一样，但是我们将枚举反编译后，发现所有的
@@ -10917,7 +10917,7 @@ public class EnumDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 枚举的高级
 在JDK1.5之前，我们想要实现季节的枚举，并且要求对每个季节进行说明（名字+描述），那么可以通过定义一个类来实现，只是实现的过程稍微有点复杂。
@@ -11122,7 +11122,7 @@ public class Test01 {
 
 # 第08章 泛型和比较器
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 泛型的概述
 泛型（Generics）是JDK1.5 新增的特性，他可以帮助我们建立类型安全的集合。在使用了泛型的集合中，不必进行强制类型转换。JDK提供了支持泛型的编译器，将运行时的类型检查提前到了编译时，增强了代码的可读性和安全性。
@@ -11215,7 +11215,7 @@ public class Test01 {
 
 以上程序就会抛出类型转换异常（ClassCastException），为了解决这个问题，泛型就应运而生。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 泛型的好处
 泛型的本质是参数化类型。这意味着在定义类、接口或方法时，我们可以将类型作为一个参数（称为类型形参，如 `<E>`）来声明。在使用时，再传入具体的类型（称为类型实参，如 `String`）。这样，编译器就知道要操作的具体类型，从而提供编译时的类型安全。
@@ -11310,7 +11310,7 @@ public class Test01 {
 
 **<font style="color:#DF2A3F;">与基于 Object 的集合相比，泛型通过施加类型约束，牺牲了存储任意类型的灵活性，但换来了编译时类型安全与简化的代码。它既避免了运行时的类型转换异常，也省去了繁琐的强制转换。在实际开发中，由于集合元素类型通常是统一的，这一权衡非常值得。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 泛型的工作原理
 泛型的核心价值在于将类型检查前置到编译阶段，从而提升代码的安全性。其工作原理可分为编译时和运行时两个阶段。
@@ -11386,7 +11386,7 @@ public class Test01 {
 
 以上操作中，我们创建Tiger对象时设置泛型E为String类型，则调用setElement(E element)方法赋值的数据就必须为String类型，同时调用E getElement()方法返回的数据也肯定为String类型。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 在方法上定义泛型
 因为在类中定义的泛型，该泛型就不能在静态方法中使用，如果想要在静态方法中使用泛型，则就需要使用含有泛型的方法，也就是在方法中定义泛型。
@@ -11436,7 +11436,7 @@ class MyClass {
 + ✅ **支持类型推断**：调用时通常不需要显式指定类型
 + ✅ **提高灵活性**：让单个方法能够处理多种类型，同时保证类型安全
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 在接口上定义泛型
 定义格式：
@@ -11487,7 +11487,7 @@ public class IntegerImpl<E> implements Impl<E> {
 
 定义实现类的时候，因为还未明确接口的泛型类型，所以实现方法的形参类型依旧为E类型。同时，因为实现类中有定义泛型，所以创建实现类的实例时还需明确泛型的类型。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 泛型通配符
 泛型是在限定数据类型，当在集合或者其他地方使用到泛型后，那么这时一旦明确泛型的数据类型，那么在使用的时候只能给其传递和数据类型匹配的类型，否则就会报错。
@@ -11605,7 +11605,7 @@ public class Test02 {
 
 在以上代码中，test03(ArrayList<? super Animal> list)方法使用了“下限通配符”，则“?”就必须为Animal类及其父类，并且“?”的实际类型由调用方法的实参来决定。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 自然排序（Comparable）
 ### 比较对象的大小
@@ -11665,7 +11665,7 @@ public class Test01 {
 
 我们知道，使用“冒泡排序”的核心就是“相邻两个元素的比较大小”，对象数组中存储的元素都是引用数据类型，则我们就可以使用compareTo()方法来实现相邻两个元素的比较。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 对象数组的升序排序
 例如，根据学生的年龄来实现数组的“升序”排序，那么想要完成“升序”排序的核心就是要控制compareTo()方法返回的结果，在“升序”排序中int compareTo(Student stu)方法的返回值规则必须如下所示：
@@ -11769,9 +11769,9 @@ public class Test01 {
 
 以上代码执行完毕，则就实现了根据学生年龄来执行升序排序，并且输出的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692263864972-de07085a-c79c-412a-bb7e-b1207337bfc9.png)
+![](assets/1692263864972-de07085a-c79c-412a-bb7e-b1207337bfc9.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 对象数组的降序排序
 在以上的操作中，我们完成了根据学生年龄来执行“升序”排序，如何想要根据学生年龄来执行“降序”排序，那么又该如何实现呢？想要实现“降序”排序，核心就是要控制Student类中compareTo()方法返回的结果，在“降序”排序中int compareTo(Student stu)方法的返回值规则必须如下所示：
@@ -11849,9 +11849,9 @@ public class Test02 {
 
 以上代码执行完毕，则就实现了根据学生年龄来执行降序排序，并且输出的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692263935212-69fbd80d-1928-45ee-a79d-7da80e7c0d17.png)
+![](assets/1692263935212-69fbd80d-1928-45ee-a79d-7da80e7c0d17.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对象数组排序优化
 #### 优化1：使用Comparable接口
@@ -11957,7 +11957,7 @@ public class ArrayUtil {
 
 因为ArrayUtil类中提供了sort(Object[] arr)方法，因此调用ArrayUtil类中的sort()方法就能实现对任意对象数组的排序操作，并且排序的规则依旧封装在对象所对应类的compareTo()方法中，并且根据compareTo()方法返回的结果来控制升序或降序排序。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 自然排序的总结
 #### 实现自然排序
@@ -12053,7 +12053,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 定制排序（Comparator）
 ### 比较对象的大小
@@ -12178,7 +12178,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对象数组的排序
 通过自然排序，每次只能设置一种排序规则，如果想要设置多种排序规则，则就需要使用Comparator接口来实现。在Comparator接口中，我们需要明确int compare(T obj1, T obj2)方法的返回值规则，通过该方法的返回值就能确定升序或降序的排序，返回值规则如下：
@@ -12317,9 +12317,9 @@ public class Test02 {
 
 以上代码执行完毕，那么就实现了两种排序规则，并且输出的结果如下所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692265180801-09b02a1f-ae1e-49e3-8d63-4cf2cf4853ab.png)
+![](assets/1692265180801-09b02a1f-ae1e-49e3-8d63-4cf2cf4853ab.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 对象数组排序优化
 在ArrayUtil类中，我们提供了sort(Object[] arr, Comparator comparator)方法，该sort()方法中要排序数组的类型不确定，并且Comparator还需设置泛型的类型，在这样的情况下就不建议使用Object类型的数组来作为形参。
@@ -12465,9 +12465,9 @@ public class Test01 {
 
 以上代码执行完毕，那么就实现了两种排序规则，并且输出的结果如下所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692265278661-6b9fd3e9-fe0e-4b48-b949-7e02788ce2df.png)
+![](assets/1692265278661-6b9fd3e9-fe0e-4b48-b949-7e02788ce2df.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 定制排序的优点
 1. 通过实现Comparator接口，则每个类都可以定义多种排序规则，避免了Comparable接口的弊端。
@@ -12495,7 +12495,7 @@ public class Test02 {
 
 # 第09章 数据结构和集合
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 集合概述
 ### 集合的介绍
@@ -12539,12 +12539,12 @@ for(int i = 0; i < list.size(); i++) {
 **<font style="color:#DF2A3F;">但需要注意的是：虽然它俩没有继承关系，但私下里小弟们之间有借用关系。</font>**
 
 #### Collection 的继承结构
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759728221316-82f540f9-9fe0-4725-86e3-ac202353f922.png)
+![](assets/1759728221316-82f540f9-9fe0-4725-86e3-ac202353f922.png)
 
 #### Map 的继承结构
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759732202990-70f73cfe-66b6-4f5e-9c2e-37e1eba8645b.png)
+![](assets/1759732202990-70f73cfe-66b6-4f5e-9c2e-37e1eba8645b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Collection接口
 既然Collection接口是集合中的顶层接口，也就意味着Collection接口中定义的方法则实现类都可以使用。查询API，发现Collection接口中有很多操作集合的方法，那么这些方法都具体能做什么呢？
@@ -12589,7 +12589,7 @@ Object[] arr = coll.toArray(); // 数组中结果为：[222, 333]
 coll.clear(); // 清空后，集合元素为[]，代表没有元素
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 集合的通用迭代
 从 Collection 的继承结构上可以看到，Collection 继承了 Iterable，表示所有的 Collection 都是可迭代的/可遍历的，那它如何遍历呢？首先你需要获取这个集合对象依赖的迭代器对象，怎么获取呢？
@@ -12617,7 +12617,7 @@ while(it.hasNext()){
 
 `ArrayList`集合底层迭代原理图如下：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778075702039-41d74485-a316-4ee7-b710-d94fd88769e0.png)
+![](assets/1778075702039-41d74485-a316-4ee7-b710-d94fd88769e0.png)
 
 完整代码如下：
 
@@ -12731,7 +12731,7 @@ public class Test {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## SequencedCollection 接口
 JDK21 新增，所有的有序集合都实现了这个接口。有序包括两种情况：
@@ -12797,7 +12797,7 @@ public class Test01 {
 
 List接口常用的实现类有3个：ArrayList、LinkedList、Vector。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### ArrayList类详解
 我们对 ArrayList 集合源码进行分析。
@@ -12807,7 +12807,7 @@ ArrayList底层使用“数组”来存储元素，并且ArrayList底层的数�
 
 ArrayList集合的特点为：查询效率高，修改效率高，末尾元素增删效率高，随机增删效率低，线程不安全。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759737491433-239477c8-4b85-4bad-ad32-e5eec3754253.png)
+![](assets/1759737491433-239477c8-4b85-4bad-ad32-e5eec3754253.png)
 
 查看源码，我们可以看出ArrayList类底层使用Object数组来存储元素数据。所有的方法，都围绕这个核心的Object数组来开展。
 
@@ -12883,7 +12883,7 @@ public class ArrayList<E>{
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 添加元素方法
 `添加元素的重载方法很多，我们这里重点分析： add(E e)方法`
@@ -12973,7 +12973,7 @@ public class ArraysSupport {
     1. 如果**最小增长值**没有超过 ** 原容量的一半** ，则按照原容量的一半进行扩容，扩容之后的新容量是原容量的 **1.5** 倍。
     2. 如果**最小增长值**  超过了 ** 原容量的一半**，则按照最小增长值进行扩容。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 获取元素方法
 
@@ -13078,7 +13078,7 @@ public class ArrayList<E> {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 链式存储结构
 #### 单链表概述
@@ -13086,11 +13086,11 @@ public class ArrayList<E> {
 
 单链表采用的是链式存储结构，使用一组地址任意的存储单元来存放数据元素。在单链表中，存储的每一条数据都是以节点来表示的，每个节点的构成为：元素（存储数据的存储单元） +  指针（存储下一个节点的地址值），单链表的节点结构如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267020040-76b5e75e-e9ad-4b77-a6fc-500384d5a278.png)
+![](assets/1692267020040-76b5e75e-e9ad-4b77-a6fc-500384d5a278.png)
 
 另外，单链表中的开始节点，我们又称之为首节点；单链表中的终端节点，我们又称之为尾节点。如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267046634-baa1f542-27d4-4693-ae54-e117b6a63797.png)
+![](assets/1692267046634-baa1f542-27d4-4693-ae54-e117b6a63797.png)
 
 **<font style="color:#DF2A3F;">【根据序号获取节点的操作】</font>**
 
@@ -13098,7 +13098,7 @@ public class ArrayList<E> {
 
 以下图为例，我们需要获得序号为2的节点，那么就需要依次遍历获得“节点11”和“节点22”，然后才能获得序号为2的节点，也就是“节点33”。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267088213-3523cb81-78df-4451-80eb-92f317197ee4.png)
+![](assets/1692267088213-3523cb81-78df-4451-80eb-92f317197ee4.png)
 
 因此，在链表中通过序号获得节点的操作效率是非常低的，查询的时间复杂度为O(n)。
 
@@ -13108,7 +13108,7 @@ public class ArrayList<E> {
 
 以下图为例，我们需要删除序号为2的节点，那么就让“节点22”指向“节点44”即可，这样就删除了序号为2的节点，也就是删除了“节点33”。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267133188-aad33b3e-148a-48e3-a381-62f53a0ee95d.png)
+![](assets/1692267133188-aad33b3e-148a-48e3-a381-62f53a0ee95d.png)
 
 通过序号来删除节点，时间主要浪费在找正确的删除位置上，故时间复杂度为O(n)。但是，单论删除的操作，也就是无需考虑定位到删除节点的位置，那么删除操作的时间复杂度就是O(1)。
 
@@ -13118,22 +13118,22 @@ public class ArrayList<E> {
 
 以下图为例，我们需要在序号为2的位置插入元素值“00”，首先先把字符串“00”封装为一个节点对象，然后就让“节点22”指向“新节点00”，最后再让“节点00”指向“节点33”，这样就插入了一个新节点。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267180464-8c5a673b-7841-423c-b008-e8dc1f6dac86.png)
+![](assets/1692267180464-8c5a673b-7841-423c-b008-e8dc1f6dac86.png)
 
 通过序号来插入节点，时间主要浪费在找正确的插入位置上，故时间复杂度为O(n)。但是，单论插入的操作，也就是无需考虑定位到插入节点的位置，那么插入操作的时间复杂度就是O(1)。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 双链表概述
 **<font style="color:#DF2A3F;">【双链表的定义】</font>**
 
 双链表也叫双向链表，它依旧采用的是链式存储结构。在双链表中，每个节点中都有两个指针，分别指向直接前驱节点（保存前一个节点的地址值）和直接后继节点（保存后一个节点的地址值），如下图所示。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267291651-4da286fc-8f48-4e65-93b9-2bfb2f735bf1.png)
+![](assets/1692267291651-4da286fc-8f48-4e65-93b9-2bfb2f735bf1.png)
 
 所以，从双链表中的任意一个节点开始，都可以很方便地访问它的直接前驱节点和直接后继节点，如下图所示。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267317704-572bbe42-5078-4f82-b2f6-5b86303fcfdc.png)
+![](assets/1692267317704-572bbe42-5078-4f82-b2f6-5b86303fcfdc.png)
 
 **<font style="color:#DF2A3F;">【单链表和双链表的区别】</font>**
 
@@ -13143,13 +13143,13 @@ public class ArrayList<E> {
 
 对于一个节点，有储存数据的data和指向下一个节点的next。也就是说，单链表的遍历操作都得通过前节点—>后节点。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267379699-e12d5b49-67d4-4ebc-a365-65ec73fde296.png)
+![](assets/1692267379699-e12d5b49-67d4-4ebc-a365-65ec73fde296.png)
 
 (2)双链表
 
 对于一个节点，有储存数据的data和指向下一个节点的next，还有一个指向前一个节点的pre。也就是说，双链表不但可以通过前节点—>后节点，还可以通过后节点—>前节点。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267426291-e82fa7d6-cbc3-4a3e-87cf-08908ce14dd3.png)
+![](assets/1692267426291-e82fa7d6-cbc3-4a3e-87cf-08908ce14dd3.png)
 
 #### 环形链表概述
 环形链表依旧采用的是链式存储结构，它的特点就是设置首节点和尾节点相互指向，从而实现让整个链表形成一个环。在我们实际开发中，常见的环形链表有：
@@ -13158,15 +13158,15 @@ public class ArrayList<E> {
 
 在单链表中，尾节点的指针指向了首节点，从而整个链表形成一个环，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267529410-e0f2945f-59e3-4a87-a767-3431ef76aefe.png)
+![](assets/1692267529410-e0f2945f-59e3-4a87-a767-3431ef76aefe.png)
 
 2. 环形双链表
 
 在双链表中，尾节点的指针指向了首节点，首节点的指针指向了尾节点，从而整个链表形成一个环，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1692267569811-154233fb-fb2b-4616-bf03-910f86e60b57.png)
+![](assets/1692267569811-154233fb-fb2b-4616-bf03-910f86e60b57.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### LinkedList类详解
 #### LinkedList 是双向链表
@@ -13174,19 +13174,19 @@ LinkedList集合底层采用双向链表实现的存储，也就意味着LinkedL
 
 LinkedList集合的特点为：查询效率低，增删效率高，线程不安全。我们打开LinkedList源码，可以看到里面包含了双向链表的相关代码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759743502603-912c23a0-f45a-43de-bb66-3af6d2e4c165.png)
+![](assets/1759743502603-912c23a0-f45a-43de-bb66-3af6d2e4c165.png)
 
 源码中Node类中包含了item、next和prev三个实例变量，其中item保存了节点中存储的数据，next和prev分别指向了后一个节点和前一个节点，则意味着Node类就是双向链表的节点类。
 
 将接下来，我们再继续看LinkeList集合包含了哪些属性，源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759743620255-58d20273-a3ce-4bbc-9b87-bf042a1ef0f4.png)
+![](assets/1759743620255-58d20273-a3ce-4bbc-9b87-bf042a1ef0f4.png)
 
 源码中first属性保存的就是双链表的首节点，last属性保存的就是双链表的尾结点，而size属性保存了双链表实际存放元素的个数。
 
 因此，对LinkedList集合的操作，其实就是对双链表做的操作。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 增加的相关方法
 因为LinkedList类属于Deque接口的实现类，也就意味着LinkedList集合对比List接口新增了一些方法，这些新增的方法都是实现于Deque接口的方法，**用于模拟双向队列**，新增的部分方法如下。
@@ -13274,7 +13274,7 @@ public class LinkedList<E>{
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 获取元素方法
 
@@ -13365,7 +13365,7 @@ public class LinkedList<E> {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 删除元素方法
 
@@ -13417,33 +13417,33 @@ public class LinkedList<E> {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Vector类详解
 #### Vector类概述
 Vector集合和ArrayList集合的用法几乎一模一样，底层都是采用了数组来存储集合中的元素。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759747028701-d3e6d68f-6c92-4e2c-80c1-21ac10b52d58.png)
+![](assets/1759747028701-d3e6d68f-6c92-4e2c-80c1-21ac10b52d58.png)
 
 只不过Vector类的方法都加了同步检查，因此“线程安全，效率低”。 
 
 比如：add(E e)方法就增加了synchronized同步标记。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759747050286-76707043-0dfb-4e6d-a938-232c33f60974.png)
+![](assets/1759747050286-76707043-0dfb-4e6d-a938-232c33f60974.png)
 
 另外 Vector 的初始化容量是 10，和 ArrayList 有点区别，因为 Vector 初始化的时候立即就创建了一个长度为 10 的数组：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759747191663-f20ca4e9-6175-4943-8371-73d7d414450b.png)
+![](assets/1759747191663-f20ca4e9-6175-4943-8371-73d7d414450b.png)
 
 可以在看一眼它的扩容策略：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759747321856-a9dc4357-e5b1-4f5a-9bd4-17919e11a63e.png)
+![](assets/1759747321856-a9dc4357-e5b1-4f5a-9bd4-17919e11a63e.png)
 
 它的扩容策略是：直接 2 倍。
 
 相比较于ArrayList集合，在Vector集合中还包含了许多传统的方法，并且这些方法不属于集合框架，此处的传统方法我们了解即可。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### Vector类演示
 
@@ -13468,9 +13468,9 @@ public class Test {
 
 **面试题：如何选用ArrayList、LinkedList、Vector？**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759747493121-eded220f-6538-436c-90c3-875fbac45754.png)
+![](assets/1759747493121-eded220f-6538-436c-90c3-875fbac45754.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 迭代器
 ### 演示并发修改异常
@@ -13522,7 +13522,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759748880227-e8d1a547-d6ae-4ab4-b57e-ab89bcf8db24.png)
+![](assets/1759748880227-e8d1a547-d6ae-4ab4-b57e-ab89bcf8db24.png)
 
 **<font style="color:#DF2A3F;">抛出这种异常的这种机制我们一般称为：快速失败机制（fail-fast 机制）。</font>**
 
@@ -13553,7 +13553,7 @@ public static void main(String[] args) {
 
 迭代集合时，删除元素要使用“迭代器对象.remove()”方法来删除，避免使用“集合对象.remove(元素)”。主要是为了避免 `ConcurrentModificationException` 异常的发生。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Iterator和for-each的区别
 1. 使用for-each不但能遍历集合，还能遍历数组，但是使用Iterator只能遍历集合。
@@ -13664,13 +13664,13 @@ public class Test01 {
 2. Iterator只能从前往后遍历集合，而ListIterator能从前往后和从后往前遍历集合。
 3. Iterator只有remove()方法，而ListIterator有remove()、add()和set()方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 队列（Queue）
 ### 队列的简介
 队列是一种特殊的线性表，特殊之处在于它只允许在表的前端（front）进行删除操作，而在表的后端（rear）进行插入操作，队列是一种操作受限制的线性表。进行插入操作（入口）的端称为队尾，进行删除操作（出口）的端称为队头。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386024363-9d44cad4-d2eb-414b-a0db-62a25cefcba8.png)
+![](assets/1693386024363-9d44cad4-d2eb-414b-a0db-62a25cefcba8.png)
 
 队列的插入操作只能在队尾操作，队列的删除操作只能在队头操作，因此队列是一种先进先出（First In First Out）的线性表，简称**<font style="color:#DF2A3F;">FIFO</font>**表。
 
@@ -13713,15 +13713,15 @@ public static void main(String[] args) {
 
 以下采用数组实现，初始化一个队列数组的空间长度为5，队列有两个标记，一个队头的位置front，一个队尾的位置rear，初始都指向数组下标为0的位置，如图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386270317-6ea066ea-a18f-4313-aa2d-928ec4b0ac96.png)
+![](assets/1693386270317-6ea066ea-a18f-4313-aa2d-928ec4b0ac96.png)
 
 在插入元素时，rear标记递增+1，比如依次入队11，22，33这三个元素，则当前队列存储情况如图：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386290881-d040bc7a-cc71-49eb-ad4c-d5a816400f3b.png)
+![](assets/1693386290881-d040bc7a-cc71-49eb-ad4c-d5a816400f3b.png)
 
 当前front为0，rear为3，接下来执行出队操作，此处将11元素出队，则front标记递增+1，此时队列的存储情况如图：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386316162-d6a53c3d-412d-43ef-8585-12ce4775a5f4.png)
+![](assets/1693386316162-d6a53c3d-412d-43ef-8585-12ce4775a5f4.png)
 
 根据上面的图例:
 
@@ -13735,11 +13735,11 @@ front 和 rear在入队和出队操作中只增不减，因此 front 和 rear �
 
 如何解决这个问题，循环队列可以解决。当rear的取值为数组空间长度，此时如果数组还有空闲的位置，将rear 重新指向数组的0索引处即可，如图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386378044-ea663622-8b1c-47f0-9edf-f0f74a44a9ad.png)
+![](assets/1693386378044-ea663622-8b1c-47f0-9edf-f0f74a44a9ad.png)
 
 如果继续入队66和77这两个元素，则队列的存储结构如图：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386402250-40fcb314-5e11-40cb-8123-b9f3b93f0660.png)
+![](assets/1693386402250-40fcb314-5e11-40cb-8123-b9f3b93f0660.png)
 
 在采用循环队列实现的过程中，当队列满队时，front等于rear，而当队列空时，front也等于rear，为了区分两种状态，一般规定循环队列中最多存储元素的个数为"**数组长度-1**"，即有一个位置不放元素，此时 `front==rear` 时为空队，而当 `**front==(rear+1)%数组长度**`，说明队满。
 
@@ -13776,7 +13776,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 链表实现队列
 队列的核心操作是：
@@ -13784,7 +13784,7 @@ public static void main(String[] args) {
 + **入队（Enqueue）**：在**尾部（Rear）** 添加元素。
 + **出队（Dequeue）**：从**头部（Front）** 移除元素。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759757499013-5386e5ed-4c0d-4c39-b196-9e6a0f6914e7.png)
+![](assets/1759757499013-5386e5ed-4c0d-4c39-b196-9e6a0f6914e7.png)
 
 在这种结构下：
 
@@ -13838,7 +13838,7 @@ public static void main(String[] args) {
 ## 栈（Stack）
 栈是一种特殊的线性表，仅能在线性表的一端操作，栈顶允许操作，栈底不允许操作，栈的重要特点为：后进先出或先进后出。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693386622275-30c066cf-0777-46b2-9a40-153c3dc28fb1.png)
+![](assets/1693386622275-30c066cf-0777-46b2-9a40-153c3dc28fb1.png)
 
 栈的一个最重要的特征就是栈的插入和删除只能在栈顶进行，所以每次删除的元素都是最后进栈的元素，故栈也被称为后进先出（Last In First Out）的线性表，简称**LIFO**表。
 
@@ -13876,7 +13876,7 @@ public class Test01 {
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Map接口
 ### Map接口介绍
@@ -13928,7 +13928,7 @@ public class Test02 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### entrySet()方法
 在Map接口中，提供了“Set<Map.Entry<K, V>> entrySet();”方法来遍历Map中的键值对。调用entrySet()方法，获得存储Map.Entry对象的Set集合，而Map.Entry对象存储就是Map集合中的键值对。
@@ -14044,7 +14044,7 @@ key:Student{name='李四', age=19} value:天津
 
 key:Student{name='赵六', age=28} value:上海
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 情况二：key为Java提供的类
 对于Java提供的类，因为默认已经重写了equals()方法和hashCode()方法，从而保证了key的唯一性。那么执行put()方法时，底层就会判断添加键值对的key是否重复（通过equals()方法判断），如果key发生了重复，那么默认就会执行覆盖操作。
@@ -14094,25 +14094,25 @@ key:cc value:333
 
 我们打开HashMap源码，发现有如下两个核心内容：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759759519728-7ea13ed9-49e0-4887-b36d-2416fc9db91c.png)
+![](assets/1759759519728-7ea13ed9-49e0-4887-b36d-2416fc9db91c.png)
 
 其中的，Node[] table 就是HashMap的核心数组结构，我们也称之为“**位桶数组**”，数组的每个槽位称为“**桶**”。我们再继续看Node是什么，源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759759624675-7d98d07a-fe78-46d8-a47b-d83e4864b7ac.png)
+![](assets/1759759624675-7d98d07a-fe78-46d8-a47b-d83e4864b7ac.png)
 
 在Node类中，key存储的是“键对象”，value存储的是“值对象”，hash存储的是“键对象的哈希值”，而next存储的就是“指向下一个节点的地址值”。显然Node类就是一个单链表节点类，我们使用图形表示该单链表如下所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693388418178-03859ced-c940-4824-95c5-d75f4b02e23a.png)
+![](assets/1693388418178-03859ced-c940-4824-95c5-d75f4b02e23a.png)
 
 然后，我们画出Node[]数组的结构（这也是HashMap在 JDK1.7 的存储结构）：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693388444789-b4626cf1-db42-4e36-b562-220f096313a2.png)
+![](assets/1693388444789-b4626cf1-db42-4e36-b562-220f096313a2.png)
 
 由图可知，在 JDK1.7 版本中，HashMap底层使用的哈希表就是“数组+链表”来实现，也就是数组存储的每个元素都是一个单链表。
 
 #### 哈希表的存储原理分析
 ##### 哈希表存储原理图
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693388590974-0b67f661-2e67-4bb1-90b9-5df61934347f.png)
+![](assets/1693388590974-0b67f661-2e67-4bb1-90b9-5df61934347f.png)
 
 ##### 哈希函数
 哈希函数（也就是hashCode()方法），通过哈希函数获得key对象的哈希码，实际上就是建立起key值与int值映射关系的函数。这就好比每个人都有一个身份证号，无论是男是女，出生在何处，都可以通过身份证号来分辨，这就是把人的信息映射成一串数字的典型做法。哈希函数和此类似，不过是把任意的Java对象，映射成一个int数值（散列均匀，尽量不重复），供哈希表使用。
@@ -14124,11 +14124,11 @@ key:cc value:333
 
 目前比较通用的解决哈希碰撞的方法，可以使用“数组+链表”组合的方式。当出现哈希碰撞时，在该位置的数据就通过单链表的方式链接起来，这样一来数组中的每个元素维护的就是一个单链表啦。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### HashMap 重点方法分析
 ##### 属性分析
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759760393653-14c90b21-7adc-4b57-a4ca-ac292d1021b1.png)
+![](assets/1759760393653-14c90b21-7adc-4b57-a4ca-ac292d1021b1.png)
 
 **HashMap 源码中的阈值有什么用：**
 
@@ -14189,7 +14189,7 @@ static final int tableSizeFor(int cap) {
 ##### put 方法分析
 准备工作完成之后，我们继续深入学习HashMap如何存储键值对，核心就是要根据key获得键值对在table数组中的存储位置。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693388803202-53a20d08-3748-4663-a1ac-89981b7e8a88.png)
+![](assets/1693388803202-53a20d08-3748-4663-a1ac-89981b7e8a88.png)
 
 ```java
 final V putVal(int hash, K key, V value, boolean onlyIfAbsent,
@@ -14314,7 +14314,7 @@ final Node<K,V> getNode(Object key) {
 
 到此处，关于HashMap底层put()方法和get()方法的实现就讲解完毕，那么接下来我们来我们对HashMap集合进行总结。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### HashMap集合的总结
 ##### JDK1.7 和JDK1.8的区别
@@ -14324,7 +14324,7 @@ final Node<K,V> getNode(Object key) {
 
 说明：当单链表的个数大于 8 并且table数组的空间长度大于等于64，则单链表就会变为红黑树；删除红黑树的节点时，如果节点个数小于等于6，则红黑树就变为单链表。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693388968360-9ed493a8-6981-4b2e-a3ea-fceae6cfc66c.png)
+![](assets/1693388968360-9ed493a8-6981-4b2e-a3ea-fceae6cfc66c.png)
 
 ##### 为什么<font style="color:#DF2A3F;">头插法</font>升级为<font style="color:#DF2A3F;">尾插法</font>
 头插法存在的问题：多线程并发环境下进行扩容时可能会导致循环依赖，最终导致死循环，CPU 飙升 100%
@@ -14352,7 +14352,7 @@ T1 醒来继续干活，按旧指针拼接
 ##### 为什么树化阈值设置为 8
 **HashMap 的源码中有这样一段注释：**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778251463305-9153e4dc-499a-4510-9c1a-bf6e5b837ddf.png)
+![](assets/1778251463305-9153e4dc-499a-4510-9c1a-bf6e5b837ddf.png)
 
 **以上的注释翻译如下：**
 
@@ -14364,7 +14364,7 @@ HashMap 在设计时，为了避免频繁扩容，将数组中每个桶存储元
 
 在数学当中有一个计算概率的公式，叫做：泊松分布。公式如下：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778251309302-cf31786b-66e9-43cf-973d-f69b8b43434d.png)
+![](assets/1778251309302-cf31786b-66e9-43cf-973d-f69b8b43434d.png)
 
 + P(k)_P_(_k_)：恰好发生 k_k_ 次的概率
 + λ_λ_：平均次数（HashMap 里是 0.5）
@@ -14388,7 +14388,7 @@ HashMap 源码注释里的那串数字，就是把 λ=0.5,k=0,1,2…8_λ_=0.5,_k
 ##### 分析底层table数组空间长度
 通过HashMap集合的无参构造方法来创建集合，则底层table数组的空间长度默认为16。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693389004413-352c7aab-c002-4a10-9a93-93b58cfa741c.png)
+![](assets/1693389004413-352c7aab-c002-4a10-9a93-93b58cfa741c.png)
 
 通过HashMap集合的有参构造方法创建集合，则底层table数组肯定为2的整数次幂，也就是**空间长度为大于实参的最小2的整数次幂**，如下代码所示：
 
@@ -14442,7 +14442,7 @@ public class Test {
 
 思考：当我们创建一个HashMap对象，设置哈希表的容量为15，请问HashMap对象创建成功后，哈希表的实际容量为多少呢？？？**16 * 0.75=12，最多存储 12 个，第 13 个元素的时候就要扩容了。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### LinkedHashMap类详解
 #### LinkedHashMap类概述
@@ -14508,7 +14508,7 @@ Hashtable集合和HashMap集合用法几乎一模一样，它的底层依旧采�
 
 只不过Hashtable类继承于Dictionary类并实现了Map接口，HashMap类只是Map接口的实现类。另外Hashtable的方法添加了 synchronized关键字确保线程同步检查，效率较低。在Hashtable类中，put(K key, V value)方法就增加了synchronized同步标记。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759760959882-78a9148d-9e0c-41a6-bb76-850b433cb7ca.png)
+![](assets/1759760959882-78a9148d-9e0c-41a6-bb76-850b433cb7ca.png)
 
 相比较于HashMap类，Hashtable类中还包含了许多传统的方法，显然这些方法都不属于集合框架，在Hashtable类中常见的传统方法如下所示：
 
@@ -14557,7 +14557,7 @@ public class Test {
 1. HashMap：线程不安全，效率高，允许key或value为null。
 2. Hashtable：线程安全，效率低，不允许key或value为null。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Properties类的详解
 #### Properties类概述
@@ -14612,7 +14612,7 @@ public class Test02 {
 
 二叉树(BinaryTree)由一个结点及两棵互不相交的、分别称作这个根的左子树和右子树的二叉树组成。下图中展现了五种不同基本形态的二叉树。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693532454681-852f74d7-b60c-4775-9129-b25bab68068a.png)
+![](assets/1693532454681-852f74d7-b60c-4775-9129-b25bab68068a.png)
 
 (a) 为空树。
 
@@ -14631,11 +14631,11 @@ public class Test02 {
 
 比如：我们要将数据【14, 12, 23, 4, 16, 13, 8, 3】存储到排序二叉树中，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693532528685-cf78a85c-c2c8-41f8-9620-ee466e45ef50.png)
+![](assets/1693532528685-cf78a85c-c2c8-41f8-9620-ee466e45ef50.png)
 
 排序二叉树本身实现了排序功能，可以快速检索。但如果插入的节点集本身就是有序的，要么是由小到大排列，要么是由大到小排列，那么最后得到的排序二叉树将变成普通的链表，其检索效率就会很差。 比如上面的数据【14, 12, 23, 4, 16, 13, 8, 3】，我们先进行排序变成：【3, 4, 8, 12, 13, 14, 16, 23】，然后存储到排序二叉树中，显然就变成了链表，如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693532570072-2a0d0774-2652-4933-bb25-29fcbc4390e6.png)
+![](assets/1693532570072-2a0d0774-2652-4933-bb25-29fcbc4390e6.png)
 
 #### 平衡二叉树(AVL)
 为了避免出现上述一边倒的存储，科学家提出了“平衡二叉树”。
@@ -14646,11 +14646,11 @@ public class Test02 {
 
 比如，我们存储排好序的数据【3, 4, 8, 12, 13, 14, 16, 23】，增加节点如果出现不平衡，则通过节点的左旋或右旋，重新平衡树结构，最终平衡二叉树如下图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693532633501-2a74ad7d-2b84-458b-a499-a9b178aac0b8.png)
+![](assets/1693532633501-2a74ad7d-2b84-458b-a499-a9b178aac0b8.png)
 
 平衡二叉树追求绝对平衡，实现起来比较麻烦，每次插入新节点需要做的旋转操作次数不能预知（可视化数据结构网站：[https://www.cs.usfca.edu/~galles/visualization/Algorithms.html](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)）。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 红黑二叉树
 红黑二叉树(简称：红黑树)，它首先是一棵二叉树，同时也是一棵自平衡的排序二叉树。
@@ -14667,17 +14667,17 @@ public class Test02 {
 
 红黑树是一个更高效的检索二叉树，JDK 提供的集合类 TreeMap、TreeSet 本身就是一个红黑树的实现。红黑树的基本操作：插入、删除、左旋、右旋、着色。每插入或者删除一个节点，可能会导致树不在符合红黑树的特征，需要进行修复，进行 “左旋、右旋、着色” 操作，使树继续保持红黑树的特性。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693532768696-e01e3839-efb1-4bba-a6b4-a8ba262bbab6.png)
+![](assets/1693532768696-e01e3839-efb1-4bba-a6b4-a8ba262bbab6.png)
 
 ### TreeMap类使用详解
 #### TreeMap源码分析
 TreeMap类属于Map接口的实现类，在TreeMap集合中没有新增方法，并且TreeMap存储的键值对还能实现排序操作。TreeMap底层通过红黑二叉树（Red-Black tree）来实现的。我们打开TreeMap的源码，发现里面有一行核心代码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761010654-dae4aa9a-e89b-4a48-949f-e5bc2e8844fd.png)
+![](assets/1759761010654-dae4aa9a-e89b-4a48-949f-e5bc2e8844fd.png)
 
 在源码中，私有属性root用来存储整个红黑树的根节点，我们再继续跟踪Entry（它是TreeMap的内部类）的代码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761021240-b373b460-61c1-4d4c-a347-0803873b1725.png)
+![](assets/1759761021240-b373b460-61c1-4d4c-a347-0803873b1725.png)
 
 可以看到Entry节点类中包含了键（key）、值（key）、左节点（left）、右节点（right）、父节点（parent）以及节点颜色（color），从这里我们就能确定TreeMap底层采用的就是红黑二叉树来实现。
 
@@ -14700,12 +14700,12 @@ TreeMap中支持两种排序方式：
 1. HashMap是key无序的(key可以为null)，而TreeMap是key有序的（key不能为null）。
 2. HashMap效率略高于TreeMap，在需要排序的Map时才选用TreeMap。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 自然排序：Comparable接口
 要想实现TreeMap的自然排序，我们就采用无参构造方法来实例化TreeMap对象，TreeMap的无参构造方法如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761047857-f2847834-446f-47b2-a407-75eb2f495dbf.png)
+![](assets/1759761047857-f2847834-446f-47b2-a407-75eb2f495dbf.png)
 
 ##### Java提供的类
 对于key为Java提供的类（例如：String类、Integer类等），这些类都默认实现了Comparable接口，并且还实现了compareTo()方法，而且默认按照“升序”来进行排序。
@@ -14824,14 +14824,14 @@ key:Student{name='王五', age=27}, value:上海
 
 key:Student{name='张三', age=38}, value:天津
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ####  定制排序：Comparator接口
 当我们采用自然排序的Comparable接口来实现排序时，那么每个类只能定义一种排序规则，如果某个类想实现多种排序规则，那么就必须采用定制排序的java.util.Comparator接口来实现。
 
 要想实现TreeMap的定制排序，我们还需在构造方法中传入一个Comparator比较器，那么TreeMap就会按照定制排序的规则进行排序，使用TreeMap的构造方法如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761073866-92cf5962-097e-47b0-85b3-62211cded2d7.png)
+![](assets/1759761073866-92cf5962-097e-47b0-85b3-62211cded2d7.png)
 
 因此，我们使用外部比较器实现TreeMap集合的排序时，必须创建一个Comparator接口的实现类对象，在实现类中重写“int compare(T o1, T o2)”方法，并且还需在重写的方法中封装好排序规则。
 
@@ -15026,7 +15026,7 @@ key:Student{name='王五', age=27, score=100.0}, value:北京
 1. TreeMap集合内部要做排序，要么使用Comparable接口，要么使用Comparator接口。
 2. TreeMap的key不能为null，否则抛出java.lang.NullPointerException异常。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Set接口
 ### Set接口介绍
@@ -15042,11 +15042,11 @@ HashSet类属于Set接口的实现类，在HashSet类中没有新增任何方法
 
 在HashSet集合中，底层实际上采用HashMap来存储元素的，因此HashSet集合本质就是一个简化版的HashMap。我们打开HashSet集合的源码，发现里面有一行核心代码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761110832-ad3836c0-db0a-4b33-a00e-23307e45b8ad.png)
+![](assets/1759761110832-ad3836c0-db0a-4b33-a00e-23307e45b8ad.png)
 
 我们发现里面有个map属性，这就是HashSet的核心秘密。我们再看add()方法，发现增加一个元素说白了就是在map中增加一个键值对，键对象就是要添加的元素，值对象是名为PRESENT的Object对象。说白了，就是“往set中加入元素，本质就是把这个元素作为key加入到了内部的HashMap集合中”。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761132715-423547de-0b51-4f38-93c8-78b8ba003a55.png)
+![](assets/1759761132715-423547de-0b51-4f38-93c8-78b8ba003a55.png)
 
 由于HashMap集合中的key不能重复的，并且HashMap存储的键值对都是无序的，因此HashSet存储的元素也不能重复，并且HashSet存储的元素还属于无序。
 
@@ -15155,7 +15155,7 @@ Student{name='王五', age=33}
 
 Student{name='李四', age=28}
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### HashSet的面试题
 分析以下代码，然后思考输出的结果是什么，并且分析为什么会有这样的结果。
@@ -15205,7 +15205,7 @@ public class Test01 {
 
 总结：使用HashSet存储元素时，切记不要修改元素的实例变量值，使用HashMap存储键值对时，也切记不要修改key的实例变量值，否则就会产生一些额外问题。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### LinkedHashSet类详解
 HashSet集合存储的元素不能重复，但是HashSet集合存储的元素却属于“无序”的，想要实现存储元素的“有序”，并且还要求存储的元素不能重复，那么该如何实现呢？
@@ -15280,7 +15280,7 @@ Student{name='李四', age=28}
 
 Student{name='王五', age=33}
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### TreeSet类详解
 #### TreeSet源码分析
@@ -15288,22 +15288,22 @@ TreeSet类属于Set接口的实现类，在TreeSet类中没有新增任何方法
 
 在TreeSet集合中，底层实际上采用TreeMap来存储元素的，因此TreeSet集合本质就是一个简化版的TreeMap。我们打开TreeSet集合的源码，发现里面有一行核心代码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1759761177068-682e58a0-64ad-4b0e-a43d-f646a29560e4.png)
+![](assets/1759761177068-682e58a0-64ad-4b0e-a43d-f646a29560e4.png)
 
 NavigableMap是一个接口，而TreeMap类就属于NavigableMap接口的实现类，因此给m赋值的就可以为TreeMap集合，此处使用了“多态”来实现，分析构造方法源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693533771223-9a35c966-3baa-453b-929d-3d50f9ef4e73.png)
+![](assets/1693533771223-9a35c966-3baa-453b-929d-3d50f9ef4e73.png)
 
 接下来，我们再分析add()方法的源码，发现增加一个元素就是在TreeMap集合中增加一个键值对，键对象就是添加元素，值对象是名为PRESENT的Object对象。说白了，就是“往TreeSet集合中添加元素，本质就是把这个元素作为key加入到了内部的TreeMap集合中”。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693533800862-51e227a5-0784-4f12-96a8-264ffb0b2af1.png)
+![](assets/1693533800862-51e227a5-0784-4f12-96a8-264ffb0b2af1.png)
 
 因为TreeMap集合存储的key不能重复，并且TreeMap还能根据key实现排序操作，因此TreeSet集合存储的元素也不能重复，并且存储的元素还可以实现排序（升序|降序）操作。
 
 #### 自然排序：Comparable接口
 要想实现TreeSet集合的自然排序，我们就采用无参构造方法来实例化TreeSet集合，TreeSet类的无参构造方法如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693533845211-5b1516f9-9e75-462b-9ec0-3d51b71f60e5.png)
+![](assets/1693533845211-5b1516f9-9e75-462b-9ec0-3d51b71f60e5.png)
 
 ##### Java提供的类
 对于添加的元素为Java提供的类（例如：String类、Integer类等），因为Java提供的类默认已经实现Comparerable接口，并且还实现了compareTo()方法，而且默认按照“升序”来进行排序。
@@ -15417,12 +15417,12 @@ Student{name='王五', age=27}
 
 Student{name='张三', age=38}
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 定制排序：Comparator接口
 要想实现TreeSet集合的定制排序，我们就采用有参构造方法来实例化TreeSet集合，TreeSet类的有参构造方法如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693533963843-c75d4014-be47-43bd-97bd-ab081668c1e5.png)
+![](assets/1693533963843-c75d4014-be47-43bd-97bd-ab081668c1e5.png)
 
 因为Java提供的类默认实现Comparerable接口，并且还实现了compareTo()方法，而且默认按照“升序”来进行排序。如果使用TreeSet集合来存储Java提供类的对象，并且还需要实现降序排序，那么就必须使用TreeSet集合的定制排序来实现。
 
@@ -15549,7 +15549,7 @@ Student{name='张三', age=23}
 1. 由于底层为二叉树实现，需要对存储元素做排序操作。要么实现Comparable接口（自然排序），要么实现Comparator接口（定制排序）。
 2. TreeSet中不能放入null元素，否则抛出java.lang.NullPointerException异常。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Collections工具类
 java.util.Collections 类提供了对Set、List进行排序、填充、查找元素的辅助方法。
@@ -15557,7 +15557,7 @@ java.util.Collections 类提供了对Set、List进行排序、填充、查找元
 ### 排序（sort）
 在Collections工具类中，专门提供了sort()方法用来对List类型集合执行排序，它有两种参数形式：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693534523837-e5621bb5-8d6e-4d8f-8618-63baa5488dda.png)
+![](assets/1693534523837-e5621bb5-8d6e-4d8f-8618-63baa5488dda.png)
 
 也就意味着，我们可以使用内部比较器执行List集合中的元素执行排序，也可以使用外部比较器实现List集合中的元素执行排序。
 
@@ -15687,7 +15687,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 混排（shuffle）
 混排算法所做的正好与sort相反，它打乱在一个List中可能有的任何排列的踪迹，也是就是对元素进行随机排列。这个算法在实现一个碰运气的游戏中是非常有用的。例如，它可被用来混排代表一副牌的Card对象的一个List。
@@ -15766,7 +15766,7 @@ public class Test04 {
 
 # 第10章 Java I/O
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## File类
 ### File类的概述
@@ -15835,7 +15835,7 @@ System.out.println(file.lastModified());
 System.out.println(file.length());
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### File类判断功能
 | **方法名** | **描述** |
@@ -15913,7 +15913,7 @@ public static void main(String[] args) throws IOException {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### File类的过滤器
 通过listFiles()方法，我们可以获取到一个目录下的所有文件和文件夹，但能不能对其进行过滤呢？比如我们只想要一个目录下的指定扩展名的文件，或者包含某些关键字的文件夹呢？
@@ -15922,7 +15922,7 @@ public static void main(String[] args) throws IOException {
 
 查阅File类的API，在查阅时发现File类中重载的listFiles方法，并且接受指定的过滤器。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760108148952-0b1b0c45-7078-4271-9d29-38612fc09e70.png)
+![](assets/1760108148952-0b1b0c45-7078-4271-9d29-38612fc09e70.png)
 
 【示例】获取扩展名为.java所有文件
 
@@ -15957,7 +15957,7 @@ public class FileDemo {
 
 在查阅API时，我们发现，在listFiles(FileFilter filter) 也可以接受一个 FileFilter过滤器，它和我们讲的FilenameFilter有啥区别呢？
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760108169465-afd3fb07-2e64-4fe4-8ffb-52931785e785.png)
+![](assets/1760108169465-afd3fb07-2e64-4fe4-8ffb-52931785e785.png)
 
 FilenameFilter过滤器中的accept方法接受两个参数，一个当前目录的File对象，另一个是遍历出来的文件或文件夹对象的名称。
 
@@ -15996,7 +15996,7 @@ public class FileDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 遍历目录和文件案例
 【示例】File类的综合应用，遍历盘符下所有的目录和文件
@@ -16061,7 +16061,7 @@ public class FileDemo {
     1. 例如：我们注册一个网站会员，实际就是后台程序向数据库中写入一条记录。
 3. 将数据写到某些硬件系统中。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 数据源和流的理解
 + **数据源**：就是**水的来源或目的地**（比如水塔、水库、你家水龙头）。
@@ -16105,7 +16105,7 @@ public class FileDemo {
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### IO流的分类和体系
 #### 按流的方向分类
@@ -16133,7 +16133,7 @@ public class FileDemo {
 #### IO流的体系
 Java为我们提供了多种多样的IO流，我们可以根据不同的功能及性能要求挑选合适的IO流，以下操作IO流的类都在java.io包中。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693558331200-3e2b1c9a-e500-4639-9764-abf7df6d5b6e.png)
+![](assets/1693558331200-3e2b1c9a-e500-4639-9764-abf7df6d5b6e.png)
 
 注：这里只列出常用的类，详情可以参考API文档。
 
@@ -16143,9 +16143,9 @@ OutputStream是一个抽象类，属于所有“字节输出流”的老祖宗�
 
 OutputStream类中常见的方法：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109393263-aea70c96-b40d-4390-9bc2-dc1e9e922bfc.png)
+![](assets/1760109393263-aea70c96-b40d-4390-9bc2-dc1e9e922bfc.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### FileOutputStream类
 FileOutputStream类属于OutputStream抽象类的实现类，在FileOutputStream类中没有新增别的方法，因此该类使用的都是OutputStream抽象类的方法。 
@@ -16153,7 +16153,7 @@ FileOutputStream类属于OutputStream抽象类的实现类，在FileOutputStream
 FileOutputStream类通过“字节”的方式写出数据到文件，适合所有类型文件（图片文件、视频文件、音乐文件和文本文件等等）。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109454291-2514317f-26b0-4f35-be9b-5c2e2997c4ea.png)
+![](assets/1760109454291-2514317f-26b0-4f35-be9b-5c2e2997c4ea.png)
 
 #### 写入数据到文件中
 【示例】将数据写到文件中
@@ -16191,7 +16191,7 @@ public class FileOutputStreamDemo {
 
 继续查阅 FileOutputStream 的 API。发现在 FileOutputStream类的构造函数中，可以接受一个boolean类型的值，如果参数值为true，就会在文件末位继续添加。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109495575-896fc1ef-f688-4420-a15c-e060af3f46c1.png)
+![](assets/1760109495575-896fc1ef-f688-4420-a15c-e060af3f46c1.png)
 
 【示例】将数据续写到文件中
 
@@ -16228,13 +16228,13 @@ InputSteam类是一个抽象类，是所有“字节输入流”的老祖宗。�
 
 InputStream类中常见的方法：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109541097-f1e4d5ef-3c68-4a6f-976b-75d058bf71ae.png)
+![](assets/1760109541097-f1e4d5ef-3c68-4a6f-976b-75d058bf71ae.png)
 
 int read(): 读取一个字节的数据。读取成功，则返回读取的字节对应的正整数；读取失败，则返回-1。 
 
 int read(byte[]): 读取一定量的字节数，并存储到字节数组中。读取成功，则返回读取的字节的个数；读取失败，则返回-1。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### FileInputStream类
 FileInputStream类属于InputStream抽象类的实现类，并且在FileInputStream类中没有新增任何方法，因此该类使用的都是InputStream抽象类的方法。 
@@ -16242,7 +16242,7 @@ FileInputStream类属于InputStream抽象类的实现类，并且在FileInputStr
 我们可以通过FileInputStream类来“读取”文件中的数据，每次读取的数据单位为“字节”，适合读取所有类型文件（图片文件、视频文件、文本文件等）。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109588804-a3406976-ae12-4b2f-b5bf-3290122e1572.png)
+![](assets/1760109588804-a3406976-ae12-4b2f-b5bf-3290122e1572.png)
 
 #### 读取数据 read() 方法
 在读取文件中的数据时，调用read()方法每次读一个字节，从而实现从文件中读取数据。
@@ -16280,7 +16280,7 @@ public class FileInputStreamDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 读取数据 read(byte[])方法
 在读取文件中的数据时，调用read()方法，每次只能读取一个字节太麻烦，于是我们可以定义数组作为临时的存储容器，这时可以调用重载的read(char[] ch)方法，每次就可以读取多个字节。
@@ -16362,7 +16362,7 @@ public class FileInputStreamDemo {
 2. GBK：英文字符占用一个字节，中文字符占用两个字节。
 3. Unicode：每个字符都是占用两个字节！
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 字节流文件拷贝案例
 思路：读取一个已有的数据，并将这些读到的数据写入到另一个文件中。
@@ -16409,7 +16409,7 @@ public class FileCopyDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 字符流
 字节流可以操作任意格式的文件（例如：视频文件、音乐文件、文本文件和*.doc文件等），但是字符流只能操作文本文件（例如：以.txt和.java后缀的文件）。
@@ -16419,13 +16419,13 @@ Writer类是一个抽象类，是所有“字符输出流”的老祖宗。操�
 
 Writer类中常见的方法：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109641123-df5388ec-fa18-4247-9e2d-61b9f7783725.png)
+![](assets/1760109641123-df5388ec-fa18-4247-9e2d-61b9f7783725.png)
 
 ### FileWriter类
 FileWriter类属于Writer抽象类的实现类，在FileWriter类中没有新增任何方法。FileWriter类用于向文件文件中存储数据，并且每次操作的数据单元为“字符”，属于向文本文件存储字符数据的便捷类。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109741806-2646d205-9a46-4352-a0c7-3090ab1eac26.png)
+![](assets/1760109741806-2646d205-9a46-4352-a0c7-3090ab1eac26.png)
 
 #### 写入数据到文件中
 【示例】将数据写到文件中
@@ -16457,7 +16457,7 @@ public class FileWriteDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 给文件中续写
 发现在FileWriter的构造方法中，可以接受一个boolean类型的参数值，如果参数值为true，就会在文件末位继续添加内容。
@@ -16496,13 +16496,13 @@ Reader类是一个抽象类，是所有“字符输入流”的老祖宗。操�
 
 Reader类中常见的方法：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109788133-9308544b-3906-4779-8d90-37d51095cf6f.png)
+![](assets/1760109788133-9308544b-3906-4779-8d90-37d51095cf6f.png)
 
 read(): 读取单个字符并返回。读取成功，则返回字符对应的正整数，读取失败，则返回-1。
 
 read(char[]): 将数据读取到字符数组中。读取成功，则返回读取字符的个数，读取失败，则返回-1。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### FileReader类
 FileReader类属于Reader抽象类的实现类，在FileReader类中没有新增任何方法。
@@ -16510,7 +16510,7 @@ FileReader类属于Reader抽象类的实现类，在FileReader类中没有新增
 FileWriter类用于向文件中读取数据，并且每次操作的数据单元为“字符”，属于向文本文件读取字符数据的便捷类。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109844507-3e3c5920-840b-4388-9c23-a0be8a8e2508.png)
+![](assets/1760109844507-3e3c5920-840b-4388-9c23-a0be8a8e2508.png)
 
 #### 读取数据 read() 方法
 在读取文本文件中的数据时，如果调用read()方法每次只能读取一个字符。
@@ -16548,7 +16548,7 @@ public class FileReaderDemo01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 读取数据 read(char[])方法
 在读取文件中的数据时，调用read()方法，每次只能读取一个字符，太麻烦了，于是我们可以定义数组作为临时的存储容器，这时可以调用重载的read(char[])方法，一次可以读取多个字符。
@@ -16633,7 +16633,7 @@ public class FileWriterReaderDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 缓冲流
 ### 缓冲流概述
@@ -16675,7 +16675,7 @@ BufferedOutputStream类属于OutputStream抽象类的实现类，在BufferedOutp
 
 + **构造方法**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109893430-94010da3-8021-4246-af90-dbcaaf4c3a2d.png)
+![](assets/1760109893430-94010da3-8021-4246-af90-dbcaaf4c3a2d.png)
 
 我们可以指定缓冲区的大小，一般情况下，使用默认的缓冲区大小就足够了（默认为8192）。
 
@@ -16711,14 +16711,14 @@ public class BufferedByteDemo {
 
 关闭缓冲流的时候，我们查看API底层源码，可知关闭缓冲流的方法时，方法内部已经实现对字节流的关闭，所以此处我们只需要关闭缓冲流即可。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### BufferedInputStream类
 BufferedInputStream类属于InputStream抽象类的实现类，在BufferedInputStream类中没有新增任何方法。
 
 + **构造方法**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109922093-f52b126d-555a-41c7-8fb9-5b744bfbe829.png)
+![](assets/1760109922093-f52b126d-555a-41c7-8fb9-5b744bfbe829.png)
 
 我们可以指定缓冲区的大小，一般情况下，使用默认的缓冲区大小就足够了（默认为8192）。
 
@@ -16807,7 +16807,7 @@ public class BufferedByteDemo {
 
 思考：使用【节点流】和【缓冲流】分别实现文件的拷贝操作，感受两者的工作效率差别。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 字符缓冲流
 为了提高字符流读写的效率，引入了缓冲机制，进行字符批量的读写，提高了单个字符读写的效率。BufferedReader类用于加快读取字符的速度，BufferedWriter类用于加快写入的速度。
@@ -16822,7 +16822,7 @@ BufferedWriter类属于Writer抽象类的实现类，在BufferedWriter类中新�
 
 + 构造方法
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109947220-1784f91b-3461-4994-b16a-9821230de221.png)
+![](assets/1760109947220-1784f91b-3461-4994-b16a-9821230de221.png)
 
 我们可以指定缓冲区的大小，一般情况下，使用默认的缓冲区大小就足够了（默认为8192）。
 
@@ -16830,7 +16830,7 @@ BufferedWriter类属于Writer抽象类的实现类，在BufferedWriter类中新�
 
 在BufferedWriter类中，不但继承了Writer抽象类的方法，还新增了newLine()方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760109957482-5a420e4d-a2d5-44f8-9e19-f1ccefa3aec8.png)
+![](assets/1760109957482-5a420e4d-a2d5-44f8-9e19-f1ccefa3aec8.png)
 
 newLine()方法会根据当前的操作系统，写入一个换行符。
 
@@ -16877,20 +16877,20 @@ public class BufferedCharDemo {
 
 + **<font style="color:#DF2A3F;">flush()和 close()的区别</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760110009474-957d3646-a819-4222-be31-ea2f55e35286.png)
+![](assets/1760110009474-957d3646-a819-4222-be31-ea2f55e35286.png)
 
 flush(): 将流中的缓冲区缓冲的数据刷新到目的地中，刷新后，流还可以继续使用。
 
 close(): 关闭资源，但在关闭前会将缓冲区中的数据先刷新到目的地，否则丢失数据，然后在关闭流。关闭流之后就不能再做write()或flush()操作，否则抛出异常。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### BufferedReader类
 BufferedReader类属于Reader抽象类的实现类，在BufferedReader类中新增了readLine()方法。
 
 + 构造方法
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760110045226-bf718506-582e-40a4-a579-d69d4bcdbf01.png)
+![](assets/1760110045226-bf718506-582e-40a4-a579-d69d4bcdbf01.png)
 
 我们可以指定缓冲区的大小，一般情况下，使用默认的缓冲区大小就足够了（默认为8192）。
 
@@ -16898,7 +16898,7 @@ BufferedReader类属于Reader抽象类的实现类，在BufferedReader类中新�
 
 在BufferedReader类中，不但继承了Reader类的方法，还新增了readLine()方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760110060043-73251c07-b638-4106-8567-72503f0297cf.png)
+![](assets/1760110060043-73251c07-b638-4106-8567-72503f0297cf.png)
 
 读取成功，则返回读取的一行文本内容；读取失败，则返回null。 
 
@@ -16980,7 +16980,7 @@ public class BufferedCharDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 转换流
 **InputStreamReader（专门负责解码）：将字节输入流（InputStream）按指定字符集<font style="color:#DF2A3F;">解码</font>为字符输入流（Reader）。**
@@ -17027,7 +17027,7 @@ public class Test {
 
 输出的结果为：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693560183526-b8a325b4-3652-4891-9da8-c87585525009.png)
+![](assets/1693560183526-b8a325b4-3652-4891-9da8-c87585525009.png)
 
 当IDEA默认采用UTF-8编码的情况下，那么如何读取GBK编码的文件呢？答案：转换流。
 
@@ -17056,13 +17056,13 @@ public class Test {
 | **1. 指定编码** | 避免乱码，处理非默认编码的文件/数据 |
 | **2. 转换类型** | 把字节流（InputStream/OutputStream）“升级”成字符流（Reader/Writer） |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### InputStreamReader类
 InputStreamReader属于Reader抽象类的实现类，将输入的字节流变为字符流，即：将一个字节流的输入对象变为字符流的输入对象。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760161228449-7d13fff9-e1eb-45c0-9ba0-ec18cd053a6c.png)
+![](assets/1760161228449-7d13fff9-e1eb-45c0-9ba0-ec18cd053a6c.png)
 
 指定字符集可以为UTF-8，GBK、Unicode等，我们根据实际情况选用合适的字符集。
 
@@ -17105,7 +17105,7 @@ public class InputStreamReaderDemo {
 OutputStreamWriter类属于Writer抽象类的实现类，将输出的字符流变为字节流，即：将一个字符流的输出对象变为字节流的输出对象。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760161257612-3a7b8457-f475-46ba-a28c-0a434c1587de.png)
+![](assets/1760161257612-3a7b8457-f475-46ba-a28c-0a434c1587de.png)
 
 指定字符集可以为UTF-8，GBK、Unicode等，我们根据实际情况选用合适的字符集。
 
@@ -17139,14 +17139,14 @@ public class OutputStreamWriterDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### FileReader和FileWriter
 FileReader并不是Reader的直接子类，而是InputStreamReader的子类；FileWriter也并不直接是Writer的子类，而是OutputStreamWriter的子类。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760161286242-63190263-2965-430b-87a8-e06cbd8d07c5.png)
+![](assets/1760161286242-63190263-2965-430b-87a8-e06cbd8d07c5.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760161315085-6923c249-da40-4204-a3fd-ff5037441657.png)
+![](assets/1760161315085-6923c249-da40-4204-a3fd-ff5037441657.png)
 
 FileWriter和FileReader作为子类，**<font style="color:#DF2A3F;">底层本质上和转换流功能完全相同，这两个类写的代码更简洁</font>**。
 
@@ -17259,11 +17259,11 @@ bw.flush(); // 不能忘！
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### PrintStream
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760274406697-df972c79-aed4-4376-a811-e53767a61797.png)
+![](assets/1760274406697-df972c79-aed4-4376-a811-e53767a61797.png)
 
 1. **可以看到 PrintStream 是一个处理流。对节点流 OutputStream 进行了功能增强。**
 2. **只有调用构造方法时，传递了 autoFlush 为 true 时，<font style="color:#DF2A3F;">每遇到换行符时就会自动刷新一次</font>。（没有遇到换行符就不会自动刷新）**
@@ -17325,11 +17325,11 @@ public class DateFormatExample {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760270948648-257c21f2-f59a-45b4-861d-6bc96fc7d4b9.png)
+![](assets/1760270948648-257c21f2-f59a-45b4-861d-6bc96fc7d4b9.png)
 
 优点：比自己拼接字符串方便很多。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### PrintWriter
 **PrintStream** ：底层以字节方式输出。JDK1.0 出现的。
@@ -17341,7 +17341,7 @@ PrintWriter 作为字符流，能原生、可靠地处理字符编码，是输�
 现代开发中只有 System.out 使用的是 PrintStream，剩下的打印输出都应该使用 PrintWriter。
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760275404550-a54dd91c-5680-486c-904b-35deea40d7b1.png)
+![](assets/1760275404550-a54dd91c-5680-486c-904b-35deea40d7b1.png)
 
 很明显可以看到 PrintWriter 的构造方法支持 Writer 参数。这一点是和 PrintStream 的一个区别。
 
@@ -17376,7 +17376,7 @@ public class PrintWriterDemo {
     - 当格式化输出时会自动刷新
     - `printf()`和 `format()`方法都是格式化输出，它俩完全一样，因为 `printf()`底层就是 `format()`实现的。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 标准输入&输出流
 Java通过系统类System实现标准输入&输出的功能，定义了3个流变量：in、out和err。这三个流在Java中都定义为静态变量，可以直接通过System类进行调用。System.in表示标准输入，通常指从键盘输入数据；System.out表示标准输出，通常指把数据输出到控制台或者屏幕；System.err表示标准错误输出，通常指把数据输出到控制台或者屏幕。
@@ -17407,7 +17407,7 @@ public class InputStreamDemo {
 
 运行程序，从键盘输入3个字符abc并按Enter键，保存在缓冲区中字符的元素个数count为4，换行占用最后一个字节'\n'，下图为控制台的效果。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693561791487-3753130e-36c7-48ae-8487-46dba92b99e0.png)
+![](assets/1693561791487-3753130e-36c7-48ae-8487-46dba92b99e0.png)
 
 在System类中，还提供了setIn(InputStream in)的静态方法，通过该方法就可以修改输出流，也就是能够修改标准输入流读取的数据源。
 
@@ -17509,7 +17509,7 @@ public class PrintStreamTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据流
 ### 数据流概述
@@ -17603,7 +17603,7 @@ public class DataStreamTest {
 
 要用DataInputStream读取文件，这个文件必须是由DataOutputStream 写出的，否则会抛出EOFException异常，因为DataOutputStream 在写出的时候会做一些特殊标记，只有DataInputStream 才能成功的读取。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 对象流
 ### 对象流概述
@@ -17688,7 +17688,7 @@ public class ObjectStreanTest {
 
 对象流不仅可以读写对象，还可以读写基本数据类型。使用对象流读写对象时，该对象必须实现序列化与反序列化，系统提供的类（如Date和String等）已经实现了序列化接口，但是自定义类必须手动实现序列化接口。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 序列化和反序列化
 #### 序列化和反序列化概述
@@ -17877,7 +17877,7 @@ public class ObjectInputStreamTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 序列化接口（Serializable ）
 当一个对象要能被序列化，这个对象所属的类必须实现java.io.Serializable 接口，否则会抛出java.io.NotSerializableException 异常。
@@ -17892,7 +17892,7 @@ java.io.InvalidClassException: com.jkweilai.object.Student; local class incompat
 
 **IDEA 工具可以帮助我们自动生成序列化版本号，如下：**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778546172186-6daf33f6-052c-428c-9ee5-7021d11e5691.png)
+![](assets/1778546172186-6daf33f6-052c-428c-9ee5-7021d11e5691.png)
 
 **然后当你让一个类实现 **`**Serializable**`**接口时，IDEA 会自动报警告，然后在警告位置 **`**alt + enter**`**自动生成。**
 
@@ -17927,7 +17927,7 @@ class Student implements Serializable {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 瞬态关键字 （transient）
 当一个类的对象需要被序列化时，某些成员变量无需被序列化，这时不需要序列化的成员变量可以使用关键字transient修饰。只要被transient修饰的成员变量，序列化时这个成员变量就不会被序列化。
@@ -18015,7 +18015,7 @@ public class ArrayStreamTest {
 
 通过查看底层源码，我们发现ByteArrayOutputStream类的close()方法并没有实现，所以调用close()方法关闭此流后仍可被使用。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693562598341-c170ea8b-30c7-4f0b-b294-72f34aceb1cc.png)
+![](assets/1693562598341-c170ea8b-30c7-4f0b-b294-72f34aceb1cc.png)
 
 ### ByteArrayInputStream类
 字节数组输入流就是把一个字节数组 byte[] 包装了一下，使其具有流的属性，可顺序读下去，还可标记跳回来继续读，主要的作用就是用来读取字节数组中的数据。
@@ -18056,13 +18056,13 @@ public class ArrayStreamTest {
 
 与字节数组流相比，字符数组流反而用得更少，因为StringBuilder和StringBuffer也能方便的用来存储动态长度的字符，而且大家更熟悉这些类。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 操作配置文件
 ### 配置文件的概述 
 在Java语言中，配置文件为“.properties”后缀的文件，格式为文本文件，文件的内容的格式是“键=值”的格式，文本注释信息可以用"#"来注释。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760110397330-65631d49-b213-4b34-bead-8cdfaa5c441b.png)
+![](assets/1760110397330-65631d49-b213-4b34-bead-8cdfaa5c441b.png)
 
 开发中，我们可以将一些动态数据存入到配置文件中，然后在程序执行的过程中来读取配置文件中的数据，让用户能够脱离程序本身去修改程序相关的一些数据，例如：在反射章节，我们就会读取配置文件中的数据来创建对象。
 
@@ -18162,7 +18162,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 复制文件夹案例
 复制文件夹中的所有文件和文件夹到另一个文件夹中，因为这个需求相对比较简单，这里就直接上代码了。
@@ -18265,7 +18265,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 装饰器模式
 ### 问题场景：给动物添加能力
@@ -18372,7 +18372,7 @@ public abstract class AbilityDecorator implements Animal {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 第四步：实现具体能力装饰器
 **装饰器1：飞行能力**
@@ -18477,7 +18477,7 @@ public class AnimalDemo {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 装饰器模式核心要点
 #### 四大角色
@@ -18542,7 +18542,7 @@ dragonCat.breatheFire();
 + 功能可以任意组合时
 + 使用继承会导致类爆炸时
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 一个疑惑
 功能扩展直接实现接口不就行了吗？比如有 3 个功能扩展，那定义 3 个接口就可以了吧？想有 2 个功能实现 2 个接口，想有 3 个功能实现 3 个接口不就行了吗？为什么还弄一个装饰器模式？
@@ -18655,7 +18655,7 @@ cat = new PoisonedStatus(cat);       // 中毒状态
 
 # 第11章 多线程
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 多线程概述
 ### 多线程介绍
@@ -18675,7 +18675,7 @@ cat = new PoisonedStatus(cat);       // 中毒状态
 
 现代的操作系统都可以同时启动多个进程。比如：我们在用酷狗听音乐、也可以使用idea写代码、也可以同时用浏览器查看网页。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760330844745-9ad9b4dc-f6d7-40c2-ad62-b3959c4909ed.png)
+![](assets/1760330844745-9ad9b4dc-f6d7-40c2-ad62-b3959c4909ed.png)
 
 **<font style="color:#DF2A3F;">多进程有什么意义呢？</font>**
 
@@ -18683,14 +18683,14 @@ cat = new PoisonedStatus(cat);       // 中毒状态
 
 也就是说现在的计算机都是支持多进程的，可以在一个时间段内执行多个任务。这样提高了 CPU的使用率。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 线程
 线程是进程中的一个执行单元，负责当前进程中任务的执行，一个进程中至少有一个线程，也可以有多个线程。
 
 什么是多线程呢？即就是一个程序中有多个线程在同时执行，我们也称之为多线程程序。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655077503-62d4e8ed-5d7d-43c3-b054-f646d73dbda8.png)
+![](assets/1693655077503-62d4e8ed-5d7d-43c3-b054-f646d73dbda8.png)
 
 紧接着，我们来区别单线程程序与多线程程序的不同：
 
@@ -18702,7 +18702,7 @@ cat = new PoisonedStatus(cat);       // 中毒状态
 
 JVM虚拟机的启动是单线程的还是多线程的? 答案是多线程。原因是垃圾回收线程也要先启动，否则很容易会出现内存溢出。现在的垃圾回收线程加上前面的主线程，最低启动了两个线程，所以，JVM的启动其实是多线程的。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 线程调度策略
 如果多个线程被分配到一个CPU内核中执行，则同一时刻只能允许有一个线程能获得CPU的执行权，那么进程中的多个线程就会抢夺CPU的执行权，这就是涉及到线程调度策略。
@@ -18719,18 +18719,18 @@ JVM虚拟机的启动是单线程的还是多线程的? 答案是多线程。原
 #### 并发(concurrency)
 使用单核CPU的时候，同一时刻只能有一条指令执行，但多个指令被快速的轮换执行，使得在宏观上具有多个指令同时执行的效果，但在微观上并不是同时执行的，只是把时间分成若干段，使多个指令快速交替的执行。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655229307-c9703905-1c37-489c-ba9f-437a33d61aba.png)
+![](assets/1693655229307-c9703905-1c37-489c-ba9f-437a33d61aba.png)
 
 如上图所示，假设只有一个CPU资源，线程之间要竞争得到执行机会。图中的第一个阶段，在A执行的过程中，B、C不会执行，因为这段时间内这个CPU资源被A竞争到了，同理，第二阶段只有B在执行，第三阶段只有C在执行。其实，并发过程中，A、B、C并不是同时进行的（微观角度），但又是同时进行的（宏观角度）。
 
 在同一个时间点上，一个CPU只能支持一个线程在执行。因为CPU运行的速度很快，CPU使用抢占式调度模式在多个线程间进行着高速的切换，因此我们看起来的感觉就像是多线程一样，也就是看上去就是在同一时刻运行。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 并行(parallellism)
 使用多核CPU的时候，同一时刻，有多条指令在多个CPU上同时执行。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655269133-168d769c-63c4-4317-a569-2e70052a0543.png)
+![](assets/1693655269133-168d769c-63c4-4317-a569-2e70052a0543.png)
 
 如图所示，在同一时刻，ABC都是同时执行（微观、宏观）。
 
@@ -18757,7 +18757,7 @@ A任务算10秒，B任务也算10秒。如果顺序执行，A+B总共20秒。如
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 线程的创建
 在Java中使用多线程非常简单，我们先学习如何创建和使用线程，然后结合案例再深入剖析线程的特性。
@@ -18765,15 +18765,15 @@ A任务算10秒，B任务也算10秒。如果顺序执行，A+B总共20秒。如
 ### Thread 类介绍
 该如何创建线程呢？通过API中搜索，查到Thread类。通过阅读Thread类中的描述，知道Thread类用来描述线程，使其具备线程应该有功能。Java虚拟机允许应用程序并发地运行多个执行线程。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760330963462-da5e681b-4a2d-4d97-92de-376408697da9.png)
+![](assets/1760330963462-da5e681b-4a2d-4d97-92de-376408697da9.png)
 
 #### 构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331009508-d0e85ce5-e245-468d-b719-e69965857867.png)
+![](assets/1760331009508-d0e85ce5-e245-468d-b719-e69965857867.png)
 
 #### 常用方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331037841-97fbb311-4466-4abb-8193-8de17fa3ee82.png)
+![](assets/1760331037841-97fbb311-4466-4abb-8193-8de17fa3ee82.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331050384-5f7ea82b-df49-4fb5-bb8f-e871de6fa234.png)
+![](assets/1760331050384-5f7ea82b-df49-4fb5-bb8f-e871de6fa234.png)
 
 继续阅读，发现创建新执行线程有两种方法。
 
@@ -18827,9 +18827,9 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655571706-7f3ff28a-0463-45ea-994d-4b0f88b284cb.png)
+![](assets/1693655571706-7f3ff28a-0463-45ea-994d-4b0f88b284cb.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 【扩展】创建线程深度剖析
 **<font style="color:#DF2A3F;">思考1：线程对象调用run方法和调用start方法区别？</font>**
@@ -18857,7 +18857,7 @@ Thread类run()方法中的任务并不是我们所需要的，只有重写这个
 
 多线程执行时，每一个执行线程都有一片自己所属的栈内存空间，用于方法的压栈和弹栈。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655697512-4e51658d-410b-4025-bc73-c9d0e93f2673.png)
+![](assets/1693655697512-4e51658d-410b-4025-bc73-c9d0e93f2673.png)
 
 在多线程中，每个线程都有自己独立的栈内存，但是都是共享的同一个堆内存。在某个线程中程序执行出现了异常，那么对应线程执行终止，但是不影响别的线程执行。
 
@@ -18867,9 +18867,9 @@ main方法执行完毕之后，虚拟机有可能不会立即结束，只有等�
 
 查阅Thread类的API文档发现有个方法是获取当前正在运行的线程对象，还有个方法是获取当前线程对象的名称。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331243017-ca5e93a7-7f16-48ff-b5ce-b507b040ede3.png)
+![](assets/1760331243017-ca5e93a7-7f16-48ff-b5ce-b507b040ede3.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331253438-5e941c9e-32a6-4598-9cf2-be44ebe654b9.png)
+![](assets/1760331253438-5e941c9e-32a6-4598-9cf2-be44ebe654b9.png)
 
 想要获取运行时线程名称，必须先要得到运行时线程对象(这里的线程对象和继承Thread子类对象是不一样的)。在线程类方法当中有一个方法，叫做currentThread()，返回thread类型，静态的，类名可以直接调用。
 
@@ -18913,17 +18913,17 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655806394-f3ab31ca-0aa2-4d5c-856b-de4563a22141.png)
+![](assets/1693655806394-f3ab31ca-0aa2-4d5c-856b-de4563a22141.png)
 
 通过运行结果观察，发现主线程的名称为：main。自定义的线程名字默认为：Thread-加上编号，编号从0开始递增，th1线程对应的名称为：Thread-0，th2线程对应的名称为Thread-1。
 
 那么自定义线程的默认名字是怎么来的呢？ 通过对Thread类的源码分析，我们发现调用Thread类的构造方法时，默认就给该线程对象定义了一个名字，格式为：Thread-加上编号。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331499516-6ac353aa-0537-4c42-a5e9-bf501c2a5041.png)
+![](assets/1760331499516-6ac353aa-0537-4c42-a5e9-bf501c2a5041.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331511532-3773b08d-5450-48fe-998e-4029c108d815.png)
+![](assets/1760331511532-3773b08d-5450-48fe-998e-4029c108d815.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331521184-6c2a82f5-50e7-40b4-a75b-ff13eca1fd15.png)
+![](assets/1760331521184-6c2a82f5-50e7-40b4-a75b-ff13eca1fd15.png)
 
 由此，我们也可以得出一个结论：当我们创建线程子类对象的时候，它们在创建的同时已经完成了名称的定义。
 
@@ -18944,13 +18944,13 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655898281-c5f7ab40-07d2-454c-a63b-f3076d59b751.png)
+![](assets/1693655898281-c5f7ab40-07d2-454c-a63b-f3076d59b751.png)
 
 **<font style="color:#DF2A3F;">思考5:可以手动的设置线程名称吗？</font>**
 
 自定义的线程名字默认为：Thread-加上编号，如果我们想要修改默认的线程名字，可以在创建线程对象的时候设置线程的名称，也可以使用Thread类提供的setName()方法来实现。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331562777-de7089bf-81ef-4e9c-9d42-19f28a2b7b68.png)
+![](assets/1760331562777-de7089bf-81ef-4e9c-9d42-19f28a2b7b68.png)
 
 【示例】设置线程对象的名称
 
@@ -18969,9 +18969,9 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693655976221-c42f79cf-81d3-4066-a0ec-bea1c95319af.png)
+![](assets/1693655976221-c42f79cf-81d3-4066-a0ec-bea1c95319af.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建线程方式二：实现Runnable接口
 使用继承Thread类的方式来创建线程有一个缺点，那就是自定义的类继承Thread类后就不能继承别的父类，如果还想继承别的父类那么可以选用第二种创建线程的方式。
@@ -18980,13 +18980,13 @@ public class Test {
 
 查看 Runnable接口说明文档：Runnable接口用来指定每个线程要执行的任务，并且包含了一个run()的无参抽象方法，需要Runnable接口的实现类来重写该方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331601443-165f2a53-ee4f-436b-86c9-3bb04ca6d1ee.png)
+![](assets/1760331601443-165f2a53-ee4f-436b-86c9-3bb04ca6d1ee.png)
 
 #### 接口中的方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331615320-bb2070d1-c470-498f-8eed-cb48d3e21a9b.png)
+![](assets/1760331615320-bb2070d1-c470-498f-8eed-cb48d3e21a9b.png)
 
 #### Thread类构造方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760331646751-41037af0-95ec-48fa-8477-9feb5598a4dd.png)
+![](assets/1760331646751-41037af0-95ec-48fa-8477-9feb5598a4dd.png)
 
 实现Runnable接口实现多线程的步骤：
 
@@ -19030,7 +19030,7 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693656139119-044d0873-1012-43a1-aaf8-d332e28a1a25.png)
+![](assets/1693656139119-044d0873-1012-43a1-aaf8-d332e28a1a25.png)
 
 思考一：开发中，使用继承Thread创建线程多，还是实现Runnable接口创建线程多呢？
 
@@ -19042,13 +19042,13 @@ public class Test {
 2. 实现Runnable接口来创建线程，实现了任务对象和线程对象相分离，实现了代码的解耦操作。
 3. 实现Runnable接口来创建线程，可以实现数据的共享，而使用Thread创建线程不方便数据的共享。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 线程的生命周期和状态控制
 ### 线程的生命周期
 线程的生命周期，就是一个线程从创建到消亡的过程。关于Java中线程的生命周期，首先看一下这张较为经典的图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760350797832-90dc7111-f24a-4846-bed4-41e634ee5255.png)
+![](assets/1760350797832-90dc7111-f24a-4846-bed4-41e634ee5255.png)
 
 当线程被创建并启动以后，它既不是一启动就进入了执行状态，也不是一直处于执行状态。在线程的生命周期中，它要经过**新建、就绪、运行、阻塞、死亡**五种不同的状态。尤其是当线程启动以后，它不可能一直“霸占”着CPU独自运行，所以CPU需要在多条线程之间切换，于是线程状态也会多次在运行、阻塞之间切换。
 
@@ -19092,7 +19092,7 @@ public class Test {
 #### 死亡状态（TERMINATED）
 线程在run()方法执行完了或者因异常退出了run()方法，该线程结束生命周期。此外，如果线程执行了interrupt()或stop()方法，那么它也会以异常退出的方式进入死亡状态。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 线程状态的控制
 Java提供了一些便捷的方法用于线程状态的控制。线程状态的控制Java给我们提供了很多方法，但是有些已经标注为过时的，我们应该尽可能的避免使用它们，此处我们重点关注start()、join()、sleep()、yield()等直接控制方法，和setDaemon()、setPriority()等间接控制方法。
@@ -19100,7 +19100,7 @@ Java提供了一些便捷的方法用于线程状态的控制。线程状态的�
 #### 线程睡眠
 如果需要让当前正在执行的线程暂停一段时间，并进入阻塞状态，指定时间之后，解除阻塞状态，进入就绪状态，则可以通过调用Thread的sleep()方法来实现。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332775865-f697ca66-af3f-48d0-a3a4-f2182116413e.png)
+![](assets/1760332775865-f697ca66-af3f-48d0-a3a4-f2182116413e.png)
 
 比如，我们想要使主线程每休眠1000毫秒，然后再打印出数字：
 
@@ -19182,7 +19182,7 @@ public class Test {
 
 执行程序，从结果可以看到，一般情况下，高级线程更先执行完毕。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 线程让步
 yield()方法和sleep()方法有点相似，yield()方法也是Thread类提供的一个静态的方法，它也可以让当前正在执行的线程暂停，让出CPU资源给其它的线程。但是和sleep()方法不同的是，它不会进入到阻塞状态，而是进入到就绪状态。yield()方法只是让当前线程暂停一下，重新进入就绪的线程池中，让系统的线程调度器重新调度器重新调度一次，完全可能出现这样的情况：当某个线程调用yield()方法之后，线程调度器又将其调度出来重新进入到运行状态执行。
@@ -19233,7 +19233,7 @@ public class Test {
 
 线程合并有三个重载的方法：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332742168-b923dc40-6cb4-42d0-aad0-1eae5f6fa792.png)
+![](assets/1760332742168-b923dc40-6cb4-42d0-aad0-1eae5f6fa792.png)
 
 【示例】线程合并的使用
 
@@ -19278,7 +19278,7 @@ public class Test {
 
 在这个例子中，在主线程中调用th.join(); 就是将主线程加入到th子线程后面等待执行。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 守护线程
 守护线程与普通线程写法上基本没啥区别，调用线程对象的方法setDaemon(true)，就可以把该线程标记为守护线程。
@@ -19358,7 +19358,7 @@ class MyThread extends Thread {
 
 执行结果如下，可以明显看到它是依靠异常机制来终止线程睡眠的：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778754536130-b8015386-4566-4fb0-9e5a-b62cd9c46695.png)
+![](assets/1778754536130-b8015386-4566-4fb0-9e5a-b62cd9c46695.png)
 
 #### 终止线程的执行
 终止线程执行，可以使用线程对象的 `stop()`方法，但它是以破坏数据一致性为代价强行终止线程，已被官方废弃。应使用标志位实现协作式取消。代码如下所示：
@@ -19402,7 +19402,7 @@ class MyThread extends Thread {
 
 **执行结果如下：可以清楚的看到，当 5 秒后，t 线程结束了**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778754787280-df7a0f82-7421-4ee3-9779-1a8f4054cae5.png)
+![](assets/1778754787280-df7a0f82-7421-4ee3-9779-1a8f4054cae5.png)
 
 **另外，还有一种中断线程的方法，使用线程内置的中断标记，代码如下：**
 
@@ -19435,7 +19435,7 @@ class MyThread extends Thread {
 
 **中断线程的代码是 **`**t.interrupt();**`**，然后在线程内部检查中断标记 **`**Thread.currentThread().isInterrupted()**`**。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 线程同步
 前面章节，我们学习了线程的创建和状态控制，但是每个线程之间几乎都没有什么太大的联系。可是有的时候，可能存在多个线程对同一个数据进行操作，这样，可能就会引用各种奇怪的问题。现在就来学习多线程对数据访问的控制吧。
@@ -19507,7 +19507,7 @@ public class Test {
 
 执行以上代码，输出结果为：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693656824849-cfdaa5a4-ee2c-40f7-878a-366e5d26282d.png)
+![](assets/1693656824849-cfdaa5a4-ee2c-40f7-878a-366e5d26282d.png)
 
 通过运行结果观察，我们可以发现共享数据明明只有5000（账户余额）的完整性被破坏了，两个线程同时操作一个银行账户，银行账户元，结果两人却轻松取出了3000元，如果现实中真发生这种情况，估计银行就要哭晕在厕所了。
 
@@ -19515,7 +19515,7 @@ public class Test {
 
 为了解决这个问题，java提供了线程同步机制，它能够解决上述的线程安全问题，线程同步的方式有两种：同步代码块和同步方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 同步代码块详解
 “非线程安全”其实就是在多个线程对同一个对象中的实例变量进行并发访问时发生，产生的后果就是“脏读”，也就是取到的数据其实是被更改过的的结果。在Java中，关键字synchronized可以保证在同一个时刻，只有一个线程可以执行某个方法或者某个代码块（主要是对方法或者代码块中存在共享数据的操作）。
@@ -19601,7 +19601,7 @@ public class AccountRunnable implements Runnable {
 | **可重入性** | 同一线程可以多次获取同一把锁 |
 | **与对象绑定** | 每个对象都有自己独立的监视器 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 同步方法详解
 当某一个方法中的所有代码都需要同步的时候，这时候我们可以使用同步方法，同步方法就是在方法声明上加添加synchronized关键字。
@@ -19663,7 +19663,7 @@ public class AccountRunnable implements Runnable {
 
 目前我们已接触到的类中，StringBuffer、Hashtable和Vecter都属于线程安全类，这些线程安全类中的方法都为非静态同步方法，例如StringBuffer类中的append方法就是synchronized修饰的。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332709259-b2606972-f4a2-4864-a88c-797c9a71209b.png)
+![](assets/1760332709259-b2606972-f4a2-4864-a88c-797c9a71209b.png)
 
 #### 静态同步方法
 synchronized关键字不但能修饰成员方法，还能修饰静态方法。在静态方法的声明上添加synchronized，我们称之为静态同步方法。
@@ -19995,7 +19995,7 @@ class MyClass {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 死锁详解
 简单的说就是：当A线程等待B线程释放资源，而同时B又在等待A线程释放资源，这就形成了死锁。这里举一个通俗的例子，例如在人行道上两个人迎面相遇，为了给对方让道，两人同时向一侧迈出一步，双方无法通过，又同时向另一侧迈出一步，这样还是无法通过。假设这种情况一直持续下去，这样就会发生死锁现象。
@@ -20069,7 +20069,7 @@ public class Test {
 
 死锁是线程间相互等待锁造成的，在实际中发生的概率非常的小。如果真的遇见死锁的这种情况，我们只避免死锁的发生，唯一的解决方案就是优化代码的逻辑。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 线程之间的通信
 多线程环境下，我们经常需要多个线程的并发和通信。关于线程通信，最经典的例子就是生产者和消费者的问题。 
@@ -20089,7 +20089,7 @@ public class Test {
 
 因为这些方法在使用时，必须要标明所属的锁，而锁又可以是任意对象，任意对象都能调用的方法一定是定义在Object类中。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332663326-44ab2764-5ff0-4930-8f35-6f8fb4e6bc35.png)
+![](assets/1760332663326-44ab2764-5ff0-4930-8f35-6f8fb4e6bc35.png)
 
 wait()方法有三种形式：无时间参数的wait()方法（一直等待，直到其他线程通知），带毫秒参数的wait()方法和带毫秒、微秒参数的wait()方法（这两种方法都是等待指定时间后自动苏醒）。并且调用wait()方法的当前线程会释放对该同步监视器的锁定。
 
@@ -20106,7 +20106,7 @@ wait()方法有三种形式：无时间参数的wait()方法（一直等待，�
 3. sleep在休眠的时间内，不能唤醒，而wait在等待的时间内，能被唤醒。
 4. sleep不释放同步锁，会一直持有锁，而wait方法会释放同步锁。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 生产者消费者模式
 学习“生产者消费者模式”，需要明白什么是生产者，什么是消费者，什么是缓冲区。
@@ -20296,9 +20296,9 @@ public class Test {
 
 通过执行代码，我们可以明显看生产者交替的生产“黄色的馒头”和“白色的包子”，并且生产者每生产一个商品，消费者就对应消费对应生产的商品，实现生产者和消费者交替执行的功能。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693657692302-ed17ab7b-7b07-4bab-adea-f7ef4024af1b.png)
+![](assets/1693657692302-ed17ab7b-7b07-4bab-adea-f7ef4024af1b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 多生产者多消费者问题
 在上一个章节中，我们在测试类中开启了一个生产者线程和一个消费者线程，可以通过标志位flag的if判断和同步方法互斥较好解决两个线程，一个生产者和一个消费者交替执行的功能。
@@ -20331,7 +20331,7 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693657737549-d0f31d8b-9f8f-4d58-bc0f-df71cdfc68fb.png)
+![](assets/1693657737549-d0f31d8b-9f8f-4d58-bc0f-df71cdfc68fb.png)
 
 运行后发现，加上th2和th4之后结果就错了。
 
@@ -20400,7 +20400,7 @@ public class ProductStock {
 
 修改完成之后，重新运行程序，我们发现程序进入了死循环，这又是怎么回事呢？
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693657784080-7c4ad926-ff78-48f7-bfd6-07d3ad304ff8.png)
+![](assets/1693657784080-7c4ad926-ff78-48f7-bfd6-07d3ad304ff8.png)
 
 出现死循环的原因是：while判断标记+notify()导致的死锁。假设th2、th3、th4线程都进入了等待状态，那么能执行的只有th1线程。
 
@@ -20471,7 +20471,7 @@ public class ProductStock {
 
 通过以上两种优化方案，我们就实现了多生产者多消费者模式。生产者每生产一个商品，消费者就对应消费对应生产的商品，也就是完成了生产者和消费者交替执行的功能。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Lock锁
 前面章节我们学习了如何使用关键字synchronized来实现同步访问。本文我们继续来探讨这个问题，从JDK1.5之后，在java.util.concurrent.locks包下提供了另外一种方式来实现同步访问，那就是Lock。
@@ -20509,11 +20509,11 @@ synchronized (同步监视器) { // 加锁位置
 ### Lock接口的详解
 查看Lock的源码可知，Lock就是一个接口，位于java.util.concurrent.locks包中。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332604103-58b55bf9-7552-4f11-82d7-06960ae675c1.png)
+![](assets/1760332604103-58b55bf9-7552-4f11-82d7-06960ae675c1.png)
 
 接下来，我们对Lock接口中两个重要的方法进行讲解，分别是lock()方法和unlock()方法，lock()方法用来获取锁，unLock()方法是用来释放锁。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332618542-6d78ebd7-7d0c-4e68-b23f-ffedad3fa3ff.png)
+![](assets/1760332618542-6d78ebd7-7d0c-4e68-b23f-ffedad3fa3ff.png)
 
 首先lock()方法是平常使用得最多的一个方法，就是用来获取锁。如果锁已被其它线程获取，则进行等待。
 
@@ -20533,7 +20533,7 @@ try{
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### ReentrantLock类详解
 ReentrantLock，意思是“可重入锁”。ReentrantLock类是Lock接口的实现类，并且ReentrantLock类中提供了更多的实用方法。下面通过一些实例具体看一下如何使用ReentrantLock。
@@ -20589,7 +20589,7 @@ public class Test {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693658339867-ec4c25f1-2d5c-4197-bc69-dbe809d69ee0.png)
+![](assets/1693658339867-ec4c25f1-2d5c-4197-bc69-dbe809d69ee0.png)
 
 分析运行结果，我们发现有些火车票被售票员卖了多次，例如第3张票被“窗口1”、“窗口2”和“窗口3”都卖过，并且当火车票已经全部卖完的时候，“窗口3”和“窗口2”都还在卖票。很明显，我们上面的程序时有问题的，如果现实生活中发生了这样的情况，那么火车站的秩序肯定就乱套了。
 
@@ -20631,7 +20631,7 @@ class TicketRunnable implements Runnable {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 多生产者多消费者问题
 多生产者多消费者带来的问题，我们可以通过while判断和notifyAll()全唤醒方案来解决，但是notifyAll()全唤醒也带来了弊端，它要唤醒所有的被等待的线程，意味着既唤醒了对方，也唤醒了本方，在唤醒本方线程后还要不断判断标记，就降低了程序的效率。
@@ -20770,7 +20770,7 @@ public class ProductStock {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 线程的其它创建方式
 ### 创建线程方式三：实现Callable接口
@@ -20780,10 +20780,10 @@ public class ProductStock {
 
 Callable接口在java.util.concurrent包中，该接口用来指定每个线程要执行的任务，其中包含了一个call()抽象方法，并且需要在Callable接口的实现类来重写该方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332499444-ed25df79-1e1c-41a5-8f52-97d302c6a198.png)
+![](assets/1760332499444-ed25df79-1e1c-41a5-8f52-97d302c6a198.png)
 
 #### 接口中的方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760332512324-19078ee2-b7d8-42f0-aef2-19e02c45bbb8.png)
+![](assets/1760332512324-19078ee2-b7d8-42f0-aef2-19e02c45bbb8.png)
 
 通过Callable接口来创建线程，还需用到实现于Runnable接口和Future接口的实现类FutureTask。FutureTask是一个可取消的异步计算结果，在FutureTask类中提供了对Future的基本实现，可以调用方法去开始和取消一个计算，可以查询计算是否完成并且获取计算结果，常见的方法如下：
 
@@ -20842,7 +20842,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 创建线程方式四：线程池
 在前面的章节中，我们使用线程的时候就去创建一个线程，这样实现起来非常简便，但是就会有一个问题：
@@ -20928,7 +20928,7 @@ public class Test01 {
 
 运行以上案例代码，输出结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693659016261-39e87fe2-bfa7-47fa-92e6-2475f3292456.png)
+![](assets/1693659016261-39e87fe2-bfa7-47fa-92e6-2475f3292456.png)
 
 我们创建一个固定大小为2的线程池，意味着可并发执行的任务数量最多为2个。程序中我们添加了5个线程任务，则这5个线程任务都是由“pool-1-thread-1”线程和“pool-1-thread-2”线程来完成。
 
@@ -20984,7 +20984,7 @@ public class Test02 {
 
 以上案例中，通过Callable接口的call()方法来执行线程任务，并得到了call()方法的返回值。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 单例模式：从线程不安全到线程安全
 ### 线程不安全的单例模式
@@ -21035,7 +21035,7 @@ class MyRunnable implements Runnable {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760439553721-b68335fa-2340-4d85-a313-20e32d16a12f.png)
+![](assets/1760439553721-b68335fa-2340-4d85-a313-20e32d16a12f.png)
 
 ### 线程安全的单例模式演进
 #### 方法1：同步方法（效率较低）
@@ -21136,7 +21136,7 @@ s = new Singleton();
 // 这样其他线程可能在对象未完全初始化时就获取到实例（也就是其他线程可能获取到一个半成品对象。）
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 方法3：静态内部类（推荐使用）
 
@@ -21221,7 +21221,7 @@ volatile关键字在双重检查锁定中至关重要，它确保了：
 #### 什么是主内存
 **主内存**就是计算机的**RAM（内存条）**，是所有线程**共享**的内存区域。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778909503132-27bd4b37-89c9-43d8-8c06-72a6ab7e3712.png)
+![](assets/1778909503132-27bd4b37-89c9-43d8-8c06-72a6ab7e3712.png)
 
 特点：
 
@@ -21234,7 +21234,7 @@ volatile关键字在双重检查锁定中至关重要，它确保了：
 
 线程本地缓存是 CPU 核心私有的。每一个 CPU 核心都有它自己的高速缓冲区。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778909634004-4fd78815-8e81-4d42-9213-02ea731b4452.png)
+![](assets/1778909634004-4fd78815-8e81-4d42-9213-02ea731b4452.png)
 
 Java 概念中的"**线程本地缓存**"就是对应这些 CPU 缓存。
 
@@ -21243,14 +21243,14 @@ Java 概念中的"**线程本地缓存**"就是对应这些 CPU 缓存。
 
 为什么这么设计？主要矛盾点是：CPU 太快，内存太慢。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778909908357-61c5994b-a422-4ba7-9f88-b942fe1ff3dc.png)
+![](assets/1778909908357-61c5994b-a422-4ba7-9f88-b942fe1ff3dc.png)
 
  CPU 每次读写变量都要等主内存，95% 的时间在空等，性能惨不忍睹。
 
 当然，这样的性能优化，肯定会导致数据不一致问题。
 
 #### Java 内存模型 JMM
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1778910111074-92935783-8df2-4630-b92d-34a56e3d5c95.png)
+![](assets/1778910111074-92935783-8df2-4630-b92d-34a56e3d5c95.png)
 
 **关键规则：**
 
@@ -21437,7 +21437,7 @@ public class Test {
 
 # 第12章 反射机制
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 反射（reflection）
 ### 反射的定义
@@ -21446,7 +21446,7 @@ Java的反射（reflection）机制是指在程序的运行状态中，可以构
 ### 反射的理解
 反射本质上是一个“反着来”的过程。我们通过new关键字创建一个类的实例时，实际上是由Java虚拟机根据这个类的Class对象在运行时构建出来的，而反射是通过一个类的Class对象来获取它的定义信息，从而我们可以访问到它的属性、方法，知道这个类的父类、实现了哪些接口等信息。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693661482243-1e98419d-7767-4809-9627-e2137ee42f1c.png)
+![](assets/1693661482243-1e98419d-7767-4809-9627-e2137ee42f1c.png)
 
 ### 反射的优缺点
 #### 优点
@@ -21467,7 +21467,7 @@ java.lang.reflect.Method：代表类的方法
 
 java.lang.reflect.Constructor：代表类的构造方法
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 获得Class对象
 ### 获得Class对象的方式
@@ -21568,7 +21568,7 @@ Class<?> clazz04 = classLoader.loadClass("com.jkweilai.reflection.Tiger");
 System.out.println(clazz04.hashCode()); // 输出：1163157884
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 类的加载过程分析
 ### 加载类的分析
@@ -21576,7 +21576,7 @@ System.out.println(clazz04.hashCode()); // 输出：1163157884
 
 **系统加载字节码文件主要有三步：装载 -> 链接 -> 初始化。**
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693661845538-2ab53b08-2ce3-4152-a253-1a07959914ab.png)
+![](assets/1693661845538-2ab53b08-2ce3-4152-a253-1a07959914ab.png)
 
 #### 装载（loading）
 将类的class文件读入内存，并为之创建一个java.lang.Class对象，此过程**由类加载器**完成。
@@ -21585,7 +21585,7 @@ System.out.println(clazz04.hashCode()); // 输出：1163157884
 ##### 验证（Verify）
 确保加载类的信息符合JVM规范，例如：以0xcafebabe开头，就没有安全问题（**在 IDEA 中可以安装 BinEd 插件查看魔数**）。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1779075987253-0003117c-5a86-4c4c-8dc5-61b3e75bacc8.png)
+![](assets/1779075987253-0003117c-5a86-4c4c-8dc5-61b3e75bacc8.png)
 
 ##### 准备（Prepare）
 正式为静态变量在方法区中开辟存储空间并设置默认值。这里“通常情况”是设置静态变量的默认值，比如我们定义了public static int value = 11，那么value变量在准备阶段设置的初始值就是0，而不是11（初始化阶段才会显示赋值）。特殊情况：比如给value变量加上了final 关键字public static final int value = 11，那么准备阶段value的值就被赋值为11。
@@ -21593,7 +21593,7 @@ System.out.println(clazz04.hashCode()); // 输出：1163157884
 ##### 解析（Resolve）
 将虚拟机常量池内的符号引用（常量名）替换为直接引用（地址）的过程（**在IDEA安装Jclasslib插件查看:一个查看Java字节码的IDE工具，可以看做是 javap -c 命令的升级版**）。通过 jclasslib 插件看不到这个替换的过程，可以看到符号引用都有哪些。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1779075950901-f333b380-229d-46fd-b5e5-7116d6afce83.png)
+![](assets/1779075950901-f333b380-229d-46fd-b5e5-7116d6afce83.png)
 
 **符号引用**：我要调用 Math 类的 abs()方法。**符号引用就是代码里写的“名字”和“描述信息”，在编译成 **`.class`** 文件后被记录在常量池里，等待运行时再解析成真正的内存地址。**
 
@@ -21604,7 +21604,7 @@ System.out.println(clazz04.hashCode()); // 输出：1163157884
 
 该方法由编译器自动合成，包含了**所有静态变量的显式初始化赋值**和**静态代码块中的语句**，按源码出现顺序合并而成。如果类中没有需要执行的静态初始化逻辑，编译器不会生成该方法。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 类的加载器分析
 #### 类加载器的作用
@@ -21615,7 +21615,7 @@ Java程序被编译器编译之后成为字节码文件（.class文件），当�
 
 有了这些类加载器后，就可以实现不同的类被不同的类加载器加载到内存。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693662017120-dfe1d22d-abe1-4e6d-9894-a20689a91851.png)
+![](assets/1693662017120-dfe1d22d-abe1-4e6d-9894-a20689a91851.png)
 
 在以上的图片中，用户自定义类加载器（UserClassLoader）的父加载器是系统类加载器（SystemClassLoader），其父加载器是扩展类加载器（ExtensionClassLoader），其父加载器是启动类加载器（BootstrapClassLoader），这里指的是父加载器，并无继承关系。
 
@@ -21678,11 +21678,11 @@ classLoader.loaderClass()：是一个实例化方法，需要一个ClassLoader�
 #### 双亲委派模型
 某个特定的类加载器在接到加载类的请求时，首先将加载任务委托交给父类加载器，父类加载器又将加载任务向上委托，直到最父类加载器，如果最父类加载器可以完成类加载任务，就成功返回，如果不行就向下传递委托任务，由其子类加载器进行加载。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693662398691-22a1b42f-55c6-41ae-8656-f931476a0434.png)
+![](assets/1693662398691-22a1b42f-55c6-41ae-8656-f931476a0434.png)
 
 双亲委派机制的好处，避免类的俯冲加载，确保类的全局唯一性，同时保护程序安全，防止核心API被随意篡改。例如：如果自己写了一个java.lang.String类就会因为双亲委派机制不能被加载，不会破坏原生的String类的加载。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 通过反射创建对象
 ### newInstance()方法
@@ -21765,7 +21765,7 @@ classinfo.properties配置文件中的内容如下：
 className=com.jkweilai.p2.reflection.instance.Tiger
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 获取类的所有结构
 ### 获得类的相关信息
@@ -21875,7 +21875,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 获得类的所有方法
 想要获得Class对象对应的所有方法（成员方法和静态方法），则需要使用Class类提供的方法来实现，常见方法如下：
@@ -21959,7 +21959,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 获得类的构造方法
 想要获得Class对象对应的所有构造方法，则需要使用Class类提供的方法来实现，常见方法如下：
@@ -22040,7 +22040,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 操作类的所有结构
 ### 操作类中的属性
@@ -22152,7 +22152,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 操作类中的方法
 想要操作Class对象对应的某个方法（成员方法和静态方法），则首先应该获得该方法的Method对象，然后再调用Method类提供的方法来操作。
@@ -22264,7 +22264,7 @@ public static void main(String[] args) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 操作类中的构造方法
 想要获得Class对象中的某个构造方法，然后再通过构造方法来创建对象，则首先应获得该构造方法的Constructor对象，然后再调用Constructor类提供的方法来实例化对象。
@@ -22345,7 +22345,7 @@ public static void main(String[] args) {
 
 【思考】在JDK17版本中，我们是否能够操作JDK中私有的属性、方法和构造方法呢？？？
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 反射中获取泛型参数
 ### 反射中泛型的概述
@@ -22429,7 +22429,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 获得类中组成的泛型
 #### 获得属性中的泛型
@@ -22597,7 +22597,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 反射的实战案例
 ### 榨果汁的案例
@@ -22696,13 +22696,13 @@ public class Test01 {
 
 以上代码执行的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693663975241-a0bcfed7-4648-4496-b885-ee9b4522dd36.png)
+![](assets/1693663975241-a0bcfed7-4648-4496-b885-ee9b4522dd36.png)
 
 接下来，我们修改classinfo.properties配置文件中的数据，将className设置为“com.jkweilai.p8.reflection.Apple”，则继续执行程序输出的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693664014020-72527fd9-cc87-4293-98c8-971c143499fa.png)
+![](assets/1693664014020-72527fd9-cc87-4293-98c8-971c143499fa.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 模拟简单框架
 需求：在不改变程序代码的前提下，来创建出任意类的对象，并通过该对象来调用指定方法。
@@ -22770,15 +22770,15 @@ public class Test01 {
 
 以上代码执行的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693664100414-bf2d8ee7-d76b-4397-8bc2-281aa4ca2644.png)
+![](assets/1693664100414-bf2d8ee7-d76b-4397-8bc2-281aa4ca2644.png)
 
 接下来，我们修改classinfo.properties配置文件中的数据，将className设置为“com.jkweilai.p7.reflection.Student”，将methodName设置为“show”，则继续执行程序输出的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693664127275-1aaf71e7-1196-4db7-9812-5ac66ad4e5bc.png)
+![](assets/1693664127275-1aaf71e7-1196-4db7-9812-5ac66ad4e5bc.png)
 
 # 第13章 注解
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 注解（Annotion）
 ### 什么是注解
@@ -22821,11 +22821,11 @@ public class Tiger {
 
 在测试类中，我们去使用Tiger类来实例化对象，然后再操作对象的属性和方法，则在IDEA编辑器中的显示效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693664565379-1fa58ff2-9284-42d0-86e9-c49c26bbf582.png)
+![](assets/1693664565379-1fa58ff2-9284-42d0-86e9-c49c26bbf582.png)
 
 可以看到，Tiger类、构造方法、name变量和show()方法上面被一条直线划了一条，这其实就是编译器识别后的提醒效果。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### @Override
 使用@Override注解修饰的成员方法，则该方法必须是个重写方法，否则就会编译失败。
@@ -22882,7 +22882,7 @@ int num = 10;
 ArrayList arrayList = new ArrayList();
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### @FunctionalInterface
 @FunctionalInterface属于"函数式接口"的注解，这个是 JDK1.8 版本引入的新特性。使用@FunctionalInterface标注的接口，则该接口就有且只能存在一个抽象方法，否则就会发生编译错误。
@@ -22938,7 +22938,7 @@ public class Tiger {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 注解的属性
 #### 属性的定义
@@ -23024,7 +23024,7 @@ public class Tiger {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Java的元注解
 元注解我们可以理解为注解的注解，它是作用在注解中，方便我们使用注解实现想要的功能。元注解分别有@Retention、 @Target、 @Documented、 @Inherited和@Repeatable（JDK1.8加入）五种。
@@ -23106,7 +23106,7 @@ public class Tiger {
     - **Locale**: 输入 `zh_CN`（中文文档）
     - **command line arguments**: 可添加编码参数：`-encoding UTF-8 -charset UTF-8`
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### @Inherited
 Inherited的英文意思是继承，但是这个继承和我们平时理解的继承大同小异，一个被@Inherited注解了的注解修饰了一个父类，则它的子类也继承了父类的注解。
@@ -23303,9 +23303,9 @@ public class Test01 {
 
 以上代码执行完毕，则输出的结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693665232205-96596e93-3b1f-4b45-83d7-c2b562c97903.png)
+![](assets/1693665232205-96596e93-3b1f-4b45-83d7-c2b562c97903.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 获得方法的注解
 通过反射获得方法的注解，则该注解必须设置为@Retention(RetentionPolicy.RUNTIME) 模式，并设置该注解可以用于修饰方法（@Target(ElementType.METHOD)），这样在运行时期才能通过反射来获得方法的注解。
@@ -23401,7 +23401,7 @@ public class Test01 {
 
 # 第14章 网络编程
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是网络编程
 如今，计算机已经成为人们学习、工作、生活必不可少的工具。我们利用计算机可以和亲朋好友网上聊天，也可以玩网游、发邮件等等，这些功能实现都离不开计算机网络。计算机网络实现了不同计算机之间的通信，这必须依靠编写网络程序来实现。
@@ -23436,7 +23436,7 @@ IP地址毕竟是数字标识，使用时不好记忆和书写，因此在IP地�
 ##### DNS
 在Internet上域名与IP地址之间是一对一（或者多对一）的，域名虽然便于人们记忆，但机器之间只能互相认识IP地址，它们之间的转换工作称为域名解析，域名解析需要由专门的域名解析服务器来完成，<font style="color:#DF2A3F;">DNS（Domain Name System域名系统）</font>你可以把它理解为公网上的一个**巨大的电话本数据库**，现代的浏览器一般都内置了 DNS 解析器，它是一个实际执行查询工作的软件，它的任务是：当你输入 `www.baidu.com` 时，跑去问那个“大电话本”，把对应的 IP 地址拿回来。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 端口号
 IP地址用来标识一台计算机，但是一台计算机上可能提供多种网络应用程序，如何来区分这些不同的程序呢？这就要用到端口。
@@ -23451,7 +23451,7 @@ IP地址用来标识一台计算机，但是一台计算机上可能提供多种
 
 IP地址好比每个人的地址（门牌号），端口好比是房间号。必须同时指定IP地址和端口号才能够正确的发送数据。接下来通过一个图例来描述IP地址和端口号的作用，如下图所示
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693659483932-278d2b63-c13d-4e33-b9e7-3e92ab7421af.png)
+![](assets/1693659483932-278d2b63-c13d-4e33-b9e7-3e92ab7421af.png)
 
 从上图中可以清楚地看到，位于网络中一台计算机可以通过IP地址去访问另一台计算机，并通过端口号访问目标计算机中的某个应用程序。
 
@@ -23469,7 +23469,7 @@ IP地址好比每个人的地址（门牌号），端口好比是房间号。必
 
 这个最终提出的通用标准蓝图，就叫做 **OSI参考模型**（开放系统互联参考模型）。它为了让事情变得清晰，把复杂的网络通信过程拆分成了七个明确的分工层，也就是我们常说的**物理层、数据链路层、网络层、传输层、会话层、表示层和应用层**。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693659546160-97768106-e458-4b98-b973-5607581951ae.png)
+![](assets/1693659546160-97768106-e458-4b98-b973-5607581951ae.png)
 
 想象一下，你给你的朋友发一条微信，如果按照 OSI 模型，数据是这样传送的：
 
@@ -23496,7 +23496,7 @@ IP地址好比每个人的地址（门牌号），端口好比是房间号。必
 **OSI模型因过于复杂且商业化进程缓慢而未能落地，而TCP/IP则因简单、实用并随着互联网的爆发抢先成为了事实标准。**
 
 #### TCP/IP 参考模型
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693659586415-bde85e4f-288e-4e09-b001-83d3ae01ba40.png)
+![](assets/1693659586415-bde85e4f-288e-4e09-b001-83d3ae01ba40.png)
 
 **TCP/IP模型是一个四层的实用网络通信架构：**
 
@@ -23517,7 +23517,7 @@ IP地址好比每个人的地址（门牌号），端口好比是房间号。必
 + **网络层** ←→ **IP 协议**（寻址和路由）
 + **网络接口层** ←→ 将 **数据包**  **封装成帧**，通过物理介质（电信号、光信号、无线电波）发送和接收。实现技术包括：有线技术（例如以太网）和无线技术（例如 wifi）。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 网络编程基础类
 Java为了可移植性，不允许直接调用操作系统，而是由java.net包来提供网络功能。**Java虚拟机负责提供与操作系统的实际连接。**
@@ -23564,7 +23564,7 @@ public class Test {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### URL类
 **定义**：URL 是统一资源定位符，是互联网资源的唯一地址，定义了资源位置与访问方式。
@@ -23649,7 +23649,7 @@ public class Test {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## TCP和UDP协议
 ### Socket套接字的概述
@@ -23657,7 +23657,7 @@ public class Test {
 
 基于Socket接口编程，开发者能够分别开发客户端和服务器端应用程序，实现设备间在本地网络或全球互联网上的通信。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693659925971-71aaabeb-969e-4f22-a216-5bc074be79b9.png)
+![](assets/1693659925971-71aaabeb-969e-4f22-a216-5bc074be79b9.png)
 
 ### TCP和UDP协议
 TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给应用层的编程接口，所以Socket编程就分为TCP编程和UDP编程两类。
@@ -23696,7 +23696,7 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 | 传输速度 | 慢 | 快 |
 | 应用场景 | 适用于可靠传输（文件传输、邮件等） | 适用于实时应用（视频会议、直播等） |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 三次握手和四次挥手
 **三次握手和四次挥手正是TCP协议的核心机制，分别用于可靠地<font style="color:#DF2A3F;">建立</font>和<font style="color:#DF2A3F;">断开</font>连接。**
@@ -23714,7 +23714,7 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 
 **场景：** 客户端（小明）想和服务器（小美）打电话。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760449672005-1fecdaf1-2e83-4a55-ab9e-324591e05f03.png)
+![](assets/1760449672005-1fecdaf1-2e83-4a55-ab9e-324591e05f03.png)
 
 **为什么不能是两次？—— “幽灵电话”问题**
 
@@ -23726,7 +23726,7 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 
 **场景：** 小明和小美通完电话，要挂断了。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760449811494-151ae9f3-1b75-472d-9e8a-389a3448e5f8.png)
+![](assets/1760449811494-151ae9f3-1b75-472d-9e8a-389a3448e5f8.png)
 
 **为什么是四次？**
 
@@ -23751,7 +23751,7 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 1. **确保小美收到了“再见”**：如果小美没收到，她会以为小明没礼貌，会重新说一遍“我要挂了！”，这时小明还在，可以再说一次“再见”。
 2. **让“幽灵数据”消失**：等足够长的时间，让网络里所有关于这次通话的“残影”都消失，不影响下一次新的通话。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 基于TCP协议的编程
 ### TCP协议编程的概述
@@ -23761,7 +23761,7 @@ TCP协议和UDP协议是传输层的两种协议。Socket是传输层提供给�
 
 套接字与主机地址和端口号相关联，主机地址就是客户端或服务器程序所在的主机的IP地址，端口地址是指客户端或服务器程序使用的主机的通信端口。在客户端和服务器中，分别创建独立的Socket，并通过Socket的属性，将两个Socket进行连接，这样客户端和服务器通过套接字所建立连接并使用IO流进行通信。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693660220182-230f9b14-41f9-4cde-bd53-cadff1b0b21c.png)
+![](assets/1693660220182-230f9b14-41f9-4cde-bd53-cadff1b0b21c.png)
 
 ### Socket类的概述
 Socket类实现客户端套接字(Client），套接字是两台机器间通信的端点。
@@ -23800,12 +23800,12 @@ ServerSocket类的常用方法：
 | public InetAddress getInetAddress() | 返回此服务器套接字的本地地址。 |
 | public void close() | 关闭此套接字。 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### TCP单向通讯的实现
 Java语言的基于套接字编程分为服务端编程和客户端编程，其通信模型如图所示：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693660504795-18907eaf-5226-452a-87d7-156a820d7f23.png)
+![](assets/1693660504795-18907eaf-5226-452a-87d7-156a820d7f23.png)
 
 #### 服务器端实现步骤
 1. 创建ServerSocket对象，绑定并监听端口；
@@ -23887,7 +23887,7 @@ public class Client {
 
 注意：一定是先启动服务器程序，然后再启动客户端程序，先后循序千万别弄混了！
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### TCP双向通讯的实现
 #### 服务器端实现步骤
@@ -23985,7 +23985,7 @@ public class Client {
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 基于UDP协议的编程
 ### UDP协议编程的概述
@@ -24031,7 +24031,7 @@ DatagramPacket类的常用方法：
 | public synchronized byte[] getData() | 返回数据报中存储的数据 |
 | public synchronized int getLength() | 获得发送或接收数据报中的长度 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 基于UDP编程的实现
 #### 接收端实现步骤
@@ -24102,7 +24102,7 @@ public class Test02 {
 
 # 第15章 Lambda表达式
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Lambda表达式的概述
 ### Lambda表达式的引入
@@ -24143,7 +24143,7 @@ Java自诞生以来一直以“一切皆对象”为核心理念，面向对象�
 
 **简单来说：在 JDK 1.8 及以后版本中，Lambda 表达式就是<font style="color:#DF2A3F;">函数式接口</font>的<font style="color:#DF2A3F;">实例</font>。只要一个接口是函数式接口，就可以使用 Lambda 表达式来实现它。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 如何去理解函数式接口
 能够使用Lambda表达式的一个重要依据是必须有相应的函数式接口，所谓的函数式接口，指的就是“一个接口中有且只能有一个抽象方法”。也就是说，如果一个接口只有一个抽象方法，那么该接口就是一个函数式接口。
@@ -24201,7 +24201,7 @@ public class Test01 {
     1. 匿名内部类：编译后会生成一个单独的.class字节码文件。
     2. Lambda表达式：编译后不会生成单独的.class文件，而是在运行时动态生成。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Lambda表达式的使用
 ### Lambda表达式的语法
@@ -24439,7 +24439,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### Lambda表达式的语法精简
 在以上代码中，虽然Lambda表达式的语法已经很简洁了，但是Lambda表达式的语法格式还可以更加的精简，从而写出更加优雅的代码，但是相应的代码可读性也会变差。
@@ -24503,7 +24503,7 @@ public class Test01 {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 四个基本的函数式接口
 | **名字** | **接口名** | **对应的抽象方法** |
@@ -24564,7 +24564,7 @@ Function<Double, Long> function = Math::round;
 
 5. **数组引用** (`Type[]::new`) 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 实例方法引用
 语法：对象 :: 实例方法
@@ -24665,7 +24665,7 @@ Function<Double, Long> function3 = Math :: round;
 System.out.println(function3.apply(3.14));
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 特殊方法引用
 语法：类名 :: 实例方法
@@ -24717,7 +24717,7 @@ Function<Teacher, String > function3 = Teacher :: getName;
 System.out.println(function3.apply(teacher));
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 构造方法引用
 语法：类名 :: new
@@ -24798,7 +24798,7 @@ Function<Integer, int[]> function3 = int[] :: new;
 System.out.println(Arrays.toString(function3.apply(30)));
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Lambda在集合当中的使用
 为了能够让Lambda和Java的集合类集更好的一起使用，集合当中也新增了部分方法，以便与Lambda表达式对接，要用Lambda操作集合就一定要看懂源码。
@@ -24880,7 +24880,7 @@ map.forEach(new BiConsumer<String, String>() {
 map.forEach((k, v) -> System.out.println("key：" + k + "，value：" + v));
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### removeIf()方法
 在Collection集合中，提供的removeIf()方法的形参为Predicate接口（判断型接口），通过该方法再配合Lambda表达式就可以遍历List和Set集合中的元素。
@@ -24935,7 +24935,7 @@ System.out.println(hashSet); // 输出：[aa, dd]
 
 # 第16章 Stream API
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Stream API的概述
 ### 什么是StreamAPI呢？
@@ -24964,7 +24964,7 @@ Stream API：是跟集合相关的计算操作，强调的是计算。
 3. Stream上的操作属于延迟执行，只有等到用户真正需要结果的时候才会执行。
 4. Stream一旦执行了终止操作，则就不能再调用其它中间操作或终止操作了。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 创建 Stream的方式
 ### 通过Collection接口提供的方法
@@ -25038,7 +25038,7 @@ Stream<String> stream = list.parallelStream();
 System.out.println(stream.isParallel()); // 输出：true
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Stream API的中间操作
 中间操作属于惰式执行，直到执行终止操作才会真正的进行数据的计算，此处调用中间操作只会返回一个标记了该操作的新Stream对象，因此可以进行链式操作。
@@ -25135,7 +25135,7 @@ stream4.flatMap(list -> list.stream()).forEach(System.out :: println);
 //stream4.flatMap(List::stream).forEach(System.out::println);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 除重（distinct）
 除重（distinct），也就是除去重复的元素，底层使用了hashCode()和equals(Object obj)方法来判断元素是否相等。该操作使用了Stream接口提供的“Stream&lt;T&gt; distinct();”方法来实现。
@@ -25208,7 +25208,7 @@ Stream.concat(stream1, stream2).forEach(System.out :: println);
 Stream.of(11, 22, 33, 44, 55, 66).skip(2).limit(3).forEach(System.out :: println);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Stream API的终止操作
 触发终止操作时才会真正执行中间操作，终止操作执行完毕会返回计算的结果，并且终止操作执行完毕那么操作的Stream就失效，也就是不能再执行中间操作或终止操作啦。
@@ -25327,7 +25327,7 @@ Integer minAge = list.stream().map(Student::getAge).min(Integer::compare).get();
 System.out.println(minAge);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 收集（collect）
 收集（collect），可以说是内容最繁多、功能最丰富的部分了。从字面上去理解，就是把一个流收集起来，最终可以是收集成**一个值**也可以收集成**一个新的集合**。
@@ -25400,7 +25400,7 @@ String[] stringArray = list.stream().toArray(String[]::new);
 System.out.println(Arrays.toString(stringArray));
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 统计（count/averaging）
 Collectors提供了一系列用于数据统计的静态方法：
@@ -25458,7 +25458,7 @@ System.out.println(allName);
 
 # 第17章 Java新特性
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 新特性的概述
 在Java被收入Oracle之后，Java以小步快跑的迭代方式，在功能更新上迈出了更加轻快的步伐。每半年发布一版。
@@ -25498,7 +25498,7 @@ Java9经过4次推迟，历经曲折的Java9最终在2017年9月21日发布，�
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Java10新特性
 2018年3月21日，Oracle官方宣布JAVA10正式发布。JAVA10一共定义了109个新特性，其中包含JEP，对开发人员来说，真正的新特性也就一个，还有一些新的API和JVM规范以及JAVA语言规范上的改动。
@@ -25527,7 +25527,7 @@ Java9经过4次推迟，历经曲折的Java9最终在2017年9月21日发布，�
 
 - 322：基于时间的发布版本控制
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### <font style="color:#DF2A3F;">Java11新特性</font>
 2018年9月26日，Oracle官方发布JAVA11。这是JAVA大版本周期变化后的第一个长期支持版本，官方支持到2026年。
@@ -25596,7 +25596,7 @@ Java9经过4次推迟，历经曲折的Java9最终在2017年9月21日发布，�
 
 - 355：文本块（预览）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Java14新特性
 - 305：instanceof 的模式匹配（预览）
@@ -25695,7 +25695,7 @@ Java9经过4次推迟，历经曲折的Java9最终在2017年9月21日发布，�
 
 - 397：密封类（第二次预览）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### <font style="color:#DF2A3F;">Java17新特性</font>
 2021年9月14日，java17正式发布（LTS）。长期支持版，支持到2029年。Oracle 宣布，从JDK17开始，后面的JDK都全部免费提供。
@@ -25786,7 +25786,7 @@ Java9经过4次推迟，历经曲折的Java9最终在2017年9月21日发布，�
 + JEP 439：Generational ZGC
 + JEP 451：Prepare to Disallow the Dynamic Loading of Agents
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 新语法方面的变化
 ### jShell命令
@@ -25848,7 +25848,7 @@ $5 ==> [2, 4, 6]
 3. /methods：查看所有定义过的方法
 4. /save：保存代码
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### try-with-resources
 众所周知，所有被打开的系统资源，比如流、文件、Socket连接等，都需要被开发者手动关闭，否则随着程序的不断运行，资源泄露将会累积成重大的生产事故。
@@ -25956,7 +25956,7 @@ public void copyFile(File srcFile, File destFile) throws FileNotFoundException {
 
 在以上代码中，表达式中引用了fis和fos，那么在fis和fos就自动变为常量啦，也就意味着在try代码块中不能修改fis和fos的指向，从而保证打开的资源肯定能够关闭。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 局部变量类型判断
 在Java10中，新增了局部变量类型判断。在方法体或代码块中，对于**可以在编译期确定的类型**，可以使用var来定义。这个特性并不意味着java是弱类型的语言，仅是提供了更简洁的书写方式。对于编译期无法确定的类型，依然要写清楚类型。
@@ -26062,7 +26062,7 @@ public class Tiger {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### switch表达式
 目前switch表达式的问题：
@@ -26159,7 +26159,7 @@ public static void yieldSwitch1(int month) {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 文本块
 在Java语言中，通常需要使用String类型表达HTML，XML，SQL或JSON等格式的字符串，在进行字符串赋值时需要进行转义和连接操作，然后才能编译该代码，这种表达方式难以阅读并且难以维护。
@@ -26210,7 +26210,7 @@ String json2 = """
 System.out.println(json2);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Record
 **传统写法（啰嗦）：**
@@ -26289,7 +26289,7 @@ public record Tiger(String name, int age)  {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 密封类
 Java15 引入的，密封类让你明确指定哪些类可以继承自己，关闭随意继承的权限。
@@ -26347,13 +26347,13 @@ sealed interface Flyable permits SuperMan { }
 record SuperMan(String name, int age) implements Flyable { }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## API层面的变化
 ### String存储结构改变
 在Java8及其之前，String底层采用char类型数组来存储字符；在Java9及其以后，String底层采用byte类型的数组来存储字符。将char[]转化为byte[]，其目的就是为了节约存储空间。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693816288883-1977353d-6a2b-4f8a-8136-ef732f257496.png)
+![](assets/1693816288883-1977353d-6a2b-4f8a-8136-ef732f257496.png)
 
 ### String 新增的方法
 在Java11版本中，对String类新增了一些方法，新增的方法如下：
@@ -26388,7 +26388,7 @@ String result2 = "Java Golang".indent(4);
 System.out.println(result2);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 接口支持私有方法
 在Java8版本中，接口中支持“公开”的静态方法和公开的默认方法；在Java9版本中，接口中还允许定义“私有”的静态方法和成员方法，但是不能定义私有的默认方法。
@@ -26421,7 +26421,7 @@ System.out.println(_);
 
 但是，在Java9中规定“_”不能独立命名标识符了，如果使用就会报错：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693816390382-1812ee1d-c55c-4a79-ac8e-219203126225.png)
+![](assets/1693816390382-1812ee1d-c55c-4a79-ac8e-219203126225.png)
 
 ### 简化编译运行程序
 在我们的认知里面，要运行一个Java源代码必须先编译（javac命令），再运行（java命令），两步执行动作。而在Java 11版本中，通过一个java命令就直接搞定了。
@@ -26479,7 +26479,7 @@ List<Integer> list2 = List.of(1, 2, 3, 4, 5);
 // list2.set(2, 33); // 抛出UnsupportedOperationException异常
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Optional API
 #### 了解 Optional API
@@ -26577,7 +26577,7 @@ String result = userOpt
     .orElse("未找到符合条件的用户");
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Java8 的新日期 API
 ### 为什么需要新的日期API
@@ -26671,7 +26671,7 @@ LocalDate nextWorkDay = today.with(temporal -> {
 });
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 日期比较和判断
 

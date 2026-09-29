@@ -1,14 +1,14 @@
 # TypeScript
 
 ## TypeScript 简介
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 TypeScript 是**微软开发**的一种开源编程语言，它是 JavaScript 的一个超集（不是新语言，而是超集），添加了可选的静态类型系统。"**超集（Superset）**" 意味着 TypeScript **包含 JavaScript 的所有功能**，并在其基础上进行了扩展。TypeScript **没有引入与 JavaScript 冲突的语法**，而是通过 **渐进增强** 的方式扩展功能。开发者可以 **逐步迁移**，从纯 JavaScript 慢慢添加 TypeScript 特性（比如先加**类型注解**，再引入接口和泛型）。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751379218145-0a8d8442-72f0-42bc-aeb0-a18b32756862.png)
+![](assets/1751379218145-0a8d8442-72f0-42bc-aeb0-a18b32756862.png)
 
 ## JavaScript 的困扰
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 JavaScript 的困扰不仅限于以下提到的 4 个。
 
@@ -59,18 +59,18 @@ console.log(mesage);
 ### TypeScript 解决困扰
 TypeScript 文件扩展名通常以 `.ts`结尾。在 ts 文件中编写以上代码，**ts 结合 IDE**（例如 VS Code）会提示错误：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751422577388-b3d02ecc-48f1-4191-ae3a-eb9abbb35801.png)
+![](assets/1751422577388-b3d02ecc-48f1-4191-ae3a-eb9abbb35801.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751422599299-53959491-1358-4a0d-8760-c153a916dea7.png)
+![](assets/1751422599299-53959491-1358-4a0d-8760-c153a916dea7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751422624323-730f18b0-fb8e-433d-a7ad-a1b40d5f3f45.png)
+![](assets/1751422624323-730f18b0-fb8e-433d-a7ad-a1b40d5f3f45.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751422645478-4e7b7ec7-048f-4b2d-b4ce-dbf7b3ba89ca.png)
+![](assets/1751422645478-4e7b7ec7-048f-4b2d-b4ce-dbf7b3ba89ca.png)
 
 提示：如果提示信息不是中文的，可以在 VS Code 中安装简体中文插件：`**Chinese (Simplified) Language Pack for Visual Studio Code**`
 
 ## TypeScript 存在的核心原因
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 TypeScript 的核心价值在于 **解决 JavaScript 在大型项目中的致命缺陷**，以下是其不可替代的 **核心原因**：
 
@@ -202,7 +202,7 @@ let password: string = 'admin123';
 **一句话总结：**TypeScript 的核心价值是 **通过类型系统在开发阶段提前拦截错误，同时显著提升代码的可读性、可维护性和协作效率**，尤其适合长期迭代的中大型项目。
 
 ## TypeScript 的编译和运行
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 安装 Node.js
 安装了 Node.js 环境后，就可以直接**使用 npm 包管理器**来安装和管理软件包了！
@@ -224,11 +224,11 @@ npm install -g <包名>    # 全局安装（整个系统）
 
 从 [**Node.js 官网**](https://nodejs.org/zh-cn) 下载 LTS 版本（推荐），默认安装会自动配置 npm。安装时会自动 "Add to PATH"（确保环境变量被添加）。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751427591682-4abe699a-664c-4652-8119-486c1dea184d.png)
+![](assets/1751427591682-4abe699a-664c-4652-8119-486c1dea184d.png)
 
 验证 Node.js 环境是否正常：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751427664211-3282a13c-2ff0-4ace-9aee-6ff05ec31cb7.png)
+![](assets/1751427664211-3282a13c-2ff0-4ace-9aee-6ff05ec31cb7.png)
 
 :::info
 **介绍一个网站：npm 生态的官方网站**
@@ -260,7 +260,7 @@ console.log(dayjs().format("YYYY-MM-DD HH:mm:ss"));
 
 由于要在 js 文件中使用 `import`语句，`type`应该设置为 `module`。在 `package.json`文件中添加 `"type":"module"`，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765438728834-099059e4-1ddc-4108-80b8-e309f3557a11.png)
+![](assets/1765438728834-099059e4-1ddc-4108-80b8-e309f3557a11.png)
 
 4. 然后在控制台执行：`**node xxx.js**`就可以运行程序了。
 
@@ -281,14 +281,14 @@ console.log(`我叫${user.username}，今年${user.age}岁了！`);
 npm install -g typescript
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751427732014-195cdfa4-825d-4319-9c30-562ded6ee7b2.png)
+![](assets/1751427732014-195cdfa4-825d-4319-9c30-562ded6ee7b2.png)
 
 到此时`tsc`命令就可以使用了。`tsc`指的是 `TypeScript Compiler`。
 
 #### 命令行编译
 在 DOS 命令窗口中切换到 `hello.ts`文件所在目录：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751428054826-d20d8178-0c7e-4e7b-9979-49331a0518d9.png)
+![](assets/1751428054826-d20d8178-0c7e-4e7b-9979-49331a0518d9.png)
 
 执行编译命令：
 
@@ -304,7 +304,7 @@ tsc hello
 
 编译成功后会在当前目录下生成 `hello.js`文件。编译后的 js 代码如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751428154770-db0b8313-b242-4e06-b4ad-9c4102510a50.png)
+![](assets/1751428154770-db0b8313-b242-4e06-b4ad-9c4102510a50.png)
 
 #### 命令行运行
 Node.js 就是 javascript 运行环境，因此可以使用 Node.js 来运行 js 代码，当然，大家也可以将该 js 文件引入到 HTML 文件中，让浏览器去执行也是可以的。
@@ -313,15 +313,15 @@ Node.js 就是 javascript 运行环境，因此可以使用 Node.js 来运行 js
 node hello.js
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751428251188-7808291e-ab69-4d73-aaa5-db65151e5b5a.png)
+![](assets/1751428251188-7808291e-ab69-4d73-aaa5-db65151e5b5a.png)
 
 ### 自动化编译
 #### tsc --init
 `tsc --init`用于快速生成 TypeScript 项目的配置文件 `tsconfig.json`。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751436622786-868a56d6-4fc9-4780-9c8c-f40759df6c5c.png)
+![](assets/1751436622786-868a56d6-4fc9-4780-9c8c-f40759df6c5c.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751436649791-e3f0f895-b6d0-4b7b-8178-9fb04afc6547.png)
+![](assets/1751436649791-e3f0f895-b6d0-4b7b-8178-9fb04afc6547.png)
 
 **作用：**
 
@@ -371,7 +371,7 @@ tsconfig.json 文件内容：
 tsc --watch
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751437360006-ff1d7128-145e-4cd3-aa1d-155c777d9983.png)
+![](assets/1751437360006-ff1d7128-145e-4cd3-aa1d-155c777d9983.png)
 
 **`tsc --watch`**（或简写为 **`tsc -w`**）是 TypeScript 编译器提供的一个**实时监控并自动编译**的命令。
 
@@ -395,19 +395,19 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
 然后如下图一样，输入 `A`，然后回车即可：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751626457280-79b48fc6-feb3-448a-b641-a2fd119a094d.png)
+![](assets/1751626457280-79b48fc6-feb3-448a-b641-a2fd119a094d.png)
 
 #### 优化
 **请启用下面的配置：这样的话，当 ts 出现语法错误时，不编译生成 js 文件。**
 
 将 tsconfig.json 配置文件中以下的配置放开：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751437739358-3cc928da-7624-4a2f-8578-776e2e6b6af3.png)
+![](assets/1751437739358-3cc928da-7624-4a2f-8578-776e2e6b6af3.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751437850878-62ca0fe2-d869-49b4-adc6-9de6cbb1b4d9.png)
+![](assets/1751437850878-62ca0fe2-d869-49b4-adc6-9de6cbb1b4d9.png)
 
 ## 类型声明
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 类型声明语法
 
@@ -430,7 +430,7 @@ console.log(username, age, gender ? '男': '女');
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751439197094-ba37e708-fc95-482d-98c1-ce5af4032010.png)
+![](assets/1751439197094-ba37e708-fc95-482d-98c1-ce5af4032010.png)
 
 ### 函数参数类型限定
 
@@ -450,7 +450,7 @@ console.log(result);
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751439328671-0eff5603-6740-450c-87cb-59db20b363e3.png)
+![](assets/1751439328671-0eff5603-6740-450c-87cb-59db20b363e3.png)
 
 ### 函数返回值类型限定
 
@@ -473,7 +473,7 @@ console.log(strResult);
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751439537824-9ff0dbb6-d2b3-4cc4-9362-2797f50824af.png)
+![](assets/1751439537824-9ff0dbb6-d2b3-4cc4-9362-2797f50824af.png)
 
 ### 函数参数个数限定
 
@@ -521,7 +521,7 @@ isTrue = false;  // 错误
 ```
 
 ## 类型自动推断
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **TypeScript 根据你写的值、上下文和内置的类型定义，自动推导出变量和参数最精确的类型，让你不用每次都手动写<font style="color:#DF2A3F;">类型注解</font>。**
 
@@ -595,7 +595,7 @@ let person = {
 let values = [0, 1, null]; // 推断为 (number | null)[]
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765448563514-fc3b5dac-832c-4af1-81ff-08976246acf6.png)
+![](assets/1765448563514-fc3b5dac-832c-4af1-81ff-08976246acf6.png)
 
 ### `const`<font style="color:#DF2A3F;"> 断言</font>的特殊推断
 使用 `as const` 会进行更精确的字面量类型推断：
@@ -610,15 +610,15 @@ let colors = ["red", "green"] as const;
 // 数组中第一个元素类型是"red"，第二个元素的类型是"green"
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765448636342-9b8d07f0-d602-4850-87bb-6035781d914a.png)
+![](assets/1765448636342-9b8d07f0-d602-4850-87bb-6035781d914a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765448646422-23e53176-72de-4a0e-a64f-dcc82510b21c.png)
+![](assets/1765448646422-23e53176-72de-4a0e-a64f-dcc82510b21c.png)
 
 ### TypeScript 官方建议
 TypeScript 团队在[<font style="color:rgb(59, 130, 246);">官方风格指南</font>](https://github.com/microsoft/TypeScript/wiki/Coding-guidelines)中明确指出：**<font style="color:#DF2A3F;">"对于公共API，总是显式编写类型注解；对于私有实现，可以酌情依赖类型推断。"</font>**
 
 ## TypeScript 中的数据类型
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### ts 中有哪些数据类型
 TypeScript 支持 JavaScript 中所有数据类型，额外还扩展一些类型：
@@ -888,7 +888,7 @@ if(typeof a === "string"){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751511760910-b264746c-1c29-43fb-ab2b-606b5db3172b.png)
+![](assets/1751511760910-b264746c-1c29-43fb-ab2b-606b5db3172b.png)
 
 ### ts 特殊类型之 void
 void 数据类型不是用来定义变量的，通常用来定义一个函数的返回值。
@@ -1205,7 +1205,7 @@ console.log(UserStatus.Deleted);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751535547819-401c1d61-f4a7-4545-aba0-6451f2adc304.png)
+![](assets/1751535547819-401c1d61-f4a7-4545-aba0-6451f2adc304.png)
 
 当然枚举值也可以手动指定，如下：
 
@@ -1222,7 +1222,7 @@ console.log(UserStatus.Deleted);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751537234103-09323abf-b374-47d4-bd5c-12c741e350c8.png)
+![](assets/1751537234103-09323abf-b374-47d4-bd5c-12c741e350c8.png)
 
 也可以指定其中某个枚举值，后续枚举值递增，如下：
 
@@ -1239,7 +1239,7 @@ console.log(UserStatus.Deleted);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751537310196-32135df6-0ab1-4a2a-b0d9-48675ece8b31.png)
+![](assets/1751537310196-32135df6-0ab1-4a2a-b0d9-48675ece8b31.png)
 
 直接打印枚举类型的结果是这样的：
 
@@ -1254,7 +1254,7 @@ console.log(UserStatus);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751537450888-a0cc47c0-5c8a-4a50-bdc1-fa01557b8121.png)
+![](assets/1751537450888-a0cc47c0-5c8a-4a50-bdc1-fa01557b8121.png)
 
 因此，对于数字枚举来说，通过枚举值也可以获取枚举类型的成员名称，代码如下：
 
@@ -1271,7 +1271,7 @@ console.log(UserStatus[21]);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751537526322-f5a0d934-0b05-4fb2-8d22-cfa9c1fb5428.png)
+![](assets/1751537526322-f5a0d934-0b05-4fb2-8d22-cfa9c1fb5428.png)
 
 #### 字符串枚举
 字符串枚举指的是每一个枚举值不是数字了，而是字符串形式，代码如下：
@@ -1289,7 +1289,7 @@ console.log(UserStatus.Deleted);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751537696057-2d11f63a-117c-4e9f-9c91-228a1334cc77.png)
+![](assets/1751537696057-2d11f63a-117c-4e9f-9c91-228a1334cc77.png)
 
 注意：字符串枚举**没有反向映射**。
 
@@ -1690,7 +1690,7 @@ teacher.doSome();
 
 注意：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751591940379-cc2d9303-1c67-4de2-a260-7c5b75301e60.png)
+![](assets/1751591940379-cc2d9303-1c67-4de2-a260-7c5b75301e60.png)
 
 ### ts 中的抽象类
 抽象类无法实例化（不能创建对象），抽象类通常是用来定义公共结构的，比如公共的属性，公共的方法，如果某些方法在当前类中没必要提供实现（因为实现没有意义），方法可以定义为抽象方法，非抽象的子类继承抽象类时必须将抽象类中的抽象方法加以实现（重写）。
@@ -1745,7 +1745,7 @@ fish.move();
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751591533266-9df9ae66-7b93-4f5a-8ded-262aeab99002.png)
+![](assets/1751591533266-9df9ae66-7b93-4f5a-8ded-262aeab99002.png)
 
 **什么时候使用抽象类？**
 
@@ -1949,7 +1949,7 @@ ff.swim();
 ```
 
 ## 泛型
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 泛型函数
 当一个函数在定义的时候无法确定参数的类型，需要调用者来决定参数类型的时候，可以使用泛型机制。例如以下代码：
@@ -2065,7 +2065,7 @@ student.detail();
 ```
 
 ## 类型定义文件
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **类型定义文件**是 ts 中的一种特殊文件，通常以 `.d.ts`作为扩展名，作用是为现有的 javascript 代码提供类型信息，让 ts 能够在使用这些 javascript 库或模块时进行类型检查和提示。
 
@@ -2112,11 +2112,11 @@ console.log(mul(1, 2));
 
 打开浏览器，运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751614057789-8dbf24ec-17b1-4b32-94cf-4b3d193fd98a.png)
+![](assets/1751614057789-8dbf24ec-17b1-4b32-94cf-4b3d193fd98a.png)
 
 这种方式虽然可以，但是存在一些问题，没有很好的提示，如下图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751614358305-bd7f9ba3-89f1-4c3d-b645-e8c59706d0f8.png)
+![](assets/1751614358305-bd7f9ba3-89f1-4c3d-b645-e8c59706d0f8.png)
 
 鼠标悬停 add 上，没有很好的提示，比如函数有几个参数，每个参数什么类型，函数返回值类型是什么等等，这些信息都没有。
 
@@ -2132,10 +2132,10 @@ export {add, mul}
 
 关闭 VS Code 开发工具，重新打开，然后鼠标悬停在 add 方法就有提示了：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751614666444-4f57a1f1-e90e-4ae7-bdec-40d128e65ae8.png)
+![](assets/1751614666444-4f57a1f1-e90e-4ae7-bdec-40d128e65ae8.png)
 
 ## 装饰器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是装饰器
 1. 装饰器本身是一种**<font style="color:#DF2A3F;">特殊的函数</font>**，它可以对：类、属性、方法、参数进行扩展，同时让代码更加简洁。
@@ -2268,7 +2268,7 @@ Person.prototype.gender = true;
 
 报错信息如下：对象是无法扩展的
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751675221702-e20e2ede-9de8-4386-9b5d-b7dbe08b7e2b.png)
+![](assets/1751675221702-e20e2ede-9de8-4386-9b5d-b7dbe08b7e2b.png)
 
 #### 关于返回值
 如果类装饰器函数**<font style="color:#5C8D07;">有</font>**返回值：如果类装饰器返回一个**<font style="color:#5C8D07;">新的类</font>**，那这个新类会**<font style="color:#5C8D07;">替代</font>**掉被装饰的类。
@@ -2374,17 +2374,17 @@ test(User);
 #### 高级应用示例
 需求：设计一个 LogTime 装饰器，可以给所有实例添加一个createdTime属性，用于记录实例对象的创建时间，再添加一个方法getCreatedTime()用于读取实例的创建时间。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751680728268-dbbc473f-491a-4247-90d2-fceeb9e2cfea.png)
+![](assets/1751680728268-dbbc473f-491a-4247-90d2-fceeb9e2cfea.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751681302010-406b5130-079b-459d-b96b-32d59c443877.png)
+![](assets/1751681302010-406b5130-079b-459d-b96b-32d59c443877.png)
 
 以上虽然编译报错，但可以正常运行，结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751681325088-1fa10901-e80b-4fb9-bccd-bf5fa4bfcd28.png)
+![](assets/1751681325088-1fa10901-e80b-4fb9-bccd-bf5fa4bfcd28.png)
 
 下面代码解决了以上的编译报错：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751682055344-ada85bcf-413a-464e-b079-325805a2655d.png)
+![](assets/1751682055344-ada85bcf-413a-464e-b079-325805a2655d.png)
 
 `function LogTime<T extends Constructor>(target: T){}` → **保留具体类的完整类型信息**  
 `function LogTime(target: Constructor){}` → **只知道是构造函数，丢失具体类信息**
@@ -2393,11 +2393,11 @@ test(User);
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751682105581-fc41145f-8556-4191-a64a-41af87cf668a.png)
+![](assets/1751682105581-fc41145f-8556-4191-a64a-41af87cf668a.png)
 
 虽然编译器不报错了，也能够正常运行了，但这个时候如果访问 `user.getCreatedTime()`还是会报错，因为编译器检测到 User 类型上没有这个 `getCreatedTime()`方法：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751682211083-d927e55e-c7bb-4eca-be78-be9a0cadce5d.png)
+![](assets/1751682211083-d927e55e-c7bb-4eca-be78-be9a0cadce5d.png)
 
 使用接口 interface 扩展，可以解决以上问题，最终实现代码如下：
 
@@ -2539,7 +2539,7 @@ class User{}
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751685915175-fa1ebb3d-f1ae-45ac-acb4-3ebd2b5f74d6.png)
+![](assets/1751685915175-fa1ebb3d-f1ae-45ac-acb4-3ebd2b5f74d6.png)
 
 #### 装饰器组合的具体应用
 多个装饰器组合可以很灵活的扩展功能，我们将之前编写的装饰器和装饰器工厂组合起来使用一下：
@@ -2599,7 +2599,7 @@ person.introduce();
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751688225542-8f79d152-d6eb-41cd-bcee-c7d7b5b5f64a.png)
+![](assets/1751688225542-8f79d152-d6eb-41cd-bcee-c7d7b5b5f64a.png)
 
 ### 方法装饰器
 方法装饰器是TypeScript装饰器(Decorators)的一种，用于修改或增强类中方法的行为。在TypeScript 5.0+中，装饰器功能已经稳定，使用更加方便。
@@ -2654,7 +2654,7 @@ c.shopping();
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751944305220-2338f72e-539c-4391-92bb-01c4fe6cb6c2.png)
+![](assets/1751944305220-2338f72e-539c-4391-92bb-01c4fe6cb6c2.png)
 
 #### 权限控制
 
@@ -2685,7 +2685,7 @@ userManager.deleteById('110');
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751944280091-66c45150-f981-46b5-b6ae-ce7c6c8513c4.png)
+![](assets/1751944280091-66c45150-f981-46b5-b6ae-ce7c6c8513c4.png)
 
 #### 防抖
 防抖（Debounce）是指在一定时间间隔内，无论事件被触发多少次，都只执行最后一次。简单来说，就是"等你停下来我再执行"
@@ -2730,7 +2730,7 @@ searchService.search('手机');
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751945440951-e534d018-02b4-46ab-9f86-7fb939fbaf4b.png)
+![](assets/1751945440951-e534d018-02b4-46ab-9f86-7fb939fbaf4b.png)
 
 #### 参数验证
 
@@ -2768,7 +2768,7 @@ userService.createUser('lucy', '30');
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751946608907-85c6b358-5e11-4f24-ab54-f0580e60107e.png)
+![](assets/1751946608907-85c6b358-5e11-4f24-ab54-f0580e60107e.png)
 
 ### 属性装饰器（了解）
 #### 什么是属性装饰器
@@ -2828,7 +2828,7 @@ class User{
 
 以上程序执行结果及说明：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751935890254-9fe8895e-fb5a-4ed5-8c9d-f4cec81793f8.png)
+![](assets/1751935890254-9fe8895e-fb5a-4ed5-8c9d-f4cec81793f8.png)
 
 注意：在属性前添加 `accessor`关键字只是一个语法糖，编译后会生成私有字段和对应的 getter/setter。
 
@@ -2898,6 +2898,6 @@ console.log(user.name); // 再执行一次getter
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751937916700-970803dc-8eb9-4001-8b3b-2fa365fabd52.png)
+![](assets/1751937916700-970803dc-8eb9-4001-8b3b-2fa365fabd52.png)
 
 最后还有一个参数装饰器，参数装饰器在实际的开发中使用较少，大部分都是框架内部在使用，感兴趣的同学可以自行研究。

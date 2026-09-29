@@ -1,7 +1,7 @@
 # MyBatis-Plus
 
 ## MyBatis-Plus概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 MyBatis-Plus不是用来替代MyBatis的，是对MyBatis的一种增强。注意：只做增强不做改变。
 
@@ -9,7 +9,7 @@ MyBatis-Plus为简化开发而生，为提高效率而生。
 
 在MyBatis-Plus 中只需要简单的配置，或者不用配置（约定大于配置），即可完成单表的CRUD操作。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744265316113-707379cf-54a5-45d1-a6d6-2584301e3754.png)
+![](assets/1744265316113-707379cf-54a5-45d1-a6d6-2584301e3754.png)
 
 MyBatis-Plus文档官网地址：[https://baomidou.com/](https://baomidou.com/)
 
@@ -23,10 +23,10 @@ MyBatis-Plus 支持达梦、人大金仓等国产数据库。
 
 MyBatis-Plus 项目托管在中国的代码平台 [**Gitee**](https://gitee.com/baomidou/mybatis-plus) 上（GitHub 也有镜像仓库）。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744266940480-846e32c2-4f48-4fdb-9cdc-62e6036e9627.png)
+![](assets/1744266940480-846e32c2-4f48-4fdb-9cdc-62e6036e9627.png)
 
 ## 第一个MyBatis-Plus
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 提示：MyBatis-Plus是基于SpringBoot框架的。
 
@@ -219,16 +219,16 @@ class Mp01ApplicationTests {
 ```
 
 ## MyBatis-Plus常用注解
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 实体类和表是如何对应的
 在第一个`MyBatis-Plus`程序中可以看到，没有编写`Mapper xml`文件，仅仅只编写了`CarMapper`继承`BaseMapper`。那`MyBatis-Plus`底层是怎么让`实体类`和`表`对应起来的呢？原理如下：
 
 `MyBatis-Plus`通过以下代码找到实体类`Car`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744271336190-8eb901cc-9ca3-41ef-bd20-61086ffdb16d.png)
+![](assets/1744271336190-8eb901cc-9ca3-41ef-bd20-61086ffdb16d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744271376349-0b925a4a-98d3-4dac-b8a4-a54b4c4f9675.png)
+![](assets/1744271376349-0b925a4a-98d3-4dac-b8a4-a54b4c4f9675.png)
 
 **然后通过反射机制获取**`**Car**`**类的类名以及字段名，遵循`约定大于配置`的方式完成了**`**实体类**`**与**`**表**`**的对应，约定如下：**
 
@@ -245,12 +245,12 @@ class Mp01ApplicationTests {
 
 这几个注解是比较常用的，还有一些其他注解，如果需要可以查一下官方文档：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744275406202-6c783a7a-71fe-48fd-b645-0485781c7d93.png)
+![](assets/1744275406202-6c783a7a-71fe-48fd-b645-0485781c7d93.png)
 
 #### @TableName
 当`实体类名`和`表名`不符合mp的约定，此时就可以使用该注解来解决了，例如实体类名为`Car`，但是表名为`t_car`，则需要使用该注解：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744272072569-06b3b3c3-f08e-4244-962f-fd586c41d2d6.png)
+![](assets/1744272072569-06b3b3c3-f08e-4244-962f-fd586c41d2d6.png)
 
 #### @TableId
 **用该注解的原因：**
@@ -260,7 +260,7 @@ class Mp01ApplicationTests {
 
 **使用方法：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744272770437-2b50b6b3-7f38-49dd-b0d0-b96dce60684e.png)
+![](assets/1744272770437-2b50b6b3-7f38-49dd-b0d0-b96dce60684e.png)
 
 + value 属性用来指定表的主键名
 + type 属性用来指定主键的生成策略，如果数据库表中主键值是`auto_increment`，则采用`type = IdType.AUTO`。
@@ -272,9 +272,9 @@ class Mp01ApplicationTests {
 
 **<font style="color:#DF2A3F;">需要注意的是：当你使用这种方式时，即使主键是 </font>`auto_increment`<font style="color:#DF2A3F;">，仍然会采用雪花算法生成 ID。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744273213286-e4f3cf01-59ec-46e6-a9ab-2019f8e5e8ec.png)
+![](assets/1744273213286-e4f3cf01-59ec-46e6-a9ab-2019f8e5e8ec.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744273262895-d9e37364-59fe-4caf-b0cc-5a0262cbc1a8.png)
+![](assets/1744273262895-d9e37364-59fe-4caf-b0cc-5a0262cbc1a8.png)
 
 + IdType.INPUT：需要程序员手动赋值。
 + IdType.ASSIGN_ID：自动分配 UUID，主键只能是 String 类型。默认实现为 IdentifierGenerator 的 nextUUID 方法
@@ -299,14 +299,14 @@ create table t_customer(
 + `属性名`与数据库中的关键字冲突了。
 + `属性名`不是数据库表中的字段。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744274649300-1aa69362-cc41-4b52-b173-bbd5dafd9fcb.png)
+![](assets/1744274649300-1aa69362-cc41-4b52-b173-bbd5dafd9fcb.png)
 
 ## MyBatis-Plus常用配置
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 mp的配置可以参考官方文档：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744276728852-f1b08204-42fb-4254-bb5b-a50765a97028.png)
+![](assets/1744276728852-f1b08204-42fb-4254-bb5b-a50765a97028.png)
 
 常用配置如下：
 
@@ -336,12 +336,12 @@ mybatis-plus:
 
 **小细节**：`classpath:`和`classpath*:`的区别？
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744277884879-dd57ca99-9679-4034-9f68-67baa03e9aea.png)
+![](assets/1744277884879-dd57ca99-9679-4034-9f68-67baa03e9aea.png)
 
 classpath*: 的星号表示跨模块/跨 JAR 加载资源，确保不会遗漏分散在不同位置的 XML 文件。但是要注意，这种方式效率较低，不要滥用。
 
 ## MyBatis-Plus条件构造器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 初识条件构造器
 mp默认生成的CRUD的SQL语句，都是基于主键id的，例如：deleteById、updateById、selectById等。
@@ -350,11 +350,11 @@ mp默认生成的CRUD的SQL语句，都是基于主键id的，例如：deleteByI
 
 来自官方的一段描述：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744286634938-7d863454-cc00-4452-80ab-fa2320e779bf.png)
+![](assets/1744286634938-7d863454-cc00-4452-80ab-fa2320e779bf.png)
 
 以下是条件构造器`Wrapper`的继承结构图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744287684456-1fc1448b-0e13-46f7-b4a4-0789213abc40.png)
+![](assets/1744287684456-1fc1448b-0e13-46f7-b4a4-0789213abc40.png)
 
 ### QueryWrapper的使用
 **<font style="color:#DF2A3F;">注意：MP 中提供的</font>`QueryWrapper`<font style="color:#DF2A3F;"> 与 </font>`LambdaQueryWrapper`<font style="color:#DF2A3F;">适合于单表查询，如果多表连接查询建议大家使用 MyBatis 原生配置文件。当然，MP 也可以实现多表连接查询，只是代码会变的很难维护、很难阅读。官方最佳实践是：采用 MP 做单表查询。</font>**
@@ -531,9 +531,9 @@ void testLambdaUpdateWrapper(){
 3. 尽量使用`LambdaQueryWrapper`和`LambdaUpdateWrapper`，避免硬编码。
 
 ## 自定义SQL
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744292844260-8f50ee88-77dc-48e5-a8a0-80f21c72074d.png)
+![](assets/1744292844260-8f50ee88-77dc-48e5-a8a0-80f21c72074d.png)
 
 在Java程序中直接编写SQL这是不建议的，怎么解决这个问题？自定义SQL可以解决。
 
@@ -576,7 +576,7 @@ public interface CarMapper extends BaseMapper<Car> {
 注意：`${ew.customSqlSegment}`是固定写法。
 
 ## IService接口
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 mp不仅提供了持久层的代码，还提供了service层的代码。
 
@@ -687,47 +687,47 @@ public class CarServiceImpl extends ServiceImpl<CarMapper, Car> implements CarSe
 
 **<font style="color:#DF2A3F;">IService接口的继承结构如下：</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336178236-0441b8f3-ca31-40a4-a9cd-a0438e01f2c1.png)
+![](assets/1744336178236-0441b8f3-ca31-40a4-a9cd-a0438e01f2c1.png)
 
 ### IService接口常用方法
 #### 负责新增的方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336381917-1e255d47-67f0-4af9-9598-e857ff051848.png)
+![](assets/1744336381917-1e255d47-67f0-4af9-9598-e857ff051848.png)
 
 + save(T) 保存
 + saveBatch(Collection&lt;T&gt;) 批量保存
 + saveOrUpdate(T) 保存或修改（保存时根据id判断，如果没有则保存，如果有则更新）
 
 #### 负责删除的方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336400274-077afd2b-f307-408b-bfec-3f2d943cc5bc.png)
+![](assets/1744336400274-077afd2b-f307-408b-bfec-3f2d943cc5bc.png)
 
 + removeById(Serializable) 根据主键删除
 + removeByIds(Collection<?>) 根据多个主键删除多条记录，底层用 `in(id1, id2, id3)`
 + removeBatchByIds(Collection<?>) 根据多个主键删除多条记录，底层会启动JDBC的批处理操作（调用JDBC的addBatch方法来批量删除，大数量时效率较高。）
 
 #### 负责修改的方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336479166-0bbbbbe3-e8e7-4387-9f87-c9fe5afb7958.png)
+![](assets/1744336479166-0bbbbbe3-e8e7-4387-9f87-c9fe5afb7958.png)
 
 + updateById(T) 根据id更新
 + updateBatchById(Collection&lt;T&gt;) 根据id批量更新
 
 #### 负责查询的方法
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744337340527-47aec78b-c34e-48a1-8d7f-6019bd8bed09.png)
+![](assets/1744337340527-47aec78b-c34e-48a1-8d7f-6019bd8bed09.png)
 
 + 这几个方法都是查一个。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744337480761-c157a80d-fb26-4635-8694-0cbb7a5413b8.png)
+![](assets/1744337480761-c157a80d-fb26-4635-8694-0cbb7a5413b8.png)
 
 + 这几个方法都是查多个
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336558292-010dea5b-18ee-4439-96c2-212c6e831b98.png)
+![](assets/1744336558292-010dea5b-18ee-4439-96c2-212c6e831b98.png)
 
 + 这几个方法是查数量
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336698246-3fe6be3f-b343-413f-b8e9-e2c7b5e3c447.png)
+![](assets/1744336698246-3fe6be3f-b343-413f-b8e9-e2c7b5e3c447.png)
 
 + 这几个方法负责分页查询
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744336716976-4717df5e-140e-47ed-ab88-a4cc0c57d46a.png)
+![](assets/1744336716976-4717df5e-140e-47ed-ab88-a4cc0c57d46a.png)
 
 + 复杂条件的查询和更新建议使用这几个方法。
 + **<font style="color:#DF2A3F;">提示：如果是通过主键查询或更新建议使用之前的方法，如果是复杂条件的查询或更新使用这几个方法更方便。</font>**
@@ -750,7 +750,7 @@ public class CarServiceImpl extends ServiceImpl<CarMapper, Car> implements CarSe
 1. 创建SpringBoot项目
 2. 创建SpringBoot项目过程中引入依赖
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744351469957-b3f6df83-b790-4407-abbb-ee3da3d69240.png)
+![](assets/1744351469957-b3f6df83-b790-4407-abbb-ee3da3d69240.png)
 
 3. SpringBoot项目创建完成后，`application.properties`修改为`application.yml`
 4. 引入依赖：MyBatis-Plus、Swagger、Hutool
@@ -1158,7 +1158,7 @@ public interface CarDao extends BaseMapper<Car> {
 
 **最后**，启动项目，打开浏览器，输入`Swagger`地址：http://localhost:8080/doc.html 来进行接口的测试：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1784459807923-6f778b91-e948-42ac-9285-6972b17c7431.png)
+![](assets/1784459807923-6f778b91-e948-42ac-9285-6972b17c7431.png)
 
 #### IService的lambdaQuery()方法
 适合复杂查询。
@@ -1171,7 +1171,7 @@ public interface CarDao extends BaseMapper<Car> {
 
 实际查询时，不知道用户提供了哪些条件。如果使用原生的`mybatis`实现的话`SQL`应该是这样写：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744362927181-94c01deb-74e3-4cda-8688-95cc0cf44182.png)
+![](assets/1744362927181-94c01deb-74e3-4cda-8688-95cc0cf44182.png)
 
 在mp中应该怎么做呢？可以使用我们之前学过的`Wrapper`，也可以使用`IService`中提供的`lambdaQuery()`方法。下面演示`lambdaQuery()`的用法：
 
@@ -1302,7 +1302,7 @@ void testSave() {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744372402863-22556ef5-fc53-4a2c-9643-ab3f0815c489.png)
+![](assets/1744372402863-22556ef5-fc53-4a2c-9643-ab3f0815c489.png)
 
 2. 第二种方式：使用批处理操作并记录耗时
 
@@ -1332,26 +1332,26 @@ void testSaveBatch() {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744372598941-ca856d4c-382d-43b3-a80b-260b97e93c49.png)
+![](assets/1744372598941-ca856d4c-382d-43b3-a80b-260b97e93c49.png)
 
 效率得到提升，原理是：每100条`insert`语句打包一次批量发给数据。
 
 3. 在`application.yml`中的`url`后面添加`rewriteBatchedStatements=true`并记录耗时
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744373051588-13dd3192-2f5a-4d43-8068-8354900bb890.png)
+![](assets/1744373051588-13dd3192-2f5a-4d43-8068-8354900bb890.png)
 
 它的作用是将这种写法
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744372873640-bc99c91c-2142-4809-8936-a9ebb3d0c8ca.png)
+![](assets/1744372873640-bc99c91c-2142-4809-8936-a9ebb3d0c8ca.png)
 
 转换成这种写法
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744372883742-2335e86b-2836-4905-8ac2-83c5f3259683.png)
+![](assets/1744372883742-2335e86b-2836-4905-8ac2-83c5f3259683.png)
 
 这是mysql驱动实现的，不是mp的功能。
 
 ## 代码生成器/逆向工程
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 `MyBatis-Plus`官方为我们推荐了两种方式：
 
@@ -1360,49 +1360,49 @@ void testSaveBatch() {
 
 首先，要安装插件`MyBatis X`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744375663041-742ea8a1-077f-4524-a555-1b025acc0d69.png)
+![](assets/1744375663041-742ea8a1-077f-4524-a555-1b025acc0d69.png)
 
 安装插件后，在表上右键，会出现`MyBatisX-Generator`，如下图：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744376534949-7a74a587-4cbc-4792-9fab-d963f232f0d3.png)
+![](assets/1744376534949-7a74a587-4cbc-4792-9fab-d963f232f0d3.png)
 
 点击它：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744377495608-9a1cae16-8a4b-4a2e-b8a7-3e26305337d0.png)
+![](assets/1744377495608-9a1cae16-8a4b-4a2e-b8a7-3e26305337d0.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744377544316-427d9327-819a-4065-81d3-9d63b4c236ec.png)
+![](assets/1744377544316-427d9327-819a-4065-81d3-9d63b4c236ec.png)
 
 就这样，代码就轻松的生成了。
 
 ## 静态工具类Db
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 静态工具类`Db`的功能和`IService接口`功能一样。
 
 ### Db中的方法
 1. 增
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744379838552-3d1b6a62-78f0-4e95-9ced-153ac50927dd.png)
+![](assets/1744379838552-3d1b6a62-78f0-4e95-9ced-153ac50927dd.png)
 
 2. 删
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744379879613-a97aaa06-9577-4605-9531-d9f95324f0df.png)
+![](assets/1744379879613-a97aaa06-9577-4605-9531-d9f95324f0df.png)
 
 3. 改
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744379969894-38d8d299-c939-4217-a70f-301e22528f36.png)
+![](assets/1744379969894-38d8d299-c939-4217-a70f-301e22528f36.png)
 
 4. 查
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744380054930-af582d90-e0d4-488d-823d-05dbc74807bd.png)
+![](assets/1744380054930-af582d90-e0d4-488d-823d-05dbc74807bd.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744380130810-be45dac1-a3b0-4034-9dd9-0ae0f7c2b68a.png)
+![](assets/1744380130810-be45dac1-a3b0-4034-9dd9-0ae0f7c2b68a.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744380155936-0916ecd0-e116-40fe-9a19-c3a00d70599d.png)
+![](assets/1744380155936-0916ecd0-e116-40fe-9a19-c3a00d70599d.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744380170477-43b7351a-a986-447a-bc8f-c2e726a8aebd.png)
+![](assets/1744380170477-43b7351a-a986-447a-bc8f-c2e726a8aebd.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744380221861-049ba810-073c-4b2c-895d-837b79fca7e3.png)
+![](assets/1744380221861-049ba810-073c-4b2c-895d-837b79fca7e3.png)
 
 可以看到以上的方法基本上都是`IService`接口中的方法。
 
@@ -1415,11 +1415,11 @@ void testSaveBatch() {
 
 汽车表：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744418354574-6d424729-fe5c-4064-86f9-623c3360c7d7.png)
+![](assets/1744418354574-6d424729-fe5c-4064-86f9-623c3360c7d7.png)
 
 维修记录表：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744418614986-6917d5d1-fee4-4597-b3b5-53a5251a4c56.png)
+![](assets/1744418614986-6917d5d1-fee4-4597-b3b5-53a5251a4c56.png)
 
 ```sql
 drop table if exists t_wx;
@@ -1532,7 +1532,7 @@ public class WeiXiuVO {
 ```
 
 #### `CarVO`中添加`List<WeiXiuVO>`
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744427707462-cc4ff4a5-17ba-4ff9-8f03-7e0aa1106ed5.png)
+![](assets/1744427707462-cc4ff4a5-17ba-4ff9-8f03-7e0aa1106ed5.png)
 
 #### `CarController`中添加业务接口
 
@@ -1570,12 +1570,12 @@ public CarVO queryCarAndWeiXiuById(Long id) {
 
 测试：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744427830630-96ed7d4d-6954-4c84-a339-1d8088034bea.png)
+![](assets/1744427830630-96ed7d4d-6954-4c84-a339-1d8088034bea.png)
 
 **<font style="color:#DF2A3F;">课后练习：给定多个车辆的id，查询这些车辆的信息以及每个车辆关联的维修记录信息。</font>**
 
 ## 逻辑删除
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 逻辑删除指的不是真正的删除数据，执行逻辑删除时，表中的数据仍然存在，只是这条记录被标记为`已删除`。怎么标记的？可以添加一个标记字段，例如：deleted，当deleted=1表示已删除，deleted=0表示未删除。
 
@@ -1606,11 +1606,11 @@ mybatis-plus:
 
 给`t_wx`表添加一个`deleted`字段，编写代码测试一下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744429819330-692287d2-c849-4e7b-9f71-d8c52c23d9f9.png)
+![](assets/1744429819330-692287d2-c849-4e7b-9f71-d8c52c23d9f9.png)
 
 WeiXiu这个实体类上也要添加一个属性：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744430204264-68306fc7-939a-4d96-bfdf-133b43e0ac2c.png)
+![](assets/1744430204264-68306fc7-939a-4d96-bfdf-133b43e0ac2c.png)
 
 测试代码：
 
@@ -1653,25 +1653,25 @@ public void logicDelete(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744430279990-59421d5a-b2ad-4ce0-8753-0f03a9cf3918.png)
+![](assets/1744430279990-59421d5a-b2ad-4ce0-8753-0f03a9cf3918.png)
 
 数据库数据没有真正删除：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744430312146-03b05c15-36b4-46d3-ad99-699d95fc2c83.png)
+![](assets/1744430312146-03b05c15-36b4-46d3-ad99-699d95fc2c83.png)
 
 **注意：保存数据时，可以不用指定 deleted 字段的值，设计数据库表的时候，将 deleted 字段设置默认值为 0 即可。**
 
 ## 枚举处理器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 使用枚举增强可读性
 假设汽车有一个状态属性，状态包括：在售(1)、已售(2)、维修中(3)、报废(4)，在数据库表中对应的字段为`status`，数据库中字段的类型为`int`，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744439091743-ff706e19-8360-4a35-849b-8d7000ee6454.png)
+![](assets/1744439091743-ff706e19-8360-4a35-849b-8d7000ee6454.png)
 
 这时候，在po上也应该添加一个新的属性，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744439193534-8417f125-a0b0-4ff1-8b6c-a49bcf4cc037.png)
+![](assets/1744439193534-8417f125-a0b0-4ff1-8b6c-a49bcf4cc037.png)
 
 `status`定义为Integer类型不是特别好的设计，因为这样出现在程序中的是数字`1,2,3,4`，**可读性较差**。
 
@@ -1702,7 +1702,7 @@ public enum CarStatus {
 
 po中的属性使用枚举类型：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744439732134-c6e12dac-1274-4027-b48c-243b7a65708c.png)
+![](assets/1744439732134-c6e12dac-1274-4027-b48c-243b7a65708c.png)
 
 这样的话，我们在编写java程序时，可读性会很好。但是新的问题出现了：数据库中存储的是`1,2,3,4`这样的数字，Java程序中是枚举类型的值，它们之间怎么进行映射转换呢？
 
@@ -1710,7 +1710,7 @@ po中的属性使用枚举类型：
 
 第一步：使用`@EnumValue`标注在Java枚举类型中哪个属性的值存储到数据库中。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744440422424-e65aa05d-5b93-4f99-8c0f-5ea821995b38.png)
+![](assets/1744440422424-e65aa05d-5b93-4f99-8c0f-5ea821995b38.png)
 
 第二步：在`application.yml`文件中指定我们使用的是哪个转换器，我们使用MP提供的`MybatisEnumTypeHandler`即可。
 
@@ -1723,54 +1723,54 @@ mybatis-plus:
 ### 测试保存功能
 `CarDTO`代码添加属性，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744441847827-44668c5a-d5cd-4738-96f8-67fea673ac2d.png)
+![](assets/1744441847827-44668c5a-d5cd-4738-96f8-67fea673ac2d.png)
 
 其他位置不需要修改，直接测试我们之前编写的保存接口：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744442036230-36af4263-bbdb-48b1-8922-daf7c4fa9784.png)
+![](assets/1744442036230-36af4263-bbdb-48b1-8922-daf7c4fa9784.png)
 
 我们来看一下数据库表中插入的状态值是不是`2`：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744442152960-767bb71f-0497-45db-8ba3-b705a298e57d.png)
+![](assets/1744442152960-767bb71f-0497-45db-8ba3-b705a298e57d.png)
 
 ### 测试查询功能
 需求：查询所有 **在售 **的车辆信息。
 
 第一步：CarVO中添加属性
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744442862124-6a655706-6b27-491d-a2fc-9037a77fb8c2.png)
+![](assets/1744442862124-6a655706-6b27-491d-a2fc-9037a77fb8c2.png)
 
 第二步：在CarController中添加方法
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744442894426-b0d92395-50ca-49f3-953e-259bc5eaf78c.png)
+![](assets/1744442894426-b0d92395-50ca-49f3-953e-259bc5eaf78c.png)
 
 第三步：编写CarServiceImpl类中的query
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744442949283-577f344c-faac-4f5c-8da9-7207bef3dfe2.png)
+![](assets/1744442949283-577f344c-faac-4f5c-8da9-7207bef3dfe2.png)
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744443075911-9a80edfd-bc54-42ef-8000-2a3c055118b9.png)
+![](assets/1744443075911-9a80edfd-bc54-42ef-8000-2a3c055118b9.png)
 
 如果展示的时候，希望展示结果是`在售`，而不是`FOR_SALE`，可以使用`@JsonValue`注解标注枚举类型中`desc`属性：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744443210615-9a3ec3cf-754e-4d93-be07-6e91c045ba23.png)
+![](assets/1744443210615-9a3ec3cf-754e-4d93-be07-6e91c045ba23.png)
 
 这个注解不是mp的。属于`Jackson库`的注解。
 
 再来看结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744443329927-170a622c-392f-4bf7-b012-7b670a481277.png)
+![](assets/1744443329927-170a622c-392f-4bf7-b012-7b670a481277.png)
 
 **<font style="color:#DF2A3F;">重点注意事项</font>：当添加了 `**@JsonValue**`注解之后，前端系统提交 JSON 给 DTO 对象时，JSON 字符串中的 `**status**`需要使用中文：`**"status":"在售"**`，这样才能解决新增时的报错问题。**
 
 ## json 处理器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 为什么需要 json 处理器
 假设汽车表中有一个字段是 json 类型，存储了车主的信息。如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765424229312-d7cd17b2-8134-45b7-b2f7-70109e129a9b.png)
+![](assets/1765424229312-d7cd17b2-8134-45b7-b2f7-70109e129a9b.png)
 
 ```json
 {"id": "909890989898767676", "name": "张三"}
@@ -1786,7 +1786,7 @@ mybatis-plus:
 显然第二种方式会比较好。因为在 java 程序中操作对象比操作 json 字符串更方便。但默认情况下，数据库表中 json 格式的字符串是不会自动转换成 java 对象的。这个时候就需要 MP 为我们提供的 json 处理器了。
 
 ### MP 提供的 json 处理器
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765424546642-67352e0f-e202-454e-aa56-20e3d46d29b0.png)
+![](assets/1765424546642-67352e0f-e202-454e-aa56-20e3d46d29b0.png)
 
 MP 给我们提供了很多 json 处理器，springboot 默认集成的是 jackson，因此我们这里选择 `JacksonTypeHandler`会比较方便，不需要引入额外的 json 处理库。
 
@@ -1842,7 +1842,7 @@ private Owner owner;
 #### 第三步：测试查询
 直接通过 Swagger UI 测试之前的接口：通过 id 查询汽车信息的接口。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765425952884-d4409c4b-a80c-429b-bcdf-93fe25f00764.png)
+![](assets/1765425952884-d4409c4b-a80c-429b-bcdf-93fe25f00764.png)
 
 #### 第四步：测试插入
 编写单元测试，插入数据，看看能不能正常插入 json 字符串：
@@ -1868,10 +1868,10 @@ public void testSave(){
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1765426213984-aa09478f-f210-49fe-b757-c01f65d932b9.png)
+![](assets/1765426213984-aa09478f-f210-49fe-b757-c01f65d932b9.png)
 
 ## MP 分页插件的使用
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 MyBatis-Plus的分页插件能自动将Page对象参数转换为数据库分页SQL，无需手写LIMIT语句。
 

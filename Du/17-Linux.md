@@ -1,7 +1,7 @@
 # Linux
 
 ## 环境准备
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Linux概述
 #### 常见的操作系统
@@ -33,7 +33,7 @@
 #### Linux发展史
 Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（林纳斯·托瓦兹） 是一名芬兰赫尔辛基大学的学生，并且对 MINIX，一种类 UNIX 操作系统，感到不满意。他开始编写自己的操作系统内核，最终发布了第一个版本，命名为 Linux。从此，Linux 这个开源、自由和可定制化的操作系统内核就开始了它的发展之旅。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713787747588-561ca06c-34d6-4163-baa5-c818c5b5f12a.png)
+![](assets/1713787747588-561ca06c-34d6-4163-baa5-c818c5b5f12a.png)
 
 以下是 Linux 操作系统的发展史中一些重要的时间节点和里程碑：
 
@@ -79,35 +79,35 @@ Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（�
 
 **第二步：稍后安装操作系统**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120154437-c4317b0b-f8b2-47e5-8ec5-d17580cdd89a.png)
+![](assets/1744120154437-c4317b0b-f8b2-47e5-8ec5-d17580cdd89a.png)
 
 **第三步：选择客户机操作系统**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120198197-c597e25f-1bde-4cc5-8138-dd6ce8d7a952.png)
+![](assets/1744120198197-c597e25f-1bde-4cc5-8138-dd6ce8d7a952.png)
 
 **第四步：为虚拟机命名并指定虚拟机存放位置**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120301286-fc2567ee-5849-4e8c-a733-462b0c1c0736.png)
+![](assets/1744120301286-fc2567ee-5849-4e8c-a733-462b0c1c0736.png)
 
 **第五步：指定磁盘容量**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120337925-5f48ea58-9de4-43e4-900e-d5273d6251c1.png)
+![](assets/1744120337925-5f48ea58-9de4-43e4-900e-d5273d6251c1.png)
 
 **第六步：虚拟机硬件配置完成**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120533520-74c7a529-1de3-420a-a1d1-ddb540ec8899.png)
+![](assets/1744120533520-74c7a529-1de3-420a-a1d1-ddb540ec8899.png)
 
 **第七步：自定义硬件：设置电脑的CPU数量**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120739058-d74d5d71-442d-430f-ae1b-aa123f52801e.png)
+![](assets/1744120739058-d74d5d71-442d-430f-ae1b-aa123f52801e.png)
 
 **第八步：自定义硬件：设置内存大小**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120763208-cc31dc5e-3fb7-4f2f-9e09-ee6f3efea464.png)
+![](assets/1744120763208-cc31dc5e-3fb7-4f2f-9e09-ee6f3efea464.png)
 
 **第九步：自定义硬件：指定网络连接方式为NAT**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744120786591-39906490-01b8-42d8-8898-5554102957b6.png)
+![](assets/1744120786591-39906490-01b8-42d8-8898-5554102957b6.png)
 
 **在创建虚拟机时，网络连接模式有桥接模式和NAT模式，应该根据个人实际需求来选择。**
 
@@ -121,7 +121,7 @@ Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（�
 ### 安装操作系统
 安装操作系统之前，你需要先下载这个操作系统的镜像文件：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744158649087-f7496169-7865-4da1-aeba-5a6286edc4da.png)
+![](assets/1744158649087-f7496169-7865-4da1-aeba-5a6286edc4da.png)
 
 把以上的iso镜像文件（系统盘）放到DVD当中。
 
@@ -131,15 +131,15 @@ Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（�
 
 **注意：从虚拟机中释放鼠标的组合键是ctrl + alt**
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666863443901-1f76bfa5-35e8-4237-a172-6d6e1cbe67ce.png)
+![](assets/1666863443901-1f76bfa5-35e8-4237-a172-6d6e1cbe67ce.png)
 
 正在安装：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666863482897-f7392814-bf82-48e5-a450-0d52888bde14.png)
+![](assets/1666863482897-f7392814-bf82-48e5-a450-0d52888bde14.png)
 
 语言选择：简体中文，英文不错的话，可以使用英文，都可以
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1666863583089-7e13567b-7ff8-4d27-86d5-bec88b177a6b.png)
+![](assets/1666863583089-7e13567b-7ff8-4d27-86d5-bec88b177a6b.png)
 
 接下来，要处理两件事：
 
@@ -147,38 +147,38 @@ Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（�
 
 第二个：设置root密码
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744159245764-5220cc8e-2acc-4695-98a7-0358836bfd9c.png)
+![](assets/1744159245764-5220cc8e-2acc-4695-98a7-0358836bfd9c.png)
 
 安装目的地，默认即可，点击完成：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744159279212-1a1ffcc4-6836-489c-ab8f-51b2a1f44d13.png)
+![](assets/1744159279212-1a1ffcc4-6836-489c-ab8f-51b2a1f44d13.png)
 
 设置root密码时允许root远程SSH登录：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744159178549-c1b13983-6e61-485e-ae3e-71a7e9b20b09.png)
+![](assets/1744159178549-c1b13983-6e61-485e-ae3e-71a7e9b20b09.png)
 
 点击开始安装：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744159323761-d1884f6d-a112-4608-9b93-8c4523967393.png)
+![](assets/1744159323761-d1884f6d-a112-4608-9b93-8c4523967393.png)
 
 安装中，请稍后：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744159349057-a2fc9377-5eae-468b-8027-5bcbc317be51.png)
+![](assets/1744159349057-a2fc9377-5eae-468b-8027-5bcbc317be51.png)
 
 安装完成后，点击右下角的重启系统即可！！！
 
 ### 配置操作系统
 这是开启除了root管理员之外，开启的其他账户：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744160419655-8c6d39c6-fe2a-4969-9114-5be9ffea1f9c.png)
+![](assets/1744160419655-8c6d39c6-fe2a-4969-9114-5be9ffea1f9c.png)
 
 设置密码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744160457395-0e14e89b-eb77-4f5f-b243-48acfb738440.png)
+![](assets/1744160457395-0e14e89b-eb77-4f5f-b243-48acfb738440.png)
 
 **查看一下网络是否正常：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744160559602-3938aade-76d7-442b-b825-7b1b8b626ff8.png)
+![](assets/1744160559602-3938aade-76d7-442b-b825-7b1b8b626ff8.png)
 
 ### 安装MobaXterm
 **MobaXterm 是一个集成了SSH客户端、Unix命令集和网络工具的Windows终端软件：**
@@ -198,11 +198,11 @@ Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（�
 + **KiTTY**：基于PuTTY的增强分支，增加了标签页等便捷功能。
 
 ## 磁盘管理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### windows和Linux磁盘管理的区别
 #### windows资源管理方式
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744161574365-73febb1e-a05d-418c-89e4-2e4e840743ed.png)
+![](assets/1744161574365-73febb1e-a05d-418c-89e4-2e4e840743ed.png)
 
 + 系统一般安装在C盘
 + C盘下的"Windows"目录是操作系统的核心
@@ -211,7 +211,7 @@ Linux 操作系统的历史可以追溯到 1991 年，当时 Linus Torvalds（�
 + windows操作系统分为C盘、D盘、E盘等，每个磁盘下采用文档树的形式组织文件
 
 #### Linux资源管理方式
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713748080202-4e886d88-1462-4705-9e4b-39654e098c02.png)
+![](assets/1713748080202-4e886d88-1462-4705-9e4b-39654e098c02.png)
 
 linux操作系统采用一个文档树来组织所有的资源。
 
@@ -235,7 +235,7 @@ linux操作系统采用一个文档树来组织所有的资源。
 ### pwd
 在终端中输入该命令，可以查看当前所在位置，例如：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713751046056-c7c621b2-ed8e-40a8-803c-a536be84fc23.png)
+![](assets/1713751046056-c7c621b2-ed8e-40a8-803c-a536be84fc23.png)
 
 可以看到，当前所在位置是根目录。
 
@@ -256,25 +256,25 @@ ls命令是list的意思：列出，列表等。
 
 通过ls命令可以查看当前目录下的子目录和子文件。例如：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713751334723-cc62faab-a0b1-431a-a66d-5fd0a203052c.png)
+![](assets/1713751334723-cc62faab-a0b1-431a-a66d-5fd0a203052c.png)
 
 #### ls -a
 a是all的意思，表示所有。
 
 列出包含隐藏文件在内的所有的文件。（在Linux操作系统中隐藏文件的文件名通常以"."开始）
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713751386539-01f7de56-10a2-4363-8179-2bfb7da34876.png)
+![](assets/1713751386539-01f7de56-10a2-4363-8179-2bfb7da34876.png)
 
 #### ls -l
 -l 参数表示使用长格式输出：long format
 
 输出结果中每一列的含义如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744162105645-f2ee1f6c-3e81-4b7e-bc6b-3ea2b4f580b2.png)
+![](assets/1744162105645-f2ee1f6c-3e81-4b7e-bc6b-3ea2b4f580b2.png)
 
 注意权限部分：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744162118237-de2f4567-fb22-4cc7-be1b-34f92a0dadb9.png)
+![](assets/1744162118237-de2f4567-fb22-4cc7-be1b-34f92a0dadb9.png)
 
 ls -l 可以简写为：ll
 
@@ -315,7 +315,7 @@ cd abc 切换到当前目录下的abc目录中
 清屏 
 
 ## 文件管理 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 新建目录
 mkdir abc （mkdir是新建目录的命令，abc是一个目录名）
@@ -424,10 +424,10 @@ find ~ -name "*.java"
 ls -i HelloWorld.java
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744163690945-92ca0592-d741-4a6a-9901-17cd75933f74.png)
+![](assets/1744163690945-92ca0592-d741-4a6a-9901-17cd75933f74.png)
 
 ## 软链接与硬链接
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 软链接
 软链接类似于windows操作系统中的快捷方式。
@@ -449,7 +449,7 @@ ln -s Hello.java Hello.java2
 
 可以通过查看inode号，来证明软链接是两个不同的文件：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744163947938-9d668012-6338-4c8d-9feb-09697e061ec6.png)
+![](assets/1744163947938-9d668012-6338-4c8d-9feb-09697e061ec6.png)
 
 ### 硬链接
 怎么创建硬链接？（把软链接创建过程中的 -s 去掉就是创建硬链接的语法。） 
@@ -462,7 +462,7 @@ ln Hello.java Hello.java2
 
 通过测试得知：inode号一致，说明创建的硬链接和原文件是同一个文件。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744164272918-35d35278-2d5b-449a-b3a5-e3c405453f2b.png)
+![](assets/1744164272918-35d35278-2d5b-449a-b3a5-e3c405453f2b.png)
 
 通过操作硬链接，目标文件会改变吗？操作目标文件，硬链接会改变吗？ 答案是：当然会。
 
@@ -473,7 +473,7 @@ ln Hello.java Hello.java2
 + 硬链接机制和复制粘贴还不一样，复制粘贴之后的文件，修改其中之一，另一个不会变，但是硬链接就不一样了。
 
 ## 文件压缩与解压缩
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 tar是在linux系统当中完成压缩和解压缩的命令。
 
@@ -518,7 +518,7 @@ tar -zxvf mytxt.tar.gz 【解压到当前目录下】
 tar -zxvf mytxt.tar.gz -C test【将mytxt.tar.gz压缩包解压到test目录】 
 
 ## 文件编辑vi & vim
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### vi与vim概述
 vi 和 vim 都是在 Linux 和 Unix 中常用的基于字符终端的文本编辑器。
@@ -579,21 +579,21 @@ x命令：命令行模式下，x命令会删除单个字符。
 a命令：在光标后面插入。
 
 ## 系统命令
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 系统当前时间 
 date命令：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744165864121-7e1422a6-4984-43c9-ac6f-3aef8b0586f8.png)
+![](assets/1744165864121-7e1422a6-4984-43c9-ac6f-3aef8b0586f8.png)
 
 ### 切换用户 
 su 用户名
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744165895671-13e5b71e-7cf9-4c9c-8096-dc8c3e43f5ca.png)
+![](assets/1744165895671-13e5b71e-7cf9-4c9c-8096-dc8c3e43f5ca.png)
 
 **<font style="color:#DF2A3F;">sudo 命令</font>**：表示使用超级管理员身份执行该命令，如果你当前不是管理员，希望以管理员身份执行某个命令时，使用sudo，需要输入超级管理员的密码：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744166200796-408f2d49-1d26-47ed-8e78-ea0a0bfd8249.png)
+![](assets/1744166200796-408f2d49-1d26-47ed-8e78-ea0a0bfd8249.png)
 
 ### echo命令
 #### 输出字符串
@@ -604,7 +604,7 @@ echo "Hello, world!"
 
 这将会输出 `Hello, world!` 和一个换行符。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797373172-418e1376-70f4-46ca-b834-e4c0d0024106.png)
+![](assets/1713797373172-418e1376-70f4-46ca-b834-e4c0d0024106.png)
 
 #### 输出变量
 
@@ -615,7 +615,7 @@ echo "My name is $name"
 
 这将会输出 `My name is John` 和一个换行符。在输出字符串时，使用 `$` 符号加上变量名即可。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797529679-cb34c68d-7577-43de-9b3a-1860a6c7bc9c.png)
+![](assets/1713797529679-cb34c68d-7577-43de-9b3a-1860a6c7bc9c.png)
 
 #### 输出多行
 
@@ -627,7 +627,7 @@ line 3"
 
 这将会输出三行文本，每行一条。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797624949-b7e6b313-2768-4c40-9306-50a127368623.png)
+![](assets/1713797624949-b7e6b313-2768-4c40-9306-50a127368623.png)
 
 #### 输出特殊字符
 
@@ -637,22 +637,22 @@ echo -e "Line 1\nLine 2\tTable"
 
 这将会输出两行文本，第一行后接一个换行符，第二行中的 `Table`前有一个制表符。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713797702049-41b40176-f23b-4c51-97be-f7d021ad095d.png)
+![](assets/1713797702049-41b40176-f23b-4c51-97be-f7d021ad095d.png)
 
 ### diff命令
 diff命令可以用来比较两个文件的不同之处：
 
 a.txt文件内容如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713844670086-0c098ea8-872f-49df-98d1-93b7533ed0be.png)
+![](assets/1713844670086-0c098ea8-872f-49df-98d1-93b7533ed0be.png)
 
 b.txt文件内容如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713844723002-a83ac3ea-8e92-432d-af65-c017d76eee68.png)
+![](assets/1713844723002-a83ac3ea-8e92-432d-af65-c017d76eee68.png)
 
 比较a.txt和b.txt文件之间的区别：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713844743910-f3bd5d68-fa1d-4b0d-b16b-12582870e344.png)
+![](assets/1713844743910-f3bd5d68-fa1d-4b0d-b16b-12582870e344.png)
 
 以上的比较结果中：1c1是什么含义？3c3,4是什么含义？
 
@@ -670,13 +670,13 @@ c 表示 change，改变的意思。
 
 凡是在控制台上能够打印出来的，统一都可以重定向，可以将其打印到控制台的行为重定向到文件或其它设备。例如：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713840070004-b27c541e-748c-42e4-a7a7-d9b2814401c0.png)
+![](assets/1713840070004-b27c541e-748c-42e4-a7a7-d9b2814401c0.png)
 
 将 ls -al的执行结果重定向到 ls.txt 文件中。
 
 ls.txt文件内容如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713840131520-04663fba-7d5c-4ce3-a5c5-9cd5a363c793.png)
+![](assets/1713840131520-04663fba-7d5c-4ce3-a5c5-9cd5a363c793.png)
 
 以上方式是采用覆盖的方式，所谓覆盖方式指的是，每一次执行时，都会把 ls.txt 文件全部清空，然后重新写入。
 
@@ -697,11 +697,11 @@ ls.txt文件内容如下：
 
 a.txt文件内容如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713853901620-dc7169bc-c636-42b9-a998-6f1a6a4adb43.png)
+![](assets/1713853901620-dc7169bc-c636-42b9-a998-6f1a6a4adb43.png)
 
 将 a.txt 文件中的内容输入给 sort命令：`sort -n`**对文本内容进行“数值排序”**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785559307973-1e6765da-fbf9-4d6e-b31a-39fedbaf990a.png)
+![](assets/1785559307973-1e6765da-fbf9-4d6e-b31a-39fedbaf990a.png)
 
 #### `<`和 `<<`的区别
 | **特性** | **标准输入重定向 (`<`)** | **内嵌文档语法 (`<<`)，特殊形式的输入重定向** |
@@ -711,18 +711,18 @@ a.txt文件内容如下：
 
 从终端上接收一个多行的文本（**文本就是数据**），如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766332484075-76c027a9-addf-40a6-9fe0-201e380c3d8b.png)
+![](assets/1766332484075-76c027a9-addf-40a6-9fe0-201e380c3d8b.png)
 
 其中 `EOF`是文档的结束标记，当然，这个结束标记是可以随便起名的，例如：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766332536413-5bb53d9e-cf09-4521-9abd-d0fe4340c974.png)
+![](assets/1766332536413-5bb53d9e-cf09-4521-9abd-d0fe4340c974.png)
 
 #### 在终端中写入多行内容
 通常有这样一个需求：在终端上写配置文件。
 
 当然，大家可以使用 vi 命令，完全可行，还有其他方式吗？有的。标准写法如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766331735148-be2ee46f-207c-4f2f-b66d-e00037c3a45a.png)
+![](assets/1766331735148-be2ee46f-207c-4f2f-b66d-e00037c3a45a.png)
 
 **解释以上的命令：**
 
@@ -810,7 +810,7 @@ grep -E 'pattern' file
 ### 管道 | 
 将**前面命令的输出**作为**后面命令的输入**，可以**叠加**，例如： 
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713856744313-bc2e9211-533f-4ab3-8767-80056107650f.png)
+![](assets/1713856744313-bc2e9211-533f-4ab3-8767-80056107650f.png)
 
 ### 查看系统进程 
 ps [命令参数]
@@ -819,7 +819,7 @@ ps [命令参数]
 	-e :显示当前所有进程  
 	-f :显示 UID,PPID,C 与 STIME 栏位信息
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713790319058-3682e44d-2e4f-4c9f-ab46-390cdc38d42b.png)  
+![](assets/1713790319058-3682e44d-2e4f-4c9f-ab46-390cdc38d42b.png)  
 
 | **列名** | **含义** |
 | --- | --- |
@@ -847,21 +847,21 @@ sleep命令：可以让当前进程进入休眠状态。
 
 找到进程：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713858362915-49770ad5-f749-43b6-9e30-ee07573c9a3a.png)
+![](assets/1713858362915-49770ad5-f749-43b6-9e30-ee07573c9a3a.png)
 
 杀死进程：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713858397155-0babe7db-4a5e-471a-90f7-bad9ea0ab034.png)
+![](assets/1713858397155-0babe7db-4a5e-471a-90f7-bad9ea0ab034.png)
 
 杀死所有的sleep进程：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713864069020-1baf4caf-0153-4f75-93af-04043de28a0c.png)
+![](assets/1713864069020-1baf4caf-0153-4f75-93af-04043de28a0c.png)
 
 ### 系统性能相关
 #### top命令
 `top` 命令是用于查看正在运行的系统进程信息的命令。它会**<font style="color:#DF2A3F;">实时</font>**动态地显示系统资源的使用情况，如 CPU 占用率、内存使用情况、进程情况等。通常用于系统监控和性能调优。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785561172979-bcc6f2f2-39e4-4fe3-b526-c3d559bf96f3.png)
+![](assets/1785561172979-bcc6f2f2-39e4-4fe3-b526-c3d559bf96f3.png)
 
 | **行** | **内容** | **一句话解释** |
 | --- | --- | --- |
@@ -878,7 +878,7 @@ sleep命令：可以让当前进程进入休眠状态。
 3. 关注内存使用情况。
 4. 交换分区如果未使用，是个好现象。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785561423363-cd683369-a65e-4a93-ae45-3c4b2c2458de.png)
+![](assets/1785561423363-cd683369-a65e-4a93-ae45-3c4b2c2458de.png)
 
 **僵尸进程**：在操作系统中，僵尸进程 (Zombie Process) 是指一个已经执行结束的进程，但其进程描述符仍然留在进程列表中，它不再执行任何其他操作，但仍然占用一定内存空间。
 
@@ -889,7 +889,7 @@ q：退出top命令。
 #### df命令
 `df` 命令是 Linux 系统中的一个磁盘空间使用情况查询命令，用于显示当前文件系统的磁盘空间使用状况，以及文件系统的挂载点、磁盘大小、已用空间、可用空间、使用占比等信息。`df`命令是 "disk free" 的缩写。
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785561939296-230b398f-02f5-4631-aded-8f1548913912.png)
+![](assets/1785561939296-230b398f-02f5-4631-aded-8f1548913912.png)
 
 **程序员重点关注：**`/dev/mapper/cs-root  27156264 5741700 21414564   22% /`
 
@@ -951,7 +951,7 @@ poweroff
 ### ifconfig命令
 查看网卡的ip地址。在windows当中是：ipconfig。在linux当中是ifconfig。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713858561977-899f3232-bf73-4ffa-bd35-369ee1aac681.png)
+![](assets/1713858561977-899f3232-bf73-4ffa-bd35-369ee1aac681.png)
 
 ### ping命令
 查看计算机之间是否可以正常通信
@@ -961,9 +961,9 @@ poweroff
 + ping ip地址
 + ping 域名
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713858607022-b0d0a516-e07a-4e6b-b333-9f3e6f606349.png)
+![](assets/1713858607022-b0d0a516-e07a-4e6b-b333-9f3e6f606349.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713858633521-50af4d3c-42d6-4316-ac38-078e983fab52.png)
+![](assets/1713858633521-50af4d3c-42d6-4316-ac38-078e983fab52.png)
 
 ### curl命令
 模拟用户访问，模拟浏览器行为。
@@ -1023,11 +1023,11 @@ curl -H "User-Agent: Mozilla/5.0" www.example.com
 
 下载tomcat ：wget [https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.20/bin/apache-tomcat-10.1.20.tar.gz](https://dlcdn.apache.org/tomcat/tomcat-10/v10.1.20/bin/apache-tomcat-10.1.20.tar.gz)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713859165609-94ba27e2-d483-43f5-beb6-c3fbb4037e50.png)
+![](assets/1713859165609-94ba27e2-d483-43f5-beb6-c3fbb4037e50.png)
 
 下载结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713859179902-e53d1b90-37f1-4948-ae62-65d529cc59f5.png)
+![](assets/1713859179902-e53d1b90-37f1-4948-ae62-65d529cc59f5.png)
 
 ### netstat查看网络连接状态及端口
 开发人员使用 `netstat` 最常用的几种用法如下：
@@ -1061,7 +1061,7 @@ netstat -tlnp | grep -E "(3306|5432|6379|27017)"  # 数据库端口
 # 8080/3000 - 应用服务
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766362851409-376ad6c5-7b4d-4e48-9509-bb00bf9ef0b6.png)
+![](assets/1766362851409-376ad6c5-7b4d-4e48-9509-bb00bf9ef0b6.png)
 
 `**LISTEN**`**表示服务正在监听端口，等待连接**
 
@@ -1087,7 +1087,7 @@ netstat -nat | grep TIME_WAIT
 ```
 
 ## 文件内容查看
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### cat命令
 语法：
@@ -1522,19 +1522,19 @@ head命令：显示文件头部内容。
 
 前三行：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713885261199-24d831d2-a550-4277-97cb-ba9ec9921db7.png)
+![](assets/1713885261199-24d831d2-a550-4277-97cb-ba9ec9921db7.png)
 
 前9个字符：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713885323301-73fd1085-b00a-4c68-9c18-91fed0417bf5.png)
+![](assets/1713885323301-73fd1085-b00a-4c68-9c18-91fed0417bf5.png)
 
 显示多个文件的前3行：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713885370294-0774c02d-f6d7-4227-a77d-19d693944663.png)
+![](assets/1713885370294-0774c02d-f6d7-4227-a77d-19d693944663.png)
 
 不带文件名标识：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713885410744-ffe83da3-4c5b-4ec5-957f-b04656ac14af.png)
+![](assets/1713885410744-ffe83da3-4c5b-4ec5-957f-b04656ac14af.png)
 
 ### tail命令
 tail命令：显示文件尾部内容。
@@ -1553,33 +1553,33 @@ tail命令：显示文件尾部内容。
 
 默认显示文件末尾的后10行：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923520305-80cbdc30-dddf-4ee2-bcea-26fe36a4f8c5.png)
+![](assets/1713923520305-80cbdc30-dddf-4ee2-bcea-26fe36a4f8c5.png)
 
 指定行数：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923563437-fca4432a-39c0-4abc-ba9e-8e1453509f81.png)
+![](assets/1713923563437-fca4432a-39c0-4abc-ba9e-8e1453509f81.png)
 
 一次查看多个文件：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923595776-135592d6-64e2-4319-882e-a78dedcc13d6.png)
+![](assets/1713923595776-135592d6-64e2-4319-882e-a78dedcc13d6.png)
 
 不显示文件名：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923616384-5b379f57-e58c-4030-ab3d-098f73aec4d5.png)
+![](assets/1713923616384-5b379f57-e58c-4030-ab3d-098f73aec4d5.png)
 
 监控文件变化：
 
 在窗口1中：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923673654-27f7c82f-af88-49f6-a83e-cd3be45cd752.png)
+![](assets/1713923673654-27f7c82f-af88-49f6-a83e-cd3be45cd752.png)
 
 在窗口2中：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923700558-1d356e9a-ee22-490d-8509-bf46ce702c78.png)
+![](assets/1713923700558-1d356e9a-ee22-490d-8509-bf46ce702c78.png)
 
 可以看到窗口1发生了变化：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713923746941-b25bb907-48c4-45e9-8931-078c53c3976c.png)
+![](assets/1713923746941-b25bb907-48c4-45e9-8931-078c53c3976c.png)
 
 ## Linux 用户管理
 Linux系统中超级用户是root，通过超级用户root可以创建其它的普通用户。
@@ -1594,7 +1594,7 @@ Linux系统中超级用户是root，通过超级用户root可以创建其它的�
 + 用户的管理
 + 为用户主目录之外的目录授权
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 用户组的管理
 每个用户都有一个用户组，系统可以对一个用户组中的所有用户进行集中管理。
@@ -1609,7 +1609,7 @@ Linux系统中超级用户是root，通过超级用户root可以创建其它的�
 cat /etc/group
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667445334980-7b5bdbd2-ce64-4563-9bfe-db500e1992d5.png)
+![](assets/1667445334980-7b5bdbd2-ce64-4563-9bfe-db500e1992d5.png)
 
 每一个用户组四部分组成：<font style="color:#E8323C;">组名:密码占位符:GID:该用户组中的用户列表</font>
 
@@ -1630,7 +1630,7 @@ groups
 [root@localhost ~]# groups root
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667462762537-adc5856a-8887-4e08-821c-a58d739c202a.png)
+![](assets/1667462762537-adc5856a-8887-4e08-821c-a58d739c202a.png)
 
 以上结果表示`root`用户属于`root`组。
 
@@ -1638,7 +1638,7 @@ groups
 [laodu@localhost ~]$ groups laodu
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744185405192-a03a1180-fdba-4430-9411-f05a4228ddfb.png)
+![](assets/1744185405192-a03a1180-fdba-4430-9411-f05a4228ddfb.png)
 
 以上结果表示`laodu`用户的主组`laodu`，附加组`wheel`
 
@@ -1720,26 +1720,26 @@ passwd lisi
 
 通过查看/etc/passwd文件可以看到系统中有哪些用户，例如执行：cat /etc/passwd
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744185962023-60fd25cc-3cb4-4f25-a038-4d24b8d000dc.png)
+![](assets/1744185962023-60fd25cc-3cb4-4f25-a038-4d24b8d000dc.png)
 
 以上信息描述了什么？
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744185974914-4f213a1f-76f5-425e-b52a-bb60f4897420.png)
+![](assets/1744185974914-4f213a1f-76f5-425e-b52a-bb60f4897420.png)
 
 密码会单独存储在/etc/shadow文件中，例如执行：cat /etc/shadow
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744186197751-701db8e2-8503-447f-9c12-d5e407e9a651.png)
+![](assets/1744186197751-701db8e2-8503-447f-9c12-d5e407e9a651.png)
 
 可以看到这个密码是通过某种算法进行加密的。
 
 #### 切换用户
 从root账户切换到普通账户
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744186321302-a01b4469-512e-40b8-946a-d468672b31c1.png)
+![](assets/1744186321302-a01b4469-512e-40b8-946a-d468672b31c1.png)
 
 从普通用户切换到超级管理员需要密码
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744186352129-4e2eab77-f039-4f5d-bde7-a8e904a87316.png)
+![](assets/1744186352129-4e2eab77-f039-4f5d-bde7-a8e904a87316.png)
 
 注意：从普通用户切换到高级用户需要密码。密码输入时不回显。
 
@@ -1835,7 +1835,7 @@ usermod -G dev xiaoming
 ```
 
 ## 文件权限
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 文件权限概述
 Linux为了保证系统中每个文件的安全，引入了文件权限机制。针对于系统中的每一个文件Linux都可以提供精确的权限控制。它可以做到**<font style="color:#E8323C;">不同的用户</font>**对**<font style="color:#E8323C;">同一个文件</font>**具有不同的操作权利。而通常这个权利包括以下3个：
@@ -1859,11 +1859,11 @@ Linux为了保证系统中每个文件的安全，引入了文件权限机制。
 ### 查看文件权限
 采用“ls -l”命令可以查看文件的具体权限，如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1671701444965-b9779580-a535-4a33-84c2-fa75f6c1af41.png)
+![](assets/1671701444965-b9779580-a535-4a33-84c2-fa75f6c1af41.png)
 
 权限信息在哪里呢？看下图：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1671701647547-9e0a6b44-8aad-4448-9f6b-c8914b86d476.png)
+![](assets/1671701647547-9e0a6b44-8aad-4448-9f6b-c8914b86d476.png)
 
 每一个文件或目录采用ls -l查看之后，第一个字段描述了文件类型+文件的权限。第一个字段共10个字符：
 
@@ -1906,7 +1906,7 @@ chmod g-w,o-w Hello.java
 
 我们查看HelloWorld.java文件的权限：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672887421493-a5356333-300e-42eb-ae6b-ab36c5432853.png)
+![](assets/1672887421493-a5356333-300e-42eb-ae6b-ab36c5432853.png)
 
 文件拥有者：读和写
 
@@ -1916,21 +1916,21 @@ chmod g-w,o-w Hello.java
 
 我们将文件拥有者的写权限删除：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672887526575-22a4274c-c125-4dd8-92bd-161449f4f463.png)
+![](assets/1672887526575-22a4274c-c125-4dd8-92bd-161449f4f463.png)
 
 我们尝试使用vim命令编辑HelloWorld.java文件，当你使用vim编辑时：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672887622602-31b9d24f-3ad7-40ac-a92f-ef4f07854725.png)
+![](assets/1672887622602-31b9d24f-3ad7-40ac-a92f-ef4f07854725.png)
 
 发现该文件是只读的，不支持编辑。
 
 我们再把写的权限加上：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672889098798-79ffce26-93b8-4d5c-ba00-61b357bdfabf.png)
+![](assets/1672889098798-79ffce26-93b8-4d5c-ba00-61b357bdfabf.png)
 
 再使用vim命令打开该文件：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672889130487-60843f6c-883a-436f-b5de-41d44f392a77.png)
+![](assets/1672889130487-60843f6c-883a-436f-b5de-41d44f392a77.png)
 
 可以看到，这个时候文件可以编辑了。
 
@@ -1968,13 +1968,13 @@ chmod 三个数字 文件名
 
 也就是说文件拥有者的权限是rwx，同组人员是r-x，其他组人员是：r-x
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672891331189-13841786-6752-4068-b4c3-953aa4d70760.png)
+![](assets/1672891331189-13841786-6752-4068-b4c3-953aa4d70760.png)
 
 再如：chmod 700 HelloWorld.java
 
 表示文件拥有者权限：rwx，同组人员无权限，其他组人员无权限
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672891418802-0141745f-ad7b-4ecc-81af-c4152371c647.png)
+![](assets/1672891418802-0141745f-ad7b-4ecc-81af-c4152371c647.png)
 
 ### chown修改文件拥有者
 在 Linux 中，可以使用 `chown` 命令来修改指定文件或目录的拥有者和所属组。`chown` 命令的基本语法如下：
@@ -2004,7 +2004,7 @@ sudo chown -R userA:groupA /home/user/dir/
 注意，在使用 `chown` 命令时，需要有足够的权限才能修改文件或目录的拥有者和所属组。一般需要使用 `sudo` 命令或使用具有相应权限的用户来执行。
 
 ## 软件的安装与卸载
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 软件安装方式概述
 CentOS安装软件的方式主要包括：
@@ -2108,27 +2108,27 @@ export PATH=$PATH:$JAVA_HOME/bin
     1. 官网：[https://tomcat.apache.org/](https://tomcat.apache.org/)
     2. 下载tomcat10
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684199209026-db076763-86df-44e7-915d-a0bc8460d31e.png)
+![](assets/1684199209026-db076763-86df-44e7-915d-a0bc8460d31e.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684199256090-467defc4-b8e0-46bb-811d-9047b44db926.png)
+![](assets/1684199256090-467defc4-b8e0-46bb-811d-9047b44db926.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684200075801-ce15a253-cef5-48f9-bc43-ef5b99ac5700.png)
+![](assets/1684200075801-ce15a253-cef5-48f9-bc43-ef5b99ac5700.png)
 
 3. 使用FTP工具将以上压缩包上传到CentOS。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744191243457-810c1e65-3482-4d76-9967-6799f1b1693a.png)
+![](assets/1744191243457-810c1e65-3482-4d76-9967-6799f1b1693a.png)
 
 4. 解压到当前目录下
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785665991172-26f3633b-878e-42ce-b869-1b931211f01d.png)
+![](assets/1785665991172-26f3633b-878e-42ce-b869-1b931211f01d.png)
 
 5. **绿色解压版**软件一般存放在 `opt` 目录下，使用mv命令tomcat移动到该目录下
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785666077829-2b7a3371-6bc8-4e57-9f17-1a5dbb162732.png)
+![](assets/1785666077829-2b7a3371-6bc8-4e57-9f17-1a5dbb162732.png)
 
 6. 为了方便配置环境变量，将目录名重命名
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785666127582-bd6d2098-9f7a-452c-9ead-873384cd8f08.png)
+![](assets/1785666127582-bd6d2098-9f7a-452c-9ead-873384cd8f08.png)
 
 现在Tomcat服务器的根路径是：`/opt/tomcat10`
 
@@ -2148,11 +2148,11 @@ source /etc/profile
 
 8. 启动Tomcat
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785666333859-5a616c52-d741-4f63-a820-4f20a27a6e85.png)
+![](assets/1785666333859-5a616c52-d741-4f63-a820-4f20a27a6e85.png)
 
 9. 查看服务器IP地址
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785666371492-6886de09-e079-4575-a733-d189ce94fadb.png)
+![](assets/1785666371492-6886de09-e079-4575-a733-d189ce94fadb.png)
 
 10. 永久放行防火墙端口8080
 
@@ -2182,11 +2182,11 @@ systemctl stop firewalld.service
 
 11. 打开windows上的浏览器，输入地址访问
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785666604528-c3155e0f-995d-4dbd-822b-bb0c0b9bd7b8.png)
+![](assets/1785666604528-c3155e0f-995d-4dbd-822b-bb0c0b9bd7b8.png)
 
 12. 关闭tomcat服务器
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785666645983-ddd77308-fe52-479b-9388-b4e7362708fc.png)
+![](assets/1785666645983-ddd77308-fe52-479b-9388-b4e7362708fc.png)
 
 服务器关闭之后，重新打开一个全新的浏览器，再次输入访问地址，会发现无法访问了。
 
@@ -2222,11 +2222,11 @@ dnf install https://dev.mysql.com/get/mysql80-community-release-el9-5.noarch.rpm
 
 MySQL Yum存储库怎么获取？如下图所示：从mysql官网获取
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713945348865-ebad712f-ea07-4063-b273-0ea300d24b5f.png)
+![](assets/1713945348865-ebad712f-ea07-4063-b273-0ea300d24b5f.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713945372329-75f1a8b5-a8be-427f-8ac2-b5ddc10d7f2e.png)
+![](assets/1713945372329-75f1a8b5-a8be-427f-8ac2-b5ddc10d7f2e.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1713945423741-0b0a9407-c4dd-4237-90ce-313c2d657527.png)
+![](assets/1713945423741-0b0a9407-c4dd-4237-90ce-313c2d657527.png)
 
 3. 安装MySQL 8
 
@@ -2284,7 +2284,7 @@ show variables like '%character%';
 
 可以查看MySQL的字符集设置。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1684291150915-c1071748-6855-496a-949d-8e3de9bed2e6.png)
+![](assets/1684291150915-c1071748-6855-496a-949d-8e3de9bed2e6.png)
 
 2. 如果字符集不是utf8，可以在/etc/my.cnf文件中进行配置，在[mysqld]下面添加如下配置：/etc/my.cnf是mysql的配置文件。
 
@@ -2363,11 +2363,11 @@ systemctl restart firewalld.service
     4. 执行sql脚本文件（**<font style="color:#DF2A3F;">oa.sql</font>**）完成数据初始化。
 3. 将war包拷贝到tomcat的webapps目录下
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785680490409-2857aab1-cb39-40a9-a571-bd341d274279.png)
+![](assets/1785680490409-2857aab1-cb39-40a9-a571-bd341d274279.png)
 
 4. **启动**Tomcat服务器，然后**关闭**Tomcat服务器，这一步的作用是将war包自动解压
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785680524030-82b14207-e7c7-43db-abfa-8e4f8ff7d4d9.png)
+![](assets/1785680524030-82b14207-e7c7-43db-abfa-8e4f8ff7d4d9.png)
 
 5. 修改连接数据库的信息
 
@@ -2383,7 +2383,7 @@ jdbc.password=abC_123456
 6. 启动Tomcat服务器
 7. 打开浏览器，输入访问地址访问[http://192.168.28.200:8080/oa/emp/list](http://192.168.28.200:8080/oa/emp/list)
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785680636633-fb53fd04-ebd8-4e78-a03d-a89ce5d8c242.png)
+![](assets/1785680636633-fb53fd04-ebd8-4e78-a03d-a89ce5d8c242.png)
 
 8. 实时查看Tomcat服务器后台日志
 
@@ -2394,40 +2394,40 @@ tail -f catalina.out
 ```
 
 ## 将 web 应用部署到阿里云
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 注册阿里云账号
 [https://www.aliyun.com/](https://www.aliyun.com/)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744203475322-c4fed75a-7abe-4e64-9675-4bce78245107.png)
+![](assets/1744203475322-c4fed75a-7abe-4e64-9675-4bce78245107.png)
 
 有账号的登录，没有账号的注册，注册后需要进行账号实名认证。
 
 ### 购买阿里云服务器
 登录成功后，首页应该有`产品`，`产品`下有`云服务器ECS`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744203861831-b7dde9f0-0080-41c3-95d2-02a86beaa10b.png)
+![](assets/1744203861831-b7dde9f0-0080-41c3-95d2-02a86beaa10b.png)
 
 有经济实力的可以购买，没钱的可以找找看看有没有试用版本的，阿里云对于新用户来说一般是提供试用版本的。我这里选择的免费试用版本：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1690350761704-8bd038aa-c4dc-4757-88de-45078a0e8f7e.png)
+![](assets/1690350761704-8bd038aa-c4dc-4757-88de-45078a0e8f7e.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1690350817138-da4afa6d-0682-48a1-8f9b-795b90d7f5c4.png)
+![](assets/1690350817138-da4afa6d-0682-48a1-8f9b-795b90d7f5c4.png)
 
 创建的实例是这样的：你需要记住这个公网IP。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1690440018470-f457bd16-6d75-4809-81d1-6fe40b14197c.png)
+![](assets/1690440018470-f457bd16-6d75-4809-81d1-6fe40b14197c.png)
 
 管理员：root，新建的实例需要设置密码：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1690440075999-32ec9939-c3ad-4723-84a2-023391ccac84.png)
+![](assets/1690440075999-32ec9939-c3ad-4723-84a2-023391ccac84.png)
 
 ### 使用 MobaXterm 连接阿里云服务器
 默认情况下阿里云服务器的“密码认证”是没有开启的。需要通过修改相关配置，来开启“密码认证”。
 
 在阿里云服务器实例中找到如下图的VNC连接：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1690447058866-5c65c41d-b349-4357-af13-90e89ccbe1e0.png)
+![](assets/1690447058866-5c65c41d-b349-4357-af13-90e89ccbe1e0.png)
 
 然后输入用户名root和密码。登录成功之后找到该文件：/etc/ssh/sshd_config
 
@@ -2458,7 +2458,7 @@ systemctl restart firewalld.service
 ## 虚拟机克隆完整步骤
 **<font style="color:#DF2A3F;">只适合于 CentOS Stream10 的版本：</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 设置母机
 为母机设置静态 IP：**母机设静态IP，是为了作为克隆的“模板”，确保克隆出来的每个子节点都在我们规划的IP段内，且集群通信稳定。**
@@ -2565,7 +2565,7 @@ ping -c 2 www.baidu.com
 如果需要再次克隆新的虚拟机，最好是基于母机进行再次克隆。
 
 ## shell 编程（了解）
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Linux系统结构
 Linux操作系统是一种开放源代码的类UNIX操作系统，它的结构分为内核、Shell和应用程序三个层次。
@@ -2574,7 +2574,7 @@ Linux操作系统是一种开放源代码的类UNIX操作系统，它的结构�
 2. Shell层：Shell是Linux系统的命令行解释器，它负责将用户输入的命令解释并执行。Linux系统上有多种Shell，其中最常用的是Bash Shell。
 3. 应用层：应用层是Linux系统上的各种应用程序和服务，包括文本编辑器、图形界面、Web服务器、邮件服务器、数据库服务器等。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1690870480456-7ade66a7-3979-4942-924e-b60806220df9.png)
+![](assets/1690870480456-7ade66a7-3979-4942-924e-b60806220df9.png)
 
 他们的关系：**用户通过Shell或应用程序发出指令，Shell将指令翻译给内核，内核直接驱动硬件执行。**
 
@@ -2602,7 +2602,7 @@ Linux操作系统是一种开放源代码的类UNIX操作系统，它的结构�
 cat /etc/shells
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766467078254-06bf2442-891a-453d-9a7a-b1096ef7ee10.png)
+![](assets/1766467078254-06bf2442-891a-453d-9a7a-b1096ef7ee10.png)
 
 虽然在 CentOS Stream 10 中输出的结果是 4 行。这并不是 4 中 Shell，这只是一种 Shell，它就是 Bash。如果需要其他 Shell，可以自行安装。
 

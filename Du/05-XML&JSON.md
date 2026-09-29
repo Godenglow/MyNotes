@@ -1,7 +1,7 @@
 # XML&JSON
 
 ## XML 概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 XML（eXtensible Markup Language，可扩展标记语言）是一种用于存储和传输数据的标记语言，由万维网联盟（W3C）于1998年推出。
 
@@ -62,7 +62,7 @@ XML（eXtensible Markup Language，可扩展标记语言）是一种用于存储
 + 用作协议（如 SOAP 协议）
 
 ## XML 约束
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### DTD
 DTD（Document Type Definition）是XML文档的一种模式定义方式，它定义了XML文档的结构和合法元素。DTD可以确保XML文档遵循预定义的结构和规则。
@@ -95,7 +95,7 @@ DTD（Document Type Definition）是XML文档的一种模式定义方式，它�
 
 在 IDEA 工具中可以校验 XML 文件是否符合 DTD 语法，不符合会报错：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750079732068-a4674cbe-85ea-4dad-b115-80c270fe70c3.png)
+![](assets/1750079732068-a4674cbe-85ea-4dad-b115-80c270fe70c3.png)
 
 #### 外部DTD示例
 **books.dtd**文件：
@@ -243,7 +243,7 @@ XSD（XML Schema Definition）是比DTD更强大、更灵活的XML模式定义�
 XSD比DTD功能强大得多，是现代XML应用开发中首选的模式定义方式。
 
 ## XSLT
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 XSLT（Extensible Stylesheet Language Transformations）是一种用于将 XML 文档转换为其他格式（如 HTML、XML 或纯文本）的语言。
 
@@ -344,7 +344,7 @@ XSLT（Extensible Stylesheet Language Transformations）是一种用于将 XML �
 ```
 
 ## XML 解析
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 XML解析主要有以下三种方式：DOM 解析、SAX 解析、StAX 解析
 
@@ -424,7 +424,7 @@ XML解析主要有以下三种方式：DOM 解析、SAX 解析、StAX 解析
 | **适用场景** | 小型XML、配置解析 | 超大XML、日志解析 | 大文件解析、Web API（**例如调用某个 web 接口，返回了大量数据，你需要分页获取数据，此时就需要灵活的控制，而 StAX 解析可以达到灵活控制**） |
 
 ## Java 解析 XML
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **Java 解析 XML 指的是：Java 读取 XML。**
 
@@ -503,7 +503,7 @@ XPath（XML Path Language）是一种用于在XML文档中定位节点的查询�
 #### DOM+XPath 解析
 要使用 DOM4J，需要引入它的 jar 包，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750127382735-07896330-fc54-4c48-9f4d-045e506e6f4f.png)
+![](assets/1750127382735-07896330-fc54-4c48-9f4d-045e506e6f4f.png)
 
 XML 文件：
 
@@ -832,13 +832,13 @@ public class StAXParserExample {
 + 两者的本质差异就是 **“回调” vs “迭代器”**
 
 ## Java 对象和 XML 互转
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 JAXB(Java Architecture for XML Binding)是最常用的XML绑定技术。
 
 使用 JAXB 需要引入以下 jar 包：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750134722987-0653b614-a51e-44bb-93ce-ddf48c6cb8d5.png)
+![](assets/1750134722987-0653b614-a51e-44bb-93ce-ddf48c6cb8d5.png)
 
 ### Java 对象转换为 XML
 
@@ -947,7 +947,7 @@ public class XMLToJavaObject {
 当然，Java 对象和 XML 互转，不仅仅有 JAXB 技术，还有其它的，例如：XStream、Jackson XML 等，感兴趣的可以自行研究。
 
 ## JSON 概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是JSON
 JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，它基于ECMAScript的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。
@@ -1007,7 +1007,7 @@ JSON支持的数据类型：
 JSON由于其简洁性和易用性，已成为现代Web开发中最流行的数据交换格式之一。
 
 ## XML 与 JSON 优缺点
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### XML的优点
 1. **格式统一，标准完善**：XML格式统一，符合W3C标准，被广泛接受和采用。
@@ -1060,7 +1060,7 @@ JSON由于其简洁性和易用性，已成为现代Web开发中最流行的数�
 然而，XML在文档处理、企业级应用和某些特定行业（如金融、医疗）中仍占据重要地位。两者的关系更多是互补而非替代，开发者应根据具体需求选择合适的工具。
 
 ## JavaScript 解析 JSON
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JavaScript 对象转换为 JSON
 
@@ -1091,7 +1091,7 @@ console.log(jsObject.age);  // 输出: 30
 ```
 
 ## Java 解析 JSON
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Java 解析 JSON 的常用库
 在Java语言中，常用的JSON解析库有以下几种，每种都有其特点和适用场景：
@@ -1179,7 +1179,7 @@ User user = adapter.fromJson(jsonString);
 ### Jackson 解析 JSON
 Jackson 库解析 JSON 需要引入以下 jar 包：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750140919534-f431c117-12f9-44de-87ab-91f99aa8dc8b.png)
+![](assets/1750140919534-f431c117-12f9-44de-87ab-91f99aa8dc8b.png)
 
 #### 实体类的定义
 
@@ -1294,7 +1294,7 @@ Google出品，API简洁，支持对象与JSON的直接转换。
 
 需要引入 jar 包：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1762691734455-63b17861-79dc-47c9-a506-c5ea71b0795c.png)
+![](assets/1762691734455-63b17861-79dc-47c9-a506-c5ea71b0795c.png)
 
 API 超级简单：
 

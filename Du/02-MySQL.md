@@ -1,6 +1,6 @@
 # MySQL
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是数据库
 ---
@@ -32,7 +32,7 @@
 + 数据库管理系统是数据库系统的核心组成部分，主要完成对数据库的操作与管理功能，实现数据库对象的创建、数据库存储数据的查询、添加、修改与删除操作和数据库的用户管理、权限管理等。
 + 常见的数据库管理系统有：MySQL、Oracle、DB2、MS SQL Server、SQLite、PostgreSQL、Sybase等。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 什么是SQL
 ---
@@ -58,7 +58,7 @@
 ## MySQL概述
 ---
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1619752945028-dbcb73aa-50e2-4b1c-947d-21da8d742e6d.png)
+![](assets/1619752945028-dbcb73aa-50e2-4b1c-947d-21da8d742e6d.png)
 
 + MySQL是一个关系型数据库管理系统，由瑞典MySQL AB公司开发，MySQL AB公司被Sun公司收购，Sun公司又被Oracle公司收购，目前属于Oracle公司。
 + MySQL是目前最流行的关系型数据库管理系统，在WEB应用方面MySQL是最好的RDBMS应用软件之一。 国内淘宝网站就使用的是MySQL集群。
@@ -70,7 +70,7 @@
     - MySQL对Java，C都有很好的支持，当然其他的语言也支持比如Python、PHP。
     - MySQL是可以定制的，采用了GPL协议，你可以修改源码来开发自己的MySQL系统。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## MySQL的下载
 ---
@@ -78,58 +78,58 @@
 ### 官网下载
 + 第一步：打开MySQL官网[https://www.mysql.com/](https://www.mysql.com/)
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1619753207824-f47a5a2c-3ee1-4d73-881d-be1bb67a8019.png)
+![](assets/1619753207824-f47a5a2c-3ee1-4d73-881d-be1bb67a8019.png)
 
 + 第二步：点击"DOWNLOADS"
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1619754075151-2e1900d9-0ee0-4905-b3dc-97b5598061f1.png)
+![](assets/1619754075151-2e1900d9-0ee0-4905-b3dc-97b5598061f1.png)
 
 + 第三步：当前页继续下拉，直到找到下图链接
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1619754206255-ee47b52c-e183-4401-a8e7-7b0e51452a00.png)
+![](assets/1619754206255-ee47b52c-e183-4401-a8e7-7b0e51452a00.png)
 
 + 第四步：点击上图链接，进入下面页面，其中“MySQL Community Server”是解压版mysql，“MySQL Installer for Windows”是安装版，这里我们选择解压版
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1619754239811-b4151058-268c-406b-bcd3-72a6d5771e4b.png)
+![](assets/1619754239811-b4151058-268c-406b-bcd3-72a6d5771e4b.png)
 
 + 第五步：点击上图“MySQL Community Server”
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620375449949-470a5fb1-8af6-4130-a424-129b8961cb8c.png)
+![](assets/1620375449949-470a5fb1-8af6-4130-a424-129b8961cb8c.png)
 
 + 第六步：点击上图第1个“Download”
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1619754349149-75c6289e-0461-4c82-bf0b-388471535683.png)
+![](assets/1619754349149-75c6289e-0461-4c82-bf0b-388471535683.png)
 
 + 第七步：点击上图“No thanks, just start my download.”开始下载，直到下载完毕。
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620375547996-62d248ee-f33d-41a5-ba14-50cf38405d9b.png)
+![](assets/1620375547996-62d248ee-f33d-41a5-ba14-50cf38405d9b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## MySQL安装与配置
 ---
 
 + 将下载的zip压缩包解压，我这里直接解压到C盘的根目录下
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620375547996-62d248ee-f33d-41a5-ba14-50cf38405d9b.png)
+![](assets/1620375547996-62d248ee-f33d-41a5-ba14-50cf38405d9b.png)
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620376986790-01106d3e-b89f-453a-98cb-f2a86d4b2544.png)
+![](assets/1620376986790-01106d3e-b89f-453a-98cb-f2a86d4b2544.png)
 
 mysql的根目录为：C:\mysql-8.0.24-winx64
 
 + 将C:\mysql-8.0.24-winx64\bin目录配置到环境变量path当中
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620377142769-f797dd2c-4f82-4c8f-b5a2-d97bfbe52225.png)
+![](assets/1620377142769-f797dd2c-4f82-4c8f-b5a2-d97bfbe52225.png)
 
 + 初始化data目录
 
 使用管理员身份打开dos命令窗口（按win键，输入cmd，点击管理员身份运行）
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620377404683-4ed7c1d7-c8f1-44a3-ae32-0005183fcd09.png)
+![](assets/1620377404683-4ed7c1d7-c8f1-44a3-ae32-0005183fcd09.png)
 
 cd命令切换到mysql的bin目录下，执行 `mysqld --initialize --console` 进行data目录初始化，此时会在控制台生成一个随机密码，下图红框中就是随机密码
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620379266865-b043168d-8825-44e9-99ab-35ce6f8c8e25.png)
+![](assets/1620379266865-b043168d-8825-44e9-99ab-35ce6f8c8e25.png)
 
 技巧：左键选中密码，直接点击右键，此时密码已经复制到剪贴板中了，
 
@@ -137,15 +137,15 @@ cd命令切换到mysql的bin目录下，执行 `mysqld --initialize --console` �
 
 + 安装MySQL服务：cd命令切换到bin目录下，执行命令mysqld -install
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620379567159-f63f3527-3ba9-48fe-8a19-57e4c3767662.png)
+![](assets/1620379567159-f63f3527-3ba9-48fe-8a19-57e4c3767662.png)
 
 + 查看mysql服务名称：此电脑-右键-管理-服务和应用程序-服务-找MySQL服务，如下图mysql服务名称：MySQL
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620379678662-4b14e7a5-d17c-4c2b-917d-cc4d73b94ae5.png)
+![](assets/1620379678662-4b14e7a5-d17c-4c2b-917d-cc4d73b94ae5.png)
 
 + 启动MySQL服务：net start mysql，注意start后面是mysql服务的名称
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620379806288-826de76c-2827-419e-ab16-b6fc72afdbca.png)
+![](assets/1620379806288-826de76c-2827-419e-ab16-b6fc72afdbca.png)
 
 停止mysql服务的命令：net stop mysql
 
@@ -153,33 +153,33 @@ cd命令切换到mysql的bin目录下，执行 `mysqld --initialize --console` �
 
 + 登录mysql：输入mysql -uroot -p，然后回车，输入刚才的随机密码，然后回车，看到下图表示成功登录mysql
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620379936249-1bfaef7c-9ca7-4ddd-978a-b518acd834b0.png)
+![](assets/1620379936249-1bfaef7c-9ca7-4ddd-978a-b518acd834b0.png)
 
 + 修改MySQL的root账户密码：ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY '新密码';
 + **<font style="color:#DF2A3F;">注意：mysql8.4之后的版本需要这样：ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '123456';</font>**
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620382836782-5a7fef8d-15ce-4dca-a5d0-831b6f60f56e.png)
+![](assets/1620382836782-5a7fef8d-15ce-4dca-a5d0-831b6f60f56e.png)
 
 + 使用新密码登录mysql
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620382883258-875c0c1a-00c7-40f8-a8dd-edb1d39e94e0.png)
+![](assets/1620382883258-875c0c1a-00c7-40f8-a8dd-edb1d39e94e0.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## MySQL卸载
 ---
 
 + 停止mysql的服务
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620383089030-497a3bfc-74d5-43a6-9689-8f9e0b24dd73.png)
+![](assets/1620383089030-497a3bfc-74d5-43a6-9689-8f9e0b24dd73.png)
 
 + 删除mysql服务
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620383158420-3d5117c6-0c0f-421c-9570-407dac8c6612.png)
+![](assets/1620383158420-3d5117c6-0c0f-421c-9570-407dac8c6612.png)
 
 + 删除mysql的目录
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620383199727-89d46dc3-b4cf-4883-9a18-b0ee0c0fe6e8.png)
+![](assets/1620383199727-89d46dc3-b4cf-4883-9a18-b0ee0c0fe6e8.png)
 
 ## 登录MySQL
 ---
@@ -187,7 +187,7 @@ cd命令切换到mysql的bin目录下，执行 `mysqld --initialize --console` �
 ### 本地登录
 + 如果mysql的服务是启动的，打开dos命令窗口，输入：mysql -uroot -p，回车，然后输入root账户的密码
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620389190451-81319065-6d04-4094-97d0-13236236ad32.png)
+![](assets/1620389190451-81319065-6d04-4094-97d0-13236236ad32.png)
 
 解释“mysql -uroot -p”：
 
@@ -201,14 +201,14 @@ mysql是一个命令，在bin目录下，对应的命令文件是mysql.exe，如
 
 + 也可以将密码以明文的形式写到-p后面，这样做可能会导致你的密码泄露
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620389582655-74210644-318a-4e71-a242-192d61ef9fd9.png)
+![](assets/1620389582655-74210644-318a-4e71-a242-192d61ef9fd9.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 远程登录
 + 假设mysql安装在A机器上，现在你要在B机器上连接mysql数据库，此时需要使用远程登录，远程登录时加上远程机器的ip地址即可
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620389951870-e1585ee0-d1cd-4b89-973b-b3e6c4a20539.png)
+![](assets/1620389951870-e1585ee0-d1cd-4b89-973b-b3e6c4a20539.png)
 
 -h中的h实际上是host单词的首字母。在-h后面的是远程计算机的ip地址。
 
@@ -279,9 +279,9 @@ select version();
 
 还可以使用mysql.exe命令来查看版本信息（在没有登录mysql之前使用）：mysql --version
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620468207568-77aa05ff-8d65-47f6-b90d-2c176893a52f.png)
+![](assets/1620468207568-77aa05ff-8d65-47f6-b90d-2c176893a52f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据库表的概述
 ---
@@ -373,7 +373,7 @@ commit;
     - 第五步：查看是否初始化成功，执行：show tables;
 + 使用其他的mysql客户端工具也可以执行sql脚本，比如navicat。使用source命令执行sql脚本的优点：**<font style="color:#F5222D;">可支持大文件</font>**。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 熟悉测试数据
 ---
@@ -386,7 +386,7 @@ emp dept salgrade三张表分别存储什么信息
 
 查看表结构：desc或describe，语法格式：desc或describe +表名
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620441048844-4e9e7687-f9a2-4014-a014-f5a2c267b422.png)
+![](assets/1620441048844-4e9e7687-f9a2-4014-a014-f5a2c267b422.png)
 
 以上的结果展示的不是表中的数据，而是表的结构。
 
@@ -420,9 +420,9 @@ emp dept salgrade三张表分别存储什么信息
 
 查看一下表中的数据，来加深一下印象（以下SQL语句会在后面课程中学习）：
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620442749316-53eb0de4-bc2f-4af4-b6fa-a39eafc5265e.png)
+![](assets/1620442749316-53eb0de4-bc2f-4af4-b6fa-a39eafc5265e.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 简单查询
 ---
@@ -447,7 +447,7 @@ emp dept salgrade三张表分别存储什么信息
 select empno from emp; 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620444005101-f8b17d19-7943-42da-868a-4353bbc39d72.png)
+![](assets/1620444005101-f8b17d19-7943-42da-868a-4353bbc39d72.png)
 
 案例2：查询公司中所有员工姓名
 
@@ -455,26 +455,26 @@ select empno from emp;
 SELECT ENAME FROM EMP;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620444051586-c22b328d-726d-43a1-84c5-b61b053e4c76.png)
+![](assets/1620444051586-c22b328d-726d-43a1-84c5-b61b053e4c76.png)
 
 在mysql命令行客户端中，sql语句没有分号是不会执行的：
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620444166592-310dfb98-9eed-43ed-afa5-b479e03e0a79.png)
+![](assets/1620444166592-310dfb98-9eed-43ed-afa5-b479e03e0a79.png)
 
 末尾加上“;”就执行了：
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620444251765-5d3f1b6c-a491-4382-92a8-8ebb31a40b45.png)
+![](assets/1620444251765-5d3f1b6c-a491-4382-92a8-8ebb31a40b45.png)
 
 以上sql虽然以分号结尾之后执行了，但是报错了，错误信息显示：语法错误。
 
 假设一个SQL语句在书写过程中出错了，怎么终止这条SQL呢？\c
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620444994820-7b03fb95-5097-418c-bc6f-75e3613c7d17.png)
+![](assets/1620444994820-7b03fb95-5097-418c-bc6f-75e3613c7d17.png)
 
 - [ ] 任务1：查询所有部门名称。
 - [ ] 任务2：查询所有薪资等级。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 查多个字段
 ---
@@ -489,7 +489,7 @@ SELECT ENAME FROM EMP;
 select empno, ename from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620445192077-e454043b-9203-4ca0-83f3-7e7d991187c5.png)
+![](assets/1620445192077-e454043b-9203-4ca0-83f3-7e7d991187c5.png)
 
 字段的前后顺序无所谓（只是显示结果列的时候顺序变了）：
 
@@ -497,7 +497,7 @@ select empno, ename from emp;
 select ename, empno from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620445262526-49d81087-7e1b-44f2-afe7-e8bad59dc21d.png)
+![](assets/1620445262526-49d81087-7e1b-44f2-afe7-e8bad59dc21d.png)
 
 - [ ] 任务1：查询部门编号、部门名称以及位置。
 - [ ] 任务2：查询员工的名字以及工作岗位。
@@ -513,7 +513,7 @@ select ename, empno from emp;
 select * from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620446156182-c5776f47-0d54-45e1-b0a6-af8196b3cbcd.png)
+![](assets/1620446156182-c5776f47-0d54-45e1-b0a6-af8196b3cbcd.png)
 
 案例2：查询所有部门信息
 
@@ -521,7 +521,7 @@ select * from emp;
 select * from dept;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620452731531-c4b03af4-9f9f-46d8-acf5-7132317f89ae.png)
+![](assets/1620452731531-c4b03af4-9f9f-46d8-acf5-7132317f89ae.png)
 
 采用“*”进行查询存在的缺点：
 
@@ -534,7 +534,7 @@ select * from dept;
 
 - [ ] 任务1：查询所有的薪资等级以及每个薪资等级的最低工资和最高工资。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 查询时字段可参与数学运算
 ---
@@ -547,7 +547,7 @@ select * from dept;
 select ename, sal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620453626714-46aed4db-e9fb-49be-a9be-ce9662dbc962.png)
+![](assets/1620453626714-46aed4db-e9fb-49be-a9be-ce9662dbc962.png)
 
 案例2：查询每个员工的年薪（月薪 * 12）
 
@@ -555,12 +555,12 @@ select ename, sal from emp;
 select ename, sal * 12 from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620453661204-ca783845-5f31-49fc-90d8-0f4426598cde.png)
+![](assets/1620453661204-ca783845-5f31-49fc-90d8-0f4426598cde.png)
 
 - [ ] 任务1：查询每个员工月薪加1000之后的月薪
 - [ ] 任务2：查询每个员工月薪加1000之后的年薪
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 查询时字段可起别名
 ---
@@ -571,7 +571,7 @@ select ename, sal * 12 from emp;
 select ename, sal * 12 from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620453661204-ca783845-5f31-49fc-90d8-0f4426598cde.png)
+![](assets/1620453661204-ca783845-5f31-49fc-90d8-0f4426598cde.png)
 
 以上的查询结果列名“sal * 12”可读性较差，是否可以给查询结果的列名进行重命名呢？
 
@@ -582,7 +582,7 @@ select ename, sal * 12 from emp;
 select ename, sal * 12 as yearsal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620454420847-c739365b-440e-4cf7-b1e2-2bcf6d5cdb8b.png)
+![](assets/1620454420847-c739365b-440e-4cf7-b1e2-2bcf6d5cdb8b.png)
 
 通过as关键字起别名后，查询结果列显示yearsal，可读性增强。
 
@@ -593,7 +593,7 @@ select ename, sal * 12 as yearsal from emp;
 select ename, sal * 12 yearsal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620466356467-fb4612f8-72f6-4506-b2bc-1744846c171d.png)
+![](assets/1620466356467-fb4612f8-72f6-4506-b2bc-1744846c171d.png)
 
 + 通过以上测试，得知as可以省略，可以使用空格代替as，但如果别名中有空格呢？
 
@@ -603,7 +603,7 @@ select ename, sal * 12 yearsal from emp;
 select ename, sal * 12 year sal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620466540145-98adb10e-15a2-46df-9179-7e41ae1fc322.png)
+![](assets/1620466540145-98adb10e-15a2-46df-9179-7e41ae1fc322.png)
 
 可以看出，执行报错了，说语法有问题，这是为什么？分析一下：SQL语句编译器在检查该语句的时候，在year后面遇到了空格，会继续找from关键字，但year后面不是from关键字，所以编译器报错了。怎么解决这个问题？记住：如果别名中有空格的话，可以将这个别名使用双引号或者单引号将其括起来。
 
@@ -612,7 +612,7 @@ select ename, sal * 12 "year sal" from emp;
 select ename, sal * 12 'year sal' from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620467027246-b5cce57e-3ca3-4b3f-9298-a21fc3bb77c3.png)
+![](assets/1620467027246-b5cce57e-3ca3-4b3f-9298-a21fc3bb77c3.png)
 
 **<font style="color:#F5222D;">在mysql中，字符串既可以使用双引号也可以使用单引号，但还是建议使用单引号，因为单引号属于标准SQL。</font>**
 
@@ -623,13 +623,13 @@ select ename, sal * 12 'year sal' from emp;
 select ename, sal * 12 年薪 from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1620467760618-b5df74f5-c8ee-4e39-88a9-e10fde59bb56.png)
+![](assets/1620467760618-b5df74f5-c8ee-4e39-88a9-e10fde59bb56.png)
 
 **<font style="color:#F5222D;">别名是中文是可以的，但是对于低版本的mysql来说会报错，需要添加双引号或单引号。</font>**我们当前使用的mysql版本是：8.0.24
 
 - [ ] 任务：查询所有员工的信息，要求每个字段名采用中文显示。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 条件查询
 ---
@@ -674,7 +674,7 @@ where
 
     第三步：最后执行select，查询并将结果展示到控制台
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 等于、不等于
 ---
@@ -693,7 +693,7 @@ where
   sal = 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621907694609-eea9c573-f409-4291-b065-afdbf568e8c7.png)
+![](assets/1621907694609-eea9c573-f409-4291-b065-afdbf568e8c7.png)
 
 **案例2：查询员工FORD的岗位及月薪**
 
@@ -706,7 +706,7 @@ where
 	ename = 'FORD';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621907754724-3f628fe9-0c56-4057-8be7-60d0bf968b6c.png)
+![](assets/1621907754724-3f628fe9-0c56-4057-8be7-60d0bf968b6c.png)
 
 存储在表emp中的员工姓名是FORD，全部大写，如果在查询的时候，写成全部小写会怎样呢？
 
@@ -719,7 +719,7 @@ where
 	ename = 'ford';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621907908980-acfef2ac-247a-434a-846d-aebe132c534b.png)
+![](assets/1621907908980-acfef2ac-247a-434a-846d-aebe132c534b.png)
 
 通过测试发现，即使写成小写ford，也是可以查询到结果的，**<font style="color:#F5222D;">不过这里需要注意的是：在Oracle数据库当中是查询不到数据的，Oracle的语法要比MySQL的语法严谨。对于SQL语句本身来说是不区分大小写的，但是对于表中真实存储的数据，大写A和小写a还是不一样的，这一点Oracle做的很好。MySQL的语法更随性。另外在Oracle当中，字符串是必须使用单引号括起来的，但在MySQL当中，字符串可以使用单引号，也可以使用双引号</font>**，如下：
 
@@ -732,7 +732,7 @@ where
   ename = "FORD";
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621908335672-ce3770ed-b906-44ad-8e6a-1255e620f77c.png)
+![](assets/1621908335672-ce3770ed-b906-44ad-8e6a-1255e620f77c.png)
 
 **案例3：查询岗位是MANAGER的员工编号及姓名**
 
@@ -745,11 +745,11 @@ where
   job = 'MANAGER';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621908485311-e63dfa85-7530-4d2e-8652-f5885287dda7.png)
+![](assets/1621908485311-e63dfa85-7530-4d2e-8652-f5885287dda7.png)
 
 - [ ] **任务：查询工资级别是1的最低工资以及最高工资**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 不等于 <> 或 !=
 判断非等量关系，支持字符串、数字、日期类型等。不等号有两种写法，第一种<>，第二种!=，第二种写法和Java程序中的不等号相同，第一种写法比较诡异，不过也很好理解，比如<>3，表示小于3、大于3，就是不等于3。你get到了吗？
@@ -765,7 +765,7 @@ where
   sal <> 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621909279969-92f574b8-825b-4774-ab25-b5ccb058ebd5.png)
+![](assets/1621909279969-92f574b8-825b-4774-ab25-b5ccb058ebd5.png)
 
 **案例2：查询工作岗位不是MANAGER的员工姓名和岗位**
 
@@ -778,11 +778,11 @@ where
 	job <> 'MANAGER';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621909394164-d589f9f5-30a1-477c-aef6-b659ae36d9e8.png)
+![](assets/1621909394164-d589f9f5-30a1-477c-aef6-b659ae36d9e8.png)
 
 - [ ] **任务：查询不在部门编号为10的部门工作的员工信息**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 大于、大于等于、小于、小于等于
 ---
@@ -799,7 +799,7 @@ where
   sal > 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621909653019-47b3d57f-3690-46fb-9f47-7906f0fd3245.png)
+![](assets/1621909653019-47b3d57f-3690-46fb-9f47-7906f0fd3245.png)
 
 #### 大于等于 >=
 案例：找出薪资大于等于3000的员工姓名、薪资
@@ -813,7 +813,7 @@ where
   sal >= 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621909723383-d1a6872b-5790-4d89-875b-e1116ea539cf.png)
+![](assets/1621909723383-d1a6872b-5790-4d89-875b-e1116ea539cf.png)
 
 #### 小于 <
 案例：找出薪资小于3000的员工姓名、薪资
@@ -827,7 +827,7 @@ where
   sal < 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621909833614-f9d57a1f-1d48-4d14-aaef-83c5bddb89a8.png)
+![](assets/1621909833614-f9d57a1f-1d48-4d14-aaef-83c5bddb89a8.png)
 
 #### 小于等于 <=
 案例：找出薪资小于等于3000的员工姓名、薪资
@@ -841,9 +841,9 @@ where
   sal <= 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621909895715-9af5ab2f-b445-4b44-a643-fd2a312cac2c.png)
+![](assets/1621909895715-9af5ab2f-b445-4b44-a643-fd2a312cac2c.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### and
 ---
@@ -861,13 +861,13 @@ where
   sal >= 3000 and sal <= 5000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621910545661-438867ac-b8d0-4a80-929e-5a758b44add4.png)
+![](assets/1621910545661-438867ac-b8d0-4a80-929e-5a758b44add4.png)
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621910577682-f852440b-94f8-4299-89ad-c0a88fefc0d1.png)
+![](assets/1621910577682-f852440b-94f8-4299-89ad-c0a88fefc0d1.png)
 
 - [ ] **任务：找出工资级别为2~4（包含2和4）的最低工资和最高工资。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### or
 ---
@@ -885,9 +885,9 @@ where
   job = 'MANAGER' or job = 'SALESMAN';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621910850853-c7030458-0c8f-4040-bc29-c6fa66caca7c.png)
+![](assets/1621910850853-c7030458-0c8f-4040-bc29-c6fa66caca7c.png)
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621910943353-4a9fb152-67b9-4044-a2b4-b90a2fbf3f57.png)
+![](assets/1621910943353-4a9fb152-67b9-4044-a2b4-b90a2fbf3f57.png)
 
 注意：这个题目描述中有这样一句话：MANAGER和SALESMAN，有的同学一看到“和”，就直接使用“and”了，因为“和”对应的英文单词是“and”，如果是这样的话，就大错特错了，因为and表示并且，使用and表示工作岗位既是MANAGER又是SALESMAN的员工，这样的员工是不存在的，因为每一个员工只有一个岗位，不可能同时从事两个岗位。所以使用and是查询不到任何结果的。如下
 
@@ -900,11 +900,11 @@ where
   job = 'MANAGER' and job = 'SALESMAN';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621911189669-be42f087-b388-4eb2-80b7-602766996b82.png)
+![](assets/1621911189669-be42f087-b388-4eb2-80b7-602766996b82.png)
 
 - [ ] **任务：查询20和30部门的员工信息。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### and和or的优先级问题
 ---
@@ -924,7 +924,7 @@ where
   sal < 1500 and deptno = 20 or deptno = 30;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621912213872-f2b1fe9e-384c-404e-bf24-d81bd895ae23.png)
+![](assets/1621912213872-f2b1fe9e-384c-404e-bf24-d81bd895ae23.png)
 
 认真解读题意得知：薪资小于1500是一个大前提，要找出的是薪资小于1500的，满足这个条件的前提下，再找部门编号是20或30的，显然以上的运行结果中出现了薪资为1600的，为什么1600的会出现呢？这是因为“sal < 1500 and deptno = 20”结合在一起了，“depnto = 30”成了一个独立的条件。会导致部门编号为30的所有员工全部查询出来。我们应该让“deptno = 20 or deptno = 30”结合在一起，正确写法如下：
 
@@ -937,11 +937,11 @@ where
   sal < 1500 and (deptno = 20 or deptno = 30);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621912713447-a9b7aeee-4998-4eae-8e53-71353a405890.png)
+![](assets/1621912713447-a9b7aeee-4998-4eae-8e53-71353a405890.png)
 
 - [ ] **任务：找出薪资小于1500的，并且工作岗位是CLERK和SALESMAN的员工姓名、薪资、岗位。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### between...and...
 ---
@@ -967,7 +967,7 @@ where
 	sal between 1600 and 3000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621913942714-15a74832-d5da-4215-8991-35a3d48f7061.png)
+![](assets/1621913942714-15a74832-d5da-4215-8991-35a3d48f7061.png)
 
 采用左大右小的方式：
 
@@ -980,17 +980,17 @@ where
 	sal between 3000 and 1600;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621914030809-2ebf83da-aba0-429d-970e-2f6906611f11.png)
+![](assets/1621914030809-2ebf83da-aba0-429d-970e-2f6906611f11.png)
 
 没有查询到任何数据，所以在使用的时候一定要注意：**<font style="color:#F5222D;">左小右大</font>**。
 
 - [ ] **任务：查询在1982-01-23到1987-04-19之间入职的员工**
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621914250873-25bff9ba-b4e6-4145-a5f8-9036fba35627.png)
+![](assets/1621914250873-25bff9ba-b4e6-4145-a5f8-9036fba35627.png)
 
 注意：以上SQL语句中日期需要加上单引号。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### is null、is not null
 ---
@@ -1013,7 +1013,7 @@ where
   comm is null;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621914737738-74345239-9ea8-4afa-a4bf-68fb0bb26e98.png)
+![](assets/1621914737738-74345239-9ea8-4afa-a4bf-68fb0bb26e98.png)
 
 我们使用等号，尝试一下：
 
@@ -1026,7 +1026,7 @@ where
   comm = null;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621914817611-97c0858b-a248-4a10-9fba-e5152283b553.png)
+![](assets/1621914817611-97c0858b-a248-4a10-9fba-e5152283b553.png)
 
 查询不到任何数据，所以判断是否为空，不能用等号。
 
@@ -1042,9 +1042,9 @@ where
   comm is not null;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621914906515-cfd5351e-22bc-4184-b6d5-785f27049020.png)
+![](assets/1621914906515-cfd5351e-22bc-4184-b6d5-785f27049020.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### in、not in
 ---
@@ -1071,7 +1071,7 @@ where
   job = 'MANAGER' or job = 'SALESMAN';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621979207586-14dece4a-ce7f-4db8-a43f-bbfee6fd6133.png)
+![](assets/1621979207586-14dece4a-ce7f-4db8-a43f-bbfee6fd6133.png)
 
 第二种：使用in
 
@@ -1084,7 +1084,7 @@ where
   job in('MANAGER', 'SALESMAN');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621979288013-a6975d0e-46f9-43d8-a226-6df047e6490e.png)
+![](assets/1621979288013-a6975d0e-46f9-43d8-a226-6df047e6490e.png)
 
 **案例2：找出薪资是1500/1600/3000的员工姓名、工作岗位**
 
@@ -1097,7 +1097,7 @@ where
   sal in(1500, 1600, 3000);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621979430766-b7dc80d4-568a-4216-a173-6ec7c49d1f9c.png)
+![](assets/1621979430766-b7dc80d4-568a-4216-a173-6ec7c49d1f9c.png)
 
 - [ ] **任务：找出部门编号是10和20的员工编号、姓名。（要求使用两种方案）**
 
@@ -1119,7 +1119,7 @@ where
   job <> 'MANAGER' and job <> 'SALESMAN';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621980958567-7c01fd48-a1ec-4392-85e1-120b86865b99.png)
+![](assets/1621980958567-7c01fd48-a1ec-4392-85e1-120b86865b99.png)
 
 第二种：使用not in
 
@@ -1132,11 +1132,11 @@ where
   job not in('MANAGER', 'SALESMAN');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621981036376-d6cecc7a-b7b8-4342-a83e-19ee49d77697.png)
+![](assets/1621981036376-d6cecc7a-b7b8-4342-a83e-19ee49d77697.png)
 
 - [ ] 任务：找出薪资不是1600和3000的员工姓名、薪资。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### <font style="color:#F5222D;">in、not in 与 NULL</font>
 先来看一下emp表中的数据
@@ -1145,7 +1145,7 @@ where
 select * from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621981605595-632500b0-a2a0-401c-8995-1573468ae1f1.png)
+![](assets/1621981605595-632500b0-a2a0-401c-8995-1573468ae1f1.png)
 
 通过表中数据观察到，有4个员工的津贴不为NULL，剩下10个员工的津贴都是NULL。
 
@@ -1155,7 +1155,7 @@ select * from emp;
 select * from emp where comm in(NULL, 300);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621981810022-80718321-ffdd-496b-af1d-620cf268c993.png)
+![](assets/1621981810022-80718321-ffdd-496b-af1d-620cf268c993.png)
 
 为什么以上执行结果只有一条记录呢？分析一下：
 
@@ -1175,7 +1175,7 @@ select * from emp where comm = NULL or comm = 300;
 select * from emp where comm not in(NULL, 300);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1621982073198-d77677ed-77de-4086-aba9-4eaeda923a51.png)
+![](assets/1621982073198-d77677ed-77de-4086-aba9-4eaeda923a51.png)
 
 以上的执行结果奇怪了，为什么没有查到任何数据呢？我们分析一下：
 
@@ -1325,7 +1325,7 @@ SELECT * FROM t WHERE name = 'a' OR name = 'b' OR name = 'c';
 + `IN`：数据库将 `('a','b','c')` 视为一个集合，**全表扫描一次**，每行判断 `name` 是否在集合内。
 + `OR`：数据库将条件拆分为三个独立的比较，**可能扫描三次**（或生成三个临时结果集再合并去重），I/O 和 CPU 开销更大。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 模糊查询like
 ---
@@ -1346,7 +1346,7 @@ select .. from .. where 字段 like '通配符表达式';
 select ename from emp where ename like 'S%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1622000884924-f3303ff0-cb9a-4393-831c-01d3e705606d.png)
+![](assets/1622000884924-f3303ff0-cb9a-4393-831c-01d3e705606d.png)
 
 案例2：查询员工名字以'T'结尾的员工姓名
 
@@ -1354,7 +1354,7 @@ select ename from emp where ename like 'S%';
 select ename from emp where ename like '%T';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1622000970235-0265da36-1e10-4da5-abb8-c651452fad21.png)
+![](assets/1622000970235-0265da36-1e10-4da5-abb8-c651452fad21.png)
 
 案例3：查询员工名字中含有'O'的员工姓名
 
@@ -1362,7 +1362,7 @@ select ename from emp where ename like '%T';
 select ename from emp where ename like '%O%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1622001027995-71da44df-e3b1-4e56-a6e2-922a50ccc2b7.png)
+![](assets/1622001027995-71da44df-e3b1-4e56-a6e2-922a50ccc2b7.png)
 
 案例4：查询员工名字中第二个字母是'A'的员工姓名
 
@@ -1370,7 +1370,7 @@ select ename from emp where ename like '%O%';
 select ename from emp where ename like '_A%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1622001108864-1abbac56-669f-4c35-9b48-6d80452ad8ce.png)
+![](assets/1622001108864-1abbac56-669f-4c35-9b48-6d80452ad8ce.png)
 
 案例5：查询学员名字中含有下划线的。
 
@@ -1388,7 +1388,7 @@ insert into student(id,name) values(3, 'jack_son');
 select * from student;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2021/png/21376908/1622001536746-e0d05c73-f941-4f28-9190-bbfcf248c41b.png)
+![](assets/1622001536746-e0d05c73-f941-4f28-9190-bbfcf248c41b.png)
 
 查询学员名字中含有下划线的，执行以下SQL试试：
 
@@ -1396,7 +1396,7 @@ select * from student;
 select * from student where name like '%_%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667523151909-c112a3cb-9968-4b4a-8bee-5a75c4b6a9f2.png)
+![](assets/1667523151909-c112a3cb-9968-4b4a-8bee-5a75c4b6a9f2.png)
 
 显然这个查询结果不是我们想要的，以上SQL之所以将所有数据全部显示了，因为下划线代表任意单个字符，如果你想让这个下划线变成一个普通的下划线字符，就要使用转义字符了，在mysql当中转义字符是“\”，这个和java语言中的转义字符是一样的：
 
@@ -1404,9 +1404,9 @@ select * from student where name like '%_%';
 select * from student where name like '%\_%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667523291579-62dc328f-17ef-4e97-a22a-374ade19e797.png)
+![](assets/1667523291579-62dc328f-17ef-4e97-a22a-374ade19e797.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 排序操作
 ---
@@ -1424,7 +1424,7 @@ select .. from .. order by 字段 asc/desc
 select empno,ename,sal from emp order by sal asc;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667524015631-e1f1b6c3-0a5b-4f04-91d1-7a11df8fc7ff.png)
+![](assets/1667524015631-e1f1b6c3-0a5b-4f04-91d1-7a11df8fc7ff.png)
 
 ### 单一字段降序
 查询员工的编号、姓名、薪资，按照薪资降序排列。
@@ -1433,9 +1433,9 @@ select empno,ename,sal from emp order by sal asc;
 select empno,ename,sal from emp order by sal desc;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667524068322-84c1f716-5b7a-4b72-8a41-c0f8ec433d57.png)
+![](assets/1667524068322-84c1f716-5b7a-4b72-8a41-c0f8ec433d57.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 默认采用升序
 查询员工的编号、姓名、薪资，按照薪资升序排列。
@@ -1444,7 +1444,7 @@ select empno,ename,sal from emp order by sal desc;
 select empno,ename,sal from emp order by sal;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667524117390-bd4560ff-accf-45ee-97f1-d098f86fd31f.png)
+![](assets/1667524117390-bd4560ff-accf-45ee-97f1-d098f86fd31f.png)
 
 查询员工的编号、姓名，按照姓名升序排列。
 
@@ -1452,9 +1452,9 @@ select empno,ename,sal from emp order by sal;
 select empno,ename from emp order by ename;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667524169552-6abc923e-3638-4a65-ab97-741c22f885fa.png)
+![](assets/1667524169552-6abc923e-3638-4a65-ab97-741c22f885fa.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 多个字段排序
 查询员工的编号、姓名、薪资，按照薪资升序排列，如果薪资相同的，再按照姓名升序排列。
@@ -1463,7 +1463,7 @@ select empno,ename from emp order by ename;
 select empno,ename,sal from emp order by sal asc, ename asc;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667524337952-bbef44e7-488e-4c3e-9317-1fda80054c92.png)
+![](assets/1667524337952-bbef44e7-488e-4c3e-9317-1fda80054c92.png)
 
 ### where和order by的位置
 找出岗位是MANAGER的员工姓名和薪资，按照薪资升序排列。
@@ -1472,13 +1472,13 @@ select empno,ename,sal from emp order by sal asc, ename asc;
 select ename,sal from emp where job = 'MANAGER' order by sal asc;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1667524386864-8d24513b-85f9-4f31-9462-4fe094cb0843.png)
+![](assets/1667524386864-8d24513b-85f9-4f31-9462-4fe094cb0843.png)
 
 **<font style="color:#E8323C;">通过这个例子主要是想告诉大家：where先执行，order by语句是最后执行的。</font>**
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## distinct去重
 查询工作岗位
@@ -1487,7 +1487,7 @@ select ename,sal from emp where job = 'MANAGER' order by sal asc;
 select job from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570471000-b0d2c628-c149-4b13-b44c-ae6f5edefcf6.png)
+![](assets/1668570471000-b0d2c628-c149-4b13-b44c-ae6f5edefcf6.png)
 
 可以看到工作岗位中有重复的记录，如何在显示的时候去除重复记录呢？在字段前添加distinct关键字。
 
@@ -1495,7 +1495,7 @@ select job from emp;
 select distinct job from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570545279-ba8dcff3-533d-4ca8-9cc9-4b544ae47e8c.png)
+![](assets/1668570545279-ba8dcff3-533d-4ca8-9cc9-4b544ae47e8c.png)
 
 注意：这个去重只是将显示的结果去重，原表数据不会被更改。
 
@@ -1507,7 +1507,7 @@ select ename, distinct job from emp;
 
 分析一下：ename是14条记录，distinct job是5条记录，可以同时显示吗？
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570696423-05844698-00b1-4e9e-aa98-1a53f465cff4.png)
+![](assets/1668570696423-05844698-00b1-4e9e-aa98-1a53f465cff4.png)
 
 报错了，通过测试得知，distinct只能出现在所有字段的最前面。
 
@@ -1515,20 +1515,20 @@ select ename, distinct job from emp;
 
 练习1：找出公司中所有的工作岗位。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570864793-732f34aa-5b7d-4389-b4af-51cbd964215f.png)
+![](assets/1668570864793-732f34aa-5b7d-4389-b4af-51cbd964215f.png)
 
 练习2：找出公司中不同部门的不同工作岗位。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570891921-9c547b9b-d20e-4695-9704-051863b5e868.png)
+![](assets/1668570891921-9c547b9b-d20e-4695-9704-051863b5e868.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据处理函数
 ---
 
 关于select语句，我们之前都是这样写：select 字段名 from 表名; 其实，这里的字段名可以看做“变量”，select后面既然可以跟变量，那么可以跟常量吗，尝试一下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668568118423-c5b5d189-4d32-41ab-a189-3f155d0d0efa.png)
+![](assets/1668568118423-c5b5d189-4d32-41ab-a189-3f155d0d0efa.png)
 
 通过以上sql的测试得知，select后面既可以跟变量，又可以跟常量。
 
@@ -1542,7 +1542,7 @@ select ename, distinct job from emp;
 select upper(ename) as ename from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668565912887-88d14d6c-707b-4e50-ac47-f8ad61b40d14.png)
+![](assets/1668565912887-88d14d6c-707b-4e50-ac47-f8ad61b40d14.png)
 
 还有一个和upper函数功能相同的函数ucase，也可以转大写，了解一下即可：
 
@@ -1551,16 +1551,16 @@ select upper(ename) as ename from emp;
 select ucase(ename) as ename from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668566229563-55802f88-f6d6-436a-b478-18832d7a0342.png)
+![](assets/1668566229563-55802f88-f6d6-436a-b478-18832d7a0342.png)
 
 ```sql
 # 查询员工smith的岗位、薪资（假如你不知道数据库表中的人名是大写、小写还是大小写混合）
 select ename, job, sal from emp where upper(ename) = 'SMITH';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668566360054-6e77882a-21fc-4b6e-9a04-3e0098606db8.png)
+![](assets/1668566360054-6e77882a-21fc-4b6e-9a04-3e0098606db8.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 转小写lower和lcase
 **很简单，不再赘述，直接上代码：**
@@ -1571,9 +1571,9 @@ select lower(ename) as ename from emp;
 select lcase(ename) as ename from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668566699289-0a479f71-ecf4-4a3f-ac4c-8516a4f0fee8.png)
+![](assets/1668566699289-0a479f71-ecf4-4a3f-ac4c-8516a4f0fee8.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668566716526-c8fac5f9-7079-4738-a3d1-2a5c3c5e1145.png)
+![](assets/1668566716526-c8fac5f9-7079-4738-a3d1-2a5c3c5e1145.png)
 
 #### 截取字符串substr
 语法：substr('被截取的字符串', 起始下标, 截取长度)
@@ -1586,7 +1586,7 @@ select lcase(ename) as ename from emp;
 
 注意：起始下标从1开始，不是从0开始。（1表示从左侧开始的第一个位置，-1表示从右侧开始的第一个位置。）
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668567142258-6748508c-c3bb-440f-8ad7-c64df6c0028d.png)
+![](assets/1668567142258-6748508c-c3bb-440f-8ad7-c64df6c0028d.png)
 
 练习：找出员工名字中第二个字母是A的
 
@@ -1594,24 +1594,24 @@ select lcase(ename) as ename from emp;
 select ename from emp where substr(ename, 2, 1) = 'A';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668567271612-710d3592-6111-4ab5-97c1-12f809ac7645.png)
+![](assets/1668567271612-710d3592-6111-4ab5-97c1-12f809ac7645.png)
 
 #### 获取字符串长度length
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672736218451-70fddda1-2541-4c91-9f39-3f968a6b6e12.png)
+![](assets/1672736218451-70fddda1-2541-4c91-9f39-3f968a6b6e12.png)
 
 注意：一个汉字是2个长度。
 
 #### 获取字符的个数char_length
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672736125194-177317bd-f65c-4c05-bda7-f58961b78fd7.png)
+![](assets/1672736125194-177317bd-f65c-4c05-bda7-f58961b78fd7.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 字符串拼接
 语法：concat('字符串1', '字符串2', '字符串3'....)
 
 拼接的字符串数量没有限制。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668569810019-a8c939c4-518d-4ed9-961a-27d4440d13d0.png)
+![](assets/1668569810019-a8c939c4-518d-4ed9-961a-27d4440d13d0.png)
 
 注意：在mysql8之前，双竖线||也是可以完成字符串拼接的。但在mysql8之后，||只作为逻辑运算符，不能再进行字符串拼接了。
 
@@ -1625,7 +1625,7 @@ mysql8之后，|| 只作为“或者”运算符，例如：找出工资高于30
 select ename, sal from emp where sal > 3000 || sal < 900;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669780282134-d3a16d8a-e0fc-4744-beff-83b3579f6161.png)
+![](assets/1669780282134-d3a16d8a-e0fc-4744-beff-83b3579f6161.png)
 
 mysql中可以使用+进行字符串的拼接吗？不可以，在mysql中+只作加法运算，在进行加法运算时，会将加号两边的数据尽最大的努力转换成数字再求和，如果无法转换成数字，最终运算结果通通是0
 
@@ -1635,7 +1635,7 @@ mysql中可以使用+进行字符串的拼接吗？不可以，在mysql中+只�
 select concat(trim('    abc    '), 'def');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570023583-bcf0b431-c34c-486b-9ee0-e571ff3c158d.png)
+![](assets/1668570023583-bcf0b431-c34c-486b-9ee0-e571ff3c158d.png)
 
 默认是去除前后空白，也可以去除指定的前缀后缀，例如：
 
@@ -1645,7 +1645,7 @@ select concat(trim('    abc    '), 'def');
 select trim(leading '0' from '000111000');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570194415-8f78ced1-8f36-42d3-a829-b81fc4132c85.png)
+![](assets/1668570194415-8f78ced1-8f36-42d3-a829-b81fc4132c85.png)
 
 去除后置0
 
@@ -1653,7 +1653,7 @@ select trim(leading '0' from '000111000');
 select trim(trailing '0' from '000111000');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570218215-c862c7d8-1ee3-4066-8e25-055767efee61.png)
+![](assets/1668570218215-c862c7d8-1ee3-4066-8e25-055767efee61.png)
 
 前置0和后置0全部去除
 
@@ -1661,33 +1661,33 @@ select trim(trailing '0' from '000111000');
 select trim(both '0' from '000111000');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1668570238062-dff388d3-3106-457d-a9ae-819f41821792.png)
+![](assets/1668570238062-dff388d3-3106-457d-a9ae-819f41821792.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 数字相关
 #### rand()和rand(x)
 rand()生成0到1的随机浮点数。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669797997130-63b2c8d0-6169-4ee8-9b6b-c3087e9d733b.png)
+![](assets/1669797997130-63b2c8d0-6169-4ee8-9b6b-c3087e9d733b.png)
 
 rand(x)生成0到1的随机浮点数，通过指定整数x来确定每次获取到相同的浮点值。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798044104-7fc0b727-ff91-4d3e-be33-9954d556afe2.png)
+![](assets/1669798044104-7fc0b727-ff91-4d3e-be33-9954d556afe2.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798069147-75492782-759d-46d9-84c5-a83b3a63594c.png)
+![](assets/1669798069147-75492782-759d-46d9-84c5-a83b3a63594c.png)
 
 #### round(x)和round(x,y)四舍五入
 round(x) 四舍五入，保留整数位，舍去所有小数
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798450055-e26955bd-ea2d-445a-be98-721b54d3ca35.png)
+![](assets/1669798450055-e26955bd-ea2d-445a-be98-721b54d3ca35.png)
 
 round(x,y) 四舍五入，保留y位小数
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798534269-9c494800-7878-4ccf-bacc-a8c4cdafbbe6.png)
+![](assets/1669798534269-9c494800-7878-4ccf-bacc-a8c4cdafbbe6.png)
 
 #### truncate(x, y)舍去
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798594158-7e51e7a5-27af-4f7f-8021-a751f425a316.png)
+![](assets/1669798594158-7e51e7a5-27af-4f7f-8021-a751f425a316.png)
 
 以上SQL表示保留两位小数，剩下的全部舍去。
 
@@ -1697,9 +1697,9 @@ round(x,y) 四舍五入，保留y位小数
 + ceil函数：返回大于或等于数值x的最小整数
 + floor函数：返回小于或等于数值x的最大整数
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672735932932-f0dfc7de-1f77-4eb0-b6e9-b6c6c2ce7ae3.png)
+![](assets/1672735932932-f0dfc7de-1f77-4eb0-b6e9-b6c6c2ce7ae3.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 空处理
 ifnull(x, y)，空处理函数，当x为NULL时，将x当做y处理。
@@ -1708,25 +1708,25 @@ ifnull(comm, 0)，表示如果员工的津贴是NULL时当做0处理。
 
 在SQL语句中，凡是有NULL参与的数学运算，最终的计算结果都是NULL：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798864111-5cffd59f-d15c-4f6c-a2d8-0b623ec1f16c.png)
+![](assets/1669798864111-5cffd59f-d15c-4f6c-a2d8-0b623ec1f16c.png)
 
 看这样一个需求：查询每个员工的年薪。（年薪 = (月薪 + 津贴) * 12个月。注意：有的员工津贴comm是NULL。）
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669798945415-90bccaa6-1dda-4ebd-bc50-63ab5ba2b89a.png)
+![](assets/1669798945415-90bccaa6-1dda-4ebd-bc50-63ab5ba2b89a.png)
 
 以上查询结果中显示SMITH等人的年薪是NULL，这是为什么，这是因为SMITH等人的津贴comm是NULL，有NULL参与的数学运算，最终结果都是NULL，显然这个需要空处理，此时就用到了ifnull函数：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1669799067232-4896fa47-5c64-409a-b970-dddc31e06050.png)
+![](assets/1669799067232-4896fa47-5c64-409a-b970-dddc31e06050.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 日期和时间相关函数
 #### 获取当前日期和时间
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672707310711-3115e4af-385c-4565-89c7-25bad76e8a6a.png)
+![](assets/1672707310711-3115e4af-385c-4565-89c7-25bad76e8a6a.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672707382021-d8d296b7-9d9a-4072-b714-c99da604ac12.png)
+![](assets/1672707382021-d8d296b7-9d9a-4072-b714-c99da604ac12.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672707469394-4fe3f0fb-ca9e-4484-b939-db716f6ddd38.png)
+![](assets/1672707469394-4fe3f0fb-ca9e-4484-b939-db716f6ddd38.png)
 
 now()和sysdate()的区别：
 
@@ -1734,7 +1734,7 @@ now()和sysdate()的区别：
 + sysdate()：获取的是执行sysdate()函数的时刻。
 
 #### 获取当前日期
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672707770762-e9723219-562f-4a53-9d8a-9055ee80c25d.png)
+![](assets/1672707770762-e9723219-562f-4a53-9d8a-9055ee80c25d.png)
 
 获取当前日期有三种写法，掌握任意一种即可：
 
@@ -1742,10 +1742,10 @@ now()和sysdate()的区别：
 + current_date()
 + current_date
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 获取当前时间
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672707856778-8eec2322-c3c8-4ddc-94c4-3e08eea430a8.png)
+![](assets/1672707856778-8eec2322-c3c8-4ddc-94c4-3e08eea430a8.png)
 
 获取档期时间有三种写法，掌握其中一种即可：
 
@@ -1754,32 +1754,32 @@ now()和sysdate()的区别：
 + current_time
 
 #### 获取单独的年、月、日、时、分、秒
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672708190559-a1d93032-699d-49dc-87cc-4ccb045bee28.png)
+![](assets/1672708190559-a1d93032-699d-49dc-87cc-4ccb045bee28.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672708242288-89a20209-4ca2-4d1c-a1b0-5ad5f1179841.png)
+![](assets/1672708242288-89a20209-4ca2-4d1c-a1b0-5ad5f1179841.png)
 
 注意：这些函数在使用的时候，需要传递一个日期参数给它，它可以获取到你给定的这个日期相关的年、月、日、时、分、秒的信息。
 
 一次性提取一个给定日期的“年月日”部分，可以使用date()函数，例如：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672713926559-d9c4257b-3536-4124-b4f4-3fd3626a293e.png)
+![](assets/1672713926559-d9c4257b-3536-4124-b4f4-3fd3626a293e.png)
 
 一次性提取一个给定日期的“时分秒”部分，可以使用time()函数，例如：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672721340191-9c568184-73b5-4c26-9035-95245016ba4f.png)
+![](assets/1672721340191-9c568184-73b5-4c26-9035-95245016ba4f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### date_add函数
 date_add函数的作用：给指定的日期添加间隔的时间，从而得到一个新的日期。
 
 date_add函数的语法格式：date_add(日期, interval expr 单位)，例如：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672709352877-e64de4c0-d776-4e30-908b-4a96c04bc186.png)
+![](assets/1672709352877-e64de4c0-d776-4e30-908b-4a96c04bc186.png)
 
 以'2023-01-03'为基准，间隔3天之后的日期：'2023-01-06'
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672709436259-c6d671c6-ccc8-4109-9612-1f178801ef64.png)
+![](assets/1672709436259-c6d671c6-ccc8-4109-9612-1f178801ef64.png)
 
 以'2023-01-03'为基准，间隔3个月之后的日期：'2023-04-03'
 
@@ -1801,13 +1801,13 @@ date_add函数的语法格式：date_add(日期, interval expr 单位)，例如�
 
 请分析下面这条SQL语句所表达的含义：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672710673500-8afb96ad-3aa5-4adb-9160-9aaac4b4ff83.png)
+![](assets/1672710673500-8afb96ad-3aa5-4adb-9160-9aaac4b4ff83.png)
 
 以上SQL表示：以2022-10-01 10:10:10为基准，在这个时间基础上添加-1微秒，也就是减去1微秒。
 
 以上SQL也可以采用date_sub函数完成，例如：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672710799157-9775a5b0-143f-493b-a6f0-cd8db5c6ca31.png)
+![](assets/1672710799157-9775a5b0-143f-493b-a6f0-cd8db5c6ca31.png)
 
 另外，单位也可以采用复合型单位，例如：
 
@@ -1825,11 +1825,11 @@ date_add函数的语法格式：date_add(日期, interval expr 单位)，例如�
 
 如果单位采用复合型的话，expr该怎么写呢？例如单位采用：day_hour，假设我要表示3天2小时之后，怎么写？
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672711325140-0a281589-4bc2-4fc8-bd7f-9a5ff180ba71.png)
+![](assets/1672711325140-0a281589-4bc2-4fc8-bd7f-9a5ff180ba71.png)
 
 '3,2'这个应该很好理解，表示3天2个小时之后。'3,2'和day_hour是对应的。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### date_format日期格式化函数
 将日期转换成具有某种格式的日期字符串，通常用在查询操作当中。（date类型转换成char类型）
@@ -1850,11 +1850,11 @@ date_add函数的语法格式：date_add(日期, interval expr 单位)，例如�
 
 例如：获取当前系统时间，让其以这个格式展示：2000-10-11 20:15:30
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672716928881-badddb77-c670-43f3-8b25-8e2eb4952a04.png)
+![](assets/1672716928881-badddb77-c670-43f3-8b25-8e2eb4952a04.png)
 
 注意：在mysql当中，默认的日期格式就是：%Y-%m-%d %H:%i:%s，所以当你直接输出日期数据的时候，会自动转换成该格式的字符串：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672717081322-e99bdff0-76df-4fcc-958a-463bf9e65d9d.png)
+![](assets/1672717081322-e99bdff0-76df-4fcc-958a-463bf9e65d9d.png)
 
 #### str_to_date函数
 该函数的作用是将char类型的日期字符串转换成日期类型date，通常使用在插入和修改操作当中。（char类型转换成date类型）
@@ -1872,24 +1872,24 @@ desc t_student;
 
 我们要给这个表插入一条数据：姓名zhangsan，生日85年10月1日，执行以下insert语句：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672718111465-698c085a-b3f1-4523-9f3f-d27ceb4410d5.png)
+![](assets/1672718111465-698c085a-b3f1-4523-9f3f-d27ceb4410d5.png)
 
 错误原因：日期值不正确。意思是：birth字段需要一个日期，你给的这个字符串'10/01/1985'我识别不了。这种情况下，我们就可以使用str_to_date函数进行类型转换：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672718492868-58ab55ff-a4e7-481f-9c58-9c81014d1762.png)
+![](assets/1672718492868-58ab55ff-a4e7-481f-9c58-9c81014d1762.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672718610506-ec24a44e-7854-4037-8567-b42dfb9228c0.png)
+![](assets/1672718610506-ec24a44e-7854-4037-8567-b42dfb9228c0.png)
 
 当然，如果你提供的日期字符串格式能够被mysql解析，str_to_date函数是可以省略的，底层会自动调用该函数进行类型转换：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672718807175-8b62c13a-e771-482d-a999-7548501da25e.png)
+![](assets/1672718807175-8b62c13a-e771-482d-a999-7548501da25e.png)
 
 如果日期格式符合以上的几种格式，mysql都会自动进行类型转换的。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### dayofweek、dayofmonth、dayofyear函数
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672719401783-7ea51704-954a-4f96-aa81-3a8da4b34582.png)
+![](assets/1672719401783-7ea51704-954a-4f96-aa81-3a8da4b34582.png)
 
 dayofweek：一周中的第几天（1~7），周日是1，周六是7。
 
@@ -1900,21 +1900,21 @@ dayofyear：一年中的第几天（1~366）
 #### last_day函数
 获取给定日期所在月的最后一天的日期：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672719572099-bba462b8-da22-42b7-9a40-9c2c545596ef.png)
+![](assets/1672719572099-bba462b8-da22-42b7-9a40-9c2c545596ef.png)
 
 #### datediff函数
 计算两个日期之间所差天数：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672720897012-c5e7e6dd-29de-46b0-b2c1-e1de3e8d6e54.png)
+![](assets/1672720897012-c5e7e6dd-29de-46b0-b2c1-e1de3e8d6e54.png)
 
 时分秒不算，只计算日期部分相差的天数。
 
 #### timediff函数
 计算两个日期所差时间，例如日期1和日期2所差10:20:30，表示差10小时20分钟30秒。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672721193551-f65b470a-9060-4010-b172-b34eb1787e55.png)
+![](assets/1672721193551-f65b470a-9060-4010-b172-b34eb1787e55.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### if函数
 如果条件为TRUE则返回“YES”，如果条件为FALSE则返回“NO”：
@@ -1925,21 +1925,21 @@ SELECT IF(500<1000, "YES", "NO");
 
 例如：如果工资高于3000，则输出1，反之则输出0
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672725980625-f929cbdc-41ec-49d4-a5de-bc753dfbe67e.png)
+![](assets/1672725980625-f929cbdc-41ec-49d4-a5de-bc753dfbe67e.png)
 
 再例如：如果名字是SMITH的，工资上调10%，其他员工工资正常显示。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672726073468-51733168-6ebe-477d-9aba-267adcefd10a.png)
+![](assets/1672726073468-51733168-6ebe-477d-9aba-267adcefd10a.png)
 
 再例如：工作岗位是MANAGER的工资上调10%，是SALESMAN的工资上调20%，其他岗位工资正常。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672726371265-19128e1a-47cf-46b0-9b80-310d37010535.png)
+![](assets/1672726371265-19128e1a-47cf-46b0-9b80-310d37010535.png)
 
 **<font style="color:#DF2A3F;">上面这个需求也可以使用：case.. when.. then.. when.. then.. else.. end来完成：</font>**
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672726864928-8206091b-3bd3-4f12-b784-173aff775d6f.png)
+![](assets/1672726864928-8206091b-3bd3-4f12-b784-173aff775d6f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### cast函数
 cast函数用于将值从一种数据类型转换为表达式中指定的另一种数据类型
@@ -1957,13 +1957,13 @@ cast函数用于将值从一种数据类型转换为表达式中指定的另一�
 + char：定长字符串类型
 + decimal：浮点型
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672737293605-d7e38772-e9c3-40ab-a7ea-3311aa14a1a9.png)
+![](assets/1672737293605-d7e38772-e9c3-40ab-a7ea-3311aa14a1a9.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672737634602-96cdd564-1220-445e-9b18-b3f0a2a55379.png)
+![](assets/1672737634602-96cdd564-1220-445e-9b18-b3f0a2a55379.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672737720321-3812fd42-d3a4-4985-96d2-629947d9ce48.png)
+![](assets/1672737720321-3812fd42-d3a4-4985-96d2-629947d9ce48.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1672737802812-d04d581c-138c-4e4e-97d4-c979558e9b2e.png)  
+![](assets/1672737802812-d04d581c-138c-4e4e-97d4-c979558e9b2e.png)  
 
 ### 加密函数
 md5函数，可以将给定的字符串经过md5算法进行加密处理，字符串经过加密之后会生成一个固定长度32位的字符串，md5加密之后的密文通常是不能解密的：
@@ -1972,7 +1972,7 @@ md5函数，可以将给定的字符串经过md5算法进行加密处理，字�
 select md5('abc12345');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 分组函数
 **<font style="color:#DF2A3F;">分组函数的执行原则：先分组，然后对每一组数据执行分组函数。如果没有分组语句group by的话，整张表的数据自成一组。</font>**
@@ -2056,7 +2056,7 @@ select ename,job from emp where sal > avg(sal); 这个会报错的
 
 原因：分组的行为是在where执行之后才开始的。【where 执行时还没有进行分组，因此无法使用分组函数/聚合函数。】
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 分组查询
 ### group by
@@ -2094,7 +2094,7 @@ select deptno,job,avg(sal) from emp group by deptno,job;
 select ename,deptno,avg(sal) from emp group by deptno; // 这个SQL执行后会报错。
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1676866192155-44d23157-87d0-4a58-a9d5-2641619d74fe.png)
+![](assets/1676866192155-44d23157-87d0-4a58-a9d5-2641619d74fe.png)
 
 ### having
 having写在group by的后面，当你对分组之后的数据不满意，可以继续通过having对分组之后的数据进行过滤。
@@ -2125,11 +2125,11 @@ select deptno,avg(sal) from emp group by deptno having avg(sal) > 2000;
 
 substring_index函数的使用：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1678080182698-009c47d2-eb75-4f67-afaa-874c7904ed45.png)
+![](assets/1678080182698-009c47d2-eb75-4f67-afaa-874c7904ed45.png)
 
 group_concat函数的使用：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1678082111760-02413f4e-a8b0-4837-8cb0-3b201151293f.png)
+![](assets/1678082111760-02413f4e-a8b0-4837-8cb0-3b201151293f.png)
 
 学习了这两个函数之后，自己可以尝试写出来吗？
 
@@ -2152,7 +2152,7 @@ order by ...6
 
 重点掌握一个完整的DQL语句执行顺序。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 连接查询
 ### 什么是连接查询
@@ -2175,7 +2175,7 @@ order by ...6
         2. 右外连接（右连接）
     3. 全连接
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 笛卡尔积现象
 1. 当两张表进行连接查询时，如果没有任何条件进行过滤，最终的查询结果条数是两张表条数的乘积。为了避免笛卡尔积现象的发生，需要添加条件进行筛选过滤。
@@ -2184,7 +2184,7 @@ order by ...6
 
 ### 内连接
 #### 什么叫内连接
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677398804476-afbffad7-7d5a-4318-9e86-a3f8092dfcc8.png)
+![](assets/1677398804476-afbffad7-7d5a-4318-9e86-a3f8092dfcc8.png)
 
 满足条件的记录才会出现在结果集中。
 
@@ -2206,7 +2206,7 @@ on
 
 注意：inner可以省略。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677401675659-04e46e96-9f00-4210-8beb-e8148807ae10.png)
+![](assets/1677401675659-04e46e96-9f00-4210-8beb-e8148807ae10.png)
 
 #### 内连接之非等值连接
 连接时，条件是非等量关系。
@@ -2224,9 +2224,9 @@ on
 	e.sal between s.losal and s.hisal;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677401628377-11f115a0-b961-4e10-b411-97ea04a89035.png)
+![](assets/1677401628377-11f115a0-b961-4e10-b411-97ea04a89035.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 内连接之自连接
 连接时，一张表看做两张表，自己和自己进行连接。
@@ -2244,23 +2244,23 @@ on
 	e.mgr = l.empno;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677402107820-a3fc38cc-4e13-4a39-8bb4-f1d9de713cd9.png)
+![](assets/1677402107820-a3fc38cc-4e13-4a39-8bb4-f1d9de713cd9.png)
 
 思路：
 
 将emp表当做员工表 e
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677401951879-b0967e07-82f4-41e3-861e-d61e7d679e71.png)
+![](assets/1677401951879-b0967e07-82f4-41e3-861e-d61e7d679e71.png)
 
 将emp表当做领导表 l
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677401973338-4bc03ba9-815d-4fca-90fb-de34e5848da3.png)
+![](assets/1677401973338-4bc03ba9-815d-4fca-90fb-de34e5848da3.png)
 
 可以发现连接条件是：e.mgr = l.empno（员工的领导编号=领导的员工编号）
 
 注意：KING这个员工没有查询出来。如果想将KING也查询出来，需要使用外连接。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 外连接
 #### 什么叫外连接
@@ -2270,11 +2270,11 @@ on
 
 左外连接：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677398828684-41b0bde2-1689-47a4-ae7b-3c5c4fb82ce6.png)
+![](assets/1677398828684-41b0bde2-1689-47a4-ae7b-3c5c4fb82ce6.png)
 
 右外连接：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677398837026-688ff40f-d74b-4da6-a2e4-9573f5ba1580.png)
+![](assets/1677398837026-688ff40f-d74b-4da6-a2e4-9573f5ba1580.png)
 
 #### 外连接之左外连接（左连接）
 案例：查询所有部门信息，并且找出每个部门下的员工。
@@ -2290,7 +2290,7 @@ on
   d.deptno = e.deptno;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677402955987-bdcd956a-8dd4-481b-97de-c785b200e902.png)
+![](assets/1677402955987-bdcd956a-8dd4-481b-97de-c785b200e902.png)
 
 注意：outer可以省略。
 
@@ -2310,7 +2310,7 @@ on
   d.deptno = e.deptno;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677403445932-325502d5-b568-46a5-8f7a-d91030f3cac3.png)
+![](assets/1677403445932-325502d5-b568-46a5-8f7a-d91030f3cac3.png)
 
 案例：找出所有员工的上级领导，要求显示员工名和领导名。
 
@@ -2336,26 +2336,26 @@ on
   e.mgr = l.empno;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677403569294-c9688076-61e2-4e33-bb40-06d4307c6b43.png)
+![](assets/1677403569294-c9688076-61e2-4e33-bb40-06d4307c6b43.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 全连接
 什么是全连接？
 
 MySQL不支持full join。oracle数据库支持。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677398846702-4a3f3e0f-16bb-4e00-8015-490dc44d114b.png)
+![](assets/1677398846702-4a3f3e0f-16bb-4e00-8015-490dc44d114b.png)
 
 两张表数据全部查询出来，没有匹配的记录，各自为对方模拟出NULL进行匹配。
 
 客户表：t_customer
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677405118434-d9979d32-5647-4b0a-8d65-1ff6b61c6d44.png)
+![](assets/1677405118434-d9979d32-5647-4b0a-8d65-1ff6b61c6d44.png)
 
 订单表：t_order
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677405287024-4df811ac-9216-47c3-98b2-20f5d7ce2886.png)
+![](assets/1677405287024-4df811ac-9216-47c3-98b2-20f5d7ce2886.png)
 
 案例：查询所有的客户和订单。
 
@@ -2390,9 +2390,9 @@ on
  e.sal between s.losal and s.hisal;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677404511432-b8fe8eb2-c828-4913-8d7c-a7b47a0ee270.png)
+![](assets/1677404511432-b8fe8eb2-c828-4913-8d7c-a7b47a0ee270.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 子查询
 ### 什么是子查询
@@ -2428,7 +2428,7 @@ select ename,sal from emp where sal > (select avg(sal) from emp);
 select deptno, avg(sal) avgsal from emp group by deptno;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677477788393-e2525a0a-2092-4a5e-80e7-7f8df04f6a6c.png)
+![](assets/1677477788393-e2525a0a-2092-4a5e-80e7-7f8df04f6a6c.png)
 
 第二步：将以上查询结果当做临时表t，t表和salgrade表进行连接查询。条件：t.avgsal between s.losal and s.hisal
 
@@ -2436,7 +2436,7 @@ select deptno, avg(sal) avgsal from emp group by deptno;
 select t.*,s.grade from (select deptno, avg(sal) avgsal from emp group by deptno) t join salgrade s on t.avgsal between s.losal and s.hisal;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1677477892811-ef9b366b-82be-4407-86f1-8dfa81492d8c.png)
+![](assets/1677477892811-ef9b366b-82be-4407-86f1-8dfa81492d8c.png)
 
 ### select后面使用子查询
 
@@ -2444,9 +2444,9 @@ select t.*,s.grade from (select deptno, avg(sal) avgsal from emp group by deptno
 select e.ename,(select d.dname from dept d where e.deptno = d.deptno) as dname from emp e;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1678063689524-a204a93a-6454-4ff7-a1c6-ac5229edae91.png)
+![](assets/1678063689524-a204a93a-6454-4ff7-a1c6-ac5229edae91.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### exists、not exists
 在 MySQL 数据库中，EXISTS（存在）是一个用于检查子查询是否存在任何返回行的关键字。如果子查询至少返回一行，则 EXISTS 条件为真。
@@ -2512,7 +2512,7 @@ select * from t_customer c where not exists(select * from t_order o where o.cust
 
 总之，无论是 EXISTS 还是 NOT EXISTS，都是非常有用的 SQL 工具。可以通过它们来结合子查询来动态过滤查询结果，使 SQL 查询变得更加灵活和高效。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## union&union all
 不管是union还是union all都可以将两个查询结果集进行合并。
@@ -2521,9 +2521,9 @@ union会对合并之后的查询结果集进行去重操作。
 
 union all是直接将查询结果集合并，不进行去重操作。（union all和union都可以完成的话，优先选择union all，union all因为不需要去重，所以效率高一些。）
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1678078225300-461e069f-0c80-4745-88a7-2969acccd076.png)
+![](assets/1678078225300-461e069f-0c80-4745-88a7-2969acccd076.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1678078278429-e97f96a1-7429-4b68-8df9-3bda3a890797.png)
+![](assets/1678078278429-e97f96a1-7429-4b68-8df9-3bda3a890797.png)
 
 案例：查询工作岗位是MANAGER和SALESMAN的员工。
 
@@ -2539,9 +2539,9 @@ select ename,sal from emp where job='SALESMAN';
 
 两个结果集合并时，列数量要相同：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1678078078467-89b7ba88-52ae-4e70-b5cc-b4fe4a3daf76.png)
+![](assets/1678078078467-89b7ba88-52ae-4e70-b5cc-b4fe4a3daf76.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## limit
 1. limit作用：查询第几条到第几条的记录。通常是因为表中数据量太大，需要分页显示。
@@ -2679,7 +2679,7 @@ select deptno,avg(sal) as avgsal from emp group by deptno having avg(sal)=(selec
 select d.dname,avg(e.sal) as avgsal from emp e join dept d on e.deptno=d.deptno group by d.dname order by avgsal desc limit 1;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第8题
 8. 求平均薪水的等级最低的部门的部门名称
@@ -2734,7 +2734,7 @@ select ename,sal from emp order by sal desc limit 5;
 select ename,sal from emp order by sal desc limit 5, 5;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第12题
 12. 取得最后入职的5名员工
@@ -2792,7 +2792,7 @@ select deptno, count(*) from emp group by deptno having count(*) >= 5;
 select ename,sal from emp where sal > (select sal from emp where ename = 'SMITH');
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第19题
 19. 列出所有"CLERK"(办事员)的姓名及其部门名称,部门的人数
@@ -2840,7 +2840,7 @@ select e.ename,d.dname,e.job from emp e join dept d on e.deptno=d.deptno where j
 select ename,sal,deptno from emp where sal in(select distinct sal from emp where deptno=30) and deptno <> 30;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第25题
 25. 列出薪金高于在部门30工作的所有员工的薪金的员工姓名和薪金.部门名称
@@ -2877,7 +2877,7 @@ select d.deptno,d.dname,d.loc,count(e.deptno) from emp e right join dept d on e.
 select t.job,t.minsal,e.ename from emp e join (select job,min(sal) as minsal from emp group by job) t on e.job=t.job and e.sal=t.minsal;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第30题
 30. 列出各个部门的MANAGER(领导)的最低薪金
@@ -2914,7 +2914,7 @@ select d.dname,ifnull(sum(sal),0) as sumsal,count(e.ename) from emp e right join
 update emp set sal=sal*1.1 where datediff(now(),hiredate)/365 > 30;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第35题
 35. 某公司面试题
@@ -2996,7 +2996,7 @@ select a.*,b.avgscore from (select s.sno,s.sname,count(sc.scgrade) as num from s
 select sc.sno,s.sname from sc join s on sc.sno=s.sno where sc.cno=1 and sc.sno in(select sno from sc where cno=2);
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 创建表
 语法格式：
@@ -3046,7 +3046,7 @@ drop table if exists 表名;
 
 判断是否存在这个表，如果存在则删除。避免不存在时的报错。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## MySQL数据类型
 数据类型（data_type）是指系统中所允许的数据的类型。数据库中的每个列都应该有适当的数据类型，用于限制或允许该列中存储的数据。例如，列中存储的为数字，则相应的数据类型应该为数值类型。
@@ -3089,7 +3089,7 @@ year：1个字节，只存储年，格式 2025
 
 timestamp：4个字节，存储年月日+时分秒，格式：2025-10-11 14:20:15（从公元1970年~公元2038年）或者格式为 <font style="color:#DF2A3F;">20251011142015（采用这种格式不需要使用单引号，当然你使用单引号也可以）</font>
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 字符串类型
 #### char
@@ -3120,7 +3120,7 @@ SELECT @@GLOBAL.sql_mode;
 
 执行结果中有它则表示严格模式：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1779772556651-af9ca834-47c5-4c51-918f-53729803181a.png)
+![](assets/1779772556651-af9ca834-47c5-4c51-918f-53729803181a.png)
 
 #### text
 **text类型：**
@@ -3150,7 +3150,7 @@ BLOB类型：二进制大对象（Binary Large OBject），可以存储图片、
 + mediumblob：中等的，最大长度16777215个字节
 + longblob：大的，最大长度4GB的字节
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### JSON 类型
 MySQL 从 **5.7.8 版本** 开始支持 JSON 数据类型。MySQL 8.0：进一步增强了 JSON 功能，性能大幅提升。
@@ -3261,7 +3261,7 @@ SELECT JSON_LENGTH('[1,2,3,4]');     -- 4
 SELECT JSON_KEYS('{"a":1, "b":2}');  -- ["a", "b"]
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 增删改表结构DDL
 ### 创建一个学生表
@@ -3311,7 +3311,7 @@ alter table 表名 modify column 字段名 数据类型;
 alter table 表名 drop 字段名;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## DML语句
 当我们对表中的数据进行增删改的时候，称它为DML语句。（数据操纵语言），主要包括：insert、delete、update
@@ -3367,7 +3367,7 @@ update 表名 set 字段名1=值1, 字段名2=值2, 字段名3=值3 where 条件
 
 如果没有更新条件的话，所有记录全部更新。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 约束constraint
 创建表时，可以给表的字段添加约束，可以保证数据的完整性、有效性。比如大家上网注册用户时常见的：用户名不能为空。对不起，用户名已存在。等提示信息。
@@ -3452,7 +3452,7 @@ create table t_stu(
 
 所有的约束都存储在一个系统表当中：**table_constraints**。这个系统表在这个数据库当中：**information_schema**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 主键约束
 1. 主键：primary key，简称PK
@@ -3498,13 +3498,13 @@ create table t_vip(
 );
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 外键约束
 1. 有这样一个需求：要求设计表，能够存储学生以及学校信息。
     1. 第一种方案：一张表
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679198700192-73c1c697-39a5-483e-b267-730fb808082d.png)
+![](assets/1679198700192-73c1c697-39a5-483e-b267-730fb808082d.png)
 
 这种方式会导致数据冗余，浪费空间。
 
@@ -3512,11 +3512,11 @@ create table t_vip(
 
 t_school 表
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679198814824-520944e2-5b83-49ba-97e7-b8830286127a.png)
+![](assets/1679198814824-520944e2-5b83-49ba-97e7-b8830286127a.png)
 
 t_student 表
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679198856678-a80be906-abc8-4bf7-ac5e-e6a59b11c48a.png)
+![](assets/1679198856678-a80be906-abc8-4bf7-ac5e-e6a59b11c48a.png)
 
 如果采用以上两张表存储数据，对于学生表来说，sno这个字段的值是不能随便填的，这个sno是学校编号，必须要求这个字段中的值来自学校表的sno。
 
@@ -3592,7 +3592,7 @@ create table t_student(
 );
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 数据库设计三范式
 ### 什么是数据库设计三范式
@@ -3602,58 +3602,58 @@ create table t_student(
 1. 第一范式：任何一张表都应该有主键，每个字段是原子性的不能再分
     1. 以下表的设计不符合第一范式：无主键，并且联系方式可拆分。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679201425169-4ce0b510-2795-4ac8-a0ca-404ffcb6c044.png)
+![](assets/1679201425169-4ce0b510-2795-4ac8-a0ca-404ffcb6c044.png)
 
     2. 应该这样设计：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679201619568-bcb56e54-e4d5-4152-9833-49d97afa8d35.png)
+![](assets/1679201619568-bcb56e54-e4d5-4152-9833-49d97afa8d35.png)
 
 2. 第二范式：建立在第一范式基础上的，另外要求所有非主键字段完全依赖主键，不能产生部分依赖
     1. 以下表存储了学生和老师的信息
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679201885946-02cacd49-4288-4520-93fb-e4dae6cff5dc.png)
+![](assets/1679201885946-02cacd49-4288-4520-93fb-e4dae6cff5dc.png)
 
 虽然符合第一范式，但是违背了第二范式，学生姓名、老师姓名都产生了部分依赖。导致数据冗余。
 
     2. 以下这种设计方式就是符合第二范式的：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679202122322-da28bdc0-703b-4975-8fe4-0a7b6a222fee.png)
+![](assets/1679202122322-da28bdc0-703b-4975-8fe4-0a7b6a222fee.png)
 
 3. 第三范式：建立在第二范式基础上的，非主键字段不能传递依赖于主键字段
     1. 以下设计方式就是违背第三范式的
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679202299108-66198c2a-933d-4bea-9e67-51425c31be7c.png)
+![](assets/1679202299108-66198c2a-933d-4bea-9e67-51425c31be7c.png)
 
 以上因为产生了传递依赖，导致班级名称冗余。
 
     2. 以下这种方式就是符合第三范式的：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679202402829-5040060c-c87f-4411-a599-6a60cc3836a0.png)
+![](assets/1679202402829-5040060c-c87f-4411-a599-6a60cc3836a0.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 一对多怎么设计
 口诀：一对多两张表，多的表加外键。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679200526299-5a9122fe-b7f6-423c-9fd8-5c28a960cb75.png)
+![](assets/1679200526299-5a9122fe-b7f6-423c-9fd8-5c28a960cb75.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679200546241-3a0db05e-74e8-4452-92b9-721c5b3d36d5.png)
+![](assets/1679200546241-3a0db05e-74e8-4452-92b9-721c5b3d36d5.png)
 
 ### 多对多怎么设计
 多对多三张表，关系表添加外键。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679200858013-26513a66-0af8-4b84-bd90-b52a240de65c.png)
+![](assets/1679200858013-26513a66-0af8-4b84-bd90-b52a240de65c.png)
 
 ### 一对一怎么设计
 两种方案：
 
 1. 第一种：主键共享
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679201037367-a1b5661a-f127-42b0-87d9-609c61fa4839.png)
+![](assets/1679201037367-a1b5661a-f127-42b0-87d9-609c61fa4839.png)
 
 2. 第二种：外键唯一
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679201084526-c5773a4e-75bf-4e6d-9ac4-f8b8272d1b46.png)
+![](assets/1679201084526-c5773a4e-75bf-4e6d-9ac4-f8b8272d1b46.png)
 
 ### 最终的设计
 最终以满足客户需求为原则，有的时候会拿空间换速度（**拿冗余换速度**）。
@@ -3676,7 +3676,7 @@ create table t_student(
 | **互联网高并发业务** | **基本不用** | 性能第一，通过应用层（**Service 中编写代码**）保证一致性，数据库做单纯存储。 |
 | **分库分表/分布式系统** | **完全不用** | 架构层面不支持，根本无法使用。 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 视图
 ### 什么是视图
@@ -3809,7 +3809,7 @@ MySQL索引按不同维度可分为以下几类：
 
 最核心原则：**索引失效的本质是 MySQL 无法利用索引的有序结构进行快速定位，只能退化为全表扫描。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 事务
 ### 事务概述
@@ -3848,10 +3848,10 @@ show variables like '%commit%';
 show variables like '%char%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 事务隔离级别
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679213953232-4c17a795-8b1f-45d2-907b-c5c16aff672d.png)
+![](assets/1679213953232-4c17a795-8b1f-45d2-907b-c5c16aff672d.png)
 
 **<font style="color:#DF2A3F;">隔离级别从低到高排序：读未提交 < 读提交 < 可重复读 < 串行化</font>**
 
@@ -3900,13 +3900,13 @@ set global transaction isolation level read uncommitted;
 |   | mysql> use test |
 | mysql> start transaction; |   |
 |   | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709003498399-02e4239e-9064-4437-b331-8358459f8fd5.png) |   |
+| mysql> select * from a;<br/>![](assets/1709003498399-02e4239e-9064-4437-b331-8358459f8fd5.png) |   |
 |   | mysql> insert into a values(4); |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709003545498-a496e1be-74fd-4e63-9ef0-d6e21b88a7cd.png) |   |
+| mysql> select * from a;<br/>![](assets/1709003545498-a496e1be-74fd-4e63-9ef0-d6e21b88a7cd.png) |   |
 
 通过以上测试，可以看到，A事务读取到了B事务还没有提交的数据。这种现象就是脏读。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 读提交（READ COMMITTED）
 A事务与B事务，A事务可以读取到B事务提交之后的数据。Oracle数据库默认的就是这种隔离级别。
@@ -3925,15 +3925,15 @@ set global transaction isolation level read committed;
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709003985270-00489f1c-e135-4bd6-aa08-84cdddf6f007.png) |  |
+| mysql> select * from a;<br/>![](assets/1709003985270-00489f1c-e135-4bd6-aa08-84cdddf6f007.png) |  |
 |  | mysql> insert into a values(4); |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709003985270-00489f1c-e135-4bd6-aa08-84cdddf6f007.png) |  |
+| mysql> select * from a;<br/>![](assets/1709003985270-00489f1c-e135-4bd6-aa08-84cdddf6f007.png) |  |
 |  | mysql> commit; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709004165277-dac7bc73-55ba-4034-bd48-b975689ffb41.png) |  |
+| mysql> select * from a;<br/>![](assets/1709004165277-dac7bc73-55ba-4034-bd48-b975689ffb41.png) |  |
 
 通过以上测试看出，A事务只能读取到B事务提交之后的数据。这种隔离级别解决了脏读问题，但肯定是存在不可重复读和幻读问题。因为只要事务B进行了增删改操作之后并提交了，事务A读取到的数据肯定是不同的。即：不可重复读和幻读都存在。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 可重复读（REPEATABLE READ）
 这个隔离级别是MySQL数据库默认的。
@@ -3954,10 +3954,10 @@ set global transaction isolation level repeatable read;
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select empno,ename,sal from emp where empno=7369;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709005877270-b84cdf55-866b-4b3b-b575-46552dfb84c0.png) |  |
+| mysql> select empno,ename,sal from emp where empno=7369;<br/>![](assets/1709005877270-b84cdf55-866b-4b3b-b575-46552dfb84c0.png) |  |
 |  | mysql> update emp set ename='SMITH',sal=8000 where empno=7369; |
 |  | mysql> commit; |
-| mysql> select empno,ename,sal from emp where empno=7369;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709005948358-4f23bd69-d6ed-4963-a349-ba35ecc61dc0.png) |  |
+| mysql> select empno,ename,sal from emp where empno=7369;<br/>![](assets/1709005948358-4f23bd69-d6ed-4963-a349-ba35ecc61dc0.png) |  |
 
 通过以上测试得知：当事务隔离级别设置为可重复读时，避免了不可重复读问题。
 
@@ -3969,10 +3969,10 @@ set global transaction isolation level repeatable read;
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709006316610-12c48e73-e894-49dc-8dfd-32f8d13ec991.png) |  |
+| mysql> select * from a;<br/>![](assets/1709006316610-12c48e73-e894-49dc-8dfd-32f8d13ec991.png) |  |
 |  | mysql> insert into a values(5); |
 |  | mysql> commit; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709006362804-0579079b-e054-4299-b1ab-6c16a68875f0.png) |  |
+| mysql> select * from a;<br/>![](assets/1709006362804-0579079b-e054-4299-b1ab-6c16a68875f0.png) |  |
 
 通过以上测试得知：**<font style="color:#DF2A3F;">当事务隔离级别设置为可重复读时，也避免了幻读问题。是完全避免了幻读问题吗？并不是。</font>**请看以下测试：
 
@@ -3982,16 +3982,16 @@ set global transaction isolation level repeatable read;
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709006612649-1614f4b7-446f-487d-9c1b-000a7e5589d3.png) |  |
+| mysql> select * from a;<br/>![](assets/1709006612649-1614f4b7-446f-487d-9c1b-000a7e5589d3.png) |  |
 |  | mysql> insert into a values(6); |
 |  | mysql> commit; |
-| mysql> select * from a **<font style="color:#DF2A3F;">for update;</font>**<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709006674069-b52a691f-2cc1-4721-bf23-0451f4bb7535.png) |  |
+| mysql> select * from a **<font style="color:#DF2A3F;">for update;</font>**<br/>![](assets/1709006674069-b52a691f-2cc1-4721-bf23-0451f4bb7535.png) |  |
 
 通过以上测试得知：**<font style="color:#DF2A3F;">当事务隔离级别设置为可重复读，MySQL会尽最大努力避免幻读问题，但这种隔离级别无法完全避免幻读问题。</font>**
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##### 串行化（SERIALIZABLE）
 这种隔离级别最高，避免了所有的问题，缺点是效率低，因为这种隔离级别会导致事务排队处理，不支持并发。
@@ -4010,11 +4010,11 @@ set global transaction isolation level serializable;
 |   | mysql> use test |
 | mysql> start transaction; |   |
 |   | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709013080885-bf7ad024-3bdd-4497-997b-1bdc2c81a7da.png) |   |
+| mysql> select * from a;<br/>![](assets/1709013080885-bf7ad024-3bdd-4497-997b-1bdc2c81a7da.png) |   |
 | mysql> insert into a values(7); |   |
-|   | mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709013571200-5bfdf9a5-8238-4601-92b7-5eacbd2de16f.png) |
+|   | mysql> select * from a;<br/>![](assets/1709013571200-5bfdf9a5-8238-4601-92b7-5eacbd2de16f.png) |
 | mysql> commit; |   |
-|   | ![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709013621752-5b81823b-362d-4cdc-8b49-f941eebd827f.png) |
+|   | ![](assets/1709013621752-5b81823b-362d-4cdc-8b49-f941eebd827f.png) |
 
 通过以上测试得知：当事务隔离级别设置为串行化时，事务只能排队执行，不支持并发。
 
@@ -4115,10 +4115,10 @@ A事务与B事务。在A事务中第一次查询使用快照读，B事务插入�
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709021313528-7b3b88fd-836a-4223-8b93-ef671edf6f2b.png) |  |
+| mysql> select * from a;<br/>![](assets/1709021313528-7b3b88fd-836a-4223-8b93-ef671edf6f2b.png) |  |
 |  | mysql> insert into a values(5); |
 |  | mysql> commit; |
-| mysql> select * from a for update; <font style="color:#DF2A3F;">// 产生了幻读</font><br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709021386345-1b47e39d-98e6-42de-bf33-1652ed601c21.png) |  |
+| mysql> select * from a for update; <font style="color:#DF2A3F;">// 产生了幻读</font><br/>![](assets/1709021386345-1b47e39d-98e6-42de-bf33-1652ed601c21.png) |  |
 
 **第二种产生幻读的场景**
 
@@ -4130,11 +4130,11 @@ A事务与B事务。在A事务中第一次查询使用快照读，B事务插入�
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select * from a;<br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709021721456-7e0dd695-29c8-4e2f-a88e-4a1fa2d1df90.png) |  |
+| mysql> select * from a;<br/>![](assets/1709021721456-7e0dd695-29c8-4e2f-a88e-4a1fa2d1df90.png) |  |
 |  | mysql> insert into a values(6); |
 |  | mysql> commit; |
 | mysql> update a set id=100 where id=6; <font style="color:#DF2A3F;">//主要是因为这个SQL语句的执行触发了当前读，但是要注意，这个修改的数据必须是其他事务插入的新数据。</font> |  |
-| mysql> select * from a; <font style="color:#DF2A3F;">// 产生了幻读</font><br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709021824472-00989fbd-471a-4f5f-a44a-9781652cd3b3.png) |  |
+| mysql> select * from a; <font style="color:#DF2A3F;">// 产生了幻读</font><br/>![](assets/1709021824472-00989fbd-471a-4f5f-a44a-9781652cd3b3.png) |  |
 
 **在可重复读隔离级别下（RR），在一个事务中，如果一直都是快照读，不会出现幻读，一直都是当前读，也不会出现幻读。只有在同一个事务中，快照读和当前读交叉时就会出现幻读问题。**
 
@@ -4149,12 +4149,12 @@ A事务与B事务。在A事务中第一次查询使用快照读，B事务插入�
 |  | mysql> use test |
 | mysql> start transaction; |  |
 |  | mysql> start transaction; |
-| mysql> select * from a; <font style="color:#DF2A3F;">//快照读</font><br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709006316610-12c48e73-e894-49dc-8dfd-32f8d13ec991.png) |  |
+| mysql> select * from a; <font style="color:#DF2A3F;">//快照读</font><br/>![](assets/1709006316610-12c48e73-e894-49dc-8dfd-32f8d13ec991.png) |  |
 |  | mysql> insert into a values(5); |
 |  | mysql> commit; |
-| mysql> select * from a;<font style="color:#DF2A3F;"> //快照读</font><br/>![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709006362804-0579079b-e054-4299-b1ab-6c16a68875f0.png) |  |
+| mysql> select * from a;<font style="color:#DF2A3F;"> //快照读</font><br/>![](assets/1709006362804-0579079b-e054-4299-b1ab-6c16a68875f0.png) |  |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 当前读是如何解决幻读的
 
@@ -4190,7 +4190,7 @@ SELECT * FROM t_user WHERE id = 3 FOR UPDATE;  -- 锁住 (2,5) 这个间隙
 
 假如有这样的数据：【要想测试出以下的**记录锁+间隙锁**的效果，数据量稍微多一些（比如 20 条），如果数据量少底层会升级为**表级锁**。】
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1709020549539-138b4715-5526-45df-8db2-65d05b393ba1.png)
+![](assets/1709020549539-138b4715-5526-45df-8db2-65d05b393ba1.png)
 
 SQL语句是这样写的：
 
@@ -4211,7 +4211,7 @@ select * from a where id between 2 and 4 for update;
 | mysql> select * from a where id between 2 and 4 for update; <font style="color:#DF2A3F;">// 当前读</font> |  |
 |  | mysql> insert into a values(3); // 不可以<br/>mysql> insert into a values(5); // 可以<br/>mysql> insert into a values(0); // 可以 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 常用 DBA 命令
 ### 新建用户
@@ -4229,7 +4229,7 @@ create user 'java2'@'%' identified by '123';
 
 采用以上方式新建的用户没有任何权限：系统表也只能看到以下两个
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679813363625-10cc7c30-76b3-4a1a-a83f-a1727489a420.png)
+![](assets/1679813363625-10cc7c30-76b3-4a1a-a83f-a1727489a420.png)
 
 使用root用户查看系统中当前用户有哪些？
 
@@ -4237,7 +4237,7 @@ create user 'java2'@'%' identified by '123';
 select user,host from mysql.user;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 给用户授权
 授权语法：grant [权限1，权限2...] on 库名.表名 to '用户名'@'主机名/IP地址';
@@ -4297,7 +4297,7 @@ revoke insert on test.* from 'java2'@'%'
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 修改用户的密码
 具有管理用户权限的用户才能修改密码，例如root账户可以修改其他账户的密码：
@@ -4335,7 +4335,7 @@ drop user 'java2'@'%';
 
 flush privileges;
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 数据备份
 + 导出数据（请在登录mysql数据库之前进行）
@@ -4369,15 +4369,15 @@ source d:/test.sql
 1. 对于后端开发人员来说，一个好的MySQL客户端工具可以大大提升开发效率。目前企业中使用最多的是以下三个：
     1. Navicat for MySQL
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679825266467-a704f0ce-835d-48c6-ab37-4c7bf5a1be57.png)
+![](assets/1679825266467-a704f0ce-835d-48c6-ab37-4c7bf5a1be57.png)
 
     2. SQLyog
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679825351769-5a2abe9e-cabb-407f-87e5-1aafeada40bd.png)
+![](assets/1679825351769-5a2abe9e-cabb-407f-87e5-1aafeada40bd.png)
 
     3. MySQL Workbench
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1679825234020-fa921858-476d-44c8-8074-1c0b137f2eaf.png)
+![](assets/1679825234020-fa921858-476d-44c8-8074-1c0b137f2eaf.png)
 
 2. 安装Navicat for MySQL
 3. 使用Navicat for MySQL
@@ -4394,7 +4394,7 @@ source d:/test.sql
 
 ## 企业面试题
 ### 第一题
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680103320228-5ed4903b-6a54-4ce8-81c6-e3f1738eac95.jpeg)
+![](assets/1680103320228-5ed4903b-6a54-4ce8-81c6-e3f1738eac95.jpeg)
 
 **题目要求：用一条 SQL 语句查询出每门课都大于 80 分的学生姓名。**
 
@@ -4404,14 +4404,14 @@ source d:/test.sql
 select name from t_student group by name having min(fenshu) > 80;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1779972742699-198f71c9-a6aa-4d6a-976c-26a080a7b936.png)
+![](assets/1779972742699-198f71c9-a6aa-4d6a-976c-26a080a7b936.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第二题
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680103877015-ca07133d-716e-4cce-82f3-52118ff4c9ad.jpeg)
+![](assets/1680103877015-ca07133d-716e-4cce-82f3-52118ff4c9ad.jpeg)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680104265213-8afaf5de-a962-47c6-a1cd-72aefe28f616.png)
+![](assets/1680104265213-8afaf5de-a962-47c6-a1cd-72aefe28f616.png)
 
 其中，两个表的关联字段为申请单号。
 
@@ -4425,7 +4425,7 @@ select name from t_student group by name having min(fenshu) > 80;
 
 模拟数据：考试做这种题目最重要的是要冷静下来，只有静下来SQL才能写好。要模拟数据。看到数据SQL就好写了。
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680105543048-1dd227b9-f2e8-4daf-8b1b-155db36db813.png)
+![](assets/1680105543048-1dd227b9-f2e8-4daf-8b1b-155db36db813.png)
 
 1）查询身份证号为440401430103082的申请日期。
 
@@ -4460,12 +4460,12 @@ where g_cardapplydetail.g_idcard = '440401430103082';
 delete t1,t2 from g_cardapply t1 join g_cardapplydetail t2 on t1.g_applyno=t2.g_applyno where t2.g_name like '李%';
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第三题
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680142491993-8e350bec-9af7-4304-b7d6-92f2f313997e.jpeg)
+![](assets/1680142491993-8e350bec-9af7-4304-b7d6-92f2f313997e.jpeg)
 
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680142491981-3d90f70c-a859-4937-bdb7-60988985ea54.jpeg)
+![](assets/1680142491981-3d90f70c-a859-4937-bdb7-60988985ea54.jpeg)
 
 表名：stuscore
 
@@ -4491,10 +4491,10 @@ from stuscore;
 select name, avg(score) from stuscore group by name having min(score) > 60;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第四题
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680144969653-7096e822-b1e5-44d4-bc34-55dacc9322b4.jpeg?x-oss-process=image/auto-orient,1)
+![](assets/auto-orient_1)
 
 **1）请用一条SQL语句查询出不同部门中担任“钳工”的职工平均工资。**
 
@@ -4512,10 +4512,10 @@ select dname,avg(sal) from wcmemploy where job='钳工' group by dname;
 select dname,avg(sal) from wcmemploy where job='钳工' group by dname having avg(sal) > 2000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第五题
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680398222140-816dc325-2887-46aa-96ba-57b6f1c52c25.png)
+![](assets/1680398222140-816dc325-2887-46aa-96ba-57b6f1c52c25.png)
 
 Employee是雇员信息表：
 
@@ -4549,19 +4549,19 @@ Manages是雇员工作关系表：
 
 员工表：employee
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680402378306-a5369a92-0751-468b-8ef2-2e65aee24d31.png)
+![](assets/1680402378306-a5369a92-0751-468b-8ef2-2e65aee24d31.png)
 
 公司表：company
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680402457539-3684d5f1-8e7e-470b-95f7-56b3d48e4cee.png)
+![](assets/1680402457539-3684d5f1-8e7e-470b-95f7-56b3d48e4cee.png)
 
 雇员工作信息表：Works
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680402493037-5384139c-9959-4e34-8ce8-d0be11ea4563.png)
+![](assets/1680402493037-5384139c-9959-4e34-8ce8-d0be11ea4563.png)
 
 雇员工作关系表：Manages
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680402526039-fe04bfb3-e33b-4cbb-bc94-f680f0ae2a8e.png)
+![](assets/1680402526039-fe04bfb3-e33b-4cbb-bc94-f680f0ae2a8e.png)
 
 请给出下面每一个查询的SQL语句：
 
@@ -4600,26 +4600,26 @@ select `person-name` from works where salary > (select max(salary) from works wh
 select `company-name`, avg(salary) from works group by `company-name` having avg(salary) > 10000;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第六题
-![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680399293078-ccb0ac3b-7273-4308-8f01-12705c3ed1fd.jpeg)![](https://cdn.nlark.com/yuque/0/2023/jpeg/21376908/1680399293094-1a4ca298-63ad-48db-9e8b-27ce4a6846a2.jpeg)
+![](assets/1680399293078-ccb0ac3b-7273-4308-8f01-12705c3ed1fd.jpeg)![](assets/1680399293094-1a4ca298-63ad-48db-9e8b-27ce4a6846a2.jpeg)
 
 客户表Client
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760948083675-327793c8-01f1-44b9-92ab-91ef6f9d286b.png)
+![](assets/1760948083675-327793c8-01f1-44b9-92ab-91ef6f9d286b.png)
 
 订单表Order
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680400992647-08ba0bcf-1ff6-45c7-a82e-3918a9f9e950.png)
+![](assets/1680400992647-08ba0bcf-1ff6-45c7-a82e-3918a9f9e950.png)
 
 客户订单表ClientOrder
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680400979869-ea2a1837-751b-4744-98a5-e04c9808b568.png)
+![](assets/1680400979869-ea2a1837-751b-4744-98a5-e04c9808b568.png)
 
 图书表Book
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680401007501-200e3826-48ed-4638-8095-7be52757bdf1.png)
+![](assets/1680401007501-200e3826-48ed-4638-8095-7be52757bdf1.png)
 
 1. 请写出一条SQL语句，查询出每个客户的所有订单并按照地址排序，要求输出格式为：address client_name phone order_id
 2. 请写出一条SQL语句，查询出每个客户订购的图书总价。要求输出格式为：client_name total_price
@@ -4627,30 +4627,30 @@ select `company-name`, avg(salary) from works group by `company-name` having avg
 + **Order表主键修改**：将`order_id`单独作为主键无法满足“一个订单包含多种图书”，应改为**复合主键`(order_id, book_id)`**。
 + **ClientOrder表约束**：为保证每个订单只被一个客户拥有，`order_id`字段设置**唯一约束**。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第七题
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680403317776-7cd6d3bc-b547-4d94-9521-186a89ab67df.png)
+![](assets/1680403317776-7cd6d3bc-b547-4d94-9521-186a89ab67df.png)
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680403354657-0faf25ca-bb17-44ea-ade0-8a4e386756f3.png)
+![](assets/1680403354657-0faf25ca-bb17-44ea-ade0-8a4e386756f3.png)
 
 模拟数据：
 
 学生表：student
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680405687756-49b16a32-1f8b-42b5-b4a3-cd8c231e79f0.png)
+![](assets/1680405687756-49b16a32-1f8b-42b5-b4a3-cd8c231e79f0.png)
 
 课程表：course
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680405700061-a86b3354-1d10-4be5-96fe-63ba01c8d7b4.png)
+![](assets/1680405700061-a86b3354-1d10-4be5-96fe-63ba01c8d7b4.png)
 
 成绩表：sc
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680405996312-907e4929-7d55-4d62-9e8d-1281bdafe91a.png)
+![](assets/1680405996312-907e4929-7d55-4d62-9e8d-1281bdafe91a.png)
 
 教师表：teacher
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680406005728-731d61b6-02a6-448d-8a66-000b0aa3a9e6.png)
+![](assets/1680406005728-731d61b6-02a6-448d-8a66-000b0aa3a9e6.png)
 
 1. 查询1号课比2号课成绩高的所有学生学号。
 
@@ -4663,37 +4663,37 @@ select sc.`s#` from sc where sc.`c#` = 1 and sc.score > (select a.score from sc 
 4. 查询姓“李”的老师的个数。
 5. 查询没学过“叶平”老师课的学号、姓名。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第八题
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680403650729-b44beed8-c599-4077-8f43-8f862b94bfcd.png)
+![](assets/1680403650729-b44beed8-c599-4077-8f43-8f862b94bfcd.png)
 
 学生表：student
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680406785079-9ec12300-6db8-48b8-ad77-7d64ebcf4292.png)
+![](assets/1680406785079-9ec12300-6db8-48b8-ad77-7d64ebcf4292.png)
 
 课程表：class
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680406801984-082cd575-80cc-432e-9c19-c247c194fa40.png)
+![](assets/1680406801984-082cd575-80cc-432e-9c19-c247c194fa40.png)
 
 选课表：chosen_class
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680406813282-256975bc-ab6c-49f9-8d83-e5f60d2a00ed.png)
+![](assets/1680406813282-256975bc-ab6c-49f9-8d83-e5f60d2a00ed.png)
 
 1. 没有选修课程编号为C1的学生姓名
 2. 列出每门课程名称和平均成绩，并按照成绩排序
 3. 选了2门课以上的学生姓名。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第九题
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680403903386-c1b30b13-93ed-4b1a-a331-e4107c17d411.png)
+![](assets/1680403903386-c1b30b13-93ed-4b1a-a331-e4107c17d411.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760948125954-1d07c26f-467d-49b6-b5e7-67a9f59968f7.png)
+![](assets/1760948125954-1d07c26f-467d-49b6-b5e7-67a9f59968f7.png)
 
 要转换成：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688106694493-9f831520-223c-4904-963a-3df0a7edb66a.png)
+![](assets/1688106694493-9f831520-223c-4904-963a-3df0a7edb66a.png)
 
 ### MySQL行转列
 
@@ -4723,7 +4723,7 @@ MySQL行转列又叫做**<font style="color:#DF2A3F;">数据透视</font>**。�
 
 从上表中可以看出，在行转列之后，每一行记录都表示了一个学生在不同课程中的分数。这样更便于对不同科目的分数进行比较、计算平均值等分析操作。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 使用case when+group by完成
 
@@ -4747,11 +4747,11 @@ commit;
 select * from t_student;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760948142531-ee517e36-f716-4e4b-af40-3b1da753c8a6.png)
+![](assets/1760948142531-ee517e36-f716-4e4b-af40-3b1da753c8a6.png)
 
 行转列后的效果是：
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688106114109-3c583e45-5324-47f7-b53c-f90e31dcdc82.png)
+![](assets/1688106114109-3c583e45-5324-47f7-b53c-f90e31dcdc82.png)
 
 sql如下：
 
@@ -4782,10 +4782,10 @@ group by
 	year;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 第十题
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1680403550525-8f28573a-a583-4aaa-9e91-b5dde5ffa2f3.png)
+![](assets/1680403550525-8f28573a-a583-4aaa-9e91-b5dde5ffa2f3.png)
 
 ```sql
 -- 第一种方案：
@@ -4820,7 +4820,7 @@ group by
 select empno,ename,sal,(lag(sal) over(order by sal asc)) as pre_sal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688354808296-69cf1cf1-34e3-4b99-b4a2-2c575b0e2378.png)
+![](assets/1688354808296-69cf1cf1-34e3-4b99-b4a2-2c575b0e2378.png)
 
 注意：over函数用来指定“在.....范围内”，通常和lag函数联用。
 
@@ -4848,7 +4848,7 @@ SELECT ename, sal, AVG(sal) OVER() FROM emp;
 select empno,ename,sal,(lead(sal) over(order by sal asc)) as next_sal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688355552758-57bb77a0-65d4-4717-8410-35c1f6c13e0e.png)
+![](assets/1688355552758-57bb77a0-65d4-4717-8410-35c1f6c13e0e.png)
 
 注意：over函数用来指定“在.....范围内”，通常和lead函数联用。
 
@@ -4858,15 +4858,15 @@ select empno,ename,sal,(lead(sal) over(order by sal asc)) as next_sal from emp;
 select empno,ename,sal,(row_number() over(order by sal)) as rownum from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688372778734-b8b7d759-d86d-43d5-807a-8447c8de7da4.png)
+![](assets/1688372778734-b8b7d759-d86d-43d5-807a-8447c8de7da4.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 利用row_number函数，将两个不相关的列拼接在一起显示：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760948165538-274e9fe0-4e34-40ca-9a77-c0075691e6ba.png)
+![](assets/1760948165538-274e9fe0-4e34-40ca-9a77-c0075691e6ba.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1760948182879-1e21e806-0cff-4171-94be-92e55146ba38.png)
+![](assets/1760948182879-1e21e806-0cff-4171-94be-92e55146ba38.png)
 
 ```sql
 select 
@@ -4879,7 +4879,7 @@ on
 	x.rownum = y.rownum;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688373063344-4437fa76-e5b6-4747-b189-9c3ae2ace4c0.png)
+![](assets/1688373063344-4437fa76-e5b6-4747-b189-9c3ae2ace4c0.png)
 
 ### 知识点补充
 #### CTE 语法
@@ -4916,7 +4916,7 @@ partition by：将数据分区，和group by区别是：group by是分组，然�
 select deptno, empno,ename,sal,(lag(sal) over(partition by deptno order by sal asc)) as pre_sal from emp;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1688355470071-e5e90e50-2b69-4126-bd79-a2118fb80e66.png)
+![](assets/1688355470071-e5e90e50-2b69-4126-bd79-a2118fb80e66.png)
 
 #### 常见的开窗函数
 **MySQL 8.0及以上版本中支持如下常用的窗口函数：**
@@ -4944,4 +4944,4 @@ SELECT
 FROM scores;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1761578709299-acd161f7-8bad-4c95-b6be-9b5bf1d231cf.png)
+![](assets/1761578709299-acd161f7-8bad-4c95-b6be-9b5bf1d231cf.png)

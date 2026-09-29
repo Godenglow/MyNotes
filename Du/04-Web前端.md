@@ -1,6 +1,6 @@
 # HTML5
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Web前端简介
 ### 为什么要学习Web前端
@@ -43,7 +43,7 @@
 2. **Gecko (Firefox)**：≈ **3-5%**  
 3. **WebKit (Safari)**：≈ **8-10%**（主要来自 iOS/macOS 用户）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 互联网三大基石
 
@@ -51,7 +51,7 @@
 
 #### TCP/IP
 ##### TCP/IP模型
-![](https://cdn.nlark.com/yuque/0/2023/png/21376908/1693659586415-bde85e4f-288e-4e09-b001-83d3ae01ba40.png)
+![](assets/1693659586415-bde85e4f-288e-4e09-b001-83d3ae01ba40.png)
 
 **TCP/IP模型是一个四层的实用网络通信架构：**
 
@@ -88,9 +88,9 @@
 2. **HTTP**：浏览器通过 HTTP 请求服务器上的 HTML 文件。【提前制定好的传输的数据格式】  
 3. **HTML**：服务器返回 HTML，浏览器解析并渲染页面。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1746519289488-a6766da1-9e55-4550-82ac-c911bbe6182f.png)
+![](assets/1746519289488-a6766da1-9e55-4550-82ac-c911bbe6182f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML发展史
 ### HTML的简介
@@ -147,7 +147,7 @@ HTML 语言的开发和标准化主要由以下三个核心组织负责，它们
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML的开发工具
 ### HTML文件扩展名
@@ -196,7 +196,7 @@ HTML文件的扩展名`html`或`htm`。但通常是`html`。
 | WebStorm | ⭐⭐⭐⭐ | 专业团队/复杂项目 |
 | HBuilderX | ⭐⭐⭐⭐ | 国内小程序/UniApp开发者 |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### VS Code开发HTML
 #### 开发步骤
@@ -253,11 +253,11 @@ code --install-extension streetsidesoftware.code-spell-checker
 
 安装完之后需要简单设置一下：`ctrl + ,`打开设置。然后在 vscode 界面上看右上角
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1761638904984-1018bbe1-e7df-42b5-b9cf-a4e1adef00dc.png)
+![](assets/1761638904984-1018bbe1-e7df-42b5-b9cf-a4e1adef00dc.png)
 
 打开一个配置文件：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1761638927721-4eac68da-18ce-42ee-b1b2-10aa25178da7.png)
+![](assets/1761638927721-4eac68da-18ce-42ee-b1b2-10aa25178da7.png)
 
 然后将以下配置全部覆盖到这个文件上：
 
@@ -297,7 +297,7 @@ code --install-extension streetsidesoftware.code-spell-checker
   b. 输入并执行命令：Configure Display Language  
   c. 选择简体中文
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 第一个HTML程序
 HTML 的学习可以参考官方文档：[**MDN Web Docs**](https://developer.mozilla.org/zh-CN/)
@@ -420,7 +420,7 @@ body 元素定义文档的主体，所有用户可直接看到的元素都在这
 </body>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML基础标签
 ### 标题标签
@@ -590,7 +590,7 @@ body 元素定义文档的主体，所有用户可直接看到的元素都在这
 4. `width`：设置图片宽度，单位可以是px像素，也可以是百分比（相对于父容器的百分比）。只设置宽度时，高度会等比例缩放。
 5. `height`：设置图片高度，单位可以是px像素，也可以是百分比。只设置高度时，宽度会等比例缩放。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### &lt;a&gt;标签
 `<a>`标签可以定义超链接，超链接非常重要，用户通过点击超链接可以向服务器发送`GET`请求。最终达到页面跳转的效果。
@@ -639,7 +639,7 @@ URL的组成部分通常包括：协议 + IP地址 + PORT端口号 + 资源路�
 4. `_parent`：在当前窗口对应的父窗口中显示
 5. `具体的iframe名字`：在指定的窗体中显示
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### iframe（内联框架）
 `iframe`：内联框架（Inline Frame）。主要用途是在当前网页中创建一个内嵌的浏览器窗口，用于加载并显示另一个独立的网页。
@@ -723,7 +723,7 @@ iframe标签的属性：
 
 **&lt;div&gt;标签单独占一行，对于独占一行的元素，我们称之为块元素。**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 列表
 #### 无序列表
@@ -817,7 +817,7 @@ HTML5 中的 &lt;progress&gt; 标签用于在网页中显示任务的进度条�
 <progress max="100"></progress>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 播放音频视频标签
 在 HTML5 中，用于播放音频和视频的标签主要有以下两个：
@@ -877,7 +877,7 @@ HTML5 中的 &lt;progress&gt; 标签用于在网页中显示任务的进度条�
 </video>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML 实体字符
 HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字符的代码。
@@ -938,7 +938,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 | ↓ | `&darr;` |
 | ↔ | `&harr;` |
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML表格
 ### 怎么实现一个表格
@@ -1035,7 +1035,7 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 </body>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 单元格合并
 + `rowspan`：行合并
@@ -1204,18 +1204,18 @@ HTML 实体字符（HTML Entities）是用于在 HTML 文档中表示特殊字�
 
 **效果：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1746799925355-86d33bde-1d9d-4637-9716-0385d85e65fc.png)
+![](assets/1746799925355-86d33bde-1d9d-4637-9716-0385d85e65fc.png)
 
 #### 注意事项
 1. **HTML 规范要求 `<tfoot>` 必须放在 `<tbody>` 前（但渲染时显示在底部）。**
 2. 如果表格简单，可以省略 `<thead>`/`<tfoot>`，仅用 `<tbody>`。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML表单
 表单是用来收集用户信息的，如下图就是一个表单：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1746868675034-9715268a-8674-405a-b6e5-ef4872eee0c1.png)
+![](assets/1746868675034-9715268a-8674-405a-b6e5-ef4872eee0c1.png)
 
 一个完整的表单包含三个基本组成部分：表单标签、表单域、表单按钮。
 
@@ -1249,7 +1249,7 @@ HTML 表单用于收集用户输入，表单使用&lt;form&gt; 标签创建。�
 2. 第二种方式：用户点击超链接。
 3. 第三种方式：用户提交表单。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 表单域
 要提交数据的表单域必须加name属性。不然，该表单域的数据不会提交到服务器上。
@@ -1325,7 +1325,7 @@ rows：规定文本区内的可见行数。
 
 文本域可以添加placeholder属性，用于设置输入字段预期值的提示信息。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 表单按钮
 #### type="button"
@@ -1394,11 +1394,11 @@ placeholder 是 HTML 表单元素（如 &lt;input&gt; 或 &lt;textarea&gt;）的
 ```
 
 ### 实现用户注册表
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1746594787640-69577fd9-0c43-4f59-b47b-04400e0c2061.png)
+![](assets/1746594787640-69577fd9-0c43-4f59-b47b-04400e0c2061.png)
 
 # CSS3
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## CSS的简介
 ### 什么是CSS
@@ -1426,7 +1426,7 @@ CSS是前端开发的三大基石之一（HTML+CSS+JavaScript），负责将枯�
 + 复用性强：一套样式可应用于多个页面或元素。
 + 响应式设计：网页能自动适配不同设备屏幕尺寸与分辨率，我们把这个称为响应式设计。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## CSS基础语法
 关于 CSS 的学习，可以参考官方文档：[**MDN Web Docs**](https://developer.mozilla.org/zh-CN/)
@@ -1516,7 +1516,7 @@ _对比：内联CSS（写在HTML中）每次访问页面都需重新加载。_
 
 通过`<link>`引入外部CSS文件是**可维护性、性能、复用性**的最佳平衡方案，尤其适合中大型项目。只有极少数特殊情况（如关键首屏样式）才会考虑内联CSS。
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 样式的优先级
 
@@ -1573,7 +1573,7 @@ _对比：内联CSS（写在HTML中）每次访问页面都需重新加载。_
 1. RGB 颜色值是这样规定的：rgb(red, green, blue)，每个参数定义颜色的强度，可以是介于 0 与 255 之间的整数，或者是百分比值（从 0% 到 100%）。
 2. 十六进制颜色是这样规定的：#RRGGBB，其中的 RR（红色）、GG（绿色）、BB（蓝色）十六进制整数规定了颜色的成分。所有值必须介于00 到 FF（255的十六进制是 FF） 之间。另外十六进制方式是可以简写的，可简写为：#RGB
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 相对路径与绝对路径
 在Web开发中，**路径（Path）** 用于定位外部资源（如图片、CSS文件、JavaScript文件等）。路径分为 **相对路径** 和 **绝对路径**，它们的核心区别在于 **参照点的不同**。以下是详细解释：
@@ -1666,7 +1666,7 @@ project/（网站根目录）
 <link rel="stylesheet" href="/assets/css/style.css">
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## CSS选择器
 CSS选择器主要包括：
@@ -1767,7 +1767,7 @@ CSS选择器主要包括：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 关系选择器
 #### 交集选择器
@@ -1828,7 +1828,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 后代选择器
 后代选择器又称为包含选择器，选择所有被`E元素`包含的`F元素`，**中间用**`**空格**`**隔开**。
@@ -2010,7 +2010,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 属性选择器
 通过html的属性来选择元素：
@@ -2103,7 +2103,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 通配符选择器
 在 CSS 中，**通配符选择器** 主要用于匹配具有特定模式的元素名称、属性或属性值。以下是常见的通配符及其用法：
@@ -2159,7 +2159,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 属性选择器中的通配符
 ##### `[attr^="value"]`（匹配开头）
@@ -2418,7 +2418,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 选择器优先级
 #### 单个选择器优先级比较
@@ -2487,7 +2487,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## CSS常用属性
 ### 边框样式
@@ -2532,7 +2532,7 @@ CSS交集选择器是由**两个选择器紧密连接组成的（中间没有空
 
 **效果如下：**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780495964650-2e9faf20-a065-49cb-acd2-691ccd141145.png)
+![](assets/1780495964650-2e9faf20-a065-49cb-acd2-691ccd141145.png)
 
 ### 背景属性
 CSS 允许应用纯色作为背景，也允许使用背景图像创建相当复杂的效果。
@@ -2665,7 +2665,7 @@ CSS 允许应用纯色作为背景，也允许使用背景图像创建相当复�
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 文本属性
 CSS 文本属性可定义文本的外观。通过文本属性，可以改变文本的颜色，字符间距，对齐文本，装饰文本，对文本进行缩进等等。
@@ -2957,7 +2957,7 @@ overflow 属性规定当内容溢出元素框时发生的事情。
 + `padding-bottom`
 + `padding-left`
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 复合样式
 
@@ -3035,7 +3035,7 @@ list-style-type，列表样式，类型属性值可以为：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## 元素的分类
 元素主要分为：块级元素、内联元素和内联块级元素。
@@ -3075,7 +3075,7 @@ list-style-type，列表样式，类型属性值可以为：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 内联元素
 常见的行内元素有：**a，span** 等。
@@ -3142,7 +3142,7 @@ list-style-type，列表样式，类型属性值可以为：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 关于隐藏和显示
 在CSS中，`visibility`和`display`样式都可以设置元素的隐藏和显示：
@@ -3182,7 +3182,7 @@ list-style-type，列表样式，类型属性值可以为：
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ##  CSS布局
 ### 文档流
@@ -3216,7 +3216,7 @@ list-style-type，列表样式，类型属性值可以为：
 
 ****
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 脱离文档流之 float 布局
 #### float 布局初体验
@@ -3426,7 +3426,7 @@ list-style-type，列表样式，类型属性值可以为：
 
 **最终效果：**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780549139386-56b03208-de3f-456e-bdb6-a586ae341692.png)
+![](assets/1780549139386-56b03208-de3f-456e-bdb6-a586ae341692.png)
 
 如下代码：**有文字环绕**
 
@@ -3484,9 +3484,9 @@ list-style-type，列表样式，类型属性值可以为：
 
 **效果如下：**
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1780549496024-3744ed59-49bb-4a75-838e-fba5e9819688.png)
+![](assets/1780549496024-3744ed59-49bb-4a75-838e-fba5e9819688.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 脱离文档流之 position 布局
 #### position 属性值
@@ -3607,7 +3607,7 @@ position 属性有五个主要值：
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### z-index 层叠顺序
 #### 基本概念
@@ -3675,7 +3675,7 @@ z-index 属性控制定位元素在垂直于屏幕方向（z轴）上的堆叠�
 
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Flex 布局
 flex 布局是用来代替 float 布局的。Flex布局更直观、更易控制，不需要处理浮动带来的布局塌陷问题。
@@ -3709,7 +3709,7 @@ flex 布局是用来代替 float 布局的。Flex布局更直观、更易控制�
 
 实现这样一个效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1761868914209-4afb5e38-096f-4348-9a98-9c0a4a1d6fb1.png)
+![](assets/1761868914209-4afb5e38-096f-4348-9a98-9c0a4a1d6fb1.png)
 
 ```html
 <!DOCTYPE html>
@@ -3770,7 +3770,7 @@ flex 布局是用来代替 float 布局的。Flex布局更直观、更易控制�
 
 # JavaScript（ES6）
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JavaScript概述
 ### 什么是JavaScript？
@@ -3930,7 +3930,7 @@ JavaScript = ECMAScript(核心) + DOM(文档操作) + BOM(浏览器交互)
     - `screen`：屏幕信息
     - `document`：实际上是DOM的入口
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## HTML中引入JavaScript
 在HTML中引入JavaScript代码主要有以下几种方式：
@@ -3968,9 +3968,9 @@ JavaScript = ECMAScript(核心) + DOM(文档操作) + BOM(浏览器交互)
 
 `console.log()`是向控制台上打印输出，在 VS Code 中如何快速生成该语句呢？可进行这样的配置：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751635784135-0e1e1da0-d5cf-4214-8d5c-cc0d09edc16c.png)
+![](assets/1751635784135-0e1e1da0-d5cf-4214-8d5c-cc0d09edc16c.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751635813303-293439cd-caee-4503-ae48-f90c74bdc1d3.png)
+![](assets/1751635813303-293439cd-caee-4503-ae48-f90c74bdc1d3.png)
 
 打开 `javascript.json`文件后，添加如下的配置，然后保存文件，随后在 js 文件中输入 cl 即可快速生成 `console.log();` 语句：
 
@@ -4049,7 +4049,7 @@ DOM 构建完成 → (开始执行 defer 脚本) → (所有 defer 脚本执行�
 ### node 环境下执行 js 代码
 windows 环境下，通过执行 node 命令，然后编写 js 代码，如下：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1781611902506-fdc6674e-0b3d-488c-8bb8-837526d78e7a.png)
+![](assets/1781611902506-fdc6674e-0b3d-488c-8bb8-837526d78e7a.png)
 
 `.exit`退出 node 环境。
 
@@ -4066,11 +4066,11 @@ add(10, 20);
 
 通过 node 命令来执行 js 脚本，如下：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1781612075130-bc2fb32d-e3d6-424f-b215-4a09737328ba.png)
+![](assets/1781612075130-bc2fb32d-e3d6-424f-b215-4a09737328ba.png)
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## JavaScript标识符
 `JavaScript`的学习可以参考官方文档：[**MDN Web Docs**](https://developer.mozilla.org/zh-CN/)
@@ -4136,7 +4136,7 @@ let canEdit = true;
 ```
 
 ## JavaScript关键字
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **关键字** 是 JavaScript 语言中具有特殊含义的保留字，它们用于控制程序结构（如 `if`, `for`）、定义变量（如 `let`, `const`）、声明函数（如 `function`）等。
 
@@ -4216,7 +4216,7 @@ let canEdit = true;
 `enum``implements``interface``package``private``protected``public``static`
 
 ## JavaScript字面量
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **字面量（Literals）** 是直接在代码中表示固定值的语法形式，它们不需要计算或解析，直接代表其字面意义。**JS中都有哪些类型的字面量呢？**
 
@@ -4356,7 +4356,7 @@ const sym = Symbol("description");
 后面课程详细讲。
 
 ## JavaScript变量
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是变量
 **变量**是编程中用于存储数据的命名容器。可以将变量想象成一个贴有标签的盒子：
@@ -4650,7 +4650,7 @@ console.log(value); // 输出"全局"
 JavaScript 在非严格模式下允许隐式创建全局变量，这是语言早期设计的一个缺陷。严格模式和现代声明关键字（`let`/`const`）的引入，正是为了纠正这种行为，使代码更可预测和可维护。
 
 ## JavaScript 程序调试
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 以下所讲内容是基于 Chrome 浏览器的。
 
@@ -4675,7 +4675,7 @@ JavaScript 在非严格模式下允许隐式创建全局变量，这是语言早
 
 F12 打开调试面板，点击 `Console`控制台面板，直接在控制台上输入 JS 代码可以临时执行一段 JS 代码，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750990178377-a0ce327a-08dc-4e07-8faf-279514e63e45.png)
+![](assets/1750990178377-a0ce327a-08dc-4e07-8faf-279514e63e45.png)
 
 当然，如果 JS 代码执行过程中出现了错误，也可以在 `Console`上查看具体的错误信息。
 
@@ -4704,15 +4704,15 @@ F12 打开调试面板，点击 `Console`控制台面板，直接在控制台上
 
 添加断点调试，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750990442390-e3169da7-d231-47bc-b6e9-96b3744a3e46.png)
+![](assets/1750990442390-e3169da7-d231-47bc-b6e9-96b3744a3e46.png)
 
 ### debugger 关键字
 也可以在 JS 源码中添加 `debugger`语句，当程序执行到 debugger 语句时自动进入调试模式。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1762125798905-eee32f09-a79a-4f6d-afc3-57668a7bacd2.png)
+![](assets/1762125798905-eee32f09-a79a-4f6d-afc3-57668a7bacd2.png)
 
 ## JavaScript中的函数
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是函数
 函数是 JavaScript 中的基本构建块之一，它是一段可重复使用的代码块，可以接受输入（参数），执行特定任务，并返回结果。
@@ -5110,7 +5110,7 @@ obj.sayName(); // 输出: "Alice"
 ```
 
 ## JavaScript数据类型
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在 JavaScript 中，数据类型可以分为 **基本数据类型（Primitive Types）** 和 **引用数据类型（Reference Types）** 两大类：
 
@@ -5291,7 +5291,7 @@ console.log(Object.prototype.toString.call({})); // '[object Object]'
 ```
 
 ## ES6的模块化
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 模块化是什么
 **模块化** 就是把代码拆分成多个独立的文件（模块），每个模块负责一个特定的功能，然后通过导入（`import`）和导出（`export`）来组合使用。这样可以：
@@ -5438,7 +5438,7 @@ import './some-module.js';
 3. `type="module"`：告诉浏览器这是一个模块化脚本，支持 `import/export`。
 
 ## JavaScript运算符
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 JavaScript 运算符可以分为以下几大类：
 
@@ -5731,7 +5731,7 @@ console.log(name);
 + `async/await` 等待Promise
 
 ## JavaScript控制语句
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 JavaScript 中的控制语句可以分为以下几类：
 
@@ -5776,7 +5776,7 @@ for(var index in arr){
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750640360472-231364ab-533d-4339-acc8-f494ac7f26d9.png)
+![](assets/1750640360472-231364ab-533d-4339-acc8-f494ac7f26d9.png)
 
 **数组的遍历方式推荐：传统的 for 循环，或者 forEach 方法，或者 for..of 循环。**
 
@@ -6044,7 +6044,7 @@ for (let value of user) {
 + `return` 语句 (在函数中)
 
 ## JavaScript 异常处理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 异常处理是 JavaScript 编程中的重要概念，它能帮助我们优雅地处理程序运行中可能出现的错误情况。本文将从基础语法角度，详细介绍 JavaScript 中的异常处理机制。
 
@@ -6185,7 +6185,7 @@ try {
 ```
 
 ## JavaScript常用全局函数
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 以下是 JavaScript 中可以直接调用的**全局函数**（不依赖任何对象，属于全局作用域），包括 **ECMAScript 标准函数** 和 **浏览器环境提供的函数**，并附带简单示例：
 
@@ -6245,7 +6245,7 @@ JavaScript中所有URI编码/解码函数都固定采用UTF-8字符集
 | `confirm(message)` | 显示确认弹窗 | `confirm("Delete?") → true/false` |
 
 ## JavaScript常用内置对象
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Object 的常用方法
 + `Object.keys(obj)` - 返回对象可枚举属性
@@ -6603,7 +6603,7 @@ console.log("场景3:", double(7)); // 14
 ```
 
 ## JavaScript事件
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 事件列表
 以下是 JavaScript 中常用的各类事件分类列表：
@@ -6816,7 +6816,7 @@ console.log("场景3:", double(7)); // 14
 
 点击"点击我"时，控制台会输出:
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1762300467295-0bb71dad-ed0c-4ba7-98ff-b5e953f44be0.png)
+![](assets/1762300467295-0bb71dad-ed0c-4ba7-98ff-b5e953f44be0.png)
 
 #### 阻止事件冒泡
 可以使用`event.stopPropagation()`方法阻止事件继续冒泡:（其实就是阻止事件继续传播，既可以阻止捕获阶段，又可以阻止冒泡阶段。）
@@ -7149,7 +7149,7 @@ document.getElementById('parent').addEventListener('click', function(event) {
 ```
 
 ## JavaScript使用正则表达式
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 正则表达式概述
 正则表达式（Regular Expression，简称 regex 或 regexp）是一种用于描述字符串模式的特殊语法。它由一系列字符和特殊符号构成，用于定义搜索模式，主要用于字符串的匹配、查找、替换和分割等操作。正则表达式提供了一种灵活、高效的方式来处理文本数据。
@@ -7477,7 +7477,7 @@ str.match(/^a\d/gm);  // ["a1", "a2", "a3"]
 
 ## DOM 编程
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 DOM编程是指使用JavaScript来操作**文档对象模型(Document Object Model)**，从而动态地改变网页内容、结构和样式的编程方式。
 
@@ -7773,7 +7773,7 @@ textInput.addEventListener('input', function() {
 ```
 
 ## DOM 编程综合小项目
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 网页实时时间显示
 主要掌握：setInterval 周期性的执行某个任务。
@@ -8076,7 +8076,7 @@ textInput.addEventListener('input', function() {
 ```
 
 ## BOM编程
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 BOM 是 JavaScript 与浏览器交互的核心模型，它提供了一组对象和方法，用于操作浏览器窗口、导航、历史记录、屏幕等与网页内容无关的浏览器功能。
 
@@ -8143,7 +8143,7 @@ function isMobile() {
 + **`screen.availWidth`** / **`screen.availHeight`**：可用屏幕区域（排除任务栏等）。例如：1920 1040
 
 ## JSON字符串
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是JSON
 JSON（JavaScript Object Notation）是一种轻量级的数据交换格式，它基于ECMAScript的一个子集，采用完全独立于编程语言的文本格式来存储和表示数据。
@@ -8219,7 +8219,7 @@ JSON的特点：
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750990998200-f0f5da68-7e7d-4b54-a46c-a27e936be648.png)
+![](assets/1750990998200-f0f5da68-7e7d-4b54-a46c-a27e936be648.png)
 
 ### JSON 字符串转 JS 对象
 
@@ -8244,10 +8244,10 @@ JSON的特点：
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750991088515-f8db2878-5ec1-4165-9676-a38b52c32928.png)
+![](assets/1750991088515-f8db2878-5ec1-4165-9676-a38b52c32928.png)
 
 ## Cookie 和 WebStorage
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### Cookie
 #### 什么是 Cookie？
@@ -8267,7 +8267,7 @@ document.cookie = 'productId=p001';
 
 **Chrome 浏览器查看 Cookie**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750986834521-f4bd1ec1-9cad-4384-88da-de154852ebda.png)
+![](assets/1750986834521-f4bd1ec1-9cad-4384-88da-de154852ebda.png)
 
 **使用 JS 代码读取 Cookie**
 
@@ -8466,7 +8466,7 @@ sessionStorage.clear(); // 清空所有 sessionStorage 数据
 
 **Chrome 浏览器 F12 面板上查看**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1750991786591-2b850e39-1d4f-4468-83a0-7ebd039014db.png)
+![](assets/1750991786591-2b850e39-1d4f-4468-83a0-7ebd039014db.png)
 
 #### 存储复杂数据（JSON 转换）
 
@@ -8616,7 +8616,7 @@ Set-Cookie: sessionId=abc123; SameSite=Strict
 + **SameSite=Strict**：完全禁止跨站发送
 
 ## 函数式编程
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **函数式编程（Functional Programming, FP）是一种以函数为核心**的编程范式，函数可以作为参数，返回值，变量等。
 
@@ -8645,7 +8645,7 @@ innerFun('Tom');
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751197333169-a8dde5ab-05de-4813-a002-1eb25fbc7973.png)
+![](assets/1751197333169-a8dde5ab-05de-4813-a002-1eb25fbc7973.png)
 
 函数也可以作为参数，如下代码：
 
@@ -8668,7 +8668,7 @@ fun((username) => {
 
 执行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1751197665032-beb5cce2-189d-4cc4-b30c-860614e5b126.png)
+![](assets/1751197665032-beb5cce2-189d-4cc4-b30c-860614e5b126.png)
 
 #### 函数的作用域链
 在JavaScript中，作用域链的工作方式是：**内层函数可以访问外层函数的变量，但外层函数不能访问内层函数的变量**。
@@ -8966,7 +8966,7 @@ const users = [
 ```
 
 ## 原型对象(Prototype)
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在 JavaScript 中，对象的 `prototype` 属性是理解原型继承（Prototypal Inheritance）的核心概念。以下是详细解释：
 
@@ -9110,7 +9110,7 @@ console.log(Object.hasOwn(myCar,'brand'));  // false（原型）
 ```
 
 ## 面向对象
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 JS 的面向对象是基于原型的(prototype-based)，而不是基于类的(class-based)。
 
@@ -9447,7 +9447,7 @@ const createDuck = () => ({ ...eater, ...walker, ...swimmer });
 
 **核心思想：** 组合就像搭积木，需要什么功能就拼什么，比继承更灵活！
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ## Symbol类型详解
 `Symbol` 是 JavaScript 中的一种基本数据类型，它在 **ES6（ECMAScript 2015）** 中被引入，主要用于创建唯一的、不可变的值，通常用作对象属性的键，以避免属性名冲突。

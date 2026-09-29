@@ -1,7 +1,7 @@
 # MyBatis
 
 ## MyBatis概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 框架的理解
 + 在文献中看到的framework被翻译为框架
@@ -17,7 +17,7 @@
 ### 三层架构
 **MyBatis 属于持久层框架**。类似的框架还有：Hibernate（实现了JPA规范）、jOOQ、Guzz、**Spring Data（实现了JPA规范）**、ActiveJDBC
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1749727730298-3fbf26a7-40a4-4ee2-bd8b-6ed01adec552.png)
+![](assets/1749727730298-3fbf26a7-40a4-4ee2-bd8b-6ed01adec552.png)
 
 ### JDBC不足
 **手动给每个占位符传值，太麻烦了：**
@@ -124,10 +124,10 @@ R（Relational）：关系型数据库
 
 M（Mapping）：将 JVM 中的Java对象映射到数据库表中一行记录，或是将数据库表中一行记录映射成 JVM 中的一个Java对象。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763606101813-cd8f22c4-4b7e-485b-81b8-4558b87745d0.png)
+![](assets/1763606101813-cd8f22c4-4b7e-485b-81b8-4558b87745d0.png)
 
 ## MyBatis入门程序
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 MyBatis 英文文档地址：[https://mybatis.org/mybatis-3/](https://mybatis.org/mybatis-3/)
 
@@ -136,15 +136,15 @@ MyBatis 中文文档地址：[https://mybatis.org/mybatis-3/zh_CN/index.html](ht
 ### MyBatis 源码下载
 字节码 jar 包不需要下载，我们用 Maven 引入依赖即可。需要源码的可以从这里下载。[https://github.com/mybatis/mybatis-3](https://github.com/mybatis/mybatis-3)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763607495012-be877c81-7b0b-4872-a081-47f322629dde.png)
+![](assets/1763607495012-be877c81-7b0b-4872-a081-47f322629dde.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763607545153-53bc5340-2312-456d-8552-986ba054c2f9.png)
+![](assets/1763607545153-53bc5340-2312-456d-8552-986ba054c2f9.png)
 
 ### MyBatis入门程序开发步骤
 #### 初始化数据库表
 **创建数据库 **`**mybatis**`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1743559916175-57d4d771-3de7-4994-9364-6121af83577d.png)
+![](assets/1743559916175-57d4d771-3de7-4994-9364-6121af83577d.png)
 
 **执行 SQL 脚本：**
 
@@ -410,7 +410,7 @@ public class CarMapperTest {
 
 它就是 MyBatis **内置**的一个“日志打印器”，而不是一个独立的第三方日志框架。它本质上就是一个“让 MyBatis 用 `System.out.println` 把 SQL 打印到控制台”的快速开关，而不是一个功能完整的日志框架。如果在开发中，想要快速打印 SQL 日志，这是一个最便捷的方案。当然，如果你需要集成第三方真正的日志框架，那也超级简单，只需要把日志框架添加到 classpath 中即可，mybatis 运行时会自动检查 classpath 中是否存在具体的日志框架，如果存在则直接使用你提供的。日志框架的查找顺序官方文档有说明：
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1782741619907-2992578e-d34d-4dca-8108-2f0fa790c543.png)
+![](assets/1782741619907-2992578e-d34d-4dca-8108-2f0fa790c543.png)
 
 ### MyBatis工具类SqlSessionUtil的封装
 每一次获取SqlSession对象代码太繁琐，封装一个工具类
@@ -470,10 +470,10 @@ public void testInsertCar(){
 ### idea配置文件模板
 mybatis-config.xml和SqlMapper.xml文件可以在IDEA中提前创建好模板，以后通过模板创建配置文件。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660629382298-df2d0e70-d8ce-4ae6-9f19-e74923adf121.png)
+![](assets/1660629382298-df2d0e70-d8ce-4ae6-9f19-e74923adf121.png)
 
 ## 使用MyBatis完成CRUD
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 创建module（Maven的普通Java模块）：mybatis-002-crud
 
@@ -591,9 +591,9 @@ SQL语句这样写：
 
 运行程序：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763613779493-46159fd2-448c-4c2e-9006-8037d463e476.png)
+![](assets/1763613779493-46159fd2-448c-4c2e-9006-8037d463e476.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659666614107-2df4bd58-105b-4b76-881d-e1d19b4d4b98.png)
+![](assets/1659666614107-2df4bd58-105b-4b76-881d-e1d19b4d4b98.png)
 
 通过测试，看到程序并没有报错。正常执行。不过 #{kk} 的写法导致无法获取到map集合中的数据，最终导致数据库表car_num插入了NULL。
 
@@ -626,7 +626,7 @@ SQL语句做如下修改，这样可以增强程序的可读性：
 
 运行程序，查看数据库表：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659667098369-a13a16ec-6f02-44f2-85b7-8834b9ca161b.png)
+![](assets/1659667098369-a13a16ec-6f02-44f2-85b7-8834b9ca161b.png)
 
 使用Map集合可以传参，那使用**<font style="color:#E8323C;">pojo</font>**（简单普通的java对象）可以完成传参吗？测试一下：
 
@@ -682,7 +682,7 @@ public void testInsertCarByPOJO(){
 
 + 运行程序，查看数据库表：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659668224378-2070e0f4-8252-4978-8204-bb247d172152.png)
+![](assets/1659668224378-2070e0f4-8252-4978-8204-bb247d172152.png)
 
 **<font style="color:#DF2A3F;">直接告诉大家一个结论：</font>`#{}`<font style="color:#DF2A3F;">里写什么？</font>**
 
@@ -816,7 +816,7 @@ public void testSelectCarById(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763614261881-c9304f9e-7481-43f5-a3b8-8801ce957802.png)
+![](assets/1763614261881-c9304f9e-7481-43f5-a3b8-8801ce957802.png)
 
 运行后之前的异常不再出现了，这说明添加了resultType属性之后，解决了之前的异常，可以看出resultType是不能省略的。
 
@@ -843,7 +843,7 @@ Car类的属性名：id, carNum, brand, guidePrice, produceTime, carType
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1659684140382-c8d05a79-7906-4a8f-8301-3cd8097b3eff.png)
+![](assets/1659684140382-c8d05a79-7906-4a8f-8301-3cd8097b3eff.png)
 
 通过测试得知，如果当查询结果的字段名和java类的属性名对应不上的话，可以采用as关键字起别名，**<font style="color:#E8323C;">当然还有其它解决方案，我们后面再看</font>**。
 
@@ -952,10 +952,10 @@ public void testNamespace(){
 
 运行结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763614683732-039827cd-b984-4c65-8ea2-e75b30539e73.png)
+![](assets/1763614683732-039827cd-b984-4c65-8ea2-e75b30539e73.png)
 
 ## MyBatis核心配置文件详解
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
@@ -1159,7 +1159,7 @@ public void testDataSource() throws Exception{
 
 当type是UNPOOLED，控制台输出：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763618272873-466b6161-369f-4c92-9903-8b76c47bb1c7.png)
+![](assets/1763618272873-466b6161-369f-4c92-9903-8b76c47bb1c7.png)
 
 修改配置文件mybatis-config3.xml中的配置：
 
@@ -1169,7 +1169,7 @@ public void testDataSource() throws Exception{
 
 Java测试程序不需要修改，直接执行，看控制台输出：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763618305280-5809c7aa-7532-4725-bb36-80566d08730a.png)
+![](assets/1763618305280-5809c7aa-7532-4725-bb36-80566d08730a.png)
 
 通过测试得出：UNPOOLED不会使用连接池，每一次都会新建JDBC连接对象。POOLED会使用数据库连接池。【这个连接池是mybatis自己实现的。】
 
@@ -1225,7 +1225,7 @@ poolTimeToWait：当无法获取到空闲连接时，每隔20秒打印一次日�
 
 下图是默认配置：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660126871013-88f83ea4-94e9-4088-bdb4-06a4fd73866a.png)
+![](assets/1660126871013-88f83ea4-94e9-4088-bdb4-06a4fd73866a.png)
 
 ### properties
 mybatis提供了更加灵活的配置，连接数据库的信息可以单独写到一个属性资源文件中，假设在类的根路径下创建jdbc.properties文件，配置如下：
@@ -1344,7 +1344,7 @@ mapper标签用来指定SQL映射文件的路径，包含多种指定方式，�
 **<font style="color:#E8323C;">mapper还有其他的指定方式，后面再看！！！</font>**
 
 ## 在WEB中应用MyBatis（使用三层架构）
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 我们在学习Servlet的时候，编写了一个银行账户转账的功能。并且当时开发的这个功能使用了三层架构，并且也解决了事务的问题。只不过底层使用了JDBC。我们现在把持久层换成MyBatis。当然，大家也可以按照下面的手册重新从零写一个全新的账户转账功能。
 
@@ -1369,12 +1369,12 @@ mapper标签用来指定SQL映射文件的路径，包含多种指定方式，�
 **+ bank**
 
 ### 需求描述
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660274775552-da896b17-09dd-455a-899e-eb4f36fc0ced.png)
+![](assets/1660274775552-da896b17-09dd-455a-899e-eb4f36fc0ced.png)
 
 ### 数据库表的设计和准备数据
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744114955648-2fc6ec58-392a-40d2-93fa-9a4c5bea8c95.png)
+![](assets/1744114955648-2fc6ec58-392a-40d2-93fa-9a4c5bea8c95.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744114963721-fbaea5cd-e6d4-4ccd-8bd4-cb83081dbc1c.png)
+![](assets/1744114963721-fbaea5cd-e6d4-4ccd-8bd4-cb83081dbc1c.png)
 
 ### 实现步骤
 #### 第一步：创建web应用
@@ -1786,11 +1786,11 @@ public class AccountController extends HttpServlet {
 
 启动服务器，打开浏览器，输入地址：http://localhost:8080/bank，测试：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660548722867-8ae16c8b-f25c-4fc7-b0bb-8c8f0c5e546a.png)
+![](assets/1660548722867-8ae16c8b-f25c-4fc7-b0bb-8c8f0c5e546a.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png)
+![](assets/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115034289-426c2baa-64d2-4631-b8cb-796ed2cd98bc.png)
+![](assets/1744115034289-426c2baa-64d2-4631-b8cb-796ed2cd98bc.png)
 
 ### MyBatis对象作用域以及事务问题
 #### MyBatis核心对象的作用域
@@ -1863,17 +1863,17 @@ public class AccountServiceImpl implements AccountService {
 
 运行前注意看数据库表中当前的数据：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115056505-7f825472-6106-4df2-9339-24df01e0cbba.png)
+![](assets/1744115056505-7f825472-6106-4df2-9339-24df01e0cbba.png)
 
 执行程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png)
+![](assets/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552525960-fb4d555f-09a1-4120-b0b3-73c3eeb2201a.png)
+![](assets/1660552525960-fb4d555f-09a1-4120-b0b3-73c3eeb2201a.png)
 
 再次查看数据库表中的数据：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115075908-7614a3be-762f-47b3-a84b-16b9014c6a33.png)
+![](assets/1744115075908-7614a3be-762f-47b3-a84b-16b9014c6a33.png)
 
 **<font style="color:#E8323C;">傻眼了吧！！！事务出问题了，转账失败了，钱仍然是少了1万。这是什么原因呢？主要是因为service和dao中使用的SqlSession对象不是同一个。</font>**
 
@@ -2014,38 +2014,38 @@ public class AccountServiceImpl implements AccountService {
 
 当前数据库表中的数据：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115097733-d437fb32-7b6f-4552-a5fb-4d0dbf638dba.png)
+![](assets/1744115097733-d437fb32-7b6f-4552-a5fb-4d0dbf638dba.png)
 
 再次运行程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png)
+![](assets/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552525960-fb4d555f-09a1-4120-b0b3-73c3eeb2201a.png)
+![](assets/1660552525960-fb4d555f-09a1-4120-b0b3-73c3eeb2201a.png)
 
 查看数据库表：没有问题。
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115110613-19091ac3-3f84-4fab-b33c-2a90d3e2c724.png)
+![](assets/1744115110613-19091ac3-3f84-4fab-b33c-2a90d3e2c724.png)
 
 再测试转账成功：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png)
+![](assets/1660552498799-6c617fed-b94e-4e94-a05b-5fe16a97023e.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png)
+![](assets/1660551569099-4d81d8cd-35c5-418f-9de1-74ef8641a59f.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115129291-98045e04-15d5-4e91-b562-d159f1ca75b1.png)
+![](assets/1744115129291-98045e04-15d5-4e91-b562-d159f1ca75b1.png)
 
 如果余额不足呢：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553844177-0db1b3c9-3663-4a96-abb0-d516f24c36b8.png)
+![](assets/1660553844177-0db1b3c9-3663-4a96-abb0-d516f24c36b8.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660553856988-09e342be-fa3c-4467-9541-d785a08276e9.png)
+![](assets/1660553856988-09e342be-fa3c-4467-9541-d785a08276e9.png)
 
 账户的余额依然正常：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115142994-bcedbef1-b9e9-4ac2-aa76-005f8d0655dc.png)
+![](assets/1744115142994-bcedbef1-b9e9-4ac2-aa76-005f8d0655dc.png)
 
 ## MyBatis中接口代理机制及使用
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 分析当前程序存在的问题
 我们来看一下DaoImpl的代码
@@ -2087,22 +2087,22 @@ AccountDao accountDao = (AccountDao)sqlSession.getMapper(AccountDao.class);
 
 使用以上代码的前提是：**<font style="color:#E8323C;">AccountMapper.xml文件中的namespace必须和dao接口的全限定名称一致，id必须和dao接口中方法名一致。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1743664727431-954c376f-2ec6-464c-a449-2bf3d4dcea86.png)
+![](assets/1743664727431-954c376f-2ec6-464c-a449-2bf3d4dcea86.png)
 
 将service中获取dao对象的代码再次修改，如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1743664656687-88bdde54-4162-4274-a9b2-e5b887d185d7.png)
+![](assets/1743664656687-88bdde54-4162-4274-a9b2-e5b887d185d7.png)
 
 测试前数据：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660611965066-a4188327-2a59-4125-bd2d-0aa40fb8bf3a.png)
+![](assets/1660611965066-a4188327-2a59-4125-bd2d-0aa40fb8bf3a.png)
 
 测试后数据：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115171914-664211b3-d213-48c6-82c3-c4264a004f83.png)
+![](assets/1744115171914-664211b3-d213-48c6-82c3-c4264a004f83.png)
 
 ## MyBatis小技巧
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### `#{}`和`${}`
 + **`#{}`**：是**参数占位符**，MyBatis 会将其替换为 `?`，并通过 PreparedStatement 安全地设置参数。能有效**防止 SQL 注入**。
@@ -2189,7 +2189,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660617419624-9c151df7-6c1e-469b-8489-2694009e68b6.png)
+![](assets/1660617419624-9c151df7-6c1e-469b-8489-2694009e68b6.png)
 
 通过执行可以清楚的看到，sql语句中是带有 ? 的，这个 ? 就是大家在JDBC中所学的占位符，专门用来接收值的。
 
@@ -2223,11 +2223,11 @@ CarMapper.xml文件修改如下：
 
 再次运行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660617746157-bdb389c7-5752-42f7-a023-c0b8792cf604.png)
+![](assets/1660617746157-bdb389c7-5752-42f7-a023-c0b8792cf604.png)
 
 出现异常了，这是为什么呢？看看生成的sql语句：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660617813209-5e0d9395-452b-42ed-bee2-816d41f17c30.png)
+![](assets/1660617813209-5e0d9395-452b-42ed-bee2-816d41f17c30.png)
 
 很显然，${} 是先进行sql语句的拼接，然后再编译，出现语法错误是正常的，因为 燃油车 是一个字符串，在sql语句中应该添加单引号
 
@@ -2255,7 +2255,7 @@ CarMapper.xml文件修改如下：
 
 再执行测试程序：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660618019174-42718d2b-7cdd-4c70-8a44-055258d5ad29.png)
+![](assets/1660618019174-42718d2b-7cdd-4c70-8a44-055258d5ad29.png)
 
 通过以上测试，可以看出，对于以上这种需求来说，还是建议使用 #{} 的方式。
 
@@ -2297,7 +2297,7 @@ public void testSelectAllByTableName(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660798482963-16baeed4-cd22-4a0e-a631-6f49ee9f101b.png)
+![](assets/1660798482963-16baeed4-cd22-4a0e-a631-6f49ee9f101b.png)
 
 还有以下这些情况也需要使用`${}`：
 
@@ -2329,7 +2329,7 @@ public void testSelectAllByTableName(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660804562331-8febb980-24d8-4e18-8e4b-6416f28aa251.png)
+![](assets/1660804562331-8febb980-24d8-4e18-8e4b-6416f28aa251.png)
 
 #### 第二种：双引号方式
 
@@ -2344,7 +2344,7 @@ public void testSelectAllByTableName(){
 </select>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660804873326-12cbff35-f4fe-4019-90a4-7b758d7c4e39.png)
+![](assets/1660804873326-12cbff35-f4fe-4019-90a4-7b758d7c4e39.png)
 
 ### typeAliases
 我们来观察一下CarMapper.xml中的配置信息：
@@ -2545,7 +2545,7 @@ public void testInsertUseGeneratedKeys(){
 ```
 
 ## MyBatis参数处理
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **MyBatis参数处理指的是，在MyBatis当中都有哪些方式可以给SQL语句的占位符**`**#{}**`**传值？通常有以下几种方式：**
 
@@ -2873,7 +2873,7 @@ public void testSelectByNameAndSex(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660641021618-ce3ac913-fe10-45f5-9760-3e51ef2dd864.png)
+![](assets/1660641021618-ce3ac913-fe10-45f5-9760-3e51ef2dd864.png)
 
 异常信息描述了：name参数找不到，可用的参数包括[arg1, arg0, param1, param2]
 
@@ -2888,7 +2888,7 @@ public void testSelectByNameAndSex(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660641284279-64a7312a-d036-448f-aaef-a1bcde8abba2.png)
+![](assets/1660641284279-64a7312a-d036-448f-aaef-a1bcde8abba2.png)
 
 再次尝试修改StudentMapper.xml文件
 
@@ -2957,7 +2957,7 @@ public void testSelectByNameAndAge(){
 核心：@Param("**<font style="color:#E8323C;">这里填写的其实就是map集合的key</font>**")
 
 ## MyBatis查询语句专题
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 模块名：mybatis-007-select
 
@@ -3024,7 +3024,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115425100-cd5032eb-c9ca-4e67-96fc-b9abac43cdb6.png)
+![](assets/1744115425100-cd5032eb-c9ca-4e67-96fc-b9abac43cdb6.png)
 
 **<font style="color:#E8323C;">查询结果是一条的话可以使用List集合接收吗？当然可以</font>**。
 
@@ -3053,7 +3053,7 @@ public void testSelectByIdToList(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763624554278-01ed8750-bbb7-4223-8871-10b722c5f240.png)
+![](assets/1763624554278-01ed8750-bbb7-4223-8871-10b722c5f240.png)
 
 ### 返回List&lt;Car&gt;
 之前我们已经接触过了，大家把代码看一下就行了。
@@ -3085,7 +3085,7 @@ public void testSelectAll(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115501196-87f1693e-c891-457d-b624-0f93603dad9e.png)
+![](assets/1744115501196-87f1693e-c891-457d-b624-0f93603dad9e.png)
 
 如果返回多条记录，采用单个实体类接收会怎样？
 
@@ -3114,14 +3114,14 @@ public void testSelectAll2(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744115521183-c831fb74-62be-4bad-863c-29133cb8512d.png)
+![](assets/1744115521183-c831fb74-62be-4bad-863c-29133cb8512d.png)
 
 ### 返回Map
 当返回的数据，没有合适的实体类对应的话，可以采用Map集合接收。字段名做key，字段值做value。
 
 查询如果可以保证只有一条数据，则返回一个Map集合即可。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660816974662-61782965-88fb-466e-a5ff-5af02ab614df.png)
+![](assets/1660816974662-61782965-88fb-466e-a5ff-5af02ab614df.png)
 
 ```java
 /**
@@ -3151,7 +3151,7 @@ public void testSelectByIdRetMap(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1763624658443-8f8d0574-745d-46f7-9a9b-ece7abb9f923.png)
+![](assets/1763624658443-8f8d0574-745d-46f7-9a9b-ece7abb9f923.png)
 
 当然，如果返回一个Map集合，可以将Map集合放到List集合中吗？当然可以，这里就不再测试了。
 
@@ -3160,7 +3160,7 @@ public void testSelectByIdRetMap(){
 ### 返回List&lt;Map&gt;
 查询结果条数大于等于1条数据，则可以返回一个存储Map集合的List集合。List&lt;Map&gt;等同于List&lt;Car&gt;
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660817896708-0f3d0b44-4a0e-40ed-b609-b4d0e5fce1b6.png)
+![](assets/1660817896708-0f3d0b44-4a0e-40ed-b609-b4d0e5fce1b6.png)
 
 ```java
 /**
@@ -3200,7 +3200,7 @@ public void testSelectAllRetListMap(){
 ### 返回Map<String,Map>
 **<font style="color:#E8323C;">拿Car的id做key，以后取出对应的Map集合时更方便。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660818043977-d5c56423-c5db-43ca-9c0c-eaa3f22a8f21.png)
+![](assets/1660818043977-d5c56423-c5db-43ca-9c0c-eaa3f22a8f21.png)
 
 ```java
 /**
@@ -3369,13 +3369,13 @@ public void testSelectTotal(){
 ```
 
 ## 动态SQL
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 有的业务场景，也需要SQL语句进行动态拼接，例如：
 
 + 批量删除
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660799087155-ec264d4c-cafa-458d-85b9-f18b4c34bafd.png)
+![](assets/1660799087155-ec264d4c-cafa-458d-85b9-f18b4c34bafd.png)
 
 ```sql
 delete from t_car where id in(1,2,3,4,5,6,......这里的值是动态的，根据用户选择的id不同，值是不同的);
@@ -3383,7 +3383,7 @@ delete from t_car where id in(1,2,3,4,5,6,......这里的值是动态的，根�
 
 + 多条件查询
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660876082121-d5ea8e08-e642-4716-b201-79cfe3849624.png)
+![](assets/1660876082121-d5ea8e08-e642-4716-b201-79cfe3849624.png)
 
 ```sql
 select * from t_car where brand like '丰田%' and guide_price > 30 and .....;
@@ -3466,7 +3466,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660889544842-34404e94-66f2-48e5-b58a-784d6b91ee27.png)
+![](assets/1660889544842-34404e94-66f2-48e5-b58a-784d6b91ee27.png)
 
 如果第一个条件为空，剩下两个条件不为空，会是怎样呢？
 
@@ -3476,17 +3476,17 @@ List<Car> cars = mapper.selectByMultiCondition("", 20.0, "燃油车");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660889738193-d5023b6c-13a9-447f-a128-45b36663c8f1.png)
+![](assets/1660889738193-d5023b6c-13a9-447f-a128-45b36663c8f1.png)
 
 报错了，SQL语法有问题，where后面出现了and。这该怎么解决呢？
 
 + 可以where后面添加一个恒成立的条件。
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660889965103-5e519823-a741-4ebf-b930-e10ffc9a4129.png)
+![](assets/1660889965103-5e519823-a741-4ebf-b930-e10ffc9a4129.png)
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660890083737-c8716d78-9e2d-4a22-bf56-12ff94b688f5.png)
+![](assets/1660890083737-c8716d78-9e2d-4a22-bf56-12ff94b688f5.png)
 
 如果三个条件都是空，有影响吗？
 
@@ -3496,7 +3496,7 @@ List<Car> cars = mapper.selectByMultiCondition("", null, "");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660890238928-6f889bdf-9702-4cd7-a0ef-b875977f42f9.png)
+![](assets/1660890238928-6f889bdf-9702-4cd7-a0ef-b875977f42f9.png)
 
 三个条件都不为空呢？
 
@@ -3506,7 +3506,7 @@ List<Car> cars = mapper.selectByMultiCondition("丰田", 20.0, "燃油车");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660890374052-89bc29a1-3aeb-4941-b33f-fbbbe4fbbd39.png)
+![](assets/1660890374052-89bc29a1-3aeb-4941-b33f-fbbbe4fbbd39.png)
 
 ### where标签
 where标签的作用：让where子句更加动态智能。
@@ -3555,7 +3555,7 @@ public void testSelectByMultiConditionWithWhere(){
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891031758-ce20585a-6bad-452e-b186-09cf465fecc6.png)
+![](assets/1660891031758-ce20585a-6bad-452e-b186-09cf465fecc6.png)
 
 如果所有条件都是空呢？
 
@@ -3565,7 +3565,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("", null, "");
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891127310-9847b1b5-2bf4-42f9-8e73-38b051b398de.png)
+![](assets/1660891127310-9847b1b5-2bf4-42f9-8e73-38b051b398de.png)
 
 它可以自动去掉前面多余的and，那可以自动去掉前面多余的or吗？
 
@@ -3592,7 +3592,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "燃油�
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891540196-f2e055dd-74a7-40f9-a883-c78a5e2d28b7.png)
+![](assets/1660891540196-f2e055dd-74a7-40f9-a883-c78a5e2d28b7.png)
 
 它可以自动去掉前面多余的and，那可以自动去掉后面多余的and吗？
 
@@ -3620,7 +3620,7 @@ List<Car> cars = mapper.selectByMultiConditionWithWhere("丰田", 20.0, "");
 
 运行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660891786608-272a3ab9-96f8-42bc-b5df-4d275cfe9cfe.png)
+![](assets/1660891786608-272a3ab9-96f8-42bc-b5df-4d275cfe9cfe.png)
 
 很显然，后面多余的and是不会被去除的。
 
@@ -3669,7 +3669,7 @@ public void testSelectByMultiConditionWithTrim(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660894051788-34d9dd44-612e-424e-bf0a-143bea4b36bd.png)
+![](assets/1660894051788-34d9dd44-612e-424e-bf0a-143bea4b36bd.png)
 
 如果所有条件为空，where会被加上吗？
 
@@ -3679,7 +3679,7 @@ List<Car> cars = mapper.selectByMultiConditionWithTrim("", null, "");
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660894220001-e789ea6b-a219-4f3d-8670-b9612d1d8274.png)
+![](assets/1660894220001-e789ea6b-a219-4f3d-8670-b9612d1d8274.png)
 
 ### set标签
 主要使用在update语句当中，用来生成set关键字，同时去掉最后多余的“,”
@@ -3722,7 +3722,7 @@ public void testUpdateWithSet(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660895330743-edd9f2e6-8cd0-4cbe-9c73-adf009466e38.png)
+![](assets/1660895330743-edd9f2e6-8cd0-4cbe-9c73-adf009466e38.png)
 
 ### choose when otherwise
 这三个标签是在一起使用的：
@@ -3798,7 +3798,7 @@ public void testSelectWithChoose(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660896273467-9ba1d6c0-9cc3-4deb-92e5-0f54b4ade614.png)
+![](assets/1660896273467-9ba1d6c0-9cc3-4deb-92e5-0f54b4ade614.png)
 
 ### foreach标签
 循环数组或集合，动态生成sql，比如这样的SQL：
@@ -3855,7 +3855,7 @@ public void testDeleteBatchByForeach(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660899240200-ab225394-27f1-4ec1-94e0-b2b3d3a9b16e.png)
+![](assets/1660899240200-ab225394-27f1-4ec1-94e0-b2b3d3a9b16e.png)
 
 + 用or来删除
 
@@ -3889,7 +3889,7 @@ public void testDeleteBatchByForeach2(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660899667194-f150bf6b-b54f-432a-8455-4c819bac0c58.png)
+![](assets/1660899667194-f150bf6b-b54f-432a-8455-4c819bac0c58.png)
 
 #### 批量添加
 
@@ -3927,7 +3927,7 @@ public void testInsertBatchByForeach(){
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1660900226070-90533bde-4129-49b5-9fa7-639aa07c3b03.png)
+![](assets/1660900226070-90533bde-4129-49b5-9fa7-639aa07c3b03.png)
 
 ### sql标签与include标签
 sql标签用来声明sql片段
@@ -3953,7 +3953,7 @@ include标签用来将声明的sql片段包含到某个sql语句当中
 ```
 
 ## MyBatis的高级映射及延迟加载
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 模块名：mybatis-009-advanced-mapping
 
@@ -3984,9 +3984,9 @@ select * from t_clazz;
 select * from t_student;
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661132819754-23adfa1c-b325-41bc-8520-0355fe4c41cc.png)
+![](assets/1661132819754-23adfa1c-b325-41bc-8520-0355fe4c41cc.png)
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661132610940-7d55793b-df68-48f4-924f-99db58220da9.png)
+![](assets/1661132610940-7d55793b-df68-48f4-924f-99db58220da9.png)
 
 创建pojo：Student、Clazz
 
@@ -4133,7 +4133,7 @@ public class StudentMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661134833921-9452c17c-3461-4c7f-8807-55aa3e089506.png)
+![](assets/1661134833921-9452c17c-3461-4c7f-8807-55aa3e089506.png)
 
 #### 第二种方式：association
 其他位置都不需要修改，只需要修改resultMap中的配置：association即可。
@@ -4212,7 +4212,7 @@ public interface ClazzMapper {
 
 执行结果，可以很明显看到先后有两条sql语句执行：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151746372-e3c91810-bb5f-4308-8dd5-e421e11bff50.png)
+![](assets/1661151746372-e3c91810-bb5f-4308-8dd5-e421e11bff50.png)
 
 分步优点：
 
@@ -4251,7 +4251,7 @@ public class StudentMapperTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151882965-633f8039-c309-4657-8ed1-44f836d5b1e4.png)
+![](assets/1661151882965-633f8039-c309-4657-8ed1-44f836d5b1e4.png)
 
 如果后续需要使用到学生所在班级的名称，这个时候才会执行关联的sql语句，修改测试程序：
 
@@ -4272,13 +4272,13 @@ public class StudentMapperTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151926961-a0affa2d-2d89-4b67-8cc0-bf8604ded4fc.png)
+![](assets/1661151926961-a0affa2d-2d89-4b67-8cc0-bf8604ded4fc.png)
 
 通过以上的执行结果可以看到，只有当使用到班级名称之后，才会执行关联的sql语句，这就是延迟加载。
 
 在mybatis中如何开启全局的延迟加载呢？需要setting配置，如下：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661136161612-a7c3cc7f-fe89-4245-a297-1572d8384566.png)
+![](assets/1661136161612-a7c3cc7f-fe89-4245-a297-1572d8384566.png)
 
 ```xml
 <settings>
@@ -4307,7 +4307,7 @@ public class StudentMapperTest {
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151954051-4b5b94f7-a69d-4d21-b220-1a840862fb85.png)
+![](assets/1661151954051-4b5b94f7-a69d-4d21-b220-1a840862fb85.png)
 
 通过以上的测试可以看出，我们已经开启了全局延迟加载策略。
 
@@ -4324,7 +4324,7 @@ public class StudentMapperTest {
 </resultMap>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151998854-a31c19fb-0af9-4d69-894d-e8086d9c0333.png)
+![](assets/1661151998854-a31c19fb-0af9-4d69-894d-e8086d9c0333.png)
 
 这样的话，针对某个特定的sql，你就关闭了延迟加载机制。
 
@@ -4419,7 +4419,7 @@ public class ClazzMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661149977323-90515301-4b5b-4e3e-a17f-04d5473766e7.png)
+![](assets/1661149977323-90515301-4b5b-4e3e-a17f-04d5473766e7.png)
 
 #### 第二种方式：分步查询
 修改以下三个位置即可：
@@ -4457,7 +4457,7 @@ List<Student> selectByCid(Integer cid);
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661151398803-0c0e196e-6c0a-42fb-b9ee-abd42fea2026.png)
+![](assets/1661151398803-0c0e196e-6c0a-42fb-b9ee-abd42fea2026.png)
 
 ### 一对多延迟加载
 一对多延迟加载机制和多对一是一样的。同样是通过两种方式：
@@ -4466,7 +4466,7 @@ List<Student> selectByCid(Integer cid);
 + 第二种：修改全局的配置setting，**<font style="color:#E8323C;">lazyLoadingEnabled=true，</font>**如果开启全局延迟加载，想让某个sql不使用延迟加载：fetchType="eager"
 
 ## MyBatis的缓存
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 缓存：cache
 
@@ -4568,7 +4568,7 @@ public class CarMapperTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661154607492-3eba8947-5dda-4562-b156-2d3fe63b12a0.png)
+![](assets/1661154607492-3eba8947-5dda-4562-b156-2d3fe63b12a0.png)
 
 **什么情况下不走缓存？**
 
@@ -4598,11 +4598,11 @@ void insertAccount();
 </insert>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661155578490-1b1d260d-991a-44ef-8c94-ba68796c7f03.png)
+![](assets/1661155578490-1b1d260d-991a-44ef-8c94-ba68796c7f03.png)
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661155640234-bdba6b74-80cf-4604-8185-fd504994150d.png)
+![](assets/1661155640234-bdba6b74-80cf-4604-8185-fd504994150d.png)
 
 ### 二级缓存
 MyBatis 自带的二级缓存我们实际开发中用不上。以前没有缓存技术的时候，它用得上。现在缓存技术很多，比如 redis。现代开发中一般是集成第三方缓存，比如我们项目使用 MyBatis 查询数据库，将查询到的数据，需要缓存的话，放到 redis 中，然后使用 SpringCache 来管理 redis 缓存。因此以下内容作为一个了解。
@@ -4654,7 +4654,7 @@ public void testSelectById2() throws Exception{
 
 **二级缓存的相关配置：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1744116030939-281c681f-ee97-44cf-afc8-8dec16861edd.png)
+![](assets/1744116030939-281c681f-ee97-44cf-afc8-8dec16861edd.png)
 
 1. eviction：指定从缓存中移除<font style="color:#DF2A3F;">某个对象的淘汰算法</font>。默认采用LRU策略。
     1. LRU：Least Recently Used。最近最少使用。优先淘汰在间隔时间内使用频率最低的对象。(其实还有一种淘汰算法LFU，最不常用。)
@@ -4670,7 +4670,7 @@ public void testSelectById2() throws Exception{
     1. 设置二级缓存中最多可存储的java对象数量。默认值1024。
 
 ## MyBatis的逆向工程
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 所谓的逆向工程是：根据数据库表逆向生成Java的pojo类，SqlMapper.xml文件，以及Mapper接口类等。
 
@@ -4787,7 +4787,7 @@ public void testSelectById2() throws Exception{
 ```
 
 #### 第四步：运行插件
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661220807303-79730f99-9a3c-4394-a29f-910eccd698cc.png)
+![](assets/1661220807303-79730f99-9a3c-4394-a29f-910eccd698cc.png)
 
 ### 测试逆向工程生成的是否好用
 #### 第一步：环境准备
@@ -4872,7 +4872,7 @@ public class GeneratorTest {
 ```
 
 ## MyBatis使用PageHelper
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### limit分页
 mysql的limit后面两个数字：
@@ -4972,7 +4972,7 @@ public class PageTest {
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661239750003-ff5657d8-9d9a-4c96-b908-eb5a644525bd.png)
+![](assets/1661239750003-ff5657d8-9d9a-4c96-b908-eb5a644525bd.png)
 
 获取数据不难，难的是获取分页相关的数据比较难。可以借助mybatis的PageHelper插件。
 
@@ -5055,7 +5055,7 @@ PageInfo{
 ```
 
 ## MyBatis的注解式开发
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 mybatis中也提供了注解式开发方式，采用注解可以减少Sql映射文件的配置。
 
@@ -5068,7 +5068,7 @@ mybatis中也提供了注解式开发方式，采用注解可以减少Sql映射�
 
 使用注解编写复杂的SQL是这样的：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661243511174-55bc0ee4-9561-448d-ad21-f02591d88798.png)
+![](assets/1661243511174-55bc0ee4-9561-448d-ad21-f02591d88798.png)
 
 原则：简单sql可以注解。复杂sql使用xml。
 
@@ -5194,4 +5194,4 @@ public void testSelectById() throws Exception{
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2022/png/21376908/1661245790082-b0ae21de-bdc7-41ba-a937-31bad62d1ade.png)
+![](assets/1661245790082-b0ae21de-bdc7-41ba-a937-31bad62d1ade.png)

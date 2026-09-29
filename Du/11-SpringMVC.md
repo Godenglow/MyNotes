@@ -1,7 +1,7 @@
 # SpringMVC
 
 ## 初识 SpringMVC 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 回顾MVC 架构模式
 MVC是一种软件架构模式（是一种软件架构设计思想，不止Java开发中用到，其它语言也需要用到），它将应用分为三块：
@@ -18,7 +18,7 @@ MVC将应用分为三块，每一块各司其职，都有自己专注的事情�
 
 MVC架构模式如下所示：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710142469881-5dee11e1-80e8-4cbc-8f0c-726d4e42bbfa.png)
+![](assets/1710142469881-5dee11e1-80e8-4cbc-8f0c-726d4e42bbfa.png)
 
 MVC架构模式的描述：前端浏览器发送请求给web服务器，web服务器中的Controller接收到用户的请求，Controller负责将前端提交的数据进行封装，然后Controller调用Model来处理业务，当Model处理完业务后会返回处理之后的数据给Controller，Controller再调用View来完成数据的展示，最终将结果响应给浏览器，浏览器进行渲染展示页面。
 
@@ -31,10 +31,10 @@ MVC架构模式的描述：前端浏览器发送请求给web服务器，web服�
 
 
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764331586696-acdd037f-01b1-45ab-a711-15115ed4f728.png)
+![](assets/1764331586696-acdd037f-01b1-45ab-a711-15115ed4f728.png)
 
 ### SpringMVC概述
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 SpringMVC是一个实现了MVC架构模式的Web框架，底层基于Servlet实现。全称：`Spring Web MVC`，是 `Spring`框架的七大模块之一。
 
@@ -54,7 +54,7 @@ SpringMVC框架帮我们做了什么，与纯粹的Servlet开发有什么区别�
 总之，与Servlet开发相比，SpringMVC框架可以帮我们节省很多时间和精力，减少代码的复杂度，更加专注于业务开发。同时，也提供了更多的功能和扩展性，可以更好地满足企业级应用的开发需求。
 
 ### SpringMVC框架的特点
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 1.  轻量级：相对于其他Web框架，Spring MVC框架比较小巧轻便。（只有几个几百KB左右的Jar包文件） 
 2.  模块化：请求处理过程被分成多个模块，以模块化的方式进行处理。 
@@ -130,10 +130,10 @@ SpringMVC框架帮我们做了什么，与纯粹的Servlet开发有什么区别�
 
 添加web支持后的目录结构：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764332865455-5135bf3b-bfd1-4265-a8d1-d8e326c88b28.png)
+![](assets/1764332865455-5135bf3b-bfd1-4265-a8d1-d8e326c88b28.png)
 
 #### 配置web.xml文件
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 Spring MVC是一个web框架，在javaweb中谁来负责接收请求，处理请求，以及响应呢？当然是Servlet。
 
@@ -197,7 +197,7 @@ public class FirstController {
 ```
 
 #### 配置springmvc-servlet.xml文件
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 SpringMVC框架有它自己的配置文件，该配置文件的名字默认为：&lt;servlet-name&gt;-servlet.xml，**<font style="color:#DF2A3F;">默认存放的位置是WEB-INF 目录下</font>**：
 
@@ -241,7 +241,7 @@ SpringMVC框架有它自己的配置文件，该配置文件的名字默认为�
 
 在WEB-INF目录下新建springmvc-servlet.xml文件，并且提供以上配置信息。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710309679329-4454ce41-d80a-42dc-abb7-683bd9397856.png)
+![](assets/1710309679329-4454ce41-d80a-42dc-abb7-683bd9397856.png)
 
 以上配置主要两项：
 
@@ -273,10 +273,10 @@ SpringMVC框架有它自己的配置文件，该配置文件的名字默认为�
 
 对于每一个Thymeleaf文件来说 xmlns:th="[http://www.thymeleaf.org"](http://www.thymeleaf.org") 是必须要写的，为了方便后续开发，可以将其添加到html模板文件中：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710310831388-377e7bc4-f5b2-4fa3-9410-d90bfdd894b8.png)
+![](assets/1710310831388-377e7bc4-f5b2-4fa3-9410-d90bfdd894b8.png)
 
 #### 控制器FirstController处理请求返回逻辑视图名称
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```java
 package com.jkweilai.springmvc.controller;
@@ -304,11 +304,11 @@ public class FirstController {
 
 第四步：打开浏览器，在浏览器地址栏上输入地址：http://localhost:8080/springmvc/haha
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710312173540-4e975a51-c0df-47a3-8bdd-f2fbdb8ad831.png)
+![](assets/1710312173540-4e975a51-c0df-47a3-8bdd-f2fbdb8ad831.png)
 
 后端控制台输出：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710312475793-dfb94231-5efe-4a72-840f-63d72143d47f.png)
+![](assets/1710312475793-dfb94231-5efe-4a72-840f-63d72143d47f.png)
 
 #### 执行流程总结
 1. 浏览器发送请求：http://localhost:8080/springmvc/haha
@@ -321,7 +321,7 @@ public class FirstController {
 8. `DispatcherServlet``调用 View 对象的 ``render()``方法进行渲染（拼接 HTML）【渲染的前提是先找到文件：底层会通过模板解析器找到物理路径：``/WEB-INF/templates/first.html``】`
 
 #### `一个Controller可以编写多个方法`
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 一个Controller可以提供多个方法，每个方法通常是处理对应的请求，例如：
 
@@ -376,18 +376,18 @@ public class FirstController {
 
 启动Tomcat，打开浏览器，输入请求路径：http://localhost:8080/springmvc/haha
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710313350020-eaecbfaf-c1ba-44d1-9422-3371248f69a2.png)
+![](assets/1710313350020-eaecbfaf-c1ba-44d1-9422-3371248f69a2.png)
 
 点击超链接：other请求
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710313367394-acfcdb9e-576c-4cc2-8d08-2858854a947e.png)
+![](assets/1710313367394-acfcdb9e-576c-4cc2-8d08-2858854a947e.png)
 
 #### thymeleaf 的 html 文件和普通 html 文件的区别
 + 普通的 HTML 是静态资源。放在 WEB-INF 目录之外，可以直接在浏览器地址栏上输入 URL 进行访问。底层走的是 `DispatcherServlet`的静态资源处理逻辑。（**Web 服务器中 DefaultServlet 被 DispatcherServlet 覆盖了，默认情况下访问静态资源会出现 404 错误**）
 + thymeleaf 的 HTML 资源不是静态资源，放在 WEB-INF 目录之内，受保护的，不能在浏览器地址栏输入 URL 进行访问。访问它是通过 `Controller`的。
 
 ### 访问首页面效果
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 模块名称：`springmvc-002`
 
@@ -445,14 +445,14 @@ public class IndexController {
 **<font style="color:#DF2A3F;">这就是项目的首页效果！！！！！</font>**
 
 #### 编写 springmvc.xml 配置
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 注意位置：在 `resources` 目录下配置 `springmvc.xml`文件
 
 配置内容和之前一样，一个是视图解析器，一个是组件扫描。
 
 #### 提供视图
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710316353838-aac1cd57-12e3-47e4-8b73-2ea2a07a0954.png)
+![](assets/1710316353838-aac1cd57-12e3-47e4-8b73-2ea2a07a0954.png)
 
 ```html
 <!DOCTYPE html>
@@ -470,21 +470,21 @@ public class IndexController {
 #### 测试
 部署到web服务器，启动web服务器，打开浏览器，在地址栏上输入：[http://localhost:8080/springmvc/](http://localhost:8080/springmvc/)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710317491301-4104920d-3537-40d1-b950-2ad1f3398a2d.png)
+![](assets/1710317491301-4104920d-3537-40d1-b950-2ad1f3398a2d.png)
 
 ## RequestMapping 注解
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### RequestMapping的作用
 `@RequestMapping` 注解是 Spring MVC 框架中的一个控制器映射注解，用于将请求映射到相应的处理方法上。具体来说，它可以将指定 URL 的请求绑定到一个特定的方法或类上，从而实现对请求的处理和响应。
 
 ### RequestMapping的出现位置
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710318777635-df02afe3-e065-4a05-877e-3a6f8a6eea4e.png)
+![](assets/1710318777635-df02afe3-e065-4a05-877e-3a6f8a6eea4e.png)
 
 通过RequestMapping的源码可以看到RequestMapping注解只能出现在**类上**或者**方法上**。
 
 ### 类上与方法上结合使用
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 我们先来看，在同一个web应用中，是否可以有两个完全一样的RequestMapping。测试一下：假设两个RequestMapping，其中一个是展示用户详细信息，另一个是展示商品详细信息。提供两个Controller，一个是UserController，另一个是ProductController。如下：
 
@@ -522,7 +522,7 @@ public class ProductController {
 
 以上两个Controller的RequestMapping相同，都是"/detail"，我们来启动服务器看会不会出现问题：异常发生了，异常信息如下
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764337200143-cbad8375-8420-4ed4-8755-ecd6a1902878.png)
+![](assets/1764337200143-cbad8375-8420-4ed4-8755-ecd6a1902878.png)
 
 以上异常信息大致的意思是：不明确的映射。无法映射UserController中的toDetail()方法，因为已经在ProductController中映射过了！！！！
 
@@ -552,7 +552,7 @@ public String toDetail(){
 
 为这两个请求分别提供对应的视图页面：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710321603074-a058da54-46c1-45c2-9a16-08759212e879.png)
+![](assets/1710321603074-a058da54-46c1-45c2-9a16-08759212e879.png)
 
 ```html
 <!DOCTYPE html>
@@ -599,13 +599,13 @@ public String toDetail(){
 
 启动Tomcat服务器，并测试：http://localhost:8080/springmvc/
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710321765401-8615ea50-6537-4a23-9c28-e91cf8d3a957.png)
+![](assets/1710321765401-8615ea50-6537-4a23-9c28-e91cf8d3a957.png)
 
 点击用户详情，点击商品详情，都可以正常显示：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710323998528-e38bedfd-8915-4dd5-a5ff-47c7f65df143.png)
+![](assets/1710323998528-e38bedfd-8915-4dd5-a5ff-47c7f65df143.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710324010676-719ba465-0cc1-49bf-a9e6-3d1375dfdc65.png)
+![](assets/1710324010676-719ba465-0cc1-49bf-a9e6-3d1375dfdc65.png)
 
 #### 第二种方案
 在类上和方法上都使用RequestMapping注解来进行路径的映射。假设在类上映射的路径是"/a"，在方法上映射的路径是"/b"，那么整体表示映射的路径就是："/a/b"
@@ -659,7 +659,7 @@ public class ProductController {
 #### value属性的使用
 **<font style="color:#DF2A3F;">value 属性是一个数组，也就是说：它支持多个请求路径映射到同一个方法上。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710329488513-948e1e58-9984-458f-9c01-75601de3c0c8.png)
+![](assets/1710329488513-948e1e58-9984-458f-9c01-75601de3c0c8.png)
 
 既然是数组，就表示可以提供多个路径，也就是说，在SpringMVC中，多个不同的请求路径可以映射同一个控制器的同一个方法：
 
@@ -720,11 +720,11 @@ public class RequestMappingTestController {
 
 启动服务器，测试，点击以下的两个超链接，发送请求，都可以正常访问到同一个控制器上的同一个方法：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710380856084-a7199701-367e-49d4-856c-843902882df4.png)
+![](assets/1710380856084-a7199701-367e-49d4-856c-843902882df4.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710380869186-247c7c9d-4fa7-4896-91ac-16c227cf0751.png)
+![](assets/1710380869186-247c7c9d-4fa7-4896-91ac-16c227cf0751.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710380880908-39caa3a2-020d-4f4b-821d-9a14ab6cfb03.png)
+![](assets/1710380880908-39caa3a2-020d-4f4b-821d-9a14ab6cfb03.png)
 
 #### value 支持模糊匹配
 **value是可以用来匹配路径的，路径支持模糊匹配，我们把这种模糊匹配称之为<font style="color:#DF2A3F;">Ant风格</font>。关于路径中的通配符包括：**
@@ -769,25 +769,25 @@ public String testValueAnt(){
 
 测试结果如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408304774-c8fdaa73-4aad-43b2-a0b5-27600e45078b.png)
+![](assets/1710408304774-c8fdaa73-4aad-43b2-a0b5-27600e45078b.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408334347-3ecdd6de-4281-4dda-a31e-bb267496bf76.png)
+![](assets/1710408334347-3ecdd6de-4281-4dda-a31e-bb267496bf76.png)
 
 通过修改浏览器地址栏上的路径，可以反复测试通配符 ? 的语法：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408441950-b058d7cc-5d1a-42c0-9188-57d294e36c05.png)
+![](assets/1710408441950-b058d7cc-5d1a-42c0-9188-57d294e36c05.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408497513-91234ca4-74ae-4681-87b6-066bf68cb60d.png)
+![](assets/1710408497513-91234ca4-74ae-4681-87b6-066bf68cb60d.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408554224-46bdf1bb-0fb9-4214-b30c-9b9a73973ff7.png)
+![](assets/1710408554224-46bdf1bb-0fb9-4214-b30c-9b9a73973ff7.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408520959-fdf3be9b-341c-4f9f-9d48-0b1b76e1b5b3.png)
+![](assets/1710408520959-fdf3be9b-341c-4f9f-9d48-0b1b76e1b5b3.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408535497-902d0a9a-8fbf-4b9d-b171-a6fa5b425900.png)
+![](assets/1710408535497-902d0a9a-8fbf-4b9d-b171-a6fa5b425900.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408461985-6de127ca-d27f-40af-be89-71f2d1e298f1.png)
+![](assets/1710408461985-6de127ca-d27f-40af-be89-71f2d1e298f1.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710408477041-0b7f3fc7-8ab2-4b1b-acb0-54fa009c5df1.png)
+![](assets/1710408477041-0b7f3fc7-8ab2-4b1b-acb0-54fa009c5df1.png)
 
 将 ? 通配符修改为 * 通配符：
 
@@ -801,11 +801,11 @@ public String testValueAnt(){
 
 打开浏览器直接在地址栏上输入路径进行测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710409236128-4faa78a0-8da7-46b5-a466-58259918354a.png)
+![](assets/1710409236128-4faa78a0-8da7-46b5-a466-58259918354a.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710409281578-57812acc-e94c-441f-91cf-35ed19c0912d.png)
+![](assets/1710409281578-57812acc-e94c-441f-91cf-35ed19c0912d.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710409267167-adb48ec7-861c-40f2-8a92-c1a4368de9fe.png)
+![](assets/1710409267167-adb48ec7-861c-40f2-8a92-c1a4368de9fe.png)
 
 将 * 通配符修改为 ** 通配符：
 
@@ -816,7 +816,7 @@ public String testValueAnt(){
 }
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710409419674-7475d2c4-989a-4547-9f8c-a2964b2d7eb7.png)
+![](assets/1710409419674-7475d2c4-989a-4547-9f8c-a2964b2d7eb7.png)
 
 注意：/x**z/ 实际上并没有使用通配符 **，本质上还是使用的 *，因为通配符 ** 在使用的时候，左右两边都不能有任何字符，必须是 /。
 
@@ -829,7 +829,7 @@ public String testValueAnt(){
 
 启动服务器发现报错了：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710410631877-81bfcc14-3ead-4f2c-99cf-69e0e39c9b3e.png)
+![](assets/1710410631877-81bfcc14-3ead-4f2c-99cf-69e0e39c9b3e.png)
 
 以上写法在Spring5的时候是支持的，但是在Spring6中进行了严格的规定，** 通配符只能出现在路径的末尾，例如：
 
@@ -842,9 +842,9 @@ public String testValueAnt(){
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710410734275-31609763-9ca9-46ec-b8d4-539612055ffe.png)
+![](assets/1710410734275-31609763-9ca9-46ec-b8d4-539612055ffe.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710410746239-dcb5b607-28e9-4996-88b6-4e94b411cc6f.png)
+![](assets/1710410746239-dcb5b607-28e9-4996-88b6-4e94b411cc6f.png)
 
 #### value中的占位符（重点）
 到目前为止，我们的请求路径是这样的格式：uri?name1=value1&name2=value2&name3=value3
@@ -899,14 +899,14 @@ public String testRESTful(
 
 启动服务器测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710414703219-b27d6ea5-cbee-4e42-a11d-cb743563507e.png)
+![](assets/1710414703219-b27d6ea5-cbee-4e42-a11d-cb743563507e.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710414717194-86932dc5-5c6c-46b5-acb0-ab04778051ad.png)
+![](assets/1710414717194-86932dc5-5c6c-46b5-acb0-ab04778051ad.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710414728167-7b3f3348-feb3-4b62-89c4-047c30e6f3ee.png)
+![](assets/1710414728167-7b3f3348-feb3-4b62-89c4-047c30e6f3ee.png)
 
 ### RequestMapping注解的method属性
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### method属性的作用
 在Servlet当中，如果后端要求前端必须发送一个post请求，后端可以通过重写doPost方法来实现。后端要求前端必须发送一个get请求，后端可以通过重写doGet方法来实现。当重写的方法是doPost时，前端就必须发送post请求，当重写doGet方法时，前端就必须发送get请求。如果前端发送请求的方式和后端的处理方式不一致时，会出现405错误。
@@ -919,11 +919,11 @@ HTTP状态码405，这种机制的作用是：限制客户端的请求方式，�
 
 通过RequestMapping源码可以看到，method属性也是一个数组：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710383145104-28befda6-4f03-4cc0-888d-f0c68e802489.png)
+![](assets/1710383145104-28befda6-4f03-4cc0-888d-f0c68e802489.png)
 
 数组中的每个元素是 RequestMethod，而RequestMethod是一个枚举类型的数据：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710383181561-c7807a8e-1e03-48bd-93ab-044900f7b52c.png)
+![](assets/1710383181561-c7807a8e-1e03-48bd-93ab-044900f7b52c.png)
 
 因此如果要求前端发送POST请求，该注解应该这样用：
 
@@ -973,9 +973,9 @@ public String testMethod(){
 
 启动服务器，测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710383700474-55cf63ab-7f36-4ab7-b5f7-41046000472d.png)
+![](assets/1710383700474-55cf63ab-7f36-4ab7-b5f7-41046000472d.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710383716323-ad5bf478-30e9-48ed-8238-ebacaf395625.png)
+![](assets/1710383716323-ad5bf478-30e9-48ed-8238-ebacaf395625.png)
 
 通过测试，前端发送的请求方式post，后端处理请求的方式也是post，就不会有问题。
 
@@ -992,7 +992,7 @@ public String testMethod(){
 
 再次测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710383866495-ea6560e6-b458-4385-95cb-c9a9b24b08cd.png)
+![](assets/1710383866495-ea6560e6-b458-4385-95cb-c9a9b24b08cd.png)
 
 **<font style="color:#DF2A3F;">因此，可以看出，对于RequestMapping注解来说，多一个属性，就相当于多了一个映射的条件，如果value和method属性都有，则表示只有前端发送的请求路径 + 请求方式都满足时才能与控制器上的方法建立映射关系，只要有一个不满足，则无法建立映射关系。例如：@RequestMapping(value="/login", method = RequestMethod.POST) 表示当前端发送的请求路径是 /login，并且发送请求的方式是POST的时候才会建立映射关系。如果前端发送的是get请求，或者前端发送的请求路径不是 /login，则都是无法建立映射的。</font>**
 
@@ -1009,11 +1009,11 @@ public String testMethod(){
 
 当前端发送get请求时，测试一下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710384745231-3f0f3e3d-e151-4ac8-bde2-e48798aadde0.png)
+![](assets/1710384745231-3f0f3e3d-e151-4ac8-bde2-e48798aadde0.png)
 
 当前端发送post请求时，测试一下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710384819897-64de621f-fb7d-495e-98d3-5e7b192c458d.png)
+![](assets/1710384819897-64de621f-fb7d-495e-98d3-5e7b192c458d.png)
 
 在SpringMVC中不仅提供了 **<font style="color:#DF2A3F;">PostMaping</font>**注解，像这样的注解还有几个，包括：
 
@@ -1071,7 +1071,7 @@ public String testMethod(){
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710387909246-423bd4a6-9e73-40ca-ab7e-fac29f98f61f.png)
+![](assets/1710387909246-423bd4a6-9e73-40ca-ab7e-fac29f98f61f.png)
 
 通过测试得知，即使form中method设置为put方式，但仍然采用get方式发送请求。
 
@@ -1087,10 +1087,10 @@ public String testMethod(){
 
 再次测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710388055974-40f19d04-9b29-459e-9821-f330066e1e2c.png)
+![](assets/1710388055974-40f19d04-9b29-459e-9821-f330066e1e2c.png)
 
 ### RequestMapping注解的params属性
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### params属性的理解
 params属性用来设置通过请求参数来映射请求。
@@ -1101,7 +1101,7 @@ params属性用来设置通过请求参数来映射请求。
 + method属性也是一个数组，只要满足数组中任意一个请求方式，就能映射成功。
 + **<font style="color:#DF2A3F;">params属性也是一个数组，不过要求请求参数必须和params数组中要求的所有参数完全一致后，才能映射成功。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710398311030-55ee91e0-b4d0-4b43-9d65-36a552eb6d3a.png)
+![](assets/1710398311030-55ee91e0-b4d0-4b43-9d65-36a552eb6d3a.png)
 
 #### params属性的4种用法
 @RequestMapping(value="/login", params={**<font style="color:#DF2A3F;">"username"</font>**, "password"}) 表示：请求参数中必须包含 username 和 password，才能与当前标注的方法进行映射。
@@ -1156,9 +1156,9 @@ public String testParams(){
 
 启动服务器，测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710400506148-f404474f-771b-4fb7-97a8-5a322012fb33.png)
+![](assets/1710400506148-f404474f-771b-4fb7-97a8-5a322012fb33.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710400526780-f4691915-7952-4d91-bb5b-704cf40ab6fd.png)
+![](assets/1710400526780-f4691915-7952-4d91-bb5b-704cf40ab6fd.png)
 
 假如发送请求时，没有传递username参数会怎样？
 
@@ -1168,16 +1168,16 @@ public String testParams(){
 
 启动服务器，测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710400622164-d051b747-dbc7-4044-bbfb-2d3e40602b65.png)
+![](assets/1710400622164-d051b747-dbc7-4044-bbfb-2d3e40602b65.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710400640376-f181e4a5-79a3-4a55-a1d9-1d55582102e0.png)
+![](assets/1710400640376-f181e4a5-79a3-4a55-a1d9-1d55582102e0.png)
 
 提示无效的请求参数，服务器无法或不会处理当前请求。
 
 params属性剩下的三种情况，自行测试！！！！
 
 ### RequestMapping注解的headers属性
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 认识headers属性
 headers和params原理相同，用法也相同。
@@ -1186,7 +1186,7 @@ headers和params原理相同，用法也相同。
 
 请求头信息怎么查看？在chrome浏览器中，F12打开控制台，找到Network，可以查看具体的请求协议和响应协议。在请求协议中可以看到请求头信息，例如：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710402265257-e2b13b8d-52e7-4088-842a-4246be3e866a.png)
+![](assets/1710402265257-e2b13b8d-52e7-4088-842a-4246be3e866a.png)
 
 请求头信息和请求参数信息一样，都是键值对形式，例如上图中：
 
@@ -1205,7 +1205,7 @@ headers和params原理相同，用法也相同。
 注意：如果前端提交的请求头信息，和后端要求的请求头信息不一致，则出现404错误！！！
 
 #### 测试headers属性
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在 `RequestMappingTestController 类中添加以下方法：`
 
@@ -1240,9 +1240,9 @@ public String testHeaders(){
 
 启动服务器，测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710403104850-63f4c9fb-28ac-483a-b4c4-cdcea6b49e97.png)
+![](assets/1710403104850-63f4c9fb-28ac-483a-b4c4-cdcea6b49e97.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710403163821-dd5ae672-3b0a-4ae3-b978-48c8bef4f63a.png)
+![](assets/1710403163821-dd5ae672-3b0a-4ae3-b978-48c8bef4f63a.png)
 
 将后端控制器中的headers属性值进行修改：
 
@@ -1255,12 +1255,12 @@ public String testHeaders(){
 
 再次测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710403270750-77c19967-a2a8-423d-9fea-c9632e48cf8c.png)
+![](assets/1710403270750-77c19967-a2a8-423d-9fea-c9632e48cf8c.png)
 
 其他情况自行测试！！！！
 
 ## 获取请求数据
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 假设有这样一个请求：http://localhost:8080/springmvc/register?name=zhangsan&password=123&email=zhangsan@jkweilai.com
 
@@ -1377,7 +1377,7 @@ public void downloadJpg(HttpServletRequest request, HttpServletResponse response
 ```
 
 ### 使用RequestParam注解标注
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **知识点列表：**
 
@@ -1414,20 +1414,20 @@ public String register(
 
 注意：对于@RequestParam注解来说，属性有value和name，这两个属性的作用相同，都是用来指定提交数据的name。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710428008416-73b3a547-46ab-47bb-922c-b3d090e0cfc9.png)
+![](assets/1710428008416-73b3a547-46ab-47bb-922c-b3d090e0cfc9.png)
 
 例如：发送请求时提交的数据是：name1=value1&name2=value2，则这个注解应该这样写：@RequestParam(value="name1")、@RequestParam(value="name2")
 
 一定要注意： @RequestParam(value="name2") 中value一定不要写错，写错就会出现以下问题：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710428081389-9ac88bba-c37c-4fb8-9b9d-f7a9091b97ab.png)
+![](assets/1710428081389-9ac88bba-c37c-4fb8-9b9d-f7a9091b97ab.png)
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710428139767-d3888c35-e2f8-407f-accb-f744a7098148.png)
+![](assets/1710428139767-d3888c35-e2f8-407f-accb-f744a7098148.png)
 
 #### RequestParam注解的required属性
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710465027479-caeb1d78-c92d-4fca-b9fa-80e6bcf06c7a.png)
+![](assets/1710465027479-caeb1d78-c92d-4fca-b9fa-80e6bcf06c7a.png)
 
 required属性用来设置该方法参数是否为必须的。
 
@@ -1437,21 +1437,21 @@ required属性用来设置该方法参数是否为必须的。
 
 测试，修改register方法，如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710468078605-3c6a2dd2-e9c4-4450-9712-02f11b5543d3.png)
+![](assets/1710468078605-3c6a2dd2-e9c4-4450-9712-02f11b5543d3.png)
 
 添加了一个 age 形参，没有指定 required 属性时，默认是true，表示必需的，但前端表单中没有年龄age，我们来看报错信息：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710468194109-56b8df42-2110-4b2b-9e73-064884f2e04b.png)
+![](assets/1710468194109-56b8df42-2110-4b2b-9e73-064884f2e04b.png)
 
 错误信息告诉我们：参数age是必需的。没有提供这个请求参数，HTTP状态码 400
 
 如果将 required 属性设置为 false。则该参数则不是必须的，如果请求参数仍然未提供时，我们来看结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710468402437-7395c6e2-6ab4-4bdc-a66e-cb82811be4e4.png)
+![](assets/1710468402437-7395c6e2-6ab4-4bdc-a66e-cb82811be4e4.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710468358266-82e27b39-b24a-4aca-902e-9a69c5630ca7.png)
+![](assets/1710468358266-82e27b39-b24a-4aca-902e-9a69c5630ca7.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710468442095-a0aa03e0-390e-440c-b9db-61139b8098cb.png)
+![](assets/1710468442095-a0aa03e0-390e-440c-b9db-61139b8098cb.png)
 
 通过测试得知，如果一个参数被设置为`不是必需的`，当没有提交对应的请求参数时，形参默认值null。
 
@@ -1460,48 +1460,48 @@ required属性用来设置该方法参数是否为必须的。
 
 **使用 Apipost 发送 get 请求，携带查询参数：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764495647856-59d7c579-1696-4426-92d9-05a655fb3333.png)
+![](assets/1764495647856-59d7c579-1696-4426-92d9-05a655fb3333.png)
 
 **使用 Apipost 发送 post 请求，以普通文本形式提交表单数据：**`enctype="application/x-www-form-urlencoded"`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764495789233-7daadea7-40f2-4dc5-a5c0-f3701794a167.png)
+![](assets/1764495789233-7daadea7-40f2-4dc5-a5c0-f3701794a167.png)
 
 **使用 Apipost 发送 post 请求，将每个字段（文本或文件）作为独立的数据块（带 name 和 filename 等描述信息）分段传输，支持多文件上传：**`**enctype="multipart/form-data"**`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764495917686-99311377-3e74-4b25-988e-0a4bfd9a4f37.png)
+![](assets/1764495917686-99311377-3e74-4b25-988e-0a4bfd9a4f37.png)
 
 **使用 Apipost 发送 post 请求，并且提交 JSON 字符串到服务器：发送请求时的 **`**Content-Type**`**为 **`**applicatoin/json**`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764496082736-acc6506c-f8b4-4197-8892-b95cd4b12db4.png)
+![](assets/1764496082736-acc6506c-f8b4-4197-8892-b95cd4b12db4.png)
 
 **使用 Apipost 工具发送请求时，设置请求头：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764496187497-29597aed-7976-4807-a66b-880656ea95e9.png)
+![](assets/1764496187497-29597aed-7976-4807-a66b-880656ea95e9.png)
 
 **使用 Apipost 工作提交纯二进制数据，例如做单文件上传：发送请求时的 **`**Content-Type**`**为 **`**application/octet-stream**`
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764496419092-5687f07c-4d95-44c7-8621-af888667dfce.png)
+![](assets/1764496419092-5687f07c-4d95-44c7-8621-af888667dfce.png)
 
 #### RequestParam注解的defaultValue属性
 defaultValue属性用来设置形参的默认值，当`没有提供对应的请求参数`或者`请求参数的值是空字符串""`的时候，方法的形参会采用默认值。
 
 **当前端页面没有提交email的时候：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764496959630-5ca32659-fda5-4544-8438-23435d293a3b.png)
+![](assets/1764496959630-5ca32659-fda5-4544-8438-23435d293a3b.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764496981766-b5dc6d20-aec2-4fb2-974c-3fa170c2504e.png)
+![](assets/1764496981766-b5dc6d20-aec2-4fb2-974c-3fa170c2504e.png)
 
 **当前端页面提交的email是空字符串的时候：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764497016535-d8e10530-4012-4fe5-8884-c1d7a298b1da.png)
+![](assets/1764497016535-d8e10530-4012-4fe5-8884-c1d7a298b1da.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764496981766-b5dc6d20-aec2-4fb2-974c-3fa170c2504e.png)
+![](assets/1764496981766-b5dc6d20-aec2-4fb2-974c-3fa170c2504e.png)
 
 **当前端提交的email不是空字符串的时候：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764497068703-6a9e6352-92f9-4fdd-8c21-5916c1d3f099.png)
+![](assets/1764497068703-6a9e6352-92f9-4fdd-8c21-5916c1d3f099.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764497048835-480702a7-7869-4344-a4f5-cca96e8c584f.png)
+![](assets/1764497048835-480702a7-7869-4344-a4f5-cca96e8c584f.png)
 
 ### 依靠控制器方法上的形参名来接收
 **知识点列表：**
@@ -1544,9 +1544,9 @@ public String register(String username, String password, String sex, String[] ho
 
 如果形参名和提交的数据的name不一致时：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710428636791-b1c4eb79-ce31-4ecf-9ee5-4db8e6ffb0d6.png)
+![](assets/1710428636791-b1c4eb79-ce31-4ecf-9ee5-4db8e6ffb0d6.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710428682813-4c2440c7-0500-4d02-a66a-7a3852ebd981.png)
+![](assets/1710428682813-4c2440c7-0500-4d02-a66a-7a3852ebd981.png)
 
 **不加 `@RequestParam` 注解的参数，默认不是必须的，匹配不到就赋 `null`，不会报 400。**
 
@@ -1563,7 +1563,7 @@ public String register(String username, String password, String sex, String hobb
 根据输出结果可以看到多个hobby是采用“,”进行连接的。
 
 ### 使用 JavaBean 接收请求参数
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **知识点列表：**
 
@@ -1709,22 +1709,22 @@ public class User {
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471772183-af36c134-1f73-4cb4-afc6-4a6a827aacbd.png)
+![](assets/1710471772183-af36c134-1f73-4cb4-afc6-4a6a827aacbd.png)
 
 通过测试，我们得知：`请求参数名`可以和`JavaBean的属性名`不一致。
 
 我们继续将其中一个属性的setter和getter方法名修改一下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471908862-89d1b430-cff1-43e2-9678-49017f49d663.png)
+![](assets/1710471908862-89d1b430-cff1-43e2-9678-49017f49d663.png)
 
 再次测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710471961917-33f50796-7f73-4d40-a0ef-2befe83d5ebf.png)
+![](assets/1710471961917-33f50796-7f73-4d40-a0ef-2befe83d5ebf.png)
 
 **<font style="color:#DF2A3F;">通过测试可以看到：username属性没有赋上值。可见请求参数是否可以赋值到JavaBean对应的属性上，不是取决于属性名，而是setter方法名</font>**。
 
 ### `RequestHeader注解`
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **知识点列表：**
 
@@ -1747,10 +1747,10 @@ public String register(User user,
 
 执行结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710472685320-fa79ddc4-04e0-4f8e-b97e-56f3f28ee60f.png)
+![](assets/1710472685320-fa79ddc4-04e0-4f8e-b97e-56f3f28ee60f.png)
 
 ### `CookieValue注解`
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **知识点列表：**
 
@@ -1787,10 +1787,10 @@ public String register(User user,
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710473271244-7a95563a-fff4-458e-914f-25b314c78bd1.png)
+![](assets/1710473271244-7a95563a-fff4-458e-914f-25b314c78bd1.png)
 
 ### 请求的中文乱码问题
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **知识点列表：**
 
@@ -1802,11 +1802,11 @@ public String register(User user,
 
 有可能很多同学使用的不是Tomcat10，如果不是Tomcat10，则会出现乱码问题，我们来模拟一下乱码的产生，将apache-tomcat-10.1.19\conf\web.xml文件中的UTF-8配置修改为ISO-8859-1：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710732413713-0f034192-e4d4-4c33-aeb3-169726468251.png)
+![](assets/1710732413713-0f034192-e4d4-4c33-aeb3-169726468251.png)
 
 **<font style="color:#DF2A3F;">一定要重启Tomcat10</font>**，新的配置才能生效，来测试一下是否存在乱码：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710732483068-b356942a-9183-4734-812d-041a151df48d.png)
+![](assets/1710732483068-b356942a-9183-4734-812d-041a151df48d.png)
 
 那么，在SpringMVC中如何解决请求体的中文乱码问题呢？当然，还是使用`request.setCharacterEncoding("UTF-8")`
 
@@ -1845,7 +1845,7 @@ public String register(User user, HttpServletRequest request) throws Unsupported
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710732483068-b356942a-9183-4734-812d-041a151df48d.png)
+![](assets/1710732483068-b356942a-9183-4734-812d-041a151df48d.png)
 
 通过测试可以看到：在Controller当中调用`request.setCharacterEncoding("UTF-8")`是无法解决POST乱码问题的。
 
@@ -2113,7 +2113,7 @@ protected void doFilterInternal(
 
 我们再来测试，重启Tomcat10，看看乱码是否能够解决？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710733643651-29370350-6188-4ada-a8b0-99c6264f3b7a.png)
+![](assets/1710733643651-29370350-6188-4ada-a8b0-99c6264f3b7a.png)
 
 注意：针对于我们当前的Tomcat10的配置来说，它有默认的字符集ISO-8859-1，因此以下在web.xml文件中的配置是不能缺少的：
 
@@ -2127,7 +2127,7 @@ protected void doFilterInternal(
 如果缺少它，仍然是会存在乱码问题的。自行测试一下！！！！
 
 ## Servlet中的三个域对象
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 回顾域对象
 请求域：request
@@ -2185,7 +2185,7 @@ application对象代表了整个web应用，服务器启动时创建，服务器
 使用应用域的业务场景：记录网站的在线人数。
 
 ### request域对象
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在SpringMVC中，在request域中共享数据有以下几种方式：
 
@@ -2245,7 +2245,7 @@ public class RequestScopeTestController {
 
 测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710747192867-9c718af0-41ad-4be9-8d48-c2ecdbd90789.png)
+![](assets/1710747192867-9c718af0-41ad-4be9-8d48-c2ecdbd90789.png)
 
 这种方式当然可以，用SpringMVC框架，不建议使用原生Servlet API。
 
@@ -2285,25 +2285,25 @@ public String testModelMap(ModelMap modelMap){
 #### Model、Map、ModelMap的关系
 可以在以上Model、Map、ModelMap的测试程序中将其输出，看看输出什么：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710748328132-7ec71a48-8879-4758-824a-a9d669f1594a.png)
+![](assets/1710748328132-7ec71a48-8879-4758-824a-a9d669f1594a.png)
 
 看不出来什么区别，从输出结果上可以看到都是一样的。
 
 可以将其运行时类名输出：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710748490407-0ab2044c-0261-498d-b55d-ce563afda27d.png)
+![](assets/1710748490407-0ab2044c-0261-498d-b55d-ce563afda27d.png)
 
 通过输出结果可以看出，无论是Model、Map还是ModelMap，底层实例化的对象都是：BindingAwareModelMap。
 
 可以查看BindingAwareModelMap的继承结构：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710748694354-caf9941e-9ce9-4215-bfe7-2d2a759ef206.png)
+![](assets/1710748694354-caf9941e-9ce9-4215-bfe7-2d2a759ef206.png)
 
 通过继承结构可以看出：BindingAwareModelMap继承了ModelMap，而ModelMap又实现了Map接口。
 
 另外，请看以下源码：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710748884799-5bad9d0f-9926-4ef0-a29e-7f9e5d6bd383.png)
+![](assets/1710748884799-5bad9d0f-9926-4ef0-a29e-7f9e5d6bd383.png)
 
 可以看出ModelMap又实现了Model接口。因此表面上是采用了不同方式，底层本质上是相同的。
 
@@ -2340,28 +2340,28 @@ public ModelAndView testModelAndView(){
 
 在以上四种方式中，拿Model举例，添加断点进行调试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710750710855-53e8ffdd-b563-453e-afb4-70648684e619.png)
+![](assets/1710750710855-53e8ffdd-b563-453e-afb4-70648684e619.png)
 
 启动服务器，发送请求，走到断点：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710750795816-555dfc56-ccf2-43b4-b516-a737336d1e4f.png)
+![](assets/1710750795816-555dfc56-ccf2-43b4-b516-a737336d1e4f.png)
 
 查看VM Stack信息：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764502506969-7d415950-4424-4c95-989c-02838aa265b8.png)
+![](assets/1764502506969-7d415950-4424-4c95-989c-02838aa265b8.png)
 
 查看DispatcherServlet的1089行，源码如下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710750933440-8254f738-2716-4f56-8610-4814e6fdecbf.png)
+![](assets/1710750933440-8254f738-2716-4f56-8610-4814e6fdecbf.png)
 
 可以看到这里，无论你使用哪种方式，最终都要返回一个ModelAndView对象。
 
 提醒：大家可以通过以下断点调试方式，采用一级一级返回，最终可以看到都会返回ModelAndView对象。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710751055879-078ad592-a894-45fe-8d4d-1a74d9c8db79.png)
+![](assets/1710751055879-078ad592-a894-45fe-8d4d-1a74d9c8db79.png)
 
 ### session域对象
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在SpringMVC中使用session域共享数据，实现方式有多种，其中比较常见的两种方式：
 
@@ -2418,7 +2418,7 @@ public class SessionScopeTestController {
 注意：SessionAttributes注解使用在Controller类上。标注了当key是 x 或者 y 时，数据将被存储到会话session中。如果没有 SessionAttributes注解，默认存储到request域中。
 
 ### application域对象
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在SpringMVC实现application域数据共享，最常见的方案就是直接使用Servlet API了：
 
@@ -2454,7 +2454,7 @@ public class ApplicationScopeTestController {
 ```
 
 ## SpringMVC 中的视图技术
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### SpringMVC中视图的实现原理
 #### Spring MVC视图支持可配置
@@ -2514,19 +2514,19 @@ Spring MVC支持的常见视图包括：
     1. 职责：Spring MVC 的中央调度器，协调所有组件完成请求处理流程。
     2. 核心方法：`doDispatch`
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710824946253-84de4b12-1985-4976-ae39-dd62e77b43b8.png)
+![](assets/1710824946253-84de4b12-1985-4976-ae39-dd62e77b43b8.png)
 
 2. ViewResolver接口（视图解析器）：
     1. 职责：将**逻辑视图名**解析为具体的 **View** 对象。
     2. 核心方法：resolveViewName
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710824983130-13d175e9-be25-4e76-bccf-d50f63cee853.png)
+![](assets/1710824983130-13d175e9-be25-4e76-bccf-d50f63cee853.png)
 
 3. View接口（视图）:
     1. 职责：将模型数据渲染为具体的视图格式（HTML、JSON等），并输出到客户端
     2. 核心方法：render
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710825045618-8ca7d10a-9f8f-4210-a871-8b7d34885311.png)
+![](assets/1710825045618-8ca7d10a-9f8f-4210-a871-8b7d34885311.png)
 
 4. ViewResolverRegistry（视图解析器注册器）：
     1. 负责在 Spring 容器启动的时候，完成视图解析器的注册。如果有多个视图解析器，会将视图解析器对象按照order的配置放入List集合。
@@ -2631,7 +2631,7 @@ public String toIndex(){
 最终逻辑视图名"index" 转换为物理视图名：/WEB-INF/templates/index.jsp
 
 ### Thymeleaf视图
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 我们在学习前面内容的时候，采用的都是Thymeleaf视图。我们再来测试一下，看看底层创建的视图对象是不是`ThymeleafView`
 
@@ -2702,25 +2702,25 @@ public class IndexController {
 
 添加断点：在DispatcherServlet的doDispatch方法的下图位置添加断点
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710835859057-703d8177-8e9c-4a42-9f8d-e36d0bfb1e42.png)
+![](assets/1710835859057-703d8177-8e9c-4a42-9f8d-e36d0bfb1e42.png)
 
 启动Tomcat，在浏览器地址栏上发送请求：http://localhost:8080/springmvc/index
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710835931836-b1a27108-f01b-49ad-a5f7-308ad0cf7f8b.png)
+![](assets/1710835931836-b1a27108-f01b-49ad-a5f7-308ad0cf7f8b.png)
 
 程序走到以上位置，这行代码是调用对应的Controller，并且Controller最终会返回ModelAndView对象：mv
 
 按照我们之前所讲，返回mv之后，接下来就是视图处理与渲染，接着往下走，走到下图这一行：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710836061330-46ee32ce-5549-4758-85f3-0dd8c0b20079.png)
+![](assets/1710836061330-46ee32ce-5549-4758-85f3-0dd8c0b20079.png)
 
 这个方法的作用是处理分发结果，就是在这个方法当中进行了视图的处理与渲染，进入该方法：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710836134539-34cc0424-ea05-4045-810d-56b063b59fb4.png)
+![](assets/1710836134539-34cc0424-ea05-4045-810d-56b063b59fb4.png)
 
 进去之后走到上图位置：这个方法就是用来渲染页面的方法，再进入该方法：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710836196992-3d3ef841-db8b-4642-aa9a-fa2ffef5ef0e.png)
+![](assets/1710836196992-3d3ef841-db8b-4642-aa9a-fa2ffef5ef0e.png)
 
 走到上图位置就可以看到底层创建的是ThymeleafView对象。
 
@@ -2782,12 +2782,12 @@ public class IndexController {
 
 启动web容器，添加断点跟踪：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710836651520-2ea9a9ba-0a71-4f3e-977c-4bce0ddfdcf8.png)
+![](assets/1710836651520-2ea9a9ba-0a71-4f3e-977c-4bce0ddfdcf8.png)
 
 通过测试得知：对于JSP视图来说，底层创建的视图对象是InternalResourceView。
 
 ### 转发与重定向
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 #### 回顾转发和重定向区别
 1. 转发是一次请求。因此浏览器地址栏上的地址不会发生变化。
@@ -2859,15 +2859,15 @@ public class IndexController {
 
 启动服务器，浏览器地址栏上输入：http://localhost:8080/springmvc/a
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710839187256-3c823090-ff26-4d46-8dca-d7727e800da9.png)
+![](assets/1710839187256-3c823090-ff26-4d46-8dca-d7727e800da9.png)
 
 通过测试，可以顺利的完成转发，转发是一次请求，可以看到地址栏上的地址没有发生改变。
 
 我们来跟踪一下源码，看看以上程序执行过程中，创建了几个视图对象，分别是什么？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710846891647-16906724-4f82-4a5f-9bae-655b3ce869e3.png)
+![](assets/1710846891647-16906724-4f82-4a5f-9bae-655b3ce869e3.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710846943388-ff000327-18e6-4920-96d7-f96e59c62202.png)
+![](assets/1710846943388-ff000327-18e6-4920-96d7-f96e59c62202.png)
 
 通过源码的跟踪得知：整个请求处理过程中，一共创建了两个视图对象
 
@@ -2918,15 +2918,15 @@ public class IndexController {
 
 启动服务器，浏览器地址栏上输入：http://localhost:8080/springmvc/a
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710857817456-baf96179-4ce2-4897-8873-aa1232ed8462.png)
+![](assets/1710857817456-baf96179-4ce2-4897-8873-aa1232ed8462.png)
 
 可见，重定向是两次请求，地址栏上的地址发生了改变。
 
 可以看一下源码，在重定向的时候，Spring MVC创建哪个视图对象？
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710857964522-8ccd525e-e458-41e2-abc8-6336a46bc17c.png)
+![](assets/1710857964522-8ccd525e-e458-41e2-abc8-6336a46bc17c.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710858016866-c2e30ccf-0b94-494d-9b89-0853fb2fa7af.png)
+![](assets/1710858016866-c2e30ccf-0b94-494d-9b89-0853fb2fa7af.png)
 
 通过断点调试可以看出，当重定向的时候，SpringMVC会创建一个重定向视图对象：**<font style="color:#DF2A3F;">RedirectView</font>**。这个视图对象也是SpringMVC框架内置的。
 
@@ -2944,7 +2944,7 @@ public String a(){
 可以自行测试一下！！！
 
 ### &lt;mvc:view-controller&gt;
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 `<mvc:view-controller>` 配置用于将某个请求映射到特定的视图上，即指定某一个 URL 请求到一个视图资源的映射，使得这个视图资源可以被访问。它相当于是一个独立的处理程序，不需要编写任何 Controller，只需要指定 URL 和对应的视图名称就可以了。
 
@@ -2970,7 +2970,7 @@ public String a(){
 上述配置将会匹配上访问应用程序的根路径，如：http://localhost:8080/。当用户在浏览器中访问该根路径时，就会直接渲染名为 `index` 的视图。
 
 ### `&lt;mvc:annotation-driven/&gt;`
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 在SpringMVC中，如果在springmvc.xml文件中配置了 `<mvc:view-controller>``，就需要同时在springmvc.xml文件中添加如下配置：`
 
@@ -3024,7 +3024,7 @@ public String a(){
 注意：要想使用 `<mvc:resources>` 配置，必须开启注解驱动 `<mvc:annotation-driven />`
 
 ## RESTful编程风格
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### RESTful是什么
 RESTful是`WEB服务接口`的一种设计风格。
@@ -3252,15 +3252,15 @@ HiddenHttpMethodFilter是Spring MVC框架提供的，专门用于RESTful编程�
 
 实现原理可以通过源码查看：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710981996209-5c66441b-0aa9-41a7-b71d-26b2ffb0f4f5.png)
+![](assets/1710981996209-5c66441b-0aa9-41a7-b71d-26b2ffb0f4f5.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710982160559-ffe20024-a10a-4aa2-b39e-44bebd0d3945.png)
+![](assets/1710982160559-ffe20024-a10a-4aa2-b39e-44bebd0d3945.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710982194265-720a0b49-aa95-475f-900b-7234280f5c9c.png)
+![](assets/1710982194265-720a0b49-aa95-475f-900b-7234280f5c9c.png)
 
 通过源码可以看到，if语句中，首先判断是否为POST请求，如果是POST请求，调用`request.getParameter(this.methodParam)`。可以看到`this.methodParam`是`_method`，这样就要求我们在提交请求方式的时候必须采用这个格式：`_method=put`。获取到请求方式之后，调用了toUpperCase转换成大写了。因此前端页面中小写的put或者大写的PUT都是可以的。if语句中嵌套的if语句说的是，只有请求方式是 PUT,DELETE,PATCH的时候会创建HttpMethodRequestWrapper对象。而HttpMethodRequestWrapper对象的构造方法是这样的：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710984179119-96331e0b-ae39-45b0-bba1-b8db3ec7107f.png)
+![](assets/1710984179119-96331e0b-ae39-45b0-bba1-b8db3ec7107f.png)
 
 这样method就从POST变成了：PUT/DELETE/PATCH。
 
@@ -3268,12 +3268,12 @@ HiddenHttpMethodFilter是Spring MVC框架提供的，专门用于RESTful编程�
 
 细心的同学应该注意到了，在`HiddenHttpMethodFilter源码中有这样一行代码：`
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710984264334-7df83331-ddbb-4ead-a58c-cb4dc6c19ef6.png)
+![](assets/1710984264334-7df83331-ddbb-4ead-a58c-cb4dc6c19ef6.png)
 
 大家是否还记得，字符编码过滤器执行之前不能调用 request.getParameter方法，如果提前调用了，乱码问题就无法解决了。因为request.setCharacterEncoding()方法的执行必须在所有request.getParameter()方法之前执行。因此这两个过滤器就有先后顺序的要求，在web.xml文件中，应该先配置CharacterEncodingFilter，然后再配置HiddenHttpMethodFilter。
 
 ## 使用RESTful实现用户管理系统
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 静态页面准备
 文件包括：user.css、user_index.html、user_list.html、user_add.html、user_edit.html。代码如下：
@@ -3693,15 +3693,15 @@ a {
 ### 显示首页
 在应用的根下新建目录：static，将user.css文件拷贝进去。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710922471241-f7ec47fc-9106-4d52-bd88-24b1005e99c6.png)
+![](assets/1710922471241-f7ec47fc-9106-4d52-bd88-24b1005e99c6.png)
 
 将user_index.html拷贝到WEB-INF/thymeleaf目录下：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710922711285-f6d7e3ea-ee9f-4b95-a454-0f1b41204a46.png)
+![](assets/1710922711285-f6d7e3ea-ee9f-4b95-a454-0f1b41204a46.png)
 
 代码有两处需要修改：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710922744668-a8863a20-0635-4c69-b461-a182949678d6.png)
+![](assets/1710922744668-a8863a20-0635-4c69-b461-a182949678d6.png)
 
 重要：在springmvc.xml文件中配置视图控制器映射：
 
@@ -3712,7 +3712,7 @@ a {
 
 部署，启动服务器，测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710922946129-cfb0cded-a7de-4b37-9f89-38b01b642655.png)
+![](assets/1710922946129-cfb0cded-a7de-4b37-9f89-38b01b642655.png)
 
 ### 实现用户列表
 修改user_index.html中的超链接：
@@ -3874,7 +3874,7 @@ public class UserController {
 #### 跳转到新增页面
 在用户列表页面，修改`新增用户`的超链接：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710924492210-29f6afb3-551b-478e-adda-4b1952ba2971.png)
+![](assets/1710924492210-29f6afb3-551b-478e-adda-4b1952ba2971.png)
 
 将user_add.html拷贝到thymeleaf目录下，并进行代码修改如下：
 
@@ -3916,7 +3916,7 @@ public class UserController {
 
 启动服务器测试：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1710924719699-451900a1-ead4-463f-8536-8db72ac56b0b.png)
+![](assets/1710924719699-451900a1-ead4-463f-8536-8db72ac56b0b.png)
 
 #### 实现新增功能
 前端页面发送POST请求，提交表单，user_add.html代码如下：
@@ -4196,7 +4196,7 @@ public void deleteById(Long id){
 ```
 
 ## Http 消息转换器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是 HTTP 消息转换器
 1. **HTTP 消息**指的是**请求协议的内容**和**响应协议的内容**。
@@ -4249,7 +4249,7 @@ public void deleteById(Long id){
 
 ### @ResponseBody 的使用
 #### @ResponseBody 可以出现的位置
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764666381864-bafe3e4c-545c-4216-acac-416ddb313800.png)
+![](assets/1764666381864-bafe3e4c-545c-4216-acac-416ddb313800.png)
 
 1. 出现在方法上：只作用于当前方法。
 2. 出现在类上：作用于当前类中所有的方法。
@@ -4312,7 +4312,7 @@ public class ResponseBodyController {
 
 **第三步：测试**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764667149639-b1911edf-23d9-4935-ac1f-eb154e6f48c9.png)
+![](assets/1764667149639-b1911edf-23d9-4935-ac1f-eb154e6f48c9.png)
 
 **总结：**使用@ResponseBody，`return "hello";`不再是逻辑视图名了，是一个普通的字符串，底层将自动使用 `StringHttpMessageConverter`转换器，将字符串直接写入响应体。
 
@@ -4405,7 +4405,7 @@ public class ResponseBodyController {
 
 **第五步：测试**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764668498115-0cb02a8c-5752-417e-bf13-22243d8554c7.png)
+![](assets/1764668498115-0cb02a8c-5752-417e-bf13-22243d8554c7.png)
 
 **总结：使用@ResponseBody注解标注，并且**`**return obj;**`**时，另外也引入了解析 json 的 java 库之后，会自动使用**`**MappingJackson2HttpMessageConverter**`**消息转换器。**
 
@@ -4453,7 +4453,7 @@ public class ResponseBodyController {
 
 **`@RequestBody`<font style="color:#DF2A3F;">只处理请求体（Request Body）中的数据（不负责请求行！）</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764669597129-7308113b-2153-4a11-a0e6-f4f9add26571.png)
+![](assets/1764669597129-7308113b-2153-4a11-a0e6-f4f9add26571.png)
 
 **第一步：引入 jackson 依赖**
 
@@ -4513,7 +4513,7 @@ public class ResponseBodyController {
 
 **第五步：测试**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764669405713-b9607dc0-7cdc-436d-9e49-626036a8cae2.png)
+![](assets/1764669405713-b9607dc0-7cdc-436d-9e49-626036a8cae2.png)
 
 **思考：如果前端发送 ajax 请求时，提交的 **`**name1=value1&name2=value2**`**格式的数据，后端使用的是哪个消息转换器？答案是：不走任何消息转换器。**
 
@@ -4617,11 +4617,11 @@ public class UserController {
 
 测试：当用户不存在时
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711032765280-343794d6-b262-460b-8c03-e14bd8946850.png)
+![](assets/1711032765280-343794d6-b262-460b-8c03-e14bd8946850.png)
 
 测试：当用户存在时
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711032830325-866fe36b-cc47-4493-b9bb-8ebd34c7a86c.png)
+![](assets/1711032830325-866fe36b-cc47-4493-b9bb-8ebd34c7a86c.png)
 
 ### RESTful 的 AJAX 请求总结
 1. 发送 get 请求：`axios.get(url,config)`，如果需要提交多个参数，则在 `config`对象中配置 `params`属性，例如以下代码：
@@ -4650,7 +4650,7 @@ axios.delete('/api/users', {
 ```
 
 ## 文件上传和下载
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 文件上传
 前端页面：
@@ -4763,11 +4763,11 @@ public class FileController {
 
 最终测试结果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711331360045-38714fe4-a729-4068-b0a8-f805117da5bf.png)
+![](assets/1711331360045-38714fe4-a729-4068-b0a8-f805117da5bf.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711331351567-6b421e6f-b5b6-4bf4-95b8-69404a864530.png)
+![](assets/1711331351567-6b421e6f-b5b6-4bf4-95b8-69404a864530.png)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764670157207-0861a883-7630-4a8c-9681-978099360172.png)
+![](assets/1764670157207-0861a883-7630-4a8c-9681-978099360172.png)
 
 **<font style="color:#DF2A3F;">建议：上传文件时，文件起名采用UUID。以防文件覆盖。</font>**
 
@@ -4799,12 +4799,12 @@ public ResponseEntity<byte[]> downloadFile(HttpServletResponse response, HttpSer
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711332732449-ed2ddda1-7b8e-405a-af51-e5e2f8452558.png)
+![](assets/1711332732449-ed2ddda1-7b8e-405a-af51-e5e2f8452558.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711332745775-3de01f16-df6d-41bd-bc4d-905bedf34687.png)
+![](assets/1711332745775-3de01f16-df6d-41bd-bc4d-905bedf34687.png)
 
 ## 异常处理器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 什么是异常处理器
 Spring MVC在`处理器方法`执行过程中出现了异常，可以采用`异常处理器`进行应对。
@@ -4815,7 +4815,7 @@ Spring MVC在`处理器方法`执行过程中出现了异常，可以采用`异�
 
 SpringMVC为异常处理提供了一个接口：HandlerExceptionResolver
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711683439894-1af197f8-20d1-401b-8704-11d51b131670.png)
+![](assets/1711683439894-1af197f8-20d1-401b-8704-11d51b131670.png)
 
 核心方法是：resolveException。
 
@@ -4831,11 +4831,11 @@ DefaultHandlerExceptionResolver 是默认的异常处理器。
 
 核心方法：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711683759071-a2b84ecf-92c8-46e2-a040-8b5c113446f2.png)
+![](assets/1711683759071-a2b84ecf-92c8-46e2-a040-8b5c113446f2.png)
 
 当请求方式和处理方式不同时，DefaultHandlerExceptionResolver的默认处理态度是：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711683899955-8f7b2a54-716a-4b36-8550-e4630f695bca.png)
+![](assets/1711683899955-8f7b2a54-716a-4b36-8550-e4630f695bca.png)
 
 ### 自定义的异常处理器
 **启用自定义异常处理器，并且在配置文件中通过 order 设置优先级后，默认的异常处理器就不走了。**
@@ -4880,7 +4880,7 @@ DefaultHandlerExceptionResolver 是默认的异常处理器。
 </html>
 ```
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711684183329-eb0e9b03-4d1d-442e-9d6b-22384e3bd776.png)
+![](assets/1711684183329-eb0e9b03-4d1d-442e-9d6b-22384e3bd776.png)
 
 #### 注解方式
 
@@ -5083,7 +5083,7 @@ public class GlobalExceptionHandler {
 ```
 
 ## 拦截器 Interceptor
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 拦截器概述
 **<font style="color:#DF2A3F;">拦截器（Interceptor）类似于过滤器（Filter）</font>**
@@ -5104,7 +5104,7 @@ Spring MVC的拦截器作用是在请求到达控制器之前或之后进行拦�
 
 **<font style="color:#DF2A3F;">Filter、Servlet、Interceptor、Controller的执行顺序：</font>**
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711639953694-56fde7e8-af9f-4abc-b680-48ccf30b9df9.png)
+![](assets/1711639953694-56fde7e8-af9f-4abc-b680-48ccf30b9df9.png)
 
 **面试题：过滤器和拦截器有什么区别？**
 
@@ -5143,7 +5143,7 @@ Spring MVC的拦截器作用是在请求到达控制器之前或之后进行拦�
 + 前提1：包扫描，要保证能扫描到 `Interceptor1`
 + 前提2：使用 @Component 注解进行标注
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711677132812-77ff787c-8f94-41d6-abd8-721037ff0160.png)
+![](assets/1711677132812-77ff787c-8f94-41d6-abd8-721037ff0160.png)
 
 **<font style="color:#DF2A3F;">注意：对于这种基本配置来说，拦截器是拦截所有请求的。无法排出某些请求不走拦截器，都会拦截。</font>**
 
@@ -5244,7 +5244,7 @@ public class HandlerExecutionChain {
 
 执行顺序：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711680479220-91b54971-fc52-47b6-a711-4425dfa1617a.png)
+![](assets/1711680479220-91b54971-fc52-47b6-a711-4425dfa1617a.png)
 
 ##### 如果其中一个拦截器preHandle返回false
 
@@ -5257,7 +5257,7 @@ public class HandlerExecutionChain {
 
 如果`interceptor2`的preHandle返回false，执行顺序：
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711680589053-dbc8883c-eabe-476c-a8f3-da24b4f8de70.png)
+![](assets/1711680589053-dbc8883c-eabe-476c-a8f3-da24b4f8de70.png)
 
 规则：只要有一个拦截器`preHandle`返回false，任何`postHandle`都不执行。但返回false的拦截器的前面的拦截器按照逆序执行`afterCompletion`。
 
@@ -5329,7 +5329,7 @@ public class HandlerExecutionChain {
 ```
 
 ## SpringMVC 执行流程
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### SpringMVC 九大核心角色
 **前端控制器（DispatcherServlet）**
@@ -5467,7 +5467,7 @@ public interface View {
 ```
 
 ### 从画图角度看执行流程
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711943505835-476f954e-ba6c-4a78-b16b-683524e25520.png)
+![](assets/1711943505835-476f954e-ba6c-4a78-b16b-683524e25520.png)
 
 **SpringMVC 执行流程文字性的描述：**
 
@@ -5495,21 +5495,21 @@ public interface View {
 1. 初始化Spring上下文，也就是创建所有的bean，让IoC容器将其管理起来。
 2. 初始化SpringMVC相关的对象：处理器映射器，处理器适配器等。。。
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945073073-1466293a-37a5-4e04-a628-00225ec9ad8f.png)
+![](assets/1711945073073-1466293a-37a5-4e04-a628-00225ec9ad8f.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945189838-6546c84c-23c9-479d-b2df-893851fdb912.png)
+![](assets/1711945189838-6546c84c-23c9-479d-b2df-893851fdb912.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945264590-8b563ba5-bf2a-4e27-8695-9a0ee2577f2a.png)
+![](assets/1711945264590-8b563ba5-bf2a-4e27-8695-9a0ee2577f2a.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945298853-016466d1-3882-461f-8ac5-296983a67d24.png)
+![](assets/1711945298853-016466d1-3882-461f-8ac5-296983a67d24.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945338150-b4f14a20-cc75-4915-9651-51acbffcd872.png)
+![](assets/1711945338150-b4f14a20-cc75-4915-9651-51acbffcd872.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945352375-01882059-ab91-4668-a595-eb83ca01344c.png)
+![](assets/1711945352375-01882059-ab91-4668-a595-eb83ca01344c.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945371377-87ac618e-495f-4fe9-92c4-50a1f2c199d8.png)
+![](assets/1711945371377-87ac618e-495f-4fe9-92c4-50a1f2c199d8.png)
 
-![](https://cdn.nlark.com/yuque/0/2024/png/21376908/1711945408231-6e96abeb-ceff-480e-9f2c-72bfa2a5d419.png)
+![](assets/1711945408231-6e96abeb-ceff-480e-9f2c-72bfa2a5d419.png)
 
 ### 常见面试题
 **Q：处理器映射器和适配器什么时候创建？**
@@ -5557,7 +5557,7 @@ preHandle在处理器前，postHandle在处理器后但视图渲染前，afterCo
 
 
 ## SpringMVC 全注解开发
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### web.xml文件的替代
 Servlet3.0+之后提供了自动发现机制（SPI），使用这种机制可以代替 `web.xml`文件的编写。
@@ -5836,7 +5836,7 @@ public void addInterceptors(InterceptorRegistry registry) {
 ### 编写测试程序进行测试
 **创建好对应的文件、目录及程序：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764837321272-9f6fb38a-7d7c-4aad-a627-fb8d38efdba9.png)
+![](assets/1764837321272-9f6fb38a-7d7c-4aad-a627-fb8d38efdba9.png)
 
 `**index.html**`
 
@@ -5892,15 +5892,15 @@ public class TestController {
 
 **访问首页面：**[**http://localhost:8080/springmvc/**](http://localhost:8080/springmvc/)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764837484207-1688c52b-0046-4d91-8fe6-a0dbde5268df.png)
+![](assets/1764837484207-1688c52b-0046-4d91-8fe6-a0dbde5268df.png)
 
 **观察后端，拦截器是否执行：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764837513997-59b144e7-a8a6-45cb-97c3-b2538052daf6.png)
+![](assets/1764837513997-59b144e7-a8a6-45cb-97c3-b2538052daf6.png)
 
 **再发送 **`**/test**`**请求：**[**http://localhost:8080/springmvc/test**](http://localhost:8080/springmvc/test)
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1764837543320-be1f1649-4b13-47d7-be8d-475a98739f3d.png)
+![](assets/1764837543320-be1f1649-4b13-47d7-be8d-475a98739f3d.png)
 
 ## SSM 整合-全注解式开发
 在我们上面 SpringMVC 全注解开发的基础之上添加 Spring+MyBatis 的配置就行了。

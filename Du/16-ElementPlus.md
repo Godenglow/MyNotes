@@ -1,7 +1,7 @@
 # Element Plus
 
 ## 初识 Element Plus
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 **Element Plus** 是基于 Vue 3 的流行前端 UI 组件库，是 Element UI（Vue 2 版本）的升级版。它由饿了么前端团队开发并开源，专为开发者提供高效、灵活的组件化解决方案，适用于构建现代化的 Web 应用。
 
@@ -70,11 +70,11 @@ app.mount('#app')
 
 `element-plus-doc`
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785416919635-3a72bd02-a1ee-4648-a75d-c7106529ebc2.png)
+![](assets/1785416919635-3a72bd02-a1ee-4648-a75d-c7106529ebc2.png)
 
 `Element Plus Snippets`
 
-![](https://cdn.nlark.com/yuque/0/2026/png/21376908/1785417277686-110c410c-0ddc-4a27-a785-d1c03d950108.png)
+![](assets/1785417277686-110c410c-0ddc-4a27-a785-d1c03d950108.png)
 
 ### 生态与工具
 + **官方工具**  
@@ -92,7 +92,7 @@ app.mount('#app')
 Element Plus 凭借其成熟的组件体系、Vue 3 的深度优化，以及友好的中文文档，成为国内开发者常用的 UI 库之一。适合追求开发效率、需要稳定组件支持的团队。对于个性化需求较强的项目，可通过自定义主题或组合其他库（如 TailwindCSS【CSS 框架】）实现。
 
 ## 按钮
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -133,10 +133,10 @@ Element Plus 凭借其成熟的组件体系、Vue 3 的深度优化，以及友�
 
 **效果如下：**
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752890490603-9d3c1ec8-28a1-4744-83a0-d0b139c74b90.png)
+![](assets/1752890490603-9d3c1ec8-28a1-4744-83a0-d0b139c74b90.png)
 
 ## 图标
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 环境准备
 1. 导入 Element Plus 组件库中所有图标
@@ -216,10 +216,10 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752891708044-4f2d53c0-f877-4892-a944-fbba4ae023e7.png)
+![](assets/1752891708044-4f2d53c0-f877-4892-a944-fbba4ae023e7.png)
 
 ## 提示框
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 三个常用的提示框组件
 1. 消息：`**ElMessage**`
@@ -298,7 +298,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ```
 
 ## 导航
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 水平导航
 
@@ -339,7 +339,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766064624719-39fed3ca-14cb-4d4f-8873-1914f901fe5a.png)
+![](assets/1766064624719-39fed3ca-14cb-4d4f-8873-1914f901fe5a.png)
 
 ### 水平导航自定义样式
 
@@ -380,7 +380,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766064889003-5394bdb6-5024-4a07-9e23-9683d8245ec6.png)
+![](assets/1766064889003-5394bdb6-5024-4a07-9e23-9683d8245ec6.png)
 
 **EP 组件库中也可以通过下面方式来设置样式：**
 
@@ -469,7 +469,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766064932562-5e3e86e9-749c-4b8f-9871-6ba67a3f3668.png)
+![](assets/1766064932562-5e3e86e9-749c-4b8f-9871-6ba67a3f3668.png)
 
 ### 菜单项也可以用图标
 
@@ -514,7 +514,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1766065023173-cb377900-6a17-46e9-b843-aecda71dc6fe.png)
+![](assets/1766065023173-cb377900-6a17-46e9-b843-aecda71dc6fe.png)
 
 ### 默认展开
 
@@ -578,7 +578,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752897676067-b0632db0-fc3d-47d4-acfb-e7a1b1b85490.png)
+![](assets/1752897676067-b0632db0-fc3d-47d4-acfb-e7a1b1b85490.png)
 
 ### 下拉菜单
 
@@ -620,10 +620,10 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752906042547-e4556c61-a4f0-4876-99d2-36551cc73170.png)
+![](assets/1752906042547-e4556c61-a4f0-4876-99d2-36551cc73170.png)
 
 ## 标签页
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 标签页
 
@@ -657,7 +657,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752907403997-8a4f2033-e8c7-462b-8fbc-233f1c58db51.png)
+![](assets/1752907403997-8a4f2033-e8c7-462b-8fbc-233f1c58db51.png)
 
 ### 动态标签页
 
@@ -710,10 +710,10 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1752908856680-ed59b5ab-d068-4175-8467-d9fc2f5cba6b.png)
+![](assets/1752908856680-ed59b5ab-d068-4175-8467-d9fc2f5cba6b.png)
 
 ## 输入框
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -803,7 +803,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 ```
 
 ## 单选框和复选框
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -869,10 +869,10 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753009645210-1fa87da1-ed7f-41ea-8ea8-72e6356f1a2b.png)
+![](assets/1753009645210-1fa87da1-ed7f-41ea-8ea8-72e6356f1a2b.png)
 
 ## 下拉框
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -934,10 +934,10 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753011191297-178eb13c-09fa-4186-9137-2f6c48fb6ca5.png)
+![](assets/1753011191297-178eb13c-09fa-4186-9137-2f6c48fb6ca5.png)
 
 ## 日期选择器
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ### 默认的日期选择器
 
@@ -971,7 +971,7 @@ Object.entries(obj);  // 结果：[['a', 1], ['b', 2]]
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753012357997-23959adf-35be-4f2b-a29d-888bb8c8b902.png)
+![](assets/1753012357997-23959adf-35be-4f2b-a29d-888bb8c8b902.png)
 
 ### 中文的日期选择器
 1. 首先你要导入 Element Plus 组件库的中文语言包
@@ -990,10 +990,10 @@ app.use(ElementPlus, {
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753012619267-1339b420-a7a1-4937-b076-799a71749379.png)
+![](assets/1753012619267-1339b420-a7a1-4937-b076-799a71749379.png)
 
 ## 表单
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -1083,10 +1083,10 @@ app.use(ElementPlus, {
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753014267246-3d356849-0fef-47fa-9600-8be328e02b3e.png)
+![](assets/1753014267246-3d356849-0fef-47fa-9600-8be328e02b3e.png)
 
 ## 对话框
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -1186,10 +1186,10 @@ app.use(ElementPlus, {
 
 效果如下：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753014873443-a77e81fc-7718-41a8-a371-48f992768565.png)
+![](assets/1753014873443-a77e81fc-7718-41a8-a371-48f992768565.png)
 
 ## 分页
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -1219,7 +1219,7 @@ app.use(ElementPlus, {
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753015744932-4a5861fd-7792-48fd-bdfa-9aa117f2fd50.png)
+![](assets/1753015744932-4a5861fd-7792-48fd-bdfa-9aa117f2fd50.png)
 
 完整的分页组件：
 
@@ -1291,7 +1291,7 @@ const fetchData = () => {
 ```
 
 ## 表格
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 ```vue
 <template>
@@ -1377,14 +1377,14 @@ const fetchData = () => {
 
 效果：
 
-![](https://cdn.nlark.com/yuque/0/2025/png/21376908/1753019836276-471cec71-85ab-4860-92aa-72137168a931.png)
+![](assets/1753019836276-471cec71-85ab-4860-92aa-72137168a931.png)
 
 ## 按需导入+自动导入
 **按需导入是指<font style="color:#DF2A3F;">只导入</font>项目中实际用到的组件，而不是导入整个 Element Plus 库，这样可以显著减小打包体积。**
 
 **<font style="color:#DF2A3F;">另外，以下我们也设置了自动导入，这样在开发中也不需要手动编写 import 语句了。</font>**
 
-![](https://cdn.nlark.com/yuque/0/2025/jpeg/21376908/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
+![](assets/1757681056420-39d1bc52-55fe-4f3b-8183-b4d7ba79b166.jpeg)
 
 1. 如果按需导入，则需要安装以下插件：
 
