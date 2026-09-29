@@ -1,0 +1,174 @@
+=== PAIRED (18) ===
+[第17章 Java新特性] L290 <pre> ... </pre>
+[Maven&Nexus] L258 <id> ... </id>
+[Maven&Nexus] L258 <url> ... </url>
+[Maven&Nexus] L258 <site> ... </site>
+[Maven&Nexus] L258 <distributionManagement> ... </distributionManagement>
+[SpringMVC] L430 <load-on-startup> ... </load-on-startup>
+[第14章 网络编程] L20 <sup> ... </sup>
+[第02章 Java基础语法] L711 <u> ... </u>
+[第02章 Java基础语法] L739 <sup> ... </sup>
+[第02章 Java基础语法] L739 <sup> ... </sup>
+[第02章 Java基础语法] L740 <sup> ... </sup>
+[第02章 Java基础语法] L740 <sup> ... </sup>
+[第02章 Java基础语法] L741 <sup> ... </sup>
+[第02章 Java基础语法] L741 <sup> ... </sup>
+[第02章 Java基础语法] L742 <sup> ... </sup>
+[第02章 Java基础语法] L742 <sup> ... </sup>
+[第02章 Java基础语法] L746 <sup> ... </sup>
+[CSS3] L642 <p align="center"> ... </p>
+
+=== SOLO_OPEN (149) ===
+[HTML5] L358 (unclosed) <head> || ## <head>标签
+[HTML5] L365 (unclosed) <head> || <head> 中的元素可以引用脚本、指示浏览器在哪里找到样式表。文档的头部描述了文档的各种属性和信息。绝大多数文档头部包含的数据都不会真正作为内容显示给用户。
+[HTML5] L369 (unclosed) <title> || 在`<head>`标签中可以出现的子标签：<title>、<meta>、<link>、<script>、<style>等。
+[HTML5] L369 (unclosed) <meta> || 在`<head>`标签中可以出现的子标签：<title>、<meta>、<link>、<script>、<style>等。
+[HTML5] L369 (unclosed) <link> || 在`<head>`标签中可以出现的子标签：<title>、<meta>、<link>、<script>、<style>等。
+[HTML5] L369 (unclosed) <script> || 在`<head>`标签中可以出现的子标签：<title>、<meta>、<link>、<script>、<style>等。
+[HTML5] L369 (unclosed) <style> || 在`<head>`标签中可以出现的子标签：<title>、<meta>、<link>、<script>、<style>等。
+[HTML5] L373 (unclosed) <head> || 应该把 <head> 标签放在文档的开始处，紧跟在 <html> 后面，并处于 <body> 标签之前。
+[HTML5] L373 (unclosed) <html> || 应该把 <head> 标签放在文档的开始处，紧跟在 <html> 后面，并处于 <body> 标签之前。
+[HTML5] L373 (unclosed) <body> || 应该把 <head> 标签放在文档的开始处，紧跟在 <html> 后面，并处于 <body> 标签之前。
+[HTML5] L375 (unclosed) <title> || ## <title>标签
+[HTML5] L387 (unclosed) <meta> || ## <meta>标签
+[HTML5] L390 (unclosed) <meta> || 1. <meta>标签属于元信息标签，用来向浏览器或搜索引擎描述页面，比如文档的描述和关键字，只能放在`<head>`标签中。
+[HTML5] L394 (unclosed) <meta> || 2. 用<meta>标签告诉浏览器采用哪一种字符集打开当前页面
+[HTML5] L402 (unclosed) <meta> || 3. 用<meta>标签告诉搜索引擎你的网页的关键字是什么
+[HTML5] L416 (unclosed) <meta> || 4. 用<meta>标签告诉搜索引擎你的网页的主要内容是什么
+[HTML5] L432 (unclosed) <body> || ## <body>标签
+[HTML5] L469 (unclosed) <h1> || <h1> 到 <h6> 标签可定义标题。
+[HTML5] L469 (unclosed) <h6> || <h1> 到 <h6> 标签可定义标题。
+[HTML5] L471 (unclosed) <h1> || <h1> 定义最大的标题，<h6> 定义最小的标题。
+[HTML5] L471 (unclosed) <h6> || <h1> 定义最大的标题，<h6> 定义最小的标题。
+[HTML5] L506 (unclosed) <b> || ### <b>标签
+[HTML5] L515 (unclosed) <del> || ### <del>标签
+[HTML5] L525 (unclosed) <ins> || ### <ins>标签
+[HTML5] L537 (unclosed) <em> || ### <em>标签
+[HTML5] L546 (unclosed) <i> || ### <i>标签
+[HTML5] L556 (unclosed) <pre> || ### <pre>标签
+[HTML5] L569 (unclosed) <strong> || ### <strong>标签
+[HTML5] L578 (unclosed) <small> || ### <small>标签
+[HTML5] L579 (unclosed) <small> || <small> 标签 是 HTML 中的一个语义化标签，用于表示小号字体文本，通常用于免责声明、注释、版权信息、法律条款等次要内容。
+[HTML5] L589 (unclosed) <u> || ### <u>标签
+[HTML5] L598 (unclosed) <sup> || ### <sup>和<sub>标签
+[HTML5] L598 (unclosed) <sub> || ### <sup>和<sub>标签
+[HTML5] L599 (unclosed) <sup> || <sup> 标签：定义上标文本。
+[HTML5] L601 (unclosed) <sub> || <sub> 标签：定义下标文本。
+[HTML5] L611 (unclosed) <abbr> || ### <abbr>标签
+[HTML5] L616 (unclosed) <abbr> || <abbr> 标签用于表示缩写或缩略语，并通过 title 属性提供完整解释，帮助用户（尤其是屏幕阅读器和搜索引擎）理解缩写含义。
+[HTML5] L618 (unclosed) <img> || ## <img>标签
+[HTML5] L639 (unclosed) <a> || ## <a>标签
+[HTML5] L719 (unclosed) <br> || ## <br>和<hr>标签
+[HTML5] L719 (unclosed) <hr> || ## <br>和<hr>标签
+[HTML5] L720 (unclosed) <br> || ### <br>标签
+[HTML5] L734 (unclosed) <hr> || ### <hr>标签
+[HTML5] L750 (unclosed) <span> || ## <span>标签
+[HTML5] L759 (unclosed) <span> || 2. <span>标签不是单独占一行，对于不是独占一行的元素，我们称之为**<font style="color:#DF2A3F;">行内元素（独占行的叫做块元素）</font>**。
+[HTML5] L761 (unclosed) <div> || ## <div>标签
+[HTML5] L774 (unclosed) <div> || **<div>标签单独占一行，对于独占一行的元素，我们称之为块元素。**
+[HTML5] L830 (unclosed) <base> || ## <base>标签
+[HTML5] L831 (unclosed) <base> || <base> 标签用于为页面上的所有相对URL指定一个基准URL。这个标签必须放在文档的<head>部分，并且一个文档中只能有一个<base>标签。
+[HTML5] L831 (unclosed) <head> || <base> 标签用于为页面上的所有相对URL指定一个基准URL。这个标签必须放在文档的<head>部分，并且一个文档中只能有一个<base>标签。
+[HTML5] L831 (unclosed) <base> || <base> 标签用于为页面上的所有相对URL指定一个基准URL。这个标签必须放在文档的<head>部分，并且一个文档中只能有一个<base>标签。
+[HTML5] L846 (unclosed) <progress> || ## <progress>进度条标签
+[HTML5] L847 (unclosed) <progress> || HTML5 中的 <progress> 标签用于在网页中显示任务的进度条，例如文件上传、下载或任务完成度。以下是它的基本用法：
+[HTML5] L1037 (unclosed) <table> || ## <table>标签的属性
+[HTML5] L1046 (unclosed) <th> || ## <th>标签
+[HTML5] L1047 (unclosed) <th> || 1. <th> 标签用于定义表格中的 表头单元格
+[HTML5] L1048 (unclosed) <th> || 2. 浏览器通常会将 <th> 内容加粗并居中显示
+[HTML5] L1074 (unclosed) <caption> || ## <caption>标签
+[HTML5] L1075 (unclosed) <caption> || 在 HTML 中，<caption> 标签用于为 表格（<table>） 定义一个标题，通常显示在表格的顶部（默认位置），用于简要描述表格的内容或用途。
+[HTML5] L1075 (unclosed) <table> || 在 HTML 中，<caption> 标签用于为 表格（<table>） 定义一个标题，通常显示在表格的顶部（默认位置），用于简要描述表格的内容或用途。
+[HTML5] L1298 (unclosed) <form> || HTML 表单用于收集用户输入，表单使用<form> 标签创建。表单可包含文本字段、复选框、单选框、提交按钮等等。
+[HTML5] L1300 (unclosed) <form> || 注意：<form>元素是块级元素，独自占一行。
+[HTML5] L1302 (unclosed) <form> || ### <form>标签的属性
+[HTML5] L1329 (unclosed) <input> || ### <input>标签
+[HTML5] L1360 (unclosed) <select> || ### <select> 下拉列表
+[HTML5] L1379 (unclosed) <textarea> || ### <textarea> 文本域
+[HTML5] L1410 (unclosed) <button> || ### <button>标签
+[HTML5] L1419 (unclosed) <label> || ## <label>标签
+[HTML5] L1420 (unclosed) <label> || ### <label>标签作用
+[HTML5] L1421 (unclosed) <label> || <label> 标签的作用是关联表单控件（如 <input>、<select> 等），提升用户体验和可访问性
+[HTML5] L1421 (unclosed) <input> || <label> 标签的作用是关联表单控件（如 <input>、<select> 等），提升用户体验和可访问性
+[HTML5] L1421 (unclosed) <select> || <label> 标签的作用是关联表单控件（如 <input>、<select> 等），提升用户体验和可访问性
+[HTML5] L1423 (unclosed) <label> || ### <label>标签用法
+[HTML5] L1442 (unclosed) <label> || ### <label>标签实际应用场景
+[HTML5] L1451 (unclosed) <input type="file"> || 文件上传：美化上传按钮（将 <input type="file"> 隐藏，通过 <label> 触发）：
+[HTML5] L1451 (unclosed) <label> || 文件上传：美化上传按钮（将 <input type="file"> 隐藏，通过 <label> 触发）：
+[HTML5] L1459 (unclosed) <input> || placeholder 是 HTML 表单元素（如 <input> 或 <textarea>）的一个属性，用于在输入框为空时显示一段浅色的提示文本，引导用户输入正确的内容。 当用户开始输入时，提示文本
+[HTML5] L1459 (unclosed) <textarea> || placeholder 是 HTML 表单元素（如 <input> 或 <textarea>）的一个属性，用于在输入框为空时显示一段浅色的提示文本，引导用户输入正确的内容。 当用户开始输入时，提示文本
+[Maven&Nexus] L1120 (unclosed) <dependencyManagement> || 3. 父工程不使用<dependencyManagement>标签，则父工程也会引入这个 jar 包。
+[Maven&Nexus] L1829 (unclosed) <modules> || **一键构建**：通过聚合项目POM的<modules>配置，可以一次性构建所有子模块（不用挨个进目录执行命令）
+[Maven&Nexus] L1869 (unclosed) <modules> || 一键构建：通过聚合项目POM的<modules>配置，可以一次性构建所有子模块（不用挨个进目录执行命令）
+[Spring] L1770 (self-closing) <value/> || 注入空字符串使用：<value/> 或者 value=""
+[Spring] L1772 (self-closing) <null/> || 注入null使用：<null/> 或者 不为该属性赋值
+[Spring] L1844 (self-closing) <null/> || 第二种方式：使用<null/>
+[Spring] L4337 (self-closing) <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> || <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/> 表
+[Spring] L1665 (unclosed) <set> || + **<font style="color:#F5222D;">使用<set>标签</font>**
+[Spring] L1713 (unclosed) <map> || + **<font style="color:#F5222D;">使用<map>标签</font>**
+[Spring] L1765 (unclosed) <props> || + **<font style="color:#F5222D;">使用<props>标签嵌套<prop>标签完成。</font>**
+[Spring] L1765 (unclosed) <prop> || + **<font style="color:#F5222D;">使用<props>标签嵌套<prop>标签完成。</font>**
+[第09章 数据结构和集合] L70 (unclosed) <E> || | Iterator<E> iterator(); | 获得集合的迭代器（用于遍历集合） |
+[第09章 数据结构和集合] L289 (unclosed) <E> || | List<E> subList(int fromIndex, int toIndex); | 获得指定索引范围的集合元素 |
+[第09章 数据结构和集合] L290 (unclosed) <E> || | ListIterator<E> listIterator(); | 获得List接口对应的迭代器 |
+[第09章 数据结构和集合] L1148 (unclosed) <E> || | ListIterator<E> listIterator(); | 获得迭代器 |
+[第09章 数据结构和集合] L1149 (unclosed) <E> || | ListIterator<E> listIterator(int index); | 获得迭代器，游标位置指定为：index |
+[第09章 数据结构和集合] L1152 (unclosed) <E> || 使用ListIterator迭代器遍历集合，想要实现“从前往后”遍历List集合，使用“ListIterator<E> listIterator();”来获得迭代器；想要实现“从后往前”遍历List集
+[第09章 数据结构和集合] L1152 (unclosed) <E> || 使用ListIterator迭代器遍历集合，想要实现“从前往后”遍历List集合，使用“ListIterator<E> listIterator();”来获得迭代器；想要实现“从后往前”遍历List集
+[第09章 数据结构和集合] L1489 (unclosed) <V> || | Collection<V> values(); | 获得Map中的所有value值 |
+[第09章 数据结构和集合] L1500 (unclosed) <K> || 在Map接口中，提供了“Set<K> keySet()”方法来遍历Map中的键值对。使用keySet()方法的遍历Map的原理为：先获得Map集合中所有key对应的Set集合，然后通过迭代器遍历Set
+[第09章 数据结构和集合] L2144 (unclosed) <K> || | public synchronized Enumeration<K> keys() | 获得所有key的迭代器 |
+[第09章 数据结构和集合] L2145 (unclosed) <V> || | public synchronized Enumeration<V> elements() | 获得所有value的迭代器 |
+[第09章 数据结构和集合] L2214 (unclosed) <String> || | public Set<String> stringPropertyNames() | 获得key 的Set集合 |
+[SpringMVC] L3179 (self-closing) <mvc:annotation-driven/> || ## <font style="color:#080808;background-color:#ffffff;"><mvc:annotation-driven/></font>
+[SpringMVC] L208 (unclosed) <servlet-name> || SpringMVC框架有它自己的配置文件，该配置文件的名字默认为：<servlet-name>-servlet.xml，**<font style="color:#DF2A3F;">默认存放的位置是W
+[SpringMVC] L428 (unclosed) <init-param> || **<font style="color:#DF2A3F;">通过<init-param>来设置SpringMVC配置文件的路径和名字。在DispatcherServlet的init方法执行时设置的。
+[SpringMVC] L3153 (unclosed) <mvc:view-controller> || ## <mvc:view-controller>
+[第15章 Lambda表达式] L415 (unclosed) <T> || | 消费型接口（**一个参数无返回值**） | Consumer<T> | void accept(T t); |
+[第15章 Lambda表达式] L416 (unclosed) <T> || | 生产型接口（**无参数有返回值**） | Supplier<T> | T get(); |
+[第15章 Lambda表达式] L418 (unclosed) <T> || | 判断型接口（**一个参数返回布尔值**） | Predicate<T> | boolean test(T t); |
+[第16章 Stream API] L157 (unclosed) <T> || 筛选（filter），按照一定的规则校验流中的元素，将符合条件的元素提取到新的流中。该操作使用了Stream接口提供的“Stream<T> filter(Predicate<? super T> pr
+[第16章 Stream API] L171 (unclosed) <R> || 映射（map），将一个流的元素按照一定的映射规则映射到另一个流中。该操作使用了Stream接口提供的“<R> Stream<R> map(Function<? super T, ? extends R
+[第16章 Stream API] L171 (unclosed) <R> || 映射（map），将一个流的元素按照一定的映射规则映射到另一个流中。该操作使用了Stream接口提供的“<R> Stream<R> map(Function<? super T, ? extends R
+[第16章 Stream API] L192 (unclosed) <R> || 在Stream接口中，可以实现“将多个集合中的元素映射到同一个流中”，该操作使用了Stream接口提供的“<R> Stream<R> flatMap(Function<? super T, ? ext
+[第16章 Stream API] L192 (unclosed) <R> || 在Stream接口中，可以实现“将多个集合中的元素映射到同一个流中”，该操作使用了Stream接口提供的“<R> Stream<R> flatMap(Function<? super T, ? ext
+[第16章 Stream API] L208 (unclosed) <T> || 除重（distinct），也就是除去重复的元素，底层使用了hashCode()和equals(Object obj)方法来判断元素是否相等。该操作使用了Stream接口提供的“Stream<T> di
+[第16章 Stream API] L225 (unclosed) <T> || 排序（sorted），也就是对元素执行“升序”或“降序”的排列操作。在Stream接口中提供了“Stream<T> sorted();”方法，专门用于对元素执行“自然排序”，使用该方法则元素对应的类就
+[第16章 Stream API] L242 (unclosed) <T> || 在Stream接口中还提供了“Stream<T> sorted(Comparator<? super T> comparator);”方法，专门用于对元素执行“指定排序”，这样就能对某一个类设置多种排
+[第16章 Stream API] L260 (unclosed) <T> || 合并（concat），也就是将两个Stream合并为一个Stream，此处使用Stream接口提供的“public static <T> Stream<T> concat(Stream<? exten
+[第16章 Stream API] L260 (unclosed) <T> || 合并（concat），也就是将两个Stream合并为一个Stream，此处使用Stream接口提供的“public static <T> Stream<T> concat(Stream<? exten
+[第16章 Stream API] L271 (unclosed) <T> || 跳过（skip），指的就是跳过n个元素开始操作，此处使用Stream接口提供的“Stream<T> skip(long n);”方法来实现。
+[第16章 Stream API] L273 (unclosed) <T> || 截断（limit），指的是截取n个元素的操作，此处使用Stream接口提供的“Stream<T> limit(long maxSize);”方法来实现。
+[第16章 Stream API] L306 (unclosed) <T> || 4. Optional<T> findFirst(); 获得第一个元素
+[第16章 Stream API] L347 (unclosed) <T> || 1. Optional<T> reduce(BinaryOperator<T> accumulator);
+[第16章 Stream API] L347 (unclosed) <T> || 1. Optional<T> reduce(BinaryOperator<T> accumulator);
+[第16章 Stream API] L348 (unclosed) <T> || 2. T reduce(T identity, BinaryOperator<T> accumulator);
+[第16章 Stream API] L376 (unclosed) <T> || **Optional<T> max(Comparator<? super T> comparator); 获得最大的元素**
+[第16章 Stream API] L378 (unclosed) <T> || **Optional<T> min(Comparator<? super T> comparator); 获得最小的元素**
+[MyBatis-Plus] L745 (unclosed) <T> || + saveBatch(Collection<T>) 批量保存
+[MyBatis-Plus] L759 (unclosed) <T> || + updateBatchById(Collection<T>) 根据id批量更新
+[Servlet&Thymeleaf] L2266 (unclosed) <a href="?name=中文"> || + <a href="?name=中文"> 点击跳转：浏览器会对查询参数自动编码。
+[Servlet&Thymeleaf] L2267 (unclosed) <form> || + <form> 表单 GET 提交：浏览器会自动对表单字段进行 URL 编码。
+[第11章 多线程] L2281 (unclosed) <T> || | <T> Future<T> submit(Callable<T> task); | 提交一个Callable的任务用于执行 |
+[第11章 多线程] L2281 (unclosed) <T> || | <T> Future<T> submit(Callable<T> task); | 提交一个Callable的任务用于执行 |
+[第11章 多线程] L2281 (unclosed) <T> || | <T> Future<T> submit(Callable<T> task); | 提交一个Callable的任务用于执行 |
+[第08章 泛型和比较器] L848 (unclosed) <T> || 在Java语言中，专门提供了java.lang.Comparable<T>接口来比较对象的大小，因为比较的规则定义在对象所对应的类中，因此我们也把Comparable接口称之为“内部比较器”，并且在该
+[第08章 泛型和比较器] L948 (unclosed) <T> || 想要实现以上需求，那么比较的规则就不能定义在对象所在的类中，而是应该把比较的规则定义在对象所在类的外部来实现。按照这个思路，我们可以定义一个Comparator<T>接口，并在接口中定义int com
+[第08章 泛型和比较器] L1248 (unclosed) <T> || 在Java语言中，专门提供了java.util.Comparator<T>接口来比较对象的大小，因为比较对象大小的规则定义在Comparator接口的实现类中，因此我们也把Comparator接口称之
+[第12章 反射机制] L868 (unclosed) <T> || | public Constructor<T> getConstructor(Class<?>... parameterTypes) | 获得公开权限的构造方法，参数为构造方法的形参类型 |
+[第12章 反射机制] L869 (unclosed) <T> || | public Constructor<T> getDeclaredConstructor(Class<?>... parameterTypes) | 获得任意权限的构造方法，参数为构造方法的形参类
+[MyBatis] L4648 (self-closing) <cache /> || 2. 在需要使用二级缓存的SqlMapper.xml文件中添加配置：<cache />
+[MyBatis] L822 (unclosed) <select> || 所以说，你想让mybatis查询之后返回一个Java对象的话，至少你要告诉mybatis返回一个什么类型的Java对象，可以在<select>标签中添加resultType属性，用来指定查询要转换的类
+[MyBatis] L896 (unclosed) <mapper> || 在SQL Mapper配置文件中<mapper>标签的namespace属性可以翻译为命名空间，这个命名空间主要是为了防止sqlId冲突的。
+[MyBatis] L3087 (unclosed) <Car> || ## 返回List<Car>
+[MyBatis] L3191 (unclosed) <Map> || ## 返回List<Map>
+[MyBatis] L3192 (unclosed) <Map> || 查询结果条数大于等于1条数据，则可以返回一个存储Map集合的List集合。List<Map>等同于List<Car>
+[MyBatis] L3192 (unclosed) <Car> || 查询结果条数大于等于1条数据，则可以返回一个存储Map集合的List集合。List<Map>等同于List<Car>
+[MyBatis] L4368 (unclosed) <Student> || 在Clazz类中添加List<Student> stus; 属性。
+[MyBatis] L4647 (unclosed) <setting name="cacheEnabled" value="true"> || 1. <setting name="cacheEnabled" value="true"> 全局性地开启或关闭所有映射器配置文件中已配置的任何缓存。默认就是true，无需设置。
+[Spring Boot] L4942 (unclosed) <seconds> || * **<font style="color:rgb(15, 17, 21);">max-age=<seconds></font>**<font style="color:rgb(15, 17, 21
+[Vue3] L7757 (unclosed) <Suspense> || <font style="color:rgb(15, 17, 21);">而 </font>`<font style="color:rgb(15, 17, 21);background-color:r
+
+=== SOLO_CLOSE (2) ===
+[Maven&Nexus] L430 </mirrors> || 找到</mirrors>结束标签，将以下代码贴在其前面：
+[Maven&Nexus] L445 </profiles> || 找到</profiles>结束标签，在其前面配置以下代码：
