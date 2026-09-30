@@ -451,16 +451,6 @@
       },
       "configuredModelId": "0bcc0add-cdf1-4861-bf83-64480d58b0b3",
       "configuredAt": 1788056036148
-    },
-    {
-      "providerId": "2ef69090-db99-4ec8-9dd8-16272408d8a4",
-      "info": {
-        "id": "opus[1m]",
-        "displayName": "Opus (1M context)",
-        "description": "Opus 4.8 with 1M context · Best for everyday, complex tasks"
-      },
-      "configuredModelId": "dd368d62-ed77-4eba-9adf-c943ef01d02a",
-      "configuredAt": 1790696984207
     }
   ],
   "backends": {
