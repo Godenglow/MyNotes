@@ -1,0 +1,91 @@
+screenpipe 屏幕记录自动归纳 · 主线：QQ AI Bot 全链路跑通 + 文档化 · 深夜（00:00–02:30）与晚间（18:04–22:35 锁屏）各有一段非工作时段
+数据源：screenpipe activity-summary + 窗口记录
+活跃总时长：约 700 分钟（≈11.7 h，估算）
+本周位置：2026-09 第 1 周（08.31–09.06）周三
+<table fit-page-width="true" header-row="true">
+<tr><th>项目</th><th>数值</th><th>说明</th></tr>
+<tr><td>活跃总时长</td><td>11.7 h</td><td>约 700 分钟（估算）</td></tr>
+<tr><td>工作 / 学习</td><td>3.8 h</td><td>约 230 分钟 · 占 33%</td></tr>
+<tr><td>游戏 / 挂机</td><td>3.2 h</td><td>约 190 分钟 · 占 27%（以挂机为主）</td></tr>
+<tr><td>其他娱乐</td><td>4.1 h</td><td>约 245 分钟 · 占 35%（抖音为主）</td></tr>
+<tr><td>里程碑</td><td>QQ Bot</td><td>QQ ↔ NapCat ↔ AstrBot ↔ DeepSeek 全链路跑通</td></tr>
+</table>
+> **数据口径说明** 工作/学习、游戏、娱乐均为估算；其余为资源管理器/系统维护/即时通讯等约 35 分钟。深夜（00:00–02:30）关机/睡眠无录制，晚间 18:04–22:35 锁屏无工作记录。
+## 1 今日完成
+- 00:35–01:00 **AUTO-MAS 收尾核对与排查开启** 在 Trae CN 打开《AUTO-MAS-明日方舟-1-收尾崩溃修复说明.md》（Preview 模式核对前夜崩溃修复记录）；00:49 在 WorkBuddy 开启新会话"今天怎么有的没有运行完成"，读取 `ScriptConf.json` 初步定位启动相关逻辑，排查跨至清晨继续
+- 07:00–07:20 **AUTO-MAS 日志时间戳回绕修复 + "修复被还原"根因排查** 与 WorkBuddy 多轮对话产出脚本《AUTO-MAS-日志时间戳回绕.py》（5.1 KB）：针对 BAAH 日志时间戳只含 `%M:%S`、BetterGI 只有 `%H:%M:%S` 等省略格式，按周期做回绕修正，避免"日志静默时长"虚增导致超时误判；随后定位为 AUTO-MAS 启动时把 submodule repo/ 同步覆盖到 app/（文件时间戳全部回到 08-14）；核对基线漂移：当前 v5.4.0 / a227c8d vs 08-31 文档记录 v5.5.0-beta.1 / 7a62b56
+- 07:44–07:47 **系统清理维护** 回收站清理旧目录（含 screenpipe 2026-08-30 旧数据）；移除 Intel® Computing Improvement Program（DSATray 卸载项）；联想电脑管家常规体检（07:47–13:06 后台运行）
+- 08:56–12:00 **QQ AI Bot 接入 AI 聊天：搭建联调并跑通（主任务）** 启动 AstrBot Desktop v4.28.0-beta.1（WebUI :6185、反向 WS :6199）与 NapCatQQ-Desktop（WebUI :6099，QQ 大号已登录）并全天常驻；11:53–11:59 排查"机器人不回消息"：清旧配置重启、反向 WS 鉴权 token 置空、NapCat 重加反向 ws 客户端，确认 `ws://127.0.0.1:6199/ws` LISTENING、aiocqhttp（OneBot v11）适配器已连接；11:58–11:59 验证：小号 QQ 发"你好"，大号侧收到"智能助手"人设完整回复，**全链路（QQ ↔ NapCat ↔ 反向 WS ↔ AstrBot ↔ DeepSeek API）跑通**
+- 12:00–13:05 **QQ AI Bot 收尾与文档化** 汇总"QQ 大号收尾建议（5 件事）"（第 1 项"改 AstrBot WebUI 默认口令"随即完成）；起草《QQ-AI-Bot 项目全景》手册大纲（共 14 章：架构图、协议端对比表、端口速查、人格系统、日常运维 Runbook、Docker 版部署等）；同步维护 `D:\Projects\bot-projects\`（README 索引 + 3 份搭建指南）
+- 12:13 **Cherry Studio** 本地 AI 客户端辅助查询约 4 分钟
+- 14:20–15:28 **Trae Solo 学习：家用服务器 / Linux / Docker 规划** 咨询"搭建服务器学习 Linux/Docker（毕设与课程项目需公网访问）"：产出选购对比（旧笔记本 vs N100 小主机：功耗约 15–25W、一天不到 0.4 度电；玩客云 ARM 约 3W）；无公网 IP 方案：Cloudflare Tunnel（免费）+ GitHub 送的 .me 域名；部署路线：Ubuntu Server 22.04 + SSH → Docker hello-world 验证；要求输出针对旧笔记本的具体命令清单（共消耗约 12.66）
+- 17:00–17:04 **卸载"小黑日报助手"** WorkBuddy 辅助彻底删除：检查 HKCU 卸载注册表项、深度搜索残留、检查启动项与用户目录残留并确认删除（17:44 复查 installer-logs 遗留日志）
+- 17:06–17:31 **撰写 QQ AI Bot 全套文档（花笺定稿）** 《QQ AI Bot 项目全景 · 从零搭建到日常运维完全手册》：29.1 KB / 695 行，适用 AstrBot Desktop v4.28.0-beta.1，路径/端口/口令均经实际验证；另建《QQ AI Bot 搭建文档索引》（1.9 KB，区分 Desktop / Docker / NoneBot2 三条路线及数据迁移矩阵）；花笺笔记库整理至 7 篇
+- 17:31–17:52 **收尾杂项** Cursor 打开文件；处理 Edge"哔哩哔哩"PWA 应用提示；QQ 闪传传文件；在 ChatGPT 中开启 @Notion 请求整理"当前优先事项"
+- 22:35–23:01 **晚间回归** 22:35:36 人脸解锁回到电脑，浏览桌面与资源管理器
+### 时间分布
+<table fit-page-width="true" header-row="true">
+<tr><th>序号</th><th>事项</th><th>时长（约）</th><th>占比</th></tr>
+<tr><td>1</td><td>AUTO-MAS 收尾核对与排查开启</td><td>10 分钟</td><td>6%</td></tr>
+<tr><td>2</td><td>AUTO-MAS 回绕脚本 + 同步覆盖根因排查</td><td>20 分钟</td><td>12%</td></tr>
+<tr><td>3</td><td>系统清理维护</td><td>5 分钟</td><td>3%</td></tr>
+<tr><td>4</td><td>**QQ AI Bot 搭建联调跑通**</td><td>45 分钟</td><td>27%</td></tr>
+<tr><td>5</td><td>QQ AI Bot 收尾与 14 章手册大纲</td><td>30 分钟</td><td>18%</td></tr>
+<tr><td>6</td><td>Cherry Studio 辅助查询</td><td>4 分钟</td><td>2%</td></tr>
+<tr><td>7</td><td>Trae Solo 服务器/Linux/Docker 规划</td><td>16 分钟</td><td>10%</td></tr>
+<tr><td>8</td><td>卸载小黑日报助手</td><td>4 分钟</td><td>2%</td></tr>
+<tr><td>9</td><td>花笺手册与索引定稿</td><td>15 分钟</td><td>9%</td></tr>
+<tr><td>10</td><td>收尾杂项（Cursor/Edge/QQ/ChatGPT）</td><td>8 分钟</td><td>5%</td></tr>
+<tr><td>11</td><td>晚间回归整理</td><td>8 分钟</td><td>5%</td></tr>
+</table>
+小计：共 11 项，合计约 165 分钟（前台合计，时段跨度含重叠）。
+## 2 进行中
+<table fit-page-width="true" header-row="true">
+<tr><th>事项</th><th>当前进展</th><th>还差什么</th></tr>
+<tr><td>AUTO-MAS 任务未完成修复</td><td>根因定位（repo→app 启动同步覆盖 + 基线漂移）</td><td>「待修复」 修改同步逻辑并重打修复，次日验证</td></tr>
+<tr><td>QQ AI Bot 收尾 5 件事</td><td>第 1 项（WebUI 默认口令）已完成，链路跑通</td><td>「待落实」 其余 4 项（含 JDK 备份、安全收敛）及整体备份</td></tr>
+<tr><td>手册配套 assets 图</td><td>主文档 29.1 KB 已定稿，大纲就绪</td><td>「待补齐」 拆图 SVG、5 张速查表</td></tr>
+<tr><td>家用服务器方案</td><td>选购对比与命令清单生成中</td><td>「待实操」 装系统/Docker 或定 N100</td></tr>
+</table>
+小计：4 项在推进。
+## 3 问题与阻塞
+> **AUTO-MAS 任务未完成 + 手写修复被还原 「待处理」** 07:12–07:20 当日"有的任务没有运行完成"；手写代码修复被还原为 08-14 旧版（时间戳证据）。已检查 config 写入时间、对比 app/ 与 repo/ 一致性、grep `-wrap-period`、核对父子仓库 git HEAD。根因方向已定位（启动同步覆盖），修复未实施。
+> **QQ 机器人不回消息（NapCat/AstrBot 链路断） 「已解决」** 11:53–11:59 查看 NapCat ws client 状态、清旧配置、重启 AstrBot Desktop、token 置空、反向 ws URL 去掉 access_token、确认 6199 LISTENING（PID 27432）。11:58 全链路跑通并验证回复。
+> **Trae Solo 自动更新重启 「已解决」** 14:27–14:28 自动安装更新中断会话，等待重启后继续，15:28 前正常收尾。
+> **备注（非问题）**深夜 02:27 出现关机/睡眠电源菜单，约 02:30–07:00 无录制；18:04–22:35 锁屏，22:35:36 解锁恢复。
+<table fit-page-width="true" header-row="true">
+<tr><th>现象</th><th>时长（约）</th><th>占比</th><th>状态</th></tr>
+<tr><td>AUTO-MAS 任务未完成 + 修复被还原</td><td>8 分钟</td><td>47%</td><td>「待处理」</td></tr>
+<tr><td>QQ 机器人链路不通</td><td>6 分钟</td><td>35%</td><td>「已解决」</td></tr>
+<tr><td>Trae Solo 更新自动重启</td><td>2 分钟</td><td>12%</td><td>「已解决」</td></tr>
+<tr><td>锁屏无录制空档（备注项）</td><td>271 分钟</td><td>—</td><td>「已恢复」</td></tr>
+</table>
+小计：3 项问题 + 1 项备注｜2 已解决 / 1 待处理。
+## 4 游戏娱乐
+### 游戏
+<table fit-page-width="true" header-row="true">
+<tr><th>游戏</th><th>时长（约）</th><th>占比</th><th>类型</th><th>说明</th></tr>
+<tr><td>明日方舟挂机（MAA/AUTO-MAS/MuMu）</td><td>50 分钟</td><td>27%</td><td>「挂机 + 自动化」</td><td>前台合计，后台跨 00:12–12:54；MAA v6.17.0-beta.4#0819 执行"墟·复刻#0901"（Bilibili 服）</td></tr>
+<tr><td>SpeedBall</td><td>112 分钟</td><td>60%</td><td>「挂机/疑似下载」</td><td>画面长时间静止，17:59 见"下载 27%、约 2K/s"，疑为下载/更新挂机占用</td></tr>
+<tr><td>明日方舟：终末地</td><td>14 分钟</td><td>7%</td><td>「挂机」</td><td>客户端跨夜开启（00:18–09:01），前台使用少</td></tr>
+<tr><td>米哈游启动器 + 原神</td><td>12 分钟</td><td>6%</td><td>「手动启动」</td><td>疑似更新后即退出（07:31–07:43）</td></tr>
+</table>
+小计：4 项，约 188 分钟，挂机为主。
+### 其他娱乐
+<table fit-page-width="true" header-row="true">
+<tr><th>类别</th><th>时长（约）</th><th>占比</th><th>说明</th></tr>
+<tr><td>抖音（Chrome）</td><td>238 分钟</td><td>96%</td><td>00:00–02:27 / 11:32 / 17:22–17:53 多段，含直播/评论区</td></tr>
+<tr><td>哔哩哔哩 / Edge 应用</td><td>2 分钟</td><td>1%</td><td>PWA 安装卸载提示处理</td></tr>
+<tr><td>QQ 社交与闪传</td><td>9 分钟</td><td>3%</td><td>bot 测试与文件传输，部分与工作重叠</td></tr>
+</table>
+小计：3 项，约 249 分钟。
+## 5 明日计划
+<table fit-page-width="true" header-row="true">
+<tr><th>序号</th><th>计划</th><th>依据/跟进</th></tr>
+<tr><td>1</td><td>修复 AUTO-MAS 启动同步覆盖问题（改 repo→app 覆盖逻辑或加保护开关），重新应用崩溃修复与日志回绕脚本，验证次日任务按排程全部完成</td><td>问题 1 + 进行中 1</td></tr>
+<tr><td>2</td><td>完成 QQ AI Bot 收尾清单剩余 4 项（安全收敛、JDK 备份意识等），并为 `D:\Projects\bot-projects\` 做整体备份</td><td>进行中 2</td></tr>
+<tr><td>3</td><td>补齐《QQ-AI-Bot 项目全景》手册配套 assets 图与 5 张速查表，确认 Obsidian 内渲染正常后归档</td><td>进行中 3</td></tr>
+<tr><td>4</td><td>按 Trae Solo 生成的清单给旧笔记本装 Ubuntu Server 22.04 + Docker（毕设后端起点），或先确定是否购入 N100 小主机</td><td>进行中 4</td></tr>
+<tr><td>5</td><td>复查 NapCat/AstrBot 开机自启与反向 WS 重连参数（心跳 30000 ms / 重连 5000 ms），确保 QQ bot 长期稳定在线</td><td>今日联调结论</td></tr>
+<tr><td>6</td><td>关注 MAA"墟·复刻"活动收尾与 AUTO-MAS 排程是否需要调整（MAA 5–12、M9A 2–5）</td><td>今日 config 核对</td></tr>
+</table>
