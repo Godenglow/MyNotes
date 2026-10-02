@@ -21,3 +21,10 @@ Thumbs.db
 
 # Python 缓存
 __pycache__/
+
+# 已拆分到 Private-Note 仓库的目录（screenpipe 等工具仍可能往旧路径生成文件，
+# 忽略之，防止 vault 自动备份把它们重新提交回本仓库）
+ScrePipe日报/
+vivo健康/
+copilot/
+Excalidraw/
