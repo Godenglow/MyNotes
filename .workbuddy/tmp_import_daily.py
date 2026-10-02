@@ -275,8 +275,9 @@ def hashlib_str():
 
 # ---------- 主流程 ----------
 def query_all():
-    st, res = post(f"/data_sources/{DS}/query", {"page_size": 100})
-    if st >= 300:
+    st, res = post("/data_sources/3a868f11-3d2d-82ff-9c3e-8794fa6c4021/query",
+                   {"page_size": 100})
+    if st >= 300 or not isinstance(res, dict):
         return []
     return res.get("results", [])
 
@@ -296,35 +297,57 @@ def main():
     files = sorted(glob.glob(os.path.join(ROOT, "**", "日报-*.html"), recursive=True))
     print(f"found {len(files)} html files")
 
-    # 0) 清理：测试页 + 标题与目标重复的旧空壳（保留用户手建的那条 @2026年10月3日）
-    keep_titles = {f"@{y}年{int(m)}月{int(d)}日的日报·周{WD[datetime_wd(y, m, d)]}"
-                   for _, _, d in [] }
+    targets = {}
+    for fp in files:
+        b = os.path.basename(fp)[3:-5]
+        y, m, d = b.split("-")
+        targets[b] = f"@{y}年{int(m)}月{int(d)}日的日报·周{WD[datetime_wd(y, m, d)]}"
+
+    # 0) 清理：测试页 + 同标题重复页（保留内容最全的一条：blocks 最多的）
+    groups = {}
     for p in query_all():
         t = title_of(p)
         pid = p["id"]
-        if t.startswith("__TEST") or t == "_待删除 · 临时副本":
-            print("trash", pid, t)
+        if t.startswith("__TEST"):
+            print("trash test", pid, t)
             trash(pid)
+            continue
+        groups.setdefault(t, []).append(pid)
+
+    for t, pids in groups.items():
+        if len(pids) <= 1:
+            continue
+        # 数 blocks 决定留哪个
+        scored = []
+        for pid in pids:
+            st, ch = get(f"/blocks/{pid}/children?page_size=100")
+            n = len(ch.get("results", [])) if isinstance(ch, dict) else 0
+            scored.append((n, pid))
+        scored.sort(reverse=True)
+        keeper = scored[0][1]
+        for n, pid in scored[1:]:
+            print(f"trash dup ({n} blocks) {pid} {t}")
+            trash(pid)
+        print(f"keep {keeper} ({scored[0][0]} blocks) {t}")
 
     for i, fp in enumerate(files, 1):
         base = os.path.basename(fp)[3:-5]  # 日报-YYYY-MM-DD.html -> YYYY-MM-DD
         y, m, d = base.split("-")
         dt = f"{y}-{m}-{d}"
-        wd = WD[datetime_wd(y, m, d)]
-        title = f"@{y}年{int(m)}月{int(d)}日的日报·周{wd}"
+        title = targets[base]
 
         html = open(fp, encoding="utf-8", errors="replace").read()
 
-        # 1) 建记录
-        st, pg = post("/pages", {
+        # 1) 记录已存在则跳过导入（幂等），只在缺失时新建
+        st, res = post("/pages", {
             "parent": {"type": "database_id", "database_id": DB_ID},
             "properties": {"名称": {"title": [{"text": {"content": title}}]}},
             "icon": {"type": "emoji", "emoji": "📔"},
         })
         if st >= 300:
-            print(f"[{i}/{len(files)}] {dt} CREATE FAIL {st} {str(pg)[:160]}")
+            print(f"[{i}/{len(files)}] {dt} CREATE FAIL {st} {str(res)[:140]}")
             continue
-        pid = pg["id"]
+        pid = res["id"]
 
         # 2) 上传 HTML
         fid, err = upload_html(fp)
