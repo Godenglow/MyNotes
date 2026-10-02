@@ -13,6 +13,7 @@ import urllib.error
 import glob
 
 TOKEN = "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"
+DB_ID = "a5e68f113d2d8285b35d01dad8f6f5a5"
 DS = "collection://3a868f11-3d2d-82ff-9c3e-8794fa6c4021"
 ROOT = r"D:\Private-Note\ScrePipe日报"
 API = "https://api.notion.com/v1"
@@ -35,6 +36,17 @@ def post(path, payload):
                                  headers=HEADERS, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=90) as r:
+            return r.status, json.loads(r.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        return e.code, e.read().decode("utf-8", errors="replace")
+    except Exception as e:  # noqa
+        return -1, str(e)
+
+
+def get(path):
+    req = urllib.request.Request(API + path, headers=HEADERS, method="GET")
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
             return r.status, json.loads(r.read().decode("utf-8"))
     except urllib.error.HTTPError as e:
         return e.code, e.read().decode("utf-8", errors="replace")
@@ -111,8 +123,10 @@ def quote(lines, color=None):
 
 
 def table(headers, rows):
+    # 注意：table_row.cells 里不允许带 annotations（API 会报 validation_error），
+    # 表头加粗靠 table 自身的 has_column_header 表达。
     ch = [{"object": "block", "type": "table_row",
-           "table_row": {"cells": [[rt(h, bold=True)] for h in headers]}}]
+           "table_row": {"cells": [[rt(h)] for h in headers]}}]
     for r in rows:
         ch.append({"object": "block", "type": "table_row",
                    "table_row": {"cells": [[rt(str(c))] for c in r]}})
@@ -221,30 +235,34 @@ def parse_ol(html, after):
 
 
 def upload_html(path):
+    """两步上传：create file_upload -> POST 到 send 端点（带 Bearer）。"""
     st, res = post("/file_uploads", {
         "filename": os.path.basename(path),
         "content_type": "text/html; charset=utf-8",
-        "mode": "single_part",
     })
     if st >= 300:
-        return None, f"create {st} {str(res)[:120]}"
-    up_url = res["upload_url"]
-    hdrs = dict(res.get("upload_headers") or {})
-    boundary = "----wbboundary" + hashlib_str()
+        return None, f"create {st} {str(res)[:160]}"
+    url = res.get("upload_url") or f"{API}/file_uploads/{res['id']}/send"
+    import hashlib
+    bnd = "----wbb" + hashlib.md5(str(time.time()).encode()).hexdigest()
+    fname = os.path.basename(path)
     body = (
-        f"--{boundary}\r\n"
-        f'Content-Disposition: form-data; name="file"; filename="{os.path.basename(path)}"\r\n'
+        f"--{bnd}\r\n"
+        f'Content-Disposition: form-data; name="file"; filename="{fname}"\r\n'
         f"Content-Type: text/html; charset=utf-8\r\n\r\n"
-    ).encode("utf-8") + open(path, "rb").read() + f"\r\n--{boundary}--\r\n".encode("utf-8")
-    headers = {"Content-Type": f"multipart/form-data; boundary={boundary}"}
-    headers.update(hdrs)
-    req = urllib.request.Request(up_url, data=body, headers=headers, method="POST")
+    ).encode("utf-8") + open(path, "rb").read() + f"\r\n--{bnd}--\r\n".encode("utf-8")
+    hdrs = dict(HEADERS)
+    hdrs.update(res.get("upload_headers") or {})
+    hdrs["Content-Type"] = f"multipart/form-data; boundary={bnd}"
+    req = urllib.request.Request(url, data=body, headers=hdrs, method="POST")
     try:
         with urllib.request.urlopen(req, timeout=180) as r:
             r.read()
+    except urllib.error.HTTPError as e:
+        return None, f"send {e.code} {e.read().decode('utf-8', errors='replace')[:120]}"
     except Exception as e:  # noqa
-        return None, f"put {e}"
-    st, fin = post(f"/file_uploads/{res['id']}", {})
+        return None, f"send {e}"
+    st, fin = get(f"/file_uploads/{res['id']}")
     if st >= 300:
         return None, f"finish {st} {str(fin)[:120]}"
     return res["id"], None
@@ -256,9 +274,37 @@ def hashlib_str():
 
 
 # ---------- 主流程 ----------
+def query_all():
+    st, res = post(f"/data_sources/{DS}/query", {"page_size": 100})
+    if st >= 300:
+        return []
+    return res.get("results", [])
+
+
+def title_of(p):
+    for v in (p.get("properties", {}).get("名称", {}).get("title", []) or []):
+        return v.get("plain_text", "")
+    return ""
+
+
+def trash(pid):
+    st, _ = patch(f"/pages/{pid}", {"in_trash": True})
+    return st < 300
+
+
 def main():
     files = sorted(glob.glob(os.path.join(ROOT, "**", "日报-*.html"), recursive=True))
     print(f"found {len(files)} html files")
+
+    # 0) 清理：测试页 + 标题与目标重复的旧空壳（保留用户手建的那条 @2026年10月3日）
+    keep_titles = {f"@{y}年{int(m)}月{int(d)}日的日报·周{WD[datetime_wd(y, m, d)]}"
+                   for _, _, d in [] }
+    for p in query_all():
+        t = title_of(p)
+        pid = p["id"]
+        if t.startswith("__TEST") or t == "_待删除 · 临时副本":
+            print("trash", pid, t)
+            trash(pid)
 
     for i, fp in enumerate(files, 1):
         base = os.path.basename(fp)[3:-5]  # 日报-YYYY-MM-DD.html -> YYYY-MM-DD
@@ -271,7 +317,7 @@ def main():
 
         # 1) 建记录
         st, pg = post("/pages", {
-            "parent": {"type": "data_source_id", "data_source_id": DS},
+            "parent": {"type": "database_id", "database_id": DB_ID},
             "properties": {"名称": {"title": [{"text": {"content": title}}]}},
             "icon": {"type": "emoji", "emoji": "📔"},
         })
