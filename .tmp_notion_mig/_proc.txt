@@ -1,0 +1,11 @@
+
+
+ProcessId      : 19588
+Name           : WorkBuddy.exe
+ExecutablePath : D:\Apps\WorkBuddy\WorkBuddy.exe
+CommandLine    : D:\Apps\WorkBuddy\WorkBuddy.exe D:\Apps\WorkBuddy\resources\ap
+                 p.asar\main\daemon-app-server-entry.js --stdio
+
+
+
+

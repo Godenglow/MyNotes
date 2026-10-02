@@ -174,12 +174,53 @@ def parse_sub(html):
 
 
 def parse_items(html):
-    """抽 .it 时间事项条目。"""
+    """抽 .it 时间事项条目；旧版模板用 <ul class="tl"> + <li><b>时间</b>。"""
     out = []
     for m in re.finditer(r'<div class="it"><span class="tm">(.*?)</span><div class="ib">'
                          r'<b class="t">(.*?)</b>(.*?)</div></div>', html, re.S):
         tm, title, body = m.group(1), strip_tags(m.group(2)), strip_tags(m.group(3))
         out.append((tm.strip(), title, body[:900]))
+
+    if not out:
+        # 旧版：<ul class="tl"><li><b>HH:MM–HH:MM</b>　标题：正文</li>
+        m = re.search(r'<ul class="tl">(.*?)</ul>', html, re.S)
+        if m:
+            for li in re.findall(r"<li>(.*?)</li>", m.group(1), re.S):
+                mb = re.search(r"<b>(.*?)</b>", li, re.S)
+                if not mb:
+                    continue
+                tm = strip_tags(mb.group(1))
+                rest = strip_tags(li[mb.end():]).lstrip("　 :：-")
+                head_txt, _, tail_txt = rest.partition("：")
+                if len(tail_txt) < 20:
+                    head_txt, tail_txt = rest, ""
+                title = head_txt.strip()[:80] or "（无标题）"
+                out.append((tm, title, (head_txt + "。" + tail_txt)[:800]))
+    return out
+
+
+def parse_legacy_cards(html):
+    """旧版模板的指标区：<div class="stat"><div class="k">..</div><div class="v">..</div><div class="d">..</div>"""
+    if parse_cards(html):
+        return []
+    out = []
+    for m in re.finditer(r'<div class="stat">(.*?)</div>\s*</div>', html, re.S):
+        blk = m.group(1)
+        k = re.search(r'<div class="k">(.*?)</div>', blk, re.S)
+        v = re.search(r'<div class="v"[^>]*>(.*?)</div>', blk, re.S)
+        d = re.search(r'<div class="d">(.*?)</div>', blk, re.S)
+        if k and v:
+            out.append((strip_tags(k.group(1)), strip_tags(v.group(1)),
+                        strip_tags(d.group(1))[:300] if d else ""))
+    if out:
+        return out
+    # 兜底：从正文纯文本里抓「xxx总时长 / 工作 / 学习 ...」几行
+    txt = strip_tags(re.sub(r"<style.*?</style>", "", html, flags=re.S))
+    for key in ("活跃总时长", "工作 / 学习", "工作/学习", "游戏 / 挂机", "游戏/挂机",
+                "其他娱乐"):
+        m = re.search(re.escape(key) + r"[^0-9]{0,12}([\d.]+\s*h[^ ]{0,4})", txt)
+        if m:
+            out.append((key, m.group(1).strip(), ""))
     return out
 
 
@@ -355,7 +396,7 @@ def main():
             print(f"[{i}/{len(files)}] {dt} UPLOAD FAIL {err}")
 
         # 3) 组装内容
-        cards = parse_cards(html)
+        cards = parse_legacy_cards(html) or parse_cards(html)
         meta = parse_meta(html)
         sub = parse_sub(html)
         items = parse_items(html)
