@@ -26,4 +26,6 @@
 - **建页唯一可行姿势**：`notion-duplicate-page`（只吃一个 page_id）复制已有页当容器 → `update-page` + `command="replace_content"`（纯字符串）写全部内容 → `command="update_properties"` 改标题。副本可覆盖，原页无损。**大批量内容不走上下文，长文本用 replace_content 一次灌完。**
 - **直连 API 走不通**：记忆里的 `ntn_2817...`（integration weiguowu10.2）只对迁移期分享的页面有效，Screen日报 等新库会 404；WorkBuddy 自己的 Notion OAuth token 在 app 内部存储，本地文件扫不到。
 - **模板能力**：只有「页面母版」能做——任意 page ID 当 template 源，`update-page` + `command="apply_template"`（异步，套完要 fetch 复核）。数据库下拉模板 / 模板按钮 / 官方模板库发布均**不支持**。
-- **Screen日报 母版页**：`📐 _模板 · 日报骨架` = `3ed68f113d2d8156b63dd78e2372aa20`（在 Screen日报 根目录下），建日报时套它的 ID。
+- **🔴 别用 `<columns>` 做卡片网格**：五等分 + 中文 + 长占位符 → 每列被压到约 130px，中文全部竖排单字，完全不可读（用户 2026-10-03 截图实锤）。`ratio` 只是偏好不是最小宽度，`columns` 是流体布局。要并排展示就用 `<table fit-page-width="true">`，要颜色就退回单个 `callout`。
+- **Screen日报 母版页**：`📐 _模板 · 日报骨架` = `3ed68f113d2d8156b63dd78e2372aa20`（在 Screen日报 根目录下），建日报时套它的 ID。核心指标用三列表格 + emoji 行首（⏱💼🎮🎬⚠️）、🟢🟡🔵🔴 状态标。
+- **嵌入原始 HTML 保住暗色风**：Notion 页面不支持自定义 CSS，1:1 复刻 `#0d1117` 卡片风不可能 → 走双轨：Notion 文本层（可搜索）+ `<embed>` 原始 HTML 层（好看）。做法：`create-attachment`（`filename` + `content`，**≤200 KiB**）→ 拿返回的 `file-upload://<id>` 写进 `update-page` 的 `insert_content` 的 `<embed src="...">`，保存后自动转 Notion 托管 S3 链接。日报 HTML 约 30-55 KB，够用。
