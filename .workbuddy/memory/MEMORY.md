@@ -22,10 +22,14 @@
 
 ## Notion 写入通道（2026-10-03 实测，踩坑记住）
 
-- **🔴 数组参数在 MCP 通道会被字符串化**：`notion-create-pages` 的 `pages`、`notion-update-page` 的 `content_updates` 传数组一律报 `must be array`，纯标量元素也不行。单字符串参数（`new_str` / `content` / `properties` / `page_id`）完全正常。
-- **建页唯一可行姿势**：`notion-duplicate-page`（只吃一个 page_id）复制已有页当容器 → `update-page` + `command="replace_content"`（纯字符串）写全部内容 → `command="update_properties"` 改标题。副本可覆盖，原页无损。**大批量内容不走上下文，长文本用 replace_content 一次灌完。**
+- **🔴 数组参数在 MCP 通道会被字符串化**：`notion-create-pages` 的 `pages`、`notion-update-page` 的 `content_updates`、`notion-move-pages` 的 `page_or_database_ids`、`notion-query-data-sources` 的 `data` —— **传数组一律报 `must be array`，一个都传不过去**。单字符串参数（`new_str` / `content` / `properties` / `page_id` / `template_id`）完全正常。
+- **🔴 往数据库里建记录：别绕了，让用户在 UI 点「新建」**。Notion 会自动套该库的 `default_page_template`，把链接给我，我用 `update-page` 改内容 + `update_properties` 改标题即可。绕 `duplicate-page` 造副本再 move 是死路（move 也是数组参数），且会留下垃圾页。
+- **改已有页内容的唯一可行姿势**：`notion-update-page` + `command="replace_content"`（纯字符串 `new_str`），可一次灌完整长内容。批量写入务必走它，不走上下文。
+- **属性名要分清**：数据库内页用 `update_properties` 传真实属性名（如「日报」库是 `名称`，非数据库页才用 `title`）；`created_time` 类属性是 readOnly，别试图手动赋值。
 - **直连 API 走不通**：记忆里的 `ntn_2817...`（integration weiguowu10.2）只对迁移期分享的页面有效，Screen日报 等新库会 404；WorkBuddy 自己的 Notion OAuth token 在 app 内部存储，本地文件扫不到。
+- **MCP 无删除页面的工具**，删页只能用户在 UI 手动操作。
 - **模板能力**：只有「页面母版」能做——任意 page ID 当 template 源，`update-page` + `command="apply_template"`（异步，套完要 fetch 复核）。数据库下拉模板 / 模板按钮 / 官方模板库发布均**不支持**。
 - **🔴 别用 `<columns>` 做卡片网格**：五等分 + 中文 + 长占位符 → 每列被压到约 130px，中文全部竖排单字，完全不可读（用户 2026-10-03 截图实锤）。`ratio` 只是偏好不是最小宽度，`columns` 是流体布局。要并排展示就用 `<table fit-page-width="true">`，要颜色就退回单个 `callout`。
 - **Screen日报 母版页**：`📐 _模板 · 日报骨架` = `3ed68f113d2d8156b63dd78e2372aa20`（在 Screen日报 根目录下），建日报时套它的 ID。核心指标用三列表格 + emoji 行首（⏱💼🎮🎬⚠️）、🟢🟡🔵🔴 状态标。
+- **「📔 日报」数据库**：`a5e68f113d2d8285b35d01dad8f6f5a5`，data source `collection://3a868f11-3d2d-82ff-9c3e-8794fa6c4021`，属性只有 `名称`(title) + `日期`(created_time, readOnly)，gallery 视图封面取 `page_content`，默认模板 `@今天 的日记` = `7d568f113d2d820ab008813f0454a7e2`。首条日报 `3ed68f113d2d80af80e4e622c71fd620`。
 - **嵌入原始 HTML 保住暗色风**：Notion 页面不支持自定义 CSS，1:1 复刻 `#0d1117` 卡片风不可能 → 走双轨：Notion 文本层（可搜索）+ `<embed>` 原始 HTML 层（好看）。做法：`create-attachment`（`filename` + `content`，**≤200 KiB**）→ 拿返回的 `file-upload://<id>` 写进 `update-page` 的 `insert_content` 的 `<embed src="...">`，保存后自动转 Notion 托管 S3 链接。日报 HTML 约 30-55 KB，够用。
