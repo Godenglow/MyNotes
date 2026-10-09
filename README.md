@@ -1,14 +1,14 @@
 # MyNotes - Java 全栈学习笔记
 
 个人 Java 全栈学习笔记库，使用 [Obsidian](https://obsidian.md) 管理。
-仓库收录两套笔记：`Java_note`（主线课程，00-12 编号）与 `Java_Du`（另一套全栈课程，01-17 编号）。
+仓库收录两套笔记：`Java_note`与 `Java_Du` 。
 
 ## 📁 仓库结构
 
 ```
 MyNotes/
-├── Java_note/    # 主线学习笔记（00-12 编号 + Git）
-└── Java_Du/      # 全栈课程笔记（01-17 编号，延伸到 TS / Vue3 / ElementPlus / Linux）
+├── Java_note/    # 主线学习笔记
+└── Java_Du/      # 全栈课程笔记
 ```
 
 ## 📚 Java_note 
