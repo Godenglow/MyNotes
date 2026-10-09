@@ -1,7 +1,32 @@
-# Obsidian 工作区缓存（含个人界面状态，无需同步）
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache
+# =========================================================================
+# 本仓库只收录 Java_note / Java_Du 两个学习笔记文件夹
+# 其余内容一律不同步到 GitHub（本地文件全部保留）
+# =========================================================================
+
+# 其他笔记与生成内容
+面试/
+我的配置.md
+generated-images/
+copilot/
+ScrePipe日报/
+vivo健康/
+Excalidraw/
+
+# Obsidian / AI 工具 / 同步工具目录（本地保留）
+.obsidian/
+.claude/
+.claudian/
+.copilot/
+.agents/
+.opencode/
+.workbuddy/
+.tmp_notion_mig/
+.vivo_mig_tmp/
+.notion_migrate_2024/
+.verysync/
+.stfolder/
+.stversions/
+.fmtrashed-*
 
 # 废纸篓
 .trash/
@@ -11,20 +36,9 @@
 desktop.ini
 Thumbs.db
 
-# Claude 会话记录(隐私)
-.claudian/
-
 # PDF / 电子书（大文件，不同步）
 *.pdf
 *.epub
-面试/小林coding图解网站合集PDF/
 
 # Python 缓存
 __pycache__/
-
-# 已拆分到 Private-Note 仓库的目录（screenpipe 等工具仍可能往旧路径生成文件，
-# 忽略之，防止 vault 自动备份把它们重新提交回本仓库）
-ScrePipe日报/
-vivo健康/
-copilot/
-Excalidraw/

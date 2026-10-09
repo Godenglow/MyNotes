@@ -1,25 +1,22 @@
-# MyNotes - Java 全栈学习 & 秋招面试笔记
+# MyNotes - Java 全栈学习笔记
 
-个人学习笔记库,使用 [Obsidian](https://obsidian.md) 管理。以 Java 全栈学习路线为主体,配套秋招面试笔记。私人笔记(健康数据、AI 日报等)已拆分至 [Private-Note](https://github.com/Godenglow/Private-Note) 仓库。
+个人 Java 全栈学习笔记库，使用 [Obsidian](https://obsidian.md) 管理。
+仓库收录两套笔记：`Java_note`（主线课程，00-12 编号）与 `Java_Du`（另一套全栈课程，01-17 编号）。
 
 ## 📁 仓库结构
 
 ```
 MyNotes/
-├── AngelByte_Note/    # 主线学习笔记(按 00-12 编号,含 Git)
-├── Du/                # 另一套全栈课程笔记(01-17 编号,延伸到 TS/Vue3/ElementPlus/Linux)
-├── 面试/              # 秋招面试准备
-│   ├── Java面试笔记/  #   Java 基础、Spring 面试题,小林 coding 图解合集
-│   └── 简历提问/      #   简历项目提问预案(项目一/项目二/技能特长)
-└── .obsidian/ 等      # Obsidian / 工具配置
+├── Java_note/    # 主线学习笔记（00-12 编号 + Git）
+└── Java_Du/      # 全栈课程笔记（01-17 编号，延伸到 TS / Vue3 / ElementPlus / Linux）
 ```
 
-## 📚 学习路线(AngelByte_Note)
+## 📚 Java_note 学习路线（主线）
 
 | 编号 | 模块 | 内容 |
 |:---:|------|------|
 | 00 | JavaSE | Java 基础语法、面向对象、集合、IO、多线程、反射、Lambda、Stream、Java 21 新特性 |
-| 01 | HTML + CSS | Web 前端基础(HTML、CSS、JavaScript) |
+| 01 | HTML + CSS | Web 前端基础（HTML、CSS、JavaScript） |
 | 02 | Java Web | Servlet、JSP、AJAX、jQuery |
 | 03 | JDBC | Java 数据库连接接口与驱动原理 |
 | 04 | MySQL | 关系型数据库、SQL、事务、NoSQL 对比 |
@@ -29,19 +26,29 @@ MyNotes/
 | 08 | SpringMVC | Web 层框架、MVC 实现 |
 | 09 | Docker | 容器化部署 |
 | 10 | Redis | 入门与实战、NoSQL 缓存 |
-| 11 | RabbitMQ | 消息队列 20 个操作实验(安装→集群→流式队列) |
+| 11 | RabbitMQ | 消息队列 20 个操作实验（安装→集群→流式队列） |
 | 12 | Seata | 分布式事务原理与入门 |
 | — | Git | 版本控制完整笔记 |
 
-## 📚 Du 笔记(01-17)
+## 📚 Java_Du 学习路线
 
-在主线基础上延伸的前端与工程化笔记:TypeScript、Vue3、ElementPlus、Linux、Maven、SpringBoot、MyBatis-Plus 等。
+| 编号 | 模块 | 编号 | 模块 |
+|:---:|------|:---:|------|
+| 01 | JavaSE | 10 | Spring |
+| 02 | MySQL | 11 | SpringMVC |
+| 03 | JDBC | 12 | SpringBoot |
+| 04 | Web 前端 | 13 | MyBatis-Plus |
+| 05 | XML & JSON | 14 | TypeScript |
+| 06 | JavaWeb | 15 | Vue3 |
+| 07 | Ajax & axios | 16 | ElementPlus |
+| 08 | Maven | 17 | Linux |
+| 09 | MyBatis | — | — |
 
 ## 🚀 使用方式
 
 1. 安装 [Obsidian](https://obsidian.md)
-2. 以"打开文件夹作为仓库"方式打开本目录
-3. 从 `AngelByte_Note/00-JavaSE.md` 开始按编号顺序学习,或直接进入 `面试/` 复习
+2. 以“打开文件夹作为仓库”方式打开本目录
+3. 从 `Java_note/00-JavaSE` 开始按编号顺序学习，或按需跳转到 `Java_Du/`
 4. 打开**关系图谱**查看笔记之间的知识关联
 
-> 注:PDF / EPUB 等大文件已在 .gitignore 中排除,不入库。
+> 注：本仓库只收录上述两个学习文件夹；PDF / EPUB 等大文件已在 .gitignore 中排除。
