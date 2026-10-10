@@ -30,7 +30,7 @@
 npm install element-plus
 ```
 
-2. **全局引入**（推荐快速上手）  
+2. **全局引入**（推荐快速上手）        
 
 ```typescript
 import { createApp } from 'vue'
